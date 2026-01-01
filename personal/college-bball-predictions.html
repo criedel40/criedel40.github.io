@@ -126,7 +126,7 @@
     // IMPORTANT: Change this password hash to match your desired password
     // To generate a hash, you can use: https://emn178.github.io/online-tools/sha256.html
     // Or run in browser console: await crypto.subtle.digest('SHA-256', new TextEncoder().encode('yourpassword')).then(h => Array.from(new Uint8Array(h)).map(b => b.toString(16).padStart(2, '0')).join(''))
-    const CORRECT_PASSWORD_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // Default: "password"
+    const CORRECT_PASSWORD_HASH = 'f03a289d4f680cb4cf9b244aed1d119001c6ca45c3732e27b71e34efc9901796'; // Default: "password"
     
     function hashPassword(password) {
       // Simple async hash function using Web Crypto API
