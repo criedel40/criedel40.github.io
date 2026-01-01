@@ -44,7 +44,8 @@
     header a:hover i{transform:scale(1.2)}
     .header-full-height{width:100%;height:auto;min-height:220px;aspect-ratio:640/220}
     .header-full-height>div{height:100%;min-height:100%}
-    .bball-images-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin:2rem 0;padding:1rem}
+    .bball-images-container{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin:2rem 0;padding:1rem}
+    @media screen and (max-width:768px){.bball-images-container{grid-template-columns:1fr}}
     .bball-image-wrapper{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
     .bball-image-wrapper:hover{transform:translateY(-4px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
     .bball-image-wrapper img{width:100%;height:auto;display:block}
