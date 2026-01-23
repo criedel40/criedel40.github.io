@@ -59,8 +59,9 @@
     .prediction-table tr:last-child td{border-bottom:none}
     .prediction-table tr:nth-child(even){background:#f8f9fa}
     .prediction-table .team-name{font-weight:600;color:#333;margin:0;padding:0;line-height:1.2}
-    .prediction-table .score{font-size:1.1rem;font-weight:700;color:#357edd;margin:0;padding:0;line-height:1.2}
-    .prediction-table .win-prob{color:#666;font-size:.85rem;margin:0;padding:0;line-height:1.2}
+    .prediction-table .score{font-size:1rem;font-weight:700;color:#357edd;margin:0;padding:0;line-height:1.2}
+    .prediction-table .spread{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2;text-align:center}
+    .prediction-table .total{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2;text-align:center}
     .prediction-table .source-name{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2}
     @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}}
     .image-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:10001;justify-content:center;align-items:center;padding:2rem;box-sizing:border-box}
@@ -290,7 +291,7 @@
           // Create header row
           const headerRow = document.createElement('thead');
           const header = document.createElement('tr');
-          header.innerHTML = '<th>Source</th><th>Team</th><th>Score</th><th>Win Probability</th>';
+          header.innerHTML = '<th>Source</th><th>Team 1</th><th>Score</th><th>Team 2</th><th>Score</th><th>Spread</th><th>Total</th>';
           headerRow.appendChild(header);
           table.appendChild(headerRow);
           
@@ -298,82 +299,67 @@
           const tbody = document.createElement('tbody');
           
           if (predictionInfo) {
+            // Calculate spread and total for your model
+            const yourSpread = predictionInfo.yourModel.team1Score - predictionInfo.yourModel.team2Score;
+            const yourTotal = predictionInfo.yourModel.team1Score + predictionInfo.yourModel.team2Score;
+            const yourSpreadStr = yourSpread > 0 ? `+${yourSpread}` : `${yourSpread}`;
+            
             // Your model row
             const yourModelRow = document.createElement('tr');
             yourModelRow.innerHTML = `
               <td class="source-name">Your Model</td>
               <td class="team-name">${predictionInfo.team1}</td>
-              <td class="score">${predictionInfo.yourModel.team1Score}</td>
-              <td class="win-prob">${(predictionInfo.yourModel.team1WinProbability * 100).toFixed(1)}%</td>
+              <td class="score">${predictionInfo.yourModel.team1Score} (${(predictionInfo.yourModel.team1WinProbability * 100).toFixed(1)}%)</td>
+              <td class="team-name">${predictionInfo.team2}</td>
+              <td class="score">${predictionInfo.yourModel.team2Score} (${(predictionInfo.yourModel.team2WinProbability * 100).toFixed(1)}%)</td>
+              <td class="spread">${yourSpreadStr}</td>
+              <td class="total">${yourTotal}</td>
             `;
             tbody.appendChild(yourModelRow);
             
-            const yourModelRow2 = document.createElement('tr');
-            yourModelRow2.innerHTML = `
-              <td></td>
-              <td class="team-name">${predictionInfo.team2}</td>
-              <td class="score">${predictionInfo.yourModel.team2Score}</td>
-              <td class="win-prob">${(predictionInfo.yourModel.team2WinProbability * 100).toFixed(1)}%</td>
-            `;
-            tbody.appendChild(yourModelRow2);
-            
             // Other source row
             if (predictionInfo.otherSource) {
+              const otherSpread = predictionInfo.otherSource.team1Score - predictionInfo.otherSource.team2Score;
+              const otherTotal = predictionInfo.otherSource.team1Score + predictionInfo.otherSource.team2Score;
+              const otherSpreadStr = otherSpread > 0 ? `+${otherSpread}` : `${otherSpread}`;
+              
               const otherSourceRow = document.createElement('tr');
               otherSourceRow.innerHTML = `
                 <td class="source-name">${predictionInfo.otherSource.name}</td>
                 <td class="team-name">${predictionInfo.team1}</td>
-                <td class="score">${predictionInfo.otherSource.team1Score}</td>
-                <td class="win-prob">${(predictionInfo.otherSource.team1WinProbability * 100).toFixed(1)}%</td>
+                <td class="score">${predictionInfo.otherSource.team1Score} (${(predictionInfo.otherSource.team1WinProbability * 100).toFixed(1)}%)</td>
+                <td class="team-name">${predictionInfo.team2}</td>
+                <td class="score">${predictionInfo.otherSource.team2Score} (${(predictionInfo.otherSource.team2WinProbability * 100).toFixed(1)}%)</td>
+                <td class="spread">${otherSpreadStr}</td>
+                <td class="total">${otherTotal}</td>
               `;
               tbody.appendChild(otherSourceRow);
-              
-              const otherSourceRow2 = document.createElement('tr');
-              otherSourceRow2.innerHTML = `
-                <td></td>
-                <td class="team-name">${predictionInfo.team2}</td>
-                <td class="score">${predictionInfo.otherSource.team2Score}</td>
-                <td class="win-prob">${(predictionInfo.otherSource.team2WinProbability * 100).toFixed(1)}%</td>
-              `;
-              tbody.appendChild(otherSourceRow2);
             }
           } else {
-            // Show placeholder rows when data is missing
-            const placeholderRow1 = document.createElement('tr');
-            placeholderRow1.innerHTML = `
+            // Show placeholder row when data is missing
+            const placeholderRow = document.createElement('tr');
+            placeholderRow.innerHTML = `
               <td class="source-name">Your Model</td>
               <td class="team-name" style="color:#999;font-style:italic">—</td>
               <td class="score" style="color:#999;font-style:italic">—</td>
-              <td class="win-prob" style="color:#999;font-style:italic">—</td>
+              <td class="team-name" style="color:#999;font-style:italic">—</td>
+              <td class="score" style="color:#999;font-style:italic">—</td>
+              <td class="spread" style="color:#999;font-style:italic">—</td>
+              <td class="total" style="color:#999;font-style:italic">—</td>
             `;
-            tbody.appendChild(placeholderRow1);
+            tbody.appendChild(placeholderRow);
             
             const placeholderRow2 = document.createElement('tr');
             placeholderRow2.innerHTML = `
-              <td></td>
-              <td class="team-name" style="color:#999;font-style:italic">—</td>
-              <td class="score" style="color:#999;font-style:italic">—</td>
-              <td class="win-prob" style="color:#999;font-style:italic">—</td>
-            `;
-            tbody.appendChild(placeholderRow2);
-            
-            const placeholderRow3 = document.createElement('tr');
-            placeholderRow3.innerHTML = `
               <td class="source-name">Other Source</td>
               <td class="team-name" style="color:#999;font-style:italic">—</td>
               <td class="score" style="color:#999;font-style:italic">—</td>
-              <td class="win-prob" style="color:#999;font-style:italic">—</td>
-            `;
-            tbody.appendChild(placeholderRow3);
-            
-            const placeholderRow4 = document.createElement('tr');
-            placeholderRow4.innerHTML = `
-              <td></td>
               <td class="team-name" style="color:#999;font-style:italic">—</td>
               <td class="score" style="color:#999;font-style:italic">—</td>
-              <td class="win-prob" style="color:#999;font-style:italic">—</td>
+              <td class="spread" style="color:#999;font-style:italic">—</td>
+              <td class="total" style="color:#999;font-style:italic">—</td>
             `;
-            tbody.appendChild(placeholderRow4);
+            tbody.appendChild(placeholderRow2);
           }
           
           table.appendChild(tbody);
