@@ -247,9 +247,18 @@
       
       try {
         // Load both the image manifest and predictions data
+        // Try to load today's predictions file first, then fall back to generic name
+        const today = new Date();
+        const dateStr = today.getFullYear().toString() + 
+                       String(today.getMonth() + 1).padStart(2, '0') + 
+                       String(today.getDate()).padStart(2, '0');
+        const predictionsFilename = `bball_predictions:${dateStr}.json`;
+        
         const [imagesResponse, predictionsResponse] = await Promise.all([
           fetch('bball-images.json'),
-          fetch('bball-predictions.json').catch(() => null) // Predictions file is optional
+          fetch(predictionsFilename).catch(() => 
+            fetch('bball-predictions.json').catch(() => null)
+          ) // Try date-based file first, then fallback
         ]);
         
         if (!imagesResponse.ok) {
@@ -299,37 +308,59 @@
           const tbody = document.createElement('tbody');
           
           if (predictionInfo) {
-            // Calculate spread and total for your model
-            const yourSpread = predictionInfo.yourModel.team1Score - predictionInfo.yourModel.team2Score;
-            const yourTotal = predictionInfo.yourModel.team1Score + predictionInfo.yourModel.team2Score;
-            const yourSpreadStr = yourSpread > 0 ? `+${yourSpread}` : `${yourSpread}`;
+            // Handle both old and new JSON formats
+            // New format: "Home Team"/"Away Team", "Beyond the Arc DL"/"BART"
+            // Old format: "team1"/"team2", "yourModel"/"otherSource"
+            const team1 = predictionInfo["Home Team"] || predictionInfo.team1 || "—";
+            const team2 = predictionInfo["Away Team"] || predictionInfo.team2 || "—";
             
-            // Your model row
-            const yourModelRow = document.createElement('tr');
-            yourModelRow.innerHTML = `
-              <td class="source-name">Your Model</td>
-              <td class="team-name">${predictionInfo.team1}</td>
-              <td class="score">${predictionInfo.yourModel.team1Score} (${(predictionInfo.yourModel.team1WinProbability * 100).toFixed(1)}%)</td>
-              <td class="team-name">${predictionInfo.team2}</td>
-              <td class="score">${predictionInfo.yourModel.team2Score} (${(predictionInfo.yourModel.team2WinProbability * 100).toFixed(1)}%)</td>
-              <td class="spread">${yourSpreadStr}</td>
-              <td class="total">${yourTotal}</td>
-            `;
-            tbody.appendChild(yourModelRow);
+            // Get your model data (new format: "Beyond the Arc DL", old format: "yourModel")
+            const yourModel = predictionInfo["Beyond the Arc DL"] || predictionInfo.yourModel;
             
-            // Other source row
-            if (predictionInfo.otherSource) {
-              const otherSpread = predictionInfo.otherSource.team1Score - predictionInfo.otherSource.team2Score;
-              const otherTotal = predictionInfo.otherSource.team1Score + predictionInfo.otherSource.team2Score;
+            if (yourModel) {
+              const homeScore = yourModel.HomeTeamScore || yourModel.team1Score;
+              const awayScore = yourModel.AwayTeamScore || yourModel.team2Score;
+              const homeProb = yourModel.HomeTeamWinProbability || yourModel.team1WinProbability;
+              const awayProb = yourModel.AwayTeamWinProbability || yourModel.team2WinProbability;
+              
+              const yourSpread = homeScore - awayScore;
+              const yourTotal = homeScore + awayScore;
+              const yourSpreadStr = yourSpread > 0 ? `+${yourSpread}` : `${yourSpread}`;
+              
+              // Your model row
+              const yourModelRow = document.createElement('tr');
+              yourModelRow.innerHTML = `
+                <td class="source-name">Beyond the Arc DL</td>
+                <td class="team-name">${team1}</td>
+                <td class="score">${homeScore} (${(homeProb * 100).toFixed(1)}%)</td>
+                <td class="team-name">${team2}</td>
+                <td class="score">${awayScore} (${(awayProb * 100).toFixed(1)}%)</td>
+                <td class="spread">${yourSpreadStr}</td>
+                <td class="total">${yourTotal}</td>
+              `;
+              tbody.appendChild(yourModelRow);
+            }
+            
+            // Other source row (new format: "BART", old format: "otherSource")
+            const otherSource = predictionInfo.BART || predictionInfo.otherSource;
+            if (otherSource) {
+              const otherHomeScore = otherSource.HomeTeamScore || otherSource.team1Score;
+              const otherAwayScore = otherSource.AwayTeamScore || otherSource.team2Score;
+              const otherHomeProb = otherSource.HomeTeamWinProbability || otherSource.team1WinProbability;
+              const otherAwayProb = otherSource.AwayTeamWinProbability || otherSource.team2WinProbability;
+              const otherSourceName = predictionInfo.otherSource?.name || "BART";
+              
+              const otherSpread = otherHomeScore - otherAwayScore;
+              const otherTotal = otherHomeScore + otherAwayScore;
               const otherSpreadStr = otherSpread > 0 ? `+${otherSpread}` : `${otherSpread}`;
               
               const otherSourceRow = document.createElement('tr');
               otherSourceRow.innerHTML = `
-                <td class="source-name">${predictionInfo.otherSource.name}</td>
-                <td class="team-name">${predictionInfo.team1}</td>
-                <td class="score">${predictionInfo.otherSource.team1Score} (${(predictionInfo.otherSource.team1WinProbability * 100).toFixed(1)}%)</td>
-                <td class="team-name">${predictionInfo.team2}</td>
-                <td class="score">${predictionInfo.otherSource.team2Score} (${(predictionInfo.otherSource.team2WinProbability * 100).toFixed(1)}%)</td>
+                <td class="source-name">${otherSourceName}</td>
+                <td class="team-name">${team1}</td>
+                <td class="score">${otherHomeScore} (${(otherHomeProb * 100).toFixed(1)}%)</td>
+                <td class="team-name">${team2}</td>
+                <td class="score">${otherAwayScore} (${(otherAwayProb * 100).toFixed(1)}%)</td>
                 <td class="spread">${otherSpreadStr}</td>
                 <td class="total">${otherTotal}</td>
               `;
