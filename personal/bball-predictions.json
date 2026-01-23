@@ -1,0 +1,38 @@
+{
+  "scoreprediction_Michigan_Ohio+St..jpg": {
+    "team1": "Michigan",
+    "team2": "Ohio St.",
+    "gameDate": "2025-01-15",
+    "yourModel": {
+      "team1Score": 72,
+      "team2Score": 68,
+      "team1WinProbability": 0.65,
+      "team2WinProbability": 0.35
+    },
+    "otherSource": {
+      "name": "ESPN",
+      "team1Score": 70,
+      "team2Score": 71,
+      "team1WinProbability": 0.48,
+      "team2WinProbability": 0.52
+    }
+  },
+  "scoreprediction_Penn+St._Wisconsin.jpg": {
+    "team1": "Penn St.",
+    "team2": "Wisconsin",
+    "gameDate": "2025-01-16",
+    "yourModel": {
+      "team1Score": 65,
+      "team2Score": 78,
+      "team1WinProbability": 0.28,
+      "team2WinProbability": 0.72
+    },
+    "otherSource": {
+      "name": "KenPom",
+      "team1Score": 64,
+      "team2Score": 76,
+      "team1WinProbability": 0.32,
+      "team2WinProbability": 0.68
+    }
+  }
+}

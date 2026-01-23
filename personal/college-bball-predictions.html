@@ -52,6 +52,17 @@
     .bball-image-title{padding:1rem;font-size:.9rem;color:#333;text-align:center;word-break:break-word}
     .bball-image-wrapper{cursor:pointer}
     #bball-images-loading{text-align:center;padding:2rem;color:#666}
+    .prediction-table-container{margin-bottom:1rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden}
+    .prediction-table{width:100%;border-collapse:collapse;font-size:.9rem}
+    .prediction-table th{background:#357edd;color:#fff;padding:.75rem;text-align:left;font-weight:600}
+    .prediction-table td{padding:.75rem;border-bottom:1px solid #e5e5e5}
+    .prediction-table tr:last-child td{border-bottom:none}
+    .prediction-table tr:nth-child(even){background:#f8f9fa}
+    .prediction-table .team-name{font-weight:600;color:#333}
+    .prediction-table .score{font-size:1.1rem;font-weight:700;color:#357edd}
+    .prediction-table .win-prob{color:#666;font-size:.85rem}
+    .prediction-table .source-name{font-weight:600;color:#555}
+    @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}}
     .image-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:10001;justify-content:center;align-items:center;padding:2rem;box-sizing:border-box}
     .image-modal.active{display:flex}
     .image-modal-content{max-width:95%;max-height:95%;position:relative}
@@ -234,13 +245,22 @@
       const loadingDiv = document.getElementById('bball-images-loading');
       
       try {
-        // Load the JSON manifest file that lists all images
-        const response = await fetch('bball-images.json');
-        if (!response.ok) {
+        // Load both the image manifest and predictions data
+        const [imagesResponse, predictionsResponse] = await Promise.all([
+          fetch('bball-images.json'),
+          fetch('bball-predictions.json').catch(() => null) // Predictions file is optional
+        ]);
+        
+        if (!imagesResponse.ok) {
           throw new Error('Failed to load image manifest');
         }
         
-        const imageFiles = await response.json();
+        const imageFiles = await imagesResponse.json();
+        let predictionsData = {};
+        
+        if (predictionsResponse && predictionsResponse.ok) {
+          predictionsData = await predictionsResponse.json();
+        }
         
         // Clear loading message
         if (loadingDiv) {
@@ -255,6 +275,112 @@
         
         // Create image elements for each file
         imageFiles.forEach(filename => {
+          // Create container for this prediction (table + image)
+          const predictionContainer = document.createElement('div');
+          predictionContainer.style.marginBottom = '2rem';
+          
+          // Always create prediction table (even if data is missing)
+          const predictionInfo = predictionsData[filename];
+          const tableContainer = document.createElement('div');
+          tableContainer.className = 'prediction-table-container';
+          
+          const table = document.createElement('table');
+          table.className = 'prediction-table';
+          
+          // Create header row
+          const headerRow = document.createElement('thead');
+          const header = document.createElement('tr');
+          header.innerHTML = '<th>Source</th><th>Team</th><th>Score</th><th>Win Probability</th>';
+          headerRow.appendChild(header);
+          table.appendChild(headerRow);
+          
+          // Create body
+          const tbody = document.createElement('tbody');
+          
+          if (predictionInfo) {
+            // Your model row
+            const yourModelRow = document.createElement('tr');
+            yourModelRow.innerHTML = `
+              <td class="source-name">Your Model</td>
+              <td class="team-name">${predictionInfo.team1}</td>
+              <td class="score">${predictionInfo.yourModel.team1Score}</td>
+              <td class="win-prob">${(predictionInfo.yourModel.team1WinProbability * 100).toFixed(1)}%</td>
+            `;
+            tbody.appendChild(yourModelRow);
+            
+            const yourModelRow2 = document.createElement('tr');
+            yourModelRow2.innerHTML = `
+              <td></td>
+              <td class="team-name">${predictionInfo.team2}</td>
+              <td class="score">${predictionInfo.yourModel.team2Score}</td>
+              <td class="win-prob">${(predictionInfo.yourModel.team2WinProbability * 100).toFixed(1)}%</td>
+            `;
+            tbody.appendChild(yourModelRow2);
+            
+            // Other source row
+            if (predictionInfo.otherSource) {
+              const otherSourceRow = document.createElement('tr');
+              otherSourceRow.innerHTML = `
+                <td class="source-name">${predictionInfo.otherSource.name}</td>
+                <td class="team-name">${predictionInfo.team1}</td>
+                <td class="score">${predictionInfo.otherSource.team1Score}</td>
+                <td class="win-prob">${(predictionInfo.otherSource.team1WinProbability * 100).toFixed(1)}%</td>
+              `;
+              tbody.appendChild(otherSourceRow);
+              
+              const otherSourceRow2 = document.createElement('tr');
+              otherSourceRow2.innerHTML = `
+                <td></td>
+                <td class="team-name">${predictionInfo.team2}</td>
+                <td class="score">${predictionInfo.otherSource.team2Score}</td>
+                <td class="win-prob">${(predictionInfo.otherSource.team2WinProbability * 100).toFixed(1)}%</td>
+              `;
+              tbody.appendChild(otherSourceRow2);
+            }
+          } else {
+            // Show placeholder rows when data is missing
+            const placeholderRow1 = document.createElement('tr');
+            placeholderRow1.innerHTML = `
+              <td class="source-name">Your Model</td>
+              <td class="team-name" style="color:#999;font-style:italic">—</td>
+              <td class="score" style="color:#999;font-style:italic">—</td>
+              <td class="win-prob" style="color:#999;font-style:italic">—</td>
+            `;
+            tbody.appendChild(placeholderRow1);
+            
+            const placeholderRow2 = document.createElement('tr');
+            placeholderRow2.innerHTML = `
+              <td></td>
+              <td class="team-name" style="color:#999;font-style:italic">—</td>
+              <td class="score" style="color:#999;font-style:italic">—</td>
+              <td class="win-prob" style="color:#999;font-style:italic">—</td>
+            `;
+            tbody.appendChild(placeholderRow2);
+            
+            const placeholderRow3 = document.createElement('tr');
+            placeholderRow3.innerHTML = `
+              <td class="source-name">Other Source</td>
+              <td class="team-name" style="color:#999;font-style:italic">—</td>
+              <td class="score" style="color:#999;font-style:italic">—</td>
+              <td class="win-prob" style="color:#999;font-style:italic">—</td>
+            `;
+            tbody.appendChild(placeholderRow3);
+            
+            const placeholderRow4 = document.createElement('tr');
+            placeholderRow4.innerHTML = `
+              <td></td>
+              <td class="team-name" style="color:#999;font-style:italic">—</td>
+              <td class="score" style="color:#999;font-style:italic">—</td>
+              <td class="win-prob" style="color:#999;font-style:italic">—</td>
+            `;
+            tbody.appendChild(placeholderRow4);
+          }
+          
+          table.appendChild(tbody);
+          tableContainer.appendChild(table);
+          predictionContainer.appendChild(tableContainer);
+          
+          // Create image wrapper
           const wrapper = document.createElement('div');
           wrapper.className = 'bball-image-wrapper';
           
@@ -280,7 +406,8 @@
           
           wrapper.appendChild(img);
           wrapper.appendChild(title);
-          container.appendChild(wrapper);
+          predictionContainer.appendChild(wrapper);
+          container.appendChild(predictionContainer);
         });
         
       } catch (error) {
