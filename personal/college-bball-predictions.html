@@ -53,15 +53,16 @@
     .bball-image-wrapper{cursor:pointer}
     #bball-images-loading{text-align:center;padding:2rem;color:#666}
     .prediction-table-container{margin-bottom:1rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden}
-    .prediction-table{width:100%;border-collapse:collapse;font-size:.9rem}
-    .prediction-table th{background:#357edd;color:#fff;padding:.75rem;text-align:left;font-weight:600;vertical-align:middle}
-    .prediction-table td{padding:.75rem;border-bottom:1px solid #e5e5e5;vertical-align:middle}
+    .prediction-table{width:100%;border-collapse:collapse;font-size:.9rem;border-spacing:0}
+    .prediction-table th{background:#357edd;color:#fff;padding:.75rem;text-align:left;font-weight:600;vertical-align:middle!important}
+    .prediction-table td{padding:.75rem;border-bottom:1px solid #e5e5e5;vertical-align:middle!important}
+    .prediction-table tr{vertical-align:middle!important}
     .prediction-table tr:last-child td{border-bottom:none}
     .prediction-table tr:nth-child(even){background:#f8f9fa}
-    .prediction-table .team-name{font-weight:600;color:#333}
-    .prediction-table .score{font-size:1.1rem;font-weight:700;color:#357edd}
-    .prediction-table .win-prob{color:#666;font-size:.85rem}
-    .prediction-table .source-name{font-weight:600;color:#555}
+    .prediction-table .team-name{font-weight:600;color:#333;margin:0;padding:0}
+    .prediction-table .score{font-size:1.1rem;font-weight:700;color:#357edd;margin:0;padding:0}
+    .prediction-table .win-prob{color:#666;font-size:.85rem;margin:0;padding:0}
+    .prediction-table .source-name{font-weight:600;color:#555;margin:0;padding:0}
     @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}}
     .image-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:10001;justify-content:center;align-items:center;padding:2rem;box-sizing:border-box}
     .image-modal.active{display:flex}
