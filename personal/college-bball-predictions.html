@@ -366,6 +366,31 @@
               `;
               tbody.appendChild(otherSourceRow);
             }
+            
+            // Vegas source (uses provided Spread and Total, don't calculate)
+            const vegasSource = predictionInfo.Vegas;
+            if (vegasSource) {
+              const vegasHomeScore = vegasSource.HomeTeamScore || vegasSource.team1Score;
+              const vegasAwayScore = vegasSource.AwayTeamScore || vegasSource.team2Score;
+              const vegasHomeProb = vegasSource.HomeTeamWinProbability || vegasSource.team1WinProbability;
+              const vegasAwayProb = vegasSource.AwayTeamWinProbability || vegasSource.team2WinProbability;
+              
+              // Use provided Spread and Total from Vegas data
+              const vegasSpread = vegasSource.Spread || "";
+              const vegasTotal = vegasSource.Total !== undefined ? vegasSource.Total : "";
+              
+              const vegasRow = document.createElement('tr');
+              vegasRow.innerHTML = `
+                <td class="source-name">Vegas</td>
+                <td class="team-name">${team1}</td>
+                <td class="score">${vegasHomeScore} (${(vegasHomeProb * 100).toFixed(1)}%)</td>
+                <td class="team-name">${team2}</td>
+                <td class="score">${vegasAwayScore} (${(vegasAwayProb * 100).toFixed(1)}%)</td>
+                <td class="spread">${vegasSpread}</td>
+                <td class="total">${vegasTotal}</td>
+              `;
+              tbody.appendChild(vegasRow);
+            }
           } else {
             // Show placeholder row when data is missing
             const placeholderRow = document.createElement('tr');
