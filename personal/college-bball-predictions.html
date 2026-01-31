@@ -427,8 +427,12 @@
           wrapper.className = 'bball-image-wrapper';
           
           const img = document.createElement('img');
-          img.src = `bball-figs/${filename}`;
-          img.alt = filename.replace(/\.jpg$/i, '').replace(/[+_]/g, ' ');
+          // Handle URL-encoded characters in filename
+          // The filename may contain %26 (encoded &) - we need to escape the % to prevent browser from decoding
+          // Replace % with %25 to double-encode, so %26 becomes %2526 which the browser will decode to %26
+          const safeFilename = filename.replace(/%/g, '%25');
+          img.src = `bball-figs/${safeFilename}`;
+          img.alt = filename.replace(/\.jpg$/i, '').replace(/[+_]/g, ' ').replace(/%26/g, '&');
           img.loading = 'lazy'; // Lazy load images for better performance
           
           // Handle image load errors
