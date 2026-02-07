@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script to copy bball predictions file from FORECASTSv5 to website directory
 
-FORECASTS_DIR="/home/criedel/NEW-AI-BBALL/SCORE/FORECASTSv5"
+FORECASTS_DIR="/home/criedel/NEW-AI-BBALL/SCORE/FORECASTSv6"
 WEBSITE_DIR="/home/criedel/NEW-AI-BBALL/criedel40.github.io/personal"
 DATE_STR=$(date +%Y%m%d)
 PREDICTIONS_FILE="bball_predictions:${DATE_STR}.json"
