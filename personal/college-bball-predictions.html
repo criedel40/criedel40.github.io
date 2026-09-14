@@ -416,9 +416,9 @@
               yourModelRow.innerHTML = `
                 <td class="source-name">Beyond the Arc DL</td>
                 <td class="team-name">${team1}</td>
-                <td class="score">${homeScore} (${(homeProb * 100).toFixed(1)}%)</td>
+                <td class="score">${homeScore}</td>
                 <td class="team-name">${team2}</td>
-                <td class="score">${awayScore} (${(awayProb * 100).toFixed(1)}%)</td>
+                <td class="score">${awayScore}</td>
                 <td class="spread">${yourSpreadStr}</td>
                 <td class="total">${yourTotal}</td>
               `;
@@ -442,9 +442,9 @@
               otherSourceRow.innerHTML = `
                 <td class="source-name">${otherSourceName}</td>
                 <td class="team-name">${team1}</td>
-                <td class="score">${otherHomeScore} (${(otherHomeProb * 100).toFixed(1)}%)</td>
+                <td class="score">${otherHomeScore}</td>
                 <td class="team-name">${team2}</td>
-                <td class="score">${otherAwayScore} (${(otherAwayProb * 100).toFixed(1)}%)</td>
+                <td class="score">${otherAwayScore}</td>
                 <td class="spread">${otherSpreadStr}</td>
                 <td class="total">${otherTotal}</td>
               `;
@@ -509,13 +509,13 @@
           const markets = predictionInfo && predictionInfo.Markets;
           if (markets && markets.length) {
             const mt = document.createElement('table'); mt.className = 'markets-table';
-            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Model</th><th class="num">Break-even</th><th class="num">Edge</th><th>Rec</th></tr>'; mt.appendChild(mh);
+            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Edge</th><th>Rec</th></tr>'; mt.appendChild(mh);
             const mb = document.createElement('tbody');
             const pct = v => (v === null || v === undefined) ? '—' : `${(100 * v).toFixed(1)}%`;
             const spct = v => (v === null || v === undefined) ? '—' : `${v >= 0 ? '+' : ''}${(100 * v).toFixed(1)}%`;
             markets.forEach(r => {
               const tr = document.createElement('tr'); if (r.selected) tr.className = 'selected';
-              const cells = [r.market, r.bet, (r.odds > 0 ? '+' : '') + r.odds, pct(r.model), pct(r.breakeven), spct(r.edge)];
+              const cells = [r.market, r.bet, (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds, spct(r.edge)];
               cells.forEach((c, i) => { const td = document.createElement('td'); if (i >= 2) td.className = 'num'; td.textContent = c; tr.appendChild(td); });
               const rec = document.createElement('td');
               if (['BET', 'LEAN', 'PASS'].includes(r.rec)) { const sp = document.createElement('span'); sp.className = `tier tier-${r.rec}`; sp.textContent = r.rec; rec.appendChild(sp); }

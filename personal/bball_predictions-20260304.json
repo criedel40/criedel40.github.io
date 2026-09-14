@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20260304,
-  "generated": "2026-09-14T01:06:07Z",
+  "generated": "2026-09-14T01:46:39Z",
   "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_5_tm_ens5)",
   "members": 10000,
   "rows": [
@@ -256,6 +256,16 @@
     "breakeven": 0.505,
     "edge": 0.012,
     "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "\u2014",
     "selected": false
    },
    {
@@ -569,6 +579,16 @@
     "model": 0.515,
     "breakeven": 0.519,
     "edge": -0.004,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
     "rec": "\u2014",
     "selected": false
    },
@@ -915,6 +935,16 @@
     "selected": false
    },
    {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
     "market": "Total",
     "bet": "Over 165.5",
     "odds": -112,
@@ -1229,6 +1259,16 @@
     "model": 0.421,
     "breakeven": 0.528,
     "edge": -0.107,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
     "rec": "\u2014",
     "selected": false
    },
@@ -1566,28 +1606,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 150.5",
-    "odds": -110,
-    "model": 0.493,
-    "breakeven": 0.524,
-    "edge": -0.031,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 146.7"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 150.5",
-    "odds": -110,
-    "model": 0.507,
-    "breakeven": 0.524,
-    "edge": -0.017,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 146.7"
-   },
-   {
     "market": "Moneyline",
     "bet": "New Mexico ML",
     "odds": -410,
@@ -1608,6 +1626,28 @@
     "rec": "BET",
     "selected": true,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 150.5",
+    "odds": -110,
+    "model": 0.493,
+    "breakeven": 0.524,
+    "edge": -0.031,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 146.7"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 150.5",
+    "odds": -110,
+    "model": 0.507,
+    "breakeven": 0.524,
+    "edge": -0.017,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 146.7"
    }
   ],
   "Histogram": {
@@ -1907,6 +1947,16 @@
     "breakeven": 0.519,
     "edge": -0.034,
     "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "\u2014",
     "selected": false
    },
    {
@@ -2231,28 +2281,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 136.5",
-    "odds": -115,
-    "model": 0.516,
-    "breakeven": 0.535,
-    "edge": -0.019,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 145.5"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 136.5",
-    "odds": -105,
-    "model": 0.484,
-    "breakeven": 0.512,
-    "edge": -0.028,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 145.5"
-   },
-   {
     "market": "Moneyline",
     "bet": "Southern Illinois ML",
     "odds": -225,
@@ -2273,6 +2301,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 136.5",
+    "odds": -115,
+    "model": 0.516,
+    "breakeven": 0.535,
+    "edge": -0.019,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 145.5"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 136.5",
+    "odds": -105,
+    "model": 0.484,
+    "breakeven": 0.512,
+    "edge": -0.028,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 145.5"
    }
   ],
   "Histogram": {
@@ -2568,6 +2618,16 @@
     "breakeven": 0.535,
     "edge": -0.039,
     "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "\u2014",
     "selected": false
    },
    {
@@ -2887,6 +2947,16 @@
     "model": 0.495,
     "breakeven": 0.528,
     "edge": -0.033,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
     "rec": "\u2014",
     "selected": false
    },
@@ -3234,28 +3304,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 152.5",
-    "odds": -115,
-    "model": 0.499,
-    "breakeven": 0.535,
-    "edge": -0.036,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 151.8"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 152.5",
-    "odds": -105,
-    "model": 0.501,
-    "breakeven": 0.512,
-    "edge": -0.011,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 151.8"
-   },
-   {
     "market": "Moneyline",
     "bet": "FIU ML",
     "odds": -148,
@@ -3276,6 +3324,28 @@
     "rec": "BET",
     "selected": true,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 152.5",
+    "odds": -115,
+    "model": 0.499,
+    "breakeven": 0.535,
+    "edge": -0.036,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 151.8"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 152.5",
+    "odds": -105,
+    "model": 0.501,
+    "breakeven": 0.512,
+    "edge": -0.011,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 151.8"
    }
   ],
   "Histogram": {
@@ -3557,28 +3627,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 149.5",
-    "odds": -115,
-    "model": 0.505,
-    "breakeven": 0.535,
-    "edge": -0.03,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 152.3"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 149.5",
-    "odds": -105,
-    "model": 0.495,
-    "breakeven": 0.512,
-    "edge": -0.017,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 152.3"
-   },
-   {
     "market": "Moneyline",
     "bet": "Fairfield ML",
     "odds": -275,
@@ -3599,6 +3647,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 149.5",
+    "odds": -115,
+    "model": 0.505,
+    "breakeven": 0.535,
+    "edge": -0.03,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 152.3"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 149.5",
+    "odds": -105,
+    "model": 0.495,
+    "breakeven": 0.512,
+    "edge": -0.017,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 152.3"
    }
   ],
   "Histogram": {
@@ -3916,6 +3986,16 @@
     "breakeven": 0.535,
     "edge": 0.004,
     "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "\u2014",
     "selected": false
    },
    {
@@ -4260,28 +4340,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 137.5",
-    "odds": -110,
-    "model": 0.517,
-    "breakeven": 0.524,
-    "edge": -0.007,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 147.3"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 137.5",
-    "odds": -110,
-    "model": 0.483,
-    "breakeven": 0.524,
-    "edge": -0.041,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 147.3"
-   },
-   {
     "market": "Moneyline",
     "bet": "Valparaiso ML",
     "odds": -148,
@@ -4302,6 +4360,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 137.5",
+    "odds": -110,
+    "model": 0.517,
+    "breakeven": 0.524,
+    "edge": -0.007,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 147.3"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 137.5",
+    "odds": -110,
+    "model": 0.483,
+    "breakeven": 0.524,
+    "edge": -0.041,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 147.3"
    }
   ],
   "Histogram": {
@@ -4609,28 +4689,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 148.5",
-    "odds": -110,
-    "model": 0.505,
-    "breakeven": 0.524,
-    "edge": -0.019,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 151.1"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 148.5",
-    "odds": -110,
-    "model": 0.495,
-    "breakeven": 0.524,
-    "edge": -0.029,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 151.1"
-   },
-   {
     "market": "Moneyline",
     "bet": "Iona ML",
     "odds": -170,
@@ -4651,6 +4709,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 148.5",
+    "odds": -110,
+    "model": 0.505,
+    "breakeven": 0.524,
+    "edge": -0.019,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 151.1"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 148.5",
+    "odds": -110,
+    "model": 0.495,
+    "breakeven": 0.524,
+    "edge": -0.029,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 151.1"
    }
   ],
   "Histogram": {
@@ -4962,28 +5042,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 145.5",
-    "odds": -110,
-    "model": 0.509,
-    "breakeven": 0.524,
-    "edge": -0.015,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 150.4"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 145.5",
-    "odds": -110,
-    "model": 0.491,
-    "breakeven": 0.524,
-    "edge": -0.033,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 150.4"
-   },
-   {
     "market": "Moneyline",
     "bet": "Iowa ML",
     "odds": 320,
@@ -5004,6 +5062,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 145.5",
+    "odds": -110,
+    "model": 0.509,
+    "breakeven": 0.524,
+    "edge": -0.015,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 150.4"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 145.5",
+    "odds": -110,
+    "model": 0.491,
+    "breakeven": 0.524,
+    "edge": -0.033,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 150.4"
    }
   ],
   "Histogram": {
@@ -5292,6 +5372,16 @@
     "model": 0.518,
     "breakeven": 0.512,
     "edge": 0.006,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
     "rec": "\u2014",
     "selected": false
    },
@@ -5597,6 +5687,16 @@
     "breakeven": 0.524,
     "edge": 0.017,
     "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "\u2014",
     "selected": false
    },
    {
@@ -5927,28 +6027,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 138.5",
-    "odds": -110,
-    "model": 0.496,
-    "breakeven": 0.524,
-    "edge": -0.028,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 136.4"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 138.5",
-    "odds": -110,
-    "model": 0.504,
-    "breakeven": 0.524,
-    "edge": -0.02,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 136.4"
-   },
-   {
     "market": "Moneyline",
     "bet": "Liberty ML",
     "odds": -455,
@@ -5969,6 +6047,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 138.5",
+    "odds": -110,
+    "model": 0.496,
+    "breakeven": 0.524,
+    "edge": -0.028,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 136.4"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 138.5",
+    "odds": -110,
+    "model": 0.504,
+    "breakeven": 0.524,
+    "edge": -0.02,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 136.4"
    }
   ],
   "Histogram": {
@@ -6274,28 +6374,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 148.5",
-    "odds": -112,
-    "model": 0.497,
-    "breakeven": 0.528,
-    "edge": -0.031,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 147.2"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 148.5",
-    "odds": -108,
-    "model": 0.503,
-    "breakeven": 0.519,
-    "edge": -0.016,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 147.2"
-   },
-   {
     "market": "Moneyline",
     "bet": "Lindenwood ML",
     "odds": -198,
@@ -6316,6 +6394,28 @@
     "rec": "LEAN",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 148.5",
+    "odds": -112,
+    "model": 0.497,
+    "breakeven": 0.528,
+    "edge": -0.031,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 147.2"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 148.5",
+    "odds": -108,
+    "model": 0.503,
+    "breakeven": 0.519,
+    "edge": -0.016,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 147.2"
    }
   ],
   "Histogram": {
@@ -6605,6 +6705,16 @@
     "breakeven": 0.524,
     "edge": -0.022,
     "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "\u2014",
     "selected": false
    },
    {
@@ -6939,28 +7049,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 147.5",
-    "odds": -108,
-    "model": 0.499,
-    "breakeven": 0.519,
-    "edge": -0.02,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 146.9"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 147.5",
-    "odds": -112,
-    "model": 0.501,
-    "breakeven": 0.528,
-    "edge": -0.027,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 146.9"
-   },
-   {
     "market": "Moneyline",
     "bet": "Loyola Marymount ML",
     "odds": -245,
@@ -6981,6 +7069,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 147.5",
+    "odds": -108,
+    "model": 0.499,
+    "breakeven": 0.519,
+    "edge": -0.02,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 146.9"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 147.5",
+    "odds": -112,
+    "model": 0.501,
+    "breakeven": 0.528,
+    "edge": -0.027,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 146.9"
    }
   ],
   "Histogram": {
@@ -7288,28 +7398,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 159.5",
-    "odds": -115,
-    "model": 0.493,
-    "breakeven": 0.535,
-    "edge": -0.042,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 155.6"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 159.5",
-    "odds": -105,
-    "model": 0.507,
-    "breakeven": 0.512,
-    "edge": -0.005,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 155.6"
-   },
-   {
     "market": "Moneyline",
     "bet": "Memphis ML",
     "odds": 230,
@@ -7330,6 +7418,28 @@
     "rec": "BET",
     "selected": true,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 159.5",
+    "odds": -115,
+    "model": 0.493,
+    "breakeven": 0.535,
+    "edge": -0.042,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 155.6"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 159.5",
+    "odds": -105,
+    "model": 0.507,
+    "breakeven": 0.512,
+    "edge": -0.005,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 155.6"
    }
   ],
   "Histogram": {
@@ -7633,28 +7743,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 158.5",
-    "odds": -110,
-    "model": 0.499,
-    "breakeven": 0.524,
-    "edge": -0.025,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 158.1"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 158.5",
-    "odds": -110,
-    "model": 0.501,
-    "breakeven": 0.524,
-    "edge": -0.023,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 158.1"
-   },
-   {
     "market": "Moneyline",
     "bet": "Ohio ML",
     "odds": 230,
@@ -7675,6 +7763,28 @@
     "rec": "BET",
     "selected": true,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 158.5",
+    "odds": -110,
+    "model": 0.499,
+    "breakeven": 0.524,
+    "edge": -0.025,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 158.1"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 158.5",
+    "odds": -110,
+    "model": 0.501,
+    "breakeven": 0.524,
+    "edge": -0.023,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 158.1"
    }
   ],
   "Histogram": {
@@ -7976,28 +8086,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 141.5",
-    "odds": -110,
-    "model": 0.503,
-    "breakeven": 0.524,
-    "edge": -0.021,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 143.4"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 141.5",
-    "odds": -110,
-    "model": 0.497,
-    "breakeven": 0.524,
-    "edge": -0.027,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 143.4"
-   },
-   {
     "market": "Moneyline",
     "bet": "Michigan St. ML",
     "odds": -6500,
@@ -8018,6 +8106,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": "favourite priced beyond the -500 limit: never bet"
+   },
+   {
+    "market": "Total",
+    "bet": "Over 141.5",
+    "odds": -110,
+    "model": 0.503,
+    "breakeven": 0.524,
+    "edge": -0.021,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 143.4"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 141.5",
+    "odds": -110,
+    "model": 0.497,
+    "breakeven": 0.524,
+    "edge": -0.027,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 143.4"
    }
   ],
   "Histogram": {
@@ -8346,6 +8456,16 @@
     "selected": false
    },
    {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
     "market": "Total",
     "bet": "Over 151.5",
     "odds": -110,
@@ -8655,28 +8775,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 152.5",
-    "odds": -108,
-    "model": 0.493,
-    "breakeven": 0.519,
-    "edge": -0.026,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 148.7"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 152.5",
-    "odds": -112,
-    "model": 0.507,
-    "breakeven": 0.528,
-    "edge": -0.021,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 148.7"
-   },
-   {
     "market": "Moneyline",
     "bet": "Portland ML",
     "odds": -135,
@@ -8697,6 +8795,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 152.5",
+    "odds": -108,
+    "model": 0.493,
+    "breakeven": 0.519,
+    "edge": -0.026,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 148.7"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 152.5",
+    "odds": -112,
+    "model": 0.507,
+    "breakeven": 0.528,
+    "edge": -0.021,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 148.7"
    }
   ],
   "Histogram": {
@@ -9022,28 +9142,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 150.5",
-    "odds": -108,
-    "model": 0.502,
-    "breakeven": 0.519,
-    "edge": -0.017,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 151.8"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 150.5",
-    "odds": -112,
-    "model": 0.498,
-    "breakeven": 0.528,
-    "edge": -0.03,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 151.8"
-   },
-   {
     "market": "Moneyline",
     "bet": "St. Thomas ML",
     "odds": -290,
@@ -9064,6 +9162,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 150.5",
+    "odds": -108,
+    "model": 0.502,
+    "breakeven": 0.519,
+    "edge": -0.017,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 151.8"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 150.5",
+    "odds": -112,
+    "model": 0.498,
+    "breakeven": 0.528,
+    "edge": -0.03,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 151.8"
    }
   ],
   "Histogram": {
@@ -9362,6 +9482,16 @@
     "model": 0.482,
     "breakeven": 0.528,
     "edge": -0.046,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "no moneyline posted",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
     "rec": "\u2014",
     "selected": false
    },
@@ -9719,28 +9849,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 136.5",
-    "odds": -112,
-    "model": 0.511,
-    "breakeven": 0.528,
-    "edge": -0.017,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 142.5"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 136.5",
-    "odds": -108,
-    "model": 0.489,
-    "breakeven": 0.519,
-    "edge": -0.03,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 142.5"
-   },
-   {
     "market": "Moneyline",
     "bet": "Tarleton St. ML",
     "odds": -130,
@@ -9761,6 +9869,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 136.5",
+    "odds": -112,
+    "model": 0.511,
+    "breakeven": 0.528,
+    "edge": -0.017,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 142.5"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 136.5",
+    "odds": -108,
+    "model": 0.489,
+    "breakeven": 0.519,
+    "edge": -0.03,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 142.5"
    }
   ],
   "Histogram": {
@@ -10058,28 +10188,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 144.5",
-    "odds": -110,
-    "model": 0.504,
-    "breakeven": 0.524,
-    "edge": -0.02,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 146.4"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 144.5",
-    "odds": -110,
-    "model": 0.496,
-    "breakeven": 0.524,
-    "edge": -0.028,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 146.4"
-   },
-   {
     "market": "Moneyline",
     "bet": "Temple ML",
     "odds": -205,
@@ -10100,6 +10208,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 144.5",
+    "odds": -110,
+    "model": 0.504,
+    "breakeven": 0.524,
+    "edge": -0.02,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 146.4"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 144.5",
+    "odds": -110,
+    "model": 0.496,
+    "breakeven": 0.524,
+    "edge": -0.028,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 146.4"
    }
   ],
   "Histogram": {
@@ -10397,28 +10527,6 @@
     "selected": false
    },
    {
-    "market": "Total",
-    "bet": "Over 150.5",
-    "odds": -115,
-    "model": 0.505,
-    "breakeven": 0.535,
-    "edge": -0.03,
-    "rec": "PASS",
-    "selected": false,
-    "note": "model total 153.3"
-   },
-   {
-    "market": "Total",
-    "bet": "Under 150.5",
-    "odds": -105,
-    "model": 0.495,
-    "breakeven": 0.512,
-    "edge": -0.017,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 153.3"
-   },
-   {
     "market": "Moneyline",
     "bet": "Washington ML",
     "odds": -225,
@@ -10439,6 +10547,28 @@
     "rec": "\u2014",
     "selected": false,
     "note": null
+   },
+   {
+    "market": "Total",
+    "bet": "Over 150.5",
+    "odds": -115,
+    "model": 0.505,
+    "breakeven": 0.535,
+    "edge": -0.03,
+    "rec": "PASS",
+    "selected": false,
+    "note": "model total 153.3"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 150.5",
+    "odds": -105,
+    "model": 0.495,
+    "breakeven": 0.512,
+    "edge": -0.017,
+    "rec": "\u2014",
+    "selected": false,
+    "note": "model total 153.3"
    }
   ],
   "Histogram": {
