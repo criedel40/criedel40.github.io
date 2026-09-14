@@ -106,6 +106,9 @@
     .score-hist .iqr{stroke:#1d5fb0;stroke-width:1.5}
     .score-hist .iqr-label{font-size:10px;fill:#1d5fb0;font-weight:600}
     .score-hist .iqr-band{fill:#2a78d6;fill-opacity:.08}
+    /* markers and labels never intercept the pointer: the bars' hit targets beneath them keep the hover readout */
+    .score-hist .iqr-band,.score-hist .iqr,.score-hist .marker,.score-hist .marker-label,.score-hist .iqr-label,.score-hist .grid,.score-hist .axis,.score-hist .tick,.score-hist .caption,.score-hist .title{pointer-events:none}
+    .sens-chart .grid,.sens-chart .zero,.sens-chart .tick,.sens-chart .title{pointer-events:none}
     .image-modal-content{background:#fff;padding:1rem;border-radius:8px;width:min(96vw,1400px)}
     .image-modal-content .score-hist{width:100%}
     #bball-images-loading{text-align:center;padding:2rem;color:#666}
