@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20260304,
-  "generated": "2026-09-14T01:46:39Z",
+  "generated": "2026-09-14T01:50:24Z",
   "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_5_tm_ens5)",
   "members": 10000,
   "rows": [
@@ -245,7 +245,7 @@
     "model": 0.483,
     "breakeven": 0.541,
     "edge": -0.058,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -260,12 +260,22 @@
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Cal Baptist ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Abilene Christian ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -275,9 +285,8 @@
     "model": 0.499,
     "breakeven": 0.535,
     "edge": -0.036,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 134.9"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -287,8 +296,7 @@
     "breakeven": 0.512,
     "edge": -0.011,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 134.9"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -579,17 +587,27 @@
     "model": 0.515,
     "breakeven": 0.519,
     "edge": -0.004,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "UC Irvine ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Cal Poly ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -599,9 +617,8 @@
     "model": 0.497,
     "breakeven": 0.535,
     "edge": -0.038,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 152.6"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -611,8 +628,7 @@
     "breakeven": 0.512,
     "edge": -0.009,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 152.6"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -931,17 +947,27 @@
     "model": 0.483,
     "breakeven": 0.519,
     "edge": -0.036,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Cal St. Bakersfield ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Cal St. Northridge ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -951,9 +977,8 @@
     "model": 0.492,
     "breakeven": 0.528,
     "edge": -0.036,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 160.9"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -963,8 +988,7 @@
     "breakeven": 0.519,
     "edge": -0.011,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 160.9"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -1259,17 +1283,27 @@
     "model": 0.421,
     "breakeven": 0.528,
     "edge": -0.107,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Cal St. Fullerton ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "UC San Diego ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -1279,9 +1313,8 @@
     "model": 0.496,
     "breakeven": 0.519,
     "edge": -0.023,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 155.6"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -1291,8 +1324,7 @@
     "breakeven": 0.528,
     "edge": -0.024,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 155.6"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -1592,7 +1624,7 @@
     "model": 0.47,
     "breakeven": 0.519,
     "edge": -0.049,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -1612,9 +1644,8 @@
     "model": 0.719,
     "breakeven": 0.804,
     "edge": -0.085,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -1624,8 +1655,7 @@
     "breakeven": 0.238,
     "edge": 0.043,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Total",
@@ -1634,9 +1664,8 @@
     "model": 0.493,
     "breakeven": 0.524,
     "edge": -0.031,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 146.7"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -1646,8 +1675,7 @@
     "breakeven": 0.524,
     "edge": -0.017,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 146.7"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -1936,7 +1964,7 @@
     "model": 0.515,
     "breakeven": 0.528,
     "edge": -0.013,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -1951,12 +1979,22 @@
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Delaware ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Sam Houston St. ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -1966,9 +2004,8 @@
     "model": 0.5,
     "breakeven": 0.528,
     "edge": -0.028,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 147.4"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -1978,8 +2015,7 @@
     "breakeven": 0.519,
     "edge": -0.019,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 147.4"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -2277,7 +2313,7 @@
     "model": 0.501,
     "breakeven": 0.519,
     "edge": -0.018,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -2288,8 +2324,7 @@
     "breakeven": 0.692,
     "edge": 0.002,
     "rec": "LEAN",
-    "selected": false,
-    "note": null
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -2298,9 +2333,8 @@
     "model": 0.306,
     "breakeven": 0.351,
     "edge": -0.045,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -2310,8 +2344,7 @@
     "breakeven": 0.535,
     "edge": -0.019,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 145.5"
+    "selected": false
    },
    {
     "market": "Total",
@@ -2320,9 +2353,8 @@
     "model": 0.484,
     "breakeven": 0.512,
     "edge": -0.028,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 145.5"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -2607,7 +2639,7 @@
     "model": 0.504,
     "breakeven": 0.512,
     "edge": -0.008,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -2622,12 +2654,22 @@
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "East Carolina ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Tulsa ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -2637,9 +2679,8 @@
     "model": 0.496,
     "breakeven": 0.524,
     "edge": -0.028,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 153.1"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -2649,8 +2690,7 @@
     "breakeven": 0.524,
     "edge": -0.02,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 153.1"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -2947,17 +2987,27 @@
     "model": 0.495,
     "breakeven": 0.528,
     "edge": -0.033,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Northern Iowa ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Evansville ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -2968,8 +3018,7 @@
     "breakeven": 0.541,
     "edge": -0.028,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 131.9"
+    "selected": false
    },
    {
     "market": "Total",
@@ -2978,9 +3027,8 @@
     "model": 0.487,
     "breakeven": 0.505,
     "edge": -0.018,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 131.9"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -3290,7 +3338,7 @@
     "model": 0.436,
     "breakeven": 0.512,
     "edge": -0.076,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -3310,9 +3358,8 @@
     "model": 0.466,
     "breakeven": 0.597,
     "edge": -0.131,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -3322,8 +3369,7 @@
     "breakeven": 0.446,
     "edge": 0.088,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Total",
@@ -3332,9 +3378,8 @@
     "model": 0.499,
     "breakeven": 0.535,
     "edge": -0.036,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 151.8"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -3344,8 +3389,7 @@
     "breakeven": 0.512,
     "edge": -0.011,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 151.8"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -3623,7 +3667,7 @@
     "model": 0.465,
     "breakeven": 0.512,
     "edge": -0.047,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -3634,8 +3678,7 @@
     "breakeven": 0.733,
     "edge": -0.02,
     "rec": "PASS",
-    "selected": false,
-    "note": null
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -3644,9 +3687,8 @@
     "model": 0.287,
     "breakeven": 0.312,
     "edge": -0.025,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -3656,8 +3698,7 @@
     "breakeven": 0.535,
     "edge": -0.03,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 152.3"
+    "selected": false
    },
    {
     "market": "Total",
@@ -3666,9 +3707,8 @@
     "model": 0.495,
     "breakeven": 0.512,
     "edge": -0.017,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 152.3"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -3975,7 +4015,7 @@
     "model": 0.461,
     "breakeven": 0.512,
     "edge": -0.051,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -3990,12 +4030,22 @@
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Hawaii ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "UC Riverside ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -4005,9 +4055,8 @@
     "model": 0.499,
     "breakeven": 0.528,
     "edge": -0.029,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 148.0"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -4017,8 +4066,7 @@
     "breakeven": 0.519,
     "edge": -0.018,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 148.0"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -4336,7 +4384,7 @@
     "model": 0.411,
     "breakeven": 0.519,
     "edge": -0.108,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -4347,8 +4395,7 @@
     "breakeven": 0.597,
     "edge": 0.238,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Moneyline",
@@ -4357,9 +4404,8 @@
     "model": 0.165,
     "breakeven": 0.446,
     "edge": -0.281,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -4369,8 +4415,7 @@
     "breakeven": 0.524,
     "edge": -0.007,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 147.3"
+    "selected": false
    },
    {
     "market": "Total",
@@ -4379,9 +4424,8 @@
     "model": 0.483,
     "breakeven": 0.524,
     "edge": -0.041,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 147.3"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -4685,7 +4729,7 @@
     "model": 0.468,
     "breakeven": 0.505,
     "edge": -0.037,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -4696,8 +4740,7 @@
     "breakeven": 0.63,
     "edge": 0.068,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Moneyline",
@@ -4706,9 +4749,8 @@
     "model": 0.302,
     "breakeven": 0.417,
     "edge": -0.115,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -4718,8 +4760,7 @@
     "breakeven": 0.524,
     "edge": -0.019,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 151.1"
+    "selected": false
    },
    {
     "market": "Total",
@@ -4728,9 +4769,8 @@
     "model": 0.495,
     "breakeven": 0.524,
     "edge": -0.029,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 151.1"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -5038,7 +5078,7 @@
     "model": 0.435,
     "breakeven": 0.519,
     "edge": -0.084,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -5049,8 +5089,7 @@
     "breakeven": 0.238,
     "edge": 0.071,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Moneyline",
@@ -5059,9 +5098,8 @@
     "model": 0.691,
     "breakeven": 0.804,
     "edge": -0.113,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -5071,8 +5109,7 @@
     "breakeven": 0.524,
     "edge": -0.015,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 150.4"
+    "selected": false
    },
    {
     "market": "Total",
@@ -5081,9 +5118,8 @@
     "model": 0.491,
     "breakeven": 0.524,
     "edge": -0.033,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 150.4"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -5372,17 +5408,27 @@
     "model": 0.518,
     "breakeven": 0.512,
     "edge": 0.006,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "New Mexico St. ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Jacksonville St. ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -5392,9 +5438,8 @@
     "model": 0.499,
     "breakeven": 0.524,
     "edge": -0.025,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 142.0"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -5404,8 +5449,7 @@
     "breakeven": 0.524,
     "edge": -0.023,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 142.0"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -5676,7 +5720,7 @@
     "model": 0.459,
     "breakeven": 0.524,
     "edge": -0.065,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -5691,12 +5735,22 @@
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "UTEP ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Kennesaw St. ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -5706,9 +5760,8 @@
     "model": 0.499,
     "breakeven": 0.524,
     "edge": -0.025,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 149.3"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -5718,8 +5771,7 @@
     "breakeven": 0.524,
     "edge": -0.023,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 149.3"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -6023,7 +6075,7 @@
     "model": 0.478,
     "breakeven": 0.528,
     "edge": -0.05,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -6034,8 +6086,7 @@
     "breakeven": 0.82,
     "edge": 0.037,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Moneyline",
@@ -6044,9 +6095,8 @@
     "model": 0.143,
     "breakeven": 0.222,
     "edge": -0.079,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -6055,9 +6105,8 @@
     "model": 0.496,
     "breakeven": 0.524,
     "edge": -0.028,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 136.4"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -6067,8 +6116,7 @@
     "breakeven": 0.524,
     "edge": -0.02,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 136.4"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -6360,7 +6408,7 @@
     "model": 0.464,
     "breakeven": 0.524,
     "edge": -0.06,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -6380,9 +6428,8 @@
     "model": 0.61,
     "breakeven": 0.664,
     "edge": -0.054,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -6392,8 +6439,7 @@
     "breakeven": 0.379,
     "edge": 0.011,
     "rec": "LEAN",
-    "selected": false,
-    "note": null
+    "selected": false
    },
    {
     "market": "Total",
@@ -6402,9 +6448,8 @@
     "model": 0.497,
     "breakeven": 0.528,
     "edge": -0.031,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 147.2"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -6414,8 +6459,7 @@
     "breakeven": 0.519,
     "edge": -0.016,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 147.2"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -6694,7 +6738,7 @@
     "model": 0.498,
     "breakeven": 0.524,
     "edge": -0.026,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -6709,12 +6753,22 @@
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Long Beach St. ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "UC Davis ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -6724,9 +6778,8 @@
     "model": 0.493,
     "breakeven": 0.512,
     "edge": -0.019,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 146.8"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -6736,8 +6789,7 @@
     "breakeven": 0.535,
     "edge": -0.028,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 146.8"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -7045,7 +7097,7 @@
     "model": 0.495,
     "breakeven": 0.528,
     "edge": -0.033,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -7056,8 +7108,7 @@
     "breakeven": 0.71,
     "edge": 0.028,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Moneyline",
@@ -7066,9 +7117,8 @@
     "model": 0.262,
     "breakeven": 0.333,
     "edge": -0.071,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -7077,9 +7127,8 @@
     "model": 0.499,
     "breakeven": 0.519,
     "edge": -0.02,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 146.9"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -7089,8 +7138,7 @@
     "breakeven": 0.528,
     "edge": -0.027,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 146.9"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -7384,7 +7432,7 @@
     "model": 0.517,
     "breakeven": 0.524,
     "edge": -0.007,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -7404,9 +7452,8 @@
     "model": 0.23,
     "breakeven": 0.303,
     "edge": -0.073,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -7416,8 +7463,7 @@
     "breakeven": 0.74,
     "edge": 0.03,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Total",
@@ -7426,9 +7472,8 @@
     "model": 0.493,
     "breakeven": 0.535,
     "edge": -0.042,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 155.6"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -7438,8 +7483,7 @@
     "breakeven": 0.512,
     "edge": -0.005,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 155.6"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -7729,7 +7773,7 @@
     "model": 0.508,
     "breakeven": 0.524,
     "edge": -0.016,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -7749,9 +7793,8 @@
     "model": 0.232,
     "breakeven": 0.303,
     "edge": -0.071,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -7761,8 +7804,7 @@
     "breakeven": 0.74,
     "edge": 0.028,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Total",
@@ -7771,9 +7813,8 @@
     "model": 0.499,
     "breakeven": 0.524,
     "edge": -0.025,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 158.1"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -7783,8 +7824,7 @@
     "breakeven": 0.524,
     "edge": -0.023,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 158.1"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -8082,7 +8122,7 @@
     "model": 0.476,
     "breakeven": 0.528,
     "edge": -0.052,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -8093,8 +8133,7 @@
     "breakeven": 0.985,
     "edge": -0.009,
     "rec": "PASS",
-    "selected": false,
-    "note": "favourite priced beyond the -500 limit: never bet"
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -8103,9 +8142,8 @@
     "model": 0.024,
     "breakeven": 0.048,
     "edge": -0.024,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "favourite priced beyond the -500 limit: never bet"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -8115,8 +8153,7 @@
     "breakeven": 0.524,
     "edge": -0.021,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 143.4"
+    "selected": false
    },
    {
     "market": "Total",
@@ -8125,9 +8162,8 @@
     "model": 0.497,
     "breakeven": 0.524,
     "edge": -0.027,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 143.4"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -8452,17 +8488,27 @@
     "model": 0.463,
     "breakeven": 0.541,
     "edge": -0.078,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Missouri St. ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Western Kentucky ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -8472,9 +8518,8 @@
     "model": 0.495,
     "breakeven": 0.524,
     "edge": -0.029,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 149.0"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -8484,8 +8529,7 @@
     "breakeven": 0.524,
     "edge": -0.019,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 149.0"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -8771,7 +8815,7 @@
     "model": 0.472,
     "breakeven": 0.535,
     "edge": -0.063,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -8782,8 +8826,7 @@
     "breakeven": 0.574,
     "edge": 0.058,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Moneyline",
@@ -8792,9 +8835,8 @@
     "model": 0.368,
     "breakeven": 0.467,
     "edge": -0.099,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -8803,9 +8845,8 @@
     "model": 0.493,
     "breakeven": 0.519,
     "edge": -0.026,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 148.7"
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -8815,8 +8856,7 @@
     "breakeven": 0.528,
     "edge": -0.021,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 148.7"
+    "selected": false
    }
   ],
   "Histogram": {
@@ -9138,7 +9178,7 @@
     "model": 0.479,
     "breakeven": 0.512,
     "edge": -0.033,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -9149,8 +9189,7 @@
     "breakeven": 0.744,
     "edge": 0.011,
     "rec": "LEAN",
-    "selected": false,
-    "note": null
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -9159,9 +9198,8 @@
     "model": 0.245,
     "breakeven": 0.299,
     "edge": -0.054,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -9171,8 +9209,7 @@
     "breakeven": 0.519,
     "edge": -0.017,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 151.8"
+    "selected": false
    },
    {
     "market": "Total",
@@ -9181,9 +9218,8 @@
     "model": 0.498,
     "breakeven": 0.528,
     "edge": -0.03,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 151.8"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -9482,17 +9518,27 @@
     "model": 0.482,
     "breakeven": 0.528,
     "edge": -0.046,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
-    "bet": "no moneyline posted",
+    "bet": "Southern Utah ML",
     "odds": null,
     "model": null,
     "breakeven": null,
     "edge": null,
-    "rec": "\u2014",
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Utah Valley ML",
+    "odds": null,
+    "model": null,
+    "breakeven": null,
+    "edge": null,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -9503,8 +9549,7 @@
     "breakeven": 0.535,
     "edge": -0.03,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 153.2"
+    "selected": false
    },
    {
     "market": "Total",
@@ -9513,9 +9558,8 @@
     "model": 0.495,
     "breakeven": 0.512,
     "edge": -0.017,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 153.2"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -9845,7 +9889,7 @@
     "model": 0.496,
     "breakeven": 0.541,
     "edge": -0.045,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -9856,8 +9900,7 @@
     "breakeven": 0.565,
     "edge": 0.035,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Moneyline",
@@ -9866,9 +9909,8 @@
     "model": 0.4,
     "breakeven": 0.476,
     "edge": -0.076,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -9878,8 +9920,7 @@
     "breakeven": 0.528,
     "edge": -0.017,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 142.5"
+    "selected": false
    },
    {
     "market": "Total",
@@ -9888,9 +9929,8 @@
     "model": 0.489,
     "breakeven": 0.519,
     "edge": -0.03,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 142.5"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -10184,7 +10224,7 @@
     "model": 0.481,
     "breakeven": 0.524,
     "edge": -0.043,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -10195,8 +10235,7 @@
     "breakeven": 0.672,
     "edge": 0.071,
     "rec": "BET",
-    "selected": true,
-    "note": null
+    "selected": true
    },
    {
     "market": "Moneyline",
@@ -10205,9 +10244,8 @@
     "model": 0.257,
     "breakeven": 0.37,
     "edge": -0.113,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -10217,8 +10255,7 @@
     "breakeven": 0.524,
     "edge": -0.02,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 146.4"
+    "selected": false
    },
    {
     "market": "Total",
@@ -10227,9 +10264,8 @@
     "model": 0.496,
     "breakeven": 0.524,
     "edge": -0.028,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 146.4"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {
@@ -10523,7 +10559,7 @@
     "model": 0.511,
     "breakeven": 0.541,
     "edge": -0.03,
-    "rec": "\u2014",
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -10534,8 +10570,7 @@
     "breakeven": 0.692,
     "edge": 0.011,
     "rec": "LEAN",
-    "selected": false,
-    "note": null
+    "selected": false
    },
    {
     "market": "Moneyline",
@@ -10544,9 +10579,8 @@
     "model": 0.297,
     "breakeven": 0.351,
     "edge": -0.054,
-    "rec": "\u2014",
-    "selected": false,
-    "note": null
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -10556,8 +10590,7 @@
     "breakeven": 0.535,
     "edge": -0.03,
     "rec": "PASS",
-    "selected": false,
-    "note": "model total 153.3"
+    "selected": false
    },
    {
     "market": "Total",
@@ -10566,9 +10599,8 @@
     "model": 0.495,
     "breakeven": 0.512,
     "edge": -0.017,
-    "rec": "\u2014",
-    "selected": false,
-    "note": "model total 153.3"
+    "rec": "PASS",
+    "selected": false
    }
   ],
   "Histogram": {

@@ -523,8 +523,6 @@
               tr.appendChild(rec); mb.appendChild(tr);
             });
             mt.appendChild(mb); tableContainer.appendChild(mt);
-            const note = markets.find(r => r.note);
-            if (note) { const cap = document.createElement('div'); cap.className = 'markets-caption'; cap.textContent = note.note; tableContainer.appendChild(cap); }
           }
           predictionContainer.appendChild(tableContainer);
           
