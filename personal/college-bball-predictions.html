@@ -84,11 +84,12 @@
     .filters{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:0 0 1rem}
     .filters button{border:1px solid #cfd6e0;background:#fff;color:#333;padding:.35rem .8rem;border-radius:999px;font-size:.85rem;cursor:pointer}
     .filters button.active{background:#357edd;color:#fff;border-color:#357edd}
-    .signal-strip{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem 1.1rem;padding:.55rem .75rem;background:#f7f9fc;border-bottom:1px solid #e5e9f0;font-size:.9rem;color:#333}
-    .strip-title{font-weight:700;color:#0b0b0b;margin-right:.25rem}
-    .chip{display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap}
-    .chip .mk{color:#777}
-    @media screen and (max-width:768px){.signal-strip{font-size:.85rem;gap:.3rem .8rem}.chip{white-space:normal}}
+    .signal-strip{display:flex;justify-content:center;align-items:center;padding:.6rem .75rem;background:#f7f9fc;border-bottom:1px solid #e5e9f0;font-size:1.05rem;color:#0b0b0b}
+    .strip-title{font-weight:700;text-align:center}
+    /* every table and chart label in bold */
+    .prediction-table th,.prediction-table td,.markets-table th,.markets-table td,.bet-sheet th,.bet-sheet td,.markets-caption,.bet-sheet .empty{font-weight:700}
+    .score-hist text,.sens-chart text{font-weight:700}
+    .bball-image-title{font-weight:700}
     .game-card.hidden{display:none}
     @media screen and (max-width:768px){.header-full-height{aspect-ratio:auto;height:auto;min-height:0}.header-full-height h1{font-size:1.9rem!important}.header-full-height h2{font-size:1rem!important}}
     .score-hist{width:100%;height:auto;display:block}
@@ -406,23 +407,9 @@
               // Bet signal from the cover model: side the model leans to, points of lean vs the
               // closing spread, P(cover), and the tier (BET = staked, LEAN = logged only, PASS)
               // Signal strip: one chip per market above the score table (the markets table below has the detail)
-              const signals = yourModel.Signals || {};
               const strip = document.createElement('div'); strip.className = 'signal-strip';
               const head = document.createElement('span'); head.className = 'strip-title'; head.textContent = `${team1} vs ${team2}`; strip.appendChild(head);
-              for (const market of ['Spread', 'Moneyline', 'Total']) {
-                const sg = signals[market];
-                if (!sg || !sg.Tier) continue;
-                const chip = document.createElement('span'); chip.className = 'chip';
-                const badge = document.createElement('span'); badge.className = `tier ${['BET', 'LEAN', 'PASS'].includes(sg.Tier) ? `tier-${sg.Tier}` : 'tier-PASS'}`; badge.textContent = sg.Tier;
-                const mk = document.createElement('span'); mk.className = 'mk'; mk.textContent = market === 'Moneyline' ? 'ML' : market;
-                const what = document.createElement('span');
-                const p = sg.Probability !== undefined && sg.Probability !== null ? ` · ${(Number(sg.Probability) * 100).toFixed(1)}%` : '';
-                what.textContent = market === 'Moneyline' ? `${sg.Side} ${Number(sg.Odds) > 0 ? '+' : ''}${sg.Odds}${p}`
-                                 : market === 'Total' ? `${sg.Side} ${Number(sg.Line)}${p}`
-                                 : `${sg.Side} ${Number(sg.Lean) >= 0 ? '+' : ''}${Number(sg.Lean).toFixed(1)}${p}`;
-                chip.appendChild(mk); chip.appendChild(badge); chip.appendChild(what); strip.appendChild(chip);
-              }
-              tableContainer.appendChild(strip);
+              tableContainer.appendChild(strip);  // tiers live in the markets table below and in the bet sheet
               
               // Your model row
               const yourModelRow = document.createElement('tr');
