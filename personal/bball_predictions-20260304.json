@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20260304,
-  "generated": "2026-09-14T01:50:24Z",
+  "generated": "2026-09-14T02:17:27Z",
   "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_5_tm_ens5)",
   "members": 10000,
   "rows": [
@@ -23,127 +23,57 @@
     "probability": 0.579,
     "edge": 0.083,
     "tier": "BET",
-    "bankroll_fraction": 0.0158
+    "bankroll_fraction": 0.02
    },
    {
-    "market": "Moneyline",
-    "game": "New Mexico vs Colorado St.",
-    "bet": "Colorado St. ML",
-    "odds": 320,
-    "probability": 0.281,
-    "edge": 0.052,
-    "tier": "BET",
-    "bankroll_fraction": 0.011
-   },
-   {
-    "market": "Moneyline",
+    "market": "Spread",
     "game": "FIU vs Middle Tennessee",
-    "bet": "Middle Tennessee ML",
-    "odds": 124,
-    "probability": 0.534,
-    "edge": 0.106,
+    "bet": "Middle Tennessee +2.5",
+    "odds": -115,
+    "probability": 0.564,
+    "edge": 0.053,
     "tier": "BET",
-    "bankroll_fraction": 0.0158
+    "bankroll_fraction": 0.0156
    },
    {
     "market": "Moneyline",
     "game": "Valparaiso vs Indiana St.",
     "bet": "Valparaiso ML",
     "odds": -148,
-    "probability": 0.835,
-    "edge": 0.263,
+    "probability": 0.672,
+    "edge": 0.1,
     "tier": "BET",
-    "bankroll_fraction": 0.0158
+    "bankroll_fraction": 0.02
    },
    {
     "market": "Moneyline",
     "game": "Iona vs Sacred Heart",
     "bet": "Iona ML",
     "odds": -170,
-    "probability": 0.698,
-    "edge": 0.097,
+    "probability": 0.633,
+    "edge": 0.032,
     "tier": "BET",
-    "bankroll_fraction": 0.0158
+    "bankroll_fraction": 0.0025
    },
    {
-    "market": "Moneyline",
+    "market": "Spread",
     "game": "Iowa vs Michigan",
-    "bet": "Iowa ML",
-    "odds": 320,
-    "probability": 0.309,
-    "edge": 0.08,
+    "bet": "Iowa +8.5",
+    "odds": -112,
+    "probability": 0.565,
+    "edge": 0.061,
     "tier": "BET",
-    "bankroll_fraction": 0.0158
-   },
-   {
-    "market": "Moneyline",
-    "game": "Liberty vs Louisiana Tech",
-    "bet": "Liberty ML",
-    "odds": -455,
-    "probability": 0.857,
-    "edge": 0.071,
-    "tier": "BET",
-    "bankroll_fraction": 0.0158
-   },
-   {
-    "market": "Moneyline",
-    "game": "Loyola Marymount vs San Diego",
-    "bet": "Loyola Marymount ML",
-    "odds": -245,
-    "probability": 0.738,
-    "edge": 0.058,
-    "tier": "BET",
-    "bankroll_fraction": 0.0158
-   },
-   {
-    "market": "Moneyline",
-    "game": "Memphis vs South Florida",
-    "bet": "South Florida ML",
-    "odds": -285,
-    "probability": 0.77,
-    "edge": 0.06,
-    "tier": "BET",
-    "bankroll_fraction": 0.0158
-   },
-   {
-    "market": "Moneyline",
-    "game": "Ohio vs Miami OH",
-    "bet": "Miami OH ML",
-    "odds": -285,
-    "probability": 0.768,
-    "edge": 0.058,
-    "tier": "BET",
-    "bankroll_fraction": 0.0158
-   },
-   {
-    "market": "Moneyline",
-    "game": "Portland vs Pepperdine",
-    "bet": "Portland ML",
-    "odds": -135,
-    "probability": 0.632,
-    "edge": 0.081,
-    "tier": "BET",
-    "bankroll_fraction": 0.0158
-   },
-   {
-    "market": "Moneyline",
-    "game": "Tarleton St. vs UT Arlington",
-    "bet": "Tarleton St. ML",
-    "odds": -130,
-    "probability": 0.6,
-    "edge": 0.057,
-    "tier": "BET",
-    "bankroll_fraction": 0.0157
+    "bankroll_fraction": 0.0194
    },
    {
     "market": "Moneyline",
     "game": "Temple vs Tulane",
     "bet": "Temple ML",
     "odds": -205,
-    "probability": 0.743,
-    "edge": 0.098,
+    "probability": 0.676,
+    "edge": 0.032,
     "tier": "BET",
-    "bankroll_fraction": 0.0158
+    "bankroll_fraction": 0.0033
    }
   ],
   "tier_rules": {
@@ -152,9 +82,10 @@
     "LEAN": "P(cover) >= break-even"
    },
    "moneyline": {
-    "BET": "edge >= 0.05 and odds > -500",
+    "BET": "market-shrunk edge (w 0.35) >= 0.03 and odds > -500",
     "LEAN": "edge >= 0.02"
    },
+   "ml_shrink_w": 0.35,
    "total": {
     "BET": "edge >= 0.03 (staked only with --include-totals)",
     "LEAN": "edge >= 0.02"
@@ -167,9 +98,9 @@
     "LEAN": 9
    },
    "Moneyline": {
-    "BET": 12,
     "LEAN": 4,
-    "PASS": 2
+    "PASS": 10,
+    "BET": 4
    },
    "Total": {
     "PASS": 31
@@ -1582,9 +1513,9 @@
     "Moneyline": {
      "Side": "Colorado St.",
      "Odds": 320,
-     "Probability": 0.281,
-     "Edge": 0.052,
-     "Tier": "BET"
+     "Probability": 0.249,
+     "Edge": 0.021,
+     "Tier": "LEAN"
     },
     "Total": {
      "Side": "Under",
@@ -1641,9 +1572,9 @@
     "market": "Moneyline",
     "bet": "New Mexico ML",
     "odds": -410,
-    "model": 0.719,
+    "model": 0.751,
     "breakeven": 0.804,
-    "edge": -0.085,
+    "edge": -0.053,
     "rec": "PASS",
     "selected": false
    },
@@ -1651,11 +1582,11 @@
     "market": "Moneyline",
     "bet": "Colorado St. ML",
     "odds": 320,
-    "model": 0.281,
+    "model": 0.249,
     "breakeven": 0.238,
-    "edge": 0.043,
-    "rec": "BET",
-    "selected": true
+    "edge": 0.011,
+    "rec": "LEAN",
+    "selected": false
    },
    {
     "market": "Total",
@@ -2261,9 +2192,9 @@
     "Moneyline": {
      "Side": "Southern Illinois",
      "Odds": -225,
-     "Probability": 0.694,
-     "Edge": 0.031,
-     "Tier": "LEAN"
+     "Probability": 0.671,
+     "Edge": 0.008,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Over",
@@ -2320,19 +2251,19 @@
     "market": "Moneyline",
     "bet": "Southern Illinois ML",
     "odds": -225,
-    "model": 0.694,
+    "model": 0.671,
     "breakeven": 0.692,
-    "edge": 0.002,
-    "rec": "LEAN",
+    "edge": -0.021,
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
     "bet": "Drake ML",
     "odds": 185,
-    "model": 0.306,
+    "model": 0.329,
     "breakeven": 0.351,
-    "edge": -0.045,
+    "edge": -0.022,
     "rec": "PASS",
     "selected": false
    },
@@ -3296,8 +3227,8 @@
     "Moneyline": {
      "Side": "Middle Tennessee",
      "Odds": 124,
-     "Probability": 0.534,
-     "Edge": 0.106,
+     "Probability": 0.464,
+     "Edge": 0.036,
      "Tier": "BET"
     },
     "Total": {
@@ -3349,15 +3280,15 @@
     "breakeven": 0.535,
     "edge": 0.029,
     "rec": "BET",
-    "selected": false
+    "selected": true
    },
    {
     "market": "Moneyline",
     "bet": "FIU ML",
     "odds": -148,
-    "model": 0.466,
+    "model": 0.536,
     "breakeven": 0.597,
-    "edge": -0.131,
+    "edge": -0.061,
     "rec": "PASS",
     "selected": false
    },
@@ -3365,11 +3296,11 @@
     "market": "Moneyline",
     "bet": "Middle Tennessee ML",
     "odds": 124,
-    "model": 0.534,
+    "model": 0.464,
     "breakeven": 0.446,
-    "edge": 0.088,
+    "edge": 0.018,
     "rec": "BET",
-    "selected": true
+    "selected": false
    },
    {
     "market": "Total",
@@ -3615,8 +3546,8 @@
     "Moneyline": {
      "Side": "Fairfield",
      "Odds": -275,
-     "Probability": 0.713,
-     "Edge": 0.012,
+     "Probability": 0.702,
+     "Edge": 0.001,
      "Tier": "PASS"
     },
     "Total": {
@@ -3674,9 +3605,9 @@
     "market": "Moneyline",
     "bet": "Fairfield ML",
     "odds": -275,
-    "model": 0.713,
+    "model": 0.702,
     "breakeven": 0.733,
-    "edge": -0.02,
+    "edge": -0.031,
     "rec": "PASS",
     "selected": false
    },
@@ -3684,9 +3615,9 @@
     "market": "Moneyline",
     "bet": "Manhattan ML",
     "odds": 220,
-    "model": 0.287,
+    "model": 0.298,
     "breakeven": 0.312,
-    "edge": -0.025,
+    "edge": -0.014,
     "rec": "PASS",
     "selected": false
    },
@@ -4332,8 +4263,8 @@
     "Moneyline": {
      "Side": "Valparaiso",
      "Odds": -148,
-     "Probability": 0.835,
-     "Edge": 0.263,
+     "Probability": 0.672,
+     "Edge": 0.1,
      "Tier": "BET"
     },
     "Total": {
@@ -4391,9 +4322,9 @@
     "market": "Moneyline",
     "bet": "Valparaiso ML",
     "odds": -148,
-    "model": 0.835,
+    "model": 0.672,
     "breakeven": 0.597,
-    "edge": 0.238,
+    "edge": 0.075,
     "rec": "BET",
     "selected": true
    },
@@ -4401,9 +4332,9 @@
     "market": "Moneyline",
     "bet": "Indiana St. ML",
     "odds": 124,
-    "model": 0.165,
+    "model": 0.328,
     "breakeven": 0.446,
-    "edge": -0.281,
+    "edge": -0.118,
     "rec": "PASS",
     "selected": false
    },
@@ -4677,8 +4608,8 @@
     "Moneyline": {
      "Side": "Iona",
      "Odds": -170,
-     "Probability": 0.698,
-     "Edge": 0.097,
+     "Probability": 0.633,
+     "Edge": 0.032,
      "Tier": "BET"
     },
     "Total": {
@@ -4736,9 +4667,9 @@
     "market": "Moneyline",
     "bet": "Iona ML",
     "odds": -170,
-    "model": 0.698,
+    "model": 0.633,
     "breakeven": 0.63,
-    "edge": 0.068,
+    "edge": 0.003,
     "rec": "BET",
     "selected": true
    },
@@ -4746,9 +4677,9 @@
     "market": "Moneyline",
     "bet": "Sacred Heart ML",
     "odds": 140,
-    "model": 0.302,
+    "model": 0.367,
     "breakeven": 0.417,
-    "edge": -0.115,
+    "edge": -0.05,
     "rec": "PASS",
     "selected": false
    },
@@ -5026,9 +4957,9 @@
     "Moneyline": {
      "Side": "Iowa",
      "Odds": 320,
-     "Probability": 0.309,
-     "Edge": 0.08,
-     "Tier": "BET"
+     "Probability": 0.258,
+     "Edge": 0.029,
+     "Tier": "LEAN"
     },
     "Total": {
      "Side": "Over",
@@ -5069,7 +5000,7 @@
     "breakeven": 0.528,
     "edge": 0.037,
     "rec": "BET",
-    "selected": false
+    "selected": true
    },
    {
     "market": "Spread",
@@ -5085,19 +5016,19 @@
     "market": "Moneyline",
     "bet": "Iowa ML",
     "odds": 320,
-    "model": 0.309,
+    "model": 0.258,
     "breakeven": 0.238,
-    "edge": 0.071,
-    "rec": "BET",
-    "selected": true
+    "edge": 0.02,
+    "rec": "LEAN",
+    "selected": false
    },
    {
     "market": "Moneyline",
     "bet": "Michigan ML",
     "odds": -410,
-    "model": 0.691,
+    "model": 0.742,
     "breakeven": 0.804,
-    "edge": -0.113,
+    "edge": -0.062,
     "rec": "PASS",
     "selected": false
    },
@@ -6023,9 +5954,9 @@
     "Moneyline": {
      "Side": "Liberty",
      "Odds": -455,
-     "Probability": 0.857,
-     "Edge": 0.071,
-     "Tier": "BET"
+     "Probability": 0.807,
+     "Edge": 0.02,
+     "Tier": "LEAN"
     },
     "Total": {
      "Side": "Under",
@@ -6082,19 +6013,19 @@
     "market": "Moneyline",
     "bet": "Liberty ML",
     "odds": -455,
-    "model": 0.857,
+    "model": 0.807,
     "breakeven": 0.82,
-    "edge": 0.037,
-    "rec": "BET",
-    "selected": true
+    "edge": -0.013,
+    "rec": "LEAN",
+    "selected": false
    },
    {
     "market": "Moneyline",
     "bet": "Louisiana Tech ML",
     "odds": 350,
-    "model": 0.143,
+    "model": 0.193,
     "breakeven": 0.222,
-    "edge": -0.079,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false
    },
@@ -6366,9 +6297,9 @@
     "Moneyline": {
      "Side": "Little Rock",
      "Odds": 164,
-     "Probability": 0.39,
-     "Edge": 0.027,
-     "Tier": "LEAN"
+     "Probability": 0.374,
+     "Edge": 0.011,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Under",
@@ -6425,9 +6356,9 @@
     "market": "Moneyline",
     "bet": "Lindenwood ML",
     "odds": -198,
-    "model": 0.61,
+    "model": 0.626,
     "breakeven": 0.664,
-    "edge": -0.054,
+    "edge": -0.038,
     "rec": "PASS",
     "selected": false
    },
@@ -6435,10 +6366,10 @@
     "market": "Moneyline",
     "bet": "Little Rock ML",
     "odds": 164,
-    "model": 0.39,
+    "model": 0.374,
     "breakeven": 0.379,
-    "edge": 0.011,
-    "rec": "LEAN",
+    "edge": -0.005,
+    "rec": "PASS",
     "selected": false
    },
    {
@@ -7045,9 +6976,9 @@
     "Moneyline": {
      "Side": "Loyola Marymount",
      "Odds": -245,
-     "Probability": 0.738,
-     "Edge": 0.058,
-     "Tier": "BET"
+     "Probability": 0.697,
+     "Edge": 0.017,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Under",
@@ -7104,19 +7035,19 @@
     "market": "Moneyline",
     "bet": "Loyola Marymount ML",
     "odds": -245,
-    "model": 0.738,
+    "model": 0.697,
     "breakeven": 0.71,
-    "edge": 0.028,
-    "rec": "BET",
-    "selected": true
+    "edge": -0.013,
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Moneyline",
     "bet": "San Diego ML",
     "odds": 200,
-    "model": 0.262,
+    "model": 0.303,
     "breakeven": 0.333,
-    "edge": -0.071,
+    "edge": -0.03,
     "rec": "PASS",
     "selected": false
    },
@@ -7390,9 +7321,9 @@
     "Moneyline": {
      "Side": "South Florida",
      "Odds": -285,
-     "Probability": 0.77,
-     "Edge": 0.06,
-     "Tier": "BET"
+     "Probability": 0.727,
+     "Edge": 0.017,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Under",
@@ -7449,9 +7380,9 @@
     "market": "Moneyline",
     "bet": "Memphis ML",
     "odds": 230,
-    "model": 0.23,
+    "model": 0.273,
     "breakeven": 0.303,
-    "edge": -0.073,
+    "edge": -0.03,
     "rec": "PASS",
     "selected": false
    },
@@ -7459,11 +7390,11 @@
     "market": "Moneyline",
     "bet": "South Florida ML",
     "odds": -285,
-    "model": 0.77,
+    "model": 0.727,
     "breakeven": 0.74,
-    "edge": 0.03,
-    "rec": "BET",
-    "selected": true
+    "edge": -0.013,
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -7731,9 +7662,9 @@
     "Moneyline": {
      "Side": "Miami OH",
      "Odds": -285,
-     "Probability": 0.768,
-     "Edge": 0.058,
-     "Tier": "BET"
+     "Probability": 0.726,
+     "Edge": 0.016,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Under",
@@ -7790,9 +7721,9 @@
     "market": "Moneyline",
     "bet": "Ohio ML",
     "odds": 230,
-    "model": 0.232,
+    "model": 0.274,
     "breakeven": 0.303,
-    "edge": -0.071,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false
    },
@@ -7800,11 +7731,11 @@
     "market": "Moneyline",
     "bet": "Miami OH ML",
     "odds": -285,
-    "model": 0.768,
+    "model": 0.726,
     "breakeven": 0.74,
-    "edge": 0.028,
-    "rec": "BET",
-    "selected": true
+    "edge": -0.014,
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Total",
@@ -8068,10 +7999,10 @@
      "Tier": "LEAN"
     },
     "Moneyline": {
-     "Side": "Michigan St.",
-     "Odds": -6500,
-     "Probability": 0.976,
-     "Edge": 0.022,
+     "Side": "Rutgers",
+     "Odds": 2000,
+     "Probability": 0.046,
+     "Edge": 0.0,
      "Tier": "PASS"
     },
     "Total": {
@@ -8129,9 +8060,9 @@
     "market": "Moneyline",
     "bet": "Michigan St. ML",
     "odds": -6500,
-    "model": 0.976,
+    "model": 0.954,
     "breakeven": 0.985,
-    "edge": -0.009,
+    "edge": -0.031,
     "rec": "PASS",
     "selected": false
    },
@@ -8139,9 +8070,9 @@
     "market": "Moneyline",
     "bet": "Rutgers ML",
     "odds": 2000,
-    "model": 0.024,
+    "model": 0.046,
     "breakeven": 0.048,
-    "edge": -0.024,
+    "edge": -0.002,
     "rec": "PASS",
     "selected": false
    },
@@ -8763,9 +8694,9 @@
     "Moneyline": {
      "Side": "Portland",
      "Odds": -135,
-     "Probability": 0.632,
-     "Edge": 0.081,
-     "Tier": "BET"
+     "Probability": 0.578,
+     "Edge": 0.026,
+     "Tier": "LEAN"
     },
     "Total": {
      "Side": "Under",
@@ -8822,19 +8753,19 @@
     "market": "Moneyline",
     "bet": "Portland ML",
     "odds": -135,
-    "model": 0.632,
+    "model": 0.578,
     "breakeven": 0.574,
-    "edge": 0.058,
-    "rec": "BET",
-    "selected": true
+    "edge": 0.004,
+    "rec": "LEAN",
+    "selected": false
    },
    {
     "market": "Moneyline",
     "bet": "Pepperdine ML",
     "odds": 114,
-    "model": 0.368,
+    "model": 0.422,
     "breakeven": 0.467,
-    "edge": -0.099,
+    "edge": -0.045,
     "rec": "PASS",
     "selected": false
    },
@@ -9126,9 +9057,9 @@
     "Moneyline": {
      "Side": "St. Thomas",
      "Odds": -290,
-     "Probability": 0.755,
-     "Edge": 0.042,
-     "Tier": "LEAN"
+     "Probability": 0.724,
+     "Edge": 0.011,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Over",
@@ -9185,19 +9116,19 @@
     "market": "Moneyline",
     "bet": "St. Thomas ML",
     "odds": -290,
-    "model": 0.755,
+    "model": 0.724,
     "breakeven": 0.744,
-    "edge": 0.011,
-    "rec": "LEAN",
+    "edge": -0.02,
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
     "bet": "South Dakota St. ML",
     "odds": 235,
-    "model": 0.245,
+    "model": 0.276,
     "breakeven": 0.299,
-    "edge": -0.054,
+    "edge": -0.023,
     "rec": "PASS",
     "selected": false
    },
@@ -9837,9 +9768,9 @@
     "Moneyline": {
      "Side": "Tarleton St.",
      "Odds": -130,
-     "Probability": 0.6,
-     "Edge": 0.057,
-     "Tier": "BET"
+     "Probability": 0.561,
+     "Edge": 0.018,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Over",
@@ -9896,19 +9827,19 @@
     "market": "Moneyline",
     "bet": "Tarleton St. ML",
     "odds": -130,
-    "model": 0.6,
+    "model": 0.561,
     "breakeven": 0.565,
-    "edge": 0.035,
-    "rec": "BET",
-    "selected": true
+    "edge": -0.004,
+    "rec": "PASS",
+    "selected": false
    },
    {
     "market": "Moneyline",
     "bet": "UT Arlington ML",
     "odds": 110,
-    "model": 0.4,
+    "model": 0.439,
     "breakeven": 0.476,
-    "edge": -0.076,
+    "edge": -0.037,
     "rec": "PASS",
     "selected": false
    },
@@ -10172,8 +10103,8 @@
     "Moneyline": {
      "Side": "Temple",
      "Odds": -205,
-     "Probability": 0.743,
-     "Edge": 0.098,
+     "Probability": 0.676,
+     "Edge": 0.032,
      "Tier": "BET"
     },
     "Total": {
@@ -10231,9 +10162,9 @@
     "market": "Moneyline",
     "bet": "Temple ML",
     "odds": -205,
-    "model": 0.743,
+    "model": 0.676,
     "breakeven": 0.672,
-    "edge": 0.071,
+    "edge": 0.004,
     "rec": "BET",
     "selected": true
    },
@@ -10241,9 +10172,9 @@
     "market": "Moneyline",
     "bet": "Tulane ML",
     "odds": 170,
-    "model": 0.257,
+    "model": 0.324,
     "breakeven": 0.37,
-    "edge": -0.113,
+    "edge": -0.046,
     "rec": "PASS",
     "selected": false
    },
@@ -10507,9 +10438,9 @@
     "Moneyline": {
      "Side": "Washington",
      "Odds": -225,
-     "Probability": 0.703,
-     "Edge": 0.04,
-     "Tier": "LEAN"
+     "Probability": 0.674,
+     "Edge": 0.011,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Over",
@@ -10566,19 +10497,19 @@
     "market": "Moneyline",
     "bet": "Washington ML",
     "odds": -225,
-    "model": 0.703,
+    "model": 0.674,
     "breakeven": 0.692,
-    "edge": 0.011,
-    "rec": "LEAN",
+    "edge": -0.018,
+    "rec": "PASS",
     "selected": false
    },
    {
     "market": "Moneyline",
     "bet": "USC ML",
     "odds": 185,
-    "model": 0.297,
+    "model": 0.326,
     "breakeven": 0.351,
-    "edge": -0.054,
+    "edge": -0.025,
     "rec": "PASS",
     "selected": false
    },

@@ -348,7 +348,7 @@
           container.parentNode.insertBefore(stamp, container);
           const legend = document.createElement('p');
           legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
-          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: edge over the price\'s break-even, BET at +5 points, LEAN at +2. Total: same, BET at +3 (totals are evaluated but not staked). Lean = points the model beats the line by. Spreads: favourite negative.';
+          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: the model\'s win probability is pulled part-way toward the market price, then edge over the break-even, BET at +3 points, LEAN at +2. Total: same, BET at +3 (totals are evaluated but not staked). Lean = points the model beats the line by. Spreads: favourite negative.';
           container.parentNode.insertBefore(legend, container);
           buildFilters(container);
         }
