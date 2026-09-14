@@ -52,6 +52,22 @@
     .bball-image-wrapper img{width:100%;height:auto;display:block}
     .bball-image-title{padding:1rem;font-size:.9rem;color:#333;text-align:center;word-break:break-word}
     .bball-image-wrapper{cursor:pointer;padding:.5rem .75rem .75rem}
+    .markets-table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:.25rem}
+    .markets-table th{background:#f0f4fa;color:#333;padding:.45rem .6rem;text-align:left;font-weight:600;border-bottom:1px solid #dde3ec}
+    .markets-table td{padding:.4rem .6rem;border-bottom:1px solid #eee;color:#333;line-height:1.2;font-variant-numeric:tabular-nums}
+    .markets-table tr:last-child td{border-bottom:none}
+    .markets-table td.num{text-align:right}
+    .markets-table tr.selected td{background:#eef8f0}
+    .markets-caption{font-size:.8rem;color:#666;padding:.4rem .6rem .6rem}
+    .sens-chart{width:100%;height:auto;display:block;margin-top:.5rem}
+    .sens-chart .bar{fill:#2a78d6}
+    .sens-chart .bar.neg{fill:#9bbde8}
+    .sens-chart .grid{stroke:#e5e5e5;stroke-width:1}
+    .sens-chart .zero{stroke:#c9c9c6;stroke-width:1}
+    .sens-chart text{font-family:inherit;fill:#52514e}
+    .sens-chart .title{font-weight:700;fill:#0b0b0b;font-size:13px}
+    .sens-chart .tick{font-size:10px}
+    .sens-chart .slot:hover .bar{fill:#1d5fb0}
     .score-hist{width:100%;height:auto;display:block}
     .score-hist .bar{fill:#2a78d6}
     .score-hist .slot:hover .bar{fill:#1d5fb0}
@@ -77,12 +93,13 @@
     .prediction-table .spread{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2;text-align:center}
     .prediction-table .total{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2;text-align:center}
     .prediction-table .source-name{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2}
-    .prediction-table .bet{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2;text-align:center;white-space:nowrap}
+    .prediction-table .bet{font-weight:600;color:#555;margin:0;padding:0;line-height:1.3;text-align:center}
+    .prediction-table .bet .tier{margin-right:.3rem}
     .tier{display:inline-block;padding:.15rem .5rem;border-radius:999px;font-size:.8rem;font-weight:700;letter-spacing:.02em}
     .tier-BET{background:#1b7f3b;color:#fff}
     .tier-LEAN{background:#e0a800;color:#222}
     .tier-PASS{background:#e5e5e5;color:#666}
-    @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}.prediction-table .bet{white-space:normal}.prediction-table .bet .tier{margin-bottom:.2rem}}
+    @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}.prediction-table .bet .tier{margin-bottom:.2rem}}
     .image-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:10001;justify-content:center;align-items:center;padding:2rem;box-sizing:border-box}
     .image-modal.active{display:flex}
     .image-modal-content{max-width:95%;max-height:95%;position:relative}
@@ -465,6 +482,27 @@
           
           table.appendChild(tbody);
           tableContainer.appendChild(table);
+          // Markets: one row per bettable side (model probability vs the price's break-even), as in the old figures' bet table
+          const markets = predictionInfo && predictionInfo.Markets;
+          if (markets && markets.length) {
+            const mt = document.createElement('table'); mt.className = 'markets-table';
+            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Model</th><th class="num">Break-even</th><th class="num">Edge</th><th>Rec</th></tr>'; mt.appendChild(mh);
+            const mb = document.createElement('tbody');
+            const pct = v => (v === null || v === undefined) ? '—' : `${(100 * v).toFixed(1)}%`;
+            const spct = v => (v === null || v === undefined) ? '—' : `${v >= 0 ? '+' : ''}${(100 * v).toFixed(1)}%`;
+            markets.forEach(r => {
+              const tr = document.createElement('tr'); if (r.selected) tr.className = 'selected';
+              const cells = [r.market, r.bet, (r.odds > 0 ? '+' : '') + r.odds, pct(r.model), pct(r.breakeven), spct(r.edge)];
+              cells.forEach((c, i) => { const td = document.createElement('td'); if (i >= 2) td.className = 'num'; td.textContent = c; tr.appendChild(td); });
+              const rec = document.createElement('td');
+              if (['BET', 'LEAN', 'PASS'].includes(r.rec)) { const sp = document.createElement('span'); sp.className = `tier tier-${r.rec}`; sp.textContent = r.rec; rec.appendChild(sp); }
+              else { rec.textContent = r.rec; rec.style.color = '#999'; }
+              tr.appendChild(rec); mb.appendChild(tr);
+            });
+            mt.appendChild(mb); tableContainer.appendChild(mt);
+            const note = markets.find(r => r.note);
+            if (note) { const cap = document.createElement('div'); cap.className = 'markets-caption'; cap.textContent = note.note; tableContainer.appendChild(cap); }
+          }
           predictionContainer.appendChild(tableContainer);
           
           // Score distributions, drawn here from the JSON's Histogram block (no image files)
@@ -482,6 +520,10 @@
             title.textContent = `${homeName} vs ${awayName}: score distributions of the ${Number(hist.members).toLocaleString()}-member ensemble (click to enlarge)`;
             wrapper.appendChild(title);
             wrapper.addEventListener('click', function() { openChartModal(svg); });
+            const sens = predictionInfo.Sensitivity;
+            if (sens && sens.home && sens.away) {
+              wrapper.appendChild(buildSensitivity(sens, homeName, awayName));
+            }
             predictionContainer.appendChild(wrapper);
           }
           container.appendChild(predictionContainer);
@@ -571,6 +613,34 @@
         svgText(p.x0 + panelW / 2, base + 50, cap.join('   ·   '), 'caption', 'middle', svg);
       });
       svgText(14, top + plotH / 2, 'members', 'tick', 'middle', svg).setAttribute('transform', `rotate(-90 14 ${top + plotH / 2})`);
+      return svg;
+    }
+    
+    // ---- ensemble sensitivity: two panels of signed bars (correlation of each input with the team's score)
+    function buildSensitivity(sens, homeName, awayName) {
+      const W = 920, H = 250, left = 40, gap = 54, top = 28, bottom = 92;
+      const panelW = (W - left - gap - 12) / 2, plotH = H - top - bottom, mid = top + plotH / 2;
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', class: 'sens-chart' });
+      svg.setAttribute('aria-label', `Sensitivity of each team's score to the perturbed inputs`);
+      [{ name: homeName, label: 'Home', block: sens.home, x0: left }, { name: awayName, label: 'Away', block: sens.away, x0: left + panelW + gap }].forEach((p, pi) => {
+        const n = p.block.values.length, slot = panelW / n, barW = Math.max(2, Math.min(24, slot - 4));
+        for (const v of [-1, -0.5, 0, 0.5, 1]) {
+          const y = mid - v * plotH / 2;
+          svgEl('line', { x1: p.x0, x2: p.x0 + panelW, y1: y, y2: y, class: v === 0 ? 'zero' : 'grid' }, svg);
+          if (pi === 0) svgText(p.x0 - 6, y + 3, v.toFixed(1), 'tick', 'end', svg);
+        }
+        p.block.values.forEach((v, i) => {
+          const x = p.x0 + i * slot + (slot - barW) / 2, h = Math.abs(v) * plotH / 2, y = v >= 0 ? mid - h : mid;
+          const g = svgEl('g', { class: 'slot' }, svg);
+          const t = svgEl('title', {}, g); t.textContent = `${p.block.labels[i]}: r = ${Number(v).toFixed(2)}`;
+          if (h > 0) svgEl('rect', { x: x, y: y, width: barW, height: h, rx: 2, class: 'bar' + (v < 0 ? ' neg' : '') }, g);
+          svgEl('rect', { x: p.x0 + i * slot, y: top, width: slot, height: plotH, fill: 'transparent' }, g);
+          const lx = p.x0 + i * slot + slot / 2, ly = top + plotH + 8;
+          svgText(lx, ly, p.block.labels[i], 'tick', 'end', svg).setAttribute('transform', `rotate(-45 ${lx} ${ly})`);
+        });
+        svgText(p.x0, top - 10, `${p.label} score sensitivity: ${p.name}`, 'title', 'start', svg);
+      });
+      svgText(10, mid, 'r', 'tick', 'middle', svg);
       return svg;
     }
     

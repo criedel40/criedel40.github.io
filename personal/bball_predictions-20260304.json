@@ -1,14 +1,19 @@
 {
  "_meta": {
   "date": 20260304,
-  "generated": "2026-09-14T00:47:04Z",
+  "generated": "2026-09-14T00:55:03Z",
   "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_5_tm_ens5)",
   "members": 10000,
   "rows": [
    "Beyond the Arc DL",
    "BART",
    "Vegas"
-  ]
+  ],
+  "blocks": {
+   "Markets": "one row per bettable side: model probability, break-even (price-implied), edge, recommendation from the game-day sheet",
+   "Histogram": "integer score bins with member counts",
+   "Sensitivity": "correlation of each perturbed input with the team's score across the members"
+  }
  },
  "scoreprediction_Cal+Baptist_Abilene+Christian.jpg": {
   "Home Team": "Cal Baptist",
@@ -53,6 +58,50 @@
    "AwayTeamScore": 63.5,
    "Total": 135.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Cal Baptist -8.5",
+    "odds": -118,
+    "model": 0.483,
+    "breakeven": 0.541,
+    "edge": -0.058,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Abilene Christian +8.5",
+    "odds": -102,
+    "model": 0.517,
+    "breakeven": 0.505,
+    "edge": 0.012,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 135.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 134.9; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 135.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 134.9; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 44,
    "home": [
@@ -177,6 +226,89 @@
     "p99": 81
    },
    "homeWinShare": 0.785
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.913,
+     0.723,
+     -0.281,
+     0.189,
+     0.027,
+     0.475,
+     0.545,
+     0.131,
+     0.795,
+     0.723,
+     -0.281,
+     0.189,
+     0.027,
+     0.475,
+     0.545,
+     0.131,
+     0.245
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.827,
+     0.753,
+     -0.469,
+     0.12,
+     0.25,
+     0.611,
+     0.389,
+     -0.039,
+     0.863,
+     0.753,
+     -0.469,
+     0.12,
+     0.25,
+     0.611,
+     0.389,
+     -0.039,
+     0.269
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_UC+Irvine_Cal+Poly.jpg": {
@@ -222,6 +354,50 @@
    "AwayTeamScore": 73.0,
    "Total": 154.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "UC Irvine -8.5",
+    "odds": -112,
+    "model": 0.485,
+    "breakeven": 0.528,
+    "edge": -0.043,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Cal Poly +8.5",
+    "odds": -108,
+    "model": 0.515,
+    "breakeven": 0.519,
+    "edge": -0.004,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 154.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 152.6; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 154.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 152.6; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 47,
    "home": [
@@ -374,6 +550,89 @@
     "p99": 100
    },
    "homeWinShare": 0.772
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.614,
+     0.765,
+     -0.332,
+     0.102,
+     0.275,
+     0.644,
+     0.447,
+     0.162,
+     0.779,
+     0.765,
+     -0.332,
+     0.102,
+     0.275,
+     0.644,
+     0.447,
+     0.162,
+     0.55
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.81,
+     0.788,
+     -0.258,
+     0.16,
+     0.065,
+     0.601,
+     0.477,
+     0.13,
+     0.826,
+     0.788,
+     -0.258,
+     0.16,
+     0.065,
+     0.601,
+     0.477,
+     0.13,
+     0.526
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Cal+St.+Bakersfield_Cal+St.+Northridge.jpg": {
@@ -419,6 +678,50 @@
    "AwayTeamScore": 87.0,
    "Total": 165.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Cal St. Bakersfield +8.5",
+    "odds": -112,
+    "model": 0.517,
+    "breakeven": 0.528,
+    "edge": -0.011,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Cal St. Northridge -8.5",
+    "odds": -108,
+    "model": 0.483,
+    "breakeven": 0.519,
+    "edge": -0.036,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 165.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 160.9; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 165.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 160.9; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 55,
    "home": [
@@ -547,6 +850,89 @@
     "p99": 106
    },
    "homeWinShare": 0.216
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.812,
+     0.82,
+     -0.465,
+     0.092,
+     0.111,
+     0.617,
+     0.499,
+     0.117,
+     0.851,
+     0.82,
+     -0.465,
+     0.092,
+     0.111,
+     0.617,
+     0.499,
+     0.117,
+     0.258
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.826,
+     0.711,
+     -0.401,
+     0.174,
+     0.141,
+     0.58,
+     0.417,
+     0.152,
+     0.761,
+     0.711,
+     -0.401,
+     0.174,
+     0.141,
+     0.58,
+     0.417,
+     0.152,
+     0.416
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Cal+St.+Fullerton_UC+San+Diego.jpg": {
@@ -592,6 +978,50 @@
    "AwayTeamScore": 80.5,
    "Total": 157.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Cal St. Fullerton +3.5",
+    "odds": -108,
+    "model": 0.579,
+    "breakeven": 0.519,
+    "edge": 0.06,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Spread",
+    "bet": "UC San Diego -3.5",
+    "odds": -112,
+    "model": 0.421,
+    "breakeven": 0.528,
+    "edge": -0.107,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 157.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 155.6; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 157.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 155.6; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 52,
    "home": [
@@ -724,6 +1154,89 @@
     "p99": 105
    },
    "homeWinShare": 0.508
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.841,
+     0.808,
+     -0.459,
+     0.063,
+     0.173,
+     0.558,
+     0.613,
+     0.234,
+     0.846,
+     0.808,
+     -0.459,
+     0.063,
+     0.173,
+     0.558,
+     0.613,
+     0.234,
+     0.22
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.828,
+     0.818,
+     -0.391,
+     0.144,
+     0.187,
+     0.602,
+     0.586,
+     0.132,
+     0.87,
+     0.818,
+     -0.391,
+     0.144,
+     0.187,
+     0.602,
+     0.586,
+     0.132,
+     0.468
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_New+Mexico_Colorado+St..jpg": {
@@ -773,6 +1286,70 @@
    "AwayTeamScore": 71.0,
    "Total": 150.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "New Mexico -8.5",
+    "odds": -108,
+    "model": 0.47,
+    "breakeven": 0.519,
+    "edge": -0.049,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Colorado St. +8.5",
+    "odds": -112,
+    "model": 0.53,
+    "breakeven": 0.528,
+    "edge": 0.002,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 150.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 146.7; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 150.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 146.7; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "New Mexico ML",
+    "odds": -410,
+    "model": 0.719,
+    "breakeven": 0.804,
+    "edge": -0.085,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Colorado St. ML",
+    "odds": 320,
+    "model": 0.281,
+    "breakeven": 0.238,
+    "edge": 0.043,
+    "rec": "BET",
+    "selected": true
+   }
+  ],
   "Histogram": {
    "start": 46,
    "home": [
@@ -905,6 +1482,89 @@
     "p99": 93
    },
    "homeWinShare": 0.719
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.889,
+     0.86,
+     -0.273,
+     0.392,
+     0.305,
+     0.431,
+     0.68,
+     0.017,
+     0.823,
+     0.86,
+     -0.273,
+     0.392,
+     0.305,
+     0.431,
+     0.68,
+     0.017,
+     0.059
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.82,
+     0.797,
+     -0.394,
+     0.137,
+     0.284,
+     0.524,
+     0.62,
+     0.08,
+     0.913,
+     0.797,
+     -0.394,
+     0.137,
+     0.284,
+     0.524,
+     0.62,
+     0.08,
+     0.127
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Delaware_Sam+Houston+St..jpg": {
@@ -950,6 +1610,50 @@
    "AwayTeamScore": 77.0,
    "Total": 147.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Delaware +6.5",
+    "odds": -112,
+    "model": 0.515,
+    "breakeven": 0.528,
+    "edge": -0.013,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Sam Houston St. -6.5",
+    "odds": -108,
+    "model": 0.485,
+    "breakeven": 0.519,
+    "edge": -0.034,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 147.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 147.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 147.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 147.4; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 51,
    "home": [
@@ -1070,6 +1774,89 @@
     "p99": 98
    },
    "homeWinShare": 0.249
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.804,
+     0.736,
+     -0.365,
+     0.207,
+     0.174,
+     0.412,
+     0.614,
+     -0.122,
+     0.766,
+     0.736,
+     -0.365,
+     0.207,
+     0.174,
+     0.412,
+     0.614,
+     -0.122,
+     0.445
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.837,
+     0.771,
+     -0.269,
+     0.213,
+     0.166,
+     0.601,
+     0.469,
+     -0.143,
+     0.777,
+     0.771,
+     -0.269,
+     0.213,
+     0.166,
+     0.601,
+     0.469,
+     -0.143,
+     0.394
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Southern+Illinois_Drake.jpg": {
@@ -1119,6 +1906,70 @@
    "AwayTeamScore": 66.0,
    "Total": 136.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Southern Illinois -4.5",
+    "odds": -112,
+    "model": 0.499,
+    "breakeven": 0.528,
+    "edge": -0.029,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Drake +4.5",
+    "odds": -108,
+    "model": 0.501,
+    "breakeven": 0.519,
+    "edge": -0.018,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 136.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 145.5; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 136.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 145.5; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Southern Illinois ML",
+    "odds": -225,
+    "model": 0.694,
+    "breakeven": 0.692,
+    "edge": 0.002,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Drake ML",
+    "odds": 185,
+    "model": 0.306,
+    "breakeven": 0.351,
+    "edge": -0.045,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 49,
    "home": [
@@ -1247,6 +2098,89 @@
     "p99": 92
    },
    "homeWinShare": 0.7
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.808,
+     0.669,
+     -0.491,
+     0.085,
+     0.224,
+     0.37,
+     0.563,
+     0.168,
+     0.801,
+     0.669,
+     -0.491,
+     0.085,
+     0.224,
+     0.37,
+     0.563,
+     0.168,
+     0.535
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.732,
+     0.706,
+     -0.336,
+     0.195,
+     0.102,
+     0.464,
+     0.489,
+     -0.09,
+     0.878,
+     0.706,
+     -0.336,
+     0.195,
+     0.102,
+     0.464,
+     0.489,
+     -0.09,
+     0.402
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_East+Carolina_Tulsa.jpg": {
@@ -1292,6 +2226,50 @@
    "AwayTeamScore": 82.0,
    "Total": 155.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "East Carolina +8.5",
+    "odds": -105,
+    "model": 0.504,
+    "breakeven": 0.512,
+    "edge": -0.008,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Tulsa -8.5",
+    "odds": -115,
+    "model": 0.496,
+    "breakeven": 0.535,
+    "edge": -0.039,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 155.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 153.1; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 155.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 153.1; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 52,
    "home": [
@@ -1422,6 +2400,89 @@
     "p99": 103
    },
    "homeWinShare": 0.206
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.825,
+     0.795,
+     -0.354,
+     0.354,
+     0.177,
+     0.627,
+     0.601,
+     0.118,
+     0.813,
+     0.795,
+     -0.354,
+     0.354,
+     0.177,
+     0.627,
+     0.601,
+     0.118,
+     0.344
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.88,
+     0.717,
+     -0.265,
+     0.259,
+     0.282,
+     0.502,
+     0.495,
+     0.229,
+     0.811,
+     0.717,
+     -0.265,
+     0.259,
+     0.282,
+     0.502,
+     0.495,
+     0.229,
+     0.443
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Northern+Iowa_Evansville.jpg": {
@@ -1467,6 +2528,50 @@
    "AwayTeamScore": 55.0,
    "Total": 124.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Northern Iowa -14.5",
+    "odds": -108,
+    "model": 0.505,
+    "breakeven": 0.519,
+    "edge": -0.014,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Evansville +14.5",
+    "odds": -112,
+    "model": 0.495,
+    "breakeven": 0.528,
+    "edge": -0.033,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 124.5",
+    "odds": -118,
+    "model": null,
+    "breakeven": 0.541,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 131.9; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 124.5",
+    "odds": -102,
+    "model": null,
+    "breakeven": 0.505,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 131.9; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 38,
    "home": [
@@ -1609,6 +2714,89 @@
     "p99": 80
    },
    "homeWinShare": 0.909
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.733,
+     0.788,
+     -0.398,
+     0.154,
+     0.197,
+     0.513,
+     0.58,
+     0.061,
+     0.806,
+     0.788,
+     -0.398,
+     0.154,
+     0.197,
+     0.513,
+     0.58,
+     0.061,
+     0.46
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.858,
+     0.836,
+     -0.471,
+     0.107,
+     0.239,
+     0.508,
+     0.659,
+     -0.06,
+     0.904,
+     0.836,
+     -0.471,
+     0.107,
+     0.239,
+     0.508,
+     0.659,
+     -0.06,
+     0.352
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_FIU_Middle+Tennessee.jpg": {
@@ -1658,6 +2846,70 @@
    "AwayTeamScore": 75.0,
    "Total": 152.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "FIU -2.5",
+    "odds": -105,
+    "model": 0.436,
+    "breakeven": 0.512,
+    "edge": -0.076,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Middle Tennessee +2.5",
+    "odds": -115,
+    "model": 0.564,
+    "breakeven": 0.535,
+    "edge": 0.029,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Total",
+    "bet": "Over 152.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 151.8; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 152.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 151.8; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "FIU ML",
+    "odds": -148,
+    "model": 0.466,
+    "breakeven": 0.597,
+    "edge": -0.131,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Middle Tennessee ML",
+    "odds": 124,
+    "model": 0.534,
+    "breakeven": 0.446,
+    "edge": 0.088,
+    "rec": "BET",
+    "selected": true
+   }
+  ],
   "Histogram": {
    "start": 57,
    "home": [
@@ -1758,6 +3010,89 @@
     "p99": 94
    },
    "homeWinShare": 0.486
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.777,
+     0.68,
+     -0.256,
+     0.307,
+     0.152,
+     0.431,
+     0.496,
+     0.063,
+     0.803,
+     0.68,
+     -0.256,
+     0.307,
+     0.152,
+     0.431,
+     0.496,
+     0.063,
+     0.375
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.777,
+     0.635,
+     -0.234,
+     0.177,
+     0.156,
+     0.44,
+     0.455,
+     0.055,
+     0.717,
+     0.635,
+     -0.234,
+     0.177,
+     0.156,
+     0.44,
+     0.455,
+     0.055,
+     0.451
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Fairfield_Manhattan.jpg": {
@@ -1807,6 +3142,70 @@
    "AwayTeamScore": 72.0,
    "Total": 149.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Fairfield -5.5",
+    "odds": -115,
+    "model": 0.535,
+    "breakeven": 0.535,
+    "edge": 0.0,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Manhattan +5.5",
+    "odds": -105,
+    "model": 0.465,
+    "breakeven": 0.512,
+    "edge": -0.047,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 149.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 152.3; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 149.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 152.3; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Fairfield ML",
+    "odds": -275,
+    "model": 0.713,
+    "breakeven": 0.733,
+    "edge": -0.02,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Manhattan ML",
+    "odds": 220,
+    "model": 0.287,
+    "breakeven": 0.312,
+    "edge": -0.025,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 47,
    "home": [
@@ -1957,6 +3356,89 @@
     "p99": 98
    },
    "homeWinShare": 0.713
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.854,
+     0.828,
+     -0.309,
+     0.246,
+     0.179,
+     0.634,
+     0.568,
+     -0.028,
+     0.874,
+     0.828,
+     -0.309,
+     0.246,
+     0.179,
+     0.634,
+     0.568,
+     -0.028,
+     0.225
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.858,
+     0.786,
+     -0.273,
+     0.316,
+     0.305,
+     0.486,
+     0.662,
+     -0.114,
+     0.793,
+     0.786,
+     -0.273,
+     0.316,
+     0.305,
+     0.486,
+     0.662,
+     -0.114,
+     0.362
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Hawaii_UC+Riverside.jpg": {
@@ -2002,6 +3484,50 @@
    "AwayTeamScore": 68.5,
    "Total": 148.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Hawaii -11.5",
+    "odds": -105,
+    "model": 0.461,
+    "breakeven": 0.512,
+    "edge": -0.051,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "UC Riverside +11.5",
+    "odds": -115,
+    "model": 0.539,
+    "breakeven": 0.535,
+    "edge": 0.004,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 148.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 148.0; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 148.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 148.0; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 48,
    "home": [
@@ -2142,6 +3668,89 @@
     "p99": 90
    },
    "homeWinShare": 0.792
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.752,
+     0.694,
+     -0.224,
+     0.302,
+     0.368,
+     0.523,
+     0.445,
+     0.03,
+     0.799,
+     0.694,
+     -0.224,
+     0.302,
+     0.368,
+     0.523,
+     0.445,
+     0.03,
+     0.547
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.776,
+     0.71,
+     -0.308,
+     0.249,
+     0.183,
+     0.545,
+     0.413,
+     0.069,
+     0.666,
+     0.71,
+     -0.308,
+     0.249,
+     0.183,
+     0.545,
+     0.413,
+     0.069,
+     0.398
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Valparaiso_Indiana+St..jpg": {
@@ -2191,6 +3800,70 @@
    "AwayTeamScore": 67.5,
    "Total": 137.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Valparaiso -2.5",
+    "odds": -112,
+    "model": 0.589,
+    "breakeven": 0.528,
+    "edge": 0.061,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Spread",
+    "bet": "Indiana St. +2.5",
+    "odds": -108,
+    "model": 0.411,
+    "breakeven": 0.519,
+    "edge": -0.108,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 137.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 147.3; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 137.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 147.3; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Valparaiso ML",
+    "odds": -148,
+    "model": 0.835,
+    "breakeven": 0.597,
+    "edge": 0.238,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Indiana St. ML",
+    "odds": 124,
+    "model": 0.165,
+    "breakeven": 0.446,
+    "edge": -0.281,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 51,
    "home": [
@@ -2317,6 +3990,89 @@
     "p99": 87
    },
    "homeWinShare": 0.832
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.796,
+     0.697,
+     -0.34,
+     0.147,
+     0.14,
+     0.566,
+     0.468,
+     0.187,
+     0.758,
+     0.697,
+     -0.34,
+     0.147,
+     0.14,
+     0.566,
+     0.468,
+     0.187,
+     0.576
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.779,
+     0.758,
+     -0.186,
+     0.133,
+     0.19,
+     0.494,
+     0.546,
+     0.02,
+     0.797,
+     0.758,
+     -0.186,
+     0.133,
+     0.19,
+     0.494,
+     0.546,
+     0.02,
+     0.252
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Iona_Sacred+Heart.jpg": {
@@ -2366,6 +4122,70 @@
    "AwayTeamScore": 73.0,
    "Total": 148.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Iona -2.5",
+    "odds": -120,
+    "model": 0.532,
+    "breakeven": 0.545,
+    "edge": -0.013,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Sacred Heart +2.5",
+    "odds": -102,
+    "model": 0.468,
+    "breakeven": 0.505,
+    "edge": -0.037,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 148.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 151.1; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 148.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 151.1; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Iona ML",
+    "odds": -170,
+    "model": 0.698,
+    "breakeven": 0.63,
+    "edge": 0.068,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Sacred Heart ML",
+    "odds": 140,
+    "model": 0.302,
+    "breakeven": 0.417,
+    "edge": -0.115,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 50,
    "home": [
@@ -2496,6 +4316,89 @@
     "p99": 97
    },
    "homeWinShare": 0.703
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.743,
+     0.727,
+     -0.466,
+     -0.022,
+     0.264,
+     0.52,
+     0.555,
+     0.135,
+     0.769,
+     0.727,
+     -0.466,
+     -0.022,
+     0.264,
+     0.52,
+     0.555,
+     0.135,
+     0.521
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.768,
+     0.689,
+     -0.281,
+     0.265,
+     0.265,
+     0.6,
+     0.435,
+     -0.057,
+     0.75,
+     0.689,
+     -0.281,
+     0.265,
+     0.265,
+     0.6,
+     0.435,
+     -0.057,
+     0.486
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Iowa_Michigan.jpg": {
@@ -2545,6 +4448,70 @@
    "AwayTeamScore": 77.0,
    "Total": 145.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Iowa +8.5",
+    "odds": -112,
+    "model": 0.565,
+    "breakeven": 0.528,
+    "edge": 0.037,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Spread",
+    "bet": "Michigan -8.5",
+    "odds": -108,
+    "model": 0.435,
+    "breakeven": 0.519,
+    "edge": -0.084,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 145.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 150.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 145.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 150.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Iowa ML",
+    "odds": 320,
+    "model": 0.309,
+    "breakeven": 0.238,
+    "edge": 0.071,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Michigan ML",
+    "odds": -410,
+    "model": 0.691,
+    "breakeven": 0.804,
+    "edge": -0.113,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 51,
    "home": [
@@ -2667,6 +4634,89 @@
     "p99": 99
    },
    "homeWinShare": 0.33
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.769,
+     0.829,
+     -0.278,
+     0.285,
+     0.264,
+     0.67,
+     0.546,
+     0.004,
+     0.818,
+     0.829,
+     -0.278,
+     0.285,
+     0.264,
+     0.67,
+     0.546,
+     0.004,
+     0.47
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.779,
+     0.706,
+     -0.402,
+     0.289,
+     0.169,
+     0.486,
+     0.538,
+     -0.011,
+     0.778,
+     0.706,
+     -0.402,
+     0.289,
+     0.169,
+     0.486,
+     0.538,
+     -0.011,
+     0.26
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_New+Mexico+St._Jacksonville+St..jpg": {
@@ -2712,6 +4762,50 @@
    "AwayTeamScore": 69.0,
    "Total": 142.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "New Mexico St. -4.5",
+    "odds": -115,
+    "model": 0.482,
+    "breakeven": 0.535,
+    "edge": -0.053,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Jacksonville St. +4.5",
+    "odds": -105,
+    "model": 0.518,
+    "breakeven": 0.512,
+    "edge": 0.006,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 142.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 142.0; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 142.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 142.0; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 52,
    "home": [
@@ -2826,6 +4920,89 @@
     "p99": 87
    },
    "homeWinShare": 0.664
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.678,
+     0.613,
+     -0.155,
+     0.101,
+     0.304,
+     0.412,
+     0.53,
+     -0.121,
+     0.667,
+     0.613,
+     -0.155,
+     0.101,
+     0.304,
+     0.412,
+     0.53,
+     -0.121,
+     0.61
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.511,
+     0.521,
+     -0.159,
+     0.029,
+     0.111,
+     0.391,
+     0.359,
+     -0.034,
+     0.514,
+     0.521,
+     -0.159,
+     0.029,
+     0.111,
+     0.391,
+     0.359,
+     -0.034,
+     0.641
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_UTEP_Kennesaw+St..jpg": {
@@ -2871,6 +5048,50 @@
    "AwayTeamScore": 76.0,
    "Total": 149.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "UTEP +2.5",
+    "odds": -110,
+    "model": 0.459,
+    "breakeven": 0.524,
+    "edge": -0.065,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Kennesaw St. -2.5",
+    "odds": -110,
+    "model": 0.541,
+    "breakeven": 0.524,
+    "edge": 0.017,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 149.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 149.3; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 149.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 149.3; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 51,
    "home": [
@@ -2997,6 +5218,89 @@
     "p99": 101
    },
    "homeWinShare": 0.298
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.772,
+     0.677,
+     -0.31,
+     -0.023,
+     0.173,
+     0.421,
+     0.568,
+     -0.091,
+     0.775,
+     0.677,
+     -0.31,
+     -0.023,
+     0.173,
+     0.421,
+     0.568,
+     -0.091,
+     0.504
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.804,
+     0.733,
+     -0.166,
+     0.244,
+     0.318,
+     0.549,
+     0.489,
+     0.085,
+     0.741,
+     0.733,
+     -0.166,
+     0.244,
+     0.318,
+     0.549,
+     0.489,
+     0.085,
+     0.531
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Liberty_Louisiana+Tech.jpg": {
@@ -3046,6 +5350,70 @@
    "AwayTeamScore": 65.0,
    "Total": 138.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Liberty -8.5",
+    "odds": -108,
+    "model": 0.522,
+    "breakeven": 0.519,
+    "edge": 0.003,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Louisiana Tech +8.5",
+    "odds": -112,
+    "model": 0.478,
+    "breakeven": 0.528,
+    "edge": -0.05,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 138.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 136.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 138.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 136.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Liberty ML",
+    "odds": -455,
+    "model": 0.857,
+    "breakeven": 0.82,
+    "edge": 0.037,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Louisiana Tech ML",
+    "odds": 350,
+    "model": 0.143,
+    "breakeven": 0.222,
+    "edge": -0.079,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 45,
    "home": [
@@ -3170,6 +5538,89 @@
     "p99": 81
    },
    "homeWinShare": 0.85
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.811,
+     0.756,
+     -0.334,
+     -0.002,
+     0.112,
+     0.475,
+     0.555,
+     -0.052,
+     0.821,
+     0.756,
+     -0.334,
+     -0.002,
+     0.112,
+     0.475,
+     0.555,
+     -0.052,
+     0.481
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.84,
+     0.723,
+     -0.339,
+     0.276,
+     0.2,
+     0.475,
+     0.543,
+     -0.017,
+     0.78,
+     0.723,
+     -0.339,
+     0.276,
+     0.2,
+     0.475,
+     0.543,
+     -0.017,
+     0.308
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Lindenwood_Little+Rock.jpg": {
@@ -3219,6 +5670,70 @@
    "AwayTeamScore": 71.5,
    "Total": 148.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Lindenwood -5.5",
+    "odds": -110,
+    "model": 0.464,
+    "breakeven": 0.524,
+    "edge": -0.06,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Little Rock +5.5",
+    "odds": -110,
+    "model": 0.536,
+    "breakeven": 0.524,
+    "edge": 0.012,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 148.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 147.2; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 148.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 147.2; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Lindenwood ML",
+    "odds": -198,
+    "model": 0.61,
+    "breakeven": 0.664,
+    "edge": -0.054,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Little Rock ML",
+    "odds": 164,
+    "model": 0.39,
+    "breakeven": 0.379,
+    "edge": 0.011,
+    "rec": "BET",
+    "selected": true
+   }
+  ],
   "Histogram": {
    "start": 51,
    "home": [
@@ -3341,6 +5856,89 @@
     "p99": 93
    },
    "homeWinShare": 0.617
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.829,
+     0.755,
+     -0.325,
+     0.308,
+     0.224,
+     0.604,
+     0.47,
+     -0.002,
+     0.869,
+     0.755,
+     -0.325,
+     0.308,
+     0.224,
+     0.604,
+     0.47,
+     -0.002,
+     0.378
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.849,
+     0.743,
+     -0.301,
+     0.253,
+     0.205,
+     0.538,
+     0.457,
+     -0.097,
+     0.667,
+     0.743,
+     -0.301,
+     0.253,
+     0.205,
+     0.538,
+     0.457,
+     -0.097,
+     0.44
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Long+Beach+St._UC+Davis.jpg": {
@@ -3386,6 +5984,50 @@
    "AwayTeamScore": 76.0,
    "Total": 150.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Long Beach St. +1.5",
+    "odds": -110,
+    "model": 0.498,
+    "breakeven": 0.524,
+    "edge": -0.026,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "UC Davis -1.5",
+    "odds": -110,
+    "model": 0.502,
+    "breakeven": 0.524,
+    "edge": -0.022,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 150.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 146.8; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 150.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 146.8; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 48,
    "home": [
@@ -3516,6 +6158,89 @@
     "p99": 99
    },
    "homeWinShare": 0.445
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.859,
+     0.84,
+     -0.47,
+     -0.022,
+     0.261,
+     0.589,
+     0.594,
+     0.084,
+     0.87,
+     0.84,
+     -0.47,
+     -0.022,
+     0.261,
+     0.589,
+     0.594,
+     0.084,
+     0.24
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.88,
+     0.77,
+     -0.472,
+     0.005,
+     0.122,
+     0.57,
+     0.581,
+     -0.125,
+     0.838,
+     0.77,
+     -0.472,
+     0.005,
+     0.122,
+     0.57,
+     0.581,
+     -0.125,
+     0.295
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Loyola+Marymount_San+Diego.jpg": {
@@ -3565,6 +6290,70 @@
    "AwayTeamScore": 71.0,
    "Total": 147.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Loyola Marymount -5.5",
+    "odds": -108,
+    "model": 0.505,
+    "breakeven": 0.519,
+    "edge": -0.014,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "San Diego +5.5",
+    "odds": -112,
+    "model": 0.495,
+    "breakeven": 0.528,
+    "edge": -0.033,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 147.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 146.9; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 147.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 146.9; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Loyola Marymount ML",
+    "odds": -245,
+    "model": 0.738,
+    "breakeven": 0.71,
+    "edge": 0.028,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "San Diego ML",
+    "odds": 200,
+    "model": 0.262,
+    "breakeven": 0.333,
+    "edge": -0.071,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 49,
    "home": [
@@ -3691,6 +6480,89 @@
     "p99": 90
    },
    "homeWinShare": 0.738
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.754,
+     0.696,
+     -0.361,
+     0.314,
+     0.167,
+     0.448,
+     0.537,
+     0.158,
+     0.836,
+     0.696,
+     -0.361,
+     0.314,
+     0.167,
+     0.448,
+     0.537,
+     0.158,
+     0.284
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.781,
+     0.748,
+     -0.183,
+     0.228,
+     0.177,
+     0.511,
+     0.563,
+     0.09,
+     0.73,
+     0.748,
+     -0.183,
+     0.228,
+     0.177,
+     0.511,
+     0.563,
+     0.09,
+     0.524
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Memphis_South+Florida.jpg": {
@@ -3740,6 +6612,70 @@
    "AwayTeamScore": 83.0,
    "Total": 159.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Memphis +6.5",
+    "odds": -110,
+    "model": 0.517,
+    "breakeven": 0.524,
+    "edge": -0.007,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "South Florida -6.5",
+    "odds": -110,
+    "model": 0.483,
+    "breakeven": 0.524,
+    "edge": -0.041,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 159.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 155.6; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 159.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 155.6; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Memphis ML",
+    "odds": 230,
+    "model": 0.23,
+    "breakeven": 0.303,
+    "edge": -0.073,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "South Florida ML",
+    "odds": -285,
+    "model": 0.77,
+    "breakeven": 0.74,
+    "edge": 0.03,
+    "rec": "BET",
+    "selected": true
+   }
+  ],
   "Histogram": {
    "start": 53,
    "home": [
@@ -3862,6 +6798,89 @@
     "p99": 101
    },
    "homeWinShare": 0.255
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.865,
+     0.671,
+     -0.388,
+     0.34,
+     0.17,
+     0.537,
+     0.448,
+     0.191,
+     0.887,
+     0.671,
+     -0.388,
+     0.34,
+     0.17,
+     0.537,
+     0.448,
+     0.191,
+     0.339
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.901,
+     0.688,
+     -0.497,
+     0.278,
+     0.214,
+     0.476,
+     0.551,
+     -0.054,
+     0.842,
+     0.688,
+     -0.497,
+     0.278,
+     0.214,
+     0.476,
+     0.551,
+     -0.054,
+     0.323
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Ohio_Miami+OH.jpg": {
@@ -3911,6 +6930,70 @@
    "AwayTeamScore": 82.0,
    "Total": 158.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Ohio +5.5",
+    "odds": -110,
+    "model": 0.508,
+    "breakeven": 0.524,
+    "edge": -0.016,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Miami OH -5.5",
+    "odds": -110,
+    "model": 0.492,
+    "breakeven": 0.524,
+    "edge": -0.032,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 158.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 158.1; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 158.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 158.1; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Ohio ML",
+    "odds": 230,
+    "model": 0.232,
+    "breakeven": 0.303,
+    "edge": -0.071,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Miami OH ML",
+    "odds": -285,
+    "model": 0.768,
+    "breakeven": 0.74,
+    "edge": 0.028,
+    "rec": "BET",
+    "selected": true
+   }
+  ],
   "Histogram": {
    "start": 56,
    "home": [
@@ -4031,6 +7114,89 @@
     "p99": 103
    },
    "homeWinShare": 0.258
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.791,
+     0.743,
+     -0.317,
+     0.129,
+     0.221,
+     0.491,
+     0.457,
+     0.011,
+     0.673,
+     0.743,
+     -0.317,
+     0.129,
+     0.221,
+     0.491,
+     0.457,
+     0.011,
+     0.548
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.74,
+     0.722,
+     -0.204,
+     0.1,
+     0.169,
+     0.455,
+     0.512,
+     -0.005,
+     0.733,
+     0.722,
+     -0.204,
+     0.1,
+     0.169,
+     0.455,
+     0.512,
+     -0.005,
+     0.608
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Michigan+St._Rutgers.jpg": {
@@ -4080,6 +7246,70 @@
    "AwayTeamScore": 61.5,
    "Total": 141.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Michigan St. -18.5",
+    "odds": -108,
+    "model": 0.524,
+    "breakeven": 0.519,
+    "edge": 0.005,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Rutgers +18.5",
+    "odds": -112,
+    "model": 0.476,
+    "breakeven": 0.528,
+    "edge": -0.052,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 141.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 143.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 141.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 143.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Michigan St. ML",
+    "odds": -6500,
+    "model": 0.976,
+    "breakeven": 0.985,
+    "edge": -0.009,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Rutgers ML",
+    "odds": 2000,
+    "model": 0.024,
+    "breakeven": 0.048,
+    "edge": -0.024,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 41,
    "home": [
@@ -4238,6 +7468,89 @@
     "p99": 82
    },
    "homeWinShare": 0.956
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.658,
+     0.702,
+     -0.258,
+     0.231,
+     0.263,
+     0.566,
+     0.393,
+     0.019,
+     0.765,
+     0.702,
+     -0.258,
+     0.231,
+     0.263,
+     0.566,
+     0.393,
+     0.019,
+     0.511
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.761,
+     0.774,
+     -0.22,
+     0.346,
+     0.178,
+     0.516,
+     0.539,
+     0.026,
+     0.789,
+     0.774,
+     -0.22,
+     0.346,
+     0.178,
+     0.516,
+     0.539,
+     0.026,
+     0.355
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Missouri+St._Western+Kentucky.jpg": {
@@ -4283,6 +7596,50 @@
    "AwayTeamScore": 76.5,
    "Total": 151.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Missouri St. +1.5",
+    "odds": -102,
+    "model": 0.537,
+    "breakeven": 0.505,
+    "edge": 0.032,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Western Kentucky -1.5",
+    "odds": -118,
+    "model": 0.463,
+    "breakeven": 0.541,
+    "edge": -0.078,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 151.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 149.0; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 151.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 149.0; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 54,
    "home": [
@@ -4391,6 +7748,89 @@
     "p99": 95
    },
    "homeWinShare": 0.498
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.828,
+     0.702,
+     -0.2,
+     0.095,
+     0.374,
+     0.524,
+     0.49,
+     -0.064,
+     0.816,
+     0.702,
+     -0.2,
+     0.095,
+     0.374,
+     0.524,
+     0.49,
+     -0.064,
+     0.486
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.834,
+     0.654,
+     -0.258,
+     0.216,
+     0.083,
+     0.387,
+     0.52,
+     0.161,
+     0.754,
+     0.654,
+     -0.258,
+     0.216,
+     0.083,
+     0.387,
+     0.52,
+     0.161,
+     0.418
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Portland_Pepperdine.jpg": {
@@ -4440,6 +7880,70 @@
    "AwayTeamScore": 75.0,
    "Total": 152.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Portland -2.5",
+    "odds": -105,
+    "model": 0.528,
+    "breakeven": 0.512,
+    "edge": 0.016,
+    "rec": "LEAN",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Pepperdine +2.5",
+    "odds": -115,
+    "model": 0.472,
+    "breakeven": 0.535,
+    "edge": -0.063,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 152.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 148.7; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 152.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 148.7; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Portland ML",
+    "odds": -135,
+    "model": 0.632,
+    "breakeven": 0.574,
+    "edge": 0.058,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Pepperdine ML",
+    "odds": 114,
+    "model": 0.368,
+    "breakeven": 0.467,
+    "edge": -0.099,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 45,
    "home": [
@@ -4584,6 +8088,89 @@
     "p99": 100
    },
    "homeWinShare": 0.638
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.906,
+     0.816,
+     -0.505,
+     0.273,
+     -0.092,
+     0.524,
+     0.619,
+     -0.023,
+     0.83,
+     0.816,
+     -0.505,
+     0.273,
+     -0.092,
+     0.524,
+     0.619,
+     -0.023,
+     0.211
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.859,
+     0.842,
+     -0.331,
+     0.291,
+     0.11,
+     0.538,
+     0.702,
+     -0.096,
+     0.929,
+     0.842,
+     -0.331,
+     0.291,
+     0.11,
+     0.538,
+     0.702,
+     -0.096,
+     0.422
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_St.+Thomas_South+Dakota+St..jpg": {
@@ -4633,6 +8220,70 @@
    "AwayTeamScore": 72.5,
    "Total": 150.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "St. Thomas -5.5",
+    "odds": -115,
+    "model": 0.521,
+    "breakeven": 0.535,
+    "edge": -0.014,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "South Dakota St. +5.5",
+    "odds": -105,
+    "model": 0.479,
+    "breakeven": 0.512,
+    "edge": -0.033,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 150.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 151.8; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 150.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 151.8; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "St. Thomas ML",
+    "odds": -290,
+    "model": 0.755,
+    "breakeven": 0.744,
+    "edge": 0.011,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "South Dakota St. ML",
+    "odds": 235,
+    "model": 0.245,
+    "breakeven": 0.299,
+    "edge": -0.054,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 49,
    "home": [
@@ -4765,6 +8416,89 @@
     "p99": 95
    },
    "homeWinShare": 0.755
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.845,
+     0.698,
+     -0.203,
+     0.322,
+     0.257,
+     0.401,
+     0.582,
+     -0.034,
+     0.745,
+     0.698,
+     -0.203,
+     0.322,
+     0.257,
+     0.401,
+     0.582,
+     -0.034,
+     0.453
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.833,
+     0.794,
+     -0.278,
+     0.193,
+     0.262,
+     0.487,
+     0.638,
+     -0.09,
+     0.868,
+     0.794,
+     -0.278,
+     0.193,
+     0.262,
+     0.487,
+     0.638,
+     -0.09,
+     0.468
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Southern+Utah_Utah+Valley.jpg": {
@@ -4810,6 +8544,50 @@
    "AwayTeamScore": 80.0,
    "Total": 150.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Southern Utah +9.5",
+    "odds": -108,
+    "model": 0.518,
+    "breakeven": 0.519,
+    "edge": -0.001,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Utah Valley -9.5",
+    "odds": -112,
+    "model": 0.482,
+    "breakeven": 0.528,
+    "edge": -0.046,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 150.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 153.2; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 150.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 153.2; totals are not bet (no edge vs the market)"
+   }
+  ],
   "Histogram": {
    "start": 48,
    "home": [
@@ -4962,6 +8740,89 @@
     "p99": 110
    },
    "homeWinShare": 0.26
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.847,
+     0.796,
+     -0.275,
+     0.271,
+     0.257,
+     0.622,
+     0.505,
+     0.026,
+     0.87,
+     0.796,
+     -0.275,
+     0.271,
+     0.257,
+     0.622,
+     0.505,
+     0.026,
+     0.244
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.858,
+     0.818,
+     -0.555,
+     0.182,
+     0.011,
+     0.657,
+     0.472,
+     -0.045,
+     0.844,
+     0.818,
+     -0.555,
+     0.182,
+     0.011,
+     0.657,
+     0.472,
+     -0.045,
+     0.452
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Tarleton+St._UT+Arlington.jpg": {
@@ -5011,6 +8872,70 @@
    "AwayTeamScore": 67.0,
    "Total": 136.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Tarleton St. -2.5",
+    "odds": -102,
+    "model": 0.504,
+    "breakeven": 0.505,
+    "edge": -0.001,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "UT Arlington +2.5",
+    "odds": -118,
+    "model": 0.496,
+    "breakeven": 0.541,
+    "edge": -0.045,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 136.5",
+    "odds": -112,
+    "model": null,
+    "breakeven": 0.528,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 142.5; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 136.5",
+    "odds": -108,
+    "model": null,
+    "breakeven": 0.519,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 142.5; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Tarleton St. ML",
+    "odds": -130,
+    "model": 0.6,
+    "breakeven": 0.565,
+    "edge": 0.035,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "UT Arlington ML",
+    "odds": 110,
+    "model": 0.4,
+    "breakeven": 0.476,
+    "edge": -0.076,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 50,
    "home": [
@@ -5127,6 +9052,89 @@
     "p99": 91
    },
    "homeWinShare": 0.611
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.828,
+     0.651,
+     -0.419,
+     0.321,
+     0.129,
+     0.395,
+     0.418,
+     0.063,
+     0.841,
+     0.651,
+     -0.419,
+     0.321,
+     0.129,
+     0.395,
+     0.418,
+     0.063,
+     0.401
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.833,
+     0.711,
+     -0.408,
+     0.296,
+     0.281,
+     0.545,
+     0.524,
+     0.099,
+     0.838,
+     0.711,
+     -0.408,
+     0.296,
+     0.281,
+     0.545,
+     0.524,
+     0.099,
+     0.383
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Temple_Tulane.jpg": {
@@ -5176,6 +9184,70 @@
    "AwayTeamScore": 70.0,
    "Total": 144.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Temple -4.5",
+    "odds": -110,
+    "model": 0.519,
+    "breakeven": 0.524,
+    "edge": -0.005,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "Tulane +4.5",
+    "odds": -110,
+    "model": 0.481,
+    "breakeven": 0.524,
+    "edge": -0.043,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 144.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 146.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 144.5",
+    "odds": -110,
+    "model": null,
+    "breakeven": 0.524,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 146.4; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Temple ML",
+    "odds": -205,
+    "model": 0.743,
+    "breakeven": 0.672,
+    "edge": 0.071,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Tulane ML",
+    "odds": 170,
+    "model": 0.257,
+    "breakeven": 0.37,
+    "edge": -0.113,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 51,
    "home": [
@@ -5292,6 +9364,89 @@
     "p99": 89
    },
    "homeWinShare": 0.744
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.733,
+     0.77,
+     -0.236,
+     0.026,
+     0.081,
+     0.425,
+     0.563,
+     0.088,
+     0.797,
+     0.77,
+     -0.236,
+     0.026,
+     0.081,
+     0.425,
+     0.563,
+     0.088,
+     0.379
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.816,
+     0.779,
+     -0.271,
+     -0.034,
+     0.192,
+     0.603,
+     0.58,
+     0.125,
+     0.73,
+     0.779,
+     -0.271,
+     -0.034,
+     0.192,
+     0.603,
+     0.58,
+     0.125,
+     0.473
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  },
  "scoreprediction_Washington_USC.jpg": {
@@ -5341,6 +9496,70 @@
    "AwayTeamScore": 72.5,
    "Total": 150.5
   },
+  "Markets": [
+   {
+    "market": "Spread",
+    "bet": "Washington -5.5",
+    "odds": -102,
+    "model": 0.489,
+    "breakeven": 0.505,
+    "edge": -0.016,
+    "rec": "PASS",
+    "selected": false
+   },
+   {
+    "market": "Spread",
+    "bet": "USC +5.5",
+    "odds": -118,
+    "model": 0.511,
+    "breakeven": 0.541,
+    "edge": -0.03,
+    "rec": "\u2014",
+    "selected": false
+   },
+   {
+    "market": "Total",
+    "bet": "Over 150.5",
+    "odds": -115,
+    "model": null,
+    "breakeven": 0.535,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 153.3; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Total",
+    "bet": "Under 150.5",
+    "odds": -105,
+    "model": null,
+    "breakeven": 0.512,
+    "edge": null,
+    "rec": "OFF",
+    "selected": false,
+    "note": "model total 153.3; totals are not bet (no edge vs the market)"
+   },
+   {
+    "market": "Moneyline",
+    "bet": "Washington ML",
+    "odds": -225,
+    "model": 0.703,
+    "breakeven": 0.692,
+    "edge": 0.011,
+    "rec": "BET",
+    "selected": true
+   },
+   {
+    "market": "Moneyline",
+    "bet": "USC ML",
+    "odds": 185,
+    "model": 0.297,
+    "breakeven": 0.351,
+    "edge": -0.054,
+    "rec": "\u2014",
+    "selected": false
+   }
+  ],
   "Histogram": {
    "start": 54,
    "home": [
@@ -5457,6 +9676,89 @@
     "p99": 93
    },
    "homeWinShare": 0.707
+  },
+  "Sensitivity": {
+   "home": {
+    "labels": [
+     "Home Off Eff",
+     "Home Off eFG%",
+     "Home Off TO%",
+     "Home Off OR%",
+     "Home Off FTR",
+     "Home Off 2P%",
+     "Home Off 3P%",
+     "Home Off 3PA%",
+     "Away Def Eff",
+     "Away Def eFG%",
+     "Away Def TO%",
+     "Away Def OR%",
+     "Away Def FTR",
+     "Away Def 2P%",
+     "Away Def 3P%",
+     "Away Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.764,
+     0.632,
+     -0.317,
+     0.313,
+     0.165,
+     0.476,
+     0.383,
+     -0.064,
+     0.68,
+     0.632,
+     -0.317,
+     0.313,
+     0.165,
+     0.476,
+     0.383,
+     -0.064,
+     0.412
+    ]
+   },
+   "away": {
+    "labels": [
+     "Away Off Eff",
+     "Away Off eFG%",
+     "Away Off TO%",
+     "Away Off OR%",
+     "Away Off FTR",
+     "Away Off 2P%",
+     "Away Off 3P%",
+     "Away Off 3PA%",
+     "Home Def Eff",
+     "Home Def eFG%",
+     "Home Def TO%",
+     "Home Def OR%",
+     "Home Def FTR",
+     "Home Def 2P%",
+     "Home Def 3P%",
+     "Home Def 3PA%",
+     "Pace"
+    ],
+    "values": [
+     0.597,
+     0.629,
+     -0.236,
+     0.366,
+     0.361,
+     0.369,
+     0.5,
+     -0.065,
+     0.769,
+     0.629,
+     -0.236,
+     0.366,
+     0.361,
+     0.369,
+     0.5,
+     -0.065,
+     0.471
+    ]
+   },
+   "definition": "Pearson correlation across the perturbed-input members between the input and the team's sampled score"
   }
  }
 }
