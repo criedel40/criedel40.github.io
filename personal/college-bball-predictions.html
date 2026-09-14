@@ -469,13 +469,16 @@
           // Score distributions, drawn here from the JSON's Histogram block (no image files)
           const hist = predictionInfo && predictionInfo.Histogram;
           if (hist && hist.home && hist.away) {
+            // team names again here: the const team1/team2 above are scoped to the if-block
+            const homeName = predictionInfo["Home Team"] || predictionInfo.team1 || "Home";
+            const awayName = predictionInfo["Away Team"] || predictionInfo.team2 || "Away";
             const wrapper = document.createElement('div');
             wrapper.className = 'bball-image-wrapper';
-            const svg = buildHistogram(hist, team1, team2);
+            const svg = buildHistogram(hist, homeName, awayName);
             wrapper.appendChild(svg);
             const title = document.createElement('div');
             title.className = 'bball-image-title';
-            title.textContent = `${team1} vs ${team2}: score distributions of the ${Number(hist.members).toLocaleString()}-member ensemble (click to enlarge)`;
+            title.textContent = `${homeName} vs ${awayName}: score distributions of the ${Number(hist.members).toLocaleString()}-member ensemble (click to enlarge)`;
             wrapper.appendChild(title);
             wrapper.addEventListener('click', function() { openChartModal(svg); });
             predictionContainer.appendChild(wrapper);
