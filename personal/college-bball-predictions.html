@@ -63,6 +63,11 @@
     .prediction-table .spread{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2;text-align:center}
     .prediction-table .total{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2;text-align:center}
     .prediction-table .source-name{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2}
+    .prediction-table .bet{font-weight:600;color:#555;margin:0;padding:0;line-height:1.2;text-align:center;white-space:nowrap}
+    .tier{display:inline-block;padding:.15rem .5rem;border-radius:999px;font-size:.8rem;font-weight:700;letter-spacing:.02em}
+    .tier-BET{background:#1b7f3b;color:#fff}
+    .tier-LEAN{background:#e0a800;color:#222}
+    .tier-PASS{background:#e5e5e5;color:#666}
     @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}}
     .image-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:10001;justify-content:center;align-items:center;padding:2rem;box-sizing:border-box}
     .image-modal.active{display:flex}
@@ -246,19 +251,13 @@
       const loadingDiv = document.getElementById('bball-images-loading');
       
       try {
-        // Load both the image manifest and predictions data
-        // Try to load today's predictions file first, then fall back to generic name
-        const today = new Date();
-        const dateStr = today.getFullYear().toString() + 
-                       String(today.getMonth() + 1).padStart(2, '0') + 
-                       String(today.getDate()).padStart(2, '0');
-        const predictionsFilename = `bball_predictions:${dateStr}.json`;
-        
+        // Load the image manifest and latest.json, both written by
+        // FORECASTSv2.0/betting/publish_site.py on game day (cache-busted so a
+        // same-day republish shows up without a hard refresh)
+        const bust = `?v=${Date.now()}`;
         const [imagesResponse, predictionsResponse] = await Promise.all([
-          fetch('bball-images.json'),
-          fetch(predictionsFilename).catch(() => 
-            fetch('bball-predictions.json').catch(() => null)
-          ) // Try date-based file first, then fallback
+          fetch('bball-images.json' + bust),
+          fetch('latest.json' + bust).catch(() => null)
         ]);
         
         if (!imagesResponse.ok) {
@@ -276,6 +275,21 @@
         if (loadingDiv) {
           loadingDiv.remove();
         }
+        if (predictionsData._meta && predictionsData._meta.date) {
+          const d = String(predictionsData._meta.date);
+          const stamp = document.createElement('p');
+          stamp.style.cssText = 'text-align:center;color:#666;margin:0 0 1rem 0';
+          stamp.textContent = `Forecasts for ${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)} (${predictionsData._meta.model || 'model'})`;
+          container.parentNode.insertBefore(stamp, container);
+          const legend = document.createElement('p');
+          legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
+          legend.innerHTML = 'Bet signal: <span class="tier tier-BET">BET</span> P(cover) &ge; 55% &nbsp; <span class="tier tier-LEAN">LEAN</span> positive but below the bet threshold &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Lean = points the model has its side beating the closing spread by. Spreads: favourite negative.';
+          container.parentNode.insertBefore(legend, container);
+        }
+        // Show the actionable games first: BET, then LEAN, then PASS, then games without a market
+        const tierRank = { BET: 0, LEAN: 1, PASS: 2 };
+        const rankOf = f => { const b = predictionsData[f] && predictionsData[f]["Beyond the Arc DL"] && predictionsData[f]["Beyond the Arc DL"].Bet; return b && b.Tier in tierRank ? tierRank[b.Tier] : 3; };
+        imageFiles.sort((a, b) => rankOf(a) - rankOf(b));
         
         // If no images found
         if (!imageFiles || imageFiles.length === 0) {
@@ -300,7 +314,7 @@
           // Create header row
           const headerRow = document.createElement('thead');
           const header = document.createElement('tr');
-          header.innerHTML = '<th>Source</th><th>Home Team</th><th>Score</th><th>Away Team</th><th>Score</th><th>Spread</th><th>Total</th>';
+          header.innerHTML = '<th>Source</th><th>Home Team</th><th>Score</th><th>Away Team</th><th>Score</th><th>Spread</th><th>Total</th><th>Bet signal</th>';
           headerRow.appendChild(header);
           table.appendChild(headerRow);
           
@@ -324,8 +338,19 @@
               const awayProb = yourModel.AwayTeamWinProbability || yourModel.team2WinProbability;
               
               const yourSpread = homeScore - awayScore;
-              const yourTotal = homeScore + awayScore;
-              const yourSpreadStr = yourSpread > 0 ? `+${yourSpread}` : `${yourSpread}`;
+              const yourTotal = yourModel.Total !== undefined ? yourModel.Total : homeScore + awayScore;
+              const yourSpreadStr = yourModel.Spread !== undefined ? yourModel.Spread : (yourSpread > 0 ? `+${yourSpread}` : `${yourSpread}`);
+              
+              // Bet signal from the cover model: side the model leans to, points of lean vs the
+              // closing spread, P(cover), and the tier (BET = staked, LEAN = logged only, PASS)
+              const bet = yourModel.Bet;
+              let betCell = '<td class="bet" style="color:#999">—</td>';
+              if (bet && bet.Tier) {
+                const lean = bet.Lean !== undefined && bet.Lean !== null ? `${Number(bet.Lean) >= 0 ? '+' : ''}${Number(bet.Lean).toFixed(1)}` : '';
+                const pcov = bet.CoverProbability !== undefined && bet.CoverProbability !== null ? `${(Number(bet.CoverProbability) * 100).toFixed(1)}%` : '';
+                const tierClass = ['BET', 'LEAN', 'PASS'].includes(bet.Tier) ? `tier-${bet.Tier}` : 'tier-PASS';
+                betCell = `<td class="bet"><span class="tier ${tierClass}">${bet.Tier}</span> ${bet.Side || ''}${lean ? ` ${lean}` : ''}${pcov ? `<br><span style="font-weight:400;color:#777">P(cover) ${pcov}</span>` : ''}</td>`;
+              }
               
               // Your model row
               const yourModelRow = document.createElement('tr');
@@ -337,6 +362,7 @@
                 <td class="score">${awayScore} (${(awayProb * 100).toFixed(1)}%)</td>
                 <td class="spread">${yourSpreadStr}</td>
                 <td class="total">${yourTotal}</td>
+                ${betCell}
               `;
               tbody.appendChild(yourModelRow);
             }
@@ -351,8 +377,8 @@
               const otherSourceName = predictionInfo.otherSource?.name || "BART";
               
               const otherSpread = otherHomeScore - otherAwayScore;
-              const otherTotal = otherHomeScore + otherAwayScore;
-              const otherSpreadStr = otherSpread > 0 ? `+${otherSpread}` : `${otherSpread}`;
+              const otherTotal = otherSource.Total !== undefined ? otherSource.Total : otherHomeScore + otherAwayScore;
+              const otherSpreadStr = otherSource.Spread !== undefined ? otherSource.Spread : (otherSpread > 0 ? `+${otherSpread}` : `${otherSpread}`);
               
               const otherSourceRow = document.createElement('tr');
               otherSourceRow.innerHTML = `
@@ -363,6 +389,7 @@
                 <td class="score">${otherAwayScore} (${(otherAwayProb * 100).toFixed(1)}%)</td>
                 <td class="spread">${otherSpreadStr}</td>
                 <td class="total">${otherTotal}</td>
+                <td class="bet"></td>
               `;
               tbody.appendChild(otherSourceRow);
             }
@@ -379,15 +406,17 @@
               const vegasSpread = vegasSource.Spread || "";
               const vegasTotal = vegasSource.Total !== undefined ? vegasSource.Total : "";
               
+              const fmt = (score, prob) => (score !== undefined ? score : '—') + (prob !== undefined ? ` (${(prob * 100).toFixed(1)}%)` : '');
               const vegasRow = document.createElement('tr');
               vegasRow.innerHTML = `
                 <td class="source-name">Vegas</td>
                 <td class="team-name">${team1}</td>
-                <td class="score">${vegasHomeScore} (${(vegasHomeProb * 100).toFixed(1)}%)</td>
+                <td class="score">${fmt(vegasHomeScore, vegasHomeProb)}</td>
                 <td class="team-name">${team2}</td>
-                <td class="score">${vegasAwayScore} (${(vegasAwayProb * 100).toFixed(1)}%)</td>
+                <td class="score">${fmt(vegasAwayScore, vegasAwayProb)}</td>
                 <td class="spread">${vegasSpread}</td>
                 <td class="total">${vegasTotal}</td>
+                <td class="bet"></td>
               `;
               tbody.appendChild(vegasRow);
             }
@@ -402,6 +431,7 @@
               <td class="score" style="color:#999;font-style:italic">—</td>
               <td class="spread" style="color:#999;font-style:italic">—</td>
               <td class="total" style="color:#999;font-style:italic">—</td>
+              <td class="bet"></td>
             `;
             tbody.appendChild(placeholderRow);
             
@@ -414,6 +444,7 @@
               <td class="score" style="color:#999;font-style:italic">—</td>
               <td class="spread" style="color:#999;font-style:italic">—</td>
               <td class="total" style="color:#999;font-style:italic">—</td>
+              <td class="bet"></td>
             `;
             tbody.appendChild(placeholderRow2);
           }

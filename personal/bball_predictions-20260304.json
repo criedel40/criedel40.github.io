@@ -1,0 +1,1449 @@
+{
+ "_meta": {
+  "date": 20260304,
+  "generated": "2026-09-14T00:18:31Z",
+  "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_5_tm_ens5)",
+  "members": 10000,
+  "rows": [
+   "Beyond the Arc DL",
+   "BART",
+   "Vegas"
+  ]
+ },
+ "scoreprediction_Cal+Baptist_Abilene+Christian.jpg": {
+  "Home Team": "Cal Baptist",
+  "Away Team": "Abilene Christian",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 63,
+   "HomeTeamWinProbability": 0.773,
+   "AwayTeamWinProbability": 0.227,
+   "Spread": "-8.3 Cal Baptist",
+   "SpreadValue": 8.3,
+   "Total": 134.9,
+   "MarginRange80": [
+    -6.0,
+    23.0
+   ],
+   "TotalRange80": [
+    118.0,
+    151.0
+   ],
+   "Bet": {
+    "Side": "Abilene Christian",
+    "Lean": 0.16,
+    "CoverProbability": 0.517,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 70,
+   "AwayTeamScore": 60,
+   "HomeTeamWinProbability": 0.774,
+   "AwayTeamWinProbability": 0.226,
+   "SpreadValue": 10.0,
+   "Total": 129.3,
+   "Spread": "-10.0 Cal Baptist"
+  },
+  "Vegas": {
+   "Spread": "-8.5 Cal Baptist",
+   "SpreadValue": 8.5,
+   "HomeTeamScore": 72.0,
+   "AwayTeamScore": 63.5,
+   "Total": 135.5
+  }
+ },
+ "scoreprediction_UC+Irvine_Cal+Poly.jpg": {
+  "Home Team": "UC Irvine",
+  "Away Team": "Cal Poly",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 81,
+   "AwayTeamScore": 72,
+   "HomeTeamWinProbability": 0.763,
+   "AwayTeamWinProbability": 0.237,
+   "Spread": "-8.8 UC Irvine",
+   "SpreadValue": 8.8,
+   "Total": 152.6,
+   "MarginRange80": [
+    -7.0,
+    25.0
+   ],
+   "TotalRange80": [
+    128.0,
+    177.0
+   ],
+   "Bet": {
+    "Side": "UC Irvine",
+    "Lean": 0.29,
+    "CoverProbability": 0.485,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 82,
+   "AwayTeamScore": 71,
+   "HomeTeamWinProbability": 0.753,
+   "AwayTeamWinProbability": 0.247,
+   "SpreadValue": 11.0,
+   "Total": 152.7,
+   "Spread": "-11.0 UC Irvine"
+  },
+  "Vegas": {
+   "Spread": "-8.5 UC Irvine",
+   "SpreadValue": 8.5,
+   "HomeTeamScore": 81.5,
+   "AwayTeamScore": 73.0,
+   "Total": 154.5
+  }
+ },
+ "scoreprediction_Cal+St.+Bakersfield_Cal+St.+Northridge.jpg": {
+  "Home Team": "Cal St. Bakersfield",
+  "Away Team": "Cal St. Northridge",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 85,
+   "HomeTeamWinProbability": 0.205,
+   "AwayTeamWinProbability": 0.795,
+   "Spread": "-8.3 Cal St. Northridge",
+   "SpreadValue": -8.3,
+   "Total": 160.9,
+   "MarginRange80": [
+    -24.0,
+    6.0
+   ],
+   "TotalRange80": [
+    145.0,
+    177.0
+   ],
+   "Bet": {
+    "Side": "Cal St. Bakersfield",
+    "Lean": 0.19,
+    "CoverProbability": 0.517,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 87,
+   "HomeTeamWinProbability": 0.148,
+   "AwayTeamWinProbability": 0.852,
+   "SpreadValue": -8.6,
+   "Total": 165.2,
+   "Spread": "-8.6 Cal St. Northridge"
+  },
+  "Vegas": {
+   "Spread": "-8.5 Cal St. Northridge",
+   "SpreadValue": -8.5,
+   "HomeTeamScore": 78.5,
+   "AwayTeamScore": 87.0,
+   "Total": 165.5
+  }
+ },
+ "scoreprediction_Cal+St.+Fullerton_UC+San+Diego.jpg": {
+  "Home Team": "Cal St. Fullerton",
+  "Away Team": "UC San Diego",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 78,
+   "HomeTeamWinProbability": 0.497,
+   "AwayTeamWinProbability": 0.503,
+   "Spread": "-0.2 Cal St. Fullerton",
+   "SpreadValue": 0.2,
+   "Total": 155.6,
+   "MarginRange80": [
+    -18.0,
+    17.0
+   ],
+   "TotalRange80": [
+    136.0,
+    175.0
+   ],
+   "Bet": {
+    "Side": "Cal St. Fullerton",
+    "Lean": 3.71,
+    "CoverProbability": 0.579,
+    "Tier": "BET"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 78,
+   "HomeTeamWinProbability": 0.313,
+   "AwayTeamWinProbability": 0.687,
+   "SpreadValue": -1.6,
+   "Total": 154.2,
+   "Spread": "-1.6 UC San Diego"
+  },
+  "Vegas": {
+   "Spread": "-3.5 UC San Diego",
+   "SpreadValue": -3.5,
+   "HomeTeamScore": 77.0,
+   "AwayTeamScore": 80.5,
+   "Total": 157.5
+  }
+ },
+ "scoreprediction_New+Mexico_Colorado+St..jpg": {
+  "Home Team": "New Mexico",
+  "Away Team": "Colorado St.",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 77,
+   "AwayTeamScore": 70,
+   "HomeTeamWinProbability": 0.709,
+   "AwayTeamWinProbability": 0.291,
+   "Spread": "-7.6 New Mexico",
+   "SpreadValue": 7.6,
+   "Total": 146.7,
+   "MarginRange80": [
+    -10.0,
+    25.0
+   ],
+   "TotalRange80": [
+    127.0,
+    165.0
+   ],
+   "Bet": {
+    "Side": "Colorado St.",
+    "Lean": 0.93,
+    "CoverProbability": 0.53,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 69,
+   "HomeTeamWinProbability": 0.684,
+   "AwayTeamWinProbability": 0.316,
+   "SpreadValue": 8.5,
+   "Total": 147.2,
+   "Spread": "-8.5 New Mexico"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.772,
+   "AwayTeamWinProbability": 0.228,
+   "MoneylineHome": -410,
+   "MoneylineAway": 320,
+   "Spread": "-8.5 New Mexico",
+   "SpreadValue": 8.5,
+   "HomeTeamScore": 79.5,
+   "AwayTeamScore": 71.0,
+   "Total": 150.5
+  }
+ },
+ "scoreprediction_Delaware_Sam+Houston+St..jpg": {
+  "Home Team": "Delaware",
+  "Away Team": "Sam Houston St.",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 70,
+   "AwayTeamScore": 77,
+   "HomeTeamWinProbability": 0.235,
+   "AwayTeamWinProbability": 0.765,
+   "Spread": "-6.8 Sam Houston St.",
+   "SpreadValue": -6.8,
+   "Total": 147.4,
+   "MarginRange80": [
+    -20.0,
+    7.0
+   ],
+   "TotalRange80": [
+    130.0,
+    165.0
+   ],
+   "Bet": {
+    "Side": "Sam Houston St.",
+    "Lean": 0.29,
+    "CoverProbability": 0.485,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 70,
+   "AwayTeamScore": 77,
+   "HomeTeamWinProbability": 0.157,
+   "AwayTeamWinProbability": 0.843,
+   "SpreadValue": -7.2,
+   "Total": 147.0,
+   "Spread": "-7.2 Sam Houston St."
+  },
+  "Vegas": {
+   "Spread": "-6.5 Sam Houston St.",
+   "SpreadValue": -6.5,
+   "HomeTeamScore": 70.5,
+   "AwayTeamScore": 77.0,
+   "Total": 147.5
+  }
+ },
+ "scoreprediction_Southern+Illinois_Drake.jpg": {
+  "Home Team": "Southern Illinois",
+  "Away Team": "Drake",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 70,
+   "HomeTeamWinProbability": 0.685,
+   "AwayTeamWinProbability": 0.315,
+   "Spread": "-5.6 Southern Illinois",
+   "SpreadValue": 5.6,
+   "Total": 145.5,
+   "MarginRange80": [
+    -9.0,
+    20.0
+   ],
+   "TotalRange80": [
+    125.0,
+    165.0
+   ],
+   "Bet": {
+    "Side": "Southern Illinois",
+    "Lean": 1.08,
+    "CoverProbability": 0.499,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 67,
+   "HomeTeamWinProbability": 0.712,
+   "AwayTeamWinProbability": 0.288,
+   "SpreadValue": 9.0,
+   "Total": 142.8,
+   "Spread": "-9.0 Southern Illinois"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.664,
+   "AwayTeamWinProbability": 0.336,
+   "MoneylineHome": -225,
+   "MoneylineAway": 185,
+   "Spread": "-4.5 Southern Illinois",
+   "SpreadValue": 4.5,
+   "HomeTeamScore": 70.5,
+   "AwayTeamScore": 66.0,
+   "Total": 136.5
+  }
+ },
+ "scoreprediction_East+Carolina_Tulsa.jpg": {
+  "Home Team": "East Carolina",
+  "Away Team": "Tulsa",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 81,
+   "HomeTeamWinProbability": 0.196,
+   "AwayTeamWinProbability": 0.804,
+   "Spread": "-9.4 Tulsa",
+   "SpreadValue": -9.4,
+   "Total": 153.1,
+   "MarginRange80": [
+    -25.0,
+    6.0
+   ],
+   "TotalRange80": [
+    135.0,
+    170.0
+   ],
+   "Bet": {
+    "Side": "Tulsa",
+    "Lean": 0.95,
+    "CoverProbability": 0.496,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 83,
+   "HomeTeamWinProbability": 0.103,
+   "AwayTeamWinProbability": 0.897,
+   "SpreadValue": -10.9,
+   "Total": 155.6,
+   "Spread": "-10.9 Tulsa"
+  },
+  "Vegas": {
+   "Spread": "-8.5 Tulsa",
+   "SpreadValue": -8.5,
+   "HomeTeamScore": 73.5,
+   "AwayTeamScore": 82.0,
+   "Total": 155.5
+  }
+ },
+ "scoreprediction_Northern+Iowa_Evansville.jpg": {
+  "Home Team": "Northern Iowa",
+  "Away Team": "Evansville",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 74,
+   "AwayTeamScore": 58,
+   "HomeTeamWinProbability": 0.902,
+   "AwayTeamWinProbability": 0.098,
+   "Spread": "-15.9 Northern Iowa",
+   "SpreadValue": 15.9,
+   "Total": 131.9,
+   "MarginRange80": [
+    1.0,
+    31.0
+   ],
+   "TotalRange80": [
+    115.0,
+    149.0
+   ],
+   "Bet": {
+    "Side": "Northern Iowa",
+    "Lean": 1.44,
+    "CoverProbability": 0.505,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 71,
+   "AwayTeamScore": 55,
+   "HomeTeamWinProbability": 0.912,
+   "AwayTeamWinProbability": 0.088,
+   "SpreadValue": 15.8,
+   "Total": 126.2,
+   "Spread": "-15.8 Northern Iowa"
+  },
+  "Vegas": {
+   "Spread": "-14.5 Northern Iowa",
+   "SpreadValue": 14.5,
+   "HomeTeamScore": 69.5,
+   "AwayTeamScore": 55.0,
+   "Total": 124.5
+  }
+ },
+ "scoreprediction_FIU_Middle+Tennessee.jpg": {
+  "Home Team": "FIU",
+  "Away Team": "Middle Tennessee",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 76,
+   "HomeTeamWinProbability": 0.468,
+   "AwayTeamWinProbability": 0.532,
+   "Spread": "-0.3 Middle Tennessee",
+   "SpreadValue": -0.3,
+   "Total": 151.8,
+   "MarginRange80": [
+    -13.0,
+    11.0
+   ],
+   "TotalRange80": [
+    136.0,
+    167.0
+   ],
+   "Bet": {
+    "Side": "Middle Tennessee",
+    "Lean": 2.84,
+    "CoverProbability": 0.564,
+    "Tier": "BET"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 75,
+   "HomeTeamWinProbability": 0.425,
+   "AwayTeamWinProbability": 0.575,
+   "SpreadValue": 1.6,
+   "Total": 151.2,
+   "Spread": "-1.6 FIU"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.572,
+   "AwayTeamWinProbability": 0.428,
+   "MoneylineHome": -148,
+   "MoneylineAway": 124,
+   "Spread": "-2.5 FIU",
+   "SpreadValue": 2.5,
+   "HomeTeamScore": 77.5,
+   "AwayTeamScore": 75.0,
+   "Total": 152.5
+  }
+ },
+ "scoreprediction_Fairfield_Manhattan.jpg": {
+  "Home Team": "Fairfield",
+  "Away Team": "Manhattan",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 80,
+   "AwayTeamScore": 72,
+   "HomeTeamWinProbability": 0.703,
+   "AwayTeamWinProbability": 0.297,
+   "Spread": "-8.6 Fairfield",
+   "SpreadValue": 8.6,
+   "Total": 152.3,
+   "MarginRange80": [
+    -9.0,
+    27.0
+   ],
+   "TotalRange80": [
+    128.0,
+    174.0
+   ],
+   "Bet": {
+    "Side": "Fairfield",
+    "Lean": 3.14,
+    "CoverProbability": 0.535,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 83,
+   "AwayTeamScore": 72,
+   "HomeTeamWinProbability": 0.723,
+   "AwayTeamWinProbability": 0.277,
+   "SpreadValue": 10.2,
+   "Total": 155.0,
+   "Spread": "-10.2 Fairfield"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.701,
+   "AwayTeamWinProbability": 0.299,
+   "MoneylineHome": -275,
+   "MoneylineAway": 220,
+   "Spread": "-5.5 Fairfield",
+   "SpreadValue": 5.5,
+   "HomeTeamScore": 77.5,
+   "AwayTeamScore": 72.0,
+   "Total": 149.5
+  }
+ },
+ "scoreprediction_Hawaii_UC+Riverside.jpg": {
+  "Home Team": "Hawaii",
+  "Away Team": "UC Riverside",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 79,
+   "AwayTeamScore": 69,
+   "HomeTeamWinProbability": 0.781,
+   "AwayTeamWinProbability": 0.219,
+   "Spread": "-10.1 Hawaii",
+   "SpreadValue": 10.1,
+   "Total": 148.0,
+   "MarginRange80": [
+    -6.0,
+    28.0
+   ],
+   "TotalRange80": [
+    130.0,
+    166.0
+   ],
+   "Bet": {
+    "Side": "UC Riverside",
+    "Lean": 1.44,
+    "CoverProbability": 0.539,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 66,
+   "HomeTeamWinProbability": 0.801,
+   "AwayTeamWinProbability": 0.199,
+   "SpreadValue": 12.1,
+   "Total": 143.4,
+   "Spread": "-12.1 Hawaii"
+  },
+  "Vegas": {
+   "Spread": "-11.5 Hawaii",
+   "SpreadValue": 11.5,
+   "HomeTeamScore": 80.0,
+   "AwayTeamScore": 68.5,
+   "Total": 148.5
+  }
+ },
+ "scoreprediction_Valparaiso_Indiana+St..jpg": {
+  "Home Team": "Valparaiso",
+  "Away Team": "Indiana St.",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 69,
+   "HomeTeamWinProbability": 0.819,
+   "AwayTeamWinProbability": 0.181,
+   "Spread": "-8.7 Valparaiso",
+   "SpreadValue": 8.7,
+   "Total": 147.3,
+   "MarginRange80": [
+    -3.0,
+    22.0
+   ],
+   "TotalRange80": [
+    130.0,
+    164.0
+   ],
+   "Bet": {
+    "Side": "Valparaiso",
+    "Lean": 6.21,
+    "CoverProbability": 0.589,
+    "Tier": "BET"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 73,
+   "AwayTeamScore": 67,
+   "HomeTeamWinProbability": 0.607,
+   "AwayTeamWinProbability": 0.393,
+   "SpreadValue": 6.0,
+   "Total": 140.8,
+   "Spread": "-6.0 Valparaiso"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.572,
+   "AwayTeamWinProbability": 0.428,
+   "MoneylineHome": -148,
+   "MoneylineAway": 124,
+   "Spread": "-2.5 Valparaiso",
+   "SpreadValue": 2.5,
+   "HomeTeamScore": 70.0,
+   "AwayTeamScore": 67.5,
+   "Total": 137.5
+  }
+ },
+ "scoreprediction_Iona_Sacred+Heart.jpg": {
+  "Home Team": "Iona",
+  "Away Team": "Sacred Heart",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 73,
+   "HomeTeamWinProbability": 0.689,
+   "AwayTeamWinProbability": 0.311,
+   "Spread": "-5.5 Iona",
+   "SpreadValue": 5.5,
+   "Total": 151.1,
+   "MarginRange80": [
+    -7.0,
+    19.0
+   ],
+   "TotalRange80": [
+    129.0,
+    172.0
+   ],
+   "Bet": {
+    "Side": "Iona",
+    "Lean": 2.95,
+    "CoverProbability": 0.532,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 81,
+   "AwayTeamScore": 74,
+   "HomeTeamWinProbability": 0.621,
+   "AwayTeamWinProbability": 0.379,
+   "SpreadValue": 7.0,
+   "Total": 154.2,
+   "Spread": "-7.0 Iona"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.602,
+   "AwayTeamWinProbability": 0.398,
+   "MoneylineHome": -170,
+   "MoneylineAway": 140,
+   "Spread": "-2.5 Iona",
+   "SpreadValue": 2.5,
+   "HomeTeamScore": 75.5,
+   "AwayTeamScore": 73.0,
+   "Total": 148.5
+  }
+ },
+ "scoreprediction_Iowa_Michigan.jpg": {
+  "Home Team": "Iowa",
+  "Away Team": "Michigan",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 78,
+   "HomeTeamWinProbability": 0.318,
+   "AwayTeamWinProbability": 0.682,
+   "Spread": "-5.6 Michigan",
+   "SpreadValue": -5.6,
+   "Total": 150.4,
+   "MarginRange80": [
+    -21.0,
+    11.0
+   ],
+   "TotalRange80": [
+    133.0,
+    167.0
+   ],
+   "Bet": {
+    "Side": "Iowa",
+    "Lean": 2.89,
+    "CoverProbability": 0.565,
+    "Tier": "BET"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 70,
+   "AwayTeamScore": 78,
+   "HomeTeamWinProbability": 0.146,
+   "AwayTeamWinProbability": 0.854,
+   "SpreadValue": -7.8,
+   "Total": 147.2,
+   "Spread": "-7.8 Michigan"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.228,
+   "AwayTeamWinProbability": 0.772,
+   "MoneylineHome": 320,
+   "MoneylineAway": -410,
+   "Spread": "-8.5 Michigan",
+   "SpreadValue": -8.5,
+   "HomeTeamScore": 68.5,
+   "AwayTeamScore": 77.0,
+   "Total": 145.5
+  }
+ },
+ "scoreprediction_New+Mexico+St._Jacksonville+St..jpg": {
+  "Home Team": "New Mexico St.",
+  "Away Team": "Jacksonville St.",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 73,
+   "AwayTeamScore": 69,
+   "HomeTeamWinProbability": 0.646,
+   "AwayTeamWinProbability": 0.354,
+   "Spread": "-4.6 New Mexico St.",
+   "SpreadValue": 4.6,
+   "Total": 142.0,
+   "MarginRange80": [
+    -7.0,
+    16.0
+   ],
+   "TotalRange80": [
+    123.0,
+    161.0
+   ],
+   "Bet": {
+    "Side": "New Mexico St.",
+    "Lean": 0.14,
+    "CoverProbability": 0.482,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 68,
+   "HomeTeamWinProbability": 0.51,
+   "AwayTeamWinProbability": 0.49,
+   "SpreadValue": 3.6,
+   "Total": 140.4,
+   "Spread": "-3.6 New Mexico St."
+  },
+  "Vegas": {
+   "Spread": "-4.5 New Mexico St.",
+   "SpreadValue": 4.5,
+   "HomeTeamScore": 73.5,
+   "AwayTeamScore": 69.0,
+   "Total": 142.5
+  }
+ },
+ "scoreprediction_UTEP_Kennesaw+St..jpg": {
+  "Home Team": "UTEP",
+  "Away Team": "Kennesaw St.",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 78,
+   "HomeTeamWinProbability": 0.285,
+   "AwayTeamWinProbability": 0.715,
+   "Spread": "-6.0 Kennesaw St.",
+   "SpreadValue": -6.0,
+   "Total": 149.3,
+   "MarginRange80": [
+    -19.0,
+    8.0
+   ],
+   "TotalRange80": [
+    128.0,
+    170.0
+   ],
+   "Bet": {
+    "Side": "Kennesaw St.",
+    "Lean": 3.46,
+    "CoverProbability": 0.541,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 76,
+   "HomeTeamWinProbability": 0.248,
+   "AwayTeamWinProbability": 0.752,
+   "SpreadValue": -3.6,
+   "Total": 147.4,
+   "Spread": "-3.6 Kennesaw St."
+  },
+  "Vegas": {
+   "Spread": "-2.5 Kennesaw St.",
+   "SpreadValue": -2.5,
+   "HomeTeamScore": 73.5,
+   "AwayTeamScore": 76.0,
+   "Total": 149.5
+  }
+ },
+ "scoreprediction_Liberty_Louisiana+Tech.jpg": {
+  "Home Team": "Liberty",
+  "Away Team": "Louisiana Tech",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 74,
+   "AwayTeamScore": 63,
+   "HomeTeamWinProbability": 0.84,
+   "AwayTeamWinProbability": 0.16,
+   "Spread": "-10.9 Liberty",
+   "SpreadValue": 10.9,
+   "Total": 136.4,
+   "MarginRange80": [
+    -3.0,
+    25.0
+   ],
+   "TotalRange80": [
+    121.0,
+    152.0
+   ],
+   "Bet": {
+    "Side": "Liberty",
+    "Lean": 2.4,
+    "CoverProbability": 0.522,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 71,
+   "AwayTeamScore": 61,
+   "HomeTeamWinProbability": 0.782,
+   "AwayTeamWinProbability": 0.218,
+   "SpreadValue": 10.5,
+   "Total": 132.0,
+   "Spread": "-10.5 Liberty"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.787,
+   "AwayTeamWinProbability": 0.213,
+   "MoneylineHome": -455,
+   "MoneylineAway": 350,
+   "Spread": "-8.5 Liberty",
+   "SpreadValue": 8.5,
+   "HomeTeamScore": 73.5,
+   "AwayTeamScore": 65.0,
+   "Total": 138.5
+  }
+ },
+ "scoreprediction_Lindenwood_Little+Rock.jpg": {
+  "Home Team": "Lindenwood",
+  "Away Team": "Little Rock",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 72,
+   "HomeTeamWinProbability": 0.605,
+   "AwayTeamWinProbability": 0.395,
+   "Spread": "-4.2 Lindenwood",
+   "SpreadValue": 4.2,
+   "Total": 147.2,
+   "MarginRange80": [
+    -13.0,
+    20.0
+   ],
+   "TotalRange80": [
+    129.0,
+    165.0
+   ],
+   "Bet": {
+    "Side": "Little Rock",
+    "Lean": 1.25,
+    "CoverProbability": 0.536,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 77,
+   "AwayTeamScore": 73,
+   "HomeTeamWinProbability": 0.651,
+   "AwayTeamWinProbability": 0.349,
+   "SpreadValue": 4.1,
+   "Total": 150.3,
+   "Spread": "-4.1 Lindenwood"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.637,
+   "AwayTeamWinProbability": 0.363,
+   "MoneylineHome": -198,
+   "MoneylineAway": 164,
+   "Spread": "-5.5 Lindenwood",
+   "SpreadValue": 5.5,
+   "HomeTeamScore": 77.0,
+   "AwayTeamScore": 71.5,
+   "Total": 148.5
+  }
+ },
+ "scoreprediction_Long+Beach+St._UC+Davis.jpg": {
+  "Home Team": "Long Beach St.",
+  "Away Team": "UC Davis",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 75,
+   "HomeTeamWinProbability": 0.431,
+   "AwayTeamWinProbability": 0.569,
+   "Spread": "-2.8 UC Davis",
+   "SpreadValue": -2.8,
+   "Total": 146.8,
+   "MarginRange80": [
+    -18.0,
+    16.0
+   ],
+   "TotalRange80": [
+    124.0,
+    168.0
+   ],
+   "Bet": {
+    "Side": "UC Davis",
+    "Lean": 1.27,
+    "CoverProbability": 0.502,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 73,
+   "AwayTeamScore": 75,
+   "HomeTeamWinProbability": 0.299,
+   "AwayTeamWinProbability": 0.701,
+   "SpreadValue": -1.9,
+   "Total": 148.9,
+   "Spread": "-1.9 UC Davis"
+  },
+  "Vegas": {
+   "Spread": "-1.5 UC Davis",
+   "SpreadValue": -1.5,
+   "HomeTeamScore": 74.5,
+   "AwayTeamScore": 76.0,
+   "Total": 150.5
+  }
+ },
+ "scoreprediction_Loyola+Marymount_San+Diego.jpg": {
+  "Home Team": "Loyola Marymount",
+  "Away Team": "San Diego",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 77,
+   "AwayTeamScore": 70,
+   "HomeTeamWinProbability": 0.727,
+   "AwayTeamWinProbability": 0.273,
+   "Spread": "-6.9 Loyola Marymount",
+   "SpreadValue": 6.9,
+   "Total": 146.9,
+   "MarginRange80": [
+    -7.0,
+    21.0
+   ],
+   "TotalRange80": [
+    129.0,
+    164.0
+   ],
+   "Bet": {
+    "Side": "Loyola Marymount",
+    "Lean": 1.41,
+    "CoverProbability": 0.505,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 70,
+   "HomeTeamWinProbability": 0.655,
+   "AwayTeamWinProbability": 0.345,
+   "SpreadValue": 7.6,
+   "Total": 147.4,
+   "Spread": "-7.6 Loyola Marymount"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.681,
+   "AwayTeamWinProbability": 0.319,
+   "MoneylineHome": -245,
+   "MoneylineAway": 200,
+   "Spread": "-5.5 Loyola Marymount",
+   "SpreadValue": 5.5,
+   "HomeTeamScore": 76.5,
+   "AwayTeamScore": 71.0,
+   "Total": 147.5
+  }
+ },
+ "scoreprediction_Memphis_South+Florida.jpg": {
+  "Home Team": "Memphis",
+  "Away Team": "South Florida",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 74,
+   "AwayTeamScore": 81,
+   "HomeTeamWinProbability": 0.243,
+   "AwayTeamWinProbability": 0.757,
+   "Spread": "-6.7 South Florida",
+   "SpreadValue": -6.7,
+   "Total": 155.6,
+   "MarginRange80": [
+    -20.0,
+    7.0
+   ],
+   "TotalRange80": [
+    136.0,
+    174.0
+   ],
+   "Bet": {
+    "Side": "South Florida",
+    "Lean": 0.22,
+    "CoverProbability": 0.483,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 80,
+   "HomeTeamWinProbability": 0.255,
+   "AwayTeamWinProbability": 0.745,
+   "SpreadValue": -3.5,
+   "Total": 155.6,
+   "Spread": "-3.5 South Florida"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.29,
+   "AwayTeamWinProbability": 0.71,
+   "MoneylineHome": 230,
+   "MoneylineAway": -285,
+   "Spread": "-6.5 South Florida",
+   "SpreadValue": -6.5,
+   "HomeTeamScore": 76.5,
+   "AwayTeamScore": 83.0,
+   "Total": 159.5
+  }
+ },
+ "scoreprediction_Ohio_Miami+OH.jpg": {
+  "Home Team": "Ohio",
+  "Away Team": "Miami OH",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 82,
+   "HomeTeamWinProbability": 0.245,
+   "AwayTeamWinProbability": 0.755,
+   "Spread": "-6.2 Miami OH",
+   "SpreadValue": -6.2,
+   "Total": 158.1,
+   "MarginRange80": [
+    -19.0,
+    6.0
+   ],
+   "TotalRange80": [
+    140.0,
+    176.0
+   ],
+   "Bet": {
+    "Side": "Miami OH",
+    "Lean": 0.7,
+    "CoverProbability": 0.492,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 76,
+   "AwayTeamScore": 83,
+   "HomeTeamWinProbability": 0.172,
+   "AwayTeamWinProbability": 0.828,
+   "SpreadValue": -7.1,
+   "Total": 159.3,
+   "Spread": "-7.1 Miami OH"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.29,
+   "AwayTeamWinProbability": 0.71,
+   "MoneylineHome": 230,
+   "MoneylineAway": -285,
+   "Spread": "-5.5 Miami OH",
+   "SpreadValue": -5.5,
+   "HomeTeamScore": 76.5,
+   "AwayTeamScore": 82.0,
+   "Total": 158.5
+  }
+ },
+ "scoreprediction_Michigan+St._Rutgers.jpg": {
+  "Home Team": "Michigan St.",
+  "Away Team": "Rutgers",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 82,
+   "AwayTeamScore": 61,
+   "HomeTeamWinProbability": 0.953,
+   "AwayTeamWinProbability": 0.047,
+   "Spread": "-21.0 Michigan St.",
+   "SpreadValue": 21.0,
+   "Total": 143.4,
+   "MarginRange80": [
+    5.0,
+    38.0
+   ],
+   "TotalRange80": [
+    125.0,
+    161.0
+   ],
+   "Bet": {
+    "Side": "Michigan St.",
+    "Lean": 2.51,
+    "CoverProbability": 0.524,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 79,
+   "AwayTeamScore": 60,
+   "HomeTeamWinProbability": 0.934,
+   "AwayTeamWinProbability": 0.066,
+   "SpreadValue": 19.1,
+   "Total": 138.4,
+   "Spread": "-19.1 Michigan St."
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.954,
+   "AwayTeamWinProbability": 0.046,
+   "MoneylineHome": -6500,
+   "MoneylineAway": 2000,
+   "Spread": "-18.5 Michigan St.",
+   "SpreadValue": 18.5,
+   "HomeTeamScore": 80.0,
+   "AwayTeamScore": 61.5,
+   "Total": 141.5
+  }
+ },
+ "scoreprediction_Missouri+St._Western+Kentucky.jpg": {
+  "Home Team": "Missouri St.",
+  "Away Team": "Western Kentucky",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 74,
+   "AwayTeamScore": 75,
+   "HomeTeamWinProbability": 0.481,
+   "AwayTeamWinProbability": 0.519,
+   "Spread": "-0.2 Western Kentucky",
+   "SpreadValue": -0.2,
+   "Total": 149.0,
+   "MarginRange80": [
+    -13.0,
+    13.0
+   ],
+   "TotalRange80": [
+    130.0,
+    167.0
+   ],
+   "Bet": {
+    "Side": "Missouri St.",
+    "Lean": 1.32,
+    "CoverProbability": 0.537,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 73,
+   "AwayTeamScore": 72,
+   "HomeTeamWinProbability": 0.393,
+   "AwayTeamWinProbability": 0.607,
+   "SpreadValue": 0.7,
+   "Total": 145.6,
+   "Spread": "-0.7 Missouri St."
+  },
+  "Vegas": {
+   "Spread": "-1.5 Western Kentucky",
+   "SpreadValue": -1.5,
+   "HomeTeamScore": 75.0,
+   "AwayTeamScore": 76.5,
+   "Total": 151.5
+  }
+ },
+ "scoreprediction_Portland_Pepperdine.jpg": {
+  "Home Team": "Portland",
+  "Away Team": "Pepperdine",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 77,
+   "AwayTeamScore": 72,
+   "HomeTeamWinProbability": 0.626,
+   "AwayTeamWinProbability": 0.374,
+   "Spread": "-5.2 Portland",
+   "SpreadValue": 5.2,
+   "Total": 148.7,
+   "MarginRange80": [
+    -14.0,
+    26.0
+   ],
+   "TotalRange80": [
+    127.0,
+    170.0
+   ],
+   "Bet": {
+    "Side": "Portland",
+    "Lean": 2.7,
+    "CoverProbability": 0.528,
+    "Tier": "LEAN"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 71,
+   "HomeTeamWinProbability": 0.63,
+   "AwayTeamWinProbability": 0.37,
+   "SpreadValue": 7.0,
+   "Total": 149.3,
+   "Spread": "-7.0 Portland"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.551,
+   "AwayTeamWinProbability": 0.449,
+   "MoneylineHome": -135,
+   "MoneylineAway": 114,
+   "Spread": "-2.5 Portland",
+   "SpreadValue": 2.5,
+   "HomeTeamScore": 77.5,
+   "AwayTeamScore": 75.0,
+   "Total": 152.5
+  }
+ },
+ "scoreprediction_St.+Thomas_South+Dakota+St..jpg": {
+  "Home Team": "St. Thomas",
+  "Away Team": "South Dakota St.",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 80,
+   "AwayTeamScore": 72,
+   "HomeTeamWinProbability": 0.743,
+   "AwayTeamWinProbability": 0.257,
+   "Spread": "-7.8 St. Thomas",
+   "SpreadValue": 7.8,
+   "Total": 151.8,
+   "MarginRange80": [
+    -7.0,
+    23.0
+   ],
+   "TotalRange80": [
+    132.0,
+    171.0
+   ],
+   "Bet": {
+    "Side": "St. Thomas",
+    "Lean": 2.35,
+    "CoverProbability": 0.521,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 82,
+   "AwayTeamScore": 71,
+   "HomeTeamWinProbability": 0.751,
+   "AwayTeamWinProbability": 0.249,
+   "SpreadValue": 11.0,
+   "Total": 152.5,
+   "Spread": "-11.0 St. Thomas"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.714,
+   "AwayTeamWinProbability": 0.286,
+   "MoneylineHome": -290,
+   "MoneylineAway": 235,
+   "Spread": "-5.5 St. Thomas",
+   "SpreadValue": 5.5,
+   "HomeTeamScore": 78.0,
+   "AwayTeamScore": 72.5,
+   "Total": 150.5
+  }
+ },
+ "scoreprediction_Southern+Utah_Utah+Valley.jpg": {
+  "Home Team": "Southern Utah",
+  "Away Team": "Utah Valley",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 81,
+   "HomeTeamWinProbability": 0.25,
+   "AwayTeamWinProbability": 0.75,
+   "Spread": "-9.3 Utah Valley",
+   "SpreadValue": -9.3,
+   "Total": 153.2,
+   "MarginRange80": [
+    -30.0,
+    9.0
+   ],
+   "TotalRange80": [
+    132.0,
+    174.0
+   ],
+   "Bet": {
+    "Side": "Southern Utah",
+    "Lean": 0.23,
+    "CoverProbability": 0.518,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 74,
+   "AwayTeamScore": 81,
+   "HomeTeamWinProbability": 0.151,
+   "AwayTeamWinProbability": 0.849,
+   "SpreadValue": -7.9,
+   "Total": 154.9,
+   "Spread": "-7.9 Utah Valley"
+  },
+  "Vegas": {
+   "Spread": "-9.5 Utah Valley",
+   "SpreadValue": -9.5,
+   "HomeTeamScore": 70.5,
+   "AwayTeamScore": 80.0,
+   "Total": 150.5
+  }
+ },
+ "scoreprediction_Tarleton+St._UT+Arlington.jpg": {
+  "Home Team": "Tarleton St.",
+  "Away Team": "UT Arlington",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 73,
+   "AwayTeamScore": 69,
+   "HomeTeamWinProbability": 0.595,
+   "AwayTeamWinProbability": 0.405,
+   "Spread": "-3.9 Tarleton St.",
+   "SpreadValue": 3.9,
+   "Total": 142.5,
+   "MarginRange80": [
+    -11.0,
+    16.0
+   ],
+   "TotalRange80": [
+    124.0,
+    161.0
+   ],
+   "Bet": {
+    "Side": "Tarleton St.",
+    "Lean": 1.4,
+    "CoverProbability": 0.504,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 68,
+   "AwayTeamScore": 66,
+   "HomeTeamWinProbability": 0.448,
+   "AwayTeamWinProbability": 0.552,
+   "SpreadValue": 2.0,
+   "Total": 133.2,
+   "Spread": "-2.0 Tarleton St."
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.543,
+   "AwayTeamWinProbability": 0.457,
+   "MoneylineHome": -130,
+   "MoneylineAway": 110,
+   "Spread": "-2.5 Tarleton St.",
+   "SpreadValue": 2.5,
+   "HomeTeamScore": 69.5,
+   "AwayTeamScore": 67.0,
+   "Total": 136.5
+  }
+ },
+ "scoreprediction_Temple_Tulane.jpg": {
+  "Home Team": "Temple",
+  "Away Team": "Tulane",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 77,
+   "AwayTeamScore": 70,
+   "HomeTeamWinProbability": 0.731,
+   "AwayTeamWinProbability": 0.269,
+   "Spread": "-6.7 Temple",
+   "SpreadValue": 6.7,
+   "Total": 146.4,
+   "MarginRange80": [
+    -6.0,
+    20.0
+   ],
+   "TotalRange80": [
+    130.0,
+    162.0
+   ],
+   "Bet": {
+    "Side": "Temple",
+    "Lean": 2.2,
+    "CoverProbability": 0.519,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 73,
+   "AwayTeamScore": 68,
+   "HomeTeamWinProbability": 0.561,
+   "AwayTeamWinProbability": 0.439,
+   "SpreadValue": 4.9,
+   "Total": 141.9,
+   "Spread": "-4.9 Temple"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.645,
+   "AwayTeamWinProbability": 0.355,
+   "MoneylineHome": -205,
+   "MoneylineAway": 170,
+   "Spread": "-4.5 Temple",
+   "SpreadValue": 4.5,
+   "HomeTeamScore": 74.5,
+   "AwayTeamScore": 70.0,
+   "Total": 144.5
+  }
+ },
+ "scoreprediction_Washington_USC.jpg": {
+  "Home Team": "Washington",
+  "Away Team": "USC",
+  "gameDate": "2026-03-04",
+  "Beyond the Arc DL": {
+   "HomeTeamScore": 80,
+   "AwayTeamScore": 74,
+   "HomeTeamWinProbability": 0.694,
+   "AwayTeamWinProbability": 0.306,
+   "Spread": "-6.0 Washington",
+   "SpreadValue": 6.0,
+   "Total": 153.3,
+   "MarginRange80": [
+    -8.0,
+    20.0
+   ],
+   "TotalRange80": [
+    138.0,
+    168.0
+   ],
+   "Bet": {
+    "Side": "Washington",
+    "Lean": 0.54,
+    "CoverProbability": 0.489,
+    "Tier": "PASS"
+   }
+  },
+  "BART": {
+   "HomeTeamScore": 77,
+   "AwayTeamScore": 72,
+   "HomeTeamWinProbability": 0.561,
+   "AwayTeamWinProbability": 0.439,
+   "SpreadValue": 5.2,
+   "Total": 148.7,
+   "Spread": "-5.2 Washington"
+  },
+  "Vegas": {
+   "HomeTeamWinProbability": 0.664,
+   "AwayTeamWinProbability": 0.336,
+   "MoneylineHome": -225,
+   "MoneylineAway": 185,
+   "Spread": "-5.5 Washington",
+   "SpreadValue": 5.5,
+   "HomeTeamScore": 78.0,
+   "AwayTeamScore": 72.5,
+   "Total": 150.5
+  }
+ }
+}
