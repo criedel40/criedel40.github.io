@@ -50,7 +50,20 @@
     .bball-image-wrapper:hover{transform:translateY(-4px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
     .bball-image-wrapper img{width:100%;height:auto;display:block}
     .bball-image-title{padding:1rem;font-size:.9rem;color:#333;text-align:center;word-break:break-word}
-    .bball-image-wrapper{cursor:pointer}
+    .bball-image-wrapper{cursor:pointer;padding:.5rem .75rem .75rem}
+    .score-hist{width:100%;height:auto;display:block}
+    .score-hist .bar{fill:#2a78d6}
+    .score-hist .slot:hover .bar{fill:#1d5fb0}
+    .score-hist .grid{stroke:#e5e5e5;stroke-width:1}
+    .score-hist .axis{stroke:#c9c9c6;stroke-width:1}
+    .score-hist text{font-family:inherit;fill:#52514e}
+    .score-hist .title{font-weight:700;fill:#0b0b0b;font-size:15px}
+    .score-hist .tick{font-size:11px}
+    .score-hist .caption{font-size:12px}
+    .score-hist .marker{stroke:#0b0b0b;stroke-width:1.5}
+    .score-hist .marker-label{font-size:11px;fill:#0b0b0b;font-weight:600}
+    .image-modal-content{background:#fff;padding:1rem;border-radius:8px;width:min(96vw,1400px)}
+    .image-modal-content .score-hist{width:100%}
     #bball-images-loading{text-align:center;padding:2rem;color:#666}
     .prediction-table-container{margin-bottom:1rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden}
     .prediction-table{width:100%;border-collapse:collapse;font-size:.9rem;border-spacing:0}
@@ -139,7 +152,7 @@
   </main>
   <footer class="bg-black bottom-0 w-100 pa3" role=contentinfo>
     <div class="flex justify-between">
-      <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href=https://criedel40.github.io/personal/>&copy; Christopher Riedel 2025</a>
+      <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href=https://criedel40.github.io/personal/>&copy; Christopher Riedel <span class="copyright-year">2025</span></a>
       <div>
         <div class=ananke-socials></div>
       </div>
@@ -152,7 +165,7 @@
   <div id="image-modal" class="image-modal">
     <div class="image-modal-content">
       <button class="image-modal-close" id="modal-close" aria-label="Close">&times;</button>
-      <img id="modal-image" src="" alt="Expanded view">
+      <div id="modal-chart"></div>
     </div>
   </div>
   
@@ -453,37 +466,20 @@
           tableContainer.appendChild(table);
           predictionContainer.appendChild(tableContainer);
           
-          // Create image wrapper
-          const wrapper = document.createElement('div');
-          wrapper.className = 'bball-image-wrapper';
-          
-          const img = document.createElement('img');
-          // Handle URL-encoded characters in filename
-          // The filename may contain %26 (encoded &) - we need to escape the % to prevent browser from decoding
-          // Replace % with %25 to double-encode, so %26 becomes %2526 which the browser will decode to %26
-          const safeFilename = filename.replace(/%/g, '%25');
-          img.src = `bball-figs/${safeFilename}`;
-          img.alt = filename.replace(/\.jpg$/i, '').replace(/[+_]/g, ' ').replace(/%26/g, '&');
-          img.loading = 'lazy'; // Lazy load images for better performance
-          
-          // Handle image load errors
-          img.onerror = function() {
-            console.warn(`Failed to load image: ${filename}`);
-            wrapper.style.display = 'none';
-          };
-          
-          const title = document.createElement('div');
-          title.className = 'bball-image-title';
-          title.textContent = filename.replace(/scoreprediction_/i, '').replace(/\.jpg$/i, '').replace(/[+_]/g, ' ');
-          
-          // Add click handler to open image in modal
-          wrapper.addEventListener('click', function() {
-            openImageModal(img.src, img.alt);
-          });
-          
-          wrapper.appendChild(img);
-          wrapper.appendChild(title);
-          predictionContainer.appendChild(wrapper);
+          // Score distributions, drawn here from the JSON's Histogram block (no image files)
+          const hist = predictionInfo && predictionInfo.Histogram;
+          if (hist && hist.home && hist.away) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'bball-image-wrapper';
+            const svg = buildHistogram(hist, team1, team2);
+            wrapper.appendChild(svg);
+            const title = document.createElement('div');
+            title.className = 'bball-image-title';
+            title.textContent = `${team1} vs ${team2}: score distributions of the ${Number(hist.members).toLocaleString()}-member ensemble (click to enlarge)`;
+            wrapper.appendChild(title);
+            wrapper.addEventListener('click', function() { openChartModal(svg); });
+            predictionContainer.appendChild(wrapper);
+          }
           container.appendChild(predictionContainer);
         });
         
@@ -496,12 +492,89 @@
       }
     }
     
-    // Image modal functions
-    function openImageModal(imageSrc, imageAlt) {
+    // ---- score histograms: two panels (home, away), one series each, drawn as inline SVG
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    function svgEl(tag, attrs, parent) {
+      const e = document.createElementNS(SVG_NS, tag);
+      for (const k in attrs) e.setAttribute(k, attrs[k]);
+      if (parent) parent.appendChild(e);
+      return e;
+    }
+    function svgText(x, y, text, cls, anchor, parent) {
+      const t = svgEl('text', { x: x, y: y, 'text-anchor': anchor || 'start' }, parent);
+      if (cls) t.setAttribute('class', cls);
+      t.textContent = text;  // names and numbers are data: textContent, never markup
+      return t;
+    }
+    function niceCeil(v) {  // clean top gridline: 1/2/2.5/5 x 10^k
+      const p = Math.pow(10, Math.floor(Math.log10(v)));
+      for (const m of [1, 2, 2.5, 5, 10]) { if (m * p >= v) return m * p; }
+      return 10 * p;
+    }
+    function buildHistogram(hist, homeName, awayName) {
+      const W = 920, H = 330, left = 52, gap = 54, top = 44, bottom = 76;
+      const panelW = (W - left - gap - 12) / 2, plotH = H - top - bottom, base = top + plotH;
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', class: 'score-hist' });
+      svg.setAttribute('aria-label', `Score distributions for ${homeName} (home) and ${awayName} (away)`);
+      const yMax = niceCeil(Math.max(...hist.home, ...hist.away, 1));
+      const start = Number(hist.start), members = Number(hist.members) || 1;
+      const panels = [
+        { label: 'Home', name: homeName, counts: hist.home, sum: hist.homeSummary || {}, share: hist.homeWinShare, x0: left },
+        { label: 'Away', name: awayName, counts: hist.away, sum: hist.awaySummary || {}, share: hist.homeWinShare === undefined ? undefined : 1 - hist.homeWinShare, x0: left + panelW + gap }
+      ];
+      panels.forEach((p, pi) => {
+        const n = p.counts.length, slot = panelW / n, barW = Math.max(1, Math.min(24, slot - 2));
+        // recessive gridlines with tick labels on the left panel only (shared scale)
+        for (let k = 0; k <= 4; k++) {
+          const y = base - plotH * k / 4;
+          svgEl('line', { x1: p.x0, x2: p.x0 + panelW, y1: y, y2: y, class: 'grid' }, svg);
+          if (pi === 0) svgText(p.x0 - 6, y + 4, (yMax * k / 4).toLocaleString(), 'tick', 'end', svg);
+        }
+        svgEl('line', { x1: p.x0, x2: p.x0 + panelW, y1: base, y2: base, class: 'axis' }, svg);
+        // columns: <= 24px, 4px rounded data-end, square at the baseline, 2px surface gap
+        p.counts.forEach((c, i) => {
+          const x = p.x0 + i * slot + (slot - barW) / 2, h = plotH * c / yMax, y = base - h, r = Math.min(4, barW / 2, h);
+          const g = svgEl('g', { class: 'slot' }, svg);
+          const title = svgEl('title', {}, g);
+          title.textContent = `${start + i} points: ${c.toLocaleString()} of ${members.toLocaleString()} members (${(100 * c / members).toFixed(1)}%)`;
+          if (h > 0) {
+            const d = r > 0
+              ? `M${x},${base} L${x},${y + r} Q${x},${y} ${x + r},${y} L${x + barW - r},${y} Q${x + barW},${y} ${x + barW},${y + r} L${x + barW},${base} Z`
+              : `M${x},${base} L${x},${y} L${x + barW},${y} L${x + barW},${base} Z`;
+            svgEl('path', { d: d, class: 'bar' }, g);
+          }
+          svgEl('rect', { x: p.x0 + i * slot, y: top, width: slot, height: plotH, fill: 'transparent' }, g);  // hit target = the whole slot
+        });
+        // x ticks every 10 points
+        for (let v = Math.ceil(start / 10) * 10; v < start + n; v += 10) {
+          const x = p.x0 + (v - start + 0.5) * slot;
+          svgEl('line', { x1: x, x2: x, y1: base, y2: base + 4, class: 'axis' }, svg);
+          svgText(x, base + 16, String(v), 'tick', 'middle', svg);
+        }
+        svgText(p.x0 + panelW / 2, base + 30, 'Score', 'tick', 'middle', svg);
+        // selective direct label: the median only
+        if (p.sum.median !== undefined) {
+          const xm = p.x0 + (p.sum.median - start + 0.5) * slot;
+          svgEl('line', { x1: xm, x2: xm, y1: top + 14, y2: base, class: 'marker', 'stroke-dasharray': '3 3' }, svg);
+          svgText(xm, top + 10, `median ${p.sum.median}`, 'marker-label', 'middle', svg);
+        }
+        const share = p.share === undefined ? '' : ` (${Math.round(100 * p.share)}%)`;
+        svgText(p.x0, top - 22, `${p.label}: ${p.name}${share}`, 'title', 'start', svg);
+        const cap = [];
+        if (p.sum.mean !== undefined) cap.push(`mean ${p.sum.mean}`);
+        if (p.sum.p25 !== undefined) cap.push(`25th–75th ${p.sum.p25}–${p.sum.p75}`);
+        if (p.sum.p1 !== undefined) cap.push(`1st–99th ${p.sum.p1}–${p.sum.p99}`);
+        svgText(p.x0 + panelW / 2, base + 50, cap.join('   ·   '), 'caption', 'middle', svg);
+      });
+      svgText(14, top + plotH / 2, 'members', 'tick', 'middle', svg).setAttribute('transform', `rotate(-90 14 ${top + plotH / 2})`);
+      return svg;
+    }
+    
+    // Chart modal (enlarged copy of the clicked chart)
+    function openChartModal(svg) {
       const modal = document.getElementById('image-modal');
-      const modalImage = document.getElementById('modal-image');
-      modalImage.src = imageSrc;
-      modalImage.alt = imageAlt;
+      const holder = document.getElementById('modal-chart');
+      holder.replaceChildren(svg.cloneNode(true));
       modal.classList.add('active');
       document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
@@ -509,6 +582,7 @@
     function closeImageModal() {
       const modal = document.getElementById('image-modal');
       modal.classList.remove('active');
+      document.getElementById('modal-chart').replaceChildren();
       document.body.style.overflow = ''; // Restore scrolling
     }
     
@@ -542,5 +616,5 @@
       document.addEventListener('DOMContentLoaded', loadBballImages);
     }
   </script>
-</body>
+<script>document.querySelectorAll(".copyright-year").forEach(function(e){e.textContent=new Date().getFullYear()})</script></body>
 </html>
