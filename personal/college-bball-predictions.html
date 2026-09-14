@@ -102,6 +102,9 @@
     .score-hist .caption{font-size:12px}
     .score-hist .marker{stroke:#0b0b0b;stroke-width:1.5}
     .score-hist .marker-label{font-size:11px;fill:#0b0b0b;font-weight:600}
+    .score-hist .iqr{stroke:#1d5fb0;stroke-width:1.5}
+    .score-hist .iqr-label{font-size:10px;fill:#1d5fb0;font-weight:600}
+    .score-hist .iqr-band{fill:#2a78d6;fill-opacity:.08}
     .image-modal-content{background:#fff;padding:1rem;border-radius:8px;width:min(96vw,1400px)}
     .image-modal-content .score-hist{width:100%}
     #bball-images-loading{text-align:center;padding:2rem;color:#666}
@@ -706,11 +709,21 @@
           svgText(x, base + 16, String(v), 'tick', 'middle', svg);
         }
         svgText(p.x0 + panelW / 2, base + 30, 'Score', 'tick', 'middle', svg);
-        // selective direct label: the median only
+        // interquartile range: a faint band and dashed blue lines at the 25th and 75th percentiles (behind the median)
+        if (p.sum.p25 !== undefined && p.sum.p75 !== undefined) {
+          const x25 = p.x0 + (p.sum.p25 - start) * slot, x75 = p.x0 + (p.sum.p75 - start + 1) * slot;
+          svgEl('rect', { x: x25, y: top + 24, width: Math.max(0, x75 - x25), height: plotH - 24, class: 'iqr-band' }, svg);
+          for (const [q, v] of [['25th', p.sum.p25], ['75th', p.sum.p75]]) {
+            const xq = p.x0 + (v - start + 0.5) * slot;
+            svgEl('line', { x1: xq, x2: xq, y1: top + 24, y2: base, class: 'iqr', 'stroke-dasharray': '4 3' }, svg);
+            svgText(xq, top + 21, `${q} ${v}`, 'iqr-label', 'middle', svg);
+          }
+        }
+        // selective direct label: the median
         if (p.sum.median !== undefined) {
           const xm = p.x0 + (p.sum.median - start + 0.5) * slot;
-          svgEl('line', { x1: xm, x2: xm, y1: top + 14, y2: base, class: 'marker', 'stroke-dasharray': '3 3' }, svg);
-          svgText(xm, top + 10, `median ${p.sum.median}`, 'marker-label', 'middle', svg);
+          svgEl('line', { x1: xm, x2: xm, y1: top + 12, y2: base, class: 'marker', 'stroke-dasharray': '3 3' }, svg);
+          svgText(xm, top + 9, `median ${p.sum.median}`, 'marker-label', 'middle', svg);
         }
         const share = p.share === undefined ? '' : ` (${Math.round(100 * p.share)}%)`;
         svgText(p.x0, top - 22, `${p.label}: ${p.name}${share}`, 'title', 'start', svg);
