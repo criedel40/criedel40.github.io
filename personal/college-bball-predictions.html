@@ -80,6 +80,7 @@
     .bet-sheet tr:last-child td{border-bottom:none}
     .bet-sheet td.num{text-align:right}
     .bet-sheet .empty{padding:1rem;color:#666;text-align:center}
+    .bet-sheet tr.selected td{background:#eef8f0}
     .bet-sheet-title{font-weight:700;color:#0b0b0b;padding:.75rem .75rem .25rem}
     .filters{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:0 0 1rem}
     .filters button{border:1px solid #cfd6e0;background:#fff;color:#333;padding:.35rem .8rem;border-radius:999px;font-size:.85rem;cursor:pointer}
@@ -349,13 +350,13 @@
           legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
           legend.innerHTML = '<span class="tier tier-BET">BET</span> staked &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: edge over the price\'s break-even, BET at +5 points, LEAN at +2. Total: same, BET at +3 (totals are evaluated but not staked). Lean = points the model beats the line by. Spreads: favourite negative.';
           container.parentNode.insertBefore(legend, container);
-          buildBetSheet(predictionsData._meta, container);
           buildFilters(container);
         }
         // Show the actionable games first: BET, then LEAN, then PASS, then games without a market
         const tierRank = { BET: 0, LEAN: 1, PASS: 2 };
         const rankOf = f => { const b = predictionsData[f] && predictionsData[f]["Beyond the Arc DL"] && predictionsData[f]["Beyond the Arc DL"].Bet; return b && b.Tier in tierRank ? tierRank[b.Tier] : 3; };
         imageFiles.sort((a, b) => rankOf(a) - rankOf(b));
+        buildBetSheet(predictionsData._meta, container, predictionsData, imageFiles);
         
         // If no images found
         if (!imageFiles || imageFiles.length === 0) {
@@ -570,28 +571,50 @@
       return best;
     }
     
-    // ---- the day's bet sheet (staked bets from the game-day script) above the grid
-    function buildBetSheet(meta, container) {
+    // ---- the top table: every game's market rows that match the selected tab (BET / BET + LEAN / All),
+    //      with the stake for the rows the day's sheet actually staked
+    let sheetState = { meta: null, data: null, files: [], box: null };
+    function buildBetSheet(meta, container, predictionsData, imageFiles) {
       const box = document.createElement('div'); box.className = 'bet-sheet';
-      const title = document.createElement('div'); title.className = 'bet-sheet-title';
-      const sheet = (meta && meta.sheet) || [];
-      title.textContent = sheet.length ? `Bet sheet: ${sheet.length} staked bet${sheet.length === 1 ? '' : 's'}` : 'Bet sheet';
-      box.appendChild(title);
-      if (!sheet.length) {
-        const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'No bets reach the BET tier today.'; box.appendChild(e);
-      } else {
-        const t = document.createElement('table');
-        const th = document.createElement('thead'); th.innerHTML = '<tr><th>Game</th><th>Bet</th><th class="num">Odds</th><th class="num">Model</th><th class="num">Edge</th><th class="num">Stake</th></tr>'; t.appendChild(th);
-        const tb = document.createElement('tbody');
-        sheet.forEach(b => {
-          const tr = document.createElement('tr');
-          [[b.game, false], [`${b.market}: ${b.bet}`, false], [(b.odds > 0 ? '+' : '') + b.odds, true], [`${(100 * b.probability).toFixed(1)}%`, true], [`${b.edge >= 0 ? '+' : ''}${(100 * b.edge).toFixed(1)}%`, true], [`${(100 * b.bankroll_fraction).toFixed(1)}% of bankroll`, true]]
-            .forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
-          tb.appendChild(tr);
-        });
-        t.appendChild(tb); box.appendChild(t);
-      }
+      sheetState = { meta: meta, data: predictionsData, files: imageFiles, box: box };
       container.parentNode.insertBefore(box, container);
+      renderSheet('all');
+    }
+    function renderSheet(key) {
+      const { meta, data, files, box } = sheetState;
+      if (!box) return;
+      const staked = {};
+      ((meta && meta.sheet) || []).forEach(b => { staked[`${b.game}|${b.market}|${b.bet}`] = b; });
+      const keepRec = r => key === 'BET' ? r.rec === 'BET' : key === 'LEAN' ? (r.rec === 'BET' || r.rec === 'LEAN') : (r.rec === 'BET' || r.rec === 'LEAN');
+      const rows = [];
+      files.forEach(f => {
+        const info = data[f]; if (!info || !info.Markets) return;
+        const game = `${info["Home Team"]} vs ${info["Away Team"]}`;
+        const hits = info.Markets.filter(keepRec);
+        if (hits.length) hits.forEach(r => rows.push({ game, r }));
+        else if (key === 'all') rows.push({ game, r: { market: '—', bet: 'no bet signal', odds: null, edge: null, rec: 'PASS' } });
+      });
+      const nStaked = rows.filter(x => staked[`${x.game}|${x.r.market}|${x.r.bet}`]).length;
+      box.replaceChildren();
+      const title = document.createElement('div'); title.className = 'bet-sheet-title';
+      title.textContent = key === 'BET' ? `BET signals: ${rows.length} (${nStaked} staked)` : key === 'LEAN' ? `BET + LEAN signals: ${rows.length} (${nStaked} staked)` : `All games: ${rows.length} rows (${nStaked} staked)`;
+      box.appendChild(title);
+      if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
+      const t = document.createElement('table');
+      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Game</th><th>Bet</th><th class="num">Odds</th><th class="num">Edge</th><th>Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
+      const tb = document.createElement('tbody');
+      rows.forEach(({ game, r }) => {
+        const b = staked[`${game}|${r.market}|${r.bet}`];
+        const tr = document.createElement('tr'); if (b) tr.className = 'selected';
+        const odds = (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds;
+        const edge = (r.edge === null || r.edge === undefined) ? '—' : `${r.edge >= 0 ? '+' : ''}${(100 * r.edge).toFixed(1)}%`;
+        [[game, false], [r.market === '—' ? r.bet : `${r.market}: ${r.bet}`, false], [odds, true], [edge, true]]
+          .forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
+        const rec = document.createElement('td'); const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = r.rec; rec.appendChild(sp); tr.appendChild(rec);
+        const st = document.createElement('td'); st.className = 'num'; st.textContent = b ? `${(100 * b.bankroll_fraction).toFixed(1)}% of bankroll` : '—'; tr.appendChild(st);
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); box.appendChild(t);
     }
     
     // ---- filter row: show all games, or only the ones with a BET / LEAN signal in any market
@@ -612,6 +635,7 @@
         b.addEventListener('click', () => {
           row.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === b));
           apply(key);
+          renderSheet(key);
         });
         row.appendChild(b);
       });
