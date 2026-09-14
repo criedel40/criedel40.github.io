@@ -84,6 +84,8 @@
     .filters{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:0 0 1rem}
     .filters button{border:1px solid #cfd6e0;background:#fff;color:#333;padding:.35rem .8rem;border-radius:999px;font-size:.85rem;cursor:pointer}
     .filters button.active{background:#357edd;color:#fff;border-color:#357edd}
+    .filters-lead{color:#555;font-weight:700;align-self:center}
+    .filters-status{text-align:center;color:#666;font-size:.9rem;margin:-.5rem 0 1rem}
     .signal-strip{display:flex;justify-content:center;align-items:center;padding:.6rem .75rem;background:#f7f9fc;border-bottom:1px solid #e5e9f0;font-size:1.05rem;color:#0b0b0b}
     .strip-title{font-weight:700;text-align:center}
     /* every table and chart label in bold */
@@ -595,19 +597,34 @@
     // ---- filter row: show all games, or only the ones with a BET / LEAN signal in any market
     function buildFilters(container) {
       const row = document.createElement('div'); row.className = 'filters';
-      const defs = [['all', 'All games'], ['BET', 'BET only'], ['LEAN', 'BET + LEAN']];
+      const lead = document.createElement('span'); lead.className = 'filters-lead'; lead.textContent = 'Show games:'; row.appendChild(lead);
+      const status = document.createElement('div'); status.className = 'filters-status';
+      const keep = (key, t) => key === 'BET' ? t === 'BET' : key === 'LEAN' ? (t === 'BET' || t === 'LEAN') : true;
+      const defs = [['all', 'All'], ['BET', 'BET'], ['LEAN', 'BET + LEAN']];
+      const apply = (key) => {
+        const cards = Array.from(container.querySelectorAll('.game-card'));
+        let shown = 0;
+        cards.forEach(card => { const on = keep(key, card.dataset.tier); card.classList.toggle('hidden', !on); if (on) shown++; });
+        status.textContent = shown === cards.length ? `Showing all ${cards.length} games` : `Showing ${shown} of ${cards.length} games (the rest are hidden)`;
+      };
       defs.forEach(([key, label]) => {
-        const b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.dataset.filter = key; if (key === 'all') b.className = 'active';
+        const b = document.createElement('button'); b.type = 'button'; b.dataset.filter = key; if (key === 'all') b.className = 'active';
         b.addEventListener('click', () => {
           row.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === b));
-          container.querySelectorAll('.game-card').forEach(card => {
-            const t = card.dataset.tier;
-            card.classList.toggle('hidden', key === 'BET' ? t !== 'BET' : key === 'LEAN' ? !(t === 'BET' || t === 'LEAN') : false);
-          });
+          apply(key);
         });
         row.appendChild(b);
       });
       container.parentNode.insertBefore(row, container);
+      container.parentNode.insertBefore(status, container);
+      // counts on the buttons (cards exist by the time the grid is built; fill them in once it is)
+      const fill = () => {
+        const cards = Array.from(container.querySelectorAll('.game-card'));
+        if (!cards.length) { setTimeout(fill, 100); return; }
+        defs.forEach(([key, label]) => { const b = row.querySelector(`button[data-filter='${key}']`); b.textContent = `${label} (${cards.filter(c => keep(key, c.dataset.tier)).length})`; });
+        apply('all');
+      };
+      fill();
     }
     
     // ---- hover readout for the charts: instant, follows the pointer, works with a tap on touch screens
