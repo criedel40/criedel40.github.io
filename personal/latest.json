@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20260304,
-  "generated": "2026-09-14T00:55:03Z",
+  "generated": "2026-09-14T01:06:07Z",
   "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_5_tm_ens5)",
   "members": 10000,
   "rows": [
@@ -13,6 +13,167 @@
    "Markets": "one row per bettable side: model probability, break-even (price-implied), edge, recommendation from the game-day sheet",
    "Histogram": "integer score bins with member counts",
    "Sensitivity": "correlation of each perturbed input with the team's score across the members"
+  },
+  "sheet": [
+   {
+    "market": "Spread",
+    "game": "Cal St. Fullerton vs UC San Diego",
+    "bet": "Cal St. Fullerton +3.5",
+    "odds": -108,
+    "probability": 0.579,
+    "edge": 0.083,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "New Mexico vs Colorado St.",
+    "bet": "Colorado St. ML",
+    "odds": 320,
+    "probability": 0.281,
+    "edge": 0.052,
+    "tier": "BET",
+    "bankroll_fraction": 0.011
+   },
+   {
+    "market": "Moneyline",
+    "game": "FIU vs Middle Tennessee",
+    "bet": "Middle Tennessee ML",
+    "odds": 124,
+    "probability": 0.534,
+    "edge": 0.106,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Valparaiso vs Indiana St.",
+    "bet": "Valparaiso ML",
+    "odds": -148,
+    "probability": 0.835,
+    "edge": 0.263,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Iona vs Sacred Heart",
+    "bet": "Iona ML",
+    "odds": -170,
+    "probability": 0.698,
+    "edge": 0.097,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Iowa vs Michigan",
+    "bet": "Iowa ML",
+    "odds": 320,
+    "probability": 0.309,
+    "edge": 0.08,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Liberty vs Louisiana Tech",
+    "bet": "Liberty ML",
+    "odds": -455,
+    "probability": 0.857,
+    "edge": 0.071,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Loyola Marymount vs San Diego",
+    "bet": "Loyola Marymount ML",
+    "odds": -245,
+    "probability": 0.738,
+    "edge": 0.058,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Memphis vs South Florida",
+    "bet": "South Florida ML",
+    "odds": -285,
+    "probability": 0.77,
+    "edge": 0.06,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Ohio vs Miami OH",
+    "bet": "Miami OH ML",
+    "odds": -285,
+    "probability": 0.768,
+    "edge": 0.058,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Portland vs Pepperdine",
+    "bet": "Portland ML",
+    "odds": -135,
+    "probability": 0.632,
+    "edge": 0.081,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   },
+   {
+    "market": "Moneyline",
+    "game": "Tarleton St. vs UT Arlington",
+    "bet": "Tarleton St. ML",
+    "odds": -130,
+    "probability": 0.6,
+    "edge": 0.057,
+    "tier": "BET",
+    "bankroll_fraction": 0.0157
+   },
+   {
+    "market": "Moneyline",
+    "game": "Temple vs Tulane",
+    "bet": "Temple ML",
+    "odds": -205,
+    "probability": 0.743,
+    "edge": 0.098,
+    "tier": "BET",
+    "bankroll_fraction": 0.0158
+   }
+  ],
+  "tier_rules": {
+   "spread": {
+    "BET": "P(cover) >= 0.55",
+    "LEAN": "P(cover) >= break-even"
+   },
+   "moneyline": {
+    "BET": "edge >= 0.05 and odds > -500",
+    "LEAN": "edge >= 0.02"
+   },
+   "total": {
+    "BET": "edge >= 0.03 (staked only with --include-totals)",
+    "LEAN": "edge >= 0.02"
+   }
+  },
+  "tier_counts": {
+   "Spread": {
+    "PASS": 18,
+    "BET": 4,
+    "LEAN": 9
+   },
+   "Moneyline": {
+    "BET": 12,
+    "LEAN": 4,
+    "PASS": 2
+   },
+   "Total": {
+    "PASS": 31
+   }
   }
  },
  "scoreprediction_Cal+Baptist_Abilene+Christian.jpg": {
@@ -40,6 +201,24 @@
     "Lean": 0.16,
     "CoverProbability": 0.517,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Abilene Christian",
+     "Line": 8.5,
+     "Lean": 0.16,
+     "Probability": 0.517,
+     "Edge": 0.034,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 135.5,
+     "Lean": 0.57,
+     "Probability": 0.501,
+     "Edge": 0.012,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -83,23 +262,23 @@
     "market": "Total",
     "bet": "Over 135.5",
     "odds": -115,
-    "model": null,
+    "model": 0.499,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.036,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 134.9; totals are not bet (no edge vs the market)"
+    "note": "model total 134.9"
    },
    {
     "market": "Total",
     "bet": "Under 135.5",
     "odds": -105,
-    "model": null,
+    "model": 0.501,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.011,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 134.9; totals are not bet (no edge vs the market)"
+    "note": "model total 134.9"
    }
   ],
   "Histogram": {
@@ -336,6 +515,24 @@
     "Lean": 0.29,
     "CoverProbability": 0.485,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "UC Irvine",
+     "Line": -8.5,
+     "Lean": 0.29,
+     "Probability": 0.485,
+     "Edge": -0.02,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 154.5,
+     "Lean": 1.89,
+     "Probability": 0.503,
+     "Edge": 0.014,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -379,23 +576,23 @@
     "market": "Total",
     "bet": "Over 154.5",
     "odds": -115,
-    "model": null,
+    "model": 0.497,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.038,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 152.6; totals are not bet (no edge vs the market)"
+    "note": "model total 152.6"
    },
    {
     "market": "Total",
     "bet": "Under 154.5",
     "odds": -105,
-    "model": null,
+    "model": 0.503,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.009,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 152.6; totals are not bet (no edge vs the market)"
+    "note": "model total 152.6"
    }
   ],
   "Histogram": {
@@ -660,6 +857,24 @@
     "Lean": 0.19,
     "CoverProbability": 0.517,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Cal St. Bakersfield",
+     "Line": 8.5,
+     "Lean": 0.19,
+     "Probability": 0.517,
+     "Edge": 0.013,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 165.5,
+     "Lean": 4.56,
+     "Probability": 0.508,
+     "Edge": 0.012,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -703,23 +918,23 @@
     "market": "Total",
     "bet": "Over 165.5",
     "odds": -112,
-    "model": null,
+    "model": 0.492,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.036,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 160.9; totals are not bet (no edge vs the market)"
+    "note": "model total 160.9"
    },
    {
     "market": "Total",
     "bet": "Under 165.5",
     "odds": -108,
-    "model": null,
+    "model": 0.508,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.011,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 160.9; totals are not bet (no edge vs the market)"
+    "note": "model total 160.9"
    }
   ],
   "Histogram": {
@@ -960,6 +1175,24 @@
     "Lean": 3.71,
     "CoverProbability": 0.579,
     "Tier": "BET"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Cal St. Fullerton",
+     "Line": 3.5,
+     "Lean": 3.71,
+     "Probability": 0.579,
+     "Edge": 0.083,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 157.5,
+     "Lean": 1.92,
+     "Probability": 0.504,
+     "Edge": -0.001,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -1003,23 +1236,23 @@
     "market": "Total",
     "bet": "Over 157.5",
     "odds": -108,
-    "model": null,
+    "model": 0.496,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.023,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 155.6; totals are not bet (no edge vs the market)"
+    "note": "model total 155.6"
    },
    {
     "market": "Total",
     "bet": "Under 157.5",
     "odds": -112,
-    "model": null,
+    "model": 0.504,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.024,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 155.6; totals are not bet (no edge vs the market)"
+    "note": "model total 155.6"
    }
   ],
   "Histogram": {
@@ -1264,6 +1497,31 @@
     "Lean": 0.93,
     "CoverProbability": 0.53,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Colorado St.",
+     "Line": 8.5,
+     "Lean": 0.93,
+     "Probability": 0.53,
+     "Edge": 0.026,
+     "Tier": "LEAN"
+    },
+    "Moneyline": {
+     "Side": "Colorado St.",
+     "Odds": 320,
+     "Probability": 0.281,
+     "Edge": 0.052,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 150.5,
+     "Lean": 3.83,
+     "Probability": 0.507,
+     "Edge": 0.007,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -1311,23 +1569,23 @@
     "market": "Total",
     "bet": "Over 150.5",
     "odds": -110,
-    "model": null,
+    "model": 0.493,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.031,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 146.7; totals are not bet (no edge vs the market)"
+    "note": "model total 146.7"
    },
    {
     "market": "Total",
     "bet": "Under 150.5",
     "odds": -110,
-    "model": null,
+    "model": 0.507,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.017,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 146.7; totals are not bet (no edge vs the market)"
+    "note": "model total 146.7"
    },
    {
     "market": "Moneyline",
@@ -1337,7 +1595,8 @@
     "breakeven": 0.804,
     "edge": -0.085,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -1347,7 +1606,8 @@
     "breakeven": 0.238,
     "edge": 0.043,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    }
   ],
   "Histogram": {
@@ -1592,6 +1852,24 @@
     "Lean": 0.29,
     "CoverProbability": 0.485,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Sam Houston St.",
+     "Line": -6.5,
+     "Lean": 0.29,
+     "Probability": 0.485,
+     "Edge": -0.011,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 147.5,
+     "Lean": 0.12,
+     "Probability": 0.5,
+     "Edge": 0.005,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -1635,23 +1913,23 @@
     "market": "Total",
     "bet": "Over 147.5",
     "odds": -112,
-    "model": null,
+    "model": 0.5,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.028,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 147.4; totals are not bet (no edge vs the market)"
+    "note": "model total 147.4"
    },
    {
     "market": "Total",
     "bet": "Under 147.5",
     "odds": -108,
-    "model": null,
+    "model": 0.5,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.019,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 147.4; totals are not bet (no edge vs the market)"
+    "note": "model total 147.4"
    }
   ],
   "Histogram": {
@@ -1884,6 +2162,31 @@
     "Lean": 1.08,
     "CoverProbability": 0.499,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Southern Illinois",
+     "Line": -4.5,
+     "Lean": 1.08,
+     "Probability": 0.499,
+     "Edge": -0.006,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "Southern Illinois",
+     "Odds": -225,
+     "Probability": 0.694,
+     "Edge": 0.031,
+     "Tier": "LEAN"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 136.5,
+     "Lean": 9.02,
+     "Probability": 0.516,
+     "Edge": 0.005,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -1931,23 +2234,23 @@
     "market": "Total",
     "bet": "Over 136.5",
     "odds": -115,
-    "model": null,
+    "model": 0.516,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.019,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 145.5; totals are not bet (no edge vs the market)"
+    "note": "model total 145.5"
    },
    {
     "market": "Total",
     "bet": "Under 136.5",
     "odds": -105,
-    "model": null,
+    "model": 0.484,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.028,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 145.5; totals are not bet (no edge vs the market)"
+    "note": "model total 145.5"
    },
    {
     "market": "Moneyline",
@@ -1956,8 +2259,9 @@
     "model": 0.694,
     "breakeven": 0.692,
     "edge": 0.002,
-    "rec": "BET",
-    "selected": true
+    "rec": "LEAN",
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -1967,7 +2271,8 @@
     "breakeven": 0.351,
     "edge": -0.045,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -2208,6 +2513,24 @@
     "Lean": 0.95,
     "CoverProbability": 0.496,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Tulsa",
+     "Line": -8.5,
+     "Lean": 0.95,
+     "Probability": 0.496,
+     "Edge": -0.014,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 155.5,
+     "Lean": 2.43,
+     "Probability": 0.504,
+     "Edge": 0.004,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -2251,23 +2574,23 @@
     "market": "Total",
     "bet": "Over 155.5",
     "odds": -110,
-    "model": null,
+    "model": 0.496,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.028,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 153.1; totals are not bet (no edge vs the market)"
+    "note": "model total 153.1"
    },
    {
     "market": "Total",
     "bet": "Under 155.5",
     "odds": -110,
-    "model": null,
+    "model": 0.504,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.02,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 153.1; totals are not bet (no edge vs the market)"
+    "note": "model total 153.1"
    }
   ],
   "Histogram": {
@@ -2510,6 +2833,24 @@
     "Lean": 1.44,
     "CoverProbability": 0.505,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Northern Iowa",
+     "Line": -14.5,
+     "Lean": 1.44,
+     "Probability": 0.505,
+     "Edge": 0.01,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 124.5,
+     "Lean": 7.42,
+     "Probability": 0.513,
+     "Edge": -0.004,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -2553,23 +2894,23 @@
     "market": "Total",
     "bet": "Over 124.5",
     "odds": -118,
-    "model": null,
+    "model": 0.513,
     "breakeven": 0.541,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.028,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 131.9; totals are not bet (no edge vs the market)"
+    "note": "model total 131.9"
    },
    {
     "market": "Total",
     "bet": "Under 124.5",
     "odds": -102,
-    "model": null,
+    "model": 0.487,
     "breakeven": 0.505,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.018,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 131.9; totals are not bet (no edge vs the market)"
+    "note": "model total 131.9"
    }
   ],
   "Histogram": {
@@ -2824,6 +3165,31 @@
     "Lean": 2.84,
     "CoverProbability": 0.564,
     "Tier": "BET"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Middle Tennessee",
+     "Line": 2.5,
+     "Lean": 2.84,
+     "Probability": 0.564,
+     "Edge": 0.053,
+     "Tier": "BET"
+    },
+    "Moneyline": {
+     "Side": "Middle Tennessee",
+     "Odds": 124,
+     "Probability": 0.534,
+     "Edge": 0.106,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 152.5,
+     "Lean": 0.69,
+     "Probability": 0.501,
+     "Edge": 0.012,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -2865,29 +3231,29 @@
     "breakeven": 0.535,
     "edge": 0.029,
     "rec": "BET",
-    "selected": true
+    "selected": false
    },
    {
     "market": "Total",
     "bet": "Over 152.5",
     "odds": -115,
-    "model": null,
+    "model": 0.499,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.036,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 151.8; totals are not bet (no edge vs the market)"
+    "note": "model total 151.8"
    },
    {
     "market": "Total",
     "bet": "Under 152.5",
     "odds": -105,
-    "model": null,
+    "model": 0.501,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.011,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 151.8; totals are not bet (no edge vs the market)"
+    "note": "model total 151.8"
    },
    {
     "market": "Moneyline",
@@ -2897,7 +3263,8 @@
     "breakeven": 0.597,
     "edge": -0.131,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -2907,7 +3274,8 @@
     "breakeven": 0.446,
     "edge": 0.088,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    }
   ],
   "Histogram": {
@@ -3120,6 +3488,31 @@
     "Lean": 3.14,
     "CoverProbability": 0.535,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Fairfield",
+     "Line": -5.5,
+     "Lean": 3.14,
+     "Probability": 0.535,
+     "Edge": 0.025,
+     "Tier": "LEAN"
+    },
+    "Moneyline": {
+     "Side": "Fairfield",
+     "Odds": -275,
+     "Probability": 0.713,
+     "Edge": 0.012,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 149.5,
+     "Lean": 2.78,
+     "Probability": 0.505,
+     "Edge": -0.006,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -3167,23 +3560,23 @@
     "market": "Total",
     "bet": "Over 149.5",
     "odds": -115,
-    "model": null,
+    "model": 0.505,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.03,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 152.3; totals are not bet (no edge vs the market)"
+    "note": "model total 152.3"
    },
    {
     "market": "Total",
     "bet": "Under 149.5",
     "odds": -105,
-    "model": null,
+    "model": 0.495,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.017,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 152.3; totals are not bet (no edge vs the market)"
+    "note": "model total 152.3"
    },
    {
     "market": "Moneyline",
@@ -3193,7 +3586,8 @@
     "breakeven": 0.733,
     "edge": -0.02,
     "rec": "PASS",
-    "selected": false
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -3203,7 +3597,8 @@
     "breakeven": 0.312,
     "edge": -0.025,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -3466,6 +3861,24 @@
     "Lean": 1.44,
     "CoverProbability": 0.539,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "UC Riverside",
+     "Line": 11.5,
+     "Lean": 1.44,
+     "Probability": 0.539,
+     "Edge": 0.029,
+     "Tier": "LEAN"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 148.5,
+     "Lean": 0.51,
+     "Probability": 0.501,
+     "Edge": 0.005,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -3509,23 +3922,23 @@
     "market": "Total",
     "bet": "Over 148.5",
     "odds": -112,
-    "model": null,
+    "model": 0.499,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.029,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 148.0; totals are not bet (no edge vs the market)"
+    "note": "model total 148.0"
    },
    {
     "market": "Total",
     "bet": "Under 148.5",
     "odds": -108,
-    "model": null,
+    "model": 0.501,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.018,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 148.0; totals are not bet (no edge vs the market)"
+    "note": "model total 148.0"
    }
   ],
   "Histogram": {
@@ -3778,6 +4191,31 @@
     "Lean": 6.21,
     "CoverProbability": 0.589,
     "Tier": "BET"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Valparaiso",
+     "Line": -2.5,
+     "Lean": 6.21,
+     "Probability": 0.589,
+     "Edge": 0.085,
+     "Tier": "BET"
+    },
+    "Moneyline": {
+     "Side": "Valparaiso",
+     "Odds": -148,
+     "Probability": 0.835,
+     "Edge": 0.263,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 137.5,
+     "Lean": 9.77,
+     "Probability": 0.517,
+     "Edge": 0.017,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -3809,7 +4247,7 @@
     "breakeven": 0.528,
     "edge": 0.061,
     "rec": "BET",
-    "selected": true
+    "selected": false
    },
    {
     "market": "Spread",
@@ -3825,23 +4263,23 @@
     "market": "Total",
     "bet": "Over 137.5",
     "odds": -110,
-    "model": null,
+    "model": 0.517,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.007,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 147.3; totals are not bet (no edge vs the market)"
+    "note": "model total 147.3"
    },
    {
     "market": "Total",
     "bet": "Under 137.5",
     "odds": -110,
-    "model": null,
+    "model": 0.483,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.041,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 147.3; totals are not bet (no edge vs the market)"
+    "note": "model total 147.3"
    },
    {
     "market": "Moneyline",
@@ -3851,7 +4289,8 @@
     "breakeven": 0.597,
     "edge": 0.238,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -3861,7 +4300,8 @@
     "breakeven": 0.446,
     "edge": -0.281,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -4100,6 +4540,31 @@
     "Lean": 2.95,
     "CoverProbability": 0.532,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Iona",
+     "Line": -2.5,
+     "Lean": 2.95,
+     "Probability": 0.532,
+     "Edge": 0.013,
+     "Tier": "LEAN"
+    },
+    "Moneyline": {
+     "Side": "Iona",
+     "Odds": -170,
+     "Probability": 0.698,
+     "Edge": 0.097,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 148.5,
+     "Lean": 2.59,
+     "Probability": 0.505,
+     "Edge": 0.005,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -4147,23 +4612,23 @@
     "market": "Total",
     "bet": "Over 148.5",
     "odds": -110,
-    "model": null,
+    "model": 0.505,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.019,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 151.1; totals are not bet (no edge vs the market)"
+    "note": "model total 151.1"
    },
    {
     "market": "Total",
     "bet": "Under 148.5",
     "odds": -110,
-    "model": null,
+    "model": 0.495,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.029,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 151.1; totals are not bet (no edge vs the market)"
+    "note": "model total 151.1"
    },
    {
     "market": "Moneyline",
@@ -4173,7 +4638,8 @@
     "breakeven": 0.63,
     "edge": 0.068,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -4183,7 +4649,8 @@
     "breakeven": 0.417,
     "edge": -0.115,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -4426,6 +4893,31 @@
     "Lean": 2.89,
     "CoverProbability": 0.565,
     "Tier": "BET"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Iowa",
+     "Line": 8.5,
+     "Lean": 2.89,
+     "Probability": 0.565,
+     "Edge": 0.061,
+     "Tier": "BET"
+    },
+    "Moneyline": {
+     "Side": "Iowa",
+     "Odds": 320,
+     "Probability": 0.309,
+     "Edge": 0.08,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 145.5,
+     "Lean": 4.91,
+     "Probability": 0.509,
+     "Edge": 0.009,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -4457,7 +4949,7 @@
     "breakeven": 0.528,
     "edge": 0.037,
     "rec": "BET",
-    "selected": true
+    "selected": false
    },
    {
     "market": "Spread",
@@ -4473,23 +4965,23 @@
     "market": "Total",
     "bet": "Over 145.5",
     "odds": -110,
-    "model": null,
+    "model": 0.509,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.015,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 150.4; totals are not bet (no edge vs the market)"
+    "note": "model total 150.4"
    },
    {
     "market": "Total",
     "bet": "Under 145.5",
     "odds": -110,
-    "model": null,
+    "model": 0.491,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.033,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 150.4; totals are not bet (no edge vs the market)"
+    "note": "model total 150.4"
    },
    {
     "market": "Moneyline",
@@ -4499,7 +4991,8 @@
     "breakeven": 0.238,
     "edge": 0.071,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -4509,7 +5002,8 @@
     "breakeven": 0.804,
     "edge": -0.113,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -4744,6 +5238,24 @@
     "Lean": 0.14,
     "CoverProbability": 0.482,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "New Mexico St.",
+     "Line": -4.5,
+     "Lean": 0.14,
+     "Probability": 0.482,
+     "Edge": -0.029,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 142.5,
+     "Lean": 0.45,
+     "Probability": 0.501,
+     "Edge": 0.001,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -4787,23 +5299,23 @@
     "market": "Total",
     "bet": "Over 142.5",
     "odds": -110,
-    "model": null,
+    "model": 0.499,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.025,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 142.0; totals are not bet (no edge vs the market)"
+    "note": "model total 142.0"
    },
    {
     "market": "Total",
     "bet": "Under 142.5",
     "odds": -110,
-    "model": null,
+    "model": 0.501,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.023,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 142.0; totals are not bet (no edge vs the market)"
+    "note": "model total 142.0"
    }
   ],
   "Histogram": {
@@ -5030,6 +5542,24 @@
     "Lean": 3.46,
     "CoverProbability": 0.541,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Kennesaw St.",
+     "Line": -2.5,
+     "Lean": 3.46,
+     "Probability": 0.541,
+     "Edge": 0.041,
+     "Tier": "LEAN"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 149.5,
+     "Lean": 0.23,
+     "Probability": 0.501,
+     "Edge": 0.001,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -5073,23 +5603,23 @@
     "market": "Total",
     "bet": "Over 149.5",
     "odds": -110,
-    "model": null,
+    "model": 0.499,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.025,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 149.3; totals are not bet (no edge vs the market)"
+    "note": "model total 149.3"
    },
    {
     "market": "Total",
     "bet": "Under 149.5",
     "odds": -110,
-    "model": null,
+    "model": 0.501,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.023,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 149.3; totals are not bet (no edge vs the market)"
+    "note": "model total 149.3"
    }
   ],
   "Histogram": {
@@ -5328,6 +5858,31 @@
     "Lean": 2.4,
     "CoverProbability": 0.522,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Liberty",
+     "Line": -8.5,
+     "Lean": 2.4,
+     "Probability": 0.522,
+     "Edge": 0.027,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "Liberty",
+     "Odds": -455,
+     "Probability": 0.857,
+     "Edge": 0.071,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 138.5,
+     "Lean": 2.07,
+     "Probability": 0.504,
+     "Edge": 0.004,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -5375,23 +5930,23 @@
     "market": "Total",
     "bet": "Over 138.5",
     "odds": -110,
-    "model": null,
+    "model": 0.496,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.028,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 136.4; totals are not bet (no edge vs the market)"
+    "note": "model total 136.4"
    },
    {
     "market": "Total",
     "bet": "Under 138.5",
     "odds": -110,
-    "model": null,
+    "model": 0.504,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.02,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 136.4; totals are not bet (no edge vs the market)"
+    "note": "model total 136.4"
    },
    {
     "market": "Moneyline",
@@ -5401,7 +5956,8 @@
     "breakeven": 0.82,
     "edge": 0.037,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -5411,7 +5967,8 @@
     "breakeven": 0.222,
     "edge": -0.079,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -5648,6 +6205,31 @@
     "Lean": 1.25,
     "CoverProbability": 0.536,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Little Rock",
+     "Line": 5.5,
+     "Lean": 1.25,
+     "Probability": 0.536,
+     "Edge": 0.036,
+     "Tier": "LEAN"
+    },
+    "Moneyline": {
+     "Side": "Little Rock",
+     "Odds": 164,
+     "Probability": 0.39,
+     "Edge": 0.027,
+     "Tier": "LEAN"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 148.5,
+     "Lean": 1.35,
+     "Probability": 0.503,
+     "Edge": 0.007,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -5695,23 +6277,23 @@
     "market": "Total",
     "bet": "Over 148.5",
     "odds": -112,
-    "model": null,
+    "model": 0.497,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.031,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 147.2; totals are not bet (no edge vs the market)"
+    "note": "model total 147.2"
    },
    {
     "market": "Total",
     "bet": "Under 148.5",
     "odds": -108,
-    "model": null,
+    "model": 0.503,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.016,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 147.2; totals are not bet (no edge vs the market)"
+    "note": "model total 147.2"
    },
    {
     "market": "Moneyline",
@@ -5721,7 +6303,8 @@
     "breakeven": 0.664,
     "edge": -0.054,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -5730,8 +6313,9 @@
     "model": 0.39,
     "breakeven": 0.379,
     "edge": 0.011,
-    "rec": "BET",
-    "selected": true
+    "rec": "LEAN",
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -5966,6 +6550,24 @@
     "Lean": 1.27,
     "CoverProbability": 0.502,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "UC Davis",
+     "Line": -1.5,
+     "Lean": 1.27,
+     "Probability": 0.502,
+     "Edge": 0.002,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 150.5,
+     "Lean": 3.7,
+     "Probability": 0.507,
+     "Edge": -0.004,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -6009,23 +6611,23 @@
     "market": "Total",
     "bet": "Over 150.5",
     "odds": -105,
-    "model": null,
+    "model": 0.493,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.019,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 146.8; totals are not bet (no edge vs the market)"
+    "note": "model total 146.8"
    },
    {
     "market": "Total",
     "bet": "Under 150.5",
     "odds": -115,
-    "model": null,
+    "model": 0.507,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.028,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 146.8; totals are not bet (no edge vs the market)"
+    "note": "model total 146.8"
    }
   ],
   "Histogram": {
@@ -6268,6 +6870,31 @@
     "Lean": 1.41,
     "CoverProbability": 0.505,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Loyola Marymount",
+     "Line": -5.5,
+     "Lean": 1.41,
+     "Probability": 0.505,
+     "Edge": 0.009,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "Loyola Marymount",
+     "Odds": -245,
+     "Probability": 0.738,
+     "Edge": 0.058,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 147.5,
+     "Lean": 0.6,
+     "Probability": 0.501,
+     "Edge": -0.003,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -6315,23 +6942,23 @@
     "market": "Total",
     "bet": "Over 147.5",
     "odds": -108,
-    "model": null,
+    "model": 0.499,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.02,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 146.9; totals are not bet (no edge vs the market)"
+    "note": "model total 146.9"
    },
    {
     "market": "Total",
     "bet": "Under 147.5",
     "odds": -112,
-    "model": null,
+    "model": 0.501,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.027,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 146.9; totals are not bet (no edge vs the market)"
+    "note": "model total 146.9"
    },
    {
     "market": "Moneyline",
@@ -6341,7 +6968,8 @@
     "breakeven": 0.71,
     "edge": 0.028,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -6351,7 +6979,8 @@
     "breakeven": 0.333,
     "edge": -0.071,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -6590,6 +7219,31 @@
     "Lean": 0.22,
     "CoverProbability": 0.483,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "South Florida",
+     "Line": -6.5,
+     "Lean": 0.22,
+     "Probability": 0.483,
+     "Edge": -0.017,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "South Florida",
+     "Odds": -285,
+     "Probability": 0.77,
+     "Edge": 0.06,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 159.5,
+     "Lean": 3.95,
+     "Probability": 0.507,
+     "Edge": 0.018,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -6637,23 +7291,23 @@
     "market": "Total",
     "bet": "Over 159.5",
     "odds": -115,
-    "model": null,
+    "model": 0.493,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.042,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 155.6; totals are not bet (no edge vs the market)"
+    "note": "model total 155.6"
    },
    {
     "market": "Total",
     "bet": "Under 159.5",
     "odds": -105,
-    "model": null,
+    "model": 0.507,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.005,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 155.6; totals are not bet (no edge vs the market)"
+    "note": "model total 155.6"
    },
    {
     "market": "Moneyline",
@@ -6663,7 +7317,8 @@
     "breakeven": 0.303,
     "edge": -0.073,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -6673,7 +7328,8 @@
     "breakeven": 0.74,
     "edge": 0.03,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    }
   ],
   "Histogram": {
@@ -6908,6 +7564,31 @@
     "Lean": 0.7,
     "CoverProbability": 0.492,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Miami OH",
+     "Line": -5.5,
+     "Lean": 0.7,
+     "Probability": 0.492,
+     "Edge": -0.008,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "Miami OH",
+     "Odds": -285,
+     "Probability": 0.768,
+     "Edge": 0.058,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 158.5,
+     "Lean": 0.4,
+     "Probability": 0.501,
+     "Edge": 0.001,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -6955,23 +7636,23 @@
     "market": "Total",
     "bet": "Over 158.5",
     "odds": -110,
-    "model": null,
+    "model": 0.499,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.025,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 158.1; totals are not bet (no edge vs the market)"
+    "note": "model total 158.1"
    },
    {
     "market": "Total",
     "bet": "Under 158.5",
     "odds": -110,
-    "model": null,
+    "model": 0.501,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.023,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 158.1; totals are not bet (no edge vs the market)"
+    "note": "model total 158.1"
    },
    {
     "market": "Moneyline",
@@ -6981,7 +7662,8 @@
     "breakeven": 0.303,
     "edge": -0.071,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -6991,7 +7673,8 @@
     "breakeven": 0.74,
     "edge": 0.028,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    }
   ],
   "Histogram": {
@@ -7224,6 +7907,31 @@
     "Lean": 2.51,
     "CoverProbability": 0.524,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Michigan St.",
+     "Line": -18.5,
+     "Lean": 2.51,
+     "Probability": 0.524,
+     "Edge": 0.029,
+     "Tier": "LEAN"
+    },
+    "Moneyline": {
+     "Side": "Michigan St.",
+     "Odds": -6500,
+     "Probability": 0.976,
+     "Edge": 0.022,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 141.5,
+     "Lean": 1.87,
+     "Probability": 0.503,
+     "Edge": 0.003,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -7271,23 +7979,23 @@
     "market": "Total",
     "bet": "Over 141.5",
     "odds": -110,
-    "model": null,
+    "model": 0.503,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.021,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 143.4; totals are not bet (no edge vs the market)"
+    "note": "model total 143.4"
    },
    {
     "market": "Total",
     "bet": "Under 141.5",
     "odds": -110,
-    "model": null,
+    "model": 0.497,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.027,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 143.4; totals are not bet (no edge vs the market)"
+    "note": "model total 143.4"
    },
    {
     "market": "Moneyline",
@@ -7297,7 +8005,8 @@
     "breakeven": 0.985,
     "edge": -0.009,
     "rec": "PASS",
-    "selected": false
+    "selected": false,
+    "note": "favourite priced beyond the -500 limit: never bet"
    },
    {
     "market": "Moneyline",
@@ -7307,7 +8016,8 @@
     "breakeven": 0.048,
     "edge": -0.024,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": "favourite priced beyond the -500 limit: never bet"
    }
   ],
   "Histogram": {
@@ -7578,6 +8288,24 @@
     "Lean": 1.32,
     "CoverProbability": 0.537,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Missouri St.",
+     "Line": 1.5,
+     "Lean": 1.32,
+     "Probability": 0.537,
+     "Edge": 0.055,
+     "Tier": "LEAN"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 151.5,
+     "Lean": 2.52,
+     "Probability": 0.505,
+     "Edge": 0.005,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -7621,23 +8349,23 @@
     "market": "Total",
     "bet": "Over 151.5",
     "odds": -110,
-    "model": null,
+    "model": 0.495,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.029,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 149.0; totals are not bet (no edge vs the market)"
+    "note": "model total 149.0"
    },
    {
     "market": "Total",
     "bet": "Under 151.5",
     "odds": -110,
-    "model": null,
+    "model": 0.505,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.019,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 149.0; totals are not bet (no edge vs the market)"
+    "note": "model total 149.0"
    }
   ],
   "Histogram": {
@@ -7858,6 +8586,31 @@
     "Lean": 2.7,
     "CoverProbability": 0.528,
     "Tier": "LEAN"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Portland",
+     "Line": -2.5,
+     "Lean": 2.7,
+     "Probability": 0.528,
+     "Edge": 0.039,
+     "Tier": "LEAN"
+    },
+    "Moneyline": {
+     "Side": "Portland",
+     "Odds": -135,
+     "Probability": 0.632,
+     "Edge": 0.081,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Under",
+     "Line": 152.5,
+     "Lean": 3.84,
+     "Probability": 0.507,
+     "Edge": 0.002,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -7905,23 +8658,23 @@
     "market": "Total",
     "bet": "Over 152.5",
     "odds": -108,
-    "model": null,
+    "model": 0.493,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.026,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 148.7; totals are not bet (no edge vs the market)"
+    "note": "model total 148.7"
    },
    {
     "market": "Total",
     "bet": "Under 152.5",
     "odds": -112,
-    "model": null,
+    "model": 0.507,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.021,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 148.7; totals are not bet (no edge vs the market)"
+    "note": "model total 148.7"
    },
    {
     "market": "Moneyline",
@@ -7931,7 +8684,8 @@
     "breakeven": 0.574,
     "edge": 0.058,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -7941,7 +8695,8 @@
     "breakeven": 0.467,
     "edge": -0.099,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -8198,6 +8953,31 @@
     "Lean": 2.35,
     "CoverProbability": 0.521,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "St. Thomas",
+     "Line": -5.5,
+     "Lean": 2.35,
+     "Probability": 0.521,
+     "Edge": 0.011,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "St. Thomas",
+     "Odds": -290,
+     "Probability": 0.755,
+     "Edge": 0.042,
+     "Tier": "LEAN"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 150.5,
+     "Lean": 1.26,
+     "Probability": 0.502,
+     "Edge": 0.007,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -8245,23 +9025,23 @@
     "market": "Total",
     "bet": "Over 150.5",
     "odds": -108,
-    "model": null,
+    "model": 0.502,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.017,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 151.8; totals are not bet (no edge vs the market)"
+    "note": "model total 151.8"
    },
    {
     "market": "Total",
     "bet": "Under 150.5",
     "odds": -112,
-    "model": null,
+    "model": 0.498,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.03,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 151.8; totals are not bet (no edge vs the market)"
+    "note": "model total 151.8"
    },
    {
     "market": "Moneyline",
@@ -8270,8 +9050,9 @@
     "model": 0.755,
     "breakeven": 0.744,
     "edge": 0.011,
-    "rec": "BET",
-    "selected": true
+    "rec": "LEAN",
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -8281,7 +9062,8 @@
     "breakeven": 0.299,
     "edge": -0.054,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -8526,6 +9308,24 @@
     "Lean": 0.23,
     "CoverProbability": 0.518,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Southern Utah",
+     "Line": 9.5,
+     "Lean": 0.23,
+     "Probability": 0.518,
+     "Edge": 0.022,
+     "Tier": "PASS"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 150.5,
+     "Lean": 2.72,
+     "Probability": 0.505,
+     "Edge": -0.006,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -8569,23 +9369,23 @@
     "market": "Total",
     "bet": "Over 150.5",
     "odds": -115,
-    "model": null,
+    "model": 0.505,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.03,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 153.2; totals are not bet (no edge vs the market)"
+    "note": "model total 153.2"
    },
    {
     "market": "Total",
     "bet": "Under 150.5",
     "odds": -105,
-    "model": null,
+    "model": 0.495,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.017,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 153.2; totals are not bet (no edge vs the market)"
+    "note": "model total 153.2"
    }
   ],
   "Histogram": {
@@ -8850,6 +9650,31 @@
     "Lean": 1.4,
     "CoverProbability": 0.504,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Tarleton St.",
+     "Line": -2.5,
+     "Lean": 1.4,
+     "Probability": 0.504,
+     "Edge": 0.022,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "Tarleton St.",
+     "Odds": -130,
+     "Probability": 0.6,
+     "Edge": 0.057,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 136.5,
+     "Lean": 6.0,
+     "Probability": 0.511,
+     "Edge": 0.006,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -8897,23 +9722,23 @@
     "market": "Total",
     "bet": "Over 136.5",
     "odds": -112,
-    "model": null,
+    "model": 0.511,
     "breakeven": 0.528,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.017,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 142.5; totals are not bet (no edge vs the market)"
+    "note": "model total 142.5"
    },
    {
     "market": "Total",
     "bet": "Under 136.5",
     "odds": -108,
-    "model": null,
+    "model": 0.489,
     "breakeven": 0.519,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.03,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 142.5; totals are not bet (no edge vs the market)"
+    "note": "model total 142.5"
    },
    {
     "market": "Moneyline",
@@ -8923,7 +9748,8 @@
     "breakeven": 0.565,
     "edge": 0.035,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -8933,7 +9759,8 @@
     "breakeven": 0.476,
     "edge": -0.076,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -9162,6 +9989,31 @@
     "Lean": 2.2,
     "CoverProbability": 0.519,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Temple",
+     "Line": -4.5,
+     "Lean": 2.2,
+     "Probability": 0.519,
+     "Edge": 0.019,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "Temple",
+     "Odds": -205,
+     "Probability": 0.743,
+     "Edge": 0.098,
+     "Tier": "BET"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 144.5,
+     "Lean": 1.95,
+     "Probability": 0.504,
+     "Edge": 0.004,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -9209,23 +10061,23 @@
     "market": "Total",
     "bet": "Over 144.5",
     "odds": -110,
-    "model": null,
+    "model": 0.504,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.02,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 146.4; totals are not bet (no edge vs the market)"
+    "note": "model total 146.4"
    },
    {
     "market": "Total",
     "bet": "Under 144.5",
     "odds": -110,
-    "model": null,
+    "model": 0.496,
     "breakeven": 0.524,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.028,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 146.4; totals are not bet (no edge vs the market)"
+    "note": "model total 146.4"
    },
    {
     "market": "Moneyline",
@@ -9235,7 +10087,8 @@
     "breakeven": 0.672,
     "edge": 0.071,
     "rec": "BET",
-    "selected": true
+    "selected": true,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -9245,7 +10098,8 @@
     "breakeven": 0.37,
     "edge": -0.113,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {
@@ -9474,6 +10328,31 @@
     "Lean": 0.54,
     "CoverProbability": 0.489,
     "Tier": "PASS"
+   },
+   "Signals": {
+    "Spread": {
+     "Side": "Washington",
+     "Line": -5.5,
+     "Lean": 0.54,
+     "Probability": 0.489,
+     "Edge": 0.007,
+     "Tier": "PASS"
+    },
+    "Moneyline": {
+     "Side": "Washington",
+     "Odds": -225,
+     "Probability": 0.703,
+     "Edge": 0.04,
+     "Tier": "LEAN"
+    },
+    "Total": {
+     "Side": "Over",
+     "Line": 150.5,
+     "Lean": 2.84,
+     "Probability": 0.505,
+     "Edge": -0.006,
+     "Tier": "PASS"
+    }
    }
   },
   "BART": {
@@ -9521,23 +10400,23 @@
     "market": "Total",
     "bet": "Over 150.5",
     "odds": -115,
-    "model": null,
+    "model": 0.505,
     "breakeven": 0.535,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.03,
+    "rec": "PASS",
     "selected": false,
-    "note": "model total 153.3; totals are not bet (no edge vs the market)"
+    "note": "model total 153.3"
    },
    {
     "market": "Total",
     "bet": "Under 150.5",
     "odds": -105,
-    "model": null,
+    "model": 0.495,
     "breakeven": 0.512,
-    "edge": null,
-    "rec": "OFF",
+    "edge": -0.017,
+    "rec": "\u2014",
     "selected": false,
-    "note": "model total 153.3; totals are not bet (no edge vs the market)"
+    "note": "model total 153.3"
    },
    {
     "market": "Moneyline",
@@ -9546,8 +10425,9 @@
     "model": 0.703,
     "breakeven": 0.692,
     "edge": 0.011,
-    "rec": "BET",
-    "selected": true
+    "rec": "LEAN",
+    "selected": false,
+    "note": null
    },
    {
     "market": "Moneyline",
@@ -9557,7 +10437,8 @@
     "breakeven": 0.351,
     "edge": -0.054,
     "rec": "\u2014",
-    "selected": false
+    "selected": false,
+    "note": null
    }
   ],
   "Histogram": {

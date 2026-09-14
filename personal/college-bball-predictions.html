@@ -68,6 +68,26 @@
     .sens-chart .title{font-weight:700;fill:#0b0b0b;font-size:13px}
     .sens-chart .tick{font-size:10px}
     .sens-chart .slot:hover .bar{fill:#1d5fb0}
+    .chart-tip{position:fixed;z-index:10002;pointer-events:none;background:#0b0b0b;color:#fff;font-size:.8rem;line-height:1.35;padding:.45rem .6rem;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.3);max-width:260px;display:none}
+    .chart-tip strong{font-size:.95rem}
+    .chart-tip .muted{color:#c3c2b7}
+    .score-hist .slot:hover .bar,.score-hist .slot.hot .bar{fill:#1d5fb0}
+    .sens-chart .slot.hot .bar{fill:#1d5fb0}
+    .bet-sheet{max-width:1000px;margin:0 auto 1.5rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow-x:auto}
+    .bet-sheet table{width:100%;border-collapse:collapse;font-size:.9rem}
+    .bet-sheet th{background:#1b7f3b;color:#fff;padding:.6rem .75rem;text-align:left;font-weight:600}
+    .bet-sheet td{padding:.55rem .75rem;border-bottom:1px solid #eee;color:#333;line-height:1.25;font-variant-numeric:tabular-nums}
+    .bet-sheet tr:last-child td{border-bottom:none}
+    .bet-sheet td.num{text-align:right}
+    .bet-sheet .empty{padding:1rem;color:#666;text-align:center}
+    .bet-sheet-title{font-weight:700;color:#0b0b0b;padding:.75rem .75rem .25rem}
+    .filters{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:0 0 1rem}
+    .filters button{border:1px solid #cfd6e0;background:#fff;color:#333;padding:.35rem .8rem;border-radius:999px;font-size:.85rem;cursor:pointer}
+    .filters button.active{background:#357edd;color:#fff;border-color:#357edd}
+    .signal-line{display:block;margin:.15rem 0;line-height:1.35}
+    .signal-line .lbl{color:#777;font-weight:400}
+    .game-card.hidden{display:none}
+    @media screen and (max-width:768px){.header-full-height{aspect-ratio:auto;height:auto;min-height:0}.header-full-height h1{font-size:1.9rem!important}.header-full-height h2{font-size:1rem!important}}
     .score-hist{width:100%;height:auto;display:block}
     .score-hist .bar{fill:#2a78d6}
     .score-hist .slot:hover .bar{fill:#1d5fb0}
@@ -179,6 +199,7 @@
   </div>
   <!-- End of protected content -->
   
+  <div id="chart-tip" class="chart-tip" role="tooltip"></div>
   <!-- Image Modal/Lightbox -->
   <div id="image-modal" class="image-modal">
     <div class="image-modal-content">
@@ -314,8 +335,10 @@
           container.parentNode.insertBefore(stamp, container);
           const legend = document.createElement('p');
           legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
-          legend.innerHTML = 'Bet signal: <span class="tier tier-BET">BET</span> P(cover) &ge; 55% &nbsp; <span class="tier tier-LEAN">LEAN</span> positive but below the bet threshold &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Lean = points the model has its side beating the closing spread by. Spreads: favourite negative.';
+          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: edge over the price\'s break-even, BET at +5 points, LEAN at +2. Total: same, BET at +3 (totals are evaluated but not staked). Lean = points the model beats the line by. Spreads: favourite negative.';
           container.parentNode.insertBefore(legend, container);
+          buildBetSheet(predictionsData._meta, container);
+          buildFilters(container);
         }
         // Show the actionable games first: BET, then LEAN, then PASS, then games without a market
         const tierRank = { BET: 0, LEAN: 1, PASS: 2 };
@@ -332,7 +355,9 @@
         imageFiles.forEach(filename => {
           // Create container for this prediction (table + image)
           const predictionContainer = document.createElement('div');
+          predictionContainer.className = 'game-card';
           predictionContainer.style.marginBottom = '2rem';
+          predictionContainer.dataset.tier = bestTier(predictionsData[filename]);
           
           // Always create prediction table (even if data is missing)
           const predictionInfo = predictionsData[filename];
@@ -374,14 +399,17 @@
               
               // Bet signal from the cover model: side the model leans to, points of lean vs the
               // closing spread, P(cover), and the tier (BET = staked, LEAN = logged only, PASS)
-              const bet = yourModel.Bet;
-              let betCell = '<td class="bet" style="color:#999">—</td>';
-              if (bet && bet.Tier) {
-                const lean = bet.Lean !== undefined && bet.Lean !== null ? `${Number(bet.Lean) >= 0 ? '+' : ''}${Number(bet.Lean).toFixed(1)}` : '';
-                const pcov = bet.CoverProbability !== undefined && bet.CoverProbability !== null ? `${(Number(bet.CoverProbability) * 100).toFixed(1)}%` : '';
-                const tierClass = ['BET', 'LEAN', 'PASS'].includes(bet.Tier) ? `tier-${bet.Tier}` : 'tier-PASS';
-                betCell = `<td class="bet"><span class="tier ${tierClass}">${bet.Tier}</span> ${bet.Side || ''}${lean ? ` ${lean}` : ''}${pcov ? `<br><span style="font-weight:400;color:#777">P(cover) ${pcov}</span>` : ''}</td>`;
+              const signals = yourModel.Signals || {};
+              const sigLines = [];
+              for (const market of ['Spread', 'Moneyline', 'Total']) {
+                const sg = signals[market];
+                if (!sg || !sg.Tier) continue;
+                const tierClass = ['BET', 'LEAN', 'PASS'].includes(sg.Tier) ? `tier-${sg.Tier}` : 'tier-PASS';
+                const p = sg.Probability !== undefined && sg.Probability !== null ? `${(Number(sg.Probability) * 100).toFixed(1)}%` : '';
+                const detail = market === 'Moneyline' ? `${sg.Side} ML` : market === 'Total' ? `${sg.Side} ${Number(sg.Line)}` : `${sg.Side} ${Number(sg.Lean) >= 0 ? '+' : ''}${Number(sg.Lean).toFixed(1)}`;
+                sigLines.push(`<span class="signal-line"><span class="lbl">${market === 'Moneyline' ? 'ML' : market}:</span> <span class="tier ${tierClass}">${sg.Tier}</span> ${detail}${p ? ` <span class="lbl">${p}</span>` : ''}</span>`);
               }
+              let betCell = sigLines.length ? `<td class="bet">${sigLines.join('')}</td>` : '<td class="bet" style="color:#999">—</td>';
               
               // Your model row
               const yourModelRow = document.createElement('tr');
@@ -538,6 +566,77 @@
       }
     }
     
+    // ---- the best tier across a game's three markets (BET > LEAN > PASS), for ordering and filtering
+    const TIER_RANK = { BET: 0, LEAN: 1, PASS: 2 };
+    function bestTier(info) {
+      const sg = info && info["Beyond the Arc DL"] && info["Beyond the Arc DL"].Signals;
+      let best = 'NONE';
+      if (sg) for (const k in sg) { const t = sg[k] && sg[k].Tier; if (t in TIER_RANK && (best === 'NONE' || TIER_RANK[t] < TIER_RANK[best])) best = t; }
+      return best;
+    }
+    
+    // ---- the day's bet sheet (staked bets from the game-day script) above the grid
+    function buildBetSheet(meta, container) {
+      const box = document.createElement('div'); box.className = 'bet-sheet';
+      const title = document.createElement('div'); title.className = 'bet-sheet-title';
+      const sheet = (meta && meta.sheet) || [];
+      title.textContent = sheet.length ? `Bet sheet: ${sheet.length} staked bet${sheet.length === 1 ? '' : 's'}` : 'Bet sheet';
+      box.appendChild(title);
+      if (!sheet.length) {
+        const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'No bets reach the BET tier today.'; box.appendChild(e);
+      } else {
+        const t = document.createElement('table');
+        const th = document.createElement('thead'); th.innerHTML = '<tr><th>Game</th><th>Bet</th><th class="num">Odds</th><th class="num">Model</th><th class="num">Edge</th><th class="num">Stake</th></tr>'; t.appendChild(th);
+        const tb = document.createElement('tbody');
+        sheet.forEach(b => {
+          const tr = document.createElement('tr');
+          [[b.game, false], [`${b.market}: ${b.bet}`, false], [(b.odds > 0 ? '+' : '') + b.odds, true], [`${(100 * b.probability).toFixed(1)}%`, true], [`${b.edge >= 0 ? '+' : ''}${(100 * b.edge).toFixed(1)}%`, true], [`${(100 * b.bankroll_fraction).toFixed(1)}% of bankroll`, true]]
+            .forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
+          tb.appendChild(tr);
+        });
+        t.appendChild(tb); box.appendChild(t);
+      }
+      container.parentNode.insertBefore(box, container);
+    }
+    
+    // ---- filter row: show all games, or only the ones with a BET / LEAN signal in any market
+    function buildFilters(container) {
+      const row = document.createElement('div'); row.className = 'filters';
+      const defs = [['all', 'All games'], ['BET', 'BET only'], ['LEAN', 'BET + LEAN']];
+      defs.forEach(([key, label]) => {
+        const b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.dataset.filter = key; if (key === 'all') b.className = 'active';
+        b.addEventListener('click', () => {
+          row.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === b));
+          container.querySelectorAll('.game-card').forEach(card => {
+            const t = card.dataset.tier;
+            card.classList.toggle('hidden', key === 'BET' ? t !== 'BET' : key === 'LEAN' ? !(t === 'BET' || t === 'LEAN') : false);
+          });
+        });
+        row.appendChild(b);
+      });
+      container.parentNode.insertBefore(row, container);
+    }
+    
+    // ---- hover readout for the charts: instant, follows the pointer, works with a tap on touch screens
+    const tip = () => document.getElementById('chart-tip');
+    function showTip(evt, html) {
+      const el = tip(); el.innerHTML = html; el.style.display = 'block';
+      const pad = 14, w = el.offsetWidth, h = el.offsetHeight;
+      let x = evt.clientX + pad, y = evt.clientY + pad;
+      if (x + w > window.innerWidth - 8) x = evt.clientX - w - pad;
+      if (y + h > window.innerHeight - 8) y = evt.clientY - h - pad;
+      el.style.left = `${x}px`; el.style.top = `${y}px`;
+    }
+    function hideTip() { const el = tip(); el.style.display = 'none'; }
+    function attachTip(node, htmlFn) {
+      node.addEventListener('pointerenter', e => { node.classList.add('hot'); showTip(e, htmlFn()); });
+      node.addEventListener('pointermove', e => showTip(e, htmlFn()));
+      node.addEventListener('pointerleave', () => { node.classList.remove('hot'); hideTip(); });
+      node.addEventListener('click', e => { e.stopPropagation(); showTip(e, htmlFn()); });
+    }
+    document.addEventListener('click', hideTip);
+    document.addEventListener('scroll', hideTip, { passive: true });
+    
     // ---- score histograms: two panels (home, away), one series each, drawn as inline SVG
     const SVG_NS = 'http://www.w3.org/2000/svg';
     function svgEl(tag, attrs, parent) {
@@ -578,11 +677,15 @@
         }
         svgEl('line', { x1: p.x0, x2: p.x0 + panelW, y1: base, y2: base, class: 'axis' }, svg);
         // columns: <= 24px, 4px rounded data-end, square at the baseline, 2px surface gap
+        const cum = []; let run = 0; p.counts.forEach(c => { run += c; cum.push(run); });
+        const total = p.counts.reduce((a, b) => a + b, 0);
         p.counts.forEach((c, i) => {
           const x = p.x0 + i * slot + (slot - barW) / 2, h = plotH * c / yMax, y = base - h, r = Math.min(4, barW / 2, h);
           const g = svgEl('g', { class: 'slot' }, svg);
           const title = svgEl('title', {}, g);
           title.textContent = `${start + i} points: ${c.toLocaleString()} of ${members.toLocaleString()} members (${(100 * c / members).toFixed(1)}%)`;
+          const score = start + i;
+          attachTip(g, () => `<strong>${score} points</strong> <span class="muted">${p.name}</span><br>${c.toLocaleString()} members (${(100 * c / members).toFixed(1)}%)<br><span class="muted">P(score &le; ${score}) = ${(100 * cum[i] / members).toFixed(1)}%, P(score &ge; ${score}) = ${(100 * (members - (i > 0 ? cum[i - 1] : 0)) / members).toFixed(1)}%</span>`);
           if (h > 0) {
             const d = r > 0
               ? `M${x},${base} L${x},${y + r} Q${x},${y} ${x + r},${y} L${x + barW - r},${y} Q${x + barW},${y} ${x + barW},${y + r} L${x + barW},${base} Z`
@@ -633,6 +736,7 @@
           const x = p.x0 + i * slot + (slot - barW) / 2, h = Math.abs(v) * plotH / 2, y = v >= 0 ? mid - h : mid;
           const g = svgEl('g', { class: 'slot' }, svg);
           const t = svgEl('title', {}, g); t.textContent = `${p.block.labels[i]}: r = ${Number(v).toFixed(2)}`;
+          attachTip(g, () => `<strong>r = ${Number(v) >= 0 ? '+' : ''}${Number(v).toFixed(2)}</strong> <span class="muted">${p.block.labels[i]}</span><br><span class="muted">correlation of this input with ${p.name}'s score across the members</span>`);
           if (h > 0) svgEl('rect', { x: x, y: y, width: barW, height: h, rx: 2, class: 'bar' + (v < 0 ? ' neg' : '') }, g);
           svgEl('rect', { x: p.x0 + i * slot, y: top, width: slot, height: plotH, fill: 'transparent' }, g);
           const lx = p.x0 + i * slot + slot / 2, ly = top + plotH + 8;
