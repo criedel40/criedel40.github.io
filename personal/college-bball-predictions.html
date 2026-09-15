@@ -688,10 +688,9 @@
       t.textContent = text;  // names and numbers are data: textContent, never markup
       return t;
     }
-    function niceCeil(v) {  // clean top gridline: 1/2/2.5/5 x 10^k
-      const p = Math.pow(10, Math.floor(Math.log10(v)));
-      for (const m of [1, 2, 2.5, 5, 10]) { if (m * p >= v) return m * p; }
-      return 10 * p;
+    function niceCeil(v) {  // top gridline: the tallest bar rounded up to a multiple of 100 (so ~580 -> 600, not 1,000)
+      const step = v > 2000 ? 500 : v > 400 ? 100 : v > 100 ? 50 : 10;
+      return Math.max(step, Math.ceil(v / step) * step);
     }
     function buildHistogram(hist, homeName, awayName) {
       const W = 920, H = 430, left = 64, gap = 54, top = 74, bottom = 56;
