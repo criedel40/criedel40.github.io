@@ -109,8 +109,11 @@
     .score-hist .iqr{stroke:#1d5fb0;stroke-width:1.5}
     .score-hist .iqr-label{font-size:13px;fill:#1d5fb0;font-weight:700}
     .score-hist .iqr-band{fill:#2a78d6;fill-opacity:.08}
+    .score-hist .dec{stroke:#c62828;stroke-width:1.5}
+    .score-hist .dec-label{font-size:13px;fill:#c62828;font-weight:700}
+    .score-hist .dec-band{fill:#c62828;fill-opacity:.06}
     /* markers and labels never intercept the pointer: the bars' hit targets beneath them keep the hover readout */
-    .score-hist .iqr-band,.score-hist .iqr,.score-hist .marker,.score-hist .marker-label,.score-hist .iqr-label,.score-hist .grid,.score-hist .axis,.score-hist .tick,.score-hist .caption,.score-hist .title{pointer-events:none}
+    .score-hist .dec-band,.score-hist .dec,.score-hist .dec-label,.score-hist .iqr-band,.score-hist .iqr,.score-hist .marker,.score-hist .marker-label,.score-hist .iqr-label,.score-hist .grid,.score-hist .axis,.score-hist .tick,.score-hist .caption,.score-hist .title{pointer-events:none}
     .sens-chart .grid,.sens-chart .zero,.sens-chart .tick,.sens-chart .title{pointer-events:none}
     .image-modal-content{background:#fff;padding:1rem;border-radius:8px;width:min(96vw,1400px)}
     .image-modal-content .score-hist{width:100%}
@@ -691,7 +694,7 @@
       return 10 * p;
     }
     function buildHistogram(hist, homeName, awayName) {
-      const W = 920, H = 430, left = 64, gap = 54, top = 58, bottom = 96;
+      const W = 920, H = 430, left = 64, gap = 54, top = 74, bottom = 56;
       const panelW = (W - left - gap - 12) / 2, plotH = H - top - bottom, base = top + plotH;
       const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', class: 'score-hist' });
       svg.setAttribute('aria-label', `Score distributions for ${homeName} (home) and ${awayName} (away)`);
@@ -716,8 +719,6 @@
         p.counts.forEach((c, i) => {
           const x = p.x0 + i * slot + (slot - barW) / 2, h = plotH * c / yMax, y = base - h, r = Math.min(4, barW / 2, h);
           const g = svgEl('g', { class: 'slot' }, svg);
-          const title = svgEl('title', {}, g);
-          title.textContent = `${start + i} points: ${c.toLocaleString()} of ${members.toLocaleString()} members (${(100 * c / members).toFixed(1)}%)`;
           const score = start + i;
           attachTip(g, () => `<strong>${score} points</strong> <span class="muted">${p.name}</span><br>${c.toLocaleString()} members (${(100 * c / members).toFixed(1)}%)<br><span class="muted">P(score &le; ${score}) = ${(100 * cum[i] / members).toFixed(1)}%, P(score &ge; ${score}) = ${(100 * (members - (i > 0 ? cum[i - 1] : 0)) / members).toFixed(1)}%</span>`);
           if (h > 0) {
@@ -735,10 +736,20 @@
           svgText(x, base + 20, String(v), 'tick', 'middle', svg);
         }
         svgText(p.x0 + panelW / 2, base + 40, 'Score', 'tick', 'middle', svg);
+        // 10th-90th percentile range: a faint red band and dashed red lines (behind the interquartile band)
+        if (p.sum.p10 !== undefined && p.sum.p90 !== undefined) {
+          const x10 = p.x0 + (p.sum.p10 - start) * slot, x90 = p.x0 + (p.sum.p90 - start + 1) * slot;
+          svgEl('rect', { x: x10, y: top + 46, width: Math.max(0, x90 - x10), height: plotH - 46, class: 'dec-band' }, svg);
+          for (const [q, v] of [['10th', p.sum.p10], ['90th', p.sum.p90]]) {
+            const xq = p.x0 + (v - start + 0.5) * slot;
+            svgEl('line', { x1: xq, x2: xq, y1: top + 46, y2: base, class: 'dec', 'stroke-dasharray': '4 3' }, svg);
+            svgText(xq, top + 43, `${q} ${v}`, 'dec-label', 'middle', svg);
+          }
+        }
         // interquartile range: a faint band and dashed blue lines at the 25th and 75th percentiles (behind the median)
         if (p.sum.p25 !== undefined && p.sum.p75 !== undefined) {
           const x25 = p.x0 + (p.sum.p25 - start) * slot, x75 = p.x0 + (p.sum.p75 - start + 1) * slot;
-          svgEl('rect', { x: x25, y: top + 30, width: Math.max(0, x75 - x25), height: plotH - 30, class: 'iqr-band' }, svg);
+          svgEl('rect', { x: x25, y: top + 46, width: Math.max(0, x75 - x25), height: plotH - 46, class: 'iqr-band' }, svg);
           for (const [q, v] of [['25th', p.sum.p25], ['75th', p.sum.p75]]) {
             const xq = p.x0 + (v - start + 0.5) * slot;
             svgEl('line', { x1: xq, x2: xq, y1: top + 30, y2: base, class: 'iqr', 'stroke-dasharray': '4 3' }, svg);
@@ -753,11 +764,6 @@
         }
         const share = p.share === undefined ? '' : ` (${Math.round(100 * p.share)}%)`;
         svgText(p.x0, top - 30, `${p.label}: ${p.name}${share}`, 'title', 'start', svg);
-        const cap = [];
-        if (p.sum.mean !== undefined) cap.push(`mean ${p.sum.mean}`);
-        if (p.sum.p25 !== undefined) cap.push(`25th–75th ${p.sum.p25}–${p.sum.p75}`);
-        if (p.sum.p1 !== undefined) cap.push(`1st–99th ${p.sum.p1}–${p.sum.p99}`);
-        svgText(p.x0 + panelW / 2, base + 64, cap.join('   ·   '), 'caption', 'middle', svg);
       });
       svgText(16, top + plotH / 2, 'members', 'tick', 'middle', svg).setAttribute('transform', `rotate(-90 16 ${top + plotH / 2})`);
       return svg;
@@ -779,7 +785,6 @@
         p.block.values.forEach((v, i) => {
           const x = p.x0 + i * slot + (slot - barW) / 2, h = Math.abs(v) * plotH / 2, y = v >= 0 ? mid - h : mid;
           const g = svgEl('g', { class: 'slot' }, svg);
-          const t = svgEl('title', {}, g); t.textContent = `${p.block.labels[i]}: r = ${Number(v).toFixed(2)}`;
           attachTip(g, () => `<strong>r = ${Number(v) >= 0 ? '+' : ''}${Number(v).toFixed(2)}</strong> <span class="muted">${p.block.labels[i]}</span><br><span class="muted">correlation of this input with ${p.name}'s score across the members</span>`);
           if (h > 0) svgEl('rect', { x: x, y: y, width: barW, height: h, rx: 2, class: 'bar' + (v < 0 ? ' neg' : '') }, g);
           svgEl('rect', { x: p.x0 + i * slot, y: top, width: slot, height: plotH, fill: 'transparent' }, g);
