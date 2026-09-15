@@ -697,7 +697,7 @@
       const panelW = (W - left - gap - 12) / 2, plotH = H - top - bottom, base = top + plotH;
       const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', class: 'score-hist' });
       svg.setAttribute('aria-label', `Score distributions for ${homeName} (home) and ${awayName} (away)`);
-      const yMax = niceCeil(Math.max(...hist.home, ...hist.away, 1));
+      const yMax = niceCeil(Math.max(...hist.home, ...hist.away, 1)) / 0.82;  // bars top out at 82% of the plot; the label rows own the rest
       const start = Number(hist.start), members = Number(hist.members) || 1;
       const panels = [
         { label: 'Home', name: homeName, counts: hist.home, sum: hist.homeSummary || {}, share: hist.homeWinShare, x0: left },
@@ -706,10 +706,11 @@
       panels.forEach((p, pi) => {
         const n = p.counts.length, slot = panelW / n, barW = Math.max(1, Math.min(24, slot - 2));
         // recessive gridlines with tick labels on the left panel only (shared scale)
+        const yTop = yMax * 0.82;
         for (let k = 0; k <= 4; k++) {
-          const y = base - plotH * k / 4;
+          const v = yTop * k / 4, y = base - plotH * v / yMax;
           svgEl('line', { x1: p.x0, x2: p.x0 + panelW, y1: y, y2: y, class: 'grid' }, svg);
-          if (pi === 0) svgText(p.x0 - 8, y + 5, (yMax * k / 4).toLocaleString(), 'tick', 'end', svg);
+          if (pi === 0) svgText(p.x0 - 8, y + 5, Math.round(v).toLocaleString(), 'tick', 'end', svg);
         }
         svgEl('line', { x1: p.x0, x2: p.x0 + panelW, y1: base, y2: base, class: 'axis' }, svg);
         // columns: <= 24px, 4px rounded data-end, square at the baseline, 2px surface gap
@@ -738,28 +739,28 @@
         // 10th-90th percentile range: a faint red band and dashed red lines (behind the interquartile band)
         if (p.sum.p10 !== undefined && p.sum.p90 !== undefined) {
           const x10 = p.x0 + (p.sum.p10 - start) * slot, x90 = p.x0 + (p.sum.p90 - start + 1) * slot;
-          svgEl('rect', { x: x10, y: top + 46, width: Math.max(0, x90 - x10), height: plotH - 46, class: 'dec-band' }, svg);
+          svgEl('rect', { x: x10, y: top + 52, width: Math.max(0, x90 - x10), height: plotH - 52, class: 'dec-band' }, svg);
           for (const [q, v] of [['10th', p.sum.p10], ['90th', p.sum.p90]]) {
             const xq = p.x0 + (v - start + 0.5) * slot;
-            svgEl('line', { x1: xq, x2: xq, y1: top + 46, y2: base, class: 'dec', 'stroke-dasharray': '4 3' }, svg);
-            svgText(xq, top + 43, `${q} ${v}`, 'dec-label', 'middle', svg);
+            svgEl('line', { x1: xq, x2: xq, y1: top + 52, y2: base, class: 'dec', 'stroke-dasharray': '4 3' }, svg);
+            svgText(xq, top + 49, `${q} ${v}`, 'dec-label', 'middle', svg);
           }
         }
         // interquartile range: a faint band and dashed blue lines at the 25th and 75th percentiles (behind the median)
         if (p.sum.p25 !== undefined && p.sum.p75 !== undefined) {
           const x25 = p.x0 + (p.sum.p25 - start) * slot, x75 = p.x0 + (p.sum.p75 - start + 1) * slot;
-          svgEl('rect', { x: x25, y: top + 46, width: Math.max(0, x75 - x25), height: plotH - 46, class: 'iqr-band' }, svg);
+          svgEl('rect', { x: x25, y: top + 34, width: Math.max(0, x75 - x25), height: plotH - 34, class: 'iqr-band' }, svg);
           for (const [q, v] of [['25th', p.sum.p25], ['75th', p.sum.p75]]) {
             const xq = p.x0 + (v - start + 0.5) * slot;
-            svgEl('line', { x1: xq, x2: xq, y1: top + 30, y2: base, class: 'iqr', 'stroke-dasharray': '4 3' }, svg);
-            svgText(xq, top + 27, `${q} ${v}`, 'iqr-label', 'middle', svg);
+            svgEl('line', { x1: xq, x2: xq, y1: top + 34, y2: base, class: 'iqr', 'stroke-dasharray': '4 3' }, svg);
+            svgText(xq, top + 31, `${q} ${v}`, 'iqr-label', 'middle', svg);
           }
         }
         // selective direct label: the median
         if (p.sum.median !== undefined) {
           const xm = p.x0 + (p.sum.median - start + 0.5) * slot;
-          svgEl('line', { x1: xm, x2: xm, y1: top + 14, y2: base, class: 'marker', 'stroke-dasharray': '3 3' }, svg);
-          svgText(xm, top + 11, `median ${p.sum.median}`, 'marker-label', 'middle', svg);
+          svgEl('line', { x1: xm, x2: xm, y1: top + 16, y2: base, class: 'marker', 'stroke-dasharray': '3 3' }, svg);
+          svgText(xm, top + 13, `median ${p.sum.median}`, 'marker-label', 'middle', svg);
         }
         const share = p.share === undefined ? '' : ` (${Math.round(100 * p.share)}%)`;
         svgText(p.x0, top - 30, `${p.label}: ${p.name}${share}`, 'title', 'start', svg);
