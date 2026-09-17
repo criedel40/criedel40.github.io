@@ -103,6 +103,7 @@
     .score-hist text{font-family:inherit;fill:#52514e}
     .score-hist .title{font-weight:700;fill:#0b0b0b;font-size:20px}
     .score-hist .tick{font-size:14px}
+    .score-hist .end-label{font-size:15px;fill:#0b0b0b;font-weight:700}
     .score-hist .caption{font-size:15px}
     .score-hist .marker{stroke:#0b0b0b;stroke-width:1.5}
     .score-hist .marker-label{font-size:14px;fill:#0b0b0b;font-weight:700}
@@ -113,7 +114,7 @@
     .score-hist .dec-label{font-size:13px;fill:#c62828;font-weight:700}
     .score-hist .dec-band{fill:#c62828;fill-opacity:.06}
     /* markers and labels never intercept the pointer: the bars' hit targets beneath them keep the hover readout */
-    .score-hist .dec-band,.score-hist .dec,.score-hist .dec-label,.score-hist .iqr-band,.score-hist .iqr,.score-hist .marker,.score-hist .marker-label,.score-hist .iqr-label,.score-hist .grid,.score-hist .axis,.score-hist .tick,.score-hist .caption,.score-hist .title{pointer-events:none}
+    .score-hist .dec-band,.score-hist .dec,.score-hist .dec-label,.score-hist .iqr-band,.score-hist .iqr,.score-hist .marker,.score-hist .marker-label,.score-hist .iqr-label,.score-hist .grid,.score-hist .axis,.score-hist .tick,.score-hist .caption,.score-hist .title,.score-hist .end-label{pointer-events:none}
     .sens-chart .grid,.sens-chart .zero,.sens-chart .tick,.sens-chart .title{pointer-events:none}
     .image-modal-content{background:#fff;padding:1rem;border-radius:8px;width:min(96vw,1400px)}
     .image-modal-content .score-hist{width:100%}
@@ -782,7 +783,7 @@
       svg.setAttribute('aria-label', `Margin and total distributions for ${homeName} versus ${awayName}`);
       const members = Number(hist.members) || 1;
       const panels = [
-        { key: 'margin', title: 'Margin', unit: 'margin', axis: `Margin (points): ${homeName} minus ${awayName}`, signed: true, x0: left },
+        { key: 'margin', title: 'Margin', unit: 'margin', axis: null, signed: true, x0: left },
         { key: 'total', title: 'Total points', unit: 'total', axis: 'Total (points)', signed: false, x0: left + panelW + gap }
       ];
       panels.forEach(p => {
@@ -820,7 +821,13 @@
           svgEl('line', { x1: x, x2: x, y1: base, y2: base + 4, class: 'axis' }, svg);
           svgText(x, base + 20, fmt(v), 'tick', 'middle', svg);
         }
-        svgText(p.x0 + panelW / 2, base + 40, p.axis, 'tick', 'middle', svg);
+        if (p.axis) {
+          svgText(p.x0 + panelW / 2, base + 40, p.axis, 'tick', 'middle', svg);
+        } else {   // the margin axis says who is winning at each end instead of naming the subtraction
+          const end = n => (n || '').length > 16 ? n.slice(0, 15) + '\u2026' : n;
+          svgText(p.x0, base + 42, `\u25c0 ${end(awayName)} wins`, 'end-label', 'start', svg);
+          svgText(p.x0 + panelW, base + 42, `${end(homeName)} wins \u25b6`, 'end-label', 'end', svg);
+        }
         if (sum.p10 !== undefined && sum.p90 !== undefined) {
           const x10 = p.x0 + (sum.p10 - start) * slot, x90 = p.x0 + (sum.p90 - start + 1) * slot;
           svgEl('rect', { x: x10, y: top + 52, width: Math.max(0, x90 - x10), height: plotH - 52, class: 'dec-band' }, svg);
