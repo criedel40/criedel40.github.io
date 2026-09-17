@@ -547,6 +547,11 @@
             wrapper.appendChild(svg);
             wrapper.title = 'click to enlarge';
             wrapper.addEventListener('click', function() { openChartModal(svg); });
+            if (hist.margin && hist.total) {
+              const mt = buildMarginTotal(hist, homeName, awayName);
+              mt.addEventListener('click', function(e) { e.stopPropagation(); openChartModal(mt); });
+              wrapper.appendChild(mt);
+            }
             const sens = predictionInfo.Sensitivity;
             if (sens && sens.home && sens.away) {
               wrapper.appendChild(buildSensitivity(sens, homeName, awayName));
@@ -764,6 +769,80 @@
         }
         const share = p.share === undefined ? '' : ` (${Math.round(100 * p.share)}%)`;
         svgText(p.x0, top - 30, `${p.label}: ${p.name}${share}`, 'title', 'start', svg);
+      });
+      svgText(16, top + plotH / 2, 'members', 'tick', 'middle', svg).setAttribute('transform', `rotate(-90 16 ${top + plotH / 2})`);
+      return svg;
+    }
+    
+    // ---- margin and total distributions: two panels, each with its own range and y scale
+    function buildMarginTotal(hist, homeName, awayName) {
+      const W = 920, H = 430, left = 64, gap = 72, top = 74, bottom = 56;
+      const panelW = (W - left - gap - 20) / 2, plotH = H - top - bottom, base = top + plotH;
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', class: 'score-hist' });
+      svg.setAttribute('aria-label', `Margin and total distributions for ${homeName} versus ${awayName}`);
+      const members = Number(hist.members) || 1;
+      const panels = [
+        { key: 'margin', title: 'Margin', unit: 'margin', axis: `Margin (points): ${homeName} minus ${awayName}`, signed: true, x0: left },
+        { key: 'total', title: 'Total points', unit: 'total', axis: 'Total (points)', signed: false, x0: left + panelW + gap }
+      ];
+      panels.forEach(p => {
+        const block = hist[p.key];
+        if (!block || !block.counts || !block.counts.length) return;
+        const counts = block.counts, sum = block.summary || {}, start = Number(block.start);
+        const n = counts.length, slot = panelW / n, barW = Math.max(1, Math.min(24, slot - 2));
+        const yMax = niceCeil(Math.max(...counts, 1)) / 0.82, yTop = yMax * 0.82;
+        const fmt = v => (p.signed && v > 0 ? '+' + v : String(v));
+        const xAt = v => p.x0 + (v - start + 0.5) * slot;
+        for (let k = 0; k <= 4; k++) {
+          const v = yTop * k / 4, y = base - plotH * v / yMax;
+          svgEl('line', { x1: p.x0, x2: p.x0 + panelW, y1: y, y2: y, class: 'grid' }, svg);
+          svgText(p.x0 - 8, y + 5, Math.round(v).toLocaleString(), 'tick', 'end', svg);
+        }
+        svgEl('line', { x1: p.x0, x2: p.x0 + panelW, y1: base, y2: base, class: 'axis' }, svg);
+        const cum = []; let run = 0; counts.forEach(c => { run += c; cum.push(run); });
+        counts.forEach((c, i) => {
+          const x = p.x0 + i * slot + (slot - barW) / 2, h = plotH * c / yMax, y = base - h, r = Math.min(4, barW / 2, h);
+          const g = svgEl('g', { class: 'slot' }, svg);
+          const shown = fmt(start + i);
+          const below = 100 * cum[i] / members, above = 100 * (members - (i > 0 ? cum[i - 1] : 0)) / members;
+          attachTip(g, () => `<strong>${shown} ${p.unit}</strong><br>${c.toLocaleString()} members (${(100 * c / members).toFixed(1)}%)<br><span class="muted">P(&le; ${shown}) = ${below.toFixed(1)}%, P(&ge; ${shown}) = ${above.toFixed(1)}%</span>`);
+          if (h > 0) {
+            const d = r > 0
+              ? `M${x},${base} L${x},${y + r} Q${x},${y} ${x + r},${y} L${x + barW - r},${y} Q${x + barW},${y} ${x + barW},${y + r} L${x + barW},${base} Z`
+              : `M${x},${base} L${x},${y} L${x + barW},${y} L${x + barW},${base} Z`;
+            svgEl('path', { d: d, class: 'bar' }, g);
+          }
+          svgEl('rect', { x: p.x0 + i * slot, y: top, width: slot, height: plotH, fill: 'transparent' }, g);
+        });
+        const step = n > 50 ? 20 : 10;
+        for (let v = Math.ceil(start / step) * step; v < start + n; v += step) {
+          const x = xAt(v);
+          svgEl('line', { x1: x, x2: x, y1: base, y2: base + 4, class: 'axis' }, svg);
+          svgText(x, base + 20, fmt(v), 'tick', 'middle', svg);
+        }
+        svgText(p.x0 + panelW / 2, base + 40, p.axis, 'tick', 'middle', svg);
+        if (sum.p10 !== undefined && sum.p90 !== undefined) {
+          const x10 = p.x0 + (sum.p10 - start) * slot, x90 = p.x0 + (sum.p90 - start + 1) * slot;
+          svgEl('rect', { x: x10, y: top + 52, width: Math.max(0, x90 - x10), height: plotH - 52, class: 'dec-band' }, svg);
+          for (const [q, v] of [['10th', sum.p10], ['90th', sum.p90]]) {
+            svgEl('line', { x1: xAt(v), x2: xAt(v), y1: top + 52, y2: base, class: 'dec', 'stroke-dasharray': '4 3' }, svg);
+            svgText(xAt(v), top + 49, `${q} ${fmt(v)}`, 'dec-label', 'middle', svg);
+          }
+        }
+        if (sum.p25 !== undefined && sum.p75 !== undefined) {
+          const x25 = p.x0 + (sum.p25 - start) * slot, x75 = p.x0 + (sum.p75 - start + 1) * slot;
+          svgEl('rect', { x: x25, y: top + 34, width: Math.max(0, x75 - x25), height: plotH - 34, class: 'iqr-band' }, svg);
+          for (const [q, v] of [['25th', sum.p25], ['75th', sum.p75]]) {
+            svgEl('line', { x1: xAt(v), x2: xAt(v), y1: top + 34, y2: base, class: 'iqr', 'stroke-dasharray': '4 3' }, svg);
+            svgText(xAt(v), top + 31, `${q} ${fmt(v)}`, 'iqr-label', 'middle', svg);
+          }
+        }
+        if (sum.median !== undefined) {
+          svgEl('line', { x1: xAt(sum.median), x2: xAt(sum.median), y1: top + 16, y2: base, class: 'marker', 'stroke-dasharray': '3 3' }, svg);
+          svgText(xAt(sum.median), top + 13, `median ${fmt(sum.median)}`, 'marker-label', 'middle', svg);
+        }
+        const share = p.signed && hist.homeWinShare !== undefined ? ` \u2014 home wins ${Math.round(100 * hist.homeWinShare)}%` : '';
+        svgText(p.x0, top - 30, p.title + share, 'title', 'start', svg);
       });
       svgText(16, top + plotH / 2, 'members', 'tick', 'middle', svg).setAttribute('transform', `rotate(-90 16 ${top + plotH / 2})`);
       return svg;
