@@ -136,6 +136,38 @@
     .tier-BET{background:#1b7f3b;color:#fff}
     .tier-LEAN{background:#e0a800;color:#222}
     .tier-PASS{background:#e5e5e5;color:#666}
+    .plays{max-width:1000px;margin:0 auto 1rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow-x:auto;border-top:4px solid #1b7f3b}
+    .plays-head{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;padding:.75rem .75rem .25rem}
+    .plays-title{font-weight:700;color:#0b0b0b;font-size:1.05rem;margin-right:auto}
+    .plays-head label{color:#555;font-weight:700;font-size:.9rem}
+    .plays-head input{width:7rem;padding:.3rem .5rem;border:1px solid #cfd6e0;border-radius:6px;font-size:.95rem;font-variant-numeric:tabular-nums;text-align:right}
+    .plays table{width:100%;border-collapse:collapse;font-size:.95rem}
+    .plays th{background:#1b7f3b;color:#fff;padding:.55rem .75rem;text-align:left;font-weight:600}
+    .plays td{padding:.55rem .75rem;border-bottom:1px solid #eee;color:#333;line-height:1.25;font-variant-numeric:tabular-nums;font-weight:700}
+    .plays td.num,.plays th.num{text-align:right}
+    .plays tr:last-child td{border-bottom:none}
+    .plays .stake{color:#1b7f3b;font-size:1.05rem}
+    .plays .empty,.plays .note{padding:.6rem .75rem 1rem;color:#666;font-size:.9rem}
+    .record{max-width:1000px;margin:1.5rem auto 2rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:.75rem .75rem 1rem}
+    .record h2{font-size:1.25rem;margin:.25rem 0 .5rem;color:#0b0b0b}
+    .record .sub{color:#666;font-size:.9rem;margin:0 0 .75rem}
+    .record .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 .75rem}
+    .record .tabs button{border:1px solid #cfd6e0;background:#fff;color:#333;padding:.35rem .8rem;border-radius:999px;font-size:.85rem;cursor:pointer}
+    .record .tabs button.active{background:#357edd;color:#fff;border-color:#357edd}
+    .record h3{font-size:1rem;margin:1rem 0 .35rem;color:#333}
+    .record table{width:100%;border-collapse:collapse;font-size:.88rem}
+    .record th{background:#f0f4fa;color:#333;padding:.45rem .6rem;text-align:left;font-weight:600;border-bottom:1px solid #dde3ec}
+    .record td{padding:.4rem .6rem;border-bottom:1px solid #eee;color:#333;font-variant-numeric:tabular-nums;font-weight:700}
+    .record td.num,.record th.num{text-align:right}
+    .record tr.hl td{background:#eef8f0}
+    .record .pos{color:#1b7f3b}.record .neg{color:#b3261e}
+    .record .chart{width:100%;height:auto;display:block;margin:.25rem 0 .5rem}
+    .record .chart .axis{stroke:#999;stroke-width:1}.record .chart .grid{stroke:#eee;stroke-width:1}
+    .record .chart text{font-size:11px;fill:#555;font-weight:400}
+    .record .chart .zero{stroke:#999;stroke-width:1;stroke-dasharray:3 3}
+    .record .stat-row{display:flex;flex-wrap:wrap;gap:1rem;margin:.25rem 0 .5rem}
+    .record .stat{min-width:8rem}.record .stat .v{font-size:1.4rem;font-weight:700;color:#0b0b0b;line-height:1.1}.record .stat .k{font-size:.8rem;color:#666}
+    .record .wrap{overflow-x:auto}
     @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}.prediction-table .bet .tier{margin-bottom:.2rem}}
     .image-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:10001;justify-content:center;align-items:center;padding:2rem;box-sizing:border-box}
     .image-modal.active{display:flex}
@@ -324,10 +356,13 @@
         // FORECASTSv2.0/betting/publish_site.py on game day (cache-busted so a
         // same-day republish shows up without a hard refresh)
         const bust = `?v=${Date.now()}`;
-        const [imagesResponse, predictionsResponse] = await Promise.all([
+        const [imagesResponse, predictionsResponse, recordResponse] = await Promise.all([
           fetch('bball-images.json' + bust),
-          fetch('latest.json' + bust).catch(() => null)
+          fetch('latest.json' + bust).catch(() => null),
+          fetch('record.json' + bust).catch(() => null)
         ]);
+        let recordData = null;
+        if (recordResponse && recordResponse.ok) { try { recordData = await recordResponse.json(); } catch (e) { recordData = null; } }
         
         if (!imagesResponse.ok) {
           throw new Error('Failed to load image manifest');
@@ -352,7 +387,7 @@
           container.parentNode.insertBefore(stamp, container);
           const legend = document.createElement('p');
           legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
-          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: the model\'s win probability is pulled part-way toward the market price, then edge over the break-even, BET at +3 points, LEAN at +2. Total: same, BET at +3 (totals are evaluated but not staked). Lean = points the model beats the line by. Spreads: favourite negative.';
+          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked when it gets a slot &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: the model\'s win probability pulled part-way toward the market price, BET when the edge over break-even is 3 points or more. Total: BET when the model is 4 or more points off the line, LEAN at 3; staked only on the under and only when the pace forecast is 68.9 possessions or slower (overs are shown, never staked). Open = the first DraftKings line the hourly pull saw. Spreads: favourite negative.';
           container.parentNode.insertBefore(legend, container);
           buildFilters(container);
         }
@@ -361,6 +396,8 @@
         const rankOf = f => { const b = predictionsData[f] && predictionsData[f]["Beyond the Arc DL"] && predictionsData[f]["Beyond the Arc DL"].Bet; return b && b.Tier in tierRank ? tierRank[b.Tier] : 3; };
         imageFiles.sort((a, b) => rankOf(a) - rankOf(b));
         buildBetSheet(predictionsData._meta, container, predictionsData, imageFiles);
+        buildPlays(predictionsData._meta, container);
+        if (recordData && recordData.seasons && recordData.seasons.length) buildRecord(recordData, container);
         
         // If no images found
         if (!imageFiles || imageFiles.length === 0) {
@@ -519,13 +556,13 @@
           const markets = predictionInfo && predictionInfo.Markets;
           if (markets && markets.length) {
             const mt = document.createElement('table'); mt.className = 'markets-table';
-            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Edge</th><th>Rec</th></tr>'; mt.appendChild(mh);
+            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th>Rec</th></tr>'; mt.appendChild(mh);
             const mb = document.createElement('tbody');
             const pct = v => (v === null || v === undefined) ? '—' : `${(100 * v).toFixed(1)}%`;
             const spct = v => (v === null || v === undefined) ? '—' : `${v >= 0 ? '+' : ''}${(100 * v).toFixed(1)}%`;
             markets.forEach(r => {
               const tr = document.createElement('tr'); if (r.selected) tr.className = 'selected';
-              const cells = [r.market, r.bet, (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds, spct(r.edge)];
+              const cells = [r.market, r.bet, (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds, r.open || '—', spct(r.edge)];
               cells.forEach((c, i) => { const td = document.createElement('td'); if (i >= 2) td.className = 'num'; td.textContent = c; tr.appendChild(td); });
               const rec = document.createElement('td');
               if (['BET', 'LEAN', 'PASS'].includes(r.rec)) { const sp = document.createElement('span'); sp.className = `tier tier-${r.rec}`; sp.textContent = r.rec; rec.appendChild(sp); }
@@ -610,14 +647,15 @@
       box.appendChild(title);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
       const t = document.createElement('table');
-      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Game</th><th>Bet</th><th class="num">Odds</th><th class="num">Edge</th><th>Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
+      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Game</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th>Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
       const tb = document.createElement('tbody');
       rows.forEach(({ game, r }) => {
         const b = staked[`${game}|${r.market}|${r.bet}`];
         const tr = document.createElement('tr'); if (b) tr.className = 'selected';
         const odds = (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds;
         const edge = (r.edge === null || r.edge === undefined) ? '—' : `${r.edge >= 0 ? '+' : ''}${(100 * r.edge).toFixed(1)}%`;
-        [[game, false], [r.market === '—' ? r.bet : `${r.market}: ${r.bet}`, false], [odds, true], [edge, true]]
+        const open = (b && b.open) || r.open || '—';
+        [[game, false], [r.market === '—' ? r.bet : `${r.market}: ${r.bet}`, false], [odds, true], [open, true], [edge, true]]
           .forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
         const rec = document.createElement('td'); const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = r.rec; rec.appendChild(sp); tr.appendChild(rec);
         const st = document.createElement('td'); st.className = 'num'; st.textContent = b ? `${(100 * b.bankroll_fraction).toFixed(1)}% of bankroll` : '—'; tr.appendChild(st);
@@ -626,6 +664,153 @@
       t.appendChild(tb); box.appendChild(t);
     }
     
+    // ---- today's plays: the staked bets only, with the stake in dollars for a bankroll you type once
+    function buildPlays(meta, container) {
+      const box = document.createElement('div'); box.className = 'plays';
+      const rows = ((meta && meta.sheet) || []).filter(b => b.bankroll_fraction > 0).sort((a, b) => b.bankroll_fraction - a.bankroll_fraction);
+      const head = document.createElement('div'); head.className = 'plays-head';
+      const title = document.createElement('span'); title.className = 'plays-title'; head.appendChild(title);
+      const label = document.createElement('label'); label.textContent = 'Bankroll $ '; head.appendChild(label);
+      const input = document.createElement('input'); input.type = 'number'; input.min = '0'; input.step = '50'; input.inputMode = 'decimal';
+      let bankroll = 1000;
+      try { const v = parseFloat(localStorage.getItem('bball_bankroll')); if (isFinite(v) && v > 0) bankroll = v; } catch (e) {}
+      input.value = String(bankroll); label.appendChild(input); box.appendChild(head);
+      const table = document.createElement('table'); box.appendChild(table);
+      const note = document.createElement('div'); note.className = 'note'; box.appendChild(note);
+      const money = v => '$' + v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+      const render = () => {
+        const exposure = rows.reduce((s, b) => s + b.bankroll_fraction, 0);
+        title.textContent = rows.length ? `Today's plays: ${rows.length} staked, ${(100 * exposure).toFixed(1)}% of bankroll (${money(bankroll * exposure)})` : "Today's plays: nothing staked";
+        table.replaceChildren();
+        if (!rows.length) { note.textContent = 'No bet cleared the staking rules today. The sheet below still shows every BET and LEAN signal.'; return; }
+        const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Model</th><th class="num">Stake</th></tr>'; table.appendChild(th);
+        const tb = document.createElement('tbody');
+        rows.forEach(b => {
+          const tr = document.createElement('tr');
+          const odds = (b.odds > 0 ? '+' : '') + b.odds;
+          const cells = [[`${b.market}: ${b.bet}`, false], [b.game, false], [odds, true], [b.open || '—', true], [`${(100 * b.probability).toFixed(1)}%`, true]];
+          cells.forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
+          const st = document.createElement('td'); st.className = 'num stake'; st.textContent = `${money(bankroll * b.bankroll_fraction)} (${(100 * b.bankroll_fraction).toFixed(1)}%)`; tr.appendChild(st);
+          tb.appendChild(tr);
+        });
+        table.appendChild(tb);
+        note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above; the figure is remembered in this browser only. Open is the first DraftKings line the hourly pull saw for the game.';
+      };
+      input.addEventListener('input', () => { const v = parseFloat(input.value); if (isFinite(v) && v >= 0) { bankroll = v; try { localStorage.setItem('bball_bankroll', String(v)); } catch (e) {} render(); } });
+      render();
+      const anchor = sheetState.box || container;
+      anchor.parentNode.insertBefore(box, anchor);
+    }
+
+    // ---- the season record: every graded signal from the ledger, staked bets first
+    function buildRecord(rec, container) {
+      const sec = document.createElement('div'); sec.className = 'record';
+      const h = document.createElement('h2'); h.textContent = 'Season record'; sec.appendChild(h);
+      const sub = document.createElement('p'); sub.className = 'sub'; sub.textContent = 'Every BET and LEAN signal is graded the next morning at the odds on the sheet. Units are flat 1 per bet. CLV is the closing-line value: points our number beat the DraftKings close by (spread, total) or probability points (moneyline).'; sec.appendChild(sub);
+      const tabs = document.createElement('div'); tabs.className = 'tabs'; sec.appendChild(tabs);
+      const body = document.createElement('div'); sec.appendChild(body);
+      const seasons = rec.seasons;
+      const show = (i) => {
+        tabs.querySelectorAll('button').forEach((b, j) => b.classList.toggle('active', i === j));
+        body.replaceChildren(); renderSeason(seasons[i], body);
+      };
+      seasons.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = s.label; b.addEventListener('click', () => show(i)); tabs.appendChild(b); });
+      show(0);
+      container.parentNode.appendChild(sec);
+    }
+    function fmtUnits(u) { return (u >= 0 ? '+' : '') + u.toFixed(1); }
+    function pctOrDash(v, d) { return (v === null || v === undefined) ? '—' : `${(100 * v).toFixed(d === undefined ? 1 : d)}%`; }
+    function dateLabel(d) { const s = String(d); return `${s.slice(4, 6)}/${s.slice(6, 8)}`; }
+    function renderSeason(s, body) {
+      const staked = s.table.staked.all;
+      const last = s.series.length ? s.series[s.series.length - 1] : null;
+      const stats = document.createElement('div'); stats.className = 'stat-row';
+      [[staked.bets ? `${staked.wins}-${staked.losses}${staked.pushes ? '-' + staked.pushes : ''}` : '0', 'staked record'],
+       [pctOrDash(staked.win_rate), 'win rate'], [staked.bets ? fmtUnits(staked.units) : '—', 'units (flat)'], [pctOrDash(staked.roi), 'return on stake'],
+       [last ? `${last.bankroll.toFixed(2)}x` : '—', 'bankroll, sheet fractions'], [staked.clv === null ? '—' : (staked.clv >= 0 ? '+' : '') + staked.clv.toFixed(2), `CLV (n ${staked.clv_n})`],
+       [staked.pending ? String(staked.pending) : '0', 'pending']]
+        .forEach(([v, k]) => { const d = document.createElement('div'); d.className = 'stat'; const dv = document.createElement('div'); dv.className = 'v'; dv.textContent = v; const dk = document.createElement('div'); dk.className = 'k'; dk.textContent = k; d.appendChild(dv); d.appendChild(dk); stats.appendChild(d); });
+      body.appendChild(stats);
+      const src = document.createElement('p'); src.className = 'sub';
+      src.textContent = (s.source === 'live' ? 'Live sheets' : s.source === 'replay' ? 'Replay: game-day sheets re-run after the fact on the archived pregame odds pull, graded like live sheets (not bets placed)' : 'Paper: the 2025-26 season replayed through the deployed rules at DraftKings closing lines (a backtest, not bets placed)') + (s.first_date ? `, ${String(s.first_date).slice(0, 4)}-${String(s.first_date).slice(4, 6)}-${String(s.first_date).slice(6, 8)} to ${String(s.last_date).slice(0, 4)}-${String(s.last_date).slice(4, 6)}-${String(s.last_date).slice(6, 8)}` : '') + '.';
+      body.appendChild(src);
+      if (s.series.length > 1) { body.appendChild(sectionTitle('Cumulative units')); body.appendChild(unitsChart(s.series)); }
+      body.appendChild(sectionTitle('By market and tier'));
+      body.appendChild(wrap(blockTable([['Staked', 'staked', 'all', true], ['Staked: spread', 'staked', 'spread'], ['Staked: total', 'staked', 'total'], ['Staked: moneyline', 'staked', 'moneyline'],
+                                        ['All BET signals', 'BET', 'all'], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
+                                        ['LEAN signals', 'LEAN', 'all']].map(([name, g, m, hl]) => [name, s.table[g][m], hl]))));
+      const months = Object.keys(s.by_month.staked || {});
+      if (months.length > 1) { body.appendChild(sectionTitle('Staked bets by month')); body.appendChild(wrap(blockTable(months.map(m => [`${m.slice(0, 4)}-${m.slice(4, 6)}`, s.by_month.staked[m], false])))); }
+      if (s.reliability && s.reliability.length) {
+        body.appendChild(sectionTitle('Are the probabilities honest? (BET + LEAN signals)'));
+        const t = document.createElement('table'); t.innerHTML = '<thead><tr><th>Sheet probability</th><th class="num">Bets</th><th class="num">Mean p</th><th class="num">Won</th></tr></thead>';
+        const tb = document.createElement('tbody');
+        s.reliability.forEach(r => { const tr = document.createElement('tr'); [[r.bin, false], [r.n, true], [pctOrDash(r.mean_p), true], [pctOrDash(r.realized), true]].forEach(([v, n]) => { const td = document.createElement('td'); if (n) td.className = 'num'; td.textContent = v; tr.appendChild(td); }); tb.appendChild(tr); });
+        t.appendChild(tb); body.appendChild(wrap(t));
+      }
+      if (s.recent && s.recent.length) {
+        body.appendChild(sectionTitle('Most recent graded signals'));
+        const t = document.createElement('table'); t.innerHTML = '<thead><tr><th>Date</th><th>Bet</th><th class="num">Odds</th><th>Tier</th><th class="num">Stake</th><th>Result</th><th class="num">Units</th><th class="num">CLV</th></tr></thead>';
+        const tb = document.createElement('tbody');
+        s.recent.slice(0, 15).forEach(r => {
+          const tr = document.createElement('tr'); if (r.staked) tr.className = 'hl';
+          const cells = [[dateLabel(r.date), false], [`${r.market}: ${r.bet}`, false], [(r.odds > 0 ? '+' : '') + r.odds, true], [r.tier, false], [r.staked ? `${(100 * r.fraction).toFixed(1)}%` : '—', true], [r.result, false], [r.units === null ? '—' : fmtUnits(r.units), true], [(r.clv === null || r.clv === undefined) ? '—' : (r.clv >= 0 ? '+' : '') + r.clv.toFixed(2), true]];
+          cells.forEach(([v, n], i) => { const td = document.createElement('td'); if (n) td.className = 'num'; if (i === 6 && r.units !== null) td.classList.add(r.units >= 0 ? 'pos' : 'neg'); td.textContent = v; tr.appendChild(td); });
+          tb.appendChild(tr);
+        });
+        t.appendChild(tb); body.appendChild(wrap(t));
+      }
+    }
+    function sectionTitle(t) { const h = document.createElement('h3'); h.textContent = t; return h; }
+    function wrap(t) { const d = document.createElement('div'); d.className = 'wrap'; d.appendChild(t); return d; }
+    function blockTable(rows) {
+      const t = document.createElement('table'); t.innerHTML = '<thead><tr><th>Group</th><th class="num">Bets</th><th class="num">W-L-P</th><th class="num">Win %</th><th class="num">Units</th><th class="num">ROI</th><th class="num">CLV</th></tr></thead>';
+      const tb = document.createElement('tbody');
+      rows.forEach(([name, b, hl]) => {
+        if (!b) return;
+        const tr = document.createElement('tr'); if (hl) tr.className = 'hl';
+        const cells = [[name, false], [b.bets, true], [`${b.wins}-${b.losses}-${b.pushes}`, true], [pctOrDash(b.win_rate), true], [b.bets ? fmtUnits(b.units) : '—', true], [pctOrDash(b.roi), true], [b.clv === null ? '—' : `${b.clv >= 0 ? '+' : ''}${b.clv.toFixed(2)} (n ${b.clv_n})`, true]];
+        cells.forEach(([v, n], i) => { const td = document.createElement('td'); if (n) td.className = 'num'; if (i === 4 && b.bets) td.classList.add(b.units >= 0 ? 'pos' : 'neg'); td.textContent = v; tr.appendChild(td); });
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); return t;
+    }
+    // cumulative flat units, staked bets and every BET signal, one y axis, hover readout
+    function unitsChart(series) {
+      const W = 960, H = 300, L = 52, R = 16, T = 18, B = 34;
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, class: 'chart', role: 'img', 'aria-label': 'cumulative units by date' });
+      const n = series.length;
+      const ys = series.flatMap(p => [p.staked_units, p.bet_units]);
+      let lo = Math.min(0, ...ys), hi = Math.max(0, ...ys); if (hi - lo < 1) { hi = lo + 1; }
+      const pad = (hi - lo) * 0.08; lo -= pad; hi += pad;
+      const x = i => L + (n === 1 ? 0 : i * (W - L - R) / (n - 1));
+      const y = v => T + (hi - v) * (H - T - B) / (hi - lo);
+      const step = (hi - lo) > 200 ? 50 : (hi - lo) > 80 ? 20 : (hi - lo) > 30 ? 10 : (hi - lo) > 10 ? 5 : 1;
+      for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+        svgEl('line', { x1: L, x2: W - R, y1: y(v), y2: y(v), class: v === 0 ? 'zero' : 'grid' }, svg);
+        svgText(L - 6, y(v) + 4, (v > 0 ? '+' : '') + v, null, 'end', svg);
+      }
+      svgEl('line', { x1: L, x2: W - R, y1: H - B, y2: H - B, class: 'axis' }, svg);
+      const ticks = Math.min(n, 8);
+      for (let k = 0; k < ticks; k++) { const i = Math.round(k * (n - 1) / Math.max(ticks - 1, 1)); svgText(x(i), H - B + 16, dateLabel(series[i].date), null, 'middle', svg); }
+      const path = (key, color, width) => {
+        const d = series.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p[key]).toFixed(1)}`).join(' ');
+        svgEl('path', { d, fill: 'none', stroke: color, 'stroke-width': width, 'stroke-linejoin': 'round' }, svg);
+      };
+      path('bet_units', '#9fb3c8', 2); path('staked_units', '#1b7f3b', 2.5);
+      const lastP = series[n - 1];
+      svgText(x(n - 1) - 4, y(lastP.staked_units) - 8, `staked ${fmtUnits(lastP.staked_units)} (${lastP.staked_bets} bets)`, null, 'end', svg).setAttribute('style', 'fill:#1b7f3b;font-weight:700');
+      svgText(x(n - 1) - 4, y(lastP.bet_units) + (lastP.bet_units >= lastP.staked_units ? -8 : 16), `all BET signals ${fmtUnits(lastP.bet_units)} (${lastP.bet_bets})`, null, 'end', svg).setAttribute('style', 'fill:#5b6b7f');
+      const hover = svgEl('line', { x1: 0, x2: 0, y1: T, y2: H - B, class: 'axis', style: 'display:none' }, svg);
+      const dot = svgEl('circle', { r: 4, fill: '#1b7f3b', style: 'display:none' }, svg);
+      const hit = svgEl('rect', { x: L, y: T, width: W - L - R, height: H - T - B, fill: 'transparent' }, svg);
+      const at = evt => { const r = svg.getBoundingClientRect(); const px = (evt.clientX - r.left) * W / r.width; return Math.max(0, Math.min(n - 1, Math.round((px - L) * (n - 1) / (W - L - R)))); };
+      hit.addEventListener('pointermove', evt => { const i = at(evt); const p = series[i]; hover.setAttribute('x1', x(i)); hover.setAttribute('x2', x(i)); hover.style.display = ''; dot.setAttribute('cx', x(i)); dot.setAttribute('cy', y(p.staked_units)); dot.style.display = '';
+        showTip(evt, `<b>${dateLabel(p.date)}</b><br>staked: ${fmtUnits(p.staked_units)} units after ${p.staked_bets} bets<br>all BET signals: ${fmtUnits(p.bet_units)} after ${p.bet_bets}<br>bankroll: ${p.bankroll.toFixed(2)}x`); });
+      hit.addEventListener('pointerleave', () => { hover.style.display = 'none'; dot.style.display = 'none'; hideTip(); });
+      return svg;
+    }
+
     // ---- filter row: show all games, or only the ones with a BET / LEAN signal in any market
     function buildFilters(container) {
       const row = document.createElement('div'); row.className = 'filters';
