@@ -50,7 +50,7 @@
 
     <h2>The workflow</h2>
     <figure style="margin:0">
-      <div class="diagram"><svg viewBox="0 0 1120 1000" role="img" aria-label="Flow from pregame inputs through the IC hedge model, the pace-form adjustment, the 10,000-member ensemble generation and one Oracle pass to a score ensemble whose mean is the forecast, calibration and pregame shifts, the The book's line, three per-market decision layers with staked rules and unstaked candidates, quarter-Kelly sizing with caps, and the sheet, ledger and monthly refit that feed coefficients back." xmlns="http://www.w3.org/2000/svg">
+      <div class="diagram"><svg viewBox="0 0 1120 840" role="img" aria-label="Flow from pregame inputs through the IC hedge model, the pace-form adjustment, the 10,000-member ensemble generation and the Oracle to a score ensemble whose mean is the forecast, calibration and pregame shifts, the The book's line, the three staked rules, quarter-Kelly sizing with caps, and the sheet, ledger and monthly refit that feed coefficients back." xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
           <marker id="arr-stake" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--stake)"/></marker>
@@ -63,20 +63,20 @@
             <rect x="0" y="32" width="1120" height="176" rx="4"/>
             <rect x="0" y="228" width="1120" height="96" rx="4"/>
             <rect x="0" y="344" width="1120" height="88" rx="4"/>
-            <rect x="0" y="452" width="1120" height="268" rx="4"/>
-            <rect x="0" y="740" width="1120" height="92" rx="4"/>
-            <rect x="0" y="852" width="1120" height="112" rx="4"/>
+            <rect x="0" y="452" width="1120" height="140" rx="4"/>
+            <rect x="0" y="604" width="1120" height="96" rx="4"/>
+            <rect x="0" y="712" width="1120" height="112" rx="4"/>
           </g>
           <g font-size="11" font-weight="600" fill="var(--ink-3)" letter-spacing="0.08">
             <text x="14" y="50">1 · FORECAST — no market yet</text>
             <text x="14" y="246">2 · PREGAME ADJUSTMENTS — no market yet</text>
             <text x="14" y="362">3 · THE MARKET ENTERS</text>
             <text x="14" y="470">4 · DECIDE EACH MARKET</text>
-            <text x="14" y="758">5 · SIZE AND CAP</text>
-            <text x="14" y="870">6 · PUBLISH, GRADE, REFIT</text>
+            <text x="14" y="620">5 · SIZE AND CAP</text>
+            <text x="14" y="728">6 · PUBLISH, GRADE, REFIT</text>
           </g>
 
-          <!-- row 1: inputs -> IC hedge model -> pace form -> ensemble generation -> Oracle once -> the score ensemble is the forecast -->
+          <!-- row 1: inputs -> IC hedge model -> pace form -> ensemble generation -> Oracle -> the score ensemble is the forecast -->
           <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
             <rect x="30" y="70" width="170" height="64" rx="4"/>
             <rect x="230" y="70" width="190" height="64" rx="4"/>
@@ -90,7 +90,7 @@
             <text x="325" y="94" text-anchor="middle">IC hedge model</text>
             <text x="525" y="94" text-anchor="middle">Pace form</text>
             <text x="730" y="94" text-anchor="middle">Ensemble generation</text>
-            <text x="975" y="94" text-anchor="middle">Oracle (frozen), once</text>
+            <text x="975" y="94" text-anchor="middle">Oracle</text>
             <text x="860" y="176" text-anchor="middle">Score ensemble: 10,000 predictions per game</text>
           </g>
           <g fill="var(--ink-2)" font-size="11">
@@ -183,96 +183,73 @@
             <text x="926" y="488" text-anchor="start">P(win) vs the price</text>
           </g>
 
-          <!-- row 4: spread column -->
+          <!-- row 4: the three staked rules, exactly what is live -->
           <g stroke="var(--stake)" stroke-width="2" fill="var(--stake-soft)">
             <rect x="40" y="500" width="320" height="56" rx="4"/>
             <rect x="400" y="500" width="320" height="56" rx="4"/>
             <rect x="760" y="500" width="320" height="56" rx="4"/>
           </g>
-          <g stroke="var(--cand)" stroke-width="1.5" stroke-dasharray="6 4" fill="var(--panel)">
-            <rect x="40" y="576" width="320" height="48" rx="4"/>
-            <rect x="40" y="644" width="320" height="48" rx="4"/>
-            <rect x="400" y="576" width="320" height="48" rx="4"/>
-            <rect x="760" y="576" width="320" height="48" rx="4"/>
-          </g>
           <g font-weight="600" font-size="13">
             <text x="200" y="521" text-anchor="middle">SPREAD · cover model</text>
             <text x="560" y="521" text-anchor="middle">TOTAL · under rule</text>
             <text x="920" y="521" text-anchor="middle">MONEYLINE · market-shrink rule</text>
-            <text x="200" y="595" text-anchor="middle" fill="var(--cand)">Gradient-boosted regression</text>
-            <text x="200" y="663" text-anchor="middle" fill="var(--cand)">Agreement tier</text>
-            <text x="560" y="595" text-anchor="middle" fill="var(--cand)">Neutral-floor under</text>
-            <text x="920" y="595" text-anchor="middle" fill="var(--cand)">Gradient-boosted classifier</text>
           </g>
           <g fill="var(--ink-2)" font-size="11">
             <text x="200" y="540" text-anchor="middle">P(cover) from the lean · BET above a cutoff</text>
             <text x="560" y="540" text-anchor="middle">under only, in the game profile where it has held</text>
             <text x="920" y="540" text-anchor="middle">P(win) pulled toward the market · BET on edge</text>
-            <text x="200" y="612" text-anchor="middle">predicted market error, calibrated to P(cover)</text>
-            <text x="200" y="680" text-anchor="middle">both spread layers agree</text>
-            <text x="560" y="612" text-anchor="middle">neutral-site totals</text>
-            <text x="920" y="612" text-anchor="middle">a second win probability, picked by edge</text>
           </g>
           <g font-size="10.5" fill="var(--ink-3)">
-            <text x="560" y="663" text-anchor="middle">overs: tiered and shown, never staked</text>
+            <text x="560" y="574" text-anchor="middle">overs: tiered and shown, never staked</text>
           </g>
 
           <!-- row 5 -->
           <g stroke="var(--stake)" stroke-width="2" fill="var(--stake-soft)">
-            <rect x="380" y="766" width="360" height="62" rx="4"/>
+            <rect x="380" y="630" width="360" height="62" rx="4"/>
           </g>
-          <g font-weight="600" font-size="13"><text x="560" y="786" text-anchor="middle">Stake</text></g>
+          <g font-weight="600" font-size="13"><text x="560" y="650" text-anchor="middle">Stake</text></g>
           <g fill="var(--ink-2)" font-size="11">
-            <text x="560" y="804" text-anchor="middle">fractional Kelly on the probability</text>
-            <text x="560" y="818" text-anchor="middle">per-bet, per-game and daily caps</text>
+            <text x="560" y="668" text-anchor="middle">fractional Kelly on the probability</text>
+            <text x="560" y="682" text-anchor="middle">per-bet, per-game and daily caps</text>
           </g>
           <g stroke="var(--stake)" stroke-width="2" fill="none" marker-end="url(#arr-stake)">
-            <path d="M360,528 L372,528 L372,797 L380,797"/>
-            <path d="M400,528 L388,528 L388,748 L560,748 L560,766"/>
-            <path d="M760,528 L748,528 L748,797 L740,797"/>
+            <path d="M200,556 L200,604 L372,604 L372,661 L380,661"/>
+            <path d="M560,556 L560,630"/>
+            <path d="M920,556 L920,604 L748,604 L748,661 L740,661"/>
           </g>
 
           <!-- row 6 -->
           <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
-            <rect x="40" y="890" width="300" height="56" rx="4"/>
-            <rect x="400" y="890" width="320" height="56" rx="4"/>
-            <rect x="760" y="890" width="320" height="56" rx="4"/>
+            <rect x="40" y="748" width="300" height="56" rx="4"/>
+            <rect x="400" y="748" width="320" height="56" rx="4"/>
+            <rect x="760" y="748" width="320" height="56" rx="4"/>
           </g>
           <g font-weight="600" font-size="13">
-            <text x="190" y="911" text-anchor="middle">Sheet and site</text>
-            <text x="560" y="911" text-anchor="middle">Ledger, next morning</text>
-            <text x="920" y="911" text-anchor="middle">Monthly refit</text>
+            <text x="190" y="769" text-anchor="middle">Sheet and site</text>
+            <text x="560" y="769" text-anchor="middle">Ledger, next morning</text>
+            <text x="920" y="769" text-anchor="middle">Monthly refit</text>
           </g>
           <g fill="var(--ink-2)" font-size="11">
-            <text x="190" y="929" text-anchor="middle">plays with dollar stakes, full sheet, cards, opens</text>
-            <text x="560" y="929" text-anchor="middle">grades vs finals, closing-line value; candidates too</text>
-            <text x="920" y="929" text-anchor="middle">backtest on the season's own lines → coefficients</text>
+            <text x="190" y="787" text-anchor="middle">plays with dollar stakes, full sheet, cards, opens</text>
+            <text x="560" y="787" text-anchor="middle">grades every bet vs finals, closing-line value</text>
+            <text x="920" y="787" text-anchor="middle">backtest on the season's own lines → coefficients</text>
           </g>
           <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)">
-            <path d="M380,797 L190,797 L190,890"/>
-            <path d="M340,918 L400,918"/>
-            <path d="M720,918 L760,918"/>
-            <path d="M1080,940 L1108,940 L1108,466 L1086,466"/>
-          </g>
-          <g stroke="var(--cand)" stroke-width="1.5" stroke-dasharray="6 4" fill="none" marker-end="url(#arr-cand)">
-            <path d="M40,668 L26,668 L26,878 L500,878 L500,890"/>
-            <path d="M560,624 L560,660"/>
-            <path d="M1080,600 L1094,600 L1094,878 L620,878 L620,890"/>
+            <path d="M400,692 L400,728 L190,728 L190,748"/>
+            <path d="M340,776 L400,776"/>
+            <path d="M720,776 L760,776"/>
+            <path d="M1080,776 L1108,776 L1108,466 L1086,466"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
-            <text x="286" y="791" text-anchor="middle">stakes</text>
-            <text x="370" y="912" text-anchor="middle">signals</text>
-            <text x="740" y="912" text-anchor="middle">results</text>
-            <text x="1112" y="640" text-anchor="start" transform="rotate(90 1112 640)">new coefficients</text>
-          </g>
-          <g font-size="10.5" fill="var(--cand)">
-            <text x="120" y="874" text-anchor="middle">candidates logged, unstaked</text>
-            <text x="880" y="874" text-anchor="middle">candidates logged, unstaked</text>
+            <text x="296" y="724" text-anchor="middle">stakes</text>
+            <text x="370" y="770" text-anchor="middle">signals</text>
+            <text x="740" y="770" text-anchor="middle">results</text>
+            <text x="1112" y="560" text-anchor="start" transform="rotate(90 1112 560)">new coefficients</text>
           </g>
         </g>
       </svg></div>
-      <div class="legend"><span class="stake">staked path</span><span class="cand">candidate layer: shown and graded, not staked</span><span>forecast and plumbing</span></div>
-      <figcaption class="muted" style="margin:.6rem .25rem 0">Each market has one staked rule and one or two candidate layers running beside it. All of them are graded against final scores and the closing line, and the results feed a monthly refit of the decision coefficients.</figcaption>
+      <div class="legend"><span class="stake">staked path</span><span>forecast and plumbing</span></div>
+      <figcaption class="muted" style="margin:.6rem .25rem 0">Each market has one staked rule. Every bet is graded against the final score and the closing line, and the results feed a monthly refit of the decision coefficients.</figcaption>
     </figure>
 
     <h2>The forecast</h2>
@@ -280,7 +257,7 @@
       <ul>
         <li><strong>Inputs are strictly pregame.</strong> Season-to-date team statistics, roster context, rest, site and the point in the season, built so that nothing from the game itself or from later games can leak in.</li>
         <li><strong>An IC hedge model</strong> adjusts each team's season-to-date profile toward what the matchup implies, with bounded moves. It predicts the inputs the game will be played with, not the score.</li>
-        <li><strong>An ensemble of ten thousand members</strong> is generated around those hedged profiles, after a recent-tempo adjustment, within each team's recent variability. A frozen scoring model scores every member once. The ensemble's mean is the forecast on the sheet and its shares are the probabilities; there is no separate point forecast.</li>
+        <li><strong>An ensemble of ten thousand members</strong> is generated around those hedged profiles, after a recent-tempo adjustment, within each team's recent variability. The scoring model scores every member. The ensemble's mean is the forecast on the sheet and its shares are the probabilities; there is no separate point forecast.</li>
         <li><strong>Calibration and pregame adjustments</strong> correct the score level through the season and account for who sat a team's last game and for postseason back-to-backs.</li>
       </ul>
     </div>
@@ -288,7 +265,7 @@
     <h2>The decision</h2>
     <div class="card">
       <ul>
-        <li><strong>Spreads.</strong> A fitted cover model turns the gap between our margin and the spread into a probability of covering, and a bet is placed only above a cutoff. A gradient-boosted second layer runs beside it and the two are compared daily.</li>
+        <li><strong>Spreads.</strong> A fitted cover model turns the gap between our margin and the spread into a probability of covering, and a bet is placed only above a cutoff.</li>
         <li><strong>Totals.</strong> Bets are placed on the under only, in the specific game profile where the forecast has beaten the line across multiple seasons. Overs are shown but never staked.</li>
         <li><strong>Moneylines.</strong> The model's win probability is pulled part of the way toward the market's own probability before any edge is counted, so only disagreements the model is entitled to keep become bets.</li>
         <li><strong>Sizing.</strong> Fractional Kelly on the calibrated probability, with per-bet, per-game and daily caps. A confidence score from 0 to 100 accompanies every bet: 0 is break-even at the price, 100 is the best hit rate the evidence supports.</li>
@@ -300,7 +277,7 @@
       <ul>
         <li>Every rule and every coefficient was validated on seasons the model had not seen, against closing lines, before it was allowed to stake anything.</li>
         <li>Every signal on the sheet, staked or not, is graded the next morning against the final score and the closing line. The season record page is generated from that ledger, not by hand.</li>
-        <li>Candidate layers earn promotion only by beating the staked rule on live lines over a season, never on a backtest alone.</li>
+        <li>Any change to a rule has to beat the current one on live lines over a season, never on a backtest alone.</li>
       </ul>
       <p class="muted">Specific thresholds, coefficients, feature definitions and model files are not published.</p>
     </div>
