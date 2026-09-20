@@ -50,202 +50,126 @@
 
     <h2>The workflow</h2>
     <figure style="margin:0">
-      <div class="diagram"><svg viewBox="0 0 1120 840" role="img" aria-label="Flow from pregame inputs through the IC hedge model, the pace-form adjustment, the 10,000-member ensemble generation and the Oracle to a score ensemble whose mean is the forecast, calibration and pregame shifts, the The book's line, the three staked rules, quarter-Kelly sizing with caps, and the sheet, ledger and monthly refit that feed coefficients back." xmlns="http://www.w3.org/2000/svg">
+      <div class="diagram"><svg viewBox="0 0 1180 900" role="img" aria-label="Flow from pregame inputs through the IC hedge model, pace form, ensemble generation and the Oracle to the score ensemble; calibration and pregame shifts; the book's line; the three staked rules; fractional Kelly sizing with caps; sheet, ledger and monthly refit feeding coefficients back." xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
           <marker id="arr-stake" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--stake)"/></marker>
-          <marker id="arr-cand" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--cand)"/></marker>
         </defs>
-        <g font-family="IBM Plex Sans, system-ui, sans-serif" font-size="12" fill="currentColor">
-
-          <!-- stage bands -->
-          <g fill="var(--band)" stroke="none">
-            <rect x="0" y="32" width="1120" height="176" rx="4"/>
-            <rect x="0" y="228" width="1120" height="96" rx="4"/>
-            <rect x="0" y="344" width="1120" height="88" rx="4"/>
-            <rect x="0" y="452" width="1120" height="140" rx="4"/>
-            <rect x="0" y="604" width="1120" height="96" rx="4"/>
-            <rect x="0" y="712" width="1120" height="112" rx="4"/>
-          </g>
-          <g font-size="11" font-weight="600" fill="var(--ink-3)" letter-spacing="0.08">
-            <text x="14" y="50">1 · FORECAST — no market yet</text>
-            <text x="14" y="246">2 · PREGAME ADJUSTMENTS — no market yet</text>
-            <text x="14" y="362">3 · THE MARKET ENTERS</text>
-            <text x="14" y="470">4 · DECIDE EACH MARKET</text>
-            <text x="14" y="620">5 · SIZE AND CAP</text>
-            <text x="14" y="728">6 · PUBLISH, GRADE, REFIT</text>
-          </g>
-
-          <!-- row 1: inputs -> IC hedge model -> pace form -> ensemble generation -> Oracle -> the score ensemble is the forecast -->
-          <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
-            <rect x="30" y="70" width="170" height="64" rx="4"/>
-            <rect x="230" y="70" width="190" height="64" rx="4"/>
-            <rect x="450" y="70" width="150" height="64" rx="4"/>
-            <rect x="630" y="70" width="200" height="64" rx="4"/>
-            <rect x="860" y="70" width="230" height="64" rx="4"/>
-            <rect x="630" y="156" width="460" height="42" rx="4"/>
-          </g>
-          <g font-weight="600" font-size="13">
-            <text x="115" y="94" text-anchor="middle">Pregame inputs</text>
-            <text x="325" y="94" text-anchor="middle">IC hedge model</text>
-            <text x="525" y="94" text-anchor="middle">Pace form</text>
-            <text x="730" y="94" text-anchor="middle">Ensemble generation</text>
-            <text x="975" y="94" text-anchor="middle">Oracle</text>
-            <text x="860" y="176" text-anchor="middle">Score ensemble: 10,000 predictions per game</text>
-          </g>
-          <g fill="var(--ink-2)" font-size="11">
-            <text x="115" y="112" text-anchor="middle">season-to-date stats, roster context,</text>
-            <text x="115" y="126" text-anchor="middle">rest, site, time of season</text>
-            <text x="325" y="112" text-anchor="middle">matchup-adjusted profiles:</text>
-            <text x="325" y="126" text-anchor="middle">both teams and pace, bounded</text>
-            <text x="525" y="112" text-anchor="middle">pace column moved to</text>
-            <text x="525" y="126" text-anchor="middle">each team's recent tempo</text>
-            <text x="730" y="112" text-anchor="middle">10,000 stat sets jittered around</text>
-            <text x="730" y="126" text-anchor="middle">the profiles, within recent variability</text>
-            <text x="975" y="112" text-anchor="middle">scores every stat set:</text>
-            <text x="975" y="126" text-anchor="middle">a margin and a total each</text>
-            <text x="860" y="190" text-anchor="middle">its mean is the forecast on the sheet; its shares are the probabilities</text>
-          </g>
-          <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)">
-            <path d="M200,102 L230,102"/>
-            <path d="M420,102 L450,102"/>
-            <path d="M600,102 L630,102"/>
-            <path d="M830,102 L860,102"/>
-            <path d="M975,134 L975,156"/>
-          </g>
-          <g font-size="10.5" fill="var(--ink-2)">
-            <text x="215" y="96" text-anchor="middle">profiles</text>
-            <text x="435" y="96" text-anchor="middle">hedged</text>
-            <text x="615" y="96" text-anchor="middle">profiles</text>
-            <text x="845" y="96" text-anchor="middle">10,000</text>
-          </g>
-
-          <!-- row 2 boxes -->
-          <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
-            <rect x="300" y="262" width="200" height="52" rx="4"/>
-            <rect x="540" y="262" width="200" height="52" rx="4"/>
-            <rect x="780" y="262" width="200" height="52" rx="4"/>
-          </g>
-          <g font-weight="600" font-size="13">
-            <text x="400" y="283" text-anchor="middle">Score calibration</text>
-            <text x="640" y="283" text-anchor="middle">Availability shift</text>
-            <text x="880" y="283" text-anchor="middle">Fatigue shift</text>
-          </g>
-          <g fill="var(--ink-2)" font-size="11">
-            <text x="400" y="301" text-anchor="middle">running correction, on the ensemble</text>
-            <text x="640" y="301" text-anchor="middle">who sat the last game</text>
-            <text x="880" y="301" text-anchor="middle">postseason back-to-backs</text>
-          </g>
-          <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)">
-            <path d="M700,198 L700,230 L400,230 L400,262"/>
-            <path d="M500,288 L540,288"/>
-            <path d="M740,288 L780,288"/>
-          </g>
-          <g font-size="10.5" fill="var(--ink-2)">
-            <text x="520" y="282" text-anchor="middle">both</text>
-            <text x="760" y="282" text-anchor="middle">total</text>
-                                  </g>
-
-          <!-- row 3 -->
-          <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
-            <rect x="300" y="378" width="200" height="44" rx="4"/>
-            <rect x="540" y="378" width="200" height="44" rx="4"/>
-          </g>
-          <g font-weight="600" font-size="13">
-            <text x="400" y="396" text-anchor="middle">Odds pulls through the day</text>
-            <text x="640" y="396" text-anchor="middle">The book's line</text>
-          </g>
-          <g fill="var(--ink-2)" font-size="11">
-            <text x="400" y="412" text-anchor="middle">today's slate only, pregame only</text>
-            <text x="640" y="412" text-anchor="middle">spread, total, moneyline, opener</text>
-          </g>
-          <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)">
-            <path d="M500,400 L540,400"/>
-          </g>
-          <g font-size="10.5" fill="var(--ink-2)">
-            <text x="886" y="372" text-anchor="start">the adjusted ensemble:</text>
-            <text x="886" y="385" text-anchor="start">mean margin, mean total,</text>
-            <text x="886" y="398" text-anchor="start">P(win), P(cover), P(under)</text>
-          </g>
-
-          <!-- forecast + line bus into row 4 -->
-          <g stroke="currentColor" stroke-width="1.2" fill="none">
-            <path d="M880,314 L880,440"/>
-            <path d="M640,422 L640,440"/>
-            <path d="M200,440 L920,440"/>
-            <path d="M200,440 L200,498" marker-end="url(#arr)"/>
-            <path d="M560,440 L560,498" marker-end="url(#arr)"/>
-            <path d="M920,440 L920,498" marker-end="url(#arr)"/>
-          </g>
-          <g font-size="10.5" fill="var(--ink-2)">
-            <text x="206" y="488" text-anchor="start">lean = ensemble mean margin − spread</text>
-            <text x="566" y="488" text-anchor="start">lean = total − line, pace profile</text>
-            <text x="926" y="488" text-anchor="start">P(win) vs the price</text>
-          </g>
-
-          <!-- row 4: the three staked rules, exactly what is live -->
-          <g stroke="var(--stake)" stroke-width="2" fill="var(--stake-soft)">
-            <rect x="40" y="500" width="320" height="56" rx="4"/>
-            <rect x="400" y="500" width="320" height="56" rx="4"/>
-            <rect x="760" y="500" width="320" height="56" rx="4"/>
-          </g>
-          <g font-weight="600" font-size="13">
-            <text x="200" y="521" text-anchor="middle">SPREAD · cover model</text>
-            <text x="560" y="521" text-anchor="middle">TOTAL · under rule</text>
-            <text x="920" y="521" text-anchor="middle">MONEYLINE · market-shrink rule</text>
-          </g>
-          <g fill="var(--ink-2)" font-size="11">
-            <text x="200" y="540" text-anchor="middle">P(cover) from the lean · BET above a cutoff</text>
-            <text x="560" y="540" text-anchor="middle">under only, in the game profile where it has held</text>
-            <text x="920" y="540" text-anchor="middle">P(win) pulled toward the market · BET on edge</text>
-          </g>
-          <g font-size="10.5" fill="var(--ink-3)">
-            <text x="548" y="574" text-anchor="end">overs: tiered and shown, never staked</text>
-          </g>
-
-          <!-- row 5 -->
-          <g stroke="var(--stake)" stroke-width="2" fill="var(--stake-soft)">
-            <rect x="380" y="630" width="360" height="62" rx="4"/>
-          </g>
-          <g font-weight="600" font-size="13"><text x="560" y="650" text-anchor="middle">Stake</text></g>
-          <g fill="var(--ink-2)" font-size="11">
-            <text x="560" y="668" text-anchor="middle">fractional Kelly on the probability</text>
-            <text x="560" y="682" text-anchor="middle">per-bet, per-game and daily caps</text>
-          </g>
-          <g stroke="var(--stake)" stroke-width="2" fill="none" marker-end="url(#arr-stake)">
-            <path d="M200,556 L200,604 L372,604 L372,661 L380,661"/>
-            <path d="M560,556 L560,630"/>
-            <path d="M920,556 L920,604 L748,604 L748,661 L740,661"/>
-          </g>
-
-          <!-- row 6 -->
-          <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
-            <rect x="40" y="748" width="300" height="56" rx="4"/>
-            <rect x="400" y="748" width="320" height="56" rx="4"/>
-            <rect x="760" y="748" width="320" height="56" rx="4"/>
-          </g>
-          <g font-weight="600" font-size="13">
-            <text x="190" y="769" text-anchor="middle">Sheet and site</text>
-            <text x="560" y="769" text-anchor="middle">Ledger, next morning</text>
-            <text x="920" y="769" text-anchor="middle">Monthly refit</text>
-          </g>
-          <g fill="var(--ink-2)" font-size="11">
-            <text x="190" y="787" text-anchor="middle">plays with dollar stakes, full sheet, cards, opens</text>
-            <text x="560" y="787" text-anchor="middle">grades every bet vs finals, closing-line value</text>
-            <text x="920" y="787" text-anchor="middle">backtest on the season's own lines → coefficients</text>
-          </g>
-          <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)">
-            <path d="M400,692 L400,728 L190,728 L190,748"/>
-            <path d="M340,776 L400,776"/>
-            <path d="M720,776 L760,776"/>
-            <path d="M1080,776 L1108,776 L1108,466 L1086,466"/>
-          </g>
-          <g font-size="10.5" fill="var(--ink-2)">
-            <text x="296" y="724" text-anchor="middle">stakes</text>
-            <text x="370" y="770" text-anchor="middle">signals</text>
-            <text x="740" y="770" text-anchor="middle">results</text>
-            <text x="1112" y="560" text-anchor="start" transform="rotate(90 1112 560)">new coefficients</text>
-          </g>
+        <g font-family="IBM Plex Sans, Segoe UI, system-ui, sans-serif" fill="currentColor">
+<rect x="0" y="30" width="1180" height="196" rx="5" fill="var(--band)"/>
+<text x="14" y="49" font-size="11.5" font-weight="700" fill="var(--ink-3)" letter-spacing="0.06">1 · FORECAST — no market yet</text>
+<rect x="0" y="240" width="1180" height="100" rx="5" fill="var(--band)"/>
+<text x="14" y="259" font-size="11.5" font-weight="700" fill="var(--ink-3)" letter-spacing="0.06">2 · PREGAME ADJUSTMENTS — no market yet</text>
+<rect x="0" y="356" width="1180" height="92" rx="5" fill="var(--band)"/>
+<text x="14" y="375" font-size="11.5" font-weight="700" fill="var(--ink-3)" letter-spacing="0.06">3 · THE MARKET ENTERS</text>
+<rect x="0" y="464" width="1180" height="150" rx="5" fill="var(--band)"/>
+<text x="14" y="483" font-size="11.5" font-weight="700" fill="var(--ink-3)" letter-spacing="0.06">4 · DECIDE EACH MARKET</text>
+<rect x="0" y="630" width="1180" height="100" rx="5" fill="var(--band)"/>
+<text x="14" y="649" font-size="11.5" font-weight="700" fill="var(--ink-3)" letter-spacing="0.06">5 · SIZE AND CAP</text>
+<rect x="0" y="746" width="1180" height="122" rx="5" fill="var(--band)"/>
+<text x="14" y="765" font-size="11.5" font-weight="700" fill="var(--ink-3)" letter-spacing="0.06">6 · PUBLISH, GRADE, REFIT</text>
+<rect x="30" y="62" width="188" height="70" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="124.0" y="84" text-anchor="middle" font-size="14" font-weight="600">Pregame inputs</text>
+<text x="124.0" y="102" text-anchor="middle" font-size="12" fill="var(--ink-2)">season stats, roster,</text>
+<text x="124.0" y="117" text-anchor="middle" font-size="12" fill="var(--ink-2)">rest, site, time of season</text>
+<rect x="262" y="62" width="188" height="70" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="356.0" y="84" text-anchor="middle" font-size="14" font-weight="600">IC hedge model</text>
+<text x="356.0" y="102" text-anchor="middle" font-size="12" fill="var(--ink-2)">matchup-adjusted profiles</text>
+<text x="356.0" y="117" text-anchor="middle" font-size="12" fill="var(--ink-2)">both teams + pace, bounded</text>
+<rect x="494" y="62" width="188" height="70" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="588.0" y="84" text-anchor="middle" font-size="14" font-weight="600">Pace form</text>
+<text x="588.0" y="102" text-anchor="middle" font-size="12" fill="var(--ink-2)">pace column moved to</text>
+<text x="588.0" y="117" text-anchor="middle" font-size="12" fill="var(--ink-2)">each team's recent tempo</text>
+<rect x="726" y="62" width="188" height="70" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="820.0" y="84" text-anchor="middle" font-size="14" font-weight="600">Ensemble generation</text>
+<text x="820.0" y="102" text-anchor="middle" font-size="12" fill="var(--ink-2)">10,000 stat sets jittered</text>
+<text x="820.0" y="117" text-anchor="middle" font-size="12" fill="var(--ink-2)">around the profiles</text>
+<rect x="958" y="62" width="188" height="70" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="1052.0" y="84" text-anchor="middle" font-size="14" font-weight="600">Oracle</text>
+<text x="1052.0" y="102" text-anchor="middle" font-size="12" fill="var(--ink-2)">scores every stat set:</text>
+<text x="1052.0" y="117" text-anchor="middle" font-size="12" fill="var(--ink-2)">a margin and a total each</text>
+<path d="M218,97 L262,97" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="240" y="90" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >profiles</text>
+<path d="M450,97 L494,97" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="472" y="90" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >hedged</text>
+<path d="M682,97 L726,97" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="704" y="90" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >profiles</text>
+<path d="M914,97 L958,97" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="936" y="90" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >10,000</text>
+<rect x="600" y="154" width="546" height="60" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="873.0" y="176" text-anchor="middle" font-size="14" font-weight="600">Score ensemble: 10,000 predictions per game</text>
+<text x="873.0" y="194" text-anchor="middle" font-size="12" fill="var(--ink-2)">its mean is the forecast on the sheet; its shares are the probabilities</text>
+<path d="M1052.0,132 L1052.0,154" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<rect x="300" y="268" width="226" height="60" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="413.0" y="290" text-anchor="middle" font-size="14" font-weight="600">Score calibration</text>
+<text x="413.0" y="308" text-anchor="middle" font-size="12" fill="var(--ink-2)">running correction</text>
+<rect x="574" y="268" width="226" height="60" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="687.0" y="290" text-anchor="middle" font-size="14" font-weight="600">Availability shift</text>
+<text x="687.0" y="308" text-anchor="middle" font-size="12" fill="var(--ink-2)">who sat the last game</text>
+<rect x="848" y="268" width="226" height="60" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="961.0" y="290" text-anchor="middle" font-size="14" font-weight="600">Fatigue shift</text>
+<text x="961.0" y="308" text-anchor="middle" font-size="12" fill="var(--ink-2)">postseason back-to-backs</text>
+<path d="M700,214 L700,244 L413.0,244 L413.0,268" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M526,298 L574,298" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="550" y="291" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >both</text>
+<path d="M800,298 L848,298" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="824" y="291" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >total</text>
+<rect x="300" y="386" width="250" height="56" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="425.0" y="408" text-anchor="middle" font-size="14" font-weight="600">Odds pulls through the day</text>
+<text x="425.0" y="426" text-anchor="middle" font-size="12" fill="var(--ink-2)">today's slate only, pregame only</text>
+<rect x="600" y="386" width="250" height="56" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="725.0" y="408" text-anchor="middle" font-size="14" font-weight="600">The book's line</text>
+<text x="725.0" y="426" text-anchor="middle" font-size="12" fill="var(--ink-2)">spread, total, moneyline, opener</text>
+<path d="M550,414 L600,414" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M961.0,328 L961.0,500" fill="none" stroke="currentColor" stroke-width="1.3"/>
+<text x="969.0" y="392" text-anchor="start" font-size="11.5" fill="var(--ink-2)" >adjusted ensemble:</text>
+<text x="969.0" y="406" text-anchor="start" font-size="11.5" fill="var(--ink-2)" >mean margin, mean total,</text>
+<text x="969.0" y="420" text-anchor="start" font-size="11.5" fill="var(--ink-2)" >P(win), P(cover), P(under)</text>
+<path d="M725,442 L725,500" fill="none" stroke="currentColor" stroke-width="1.3"/>
+<path d="M200.0,500 L980.0,500" fill="none" stroke="currentColor" stroke-width="1.3"/>
+<path d="M200.0,500 L200.0,526" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="208.0" y="517" text-anchor="start" font-size="11.5" fill="var(--ink-2)" >lean = mean margin − spread</text>
+<path d="M590.0,500 L590.0,526" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="598.0" y="517" text-anchor="start" font-size="11.5" fill="var(--ink-2)" >lean = mean total − line, pace profile</text>
+<path d="M980.0,500 L980.0,526" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="988.0" y="517" text-anchor="start" font-size="11.5" fill="var(--ink-2)" >P(win) vs the price</text>
+<rect x="30" y="526" width="340" height="64" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
+<text x="200.0" y="548" text-anchor="middle" font-size="14" font-weight="600">SPREAD · cover model</text>
+<text x="200.0" y="566" text-anchor="middle" font-size="12" fill="var(--ink-2)">P(cover) from the lean</text>
+<text x="200.0" y="581" text-anchor="middle" font-size="12" fill="var(--ink-2)">BET above a cutoff</text>
+<rect x="420" y="526" width="340" height="64" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
+<text x="590.0" y="548" text-anchor="middle" font-size="14" font-weight="600">TOTAL · under rule</text>
+<text x="590.0" y="566" text-anchor="middle" font-size="12" fill="var(--ink-2)">under only, in the game profile</text>
+<text x="590.0" y="581" text-anchor="middle" font-size="12" fill="var(--ink-2)">where it has held</text>
+<rect x="810" y="526" width="340" height="64" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
+<text x="980.0" y="548" text-anchor="middle" font-size="14" font-weight="600">MONEYLINE · market-shrink rule</text>
+<text x="980.0" y="566" text-anchor="middle" font-size="12" fill="var(--ink-2)">P(win) pulled toward the market</text>
+<text x="980.0" y="581" text-anchor="middle" font-size="12" fill="var(--ink-2)">BET on edge</text>
+<text x="590.0" y="606" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >overs: tiered and shown, never staked</text>
+<rect x="350" y="660" width="480" height="62" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
+<text x="590.0" y="682" text-anchor="middle" font-size="14" font-weight="600">Stake</text>
+<text x="590.0" y="700" text-anchor="middle" font-size="12" fill="var(--ink-2)">fractional Kelly on the probability</text>
+<text x="590.0" y="715" text-anchor="middle" font-size="12" fill="var(--ink-2)">per-bet, per-game and daily caps</text>
+<path d="M200.0,590 L200.0,691 L350,691" fill="none" stroke="var(--stake)" stroke-width="2.2" marker-end="url(#arr-stake)"/>
+<path d="M590.0,590 L590.0,660" fill="none" stroke="var(--stake)" stroke-width="2.2" marker-end="url(#arr-stake)"/>
+<path d="M980.0,590 L980.0,691 L830,691" fill="none" stroke="var(--stake)" stroke-width="2.2" marker-end="url(#arr-stake)"/>
+<rect x="30" y="786" width="340" height="62" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="200.0" y="808" text-anchor="middle" font-size="14" font-weight="600">Sheet and site</text>
+<text x="200.0" y="826" text-anchor="middle" font-size="12" fill="var(--ink-2)">plays with dollar stakes, sheet, cards, opens</text>
+<rect x="420" y="786" width="340" height="62" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="590.0" y="808" text-anchor="middle" font-size="14" font-weight="600">Ledger, next morning</text>
+<text x="590.0" y="826" text-anchor="middle" font-size="12" fill="var(--ink-2)">grades every bet vs finals, closing-line value</text>
+<rect x="810" y="786" width="340" height="62" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
+<text x="980.0" y="808" text-anchor="middle" font-size="14" font-weight="600">Monthly refit</text>
+<text x="980.0" y="826" text-anchor="middle" font-size="12" fill="var(--ink-2)">the season's own lines → new coefficients</text>
+<path d="M390,722 L390,760 L200.0,760 L200.0,786" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="300" y="754" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >stakes</text>
+<path d="M370,817 L420,817" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="390" y="810" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >signals</text>
+<path d="M760,817 L810,817" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="780" y="810" text-anchor="middle" font-size="11.5" fill="var(--ink-2)" >results</text>
+<path d="M1150,817 L1162,817 L1162,478 L986.0,478" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="1158" y="700" text-anchor="end" font-size="11.5" fill="var(--ink-2)" transform="rotate(-90 1158 700)">new coefficients</text>
         </g>
       </svg></div>
       <div class="legend"><span class="stake">staked path</span><span>forecast and plumbing</span></div>
