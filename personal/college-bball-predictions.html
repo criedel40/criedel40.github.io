@@ -392,7 +392,7 @@
           const d = String(predictionsData._meta.date);
           const stamp = document.createElement('p');
           stamp.style.cssText = 'text-align:center;color:#666;margin:0 0 1rem 0';
-          stamp.textContent = `Forecasts for ${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)} (${predictionsData._meta.model || 'model'})`;
+          stamp.textContent = `Forecasts for ${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`;
           container.parentNode.insertBefore(stamp, container);
           const legend = document.createElement('p');
           legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
