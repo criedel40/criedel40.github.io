@@ -396,7 +396,7 @@
           container.parentNode.insertBefore(stamp, container);
           const legend = document.createElement('p');
           legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
-          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked when it gets a slot &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: the model\'s win probability pulled part-way toward the market price, BET when the edge over break-even is 3 points or more. Total: BET when the model is 4 or more points off the line, LEAN at 3; staked only on the under and only when the pace forecast is 68.9 possessions or slower (overs are shown, never staked). Open = the first DraftKings line the hourly pull saw. Confidence: 0 = break-even at the price, 100 = a 65% expected hit rate; for spreads the CatBoost layer agreeing adds, disagreeing subtracts. Spreads: favourite negative.';
+          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked when it gets a slot &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet.';
           container.parentNode.insertBefore(legend, container);
           buildFilters(container);
         }
