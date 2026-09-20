@@ -44,7 +44,7 @@
     header a:hover i{transform:scale(1.2)}
     .header-full-height{width:100%;height:auto;min-height:220px;aspect-ratio:640/220}
     .header-full-height>div{height:100%;min-height:100%}
-    .bball-images-container{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;margin:2rem auto;padding:1rem;max-width:1040px}
+    .bball-images-container{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;margin:2rem auto;padding:1rem;max-width:1320px}
     .bball-images-container>*{min-width:0}
     @media screen and (max-width:768px){.bball-images-container{grid-template-columns:minmax(0,1fr);padding:0}}
     .bball-image-wrapper{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
@@ -56,7 +56,8 @@
     .markets-table th{background:#f0f4fa;color:#333;padding:.45rem .6rem;text-align:left;font-weight:600;border-bottom:1px solid #dde3ec}
     .markets-table td{padding:.4rem .6rem;border-bottom:1px solid #eee;color:#333;line-height:1.2;font-variant-numeric:tabular-nums}
     .markets-table tr:last-child td{border-bottom:none}
-    .markets-table td.num{text-align:right}
+    .markets-table th.num,.markets-table td.num{text-align:right}
+    .markets-table th.mid,.markets-table td.mid{text-align:center}
     .markets-table tr.selected td{background:#eef8f0}
     .markets-caption{font-size:.8rem;color:#666;padding:.4rem .6rem .6rem}
     .sens-chart{width:100%;height:auto;display:block;margin-top:.5rem}
@@ -78,7 +79,8 @@
     .bet-sheet th{background:#1b7f3b;color:#fff;padding:.6rem .75rem;text-align:left;font-weight:600}
     .bet-sheet td{padding:.55rem .75rem;border-bottom:1px solid #eee;color:#333;line-height:1.25;font-variant-numeric:tabular-nums}
     .bet-sheet tr:last-child td{border-bottom:none}
-    .bet-sheet td.num{text-align:right}
+    .bet-sheet th.num,.bet-sheet td.num{text-align:right}
+    .bet-sheet th.mid,.bet-sheet td.mid{text-align:center}
     .bet-sheet .empty{padding:1rem;color:#666;text-align:center}
     .bet-sheet tr.selected td{background:#eef8f0}
     .bet-sheet-title{font-weight:700;color:#0b0b0b;padding:.75rem .75rem .25rem}
@@ -132,8 +134,9 @@
     #bball-images-loading{text-align:center;padding:2rem;color:#666}
     .prediction-table-container{margin-bottom:1rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
     .prediction-table{width:100%;border-collapse:collapse;font-size:.9rem;border-spacing:0}
-    .prediction-table th{background:#357edd;color:#fff;padding:.75rem;text-align:left;font-weight:600;vertical-align:top;line-height:1.2}
-    .prediction-table td{padding:.75rem;border-bottom:1px solid #e5e5e5;vertical-align:top;line-height:1.2}
+    .prediction-table th{background:#357edd;color:#fff;padding:.75rem;text-align:center;font-weight:600;vertical-align:top;line-height:1.2}
+    .prediction-table td{padding:.75rem;border-bottom:1px solid #e5e5e5;vertical-align:top;line-height:1.2;text-align:center}
+    .prediction-table th:first-child,.prediction-table td.source-name{text-align:left}
     .prediction-table tr:last-child td{border-bottom:none}
     .prediction-table tr:nth-child(even){background:#f8f9fa}
     .prediction-table .team-name{font-weight:600;color:#333;margin:0;padding:0;line-height:1.2}
@@ -158,12 +161,13 @@
     .plays td.num,.plays th.num{text-align:right}
     .plays tr:last-child td{border-bottom:none}
     .plays .stake{color:#1b7f3b;font-size:1.05rem}
+    .confcell{text-align:center}
     .conf{display:inline-flex;align-items:center;gap:.45rem;min-width:7.5rem}
     .conf .bar{position:relative;flex:1 1 auto;height:8px;min-width:60px;background:#e6e9ee;border-radius:999px;overflow:hidden}
     .conf .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:#9fb3c8}
     .conf.high .bar i{background:#1b7f3b}.conf.medium .bar i{background:#e0a800}.conf.low .bar i{background:#b0b8c4}
     .conf .n{font-variant-numeric:tabular-nums;font-weight:700;min-width:1.6rem;text-align:right;color:#333}
-    .conf.none{color:#999}
+    .conf.none{color:#999;justify-content:center}
     .plays .empty,.plays .note{padding:.6rem .75rem 1rem;color:#666;font-size:.9rem}
     .record{max-width:1000px;margin:1.5rem auto 2rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:.75rem .75rem 1rem}
     .record h2{font-size:1.25rem;margin:.25rem 0 .5rem;color:#0b0b0b}
@@ -583,7 +587,7 @@
           const markets = predictionInfo && predictionInfo.Markets;
           if (markets && markets.length) {
             const mt = document.createElement('table'); mt.className = 'markets-table';
-            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th>Confidence</th><th>Rec</th></tr>'; mt.appendChild(mh);
+            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th class="mid">Confidence</th><th class="mid">Rec</th></tr>'; mt.appendChild(mh);
             const mb = document.createElement('tbody');
             const pct = v => (v === null || v === undefined) ? '—' : `${(100 * v).toFixed(1)}%`;
             const spct = v => (v === null || v === undefined) ? '—' : `${v >= 0 ? '+' : ''}${(100 * v).toFixed(1)}%`;
@@ -592,7 +596,7 @@
               const cells = [r.market, r.bet, (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds, r.open || '—', spct(r.edge)];
               cells.forEach((c, i) => { const td = document.createElement('td'); if (i >= 2) td.className = 'num'; td.textContent = c; tr.appendChild(td); });
               tr.appendChild(confCell(r.confidence === undefined ? null : r.confidence));
-              const rec = document.createElement('td');
+              const rec = document.createElement('td'); rec.className = 'mid';
               if (['BET', 'LEAN', 'PASS'].includes(r.rec)) { const sp = document.createElement('span'); sp.className = `tier tier-${r.rec}`; sp.textContent = r.rec; rec.appendChild(sp); }
               else { rec.textContent = r.rec; rec.style.color = '#999'; }
               tr.appendChild(rec); mb.appendChild(tr);
@@ -687,7 +691,7 @@
       box.appendChild(head);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
       const t = document.createElement('table');
-      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Model</th><th class="num">Edge</th><th>Confidence</th><th>Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
+      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Model</th><th class="num">Edge</th><th class="mid">Confidence</th><th class="mid">Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
       const tb = document.createElement('tbody');
       rows.forEach(({ game, r, b }) => {
         const tr = document.createElement('tr'); if (b) tr.className = 'selected';
@@ -698,7 +702,7 @@
         [[r.market === '—' ? r.bet : `${r.market}: ${r.bet}`, false], [game, false], [odds, true], [open, true], [model, true], [edge, true]]
           .forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
         tr.appendChild(confCell(confOf({ r, b }) < 0 ? null : confOf({ r, b })));
-        const rec = document.createElement('td'); const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = r.rec; rec.appendChild(sp); tr.appendChild(rec);
+        const rec = document.createElement('td'); rec.className = 'mid'; const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = r.rec; rec.appendChild(sp); tr.appendChild(rec);
         const st = document.createElement('td'); st.className = 'num' + (b ? ' stake' : ''); st.textContent = b ? `${money(sheetBankroll * b.bankroll_fraction)} (${(100 * b.bankroll_fraction).toFixed(1)}%)` : '—'; tr.appendChild(st);
         tb.appendChild(tr);
       });
@@ -725,7 +729,9 @@
     // ---- confidence 0-100: the sizing probability over the price's break-even, 100 at a 65% expected hit rate (see the legend)
     function confCell(v) {
       const td = document.createElement('td');
-      if (v === null || v === undefined) { td.className = 'conf none'; td.textContent = '—'; return td; }
+      td.className = 'confcell';
+      // the dash goes in a span of the same width as a bar, so it centres on the bars above and below it
+      if (v === null || v === undefined) { const e = document.createElement('span'); e.className = 'conf none'; e.textContent = '—'; td.appendChild(e); return td; }
       const wrap = document.createElement('span'); wrap.className = 'conf ' + (v >= 60 ? 'high' : v >= 30 ? 'medium' : 'low');
       const bar = document.createElement('span'); bar.className = 'bar'; const fill = document.createElement('i'); fill.style.width = `${Math.max(0, Math.min(100, v))}%`; bar.appendChild(fill);
       const n = document.createElement('span'); n.className = 'n'; n.textContent = String(v);
