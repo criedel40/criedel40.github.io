@@ -147,6 +147,12 @@
     .plays td.num,.plays th.num{text-align:right}
     .plays tr:last-child td{border-bottom:none}
     .plays .stake{color:#1b7f3b;font-size:1.05rem}
+    .conf{display:inline-flex;align-items:center;gap:.45rem;min-width:7.5rem}
+    .conf .bar{position:relative;flex:1 1 auto;height:8px;min-width:60px;background:#e6e9ee;border-radius:999px;overflow:hidden}
+    .conf .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:#9fb3c8}
+    .conf.high .bar i{background:#1b7f3b}.conf.medium .bar i{background:#e0a800}.conf.low .bar i{background:#b0b8c4}
+    .conf .n{font-variant-numeric:tabular-nums;font-weight:700;min-width:1.6rem;text-align:right;color:#333}
+    .conf.none{color:#999}
     .plays .empty,.plays .note{padding:.6rem .75rem 1rem;color:#666;font-size:.9rem}
     .record{max-width:1000px;margin:1.5rem auto 2rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:.75rem .75rem 1rem}
     .record h2{font-size:1.25rem;margin:.25rem 0 .5rem;color:#0b0b0b}
@@ -387,7 +393,7 @@
           container.parentNode.insertBefore(stamp, container);
           const legend = document.createElement('p');
           legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
-          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked when it gets a slot &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: the model\'s win probability pulled part-way toward the market price, BET when the edge over break-even is 3 points or more. Total: BET when the model is 4 or more points off the line, LEAN at 3; staked only on the under and only when the pace forecast is 68.9 possessions or slower (overs are shown, never staked). Open = the first DraftKings line the hourly pull saw. Spreads: favourite negative.';
+          legend.innerHTML = '<span class="tier tier-BET">BET</span> staked when it gets a slot &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet. Spread: P(cover) from the cover model, BET at 55%. Moneyline: the model\'s win probability pulled part-way toward the market price, BET when the edge over break-even is 3 points or more. Total: BET when the model is 4 or more points off the line, LEAN at 3; staked only on the under and only when the pace forecast is 68.9 possessions or slower (overs are shown, never staked). Open = the first DraftKings line the hourly pull saw. Confidence: 0 = break-even at the price, 100 = a 65% expected hit rate; for spreads the CatBoost layer agreeing adds, disagreeing subtracts. Spreads: favourite negative.';
           container.parentNode.insertBefore(legend, container);
           buildFilters(container);
         }
@@ -556,7 +562,7 @@
           const markets = predictionInfo && predictionInfo.Markets;
           if (markets && markets.length) {
             const mt = document.createElement('table'); mt.className = 'markets-table';
-            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th>Rec</th></tr>'; mt.appendChild(mh);
+            const mh = document.createElement('thead'); mh.innerHTML = '<tr><th>Market</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th>Confidence</th><th>Rec</th></tr>'; mt.appendChild(mh);
             const mb = document.createElement('tbody');
             const pct = v => (v === null || v === undefined) ? '—' : `${(100 * v).toFixed(1)}%`;
             const spct = v => (v === null || v === undefined) ? '—' : `${v >= 0 ? '+' : ''}${(100 * v).toFixed(1)}%`;
@@ -564,6 +570,7 @@
               const tr = document.createElement('tr'); if (r.selected) tr.className = 'selected';
               const cells = [r.market, r.bet, (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds, r.open || '—', spct(r.edge)];
               cells.forEach((c, i) => { const td = document.createElement('td'); if (i >= 2) td.className = 'num'; td.textContent = c; tr.appendChild(td); });
+              tr.appendChild(confCell(r.confidence === undefined ? null : r.confidence));
               const rec = document.createElement('td');
               if (['BET', 'LEAN', 'PASS'].includes(r.rec)) { const sp = document.createElement('span'); sp.className = `tier tier-${r.rec}`; sp.textContent = r.rec; rec.appendChild(sp); }
               else { rec.textContent = r.rec; rec.style.color = '#999'; }
@@ -647,7 +654,7 @@
       box.appendChild(title);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
       const t = document.createElement('table');
-      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Game</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th>Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
+      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Game</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th>Confidence</th><th>Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
       const tb = document.createElement('tbody');
       rows.forEach(({ game, r }) => {
         const b = staked[`${game}|${r.market}|${r.bet}`];
@@ -657,6 +664,7 @@
         const open = (b && b.open) || r.open || '—';
         [[game, false], [r.market === '—' ? r.bet : `${r.market}: ${r.bet}`, false], [odds, true], [open, true], [edge, true]]
           .forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
+        tr.appendChild(confCell((b && b.confidence !== undefined && b.confidence !== null) ? b.confidence : (r.confidence === undefined ? null : r.confidence)));
         const rec = document.createElement('td'); const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = r.rec; rec.appendChild(sp); tr.appendChild(rec);
         const st = document.createElement('td'); st.className = 'num'; st.textContent = b ? `${(100 * b.bankroll_fraction).toFixed(1)}% of bankroll` : '—'; tr.appendChild(st);
         tb.appendChild(tr);
@@ -683,13 +691,14 @@
         title.textContent = rows.length ? `Today's plays: ${rows.length} staked, ${(100 * exposure).toFixed(1)}% of bankroll (${money(bankroll * exposure)})` : "Today's plays: nothing staked";
         table.replaceChildren();
         if (!rows.length) { note.textContent = 'No bet cleared the staking rules today. The sheet below still shows every BET and LEAN signal.'; return; }
-        const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Model</th><th class="num">Stake</th></tr>'; table.appendChild(th);
+        const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Model</th><th>Confidence</th><th class="num">Stake</th></tr>'; table.appendChild(th);
         const tb = document.createElement('tbody');
         rows.forEach(b => {
           const tr = document.createElement('tr');
           const odds = (b.odds > 0 ? '+' : '') + b.odds;
           const cells = [[`${b.market}: ${b.bet}`, false], [b.game, false], [odds, true], [b.open || '—', true], [`${(100 * b.probability).toFixed(1)}%`, true]];
           cells.forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
+          tr.appendChild(confCell(b.confidence));
           const st = document.createElement('td'); st.className = 'num stake'; st.textContent = `${money(bankroll * b.bankroll_fraction)} (${(100 * b.bankroll_fraction).toFixed(1)}%)`; tr.appendChild(st);
           tb.appendChild(tr);
         });
@@ -717,6 +726,16 @@
       seasons.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = s.label; b.addEventListener('click', () => show(i)); tabs.appendChild(b); });
       show(0);
       container.parentNode.appendChild(sec);
+    }
+    // ---- confidence 0-100: the sizing probability over the price's break-even, 100 at a 65% expected hit rate (see the legend)
+    function confCell(v) {
+      const td = document.createElement('td');
+      if (v === null || v === undefined) { td.className = 'conf none'; td.textContent = '—'; return td; }
+      const wrap = document.createElement('span'); wrap.className = 'conf ' + (v >= 60 ? 'high' : v >= 30 ? 'medium' : 'low');
+      const bar = document.createElement('span'); bar.className = 'bar'; const fill = document.createElement('i'); fill.style.width = `${Math.max(0, Math.min(100, v))}%`; bar.appendChild(fill);
+      const n = document.createElement('span'); n.className = 'n'; n.textContent = String(v);
+      wrap.appendChild(bar); wrap.appendChild(n); td.appendChild(wrap); td.title = `confidence ${v} of 100: 0 = break-even at this price, 100 = a 65% expected hit rate`;
+      return td;
     }
     function fmtUnits(u) { return (u >= 0 ? '+' : '') + u.toFixed(1); }
     function pctOrDash(v, d) { return (v === null || v === undefined) ? '—' : `${(100 * v).toFixed(d === undefined ? 1 : d)}%`; }
