@@ -50,7 +50,7 @@
 
     <h2>The workflow</h2>
     <figure style="margin:0">
-      <div class="diagram"><svg viewBox="0 0 1120 1000" role="img" aria-label="Flow from pregame inputs through the IC hedge model, the pace-form adjustment, the 10,000-member ensemble generation and one Oracle pass to a cloud whose mean is the forecast, calibration and pregame shifts, the The book's line, three per-market decision layers with staked rules and unstaked candidates, quarter-Kelly sizing with caps, and the sheet, ledger and monthly refit that feed coefficients back." xmlns="http://www.w3.org/2000/svg">
+      <div class="diagram"><svg viewBox="0 0 1120 1000" role="img" aria-label="Flow from pregame inputs through the IC hedge model, the pace-form adjustment, the 10,000-member ensemble generation and one Oracle pass to a score ensemble whose mean is the forecast, calibration and pregame shifts, the The book's line, three per-market decision layers with staked rules and unstaked candidates, quarter-Kelly sizing with caps, and the sheet, ledger and monthly refit that feed coefficients back." xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
           <marker id="arr-stake" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--stake)"/></marker>
@@ -76,7 +76,7 @@
             <text x="14" y="870">6 · PUBLISH, GRADE, REFIT</text>
           </g>
 
-          <!-- row 1: inputs -> IC hedge model -> pace form -> ensemble generation -> Oracle once -> the cloud is the forecast -->
+          <!-- row 1: inputs -> IC hedge model -> pace form -> ensemble generation -> Oracle once -> the score ensemble is the forecast -->
           <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
             <rect x="30" y="70" width="170" height="64" rx="4"/>
             <rect x="230" y="70" width="190" height="64" rx="4"/>
@@ -91,7 +91,7 @@
             <text x="525" y="94" text-anchor="middle">Pace form</text>
             <text x="730" y="94" text-anchor="middle">Ensemble generation</text>
             <text x="975" y="94" text-anchor="middle">Oracle (frozen), once</text>
-            <text x="860" y="176" text-anchor="middle">The cloud: 10,000 score pairs per game</text>
+            <text x="860" y="176" text-anchor="middle">Score ensemble: 10,000 predictions per game</text>
           </g>
           <g fill="var(--ink-2)" font-size="11">
             <text x="115" y="112" text-anchor="middle">season-to-date stats, roster context,</text>
@@ -132,7 +132,7 @@
             <text x="880" y="283" text-anchor="middle">Fatigue shift</text>
           </g>
           <g fill="var(--ink-2)" font-size="11">
-            <text x="400" y="301" text-anchor="middle">running correction, on the cloud</text>
+            <text x="400" y="301" text-anchor="middle">running correction, on the ensemble</text>
             <text x="640" y="301" text-anchor="middle">who sat the last game</text>
             <text x="880" y="301" text-anchor="middle">postseason back-to-backs</text>
           </g>
@@ -163,7 +163,7 @@
             <path d="M500,400 L540,400"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
-            <text x="886" y="372" text-anchor="start">the adjusted cloud:</text>
+            <text x="886" y="372" text-anchor="start">the adjusted ensemble:</text>
             <text x="886" y="385" text-anchor="start">mean margin, mean total,</text>
             <text x="886" y="398" text-anchor="start">P(win), P(cover), P(under)</text>
           </g>
@@ -178,7 +178,7 @@
             <path d="M920,440 L920,498" marker-end="url(#arr)"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
-            <text x="206" y="488" text-anchor="start">lean = cloud mean margin − spread</text>
+            <text x="206" y="488" text-anchor="start">lean = ensemble mean margin − spread</text>
             <text x="566" y="488" text-anchor="start">lean = total − line, pace profile</text>
             <text x="926" y="488" text-anchor="start">P(win) vs the price</text>
           </g>
@@ -280,7 +280,7 @@
       <ul>
         <li><strong>Inputs are strictly pregame.</strong> Season-to-date team statistics, roster context, rest, site and the point in the season, built so that nothing from the game itself or from later games can leak in.</li>
         <li><strong>An IC hedge model</strong> adjusts each team's season-to-date profile toward what the matchup implies, with bounded moves. It predicts the inputs the game will be played with, not the score.</li>
-        <li><strong>An ensemble of ten thousand members</strong> is generated around those hedged profiles, after a recent-tempo adjustment, within each team's recent variability. A frozen scoring model scores every member once. The cloud's mean is the forecast on the sheet and its shares are the probabilities; there is no separate point forecast.</li>
+        <li><strong>An ensemble of ten thousand members</strong> is generated around those hedged profiles, after a recent-tempo adjustment, within each team's recent variability. A frozen scoring model scores every member once. The ensemble's mean is the forecast on the sheet and its shares are the probabilities; there is no separate point forecast.</li>
         <li><strong>Calibration and pregame adjustments</strong> correct the score level through the season and account for who sat a team's last game and for postseason back-to-backs.</li>
       </ul>
     </div>
