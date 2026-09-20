@@ -82,6 +82,9 @@
     .bet-sheet .empty{padding:1rem;color:#666;text-align:center}
     .bet-sheet tr.selected td{background:#eef8f0}
     .bet-sheet-title{font-weight:700;color:#0b0b0b;padding:.75rem .75rem .25rem}
+    .bet-sheet .plays-head{padding:.75rem .75rem .35rem}
+    .bet-sheet td.stake{color:#1b7f3b;font-size:1.02rem}
+    .bet-sheet .note{padding:.6rem .75rem .9rem;color:#666;font-size:.85rem;font-weight:400}
     .filters{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:0 0 1rem}
     .filters button{border:1px solid #cfd6e0;background:#fff;color:#333;padding:.35rem .8rem;border-radius:999px;font-size:.85rem;cursor:pointer}
     .filters button.active{background:#357edd;color:#fff;border-color:#357edd}
@@ -402,7 +405,6 @@
         const rankOf = f => { const b = predictionsData[f] && predictionsData[f]["Beyond the Arc DL"] && predictionsData[f]["Beyond the Arc DL"].Bet; return b && b.Tier in tierRank ? tierRank[b.Tier] : 3; };
         imageFiles.sort((a, b) => rankOf(a) - rankOf(b));
         buildBetSheet(predictionsData._meta, container, predictionsData, imageFiles);
-        buildPlays(predictionsData._meta, container);
         if (recordData && recordData.seasons && recordData.seasons.length) buildRecord(recordData, container);
         
         // If no images found
@@ -633,82 +635,56 @@
       container.parentNode.insertBefore(box, container);
       renderSheet('all');
     }
+    let sheetBankroll = 1000;
+    try { const v = parseFloat(localStorage.getItem('bball_bankroll')); if (isFinite(v) && v > 0) sheetBankroll = v; } catch (e) {}
+    const money = v => '$' + v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     function renderSheet(key) {
       const { meta, data, files, box } = sheetState;
       if (!box) return;
       const staked = {};
       ((meta && meta.sheet) || []).forEach(b => { staked[`${b.game}|${b.market}|${b.bet}`] = b; });
-      const keepRec = r => key === 'BET' ? r.rec === 'BET' : key === 'LEAN' ? (r.rec === 'BET' || r.rec === 'LEAN') : (r.rec === 'BET' || r.rec === 'LEAN');
+      const keepRec = r => key === 'BET' ? r.rec === 'BET' : (r.rec === 'BET' || r.rec === 'LEAN');
       const rows = [];
       files.forEach(f => {
         const info = data[f]; if (!info || !info.Markets) return;
         const game = `${info["Home Team"]} vs ${info["Away Team"]}`;
         const hits = info.Markets.filter(keepRec);
-        if (hits.length) hits.forEach(r => rows.push({ game, r }));
-        else if (key === 'all') rows.push({ game, r: { market: '—', bet: 'no bet signal', odds: null, edge: null, rec: 'PASS' } });
+        if (hits.length) hits.forEach(r => rows.push({ game, r, b: staked[`${game}|${r.market}|${r.bet}`] }));
+        else if (key === 'all') rows.push({ game, r: { market: '—', bet: 'no bet signal', odds: null, edge: null, rec: 'PASS' }, b: null });
       });
-      const nStaked = rows.filter(x => staked[`${x.game}|${x.r.market}|${x.r.bet}`]).length;
+      // order: BET first, then LEAN, then the rest; within a tier by confidence, highest first
+      const rank = { BET: 0, LEAN: 1 }; const confOf = x => (x.b && x.b.confidence !== null && x.b.confidence !== undefined) ? x.b.confidence : (x.r.confidence === null || x.r.confidence === undefined ? -1 : x.r.confidence);
+      rows.sort((a, c) => ((rank[a.r.rec] ?? 2) - (rank[c.r.rec] ?? 2)) || (confOf(c) - confOf(a)) || a.game.localeCompare(c.game));
+      const stakedRows = rows.filter(x => x.b); const exposure = stakedRows.reduce((sum, x) => sum + x.b.bankroll_fraction, 0);
       box.replaceChildren();
-      const title = document.createElement('div'); title.className = 'bet-sheet-title';
-      title.textContent = key === 'BET' ? `BET signals: ${rows.length} (${nStaked} staked)` : key === 'LEAN' ? `BET + LEAN signals: ${rows.length} (${nStaked} staked)` : `All games: ${rows.length} rows (${nStaked} staked)`;
-      box.appendChild(title);
+      const head = document.createElement('div'); head.className = 'plays-head';
+      const title = document.createElement('span'); title.className = 'plays-title';
+      const scope = key === 'BET' ? 'BET signals' : key === 'LEAN' ? 'BET + LEAN signals' : 'All games';
+      title.textContent = `${scope}: ${rows.length} rows · ${stakedRows.length} staked, ${(100 * exposure).toFixed(1)}% of bankroll (${money(sheetBankroll * exposure)})`;
+      head.appendChild(title);
+      const label = document.createElement('label'); label.textContent = 'Bankroll $ '; head.appendChild(label);
+      const input = document.createElement('input'); input.type = 'number'; input.min = '0'; input.step = '50'; input.inputMode = 'decimal'; input.id = 'bankroll-input'; input.value = String(sheetBankroll); label.appendChild(input);
+      input.addEventListener('change', () => { const v = parseFloat(input.value); if (isFinite(v) && v >= 0) { sheetBankroll = v; try { localStorage.setItem('bball_bankroll', String(v)); } catch (e) {} renderSheet(key); } });
+      box.appendChild(head);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
       const t = document.createElement('table');
-      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Game</th><th>Bet</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Edge</th><th>Confidence</th><th>Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
+      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Model</th><th class="num">Edge</th><th>Confidence</th><th>Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
       const tb = document.createElement('tbody');
-      rows.forEach(({ game, r }) => {
-        const b = staked[`${game}|${r.market}|${r.bet}`];
+      rows.forEach(({ game, r, b }) => {
         const tr = document.createElement('tr'); if (b) tr.className = 'selected';
         const odds = (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds;
         const edge = (r.edge === null || r.edge === undefined) ? '—' : `${r.edge >= 0 ? '+' : ''}${(100 * r.edge).toFixed(1)}%`;
+        const model = b ? `${(100 * b.probability).toFixed(1)}%` : (r.model === null || r.model === undefined) ? '—' : `${(100 * r.model).toFixed(1)}%`;
         const open = (b && b.open) || r.open || '—';
-        [[game, false], [r.market === '—' ? r.bet : `${r.market}: ${r.bet}`, false], [odds, true], [open, true], [edge, true]]
+        [[r.market === '—' ? r.bet : `${r.market}: ${r.bet}`, false], [game, false], [odds, true], [open, true], [model, true], [edge, true]]
           .forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
-        tr.appendChild(confCell((b && b.confidence !== undefined && b.confidence !== null) ? b.confidence : (r.confidence === undefined ? null : r.confidence)));
+        tr.appendChild(confCell(confOf({ r, b }) < 0 ? null : confOf({ r, b })));
         const rec = document.createElement('td'); const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = r.rec; rec.appendChild(sp); tr.appendChild(rec);
-        const st = document.createElement('td'); st.className = 'num'; st.textContent = b ? `${(100 * b.bankroll_fraction).toFixed(1)}% of bankroll` : '—'; tr.appendChild(st);
+        const st = document.createElement('td'); st.className = 'num' + (b ? ' stake' : ''); st.textContent = b ? `${money(sheetBankroll * b.bankroll_fraction)} (${(100 * b.bankroll_fraction).toFixed(1)}%)` : '—'; tr.appendChild(st);
         tb.appendChild(tr);
       });
       t.appendChild(tb); box.appendChild(t);
-    }
-    
-    // ---- today's plays: the staked bets only, with the stake in dollars for a bankroll you type once
-    function buildPlays(meta, container) {
-      const box = document.createElement('div'); box.className = 'plays';
-      const rows = ((meta && meta.sheet) || []).filter(b => b.bankroll_fraction > 0).sort((a, b) => b.bankroll_fraction - a.bankroll_fraction);
-      const head = document.createElement('div'); head.className = 'plays-head';
-      const title = document.createElement('span'); title.className = 'plays-title'; head.appendChild(title);
-      const label = document.createElement('label'); label.textContent = 'Bankroll $ '; head.appendChild(label);
-      const input = document.createElement('input'); input.type = 'number'; input.min = '0'; input.step = '50'; input.inputMode = 'decimal';
-      let bankroll = 1000;
-      try { const v = parseFloat(localStorage.getItem('bball_bankroll')); if (isFinite(v) && v > 0) bankroll = v; } catch (e) {}
-      input.value = String(bankroll); label.appendChild(input); box.appendChild(head);
-      const table = document.createElement('table'); box.appendChild(table);
-      const note = document.createElement('div'); note.className = 'note'; box.appendChild(note);
-      const money = v => '$' + v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-      const render = () => {
-        const exposure = rows.reduce((s, b) => s + b.bankroll_fraction, 0);
-        title.textContent = rows.length ? `Today's plays: ${rows.length} staked, ${(100 * exposure).toFixed(1)}% of bankroll (${money(bankroll * exposure)})` : "Today's plays: nothing staked";
-        table.replaceChildren();
-        if (!rows.length) { note.textContent = 'No bet cleared the staking rules today. The sheet below still shows every BET and LEAN signal.'; return; }
-        const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Model</th><th>Confidence</th><th class="num">Stake</th></tr>'; table.appendChild(th);
-        const tb = document.createElement('tbody');
-        rows.forEach(b => {
-          const tr = document.createElement('tr');
-          const odds = (b.odds > 0 ? '+' : '') + b.odds;
-          const cells = [[`${b.market}: ${b.bet}`, false], [b.game, false], [odds, true], [b.open || '—', true], [`${(100 * b.probability).toFixed(1)}%`, true]];
-          cells.forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
-          tr.appendChild(confCell(b.confidence));
-          const st = document.createElement('td'); st.className = 'num stake'; st.textContent = `${money(bankroll * b.bankroll_fraction)} (${(100 * b.bankroll_fraction).toFixed(1)}%)`; tr.appendChild(st);
-          tb.appendChild(tr);
-        });
-        table.appendChild(tb);
-        note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above; the figure is remembered in this browser only. Open is the first DraftKings line the hourly pull saw for the game.';
-      };
-      input.addEventListener('input', () => { const v = parseFloat(input.value); if (isFinite(v) && v >= 0) { bankroll = v; try { localStorage.setItem('bball_bankroll', String(v)); } catch (e) {} render(); } });
-      render();
-      const anchor = sheetState.box || container;
-      anchor.parentNode.insertBefore(box, anchor);
+      const note = document.createElement('div'); note.className = 'note'; note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above, remembered in this browser only. Open is the first DraftKings line the hourly pull saw. Rows run BET, then LEAN, each by confidence.'; box.appendChild(note);
     }
 
     // ---- the season record: every graded signal from the ledger, staked bets first
