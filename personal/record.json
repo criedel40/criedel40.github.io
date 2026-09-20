@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20T17:30:28Z",
+ "generated": "2026-09-20T18:15:33Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the closing DraftKings line by; moneyline: probability points",
  "seasons": [
@@ -12,15 +12,15 @@
    "table": {
     "staked": {
      "all": {
-      "bets": 11,
+      "bets": 12,
       "wins": 7,
-      "losses": 4,
+      "losses": 5,
       "pushes": 0,
-      "win_rate": 0.6364,
-      "units": 1.67,
-      "roi": 0.1521,
+      "win_rate": 0.5833,
+      "units": 0.67,
+      "roi": 0.056,
       "clv": 0.0,
-      "clv_n": 11,
+      "clv_n": 12,
       "pending": 0
      },
      "spread": {
@@ -48,29 +48,29 @@
       "pending": 0
      },
      "moneyline": {
-      "bets": 7,
+      "bets": 8,
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "pushes": 0,
-      "win_rate": 0.7143,
-      "units": 1.88,
-      "roi": 0.2682,
+      "win_rate": 0.625,
+      "units": 0.88,
+      "roi": 0.1096,
       "clv": 0.0,
-      "clv_n": 7,
+      "clv_n": 8,
       "pending": 0
      }
     },
     "BET": {
      "all": {
-      "bets": 18,
+      "bets": 19,
       "wins": 12,
-      "losses": 6,
+      "losses": 7,
       "pushes": 0,
-      "win_rate": 0.6667,
-      "units": 4.25,
-      "roi": 0.2359,
+      "win_rate": 0.6316,
+      "units": 3.25,
+      "roi": 0.1708,
       "clv": 0.0,
-      "clv_n": 18,
+      "clv_n": 19,
       "pending": 0
      },
      "spread": {
@@ -98,15 +98,15 @@
       "pending": 0
      },
      "moneyline": {
-      "bets": 7,
+      "bets": 8,
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "pushes": 0,
-      "win_rate": 0.7143,
-      "units": 1.88,
-      "roi": 0.2682,
+      "win_rate": 0.625,
+      "units": 0.88,
+      "roi": 0.1096,
       "clv": 0.0,
-      "clv_n": 7,
+      "clv_n": 8,
       "pending": 0
      }
     },
@@ -117,8 +117,8 @@
       "losses": 13,
       "pushes": 0,
       "win_rate": 0.5806,
-      "units": 3.52,
-      "roi": 0.1135,
+      "units": 3.47,
+      "roi": 0.1119,
       "clv": 0.0,
       "clv_n": 31,
       "pending": 0
@@ -153,8 +153,8 @@
       "losses": 4,
       "pushes": 0,
       "win_rate": 0.2,
-      "units": -2.9,
-      "roi": -0.58,
+      "units": -2.95,
+      "roi": -0.59,
       "clv": 0.0,
       "clv_n": 5,
       "pending": 0
@@ -167,8 +167,8 @@
       "losses": 2,
       "pushes": 0,
       "win_rate": 0.7143,
-      "units": 2.36,
-      "roi": 0.3372,
+      "units": 2.44,
+      "roi": 0.3484,
       "clv": 0.0,
       "clv_n": 7,
       "pending": 0
@@ -179,8 +179,8 @@
       "losses": 2,
       "pushes": 0,
       "win_rate": 0.7143,
-      "units": 2.36,
-      "roi": 0.3372,
+      "units": 2.44,
+      "roi": 0.3484,
       "clv": 0.0,
       "clv_n": 7,
       "pending": 0
@@ -262,15 +262,15 @@
     },
     "candidate: catboost-moneyline": {
      "all": {
-      "bets": 23,
-      "wins": 17,
+      "bets": 21,
+      "wins": 15,
       "losses": 6,
       "pushes": 0,
-      "win_rate": 0.7391,
-      "units": 8.56,
-      "roi": 0.3723,
+      "win_rate": 0.7143,
+      "units": 6.43,
+      "roi": 0.3063,
       "clv": 0.0,
-      "clv_n": 23,
+      "clv_n": 21,
       "pending": 0
      },
      "spread": {
@@ -298,15 +298,15 @@
       "pending": 0
      },
      "moneyline": {
-      "bets": 23,
-      "wins": 17,
+      "bets": 21,
+      "wins": 15,
       "losses": 6,
       "pushes": 0,
-      "win_rate": 0.7391,
-      "units": 8.56,
-      "roi": 0.3723,
+      "win_rate": 0.7143,
+      "units": 6.43,
+      "roi": 0.3063,
       "clv": 0.0,
-      "clv_n": 23,
+      "clv_n": 21,
       "pending": 0
      }
     },
@@ -364,29 +364,29 @@
    "by_month": {
     "staked": {
      "202603": {
-      "bets": 11,
+      "bets": 12,
       "wins": 7,
-      "losses": 4,
+      "losses": 5,
       "pushes": 0,
-      "win_rate": 0.6364,
-      "units": 1.67,
-      "roi": 0.1521,
+      "win_rate": 0.5833,
+      "units": 0.67,
+      "roi": 0.056,
       "clv": 0.0,
-      "clv_n": 11,
+      "clv_n": 12,
       "pending": 0
      }
     },
     "BET": {
      "202603": {
-      "bets": 18,
+      "bets": 19,
       "wins": 12,
-      "losses": 6,
+      "losses": 7,
       "pushes": 0,
-      "win_rate": 0.6667,
-      "units": 4.25,
-      "roi": 0.2359,
+      "win_rate": 0.6316,
+      "units": 3.25,
+      "roi": 0.1708,
       "clv": 0.0,
-      "clv_n": 18,
+      "clv_n": 19,
       "pending": 0
      }
     }
@@ -394,43 +394,43 @@
    "series": [
     {
      "date": 20260305,
-     "staked_units": 1.67,
-     "staked_bets": 11,
-     "bet_units": 4.25,
-     "bet_bets": 18,
-     "bankroll": 1.0173
+     "staked_units": 0.67,
+     "staked_bets": 12,
+     "bet_units": 3.25,
+     "bet_bets": 19,
+     "bankroll": 1.0074
     }
    ],
    "reliability": [
     {
      "bin": "0.00-0.50",
-     "n": 11,
-     "mean_p": 0.378,
-     "realized": 0.636
+     "n": 10,
+     "mean_p": 0.373,
+     "realized": 0.6
     },
     {
      "bin": "0.50-0.55",
-     "n": 34,
+     "n": 33,
      "mean_p": 0.526,
-     "realized": 0.676
+     "realized": 0.667
     },
     {
      "bin": "0.55-0.60",
      "n": 18,
-     "mean_p": 0.567,
-     "realized": 0.611
+     "mean_p": 0.566,
+     "realized": 0.667
     },
     {
      "bin": "0.60-0.70",
-     "n": 10,
-     "mean_p": 0.657,
-     "realized": 0.7
+     "n": 12,
+     "mean_p": 0.652,
+     "realized": 0.583
     },
     {
      "bin": "0.70-1.00",
-     "n": 8,
-     "mean_p": 0.773,
-     "realized": 0.75
+     "n": 7,
+     "mean_p": 0.77,
+     "realized": 0.714
     }
    ],
    "recent": [
@@ -467,7 +467,7 @@
      "odds": -112,
      "tier": "BET",
      "staked": 1,
-     "fraction": 0.0143,
+     "fraction": 0.0147,
      "result": "loss",
      "units": -1.0,
      "clv": 0.0,
@@ -493,7 +493,7 @@
      "odds": -148,
      "tier": "BET",
      "staked": 1,
-     "fraction": 0.0164,
+     "fraction": 0.02,
      "result": "loss",
      "units": -1.0,
      "clv": 0.0,
@@ -540,19 +540,6 @@
     },
     {
      "date": 20260305,
-     "bet": "Eastern Illinois +8.5",
-     "market": "spread",
-     "odds": -118,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.8475,
-     "clv": 0.0,
-     "close_line": 8.5
-    },
-    {
-     "date": 20260305,
      "bet": "Over 122.5",
      "market": "total",
      "odds": -105,
@@ -571,7 +558,7 @@
      "odds": -205,
      "tier": "BET",
      "staked": 1,
-     "fraction": 0.0051,
+     "fraction": 0.0047,
      "result": "win",
      "units": 0.4878,
      "clv": 0.0,
@@ -608,9 +595,9 @@
      "bet": "Tarleton St. ML",
      "market": "moneyline",
      "odds": -125,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": 0.0,
+     "tier": "BET",
+     "staked": 1,
+     "fraction": 0.007,
      "result": "loss",
      "units": -1.0,
      "clv": 0.0,
@@ -696,6 +683,32 @@
     },
     {
      "date": 20260305,
+     "bet": "Southern Utah +9.5",
+     "market": "spread",
+     "odds": -108,
+     "tier": "CAND",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 0.9259,
+     "clv": 0.0,
+     "close_line": 9.5
+    },
+    {
+     "date": 20260305,
+     "bet": "Southern Miss ML",
+     "market": "moneyline",
+     "odds": 105,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 1.05,
+     "clv": 0.0,
+     "close_line": null
+    },
+    {
+     "date": 20260305,
      "bet": "Southern Miss ML",
      "market": "moneyline",
      "odds": 105,
@@ -732,19 +745,6 @@
      "units": 0.9524,
      "clv": 0.0,
      "close_line": 143.5
-    },
-    {
-     "date": 20260305,
-     "bet": "Drake ML",
-     "market": "moneyline",
-     "odds": 185,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 1.85,
-     "clv": 0.0,
-     "close_line": null
     },
     {
      "date": 20260305,
