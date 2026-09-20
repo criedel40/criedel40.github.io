@@ -685,7 +685,7 @@
         tb.appendChild(tr);
       });
       t.appendChild(tb); box.appendChild(t);
-      const note = document.createElement('div'); note.className = 'note'; note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above, remembered in this browser only. Open is the first DraftKings line the hourly pull saw. Rows run BET, then LEAN, each by confidence.'; box.appendChild(note);
+      const note = document.createElement('div'); note.className = 'note'; note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above, remembered in this browser only. Open is the first DraftKings line the hourly pull saw. Rows run BET, then LEAN, each by confidence. Confidence rates the evidence behind a signal at its price, not whether we staked it \u2014 a blank stake means the sizing rules held it back. Totals top out lower than spreads and moneylines on purpose: their strongest case is a weaker one.'; box.appendChild(note);
     }
 
     // ---- the season record: every graded signal from the ledger, staked bets first
