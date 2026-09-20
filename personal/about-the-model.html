@@ -132,7 +132,7 @@
             <text x="880" y="283" text-anchor="middle">Fatigue shift</text>
           </g>
           <g fill="var(--ink-2)" font-size="11">
-            <text x="400" y="301" text-anchor="middle">running per-team correction, on the cloud</text>
+            <text x="400" y="301" text-anchor="middle">running correction, on the cloud</text>
             <text x="640" y="301" text-anchor="middle">who sat the last game</text>
             <text x="880" y="301" text-anchor="middle">postseason back-to-backs</text>
           </g>
@@ -140,18 +140,11 @@
             <path d="M700,198 L700,230 L400,230 L400,262"/>
             <path d="M500,288 L540,288"/>
             <path d="M740,288 L780,288"/>
-            <path d="M1040,198 L1040,452"/>
-            <path d="M980,300 L1040,300"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
             <text x="520" y="282" text-anchor="middle">both</text>
             <text x="760" y="282" text-anchor="middle">total</text>
-            <text x="1000" y="318" text-anchor="middle">shifts apply to</text>
-            <text x="1000" y="330" text-anchor="middle">the whole cloud</text>
-            <text x="1046" y="336" text-anchor="start">cloud →</text>
-            <text x="1046" y="349" text-anchor="start">P(win),</text>
-            <text x="1046" y="362" text-anchor="start">P(cover)</text>
-          </g>
+                                  </g>
 
           <!-- row 3 -->
           <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
@@ -168,17 +161,21 @@
           </g>
           <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)">
             <path d="M500,400 L540,400"/>
-            <path d="M880,314 L880,340 L640,340 L640,378"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
-            <text x="760" y="336" text-anchor="middle">adjusted cloud: its mean margin and total</text>
+            <text x="886" y="372" text-anchor="start">the adjusted cloud:</text>
+            <text x="886" y="385" text-anchor="start">mean margin, mean total,</text>
+            <text x="886" y="398" text-anchor="start">P(win), P(cover), P(under)</text>
           </g>
 
           <!-- forecast + line bus into row 4 -->
           <g stroke="currentColor" stroke-width="1.2" fill="none">
-            <path d="M640,422 L640,440 L200,440 L200,498" marker-end="url(#arr)"/>
-            <path d="M640,422 L640,440 L560,440 L560,498" marker-end="url(#arr)"/>
-            <path d="M640,440 L920,440 L920,498" marker-end="url(#arr)"/>
+            <path d="M880,314 L880,440"/>
+            <path d="M640,422 L640,440"/>
+            <path d="M200,440 L920,440"/>
+            <path d="M200,440 L200,498" marker-end="url(#arr)"/>
+            <path d="M560,440 L560,498" marker-end="url(#arr)"/>
+            <path d="M920,440 L920,498" marker-end="url(#arr)"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
             <text x="206" y="488" text-anchor="start">lean = cloud mean margin − spread</text>
