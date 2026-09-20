@@ -44,7 +44,7 @@
     header a:hover i{transform:scale(1.2)}
     .header-full-height{width:100%;height:auto;min-height:220px;aspect-ratio:640/220}
     .header-full-height>div{height:100%;min-height:100%}
-    .bball-images-container{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin:2rem 0;padding:1rem}
+    .bball-images-container{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;margin:2rem auto;padding:1rem;max-width:1040px}
     .bball-images-container>*{min-width:0}
     @media screen and (max-width:768px){.bball-images-container{grid-template-columns:minmax(0,1fr);padding:0}}
     .bball-image-wrapper{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
@@ -1065,9 +1065,13 @@
         if (p.axis) {
           svgText(p.x0 + panelW / 2, base + 40, p.axis, 'tick', 'middle', svg);
         } else {   // the margin axis says who is winning at each end instead of naming the subtraction
-          const end = n => (n || '').length > 16 ? n.slice(0, 15) + '\u2026' : n;
-          svgText(p.x0, base + 42, `\u25c0 ${end(awayName)} wins`, 'end-label', 'start', svg);
-          svgText(p.x0 + panelW, base + 42, `${end(homeName)} wins \u25b6`, 'end-label', 'end', svg);
+          // full team names where they fit; the pair shares one panel, so shrink the type rather than
+          // clip a name, and only truncate past what any school is actually called
+          const end = n => (n || '').length > 24 ? n.slice(0, 23) + '\u2026' : n;
+          const lA = `\u25c0 ${end(awayName)} wins`, lH = `${end(homeName)} wins \u25b6`;
+          const fs = Math.max(10.5, Math.min(15, 15 * (panelW - 12) / (0.56 * 15 * (lA.length + lH.length))));
+          svgText(p.x0, base + 42, lA, 'end-label', 'start', svg).setAttribute('font-size', fs.toFixed(1));
+          svgText(p.x0 + panelW, base + 42, lH, 'end-label', 'end', svg).setAttribute('font-size', fs.toFixed(1));
         }
         if (sum.p10 !== undefined && sum.p90 !== undefined) {
           const x10 = p.x0 + (sum.p10 - start) * slot, x90 = p.x0 + (sum.p90 - start + 1) * slot;
