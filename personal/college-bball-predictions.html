@@ -738,7 +738,9 @@
       body.appendChild(sectionTitle('By market and tier'));
       body.appendChild(wrap(blockTable([['Staked', 'staked', 'all', true], ['Staked: spread', 'staked', 'spread'], ['Staked: total', 'staked', 'total'], ['Staked: moneyline', 'staked', 'moneyline'],
                                         ['All BET signals', 'BET', 'all'], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
-                                        ['LEAN signals', 'LEAN', 'all']].map(([name, g, m, hl]) => [name, s.table[g][m], hl]))));
+                                        ['LEAN signals', 'LEAN', 'all'],
+                                        ['Candidate: CatBoost spread', 'candidate: catboost-spread', 'spread'], ['Candidate: both spread layers agree', 'candidate: agree-spread', 'spread'],
+                                        ['Candidate: CatBoost moneyline', 'candidate: catboost-moneyline', 'moneyline'], ['Candidate: neutral-floor under', 'candidate: neutral-under', 'total']].map(([name, g, m, hl]) => [name, s.table[g] ? s.table[g][m] : null, hl]))));
       const months = Object.keys(s.by_month.staked || {});
       if (months.length > 1) { body.appendChild(sectionTitle('Staked bets by month')); body.appendChild(wrap(blockTable(months.map(m => [`${m.slice(0, 4)}-${m.slice(4, 6)}`, s.by_month.staked[m], false])))); }
       if (s.reliability && s.reliability.length) {

@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20260305,
-  "generated": "2026-09-18T05:21:24Z",
+  "generated": "2026-09-20T15:47:47Z",
   "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_5_tm_ens5)",
   "members": 10000,
   "rows": [
@@ -16,6 +16,21 @@
   },
   "sheet": [
    {
+    "market": "Spread",
+    "game": "Alcorn St. vs Arkansas Pine Bluff",
+    "bet": "Arkansas Pine Bluff -1.5",
+    "odds": -108,
+    "probability": 0.553,
+    "edge": 0.058,
+    "tier": "BET",
+    "line": -1.5,
+    "open_line": -1.5,
+    "open_odds": -108,
+    "open": "-1.5 (-108)",
+    "p_model": null,
+    "bankroll_fraction": 0.0177
+   },
+   {
     "market": "Moneyline",
     "game": "Alcorn St. vs Arkansas Pine Bluff",
     "bet": "Arkansas Pine Bluff ML",
@@ -28,22 +43,22 @@
     "open_odds": -130,
     "open": "-130",
     "p_model": null,
-    "bankroll_fraction": 0.0062
+    "bankroll_fraction": 0.0069
    },
    {
     "market": "Spread",
     "game": "Cal St. Fullerton vs UC San Diego",
     "bet": "Cal St. Fullerton +4.5",
     "odds": -115,
-    "probability": 0.603,
-    "edge": 0.092,
+    "probability": 0.569,
+    "edge": 0.058,
     "tier": "BET",
     "line": 4.5,
     "open_line": 3.5,
     "open_odds": -108,
     "open": "+3.5 (-108)",
     "p_model": null,
-    "bankroll_fraction": 0.0182
+    "bankroll_fraction": 0.0183
    },
    {
     "market": "Moneyline",
@@ -58,37 +73,7 @@
     "open_odds": null,
     "open": null,
     "p_model": null,
-    "bankroll_fraction": 0.0086
-   },
-   {
-    "market": "Spread",
-    "game": "FIU vs Middle Tennessee",
-    "bet": "Middle Tennessee +1.5",
-    "odds": -105,
-    "probability": 0.555,
-    "edge": 0.065,
-    "tier": "BET",
-    "line": 1.5,
-    "open_line": 2.5,
-    "open_odds": -115,
-    "open": "+2.5 (-115)",
-    "p_model": null,
-    "bankroll_fraction": 0.0182
-   },
-   {
-    "market": "Spread",
-    "game": "Hawaii vs UC Riverside",
-    "bet": "UC Riverside +11.5",
-    "odds": -115,
-    "probability": 0.551,
-    "edge": 0.04,
-    "tier": "BET",
-    "line": 11.5,
-    "open_line": 11.5,
-    "open_odds": -115,
-    "open": "+11.5 (-115)",
-    "p_model": null,
-    "bankroll_fraction": 0.0077
+    "bankroll_fraction": 0.0094
    },
    {
     "market": "Moneyline",
@@ -103,7 +88,7 @@
     "open_odds": -225,
     "open": "-225",
     "p_model": null,
-    "bankroll_fraction": 0.0032
+    "bankroll_fraction": 0.0035
    },
    {
     "market": "Moneyline",
@@ -118,37 +103,22 @@
     "open_odds": -148,
     "open": "-148",
     "p_model": null,
-    "bankroll_fraction": 0.0182
+    "bankroll_fraction": 0.02
    },
    {
     "market": "Spread",
     "game": "Valparaiso vs Indiana St.",
     "bet": "Valparaiso -2.5",
     "odds": -112,
-    "probability": 0.551,
-    "edge": 0.047,
+    "probability": 0.555,
+    "edge": 0.051,
     "tier": "BET",
     "line": -2.5,
     "open_line": -2.5,
     "open_odds": -112,
     "open": "-2.5 (-112)",
     "p_model": null,
-    "bankroll_fraction": 0.0109
-   },
-   {
-    "market": "Spread",
-    "game": "Iowa vs Michigan",
-    "bet": "Iowa +8.5",
-    "odds": -108,
-    "probability": 0.572,
-    "edge": 0.076,
-    "tier": "BET",
-    "line": 8.5,
-    "open_line": 8.5,
-    "open_odds": -112,
-    "open": "+8.5 (-112)",
-    "p_model": null,
-    "bankroll_fraction": 0.0182
+    "bankroll_fraction": 0.0143
    },
    {
     "market": "Moneyline",
@@ -163,37 +133,7 @@
     "open_odds": 320,
     "open": "+320",
     "p_model": null,
-    "bankroll_fraction": 0.0062
-   },
-   {
-    "market": "Spread",
-    "game": "Jackson St. vs Mississippi Valley St.",
-    "bet": "Mississippi Valley St. +10.5",
-    "odds": -110,
-    "probability": 0.558,
-    "edge": 0.058,
-    "tier": "BET",
-    "line": 10.5,
-    "open_line": 10.5,
-    "open_odds": -110,
-    "open": "+10.5 (-110)",
-    "p_model": null,
-    "bankroll_fraction": 0.0163
-   },
-   {
-    "market": "Spread",
-    "game": "Southern Miss vs James Madison",
-    "bet": "Southern Miss +1.5",
-    "odds": -110,
-    "probability": 0.568,
-    "edge": 0.068,
-    "tier": "BET",
-    "line": 1.5,
-    "open_line": 1.5,
-    "open_odds": -110,
-    "open": "+1.5 (-110)",
-    "p_model": null,
-    "bankroll_fraction": 0.0182
+    "bankroll_fraction": 0.0069
    },
    {
     "market": "Moneyline",
@@ -208,37 +148,22 @@
     "open_odds": null,
     "open": null,
     "p_model": null,
-    "bankroll_fraction": 0.0149
+    "bankroll_fraction": 0.0164
    },
    {
     "market": "Spread",
-    "game": "Missouri St. vs Western Kentucky",
-    "bet": "Missouri St. +2.5",
-    "odds": -118,
-    "probability": 0.568,
+    "game": "UTEP vs Kennesaw St.",
+    "bet": "Kennesaw St. -2.5",
+    "odds": -110,
+    "probability": 0.551,
     "edge": 0.051,
     "tier": "BET",
-    "line": 2.5,
-    "open_line": 1.5,
-    "open_odds": -102,
-    "open": "+1.5 (-102)",
+    "line": -2.5,
+    "open_line": -2.5,
+    "open_odds": -110,
+    "open": "-2.5 (-110)",
     "p_model": null,
-    "bankroll_fraction": 0.0133
-   },
-   {
-    "market": "Spread",
-    "game": "Southern Utah vs Utah Valley",
-    "bet": "Southern Utah +9.5",
-    "odds": -108,
-    "probability": 0.556,
-    "edge": 0.06,
-    "tier": "BET",
-    "line": 9.5,
-    "open_line": 9.5,
-    "open_odds": -108,
-    "open": "+9.5 (-108)",
-    "p_model": null,
-    "bankroll_fraction": 0.0173
+    "bankroll_fraction": 0.0144
    },
    {
     "market": "Moneyline",
@@ -253,7 +178,7 @@
     "open_odds": -205,
     "open": "-205",
     "p_model": null,
-    "bankroll_fraction": 0.0047
+    "bankroll_fraction": 0.0051
    }
   ],
   "tier_rules": {
@@ -273,9 +198,9 @@
   },
   "tier_counts": {
    "Spread": {
-    "PASS": 14,
-    "LEAN": 20,
-    "BET": 9
+    "LEAN": 22,
+    "PASS": 17,
+    "BET": 4
    },
    "Moneyline": {
     "PASS": 26,
@@ -312,17 +237,17 @@
    "Bet": {
     "Side": "Cal Baptist",
     "Lean": 1.19,
-    "CoverProbability": 0.511,
-    "Tier": "PASS"
+    "CoverProbability": 0.526,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Cal Baptist",
      "Line": -8.5,
      "Lean": 1.19,
-     "Probability": 0.511,
-     "Edge": -0.006,
-     "Tier": "PASS"
+     "Probability": 0.526,
+     "Edge": 0.008,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Cal Baptist",
@@ -366,10 +291,10 @@
     "market": "Spread",
     "bet": "Cal Baptist -8.5",
     "odds": -118,
-    "model": 0.511,
+    "model": 0.526,
     "breakeven": 0.541,
-    "edge": -0.03,
-    "rec": "PASS",
+    "edge": -0.015,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -8.5,
     "open_odds": -118,
@@ -379,9 +304,9 @@
     "market": "Spread",
     "bet": "Abilene Christian +8.5",
     "odds": -102,
-    "model": 0.489,
+    "model": 0.474,
     "breakeven": 0.505,
-    "edge": -0.016,
+    "edge": -0.031,
     "rec": "PASS",
     "selected": false,
     "open_line": 8.5,
@@ -826,17 +751,17 @@
    "Bet": {
     "Side": "Alabama A&M",
     "Lean": 0.24,
-    "CoverProbability": 0.533,
-    "Tier": "LEAN"
+    "CoverProbability": 0.516,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "Alabama A&M",
      "Line": 1.5,
      "Lean": 0.24,
-     "Probability": 0.533,
-     "Edge": 0.011,
-     "Tier": "LEAN"
+     "Probability": 0.516,
+     "Edge": -0.006,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "Southern",
@@ -880,10 +805,10 @@
     "market": "Spread",
     "bet": "Alabama A&M +1.5",
     "odds": -120,
-    "model": 0.533,
+    "model": 0.516,
     "breakeven": 0.545,
-    "edge": -0.012,
-    "rec": "LEAN",
+    "edge": -0.029,
+    "rec": "PASS",
     "selected": false,
     "open_line": 1.5,
     "open_odds": -120,
@@ -893,9 +818,9 @@
     "market": "Spread",
     "bet": "Southern -1.5",
     "odds": 100,
-    "model": 0.467,
+    "model": 0.484,
     "breakeven": 0.5,
-    "edge": -0.033,
+    "edge": -0.016,
     "rec": "PASS",
     "selected": false,
     "open_line": -1.5,
@@ -1330,7 +1255,7 @@
    "Bet": {
     "Side": "Alabama St.",
     "Lean": 0.9,
-    "CoverProbability": 0.507,
+    "CoverProbability": 0.522,
     "Tier": "PASS"
    },
    "Signals": {
@@ -1338,8 +1263,8 @@
      "Side": "Alabama St.",
      "Line": -3.5,
      "Lean": 0.9,
-     "Probability": 0.507,
-     "Edge": 0.017,
+     "Probability": 0.522,
+     "Edge": 0.033,
      "Tier": "PASS"
     },
     "Moneyline": {
@@ -1384,9 +1309,9 @@
     "market": "Spread",
     "bet": "Alabama St. -3.5",
     "odds": -105,
-    "model": 0.507,
+    "model": 0.522,
     "breakeven": 0.512,
-    "edge": -0.005,
+    "edge": 0.01,
     "rec": "PASS",
     "selected": false,
     "open_line": -3.5,
@@ -1397,9 +1322,9 @@
     "market": "Spread",
     "bet": "Grambling St. +3.5",
     "odds": -115,
-    "model": 0.493,
+    "model": 0.478,
     "breakeven": 0.535,
-    "edge": -0.042,
+    "edge": -0.057,
     "rec": "PASS",
     "selected": false,
     "open_line": 3.5,
@@ -1850,17 +1775,17 @@
    "Bet": {
     "Side": "Arkansas Pine Bluff",
     "Lean": 3.61,
-    "CoverProbability": 0.548,
-    "Tier": "LEAN"
+    "CoverProbability": 0.553,
+    "Tier": "BET"
    },
    "Signals": {
     "Spread": {
      "Side": "Arkansas Pine Bluff",
      "Line": -1.5,
      "Lean": 3.61,
-     "Probability": 0.548,
-     "Edge": 0.052,
-     "Tier": "LEAN"
+     "Probability": 0.553,
+     "Edge": 0.058,
+     "Tier": "BET"
     },
     "Moneyline": {
      "Side": "Arkansas Pine Bluff",
@@ -1904,9 +1829,9 @@
     "market": "Spread",
     "bet": "Alcorn St. +1.5",
     "odds": -112,
-    "model": 0.452,
+    "model": 0.447,
     "breakeven": 0.528,
-    "edge": -0.076,
+    "edge": -0.081,
     "rec": "PASS",
     "selected": false,
     "open_line": 1.5,
@@ -1917,11 +1842,11 @@
     "market": "Spread",
     "bet": "Arkansas Pine Bluff -1.5",
     "odds": -108,
-    "model": 0.548,
+    "model": 0.553,
     "breakeven": 0.519,
-    "edge": 0.029,
-    "rec": "LEAN",
-    "selected": false,
+    "edge": 0.034,
+    "rec": "BET",
+    "selected": true,
     "open_line": -1.5,
     "open_odds": -108,
     "open": "-1.5 (-108)"
@@ -2385,17 +2310,17 @@
    "Bet": {
     "Side": "American",
     "Lean": 0.61,
-    "CoverProbability": 0.539,
-    "Tier": "LEAN"
+    "CoverProbability": 0.52,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "American",
      "Line": 3.5,
      "Lean": 0.61,
-     "Probability": 0.539,
-     "Edge": 0.021,
-     "Tier": "LEAN"
+     "Probability": 0.52,
+     "Edge": 0.003,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "American",
@@ -2439,9 +2364,9 @@
     "market": "Spread",
     "bet": "Boston University -3.5",
     "odds": -102,
-    "model": 0.461,
+    "model": 0.48,
     "breakeven": 0.505,
-    "edge": -0.044,
+    "edge": -0.025,
     "rec": "PASS",
     "selected": false,
     "open_line": -3.5,
@@ -2452,10 +2377,10 @@
     "market": "Spread",
     "bet": "American +3.5",
     "odds": -118,
-    "model": 0.539,
+    "model": 0.52,
     "breakeven": 0.541,
-    "edge": -0.002,
-    "rec": "LEAN",
+    "edge": -0.021,
+    "rec": "PASS",
     "selected": false,
     "open_line": 3.5,
     "open_odds": -118,
@@ -2892,17 +2817,17 @@
    "Bet": {
     "Side": "Georgia Southern",
     "Lean": 0.67,
-    "CoverProbability": 0.54,
-    "Tier": "LEAN"
+    "CoverProbability": 0.521,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "Georgia Southern",
      "Line": 7.5,
      "Lean": 0.67,
-     "Probability": 0.54,
-     "Edge": 0.04,
-     "Tier": "LEAN"
+     "Probability": 0.521,
+     "Edge": 0.021,
+     "Tier": "PASS"
     },
     "Total": {
      "Side": "Under",
@@ -2935,9 +2860,9 @@
     "market": "Spread",
     "bet": "Arkansas St. -7.5",
     "odds": -110,
-    "model": 0.46,
+    "model": 0.479,
     "breakeven": 0.524,
-    "edge": -0.064,
+    "edge": -0.045,
     "rec": "PASS",
     "selected": false,
     "open_line": -7.5,
@@ -2948,10 +2873,10 @@
     "market": "Spread",
     "bet": "Georgia Southern +7.5",
     "odds": -110,
-    "model": 0.54,
+    "model": 0.521,
     "breakeven": 0.524,
-    "edge": 0.016,
-    "rec": "LEAN",
+    "edge": -0.003,
+    "rec": "PASS",
     "selected": false,
     "open_line": 7.5,
     "open_odds": -110,
@@ -3427,17 +3352,17 @@
    "Bet": {
     "Side": "Bethune Cookman",
     "Lean": 1.84,
-    "CoverProbability": 0.521,
-    "Tier": "PASS"
+    "CoverProbability": 0.533,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Bethune Cookman",
      "Line": -2.5,
      "Lean": 1.84,
-     "Probability": 0.521,
-     "Edge": 0.021,
-     "Tier": "PASS"
+     "Probability": 0.533,
+     "Edge": 0.033,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Bethune Cookman",
@@ -3481,9 +3406,9 @@
     "market": "Spread",
     "bet": "Florida A&M +2.5",
     "odds": -110,
-    "model": 0.479,
+    "model": 0.467,
     "breakeven": 0.524,
-    "edge": -0.045,
+    "edge": -0.057,
     "rec": "PASS",
     "selected": false,
     "open_line": 2.5,
@@ -3494,10 +3419,10 @@
     "market": "Spread",
     "bet": "Bethune Cookman -2.5",
     "odds": -110,
-    "model": 0.521,
+    "model": 0.533,
     "breakeven": 0.524,
-    "edge": -0.003,
-    "rec": "PASS",
+    "edge": 0.009,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -2.5,
     "open_odds": -110,
@@ -3957,7 +3882,7 @@
    "Bet": {
     "Side": "Bucknell",
     "Lean": 1.18,
-    "CoverProbability": 0.547,
+    "CoverProbability": 0.527,
     "Tier": "LEAN"
    },
    "Signals": {
@@ -3965,8 +3890,8 @@
      "Side": "Bucknell",
      "Line": 16.5,
      "Lean": 1.18,
-     "Probability": 0.547,
-     "Edge": 0.065,
+     "Probability": 0.527,
+     "Edge": 0.044,
      "Tier": "LEAN"
     },
     "Total": {
@@ -4000,9 +3925,9 @@
     "market": "Spread",
     "bet": "Navy -16.5",
     "odds": -118,
-    "model": 0.453,
+    "model": 0.473,
     "breakeven": 0.541,
-    "edge": -0.088,
+    "edge": -0.068,
     "rec": "PASS",
     "selected": false,
     "open_line": -16.5,
@@ -4013,9 +3938,9 @@
     "market": "Spread",
     "bet": "Bucknell +16.5",
     "odds": -102,
-    "model": 0.547,
+    "model": 0.527,
     "breakeven": 0.505,
-    "edge": 0.042,
+    "edge": 0.022,
     "rec": "LEAN",
     "selected": false,
     "open_line": 16.5,
@@ -4471,17 +4396,17 @@
    "Bet": {
     "Side": "Cal Poly",
     "Lean": 0.52,
-    "CoverProbability": 0.537,
-    "Tier": "LEAN"
+    "CoverProbability": 0.519,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "Cal Poly",
      "Line": 9.5,
      "Lean": 0.52,
-     "Probability": 0.537,
-     "Edge": 0.033,
-     "Tier": "LEAN"
+     "Probability": 0.519,
+     "Edge": 0.015,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "Cal Poly",
@@ -4525,9 +4450,9 @@
     "market": "Spread",
     "bet": "UC Irvine -9.5",
     "odds": -108,
-    "model": 0.463,
+    "model": 0.481,
     "breakeven": 0.519,
-    "edge": -0.056,
+    "edge": -0.038,
     "rec": "PASS",
     "selected": false,
     "open_line": -8.5,
@@ -4538,10 +4463,10 @@
     "market": "Spread",
     "bet": "Cal Poly +9.5",
     "odds": -112,
-    "model": 0.537,
+    "model": 0.519,
     "breakeven": 0.528,
-    "edge": 0.009,
-    "rec": "LEAN",
+    "edge": -0.009,
+    "rec": "PASS",
     "selected": false,
     "open_line": 8.5,
     "open_odds": -108,
@@ -5054,7 +4979,7 @@
    "Bet": {
     "Side": "Cal St. Northridge",
     "Lean": 0.85,
-    "CoverProbability": 0.506,
+    "CoverProbability": 0.522,
     "Tier": "PASS"
    },
    "Signals": {
@@ -5062,8 +4987,8 @@
      "Side": "Cal St. Northridge",
      "Line": -7.5,
      "Lean": 0.85,
-     "Probability": 0.506,
-     "Edge": 0.006,
+     "Probability": 0.522,
+     "Edge": 0.022,
      "Tier": "PASS"
     },
     "Moneyline": {
@@ -5108,9 +5033,9 @@
     "market": "Spread",
     "bet": "Cal St. Bakersfield +7.5",
     "odds": -110,
-    "model": 0.494,
+    "model": 0.478,
     "breakeven": 0.524,
-    "edge": -0.03,
+    "edge": -0.046,
     "rec": "PASS",
     "selected": false,
     "open_line": 8.5,
@@ -5121,9 +5046,9 @@
     "market": "Spread",
     "bet": "Cal St. Northridge -7.5",
     "odds": -110,
-    "model": 0.506,
+    "model": 0.522,
     "breakeven": 0.524,
-    "edge": -0.018,
+    "edge": -0.002,
     "rec": "PASS",
     "selected": false,
     "open_line": -8.5,
@@ -5578,7 +5503,7 @@
    "Bet": {
     "Side": "Cal St. Fullerton",
     "Lean": 4.88,
-    "CoverProbability": 0.603,
+    "CoverProbability": 0.569,
     "Tier": "BET"
    },
    "Signals": {
@@ -5586,8 +5511,8 @@
      "Side": "Cal St. Fullerton",
      "Line": 4.5,
      "Lean": 4.88,
-     "Probability": 0.603,
-     "Edge": 0.092,
+     "Probability": 0.569,
+     "Edge": 0.058,
      "Tier": "BET"
     },
     "Moneyline": {
@@ -5632,9 +5557,9 @@
     "market": "Spread",
     "bet": "Cal St. Fullerton +4.5",
     "odds": -115,
-    "model": 0.603,
+    "model": 0.569,
     "breakeven": 0.535,
-    "edge": 0.068,
+    "edge": 0.034,
     "rec": "BET",
     "selected": true,
     "open_line": 3.5,
@@ -5645,9 +5570,9 @@
     "market": "Spread",
     "bet": "UC San Diego -4.5",
     "odds": -105,
-    "model": 0.397,
+    "model": 0.431,
     "breakeven": 0.512,
-    "edge": -0.115,
+    "edge": -0.081,
     "rec": "PASS",
     "selected": false,
     "open_line": -3.5,
@@ -6632,17 +6557,17 @@
    "Bet": {
     "Side": "Coppin St.",
     "Lean": 0.34,
-    "CoverProbability": 0.535,
-    "Tier": "LEAN"
+    "CoverProbability": 0.517,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "Coppin St.",
      "Line": 6.5,
      "Lean": 0.34,
-     "Probability": 0.535,
-     "Edge": 0.035,
-     "Tier": "LEAN"
+     "Probability": 0.517,
+     "Edge": 0.017,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "Coppin St.",
@@ -6686,9 +6611,9 @@
     "market": "Spread",
     "bet": "Morgan St. -6.5",
     "odds": -110,
-    "model": 0.465,
+    "model": 0.483,
     "breakeven": 0.524,
-    "edge": -0.059,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": -6.5,
@@ -6699,10 +6624,10 @@
     "market": "Spread",
     "bet": "Coppin St. +6.5",
     "odds": -110,
-    "model": 0.535,
+    "model": 0.517,
     "breakeven": 0.524,
-    "edge": 0.011,
-    "rec": "LEAN",
+    "edge": -0.007,
+    "rec": "PASS",
     "selected": false,
     "open_line": 6.5,
     "open_odds": -110,
@@ -7178,7 +7103,7 @@
    "Bet": {
     "Side": "Sam Houston St.",
     "Lean": 0.7,
-    "CoverProbability": 0.504,
+    "CoverProbability": 0.52,
     "Tier": "PASS"
    },
    "Signals": {
@@ -7186,8 +7111,8 @@
      "Side": "Sam Houston St.",
      "Line": -6.5,
      "Lean": 0.7,
-     "Probability": 0.504,
-     "Edge": -0.001,
+     "Probability": 0.52,
+     "Edge": 0.016,
      "Tier": "PASS"
     },
     "Moneyline": {
@@ -7232,9 +7157,9 @@
     "market": "Spread",
     "bet": "Delaware +6.5",
     "odds": -108,
-    "model": 0.496,
+    "model": 0.48,
     "breakeven": 0.519,
-    "edge": -0.023,
+    "edge": -0.039,
     "rec": "PASS",
     "selected": false,
     "open_line": 6.5,
@@ -7245,9 +7170,9 @@
     "market": "Spread",
     "bet": "Sam Houston St. -6.5",
     "odds": -112,
-    "model": 0.504,
+    "model": 0.52,
     "breakeven": 0.528,
-    "edge": -0.024,
+    "edge": -0.008,
     "rec": "PASS",
     "selected": false,
     "open_line": -6.5,
@@ -7689,7 +7614,7 @@
    "Bet": {
     "Side": "Delaware St.",
     "Lean": 1.09,
-    "CoverProbability": 0.546,
+    "CoverProbability": 0.526,
     "Tier": "LEAN"
    },
    "Signals": {
@@ -7697,8 +7622,8 @@
      "Side": "Delaware St.",
      "Line": 6.5,
      "Lean": 1.09,
-     "Probability": 0.546,
-     "Edge": 0.057,
+     "Probability": 0.526,
+     "Edge": 0.037,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -7743,9 +7668,9 @@
     "market": "Spread",
     "bet": "Maryland Eastern Shore -6.5",
     "odds": -115,
-    "model": 0.454,
+    "model": 0.474,
     "breakeven": 0.535,
-    "edge": -0.081,
+    "edge": -0.061,
     "rec": "PASS",
     "selected": false,
     "open_line": -6.5,
@@ -7756,9 +7681,9 @@
     "market": "Spread",
     "bet": "Delaware St. +6.5",
     "odds": -105,
-    "model": 0.546,
+    "model": 0.526,
     "breakeven": 0.512,
-    "edge": 0.034,
+    "edge": 0.014,
     "rec": "LEAN",
     "selected": false,
     "open_line": 6.5,
@@ -8175,7 +8100,7 @@
    "Bet": {
     "Side": "Drake",
     "Lean": 1.16,
-    "CoverProbability": 0.547,
+    "CoverProbability": 0.527,
     "Tier": "LEAN"
    },
    "Signals": {
@@ -8183,8 +8108,8 @@
      "Side": "Drake",
      "Line": 5.5,
      "Lean": 1.16,
-     "Probability": 0.547,
-     "Edge": 0.036,
+     "Probability": 0.527,
+     "Edge": 0.016,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -8229,9 +8154,9 @@
     "market": "Spread",
     "bet": "Southern Illinois -5.5",
     "odds": -105,
-    "model": 0.453,
+    "model": 0.473,
     "breakeven": 0.512,
-    "edge": -0.059,
+    "edge": -0.039,
     "rec": "PASS",
     "selected": false,
     "open_line": -4.5,
@@ -8242,9 +8167,9 @@
     "market": "Spread",
     "bet": "Drake +5.5",
     "odds": -115,
-    "model": 0.547,
+    "model": 0.527,
     "breakeven": 0.535,
-    "edge": 0.012,
+    "edge": -0.008,
     "rec": "LEAN",
     "selected": false,
     "open_line": 4.5,
@@ -8694,7 +8619,7 @@
    "Bet": {
     "Side": "Tulsa",
     "Lean": 0.08,
-    "CoverProbability": 0.494,
+    "CoverProbability": 0.513,
     "Tier": "PASS"
    },
    "Signals": {
@@ -8702,8 +8627,8 @@
      "Side": "Tulsa",
      "Line": -9.5,
      "Lean": 0.08,
-     "Probability": 0.494,
-     "Edge": -0.002,
+     "Probability": 0.513,
+     "Edge": 0.017,
      "Tier": "PASS"
     },
     "Moneyline": {
@@ -8748,9 +8673,9 @@
     "market": "Spread",
     "bet": "East Carolina +9.5",
     "odds": -112,
-    "model": 0.506,
+    "model": 0.487,
     "breakeven": 0.528,
-    "edge": -0.022,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": 8.5,
@@ -8761,9 +8686,9 @@
     "market": "Spread",
     "bet": "Tulsa -9.5",
     "odds": -108,
-    "model": 0.494,
+    "model": 0.513,
     "breakeven": 0.519,
-    "edge": -0.025,
+    "edge": -0.006,
     "rec": "PASS",
     "selected": false,
     "open_line": -8.5,
@@ -9223,17 +9148,17 @@
    "Bet": {
     "Side": "Eastern Illinois",
     "Lean": 0.67,
-    "CoverProbability": 0.54,
-    "Tier": "LEAN"
+    "CoverProbability": 0.521,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "Eastern Illinois",
      "Line": 8.5,
      "Lean": 0.67,
-     "Probability": 0.54,
-     "Edge": 0.022,
-     "Tier": "LEAN"
+     "Probability": 0.521,
+     "Edge": 0.004,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "Eastern Illinois",
@@ -9277,9 +9202,9 @@
     "market": "Spread",
     "bet": "Tennessee Martin -8.5",
     "odds": -102,
-    "model": 0.46,
+    "model": 0.479,
     "breakeven": 0.505,
-    "edge": -0.045,
+    "edge": -0.026,
     "rec": "PASS",
     "selected": false,
     "open_line": -8.5,
@@ -9290,10 +9215,10 @@
     "market": "Spread",
     "bet": "Eastern Illinois +8.5",
     "odds": -118,
-    "model": 0.54,
+    "model": 0.521,
     "breakeven": 0.541,
-    "edge": -0.001,
-    "rec": "LEAN",
+    "edge": -0.02,
+    "rec": "PASS",
     "selected": false,
     "open_line": 8.5,
     "open_odds": -118,
@@ -9763,17 +9688,17 @@
    "Bet": {
     "Side": "Evansville",
     "Lean": 0.8,
-    "CoverProbability": 0.542,
-    "Tier": "LEAN"
+    "CoverProbability": 0.523,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "Evansville",
      "Line": 15.5,
      "Lean": 0.8,
-     "Probability": 0.542,
-     "Edge": 0.046,
-     "Tier": "LEAN"
+     "Probability": 0.523,
+     "Edge": 0.027,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "Evansville",
@@ -9817,9 +9742,9 @@
     "market": "Spread",
     "bet": "Northern Iowa -15.5",
     "odds": -112,
-    "model": 0.458,
+    "model": 0.477,
     "breakeven": 0.528,
-    "edge": -0.07,
+    "edge": -0.051,
     "rec": "PASS",
     "selected": false,
     "open_line": -14.5,
@@ -9830,10 +9755,10 @@
     "market": "Spread",
     "bet": "Evansville +15.5",
     "odds": -108,
-    "model": 0.542,
+    "model": 0.523,
     "breakeven": 0.519,
-    "edge": 0.023,
-    "rec": "LEAN",
+    "edge": 0.004,
+    "rec": "PASS",
     "selected": false,
     "open_line": 14.5,
     "open_odds": -112,
@@ -10292,17 +10217,17 @@
    "Bet": {
     "Side": "Middle Tennessee",
     "Lean": 1.65,
-    "CoverProbability": 0.555,
-    "Tier": "BET"
+    "CoverProbability": 0.532,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Middle Tennessee",
      "Line": 1.5,
      "Lean": 1.65,
-     "Probability": 0.555,
-     "Edge": 0.065,
-     "Tier": "BET"
+     "Probability": 0.532,
+     "Edge": 0.043,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Middle Tennessee",
@@ -10346,9 +10271,9 @@
     "market": "Spread",
     "bet": "FIU -1.5",
     "odds": -115,
-    "model": 0.445,
+    "model": 0.468,
     "breakeven": 0.535,
-    "edge": -0.09,
+    "edge": -0.067,
     "rec": "PASS",
     "selected": false,
     "open_line": -2.5,
@@ -10359,11 +10284,11 @@
     "market": "Spread",
     "bet": "Middle Tennessee +1.5",
     "odds": -105,
-    "model": 0.555,
+    "model": 0.532,
     "breakeven": 0.512,
-    "edge": 0.043,
-    "rec": "BET",
-    "selected": true,
+    "edge": 0.02,
+    "rec": "LEAN",
+    "selected": false,
     "open_line": 2.5,
     "open_odds": -115,
     "open": "+2.5 (-115)"
@@ -11289,17 +11214,17 @@
    "Bet": {
     "Side": "UC Riverside",
     "Lean": 1.4,
-    "CoverProbability": 0.551,
-    "Tier": "BET"
+    "CoverProbability": 0.529,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "UC Riverside",
      "Line": 11.5,
      "Lean": 1.4,
-     "Probability": 0.551,
-     "Edge": 0.04,
-     "Tier": "BET"
+     "Probability": 0.529,
+     "Edge": 0.019,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "UC Riverside",
@@ -11343,9 +11268,9 @@
     "market": "Spread",
     "bet": "Hawaii -11.5",
     "odds": -105,
-    "model": 0.449,
+    "model": 0.471,
     "breakeven": 0.512,
-    "edge": -0.063,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": -11.5,
@@ -11356,11 +11281,11 @@
     "market": "Spread",
     "bet": "UC Riverside +11.5",
     "odds": -115,
-    "model": 0.551,
+    "model": 0.529,
     "breakeven": 0.535,
-    "edge": 0.016,
-    "rec": "BET",
-    "selected": true,
+    "edge": -0.006,
+    "rec": "LEAN",
+    "selected": false,
     "open_line": 11.5,
     "open_odds": -115,
     "open": "+11.5 (-115)"
@@ -11832,17 +11757,17 @@
    "Bet": {
     "Side": "Lehigh",
     "Lean": 1.57,
-    "CoverProbability": 0.517,
-    "Tier": "PASS"
+    "CoverProbability": 0.53,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Lehigh",
      "Line": -6.5,
      "Lean": 1.57,
-     "Probability": 0.517,
-     "Edge": 0.006,
-     "Tier": "PASS"
+     "Probability": 0.53,
+     "Edge": 0.019,
+     "Tier": "LEAN"
     },
     "Total": {
      "Side": "Under",
@@ -11875,10 +11800,10 @@
     "market": "Spread",
     "bet": "Lehigh -6.5",
     "odds": -115,
-    "model": 0.517,
+    "model": 0.53,
     "breakeven": 0.535,
-    "edge": -0.018,
-    "rec": "PASS",
+    "edge": -0.005,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -6.5,
     "open_odds": -115,
@@ -11888,9 +11813,9 @@
     "market": "Spread",
     "bet": "Holy Cross +6.5",
     "odds": -105,
-    "model": 0.483,
+    "model": 0.47,
     "breakeven": 0.512,
-    "edge": -0.029,
+    "edge": -0.042,
     "rec": "PASS",
     "selected": false,
     "open_line": 6.5,
@@ -12350,17 +12275,17 @@
    "Bet": {
     "Side": "Howard",
     "Lean": 1.25,
-    "CoverProbability": 0.512,
-    "Tier": "PASS"
+    "CoverProbability": 0.526,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Howard",
      "Line": -5.5,
      "Lean": 1.25,
-     "Probability": 0.512,
-     "Edge": 0.016,
-     "Tier": "PASS"
+     "Probability": 0.526,
+     "Edge": 0.031,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Howard",
@@ -12404,9 +12329,9 @@
     "market": "Spread",
     "bet": "Norfolk St. +5.5",
     "odds": -112,
-    "model": 0.488,
+    "model": 0.474,
     "breakeven": 0.528,
-    "edge": -0.04,
+    "edge": -0.054,
     "rec": "PASS",
     "selected": false,
     "open_line": 5.5,
@@ -12417,10 +12342,10 @@
     "market": "Spread",
     "bet": "Howard -5.5",
     "odds": -108,
-    "model": 0.512,
+    "model": 0.526,
     "breakeven": 0.519,
-    "edge": -0.007,
-    "rec": "PASS",
+    "edge": 0.007,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -5.5,
     "open_odds": -108,
@@ -12880,7 +12805,7 @@
    "Bet": {
     "Side": "Valparaiso",
     "Lean": 3.8,
-    "CoverProbability": 0.551,
+    "CoverProbability": 0.555,
     "Tier": "BET"
    },
    "Signals": {
@@ -12888,8 +12813,8 @@
      "Side": "Valparaiso",
      "Line": -2.5,
      "Lean": 3.8,
-     "Probability": 0.551,
-     "Edge": 0.047,
+     "Probability": 0.555,
+     "Edge": 0.051,
      "Tier": "BET"
     },
     "Moneyline": {
@@ -12934,9 +12859,9 @@
     "market": "Spread",
     "bet": "Valparaiso -2.5",
     "odds": -112,
-    "model": 0.551,
+    "model": 0.555,
     "breakeven": 0.528,
-    "edge": 0.023,
+    "edge": 0.027,
     "rec": "BET",
     "selected": true,
     "open_line": -2.5,
@@ -12947,9 +12872,9 @@
     "market": "Spread",
     "bet": "Indiana St. +2.5",
     "odds": -108,
-    "model": 0.449,
+    "model": 0.445,
     "breakeven": 0.519,
-    "edge": -0.07,
+    "edge": -0.074,
     "rec": "PASS",
     "selected": false,
     "open_line": 2.5,
@@ -13855,17 +13780,17 @@
    "Bet": {
     "Side": "Iowa",
     "Lean": 2.77,
-    "CoverProbability": 0.572,
-    "Tier": "BET"
+    "CoverProbability": 0.545,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Iowa",
      "Line": 8.5,
      "Lean": 2.77,
-     "Probability": 0.572,
-     "Edge": 0.076,
-     "Tier": "BET"
+     "Probability": 0.545,
+     "Edge": 0.049,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Iowa",
@@ -13909,11 +13834,11 @@
     "market": "Spread",
     "bet": "Iowa +8.5",
     "odds": -108,
-    "model": 0.572,
+    "model": 0.545,
     "breakeven": 0.519,
-    "edge": 0.053,
-    "rec": "BET",
-    "selected": true,
+    "edge": 0.026,
+    "rec": "LEAN",
+    "selected": false,
     "open_line": 8.5,
     "open_odds": -112,
     "open": "+8.5 (-112)"
@@ -13922,9 +13847,9 @@
     "market": "Spread",
     "bet": "Michigan -8.5",
     "odds": -112,
-    "model": 0.428,
+    "model": 0.455,
     "breakeven": 0.528,
-    "edge": -0.1,
+    "edge": -0.073,
     "rec": "PASS",
     "selected": false,
     "open_line": -8.5,
@@ -14379,17 +14304,17 @@
    "Bet": {
     "Side": "Mississippi Valley St.",
     "Lean": 1.87,
-    "CoverProbability": 0.558,
-    "Tier": "BET"
+    "CoverProbability": 0.535,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Mississippi Valley St.",
      "Line": 10.5,
      "Lean": 1.87,
-     "Probability": 0.558,
-     "Edge": 0.058,
-     "Tier": "BET"
+     "Probability": 0.535,
+     "Edge": 0.035,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Mississippi Valley St.",
@@ -14433,9 +14358,9 @@
     "market": "Spread",
     "bet": "Jackson St. -10.5",
     "odds": -110,
-    "model": 0.442,
+    "model": 0.465,
     "breakeven": 0.524,
-    "edge": -0.082,
+    "edge": -0.059,
     "rec": "PASS",
     "selected": false,
     "open_line": -10.5,
@@ -14446,11 +14371,11 @@
     "market": "Spread",
     "bet": "Mississippi Valley St. +10.5",
     "odds": -110,
-    "model": 0.558,
+    "model": 0.535,
     "breakeven": 0.524,
-    "edge": 0.034,
-    "rec": "BET",
-    "selected": true,
+    "edge": 0.011,
+    "rec": "LEAN",
+    "selected": false,
     "open_line": 10.5,
     "open_odds": -110,
     "open": "+10.5 (-110)"
@@ -14905,7 +14830,7 @@
    "Bet": {
     "Side": "New Mexico St.",
     "Lean": 0.55,
-    "CoverProbability": 0.501,
+    "CoverProbability": 0.518,
     "Tier": "PASS"
    },
    "Signals": {
@@ -14913,8 +14838,8 @@
      "Side": "New Mexico St.",
      "Line": -5.5,
      "Lean": 0.55,
-     "Probability": 0.501,
-     "Edge": 0.012,
+     "Probability": 0.518,
+     "Edge": 0.029,
      "Tier": "PASS"
     },
     "Moneyline": {
@@ -14959,9 +14884,9 @@
     "market": "Spread",
     "bet": "New Mexico St. -5.5",
     "odds": -105,
-    "model": 0.501,
+    "model": 0.518,
     "breakeven": 0.512,
-    "edge": -0.011,
+    "edge": 0.006,
     "rec": "PASS",
     "selected": false,
     "open_line": -4.5,
@@ -14972,9 +14897,9 @@
     "market": "Spread",
     "bet": "Jacksonville St. +5.5",
     "odds": -115,
-    "model": 0.499,
+    "model": 0.482,
     "breakeven": 0.535,
-    "edge": -0.036,
+    "edge": -0.053,
     "rec": "PASS",
     "selected": false,
     "open_line": 4.5,
@@ -15411,17 +15336,17 @@
    "Bet": {
     "Side": "Southern Miss",
     "Lean": 2.52,
-    "CoverProbability": 0.568,
-    "Tier": "BET"
+    "CoverProbability": 0.542,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Southern Miss",
      "Line": 1.5,
      "Lean": 2.52,
-     "Probability": 0.568,
-     "Edge": 0.068,
-     "Tier": "BET"
+     "Probability": 0.542,
+     "Edge": 0.042,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Southern Miss",
@@ -15465,11 +15390,11 @@
     "market": "Spread",
     "bet": "Southern Miss +1.5",
     "odds": -110,
-    "model": 0.568,
+    "model": 0.542,
     "breakeven": 0.524,
-    "edge": 0.044,
-    "rec": "BET",
-    "selected": true,
+    "edge": 0.018,
+    "rec": "LEAN",
+    "selected": false,
     "open_line": 1.5,
     "open_odds": -110,
     "open": "+1.5 (-110)"
@@ -15478,9 +15403,9 @@
     "market": "Spread",
     "bet": "James Madison -1.5",
     "odds": -110,
-    "model": 0.432,
+    "model": 0.458,
     "breakeven": 0.524,
-    "edge": -0.092,
+    "edge": -0.066,
     "rec": "PASS",
     "selected": false,
     "open_line": -1.5,
@@ -15899,17 +15824,17 @@
    "Bet": {
     "Side": "Kennesaw St.",
     "Lean": 3.44,
-    "CoverProbability": 0.545,
-    "Tier": "LEAN"
+    "CoverProbability": 0.551,
+    "Tier": "BET"
    },
    "Signals": {
     "Spread": {
      "Side": "Kennesaw St.",
      "Line": -2.5,
      "Lean": 3.44,
-     "Probability": 0.545,
-     "Edge": 0.045,
-     "Tier": "LEAN"
+     "Probability": 0.551,
+     "Edge": 0.051,
+     "Tier": "BET"
     },
     "Moneyline": {
      "Side": "Kennesaw St.",
@@ -15953,9 +15878,9 @@
     "market": "Spread",
     "bet": "UTEP +2.5",
     "odds": -110,
-    "model": 0.455,
+    "model": 0.449,
     "breakeven": 0.524,
-    "edge": -0.069,
+    "edge": -0.075,
     "rec": "PASS",
     "selected": false,
     "open_line": 2.5,
@@ -15966,11 +15891,11 @@
     "market": "Spread",
     "bet": "Kennesaw St. -2.5",
     "odds": -110,
-    "model": 0.545,
+    "model": 0.551,
     "breakeven": 0.524,
-    "edge": 0.021,
-    "rec": "LEAN",
-    "selected": false,
+    "edge": 0.027,
+    "rec": "BET",
+    "selected": true,
     "open_line": -2.5,
     "open_odds": -110,
     "open": "-2.5 (-110)"
@@ -16424,7 +16349,7 @@
    "Bet": {
     "Side": "Liberty",
     "Lean": 2.55,
-    "CoverProbability": 0.532,
+    "CoverProbability": 0.541,
     "Tier": "LEAN"
    },
    "Signals": {
@@ -16432,8 +16357,8 @@
      "Side": "Liberty",
      "Line": -8.5,
      "Lean": 2.55,
-     "Probability": 0.532,
-     "Edge": 0.043,
+     "Probability": 0.541,
+     "Edge": 0.052,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -16478,9 +16403,9 @@
     "market": "Spread",
     "bet": "Liberty -8.5",
     "odds": -105,
-    "model": 0.532,
+    "model": 0.541,
     "breakeven": 0.512,
-    "edge": 0.02,
+    "edge": 0.029,
     "rec": "LEAN",
     "selected": false,
     "open_line": -8.5,
@@ -16491,9 +16416,9 @@
     "market": "Spread",
     "bet": "Louisiana Tech +8.5",
     "odds": -115,
-    "model": 0.468,
+    "model": 0.459,
     "breakeven": 0.535,
-    "edge": -0.067,
+    "edge": -0.076,
     "rec": "PASS",
     "selected": false,
     "open_line": 8.5,
@@ -16930,17 +16855,17 @@
    "Bet": {
     "Side": "Southeast Missouri St.",
     "Lean": 1.97,
-    "CoverProbability": 0.523,
-    "Tier": "PASS"
+    "CoverProbability": 0.534,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Southeast Missouri St.",
      "Line": -2.5,
      "Lean": 1.97,
-     "Probability": 0.523,
-     "Edge": 0.023,
-     "Tier": "PASS"
+     "Probability": 0.534,
+     "Edge": 0.034,
+     "Tier": "LEAN"
     },
     "Total": {
      "Side": "Under",
@@ -16973,10 +16898,10 @@
     "market": "Spread",
     "bet": "Southeast Missouri St. -2.5",
     "odds": -110,
-    "model": 0.523,
+    "model": 0.534,
     "breakeven": 0.524,
-    "edge": -0.001,
-    "rec": "PASS",
+    "edge": 0.01,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -2.5,
     "open_odds": -110,
@@ -16986,9 +16911,9 @@
     "market": "Spread",
     "bet": "Lindenwood +2.5",
     "odds": -110,
-    "model": 0.477,
+    "model": 0.466,
     "breakeven": 0.524,
-    "edge": -0.047,
+    "edge": -0.058,
     "rec": "PASS",
     "selected": false,
     "open_line": 2.5,
@@ -17477,7 +17402,7 @@
    "Bet": {
     "Side": "UC Davis",
     "Lean": 0.43,
-    "CoverProbability": 0.499,
+    "CoverProbability": 0.517,
     "Tier": "PASS"
    },
    "Signals": {
@@ -17485,8 +17410,8 @@
      "Side": "UC Davis",
      "Line": -1.5,
      "Lean": 0.43,
-     "Probability": 0.499,
-     "Edge": -0.001,
+     "Probability": 0.517,
+     "Edge": 0.017,
      "Tier": "PASS"
     },
     "Moneyline": {
@@ -17531,9 +17456,9 @@
     "market": "Spread",
     "bet": "Long Beach St. +1.5",
     "odds": -110,
-    "model": 0.501,
+    "model": 0.483,
     "breakeven": 0.524,
-    "edge": -0.023,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": 1.5,
@@ -17544,9 +17469,9 @@
     "market": "Spread",
     "bet": "UC Davis -1.5",
     "odds": -110,
-    "model": 0.499,
+    "model": 0.517,
     "breakeven": 0.524,
-    "edge": -0.025,
+    "edge": -0.007,
     "rec": "PASS",
     "selected": false,
     "open_line": -1.5,
@@ -18029,17 +17954,17 @@
    "Bet": {
     "Side": "San Diego",
     "Lean": 0.84,
-    "CoverProbability": 0.542,
-    "Tier": "LEAN"
+    "CoverProbability": 0.523,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "San Diego",
      "Line": 5.5,
      "Lean": 0.84,
-     "Probability": 0.542,
-     "Edge": 0.047,
-     "Tier": "LEAN"
+     "Probability": 0.523,
+     "Edge": 0.027,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "San Diego",
@@ -18083,9 +18008,9 @@
     "market": "Spread",
     "bet": "Loyola Marymount -5.5",
     "odds": -112,
-    "model": 0.458,
+    "model": 0.477,
     "breakeven": 0.528,
-    "edge": -0.07,
+    "edge": -0.051,
     "rec": "PASS",
     "selected": false,
     "open_line": -5.5,
@@ -18096,10 +18021,10 @@
     "market": "Spread",
     "bet": "San Diego +5.5",
     "odds": -108,
-    "model": 0.542,
+    "model": 0.523,
     "breakeven": 0.519,
-    "edge": 0.023,
-    "rec": "LEAN",
+    "edge": 0.004,
+    "rec": "PASS",
     "selected": false,
     "open_line": 5.5,
     "open_odds": -112,
@@ -18534,7 +18459,7 @@
    "Bet": {
     "Side": "South Florida",
     "Lean": 0.29,
-    "CoverProbability": 0.497,
+    "CoverProbability": 0.515,
     "Tier": "PASS"
    },
    "Signals": {
@@ -18542,8 +18467,8 @@
      "Side": "South Florida",
      "Line": -6.5,
      "Lean": 0.29,
-     "Probability": 0.497,
-     "Edge": -0.003,
+     "Probability": 0.515,
+     "Edge": 0.015,
      "Tier": "PASS"
     },
     "Moneyline": {
@@ -18588,9 +18513,9 @@
     "market": "Spread",
     "bet": "Memphis +6.5",
     "odds": -110,
-    "model": 0.503,
+    "model": 0.485,
     "breakeven": 0.524,
-    "edge": -0.021,
+    "edge": -0.039,
     "rec": "PASS",
     "selected": false,
     "open_line": 6.5,
@@ -18601,9 +18526,9 @@
     "market": "Spread",
     "bet": "South Florida -6.5",
     "odds": -110,
-    "model": 0.497,
+    "model": 0.515,
     "breakeven": 0.524,
-    "edge": -0.027,
+    "edge": -0.009,
     "rec": "PASS",
     "selected": false,
     "open_line": -6.5,
@@ -19054,7 +18979,7 @@
    "Bet": {
     "Side": "Michigan St.",
     "Lean": 2.56,
-    "CoverProbability": 0.532,
+    "CoverProbability": 0.541,
     "Tier": "LEAN"
    },
    "Signals": {
@@ -19062,8 +18987,8 @@
      "Side": "Michigan St.",
      "Line": -18.5,
      "Lean": 2.56,
-     "Probability": 0.532,
-     "Edge": 0.032,
+     "Probability": 0.541,
+     "Edge": 0.041,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -19108,9 +19033,9 @@
     "market": "Spread",
     "bet": "Michigan St. -18.5",
     "odds": -110,
-    "model": 0.532,
+    "model": 0.541,
     "breakeven": 0.524,
-    "edge": 0.008,
+    "edge": 0.017,
     "rec": "LEAN",
     "selected": false,
     "open_line": -18.5,
@@ -19121,9 +19046,9 @@
     "market": "Spread",
     "bet": "Rutgers +18.5",
     "odds": -110,
-    "model": 0.468,
+    "model": 0.459,
     "breakeven": 0.524,
-    "edge": -0.056,
+    "edge": -0.065,
     "rec": "PASS",
     "selected": false,
     "open_line": 18.5,
@@ -19607,17 +19532,17 @@
    "Bet": {
     "Side": "Missouri St.",
     "Lean": 2.56,
-    "CoverProbability": 0.568,
-    "Tier": "BET"
+    "CoverProbability": 0.543,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Missouri St.",
      "Line": 2.5,
      "Lean": 2.56,
-     "Probability": 0.568,
-     "Edge": 0.051,
-     "Tier": "BET"
+     "Probability": 0.543,
+     "Edge": 0.025,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Missouri St.",
@@ -19661,11 +19586,11 @@
     "market": "Spread",
     "bet": "Missouri St. +2.5",
     "odds": -118,
-    "model": 0.568,
+    "model": 0.543,
     "breakeven": 0.541,
-    "edge": 0.027,
-    "rec": "BET",
-    "selected": true,
+    "edge": 0.002,
+    "rec": "LEAN",
+    "selected": false,
     "open_line": 1.5,
     "open_odds": -102,
     "open": "+1.5 (-102)"
@@ -19674,9 +19599,9 @@
     "market": "Spread",
     "bet": "Western Kentucky -2.5",
     "odds": -102,
-    "model": 0.432,
+    "model": 0.457,
     "breakeven": 0.505,
-    "edge": -0.073,
+    "edge": -0.048,
     "rec": "PASS",
     "selected": false,
     "open_line": -1.5,
@@ -20110,7 +20035,7 @@
    "Bet": {
     "Side": "South Carolina St.",
     "Lean": 1.31,
-    "CoverProbability": 0.549,
+    "CoverProbability": 0.528,
     "Tier": "LEAN"
    },
    "Signals": {
@@ -20118,8 +20043,8 @@
      "Side": "South Carolina St.",
      "Line": 8.5,
      "Lean": 1.31,
-     "Probability": 0.549,
-     "Edge": 0.032,
+     "Probability": 0.528,
+     "Edge": 0.011,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -20164,9 +20089,9 @@
     "market": "Spread",
     "bet": "North Carolina Central -8.5",
     "odds": -102,
-    "model": 0.451,
+    "model": 0.472,
     "breakeven": 0.505,
-    "edge": -0.054,
+    "edge": -0.033,
     "rec": "PASS",
     "selected": false,
     "open_line": -8.5,
@@ -20177,9 +20102,9 @@
     "market": "Spread",
     "bet": "South Carolina St. +8.5",
     "odds": -118,
-    "model": 0.549,
+    "model": 0.528,
     "breakeven": 0.541,
-    "edge": 0.008,
+    "edge": -0.013,
     "rec": "LEAN",
     "selected": false,
     "open_line": 8.5,
@@ -20626,17 +20551,17 @@
    "Bet": {
     "Side": "North Dakota St.",
     "Lean": 1.33,
-    "CoverProbability": 0.513,
-    "Tier": "PASS"
+    "CoverProbability": 0.527,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "North Dakota St.",
      "Line": -11.5,
      "Lean": 1.33,
-     "Probability": 0.513,
-     "Edge": 0.031,
-     "Tier": "PASS"
+     "Probability": 0.527,
+     "Edge": 0.045,
+     "Tier": "LEAN"
     },
     "Total": {
      "Side": "Over",
@@ -20669,10 +20594,10 @@
     "market": "Spread",
     "bet": "North Dakota St. -11.5",
     "odds": -102,
-    "model": 0.513,
+    "model": 0.527,
     "breakeven": 0.505,
-    "edge": 0.008,
-    "rec": "PASS",
+    "edge": 0.022,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -11.5,
     "open_odds": -102,
@@ -20682,9 +20607,9 @@
     "market": "Spread",
     "bet": "Oral Roberts +11.5",
     "odds": -118,
-    "model": 0.487,
+    "model": 0.473,
     "breakeven": 0.541,
-    "edge": -0.054,
+    "edge": -0.068,
     "rec": "PASS",
     "selected": false,
     "open_line": 11.5,
@@ -21194,17 +21119,17 @@
    "Bet": {
     "Side": "Portland",
     "Lean": 1.84,
-    "CoverProbability": 0.521,
-    "Tier": "PASS"
+    "CoverProbability": 0.533,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Portland",
      "Line": -2.5,
      "Lean": 1.84,
-     "Probability": 0.521,
-     "Edge": 0.01,
-     "Tier": "PASS"
+     "Probability": 0.533,
+     "Edge": 0.022,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Portland",
@@ -21248,10 +21173,10 @@
     "market": "Spread",
     "bet": "Portland -2.5",
     "odds": -115,
-    "model": 0.521,
+    "model": 0.533,
     "breakeven": 0.535,
-    "edge": -0.014,
-    "rec": "PASS",
+    "edge": -0.002,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -2.5,
     "open_odds": -105,
@@ -21261,9 +21186,9 @@
     "market": "Spread",
     "bet": "Pepperdine +2.5",
     "odds": -105,
-    "model": 0.479,
+    "model": 0.467,
     "breakeven": 0.512,
-    "edge": -0.033,
+    "edge": -0.045,
     "rec": "PASS",
     "selected": false,
     "open_line": 2.5,
@@ -21766,17 +21691,17 @@
    "Bet": {
     "Side": "Prairie View A&M",
     "Lean": 0.62,
-    "CoverProbability": 0.539,
-    "Tier": "LEAN"
+    "CoverProbability": 0.52,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "Prairie View A&M",
      "Line": 3.5,
      "Lean": 0.62,
-     "Probability": 0.539,
-     "Edge": 0.035,
-     "Tier": "LEAN"
+     "Probability": 0.52,
+     "Edge": 0.016,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "Prairie View A&M",
@@ -21820,9 +21745,9 @@
     "market": "Spread",
     "bet": "Texas Southern -3.5",
     "odds": -108,
-    "model": 0.461,
+    "model": 0.48,
     "breakeven": 0.519,
-    "edge": -0.058,
+    "edge": -0.039,
     "rec": "PASS",
     "selected": false,
     "open_line": -3.5,
@@ -21833,10 +21758,10 @@
     "market": "Spread",
     "bet": "Prairie View A&M +3.5",
     "odds": -112,
-    "model": 0.539,
+    "model": 0.52,
     "breakeven": 0.528,
-    "edge": 0.011,
-    "rec": "LEAN",
+    "edge": -0.008,
+    "rec": "PASS",
     "selected": false,
     "open_line": 3.5,
     "open_odds": -112,
@@ -22297,17 +22222,17 @@
    "Bet": {
     "Side": "South Dakota St.",
     "Lean": 0.82,
-    "CoverProbability": 0.542,
-    "Tier": "LEAN"
+    "CoverProbability": 0.523,
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "South Dakota St.",
      "Line": 6.5,
      "Lean": 0.82,
-     "Probability": 0.542,
-     "Edge": 0.038,
-     "Tier": "LEAN"
+     "Probability": 0.523,
+     "Edge": 0.018,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "South Dakota St.",
@@ -22351,9 +22276,9 @@
     "market": "Spread",
     "bet": "St. Thomas -6.5",
     "odds": -108,
-    "model": 0.458,
+    "model": 0.477,
     "breakeven": 0.519,
-    "edge": -0.061,
+    "edge": -0.042,
     "rec": "PASS",
     "selected": false,
     "open_line": -5.5,
@@ -22364,10 +22289,10 @@
     "market": "Spread",
     "bet": "South Dakota St. +6.5",
     "odds": -112,
-    "model": 0.542,
+    "model": 0.523,
     "breakeven": 0.528,
-    "edge": 0.014,
-    "rec": "LEAN",
+    "edge": -0.005,
+    "rec": "PASS",
     "selected": false,
     "open_line": 5.5,
     "open_odds": -105,
@@ -22815,17 +22740,17 @@
    "Bet": {
     "Side": "Southern Utah",
     "Lean": 1.73,
-    "CoverProbability": 0.556,
-    "Tier": "BET"
+    "CoverProbability": 0.533,
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Southern Utah",
      "Line": 9.5,
      "Lean": 1.73,
-     "Probability": 0.556,
-     "Edge": 0.06,
-     "Tier": "BET"
+     "Probability": 0.533,
+     "Edge": 0.038,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Southern Utah",
@@ -22869,11 +22794,11 @@
     "market": "Spread",
     "bet": "Southern Utah +9.5",
     "odds": -108,
-    "model": 0.556,
+    "model": 0.533,
     "breakeven": 0.519,
-    "edge": 0.037,
-    "rec": "BET",
-    "selected": true,
+    "edge": 0.014,
+    "rec": "LEAN",
+    "selected": false,
     "open_line": 9.5,
     "open_odds": -108,
     "open": "+9.5 (-108)"
@@ -22882,9 +22807,9 @@
     "market": "Spread",
     "bet": "Utah Valley -9.5",
     "odds": -112,
-    "model": 0.444,
+    "model": 0.467,
     "breakeven": 0.528,
-    "edge": -0.084,
+    "edge": -0.061,
     "rec": "PASS",
     "selected": false,
     "open_line": -9.5,
@@ -23387,7 +23312,7 @@
    "Bet": {
     "Side": "Tarleton St.",
     "Lean": 2.55,
-    "CoverProbability": 0.532,
+    "CoverProbability": 0.541,
     "Tier": "LEAN"
    },
    "Signals": {
@@ -23395,8 +23320,8 @@
      "Side": "Tarleton St.",
      "Line": -1.5,
      "Lean": 2.55,
-     "Probability": 0.532,
-     "Edge": 0.015,
+     "Probability": 0.541,
+     "Edge": 0.024,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -23441,9 +23366,9 @@
     "market": "Spread",
     "bet": "Tarleton St. -1.5",
     "odds": -118,
-    "model": 0.532,
+    "model": 0.541,
     "breakeven": 0.541,
-    "edge": -0.009,
+    "edge": -0.0,
     "rec": "LEAN",
     "selected": false,
     "open_line": -2.5,
@@ -23454,9 +23379,9 @@
     "market": "Spread",
     "bet": "UT Arlington +1.5",
     "odds": -102,
-    "model": 0.468,
+    "model": 0.459,
     "breakeven": 0.505,
-    "edge": -0.037,
+    "edge": -0.046,
     "rec": "PASS",
     "selected": false,
     "open_line": 2.5,
@@ -23894,7 +23819,7 @@
    "Bet": {
     "Side": "Temple",
     "Lean": 2.37,
-    "CoverProbability": 0.529,
+    "CoverProbability": 0.539,
     "Tier": "LEAN"
    },
    "Signals": {
@@ -23902,8 +23827,8 @@
      "Side": "Temple",
      "Line": -4.5,
      "Lean": 2.37,
-     "Probability": 0.529,
-     "Edge": 0.029,
+     "Probability": 0.539,
+     "Edge": 0.039,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -23948,9 +23873,9 @@
     "market": "Spread",
     "bet": "Temple -4.5",
     "odds": -110,
-    "model": 0.529,
+    "model": 0.539,
     "breakeven": 0.524,
-    "edge": 0.005,
+    "edge": 0.015,
     "rec": "LEAN",
     "selected": false,
     "open_line": -4.5,
@@ -23961,9 +23886,9 @@
     "market": "Spread",
     "bet": "Tulane +4.5",
     "odds": -110,
-    "model": 0.471,
+    "model": 0.461,
     "breakeven": 0.524,
-    "edge": -0.053,
+    "edge": -0.063,
     "rec": "PASS",
     "selected": false,
     "open_line": 4.5,
