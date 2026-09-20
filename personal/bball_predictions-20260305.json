@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20260305,
-  "generated": "2026-09-20T16:42:56Z",
+  "generated": "2026-09-20T16:55:03Z",
   "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_5_tm_ens5)",
   "members": 10000,
   "rows": [
@@ -2979,7 +2979,7 @@
     "open_line": 168.5,
     "open_odds": -112,
     "open": "168.5 (-112)",
-    "confidence": 0
+    "confidence": 14
    }
   ],
   "Histogram": {
@@ -17179,7 +17179,7 @@
     "open_line": 149.5,
     "open_odds": -115,
     "open": "149.5 (-115)",
-    "confidence": 0
+    "confidence": 9
    }
   ],
   "Histogram": {
@@ -18301,7 +18301,7 @@
     "open_line": 147.5,
     "open_odds": -112,
     "open": "147.5 (-112)",
-    "confidence": 0
+    "confidence": 24
    }
   ],
   "Histogram": {
@@ -21502,7 +21502,7 @@
     "open_line": 152.5,
     "open_odds": -112,
     "open": "152.5 (-112)",
-    "confidence": 0
+    "confidence": 17
    }
   ],
   "Histogram": {
@@ -22617,7 +22617,7 @@
     "open_line": 150.5,
     "open_odds": -112,
     "open": "150.5 (-112)",
-    "confidence": 0
+    "confidence": 9
    }
   ],
   "Histogram": {
