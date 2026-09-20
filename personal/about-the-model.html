@@ -50,7 +50,7 @@
 
     <h2>The workflow</h2>
     <figure style="margin:0">
-      <div class="diagram"><svg viewBox="0 0 1120 1000" role="img" aria-label="Flow from pregame inputs through the IC ensemble and frozen Oracle, the perturbation members, calibration and pregame shifts, the The book's line, three per-market decision layers with staked rules and unstaked candidates, quarter-Kelly sizing with caps, and the sheet, ledger and monthly refit that feed coefficients back." xmlns="http://www.w3.org/2000/svg">
+      <div class="diagram"><svg viewBox="0 0 1120 1000" role="img" aria-label="Flow from pregame inputs through the IC hedge model, the 10,000-member ensemble generation and the frozen Oracle, calibration and pregame shifts, the The book's line, three per-market decision layers with staked rules and unstaked candidates, quarter-Kelly sizing with caps, and the sheet, ledger and monthly refit that feed coefficients back." xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
           <marker id="arr-stake" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--stake)"/></marker>
@@ -76,42 +76,43 @@
             <text x="14" y="870">6 · PUBLISH, GRADE, REFIT</text>
           </g>
 
-          <!-- row 1 boxes -->
+          <!-- row 1 boxes: inputs -> IC hedge model -> ensemble generation -> Oracle (point + members), pace-form pass for totals -->
           <g stroke="currentColor" stroke-width="1.2" fill="var(--panel)">
-            <rect x="40" y="70" width="200" height="64" rx="4"/>
-            <rect x="300" y="70" width="180" height="64" rx="4"/>
-            <rect x="540" y="70" width="180" height="64" rx="4"/>
-            <rect x="540" y="152" width="180" height="44" rx="4"/>
-            <rect x="780" y="70" width="300" height="64" rx="4"/>
+            <rect x="40" y="70" width="190" height="64" rx="4"/>
+            <rect x="270" y="70" width="210" height="64" rx="4"/>
+            <rect x="520" y="70" width="240" height="64" rx="4"/>
+            <rect x="800" y="70" width="280" height="64" rx="4"/>
+            <rect x="520" y="152" width="240" height="44" rx="4"/>
           </g>
           <g font-weight="600" font-size="13">
-            <text x="140" y="94" text-anchor="middle">Pregame inputs</text>
-            <text x="390" y="94" text-anchor="middle">IC ensemble</text>
-            <text x="630" y="94" text-anchor="middle">Oracle (frozen)</text>
-            <text x="630" y="172" text-anchor="middle">Second Oracle pass</text>
-            <text x="930" y="94" text-anchor="middle">10,000 perturbed members</text>
+            <text x="135" y="94" text-anchor="middle">Pregame inputs</text>
+            <text x="375" y="94" text-anchor="middle">IC hedge model</text>
+            <text x="640" y="94" text-anchor="middle">Ensemble generation</text>
+            <text x="940" y="94" text-anchor="middle">Oracle (frozen)</text>
+            <text x="640" y="172" text-anchor="middle">Second Oracle pass</text>
           </g>
           <g fill="var(--ink-2)" font-size="11">
-            <text x="140" y="112" text-anchor="middle">season-to-date stats, roster context,</text>
-            <text x="140" y="126" text-anchor="middle">rest, site, time of season</text>
-            <text x="390" y="112" text-anchor="middle">hedges the inputs</text>
-            <text x="390" y="126" text-anchor="middle">an ensemble, bounded moves</text>
-            <text x="630" y="112" text-anchor="middle">margin and total</text>
-            <text x="630" y="126" text-anchor="middle">Student-t each</text>
-            <text x="630" y="188" text-anchor="middle">pace-form pace · total only</text>
-            <text x="930" y="112" text-anchor="middle">the hedged inputs jittered within recent variability,</text>
-            <text x="930" y="126" text-anchor="middle">each scored by the Oracle; calibrated like the point</text>
+            <text x="135" y="112" text-anchor="middle">season-to-date stats, roster context,</text>
+            <text x="135" y="126" text-anchor="middle">rest, site, time of season</text>
+            <text x="375" y="112" text-anchor="middle">matchup-adjusted team profiles:</text>
+            <text x="375" y="126" text-anchor="middle">both teams and pace, bounded moves</text>
+            <text x="640" y="112" text-anchor="middle">10,000 stat sets jittered around</text>
+            <text x="640" y="126" text-anchor="middle">the hedged profiles, within recent variability</text>
+            <text x="940" y="112" text-anchor="middle">scores the hedged stats → point margin, total</text>
+            <text x="940" y="126" text-anchor="middle">scores every member → 10,000 score pairs</text>
+            <text x="640" y="188" text-anchor="middle">recent-form pace · totals only</text>
           </g>
           <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)">
-            <path d="M240,102 L300,102"/>
-            <path d="M480,102 L540,102"/>
-            <path d="M480,110 L500,110 L500,174 L540,174"/>
-            <path d="M720,102 L780,102"/>
+            <path d="M230,102 L270,102"/>
+            <path d="M480,102 L520,102"/>
+            <path d="M760,102 L800,102"/>
+            <path d="M900,134 L900,174 L760,174"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
-            <text x="270" y="96" text-anchor="middle">hedged</text>
-            <text x="510" y="96" text-anchor="middle">stats</text>
-            <text x="750" y="96" text-anchor="middle">perturbed</text>
+            <text x="250" y="96" text-anchor="middle">profiles</text>
+            <text x="500" y="96" text-anchor="middle">hedged</text>
+            <text x="780" y="96" text-anchor="middle">stat sets</text>
+            <text x="830" y="168" text-anchor="middle">pace-form</text>
           </g>
 
           <!-- row 2 boxes -->
@@ -131,18 +132,17 @@
             <text x="880" y="301" text-anchor="middle">postseason back-to-backs</text>
           </g>
           <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)">
-            <path d="M630,134 L630,150"/>
-            <path d="M630,196 L630,230 L400,230 L400,262"/>
+            <path d="M640,196 L640,230 L400,230 L400,262"/>
             <path d="M500,288 L540,288"/>
             <path d="M740,288 L780,288"/>
-            <path d="M930,134 L930,230 L1040,230 L1040,452"/>
+            <path d="M1040,134 L1040,452"/>
             <path d="M980,300 L1040,300"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
             <text x="520" y="282" text-anchor="middle">both</text>
             <text x="760" y="282" text-anchor="middle">total</text>
-            <text x="1010" y="296" text-anchor="middle">same shifts,</text>
-            <text x="1010" y="308" text-anchor="middle">every member</text>
+            <text x="1012" y="318" text-anchor="middle">same shifts,</text>
+            <text x="1012" y="330" text-anchor="middle">every member</text>
             <text x="1046" y="336" text-anchor="start">members:</text>
             <text x="1046" y="349" text-anchor="start">P(win), P(cover)</text>
           </g>
@@ -165,7 +165,7 @@
             <path d="M880,314 L880,340 L640,340 L640,378"/>
           </g>
           <g font-size="10.5" fill="var(--ink-2)">
-            <text x="760" y="336" text-anchor="middle">adjusted margin and total</text>
+            <text x="760" y="336" text-anchor="middle">adjusted point margin and total</text>
           </g>
 
           <!-- forecast + line bus into row 4 -->
@@ -276,8 +276,8 @@
     <div class="card">
       <ul>
         <li><strong>Inputs are strictly pregame.</strong> Season-to-date team statistics, roster context, rest, site and the point in the season, built so that nothing from the game itself or from later games can leak in.</li>
-        <li><strong>An input-conditioning ensemble</strong> adjusts each team's season-to-date profile toward what the matchup implies, with bounded moves, before a frozen scoring model produces the margin and total.</li>
-        <li><strong>A cloud of ten thousand members</strong> perturbs the inputs within each team's recent variability and scores every member. Win probabilities, cover probabilities and the spread of outcomes all come from that cloud, not from a single point forecast.</li>
+        <li><strong>An IC hedge model</strong> adjusts each team's season-to-date profile toward what the matchup implies, with bounded moves. It predicts the inputs the game will be played with, not the score.</li>
+        <li><strong>An ensemble of ten thousand members</strong> is generated around those hedged profiles, within each team's recent variability, and a frozen scoring model scores the hedged point and every member. Win probabilities, cover probabilities and the spread of outcomes all come from that cloud, not from a single point forecast.</li>
         <li><strong>Calibration and pregame adjustments</strong> correct the score level through the season and account for who sat a team's last game and for postseason back-to-backs.</li>
       </ul>
     </div>
