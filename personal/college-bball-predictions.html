@@ -634,7 +634,7 @@
       const box = document.createElement('div'); box.className = 'bet-sheet';
       sheetState = { meta: meta, data: predictionsData, files: imageFiles, box: box };
       container.parentNode.insertBefore(box, container);
-      renderSheet('all');
+      renderSheet(DEFAULT_FILTER);
     }
     let sheetBankroll = 1000;
     try { const v = parseFloat(localStorage.getItem('bball_bankroll')); if (isFinite(v) && v > 0) sheetBankroll = v; } catch (e) {}
@@ -810,6 +810,7 @@
     }
 
     // ---- filter row: show all games, or only the ones with a BET / LEAN signal in any market
+    const DEFAULT_FILTER = 'BET';   // the page opens on the staked-signal tier; the other tabs widen it
     function buildFilters(container) {
       const row = document.createElement('div'); row.className = 'filters';
       const lead = document.createElement('span'); lead.className = 'filters-lead'; lead.textContent = 'Show games:'; row.appendChild(lead);
@@ -823,7 +824,7 @@
         status.textContent = shown === cards.length ? `Showing all ${cards.length} games` : `Showing ${shown} of ${cards.length} games (the rest are hidden)`;
       };
       defs.forEach(([key, label]) => {
-        const b = document.createElement('button'); b.type = 'button'; b.dataset.filter = key; if (key === 'all') b.className = 'active';
+        const b = document.createElement('button'); b.type = 'button'; b.dataset.filter = key; if (key === DEFAULT_FILTER) b.className = 'active';
         b.addEventListener('click', () => {
           row.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === b));
           apply(key);
@@ -838,7 +839,7 @@
         const cards = Array.from(container.querySelectorAll('.game-card'));
         if (!cards.length) { setTimeout(fill, 100); return; }
         defs.forEach(([key, label]) => { const b = row.querySelector(`button[data-filter='${key}']`); b.textContent = `${label} (${cards.filter(c => keep(key, c.dataset.tier)).length})`; });
-        apply('all');
+        apply(DEFAULT_FILTER);
       };
       fill();
     }
