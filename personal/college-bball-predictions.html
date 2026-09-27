@@ -773,14 +773,6 @@
       body.appendChild(sigNote);
       body.appendChild(table([['All BET signals', 'BET', 'all', true], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
                               ['LEAN signals', 'LEAN', 'all']]));
-      body.appendChild(sectionTitle('Layers being watched'));
-      const layNote = document.createElement('p'); layNote.className = 'sub';
-      layNote.textContent = 'Alternative ways of picking the same games, graded alongside the live rules. The spread layer marked staked is the one making the bets; the rest are watched, not bet.';
-      body.appendChild(layNote);
-      body.appendChild(table([['Both spread layers agree (staked)', 'candidate: agree-spread', 'spread', true],
-                              ['CatBoost spread alone', 'candidate: catboost-spread', 'spread'],
-                              ['CatBoost moneyline', 'candidate: catboost-moneyline', 'moneyline'],
-                              ['Neutral-floor under', 'candidate: neutral-under', 'total']]));
       const months = Object.keys(s.by_month.staked || {});
       if (months.length > 1) { body.appendChild(sectionTitle('Staked bets by month')); body.appendChild(wrap(blockTable(months.map(m => [`${m.slice(0, 4)}-${m.slice(4, 6)}`, s.by_month.staked[m], false])))); }
       if (s.reliability && s.reliability.length) {
