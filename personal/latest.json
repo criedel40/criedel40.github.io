@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20260305,
-  "generated": "2026-09-27T21:38:40Z",
+  "generated": "2026-09-27T22:12:43Z",
   "model": "Beyond the Arc DL (FORECASTSv2.0 ic_wide_matchup_context_v2_6_randvaloracle_ens5)",
   "members": 10000,
   "rows": [
@@ -29,7 +29,7 @@
     "open": "-130",
     "p_model": null,
     "confidence": 25,
-    "bankroll_fraction": 0.0106
+    "bankroll_fraction": 0.0123
    },
    {
     "market": "Moneyline",
@@ -45,7 +45,7 @@
     "open": "-142",
     "p_model": null,
     "confidence": 57,
-    "bankroll_fraction": 0.0173
+    "bankroll_fraction": 0.02
    },
    {
     "market": "Spread",
@@ -61,7 +61,7 @@
     "open": "+3.5 (-108)",
     "p_model": null,
     "confidence": 70,
-    "bankroll_fraction": 0.0235
+    "bankroll_fraction": 0.0273
    },
    {
     "market": "Moneyline",
@@ -77,7 +77,7 @@
     "open": null,
     "p_model": null,
     "confidence": 10,
-    "bankroll_fraction": 0.0089
+    "bankroll_fraction": 0.0103
    },
    {
     "market": "Total",
@@ -93,54 +93,6 @@
     "open": "125.5 (-110)",
     "p_model": 0.5059558999940019,
     "confidence": 37,
-    "bankroll_fraction": 0.0119
-   },
-   {
-    "market": "Total",
-    "game": "Southern Illinois vs Drake",
-    "bet": "Over 135.5",
-    "odds": -108,
-    "probability": 0.55,
-    "edge": 0.054,
-    "tier": "BET",
-    "line": 135.5,
-    "open_line": 136.5,
-    "open_odds": -115,
-    "open": "136.5 (-115)",
-    "p_model": 0.5142349475636614,
-    "confidence": 27,
-    "bankroll_fraction": 0.0138
-   },
-   {
-    "market": "Total",
-    "game": "Tennessee Martin vs Eastern Illinois",
-    "bet": "Over 122.5",
-    "odds": -105,
-    "probability": 0.55,
-    "edge": 0.061,
-    "tier": "BET",
-    "line": 122.5,
-    "open_line": 122.5,
-    "open_odds": -105,
-    "open": "122.5 (-105)",
-    "p_model": 0.5096392570193063,
-    "confidence": 31,
-    "bankroll_fraction": 0.0167
-   },
-   {
-    "market": "Total",
-    "game": "Northern Iowa vs Evansville",
-    "bet": "Over 125.5",
-    "odds": -108,
-    "probability": 0.55,
-    "edge": 0.054,
-    "tier": "BET",
-    "line": 125.5,
-    "open_line": 124.5,
-    "open_odds": -118,
-    "open": "124.5 (-118)",
-    "p_model": 0.509005230276488,
-    "confidence": 27,
     "bankroll_fraction": 0.0138
    },
    {
@@ -157,7 +109,7 @@
     "open": "-225",
     "p_model": null,
     "confidence": 0,
-    "bankroll_fraction": 0.0057
+    "bankroll_fraction": 0.0066
    },
    {
     "market": "Moneyline",
@@ -173,7 +125,7 @@
     "open": "-148",
     "p_model": null,
     "confidence": 84,
-    "bankroll_fraction": 0.0173
+    "bankroll_fraction": 0.02
    },
    {
     "market": "Moneyline",
@@ -189,7 +141,7 @@
     "open": null,
     "p_model": null,
     "confidence": 78,
-    "bankroll_fraction": 0.0173
+    "bankroll_fraction": 0.02
    },
    {
     "market": "Total",
@@ -205,7 +157,7 @@
     "open": "147.5 (-112)",
     "p_model": 0.5070191141375581,
     "confidence": 39,
-    "bankroll_fraction": 0.0138
+    "bankroll_fraction": 0.016
    },
    {
     "market": "Moneyline",
@@ -221,7 +173,7 @@
     "open": "-285",
     "p_model": null,
     "confidence": 0,
-    "bankroll_fraction": 0.0013
+    "bankroll_fraction": 0.0015
    },
    {
     "market": "Moneyline",
@@ -237,7 +189,7 @@
     "open": "-130",
     "p_model": null,
     "confidence": 28,
-    "bankroll_fraction": 0.0129
+    "bankroll_fraction": 0.015
    },
    {
     "market": "Moneyline",
@@ -253,7 +205,7 @@
     "open": "-205",
     "p_model": null,
     "confidence": 0,
-    "bankroll_fraction": 0.0153
+    "bankroll_fraction": 0.0177
    }
   ],
   "tier_rules": {
@@ -8018,7 +7970,7 @@
     "breakeven": 0.519,
     "edge": -0.005,
     "rec": "BET",
-    "selected": true,
+    "selected": false,
     "open_line": 136.5,
     "open_odds": -115,
     "open": "136.5 (-115)",
@@ -9075,7 +9027,7 @@
     "breakeven": 0.512,
     "edge": -0.002,
     "rec": "BET",
-    "selected": true,
+    "selected": false,
     "open_line": 122.5,
     "open_odds": -105,
     "open": "122.5 (-105)",
@@ -9606,7 +9558,7 @@
     "breakeven": 0.519,
     "edge": -0.01,
     "rec": "BET",
-    "selected": true,
+    "selected": false,
     "open_line": 124.5,
     "open_odds": -118,
     "open": "124.5 (-118)",
