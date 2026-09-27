@@ -782,24 +782,6 @@
         s.reliability.forEach(r => { const tr = document.createElement('tr'); [[r.bin, false], [r.n, true], [pctOrDash(r.mean_p), true], [pctOrDash(r.realized), true]].forEach(([v, n]) => { const td = document.createElement('td'); if (n) td.className = 'num'; td.textContent = v; tr.appendChild(td); }); tb.appendChild(tr); });
         t.appendChild(tb); body.appendChild(wrap(t));
       }
-      if (s.recent && s.recent.length) {
-        body.appendChild(sectionTitle('Most recent graded signals'));
-        const t = document.createElement('table'); t.innerHTML = '<thead><tr><th>Date</th><th>Bet</th><th class="num">Odds</th><th>Tier</th><th class="num">Stake</th><th>Result</th><th class="num">Units</th><th class="num">CLV</th></tr></thead>';
-        const tb = document.createElement('tbody');
-        // a staked bet and the layer row behind it are the same wager: show it once, keeping the staked row
-        const seen = new Set();
-        s.recent.filter(r => {
-          const k = `${r.date}|${r.bet}|${r.odds}`;
-          if (r.staked) { seen.add(k); return true; }
-          return !seen.has(k);
-        }).slice(0, 15).forEach(r => {
-          const tr = document.createElement('tr'); if (r.staked) tr.className = 'hl';
-          const cells = [[dateLabel(r.date), false], [`${r.market}: ${r.bet}`, false], [(r.odds > 0 ? '+' : '') + r.odds, true], [r.tier, false], [r.staked ? `${(100 * r.fraction).toFixed(1)}%` : '—', true], [r.result, false], [r.units === null ? '—' : fmtUnits(r.units), true], [(r.clv === null || r.clv === undefined) ? '—' : (r.clv >= 0 ? '+' : '') + r.clv.toFixed(2), true]];
-          cells.forEach(([v, n], i) => { const td = document.createElement('td'); if (n) td.className = 'num'; if (i === 6 && r.units !== null) td.classList.add(r.units >= 0 ? 'pos' : 'neg'); td.textContent = v; tr.appendChild(td); });
-          tb.appendChild(tr);
-        });
-        t.appendChild(tb); body.appendChild(wrap(t));
-      }
     }
     function sectionTitle(t) { const h = document.createElement('h3'); h.textContent = t; return h; }
     function wrap(t) { const d = document.createElement('div'); d.className = 'wrap'; d.appendChild(t); return d; }
