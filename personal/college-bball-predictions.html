@@ -186,7 +186,7 @@
     .record .chart .axis{stroke:#999;stroke-width:1}.record .chart .grid{stroke:#eee;stroke-width:1}
     .record .chart text{font-size:11px;fill:#555;font-weight:400}
     .record .chart .zero{stroke:#999;stroke-width:1;stroke-dasharray:3 3}
-    .record .stat-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem .75rem;margin:.25rem 0 .5rem}
+    .record .stat-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem .75rem;margin:.25rem 0 .5rem}
     @media (max-width:760px){.record .stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .record .stat{min-width:8rem}.record .stat .v{font-size:1.4rem;font-weight:700;color:#0b0b0b;line-height:1.1}.record .stat .k{font-size:.8rem;color:#666}
     .record .wrap{overflow-x:auto}
@@ -755,8 +755,9 @@
        [endMoney === null ? '—' : money(endMoney), `from ${money(sheetBankroll)}, resized daily`],
        [last ? `${last.bankroll.toFixed(2)}x` : '—', 'bankroll multiple'],
        [s.series.length ? `−${money(peak * sheetBankroll * drawdown)}` : '—', `worst drawdown (${(100 * drawdown).toFixed(1)}%)`],
-       [staked.clv === null ? '—' : (staked.clv >= 0 ? '+' : '') + staked.clv.toFixed(2), `CLV (n ${staked.clv_n})`],
-       [staked.pending ? String(staked.pending) : '0', 'pending']]
+       // CLV is empty by construction in a backtest -- the bet price IS the close -- so the tile only
+       // appears once there are live bets placed before the line moved
+       ...(staked.clv === null ? [] : [[(staked.clv >= 0 ? '+' : '') + staked.clv.toFixed(2), `CLV (n ${staked.clv_n})`]])]
         .forEach(([v, k]) => { const d = document.createElement('div'); d.className = 'stat'; const dv = document.createElement('div'); dv.className = 'v'; dv.textContent = v; const dk = document.createElement('div'); dk.className = 'k'; dk.textContent = k; d.appendChild(dv); d.appendChild(dk); stats.appendChild(d); });
       body.appendChild(stats);
       const src = document.createElement('p'); src.className = 'sub';
