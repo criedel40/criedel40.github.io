@@ -56,7 +56,9 @@
     .markets-table th{background:#f0f4fa;color:#333;padding:.45rem .6rem;text-align:left;font-weight:600;border-bottom:1px solid #dde3ec}
     .markets-table td{padding:.4rem .6rem;border-bottom:1px solid #eee;color:#333;line-height:1.2;font-variant-numeric:tabular-nums}
     .markets-table tr:last-child td{border-bottom:none}
-    .markets-table th.num,.markets-table td.num{text-align:right}
+    /* centred like the prediction table above it: right-aligned numbers put the header over the column's
+       right edge instead of over the column */
+    .markets-table th.num,.markets-table td.num{text-align:center}
     .markets-table th.mid,.markets-table td.mid{text-align:center}
     .markets-table tr.selected td{background:#eef8f0}
     .markets-caption{font-size:.8rem;color:#666;padding:.4rem .6rem .6rem}
