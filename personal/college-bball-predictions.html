@@ -186,7 +186,7 @@
     .record .chart .axis{stroke:#999;stroke-width:1}.record .chart .grid{stroke:#eee;stroke-width:1}
     .record .chart text{font-size:11px;fill:#555;font-weight:400}
     .record .chart .zero{stroke:#999;stroke-width:1;stroke-dasharray:3 3}
-    .record .stat-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin:.25rem 0 .5rem}
+    .record .stat-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem .75rem;margin:.25rem 0 .5rem}
     @media (max-width:760px){.record .stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .record .stat{min-width:8rem}.record .stat .v{font-size:1.4rem;font-weight:700;color:#0b0b0b;line-height:1.1}.record .stat .k{font-size:.8rem;color:#666}
     .record .wrap{overflow-x:auto}
@@ -659,7 +659,7 @@
       document.getElementById('view-sheet').appendChild(box);
       renderSheet(DEFAULT_FILTER);
     }
-    let sheetBankroll = 1000;
+    let sheetBankroll = 500;   // the bankroll the sheet's stakes and the record's dollars are computed against
     try { const v = parseFloat(localStorage.getItem('bball_bankroll')); if (isFinite(v) && v > 0) sheetBankroll = v; } catch (e) {}
     const money = v => '$' + v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
     function renderSheet(key) {
@@ -748,18 +748,22 @@
       const stats = document.createElement('div'); stats.className = 'stat-row';
       let peak = 1, drawdown = 0;
       s.series.forEach(pt => { peak = Math.max(peak, pt.bankroll); drawdown = Math.max(drawdown, 1 - pt.bankroll / peak); });
+      // the bankroll series is a multiple of wherever you start, so the dollars follow the Bet Sheet's bankroll
+      const endMoney = last ? sheetBankroll * last.bankroll : null;
       [[staked.bets ? `${staked.wins}-${staked.losses}${staked.pushes ? '-' + staked.pushes : ''}` : '0', 'staked record'],
        [pctOrDash(staked.win_rate), 'win rate'], [staked.bets ? fmtUnits(staked.units) : '—', 'units, flat 1 per bet'], [pctOrDash(staked.roi), 'return per bet, flat'],
-       [last ? `${last.bankroll.toFixed(2)}x` : '—', 'bankroll, sheet stakes'], [s.series.length ? `${(100 * drawdown).toFixed(1)}%` : '—', 'worst drawdown'],
+       [endMoney === null ? '—' : money(endMoney), `from ${money(sheetBankroll)}, resized daily`],
+       [last ? `${last.bankroll.toFixed(2)}x` : '—', 'bankroll multiple'],
+       [s.series.length ? `−${money(peak * sheetBankroll * drawdown)}` : '—', `worst drawdown (${(100 * drawdown).toFixed(1)}%)`],
        [staked.clv === null ? '—' : (staked.clv >= 0 ? '+' : '') + staked.clv.toFixed(2), `CLV (n ${staked.clv_n})`],
        [staked.pending ? String(staked.pending) : '0', 'pending']]
         .forEach(([v, k]) => { const d = document.createElement('div'); d.className = 'stat'; const dv = document.createElement('div'); dv.className = 'v'; dv.textContent = v; const dk = document.createElement('div'); dk.className = 'k'; dk.textContent = k; d.appendChild(dv); d.appendChild(dk); stats.appendChild(d); });
       body.appendChild(stats);
       const src = document.createElement('p'); src.className = 'sub';
-      src.textContent = (s.source === 'live' ? 'Live sheets' : s.source === 'replay' ? 'Replay: game-day sheets re-run after the fact on the archived pregame odds pull, graded like live sheets (not bets placed)' : 'Paper: the 2025-26 season replayed through the deployed rules at DraftKings closing lines (a backtest, not bets placed)') + (s.first_date ? `, ${String(s.first_date).slice(0, 4)}-${String(s.first_date).slice(4, 6)}-${String(s.first_date).slice(6, 8)} to ${String(s.last_date).slice(0, 4)}-${String(s.last_date).slice(4, 6)}-${String(s.last_date).slice(6, 8)}` : '') + '.';
+      src.textContent = (s.source === 'live' ? 'Live sheets' : s.source === 'replay' ? 'Replay: game-day sheets re-run after the fact on the archived pregame odds pull, graded like live sheets (not bets placed)' : 'Paper: this season replayed through the deployed rules at the closing line of the day (a backtest, not bets placed). Earlier seasons are priced off ESPN BET, 2025-26 off DraftKings, which is the sharper book and the fairer guide') + (s.series.length ? `, ${dateLabel(s.series[0].date)} to ${dateLabel(s.series[s.series.length - 1].date)}.` : '.');
       body.appendChild(src);
       const conv = document.createElement('p'); conv.className = 'sub';
-      conv.textContent = 'Two sizings sit side by side above. Units risk a flat 1 on every bet, which is how the signals are compared with each other. The bankroll and the drawdown use the stakes the sheet actually set — quarter-Kelly with caps — which is what the money did.';
+      conv.textContent = `Two sizings sit side by side above. Units risk a flat 1 on every bet, which is how the signals are compared with each other. The dollars follow the sheet's own stakes — quarter-Kelly with caps — against the ${money(sheetBankroll)} bankroll set on the Bet Sheet tab, recomputed each day as it grows. Backtests assume every bet is available at the price shown, which real books and real limits do not guarantee.`;
       body.appendChild(conv);
       if (s.series.length > 1) { body.appendChild(sectionTitle('Cumulative units')); body.appendChild(unitsChart(s.series)); }
       body.appendChild(sectionTitle('What we staked'));
