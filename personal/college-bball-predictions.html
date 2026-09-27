@@ -869,7 +869,6 @@
         svgText(L - 6, y(v) + 4, (v > 0 ? '+' : '') + v, null, 'end', svg);
         svgText(W - R + 6, y(v) + 4, (v > 0 ? '+' : v < 0 ? '−' : '') + money(Math.abs(v * perUnit)), null, 'start', svg);
       }
-      svgText(W - R + 6, T - 8, `flat ${money(perUnit)} a bet`, null, 'start', svg).setAttribute('style', 'fill:#667;font-size:11px');
       svgEl('line', { x1: L, x2: W - R, y1: H - B, y2: H - B, class: 'axis' }, svg);
       const ticks = Math.min(n, 8);
       for (let k = 0; k < ticks; k++) { const i = Math.round(k * (n - 1) / Math.max(ticks - 1, 1)); svgText(x(i), H - B + 16, dateLabel(series[i].date), null, 'middle', svg); }
