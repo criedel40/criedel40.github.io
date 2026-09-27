@@ -847,8 +847,12 @@
       };
       path('bet_units', '#9fb3c8', 2); path('staked_units', '#1b7f3b', 2.5);
       const lastP = series[n - 1];
-      svgText(x(n - 1) - 4, y(lastP.staked_units) - 8, `staked ${fmtUnits(lastP.staked_units)} (${lastP.staked_bets} bets)`, null, 'end', svg).setAttribute('style', 'fill:#1b7f3b;font-weight:700');
-      svgText(x(n - 1) - 4, y(lastP.bet_units) + (lastP.bet_units >= lastP.staked_units ? -8 : 16), `all BET signals ${fmtUnits(lastP.bet_units)} (${lastP.bet_bets})`, null, 'end', svg).setAttribute('style', 'fill:#5b6b7f');
+      // the two labels sit at their own line's end, pushed apart when the lines finish close together
+      const yStaked = y(lastP.staked_units), yBet = y(lastP.bet_units);
+      const above = yBet <= yStaked;
+      const yBetLabel = Math.abs(yBet - yStaked) >= 22 ? yBet + (above ? -8 : 16) : yStaked + (above ? -30 : 26);
+      svgText(x(n - 1) - 4, yStaked - 8, `staked ${fmtUnits(lastP.staked_units)} (${lastP.staked_bets} bets)`, null, 'end', svg).setAttribute('style', 'fill:#1b7f3b;font-weight:700');
+      svgText(x(n - 1) - 4, yBetLabel, `all BET signals ${fmtUnits(lastP.bet_units)} (${lastP.bet_bets})`, null, 'end', svg).setAttribute('style', 'fill:#5b6b7f');
       const hover = svgEl('line', { x1: 0, x2: 0, y1: T, y2: H - B, class: 'axis', style: 'display:none' }, svg);
       const dot = svgEl('circle', { r: 4, fill: '#1b7f3b', style: 'display:none' }, svg);
       const hit = svgEl('rect', { x: L, y: T, width: W - L - R, height: H - T - B, fill: 'transparent' }, svg);
