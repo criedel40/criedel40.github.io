@@ -186,7 +186,8 @@
     .record .chart .axis{stroke:#999;stroke-width:1}.record .chart .grid{stroke:#eee;stroke-width:1}
     .record .chart text{font-size:11px;fill:#555;font-weight:400}
     .record .chart .zero{stroke:#999;stroke-width:1;stroke-dasharray:3 3}
-    .record .stat-row{display:flex;flex-wrap:wrap;gap:1rem;margin:.25rem 0 .5rem}
+    .record .stat-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin:.25rem 0 .5rem}
+    @media (max-width:760px){.record .stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .record .stat{min-width:8rem}.record .stat .v{font-size:1.4rem;font-weight:700;color:#0b0b0b;line-height:1.1}.record .stat .k{font-size:.8rem;color:#666}
     .record .wrap{overflow-x:auto}
     @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}.prediction-table .bet .tier{margin-bottom:.2rem}}
@@ -745,22 +746,41 @@
       const staked = s.table.staked.all;
       const last = s.series.length ? s.series[s.series.length - 1] : null;
       const stats = document.createElement('div'); stats.className = 'stat-row';
+      let peak = 1, drawdown = 0;
+      s.series.forEach(pt => { peak = Math.max(peak, pt.bankroll); drawdown = Math.max(drawdown, 1 - pt.bankroll / peak); });
       [[staked.bets ? `${staked.wins}-${staked.losses}${staked.pushes ? '-' + staked.pushes : ''}` : '0', 'staked record'],
-       [pctOrDash(staked.win_rate), 'win rate'], [staked.bets ? fmtUnits(staked.units) : '—', 'units (flat)'], [pctOrDash(staked.roi), 'return on stake'],
-       [last ? `${last.bankroll.toFixed(2)}x` : '—', 'bankroll, sheet fractions'], [staked.clv === null ? '—' : (staked.clv >= 0 ? '+' : '') + staked.clv.toFixed(2), `CLV (n ${staked.clv_n})`],
+       [pctOrDash(staked.win_rate), 'win rate'], [staked.bets ? fmtUnits(staked.units) : '—', 'units, flat 1 per bet'], [pctOrDash(staked.roi), 'return per bet, flat'],
+       [last ? `${last.bankroll.toFixed(2)}x` : '—', 'bankroll, sheet stakes'], [s.series.length ? `${(100 * drawdown).toFixed(1)}%` : '—', 'worst drawdown'],
+       [staked.clv === null ? '—' : (staked.clv >= 0 ? '+' : '') + staked.clv.toFixed(2), `CLV (n ${staked.clv_n})`],
        [staked.pending ? String(staked.pending) : '0', 'pending']]
         .forEach(([v, k]) => { const d = document.createElement('div'); d.className = 'stat'; const dv = document.createElement('div'); dv.className = 'v'; dv.textContent = v; const dk = document.createElement('div'); dk.className = 'k'; dk.textContent = k; d.appendChild(dv); d.appendChild(dk); stats.appendChild(d); });
       body.appendChild(stats);
       const src = document.createElement('p'); src.className = 'sub';
       src.textContent = (s.source === 'live' ? 'Live sheets' : s.source === 'replay' ? 'Replay: game-day sheets re-run after the fact on the archived pregame odds pull, graded like live sheets (not bets placed)' : 'Paper: the 2025-26 season replayed through the deployed rules at DraftKings closing lines (a backtest, not bets placed)') + (s.first_date ? `, ${String(s.first_date).slice(0, 4)}-${String(s.first_date).slice(4, 6)}-${String(s.first_date).slice(6, 8)} to ${String(s.last_date).slice(0, 4)}-${String(s.last_date).slice(4, 6)}-${String(s.last_date).slice(6, 8)}` : '') + '.';
       body.appendChild(src);
+      const conv = document.createElement('p'); conv.className = 'sub';
+      conv.textContent = 'Two sizings sit side by side above. Units risk a flat 1 on every bet, which is how the signals are compared with each other. The bankroll and the drawdown use the stakes the sheet actually set — quarter-Kelly with caps — which is what the money did.';
+      body.appendChild(conv);
       if (s.series.length > 1) { body.appendChild(sectionTitle('Cumulative units')); body.appendChild(unitsChart(s.series)); }
-      body.appendChild(sectionTitle('By market and tier'));
-      body.appendChild(wrap(blockTable([['Staked', 'staked', 'all', true], ['Staked: spread', 'staked', 'spread'], ['Staked: total', 'staked', 'total'], ['Staked: moneyline', 'staked', 'moneyline'],
-                                        ['All BET signals', 'BET', 'all'], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
-                                        ['LEAN signals', 'LEAN', 'all'],
-                                        ['Candidate: CatBoost spread', 'candidate: catboost-spread', 'spread'], ['Staked: both spread layers agree', 'candidate: agree-spread', 'spread'],
-                                        ['Candidate: CatBoost moneyline', 'candidate: catboost-moneyline', 'moneyline'], ['Candidate: neutral-floor under', 'candidate: neutral-under', 'total']].map(([name, g, m, hl]) => [name, s.table[g] ? s.table[g][m] : null, hl]))));
+      body.appendChild(sectionTitle('What we staked'));
+      // three questions, three tables: what the bets did, what the signals would have done, and how the
+      // unstaked layers are getting on.  One table mixing them read as thirteen competing numbers.
+      const table = spec => wrap(blockTable(spec.map(([name, g, m, hl]) => [name, s.table[g] ? s.table[g][m] : null, hl])));
+      body.appendChild(table([['Every staked bet', 'staked', 'all', true], ['Spread', 'staked', 'spread'], ['Total', 'staked', 'total'], ['Moneyline', 'staked', 'moneyline']]));
+      body.appendChild(sectionTitle('Every signal, staked or not'));
+      const sigNote = document.createElement('p'); sigNote.className = 'sub';
+      sigNote.textContent = 'How the sheet\u2019s own BET and LEAN calls did, whether or not the sizing rules staked them. These overlap the table above.';
+      body.appendChild(sigNote);
+      body.appendChild(table([['All BET signals', 'BET', 'all', true], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
+                              ['LEAN signals', 'LEAN', 'all']]));
+      body.appendChild(sectionTitle('Layers being watched'));
+      const layNote = document.createElement('p'); layNote.className = 'sub';
+      layNote.textContent = 'Alternative ways of picking the same games, graded alongside the live rules. The spread layer marked staked is the one making the bets; the rest are watched, not bet.';
+      body.appendChild(layNote);
+      body.appendChild(table([['Both spread layers agree (staked)', 'candidate: agree-spread', 'spread', true],
+                              ['CatBoost spread alone', 'candidate: catboost-spread', 'spread'],
+                              ['CatBoost moneyline', 'candidate: catboost-moneyline', 'moneyline'],
+                              ['Neutral-floor under', 'candidate: neutral-under', 'total']]));
       const months = Object.keys(s.by_month.staked || {});
       if (months.length > 1) { body.appendChild(sectionTitle('Staked bets by month')); body.appendChild(wrap(blockTable(months.map(m => [`${m.slice(0, 4)}-${m.slice(4, 6)}`, s.by_month.staked[m], false])))); }
       if (s.reliability && s.reliability.length) {
@@ -774,7 +794,13 @@
         body.appendChild(sectionTitle('Most recent graded signals'));
         const t = document.createElement('table'); t.innerHTML = '<thead><tr><th>Date</th><th>Bet</th><th class="num">Odds</th><th>Tier</th><th class="num">Stake</th><th>Result</th><th class="num">Units</th><th class="num">CLV</th></tr></thead>';
         const tb = document.createElement('tbody');
-        s.recent.slice(0, 15).forEach(r => {
+        // a staked bet and the layer row behind it are the same wager: show it once, keeping the staked row
+        const seen = new Set();
+        s.recent.filter(r => {
+          const k = `${r.date}|${r.bet}|${r.odds}`;
+          if (r.staked) { seen.add(k); return true; }
+          return !seen.has(k);
+        }).slice(0, 15).forEach(r => {
           const tr = document.createElement('tr'); if (r.staked) tr.className = 'hl';
           const cells = [[dateLabel(r.date), false], [`${r.market}: ${r.bet}`, false], [(r.odds > 0 ? '+' : '') + r.odds, true], [r.tier, false], [r.staked ? `${(100 * r.fraction).toFixed(1)}%` : '—', true], [r.result, false], [r.units === null ? '—' : fmtUnits(r.units), true], [(r.clv === null || r.clv === undefined) ? '—' : (r.clv >= 0 ? '+' : '') + r.clv.toFixed(2), true]];
           cells.forEach(([v, n], i) => { const td = document.createElement('td'); if (n) td.className = 'num'; if (i === 6 && r.units !== null) td.classList.add(r.units >= 0 ? 'pos' : 'neg'); td.textContent = v; tr.appendChild(td); });
