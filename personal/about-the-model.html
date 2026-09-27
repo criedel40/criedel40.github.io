@@ -138,7 +138,7 @@
 <text x="205.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">BET above a cutoff</text>
 <rect x="415" y="568" width="350" height="72" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
 <text x="590.0" y="593" text-anchor="middle" font-size="16" font-weight="600">TOTAL · under rule</text>
-<text x="590.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">under only, in the game profile</text>
+<text x="590.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">only the profiles with an edge</text>
 <text x="590.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">where it has held</text>
 <rect x="800" y="568" width="350" height="72" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
 <text x="975.0" y="593" text-anchor="middle" font-size="16" font-weight="600">MONEYLINE · market-shrink rule</text>
@@ -184,8 +184,8 @@
     <h2>The decision</h2>
     <div class="card">
       <ul>
-        <li><strong>Spreads.</strong> A fitted cover model turns the gap between our margin and the spread into a probability of covering, and a bet is placed only above a cutoff.</li>
-        <li><strong>Totals.</strong> Bets are placed on the under only, in the specific game profile where the forecast has beaten the line across multiple seasons. Overs are shown but never staked.</li>
+        <li><strong>Spreads.</strong> Two independent readings have to agree: a fitted cover model turns the gap between our margin and the spread into a probability of covering, and a separate model trained to find where the market's own number is wrong picks a side. A bet is placed only when both point the same way and clear a cutoff, and it is sized on the more confident of the two. Where the two disagree, nothing is staked. Games the market prices as near coin flips are staked at half size.</li>
+        <li><strong>Totals.</strong> Bets are confined to the game profiles where the forecast has beaten the line across multiple seasons: mostly unders in slower games, plus one narrow profile on the over. Everything else is shown and left alone.</li>
         <li><strong>Moneylines.</strong> The model's win probability is pulled part of the way toward the market's own probability before any edge is counted, so only disagreements the model is entitled to keep become bets.</li>
         <li><strong>Sizing.</strong> Fractional Kelly on the calibrated probability, with per-bet, per-game and daily caps. A confidence score from 0 to 100 accompanies every bet: 0 is break-even at the price, 100 is the best hit rate the evidence supports.</li>
       </ul>
