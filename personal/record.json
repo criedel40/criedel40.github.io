@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-01T03:35:47Z",
+ "generated": "2026-10-03T14:25:20Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
- "clv": "spread and total: points our number beat the closing DraftKings line by; moneyline: probability points",
+ "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
   {
    "label": "2023-24 paper backtest",

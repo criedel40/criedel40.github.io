@@ -50,7 +50,7 @@
 
     <h2>The workflow</h2>
     <figure style="margin:0">
-      <div class="diagram"><svg viewBox="0 0 1180 980" role="img" aria-label="Flow from pregame inputs through the IC hedge model, pace form, ensemble generation and the Oracle to the score ensemble; calibration and pregame shifts; the book's line; the three staked rules; fractional Kelly sizing with caps; sheet, ledger and monthly refit feeding coefficients back." xmlns="http://www.w3.org/2000/svg">
+      <div class="diagram"><svg viewBox="0 0 1180 980" role="img" aria-label="Flow from pregame inputs through the IC hedge model, pace form, ensemble generation and the Oracle to the score ensemble; calibration and pregame shifts; the book's line; the three staked rules, each requiring two independent readings to agree; fractional Kelly sizing with caps; sheet, ledger and refit." xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
           <marker id="arr-stake" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--stake)"/></marker>
@@ -133,18 +133,18 @@
 <path d="M975.0,540 L975.0,568" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
 <text x="983.0" y="558" text-anchor="start" font-size="13.5" fill="currentColor" >P(win) vs the price</text>
 <rect x="30" y="568" width="350" height="72" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
-<text x="205.0" y="593" text-anchor="middle" font-size="16" font-weight="600">SPREAD · cover model</text>
-<text x="205.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">P(cover) from the lean</text>
-<text x="205.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">BET above a cutoff</text>
+<text x="205.0" y="593" text-anchor="middle" font-size="16" font-weight="600">SPREAD · two layers agree</text>
+<text x="205.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">cover model and market-error model</text>
+<text x="205.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">same side, sized on the stronger</text>
 <rect x="415" y="568" width="350" height="72" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
-<text x="590.0" y="593" text-anchor="middle" font-size="16" font-weight="600">TOTAL · under rule</text>
-<text x="590.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">only the profiles with an edge</text>
-<text x="590.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">where it has held</text>
+<text x="590.0" y="593" text-anchor="middle" font-size="16" font-weight="600">TOTAL · profile, size, agreement</text>
+<text x="590.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">a profile where the edge has held,</text>
+<text x="590.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">a big enough gap, a second opinion</text>
 <rect x="800" y="568" width="350" height="72" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
 <text x="975.0" y="593" text-anchor="middle" font-size="16" font-weight="600">MONEYLINE · market-shrink rule</text>
 <text x="975.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">P(win) pulled toward the market</text>
-<text x="975.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">BET on edge</text>
-<text x="590.0" y="657" text-anchor="middle" font-size="13.5" fill="currentColor" >overs: tiered and shown, never staked</text>
+<text x="975.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">BET on edge, never heavy favorites</text>
+<text x="590.0" y="657" text-anchor="middle" font-size="13.5" fill="currentColor" >one narrow over profile is staked; no middle tier</text>
 <rect x="330" y="712" width="520" height="66" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
 <text x="590.0" y="737" text-anchor="middle" font-size="16" font-weight="600">Stake</text>
 <text x="590.0" y="757" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">fractional Kelly on the probability</text>
@@ -159,7 +159,7 @@
 <text x="590.0" y="863" text-anchor="middle" font-size="16" font-weight="600">Ledger, next morning</text>
 <text x="590.0" y="883" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">grades every bet vs finals, closing-line value</text>
 <rect x="800" y="838" width="350" height="66" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
-<text x="975.0" y="863" text-anchor="middle" font-size="16" font-weight="600">Monthly refit</text>
+<text x="975.0" y="863" text-anchor="middle" font-size="16" font-weight="600">Refit on live results</text>
 <text x="975.0" y="883" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">the season's own lines → new coefficients</text>
 <path d="M370,778 L370,812 L205.0,812 L205.0,838" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
 <text x="300" y="806" text-anchor="middle" font-size="13.5" fill="currentColor" >stakes</text>
@@ -168,7 +168,7 @@
         </g>
       </svg></div>
       <div class="legend"><span class="stake">staked path</span><span>forecast and plumbing</span></div>
-      <figcaption class="muted" style="margin:.6rem .25rem 0">Each market has one staked rule. Every bet is graded against the final score and the closing line, and the results feed a monthly refit of the decision coefficients.</figcaption>
+      <figcaption class="muted" style="margin:.6rem .25rem 0">Each market has one staked rule, and each needs two independent readings to agree. Every bet is graded against the final score and the book&rsquo;s own number, and those results are what any later change to a rule has to beat.</figcaption>
     </figure>
 
     <h2>The forecast</h2>
@@ -184,20 +184,27 @@
     <h2>The decision</h2>
     <div class="card">
       <ul>
-        <li><strong>Spreads.</strong> Two independent readings have to agree: a fitted cover model turns the gap between our margin and the spread into a probability of covering, and a separate model trained to find where the market's own number is wrong picks a side. A bet is placed only when both point the same way and clear a cutoff, and it is sized on the more confident of the two. Where the two disagree, nothing is staked. Games the market prices as near coin flips are staked at half size.</li>
-        <li><strong>Totals.</strong> Bets are confined to the game profiles where the forecast has beaten the line across multiple seasons: mostly unders in slower games, plus one narrow profile on the over. Everything else is shown and left alone.</li>
-        <li><strong>Moneylines.</strong> The model's win probability is pulled part of the way toward the market's own probability before any edge is counted, so only disagreements the model is entitled to keep become bets.</li>
-        <li><strong>Sizing.</strong> Fractional Kelly on the calibrated probability, with per-bet, per-game and daily caps. A confidence score from 0 to 100 accompanies every bet: 0 is break-even at the price, 100 is the best hit rate the evidence supports.</li>
+        <li><strong>Spreads.</strong> Two independent readings have to agree: a fitted cover model turns the gap between our margin and the spread into a probability of covering, and a separate model trained to find where the market's own number is wrong picks a side. A bet is placed only when both point the same way and clear a cutoff, and it is sized on the more confident of the two. Where the two disagree, nothing is staked.</li>
+        <li><strong>Totals.</strong> Three things have to line up. The forecast has to disagree with the line by enough points to matter &mdash; a small disagreement is not evidence of anything. The game has to sit in a profile where that disagreement has actually paid across multiple seasons: mostly unders in slower games, plus one narrow profile on the over. And the same market-error model that votes on spreads has to take the same side of the total. Miss any one of the three and the total is shown and left alone; there is no middle tier on totals, so a total is either bet or passed.</li>
+        <li><strong>Moneylines.</strong> The model's win probability is pulled part of the way toward the market's own probability before any edge is counted, so only disagreements the model is entitled to keep become bets. Heavy favorites are never staked whatever the edge looks like: the price leaves too little to win for the model's error bars.</li>
+        <li><strong>Sizing.</strong> Fractional Kelly on whichever probability the staking rule settles on, with per-bet, per-game and daily caps. Games the market prices as near coin flips are staked at half size. A confidence score from 0 to 100 accompanies every bet: 0 is break-even at the price, 100 is the best hit rate the evidence supports.</li>
       </ul>
     </div>
 
     <h2>How it is kept honest</h2>
     <div class="card">
+      <p>Two things are structural and hold everywhere. <strong>The forecast never sees the betting line</strong> &mdash; it cannot quietly copy the market and then present the agreement as skill. And <strong>every signal on the sheet, staked or not, is graded against the final score and the book&rsquo;s own number</strong>; the season record page is generated from that ledger, not written by hand.</p>
+      <p>Where hindsight could be removed from the published record, it was. The spread layer&rsquo;s coefficients are refitted forward through each season and graded only on games that came later, so no bet on the record page is priced by a version of that layer that had already seen its own result.</p>
+      <h3 style="font-size:1.15rem;margin:1.4rem 0 .5rem;color:#0b0b0b">What the record page is not</h3>
+      <p>The three seasons shown there are a backtest, not a track record, and three things keep them from being a clean out-of-sample test:</p>
       <ul>
-        <li>Every rule and every coefficient was validated on seasons the model had not seen, against closing lines, before it was allowed to stake anything.</li>
-        <li>Every signal on the sheet, staked or not, is graded the next morning against the final score and the closing line. The season record page is generated from that ledger, not by hand.</li>
-        <li>Any change to a rule has to beat the current one on live lines over a season, never on a backtest alone.</li>
+        <li><strong>The scoring network drew its validation sample at random from every season</strong>, so the forecasts behind those seasons are partly in sample. Fixing that means retraining the network with a whole season held out, not refitting a betting rule.</li>
+        <li><strong>The betting rules were chosen by looking at these seasons.</strong> Which game profiles to bet, how large a disagreement has to be, which side to take &mdash; all of it was selected on the same data it is scored on.</li>
+        <li><strong>Two of the three seasons are priced off a soft book</strong> and only the most recent off a sharp closing line. The soft seasons look better for that reason alone; the sharp one is the fairer guide to what live play will face.</li>
       </ul>
+      <p>So the honest reading is that the edge is plausible and consistent across three seasons, and not yet established. The first genuinely clean sample is live play, and it starts from zero.</p>
+      <h3 style="font-size:1.15rem;margin:1.4rem 0 .5rem;color:#0b0b0b">Changing a rule</h3>
+      <p>A change has to beat the current rule on every season available, and hold up on the sharp-book season rather than being carried by the soft ones &mdash; a rule that wins only in aggregate is not kept. Once live results exist they outrank any backtest, and a rule the live season contradicts goes, whatever the backtest said.</p>
       <p class="muted">Specific thresholds, coefficients, feature definitions and model files are not published.</p>
     </div>
     <a class="back" href="college-bball-predictions.html">&larr; Back to today's predictions</a>
