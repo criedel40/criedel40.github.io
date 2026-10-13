@@ -384,7 +384,7 @@
       
       try {
         // Load the image manifest and latest.json, both written by
-        // FORECASTSv2.0/betting/publish_site.py on game day (cache-busted so a
+        // forecast/betting/publish_site.py on game day (cache-busted so a
         // same-day republish shows up without a hard refresh)
         const bust = `?v=${Date.now()}`;
         const [imagesResponse, predictionsResponse, recordResponse] = await Promise.all([

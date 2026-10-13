@@ -1,12 +1,12 @@
 #!/bin/bash
-# Publish today's FORECASTSv2.0 game-day forecast to this site (latest.json, the daily
+# Publish today's game-day forecast (the forecast/ project) to this site (latest.json, the daily
 # archive JSON, the figure manifest, the figures, and record.json from the bet ledger),
 # then show what changed.  Grades yesterday's sheet first (results from the current-season
 # files, closing lines from the hourly odds log) and fills in any older pending games.
 # Run AFTER `python -m betting.forecast_today --date <date> ...` has written
-# FORECASTSv2.0/artifacts/forecasts/<date>/. Usage: ./update-bball-predictions.sh [YYYYMMDD]
+# forecast/artifacts/forecasts/<date>/. Usage: ./update-bball-predictions.sh [YYYYMMDD]
 set -e
-PROJECT=/home/criedel/NEW-AI-BBALL/SCORE/FORECASTSv2.0
+PROJECT=/home/criedel/NEW-AI-BBALL/forecast
 SITE_DIR="$(cd "$(dirname "$0")" && pwd)"
 DATE="${1:-$(date +%Y%m%d)}"
 YESTERDAY=$(date -d "${DATE:0:4}-${DATE:4:2}-${DATE:6:2} -1 day" +%Y%m%d)
