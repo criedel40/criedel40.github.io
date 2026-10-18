@@ -45,7 +45,7 @@
     <a class="back" href="college-bball-predictions.html">&larr; Back to today's predictions</a>
     <div class="card">
       <h2 style="margin-top:.25rem">What this is</h2>
-      <p>Beyond the Arc DL is a college basketball forecasting and betting system. Two neural networks produce a score forecast for every Division I game from pregame information only. A separate decision layer then compares that forecast with the market and decides whether a bet has value, on which side, and how much to stake. The forecast never sees the betting line. The line enters exactly once, as an input to the decision, so the model is always betting against the market rather than blending with it.</p>
+      <p>Beyond the Arc DL is a college basketball forecasting and betting system. Two neural networks produce a score forecast for every game between two Division I teams from pregame information only. A separate decision layer then compares that forecast with the market and decides whether a bet has value, on which side, and how much to stake. The forecast never sees the betting line. The line enters exactly once, as an input to the decision, so the model is always betting against the market rather than blending with it.</p>
     </div>
 
     <h2>The workflow</h2>
@@ -174,7 +174,7 @@
     <h2>The forecast</h2>
     <div class="card">
       <ul>
-        <li><strong>Inputs are strictly pregame.</strong> Season-to-date team statistics, roster context, rest, site and the point in the season, built so that nothing from the game itself or from later games can leak in.</li>
+        <li><strong>Inputs are strictly pregame.</strong> Season-to-date team statistics, roster context, rest, site and the point in the season, built so that nothing from the game itself or from later games can leak in. Before a team has played, its statistical profile starts from a preseason prior built from its previous season, the prior-season lines of its returning roster and the preseason ratings; its own results take over from its first game. A team in its first Division I season has none of that history, so its games are forecast only once it has played, and are shown without a stake until it has a run of its own results.</li>
         <li><strong>An IC hedge model</strong> adjusts each team's season-to-date profile toward what the matchup implies, with bounded moves. It predicts the inputs the game will be played with, not the score.</li>
         <li><strong>An ensemble of ten thousand members</strong> is generated around those hedged profiles, after a recent-tempo adjustment, within each team's recent variability. The scoring model scores every member. The ensemble's mean is the forecast on the sheet and its shares are the probabilities; there is no separate point forecast.</li>
         <li><strong>Calibration and pregame adjustments</strong> correct the score level through the season and account for who sat a team's last game and for postseason back-to-backs.</li>
@@ -193,7 +193,7 @@
 
     <h2>How it is kept honest</h2>
     <div class="card">
-      <p>Two things are structural and hold everywhere. <strong>The forecast never sees the betting line</strong> &mdash; it cannot quietly copy the market and then present the agreement as skill. And <strong>every signal on the sheet, staked or not, is graded against the final score and the book&rsquo;s own number</strong>; the season record page is generated from that ledger, not written by hand.</p>
+      <p>Two things are structural and hold everywhere. <strong>The forecast never sees the betting line</strong> &mdash; it cannot quietly copy the market and then present the agreement as skill. And <strong>every signal on the sheet, staked or not, is graded against the final score and the book&rsquo;s own number</strong>; the season record page is generated from that ledger, not written by hand. One sheet a day, the one published at a fixed time in the late afternoon, is the bet of record: the ledger grades that sheet, not whichever came last.</p>
       <p>Where hindsight could be removed from the published record, it was. The spread layer&rsquo;s coefficients are refitted forward through each season and graded only on games that came later, so no bet on the record page is priced by a version of that layer that had already seen its own result.</p>
       <h3 style="font-size:1.15rem;margin:1.4rem 0 .5rem;color:#0b0b0b">What the record page is not</h3>
       <p>The three seasons shown there are a backtest, not a track record, and three things keep them from being a clean out-of-sample test:</p>
