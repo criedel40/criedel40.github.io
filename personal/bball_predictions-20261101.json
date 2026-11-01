@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261101,
-  "generated": "2026-11-01T16:05:55Z",
+  "generated": "2026-11-01T16:26:05Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_7_anneal150_ens5)",
   "members": 10000,
   "rows": [
@@ -28,8 +28,8 @@
     "open_odds": -108,
     "open": "+6.5 (-108)",
     "p_model": null,
-    "confidence": 100,
-    "bankroll_fraction": 0.03
+    "confidence": 50,
+    "bankroll_fraction": 0.015
    }
   ],
   "tier_rules": {
@@ -146,7 +146,7 @@
     "open_line": 6.5,
     "open_odds": -108,
     "open": "+6.5 (-108)",
-    "confidence": 100
+    "confidence": 50
    },
    {
     "market": "Spread",
@@ -174,7 +174,7 @@
     "open_line": null,
     "open_odds": 250,
     "open": "+250",
-    "confidence": 4
+    "confidence": 2
    },
    {
     "market": "Moneyline",
@@ -216,7 +216,7 @@
     "open_line": 155.5,
     "open_odds": -115,
     "open": "155.5 (-115)",
-    "confidence": 9
+    "confidence": 4
    }
   ],
   "Histogram": {
