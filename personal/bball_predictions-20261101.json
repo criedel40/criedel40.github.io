@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261101,
-  "generated": "2026-11-01T19:25:02Z",
+  "generated": "2026-11-01T23:25:02Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_7_anneal150_ens5)",
   "members": 10000,
   "rows": [
@@ -572,13 +572,13 @@
   "BART": {
    "HomeTeamScore": 72,
    "AwayTeamScore": 78,
-   "HomeTeamWinProbability": 0.27,
-   "AwayTeamWinProbability": 0.73,
-   "SpreadValue": -6.4,
+   "HomeTeamWinProbability": 0.28,
+   "AwayTeamWinProbability": 0.72,
+   "SpreadValue": -6.1,
    "Total": 150.0,
    "source": "torvik",
-   "text": "Villanova -6.4, 78-72 (73%)",
-   "Spread": "-6.4 Villanova"
+   "text": "Villanova -6.1, 78-72 (72%)",
+   "Spread": "-6.1 Villanova"
   },
   "Markets": [
    {
