@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261101,
-  "generated": "2026-11-01T16:26:05Z",
+  "generated": "2026-11-01T19:25:02Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_7_anneal150_ens5)",
   "members": 10000,
   "rows": [
@@ -96,9 +96,9 @@
     },
     "Moneyline": {
      "Side": "Liberty",
-     "Odds": 250,
-     "Probability": 0.301,
-     "Edge": 0.027,
+     "Odds": 260,
+     "Probability": 0.296,
+     "Edge": 0.03,
      "Tier": "LEAN"
     },
     "Total": {
@@ -123,10 +123,10 @@
    "Spread": "-8.1 High Point"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.274,
-   "AwayTeamWinProbability": 0.726,
-   "MoneylineHome": 250,
-   "MoneylineAway": -310,
+   "HomeTeamWinProbability": 0.266,
+   "AwayTeamWinProbability": 0.734,
+   "MoneylineHome": 260,
+   "MoneylineAway": -325,
    "Spread": "-7.5 High Point",
    "SpreadValue": -7.5,
    "HomeTeamScore": 74.0,
@@ -165,10 +165,10 @@
    {
     "market": "Moneyline",
     "bet": "Liberty ML",
-    "odds": 250,
-    "model": 0.301,
-    "breakeven": 0.286,
-    "edge": 0.015,
+    "odds": 260,
+    "model": 0.296,
+    "breakeven": 0.278,
+    "edge": 0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": null,
@@ -179,10 +179,10 @@
    {
     "market": "Moneyline",
     "bet": "High Point ML",
-    "odds": -310,
-    "model": 0.699,
-    "breakeven": 0.756,
-    "edge": -0.057,
+    "odds": -325,
+    "model": 0.704,
+    "breakeven": 0.765,
+    "edge": -0.061,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
