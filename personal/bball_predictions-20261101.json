@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261101,
-  "generated": "2026-11-01T15:24:46Z",
+  "generated": "2026-11-01T15:35:18Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_7_anneal150_ens5)",
   "members": 10000,
   "rows": [
@@ -144,7 +144,7 @@
     "open_line": 6.5,
     "open_odds": -108,
     "open": "+6.5 (-108)",
-    "confidence": 64
+    "confidence": 100
    },
    {
     "market": "Spread",
