@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261101,
-  "generated": "2026-11-01T15:35:18Z",
+  "generated": "2026-11-01T16:05:18Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_7_anneal150_ens5)",
   "members": 10000,
   "rows": [
@@ -112,13 +112,15 @@
    }
   },
   "BART": {
-   "HomeTeamScore": 74,
-   "AwayTeamScore": 78,
-   "HomeTeamWinProbability": 0.227,
-   "AwayTeamWinProbability": 0.773,
-   "SpreadValue": -4.4,
-   "Total": 152.2,
-   "Spread": "-4.4 High Point"
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 80,
+   "HomeTeamWinProbability": 0.23,
+   "AwayTeamWinProbability": 0.77,
+   "SpreadValue": -8.0,
+   "Total": 152.0,
+   "source": "torvik",
+   "text": "High Point -8.1, 80-72 (77%)",
+   "Spread": "-8.0 High Point"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.274,
@@ -568,13 +570,15 @@
    "Signals": {}
   },
   "BART": {
-   "HomeTeamScore": 73,
-   "AwayTeamScore": 76,
-   "HomeTeamWinProbability": 0.269,
-   "AwayTeamWinProbability": 0.731,
-   "SpreadValue": -2.9,
-   "Total": 149.6,
-   "Spread": "-2.9 Villanova"
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 78,
+   "HomeTeamWinProbability": 0.27,
+   "AwayTeamWinProbability": 0.73,
+   "SpreadValue": -6.0,
+   "Total": 150.0,
+   "source": "torvik",
+   "text": "Villanova -6.4, 78-72 (73%)",
+   "Spread": "-6.0 Villanova"
   },
   "Markets": [
    {
