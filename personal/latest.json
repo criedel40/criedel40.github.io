@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261102,
-  "generated": "2026-11-02T23:25:02Z",
+  "generated": "2026-11-02T23:40:15Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_7_anneal150_ens5)",
   "members": 10000,
   "rows": [
@@ -99,6 +99,7 @@
     }
    }
   },
+  "TTQ": 30.3,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 65,
@@ -674,6 +675,7 @@
     }
    }
   },
+  "TTQ": 32.7,
   "BART": {
    "HomeTeamScore": 81,
    "AwayTeamScore": 71,
@@ -1251,6 +1253,7 @@
     }
    }
   },
+  "TTQ": 47.5,
   "BART": {
    "HomeTeamScore": 70,
    "AwayTeamScore": 76,
@@ -1812,6 +1815,7 @@
     }
    }
   },
+  "TTQ": 25.1,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 62,
@@ -2372,6 +2376,7 @@
     }
    }
   },
+  "TTQ": 40.0,
   "BART": {
    "HomeTeamScore": 85,
    "AwayTeamScore": 65,
@@ -2898,6 +2903,7 @@
     }
    }
   },
+  "TTQ": 80.5,
   "BART": {
    "HomeTeamScore": 78,
    "AwayTeamScore": 73,
@@ -3445,6 +3451,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 39.2,
   "BART": {
    "HomeTeamScore": 79,
    "AwayTeamScore": 64,
@@ -3992,6 +3999,7 @@
     }
    }
   },
+  "TTQ": 56.2,
   "BART": {
    "HomeTeamScore": 82,
    "AwayTeamScore": 79,
@@ -4507,6 +4515,7 @@
     }
    }
   },
+  "TTQ": 32.9,
   "BART": {
    "HomeTeamScore": 95,
    "AwayTeamScore": 53,
@@ -5066,6 +5075,7 @@
     }
    }
   },
+  "TTQ": 88.0,
   "BART": {
    "HomeTeamScore": 78,
    "AwayTeamScore": 79,
@@ -5640,6 +5650,7 @@
     }
    }
   },
+  "TTQ": 42.3,
   "BART": {
    "HomeTeamScore": 75,
    "AwayTeamScore": 76,
@@ -6205,6 +6216,7 @@
     }
    }
   },
+  "TTQ": 31.8,
   "BART": {
    "HomeTeamScore": 88,
    "AwayTeamScore": 62,
@@ -6775,6 +6787,7 @@
     }
    }
   },
+  "TTQ": 32.8,
   "BART": {
    "HomeTeamScore": 94,
    "AwayTeamScore": 63,
@@ -7330,6 +7343,7 @@
     }
    }
   },
+  "TTQ": 25.9,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 68,
@@ -7866,6 +7880,7 @@
     }
    }
   },
+  "TTQ": 55.2,
   "BART": {
    "HomeTeamScore": 77,
    "AwayTeamScore": 75,
@@ -8382,6 +8397,7 @@
     }
    }
   },
+  "TTQ": 23.5,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 61,
@@ -8900,6 +8916,7 @@
     }
    }
   },
+  "TTQ": 45.3,
   "BART": {
    "HomeTeamScore": 76,
    "AwayTeamScore": 75,
@@ -9452,6 +9469,7 @@
     }
    }
   },
+  "TTQ": 54.0,
   "BART": {
    "HomeTeamScore": 81,
    "AwayTeamScore": 79,
@@ -9953,6 +9971,7 @@
     }
    }
   },
+  "TTQ": 31.2,
   "BART": {
    "HomeTeamScore": 76,
    "AwayTeamScore": 69,
@@ -10475,6 +10494,7 @@
     }
    }
   },
+  "TTQ": 37.9,
   "BART": {
    "HomeTeamScore": 71,
    "AwayTeamScore": 73,
@@ -10976,6 +10996,7 @@
     }
    }
   },
+  "TTQ": 27.6,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 59,
@@ -11529,6 +11550,7 @@
     }
    }
   },
+  "TTQ": 51.1,
   "BART": {
    "HomeTeamScore": 79,
    "AwayTeamScore": 80,
@@ -12071,6 +12093,7 @@
     }
    }
   },
+  "TTQ": 25.2,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 63,
@@ -12634,6 +12657,7 @@
     }
    }
   },
+  "TTQ": 40.4,
   "BART": {
    "HomeTeamScore": 95,
    "AwayTeamScore": 69,
@@ -13267,6 +13291,7 @@
     }
    }
   },
+  "TTQ": 25.0,
   "BART": {
    "HomeTeamScore": 91,
    "AwayTeamScore": 71,
@@ -13818,6 +13843,7 @@
     }
    }
   },
+  "TTQ": 37.7,
   "BART": {
    "HomeTeamScore": 81,
    "AwayTeamScore": 74,
@@ -14369,6 +14395,7 @@
     }
    }
   },
+  "TTQ": 22.0,
   "BART": {
    "HomeTeamScore": 82,
    "AwayTeamScore": 63,
@@ -14916,6 +14943,7 @@
     }
    }
   },
+  "TTQ": 39.2,
   "BART": {
    "HomeTeamScore": 74,
    "AwayTeamScore": 78,
@@ -15489,6 +15517,7 @@
     }
    }
   },
+  "TTQ": 28.4,
   "BART": {
    "HomeTeamScore": 93,
    "AwayTeamScore": 68,
@@ -16069,6 +16098,7 @@
     }
    }
   },
+  "TTQ": 47.1,
   "BART": {
    "HomeTeamScore": 74,
    "AwayTeamScore": 80,
@@ -16609,6 +16639,7 @@
     }
    }
   },
+  "TTQ": 38.5,
   "BART": {
    "HomeTeamScore": 95,
    "AwayTeamScore": 63,
@@ -17205,6 +17236,7 @@
     }
    }
   },
+  "TTQ": 30.5,
   "BART": {
    "HomeTeamScore": 93,
    "AwayTeamScore": 58,
@@ -17780,6 +17812,7 @@
     }
    }
   },
+  "TTQ": 33.7,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 62,
@@ -18328,6 +18361,7 @@
     }
    }
   },
+  "TTQ": 53.4,
   "BART": {
    "HomeTeamScore": 73,
    "AwayTeamScore": 72,
@@ -18809,6 +18843,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 37.2,
   "BART": {
    "HomeTeamScore": 85,
    "AwayTeamScore": 68,
@@ -19306,6 +19341,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 47.2,
   "BART": {
    "HomeTeamScore": 77,
    "AwayTeamScore": 69,
@@ -19845,6 +19881,7 @@
     }
    }
   },
+  "TTQ": 39.0,
   "BART": {
    "HomeTeamScore": 79,
    "AwayTeamScore": 73,
@@ -20401,6 +20438,7 @@
     }
    }
   },
+  "TTQ": 29.6,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 56,
@@ -20980,6 +21018,7 @@
     }
    }
   },
+  "TTQ": 56.8,
   "BART": {
    "HomeTeamScore": 81,
    "AwayTeamScore": 82,
@@ -21588,6 +21627,7 @@
     }
    }
   },
+  "TTQ": 31.6,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 64,
@@ -22121,6 +22161,7 @@
     }
    }
   },
+  "TTQ": 27.7,
   "BART": {
    "HomeTeamScore": 74,
    "AwayTeamScore": 65,
@@ -22662,6 +22703,7 @@
     }
    }
   },
+  "TTQ": 61.5,
   "BART": {
    "HomeTeamScore": 74,
    "AwayTeamScore": 75,
@@ -23195,6 +23237,7 @@
     }
    }
   },
+  "TTQ": 28.6,
   "BART": {
    "HomeTeamScore": 84,
    "AwayTeamScore": 62,
@@ -23770,6 +23813,7 @@
     }
    }
   },
+  "TTQ": 31.1,
   "BART": {
    "HomeTeamScore": 88,
    "AwayTeamScore": 64,
@@ -24321,6 +24365,7 @@
     }
    }
   },
+  "TTQ": 35.8,
   "BART": {
    "HomeTeamScore": 93,
    "AwayTeamScore": 67,
@@ -24881,6 +24926,7 @@
     }
    }
   },
+  "TTQ": 22.7,
   "BART": {
    "HomeTeamScore": 83,
    "AwayTeamScore": 69,
@@ -25423,6 +25469,7 @@
     }
    }
   },
+  "TTQ": 30.2,
   "BART": {
    "HomeTeamScore": 93,
    "AwayTeamScore": 60,
@@ -26036,6 +26083,7 @@
     }
    }
   },
+  "TTQ": 29.7,
   "BART": {
    "HomeTeamScore": 91,
    "AwayTeamScore": 58,
@@ -26527,6 +26575,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 40.5,
   "BART": {
    "HomeTeamScore": 83,
    "AwayTeamScore": 70,
@@ -27067,6 +27116,7 @@
     }
    }
   },
+  "TTQ": 34.5,
   "BART": {
    "HomeTeamScore": 99,
    "AwayTeamScore": 59,
@@ -27657,6 +27707,7 @@
     }
    }
   },
+  "TTQ": 90.3,
   "BART": {
    "HomeTeamScore": 79,
    "AwayTeamScore": 82,
@@ -28242,6 +28293,7 @@
     }
    }
   },
+  "TTQ": 35.5,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 69,
@@ -28781,6 +28833,7 @@
     }
    }
   },
+  "TTQ": 35.7,
   "BART": {
    "HomeTeamScore": 84,
    "AwayTeamScore": 71,
@@ -29345,6 +29398,7 @@
     }
    }
   },
+  "TTQ": 35.7,
   "BART": {
    "HomeTeamScore": 89,
    "AwayTeamScore": 64,
@@ -29917,6 +29971,7 @@
     }
    }
   },
+  "TTQ": 49.4,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 65,
@@ -30500,6 +30555,7 @@
     }
    }
   },
+  "TTQ": 29.8,
   "BART": {
    "HomeTeamScore": 84,
    "AwayTeamScore": 62,
@@ -31062,6 +31118,7 @@
     }
    }
   },
+  "TTQ": 26.8,
   "BART": {
    "HomeTeamScore": 91,
    "AwayTeamScore": 62,
@@ -31631,6 +31688,7 @@
     }
    }
   },
+  "TTQ": 28.9,
   "BART": {
    "HomeTeamScore": 96,
    "AwayTeamScore": 61,
@@ -32222,6 +32280,7 @@
     }
    }
   },
+  "TTQ": 77.8,
   "BART": {
    "HomeTeamScore": 79,
    "AwayTeamScore": 74,
@@ -32763,6 +32822,7 @@
     }
    }
   },
+  "TTQ": 30.3,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 61,
@@ -33309,6 +33369,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 56.3,
   "BART": {
    "HomeTeamScore": 75,
    "AwayTeamScore": 72,
@@ -33831,6 +33892,7 @@
     }
    }
   },
+  "TTQ": 43.6,
   "BART": {
    "HomeTeamScore": 82,
    "AwayTeamScore": 60,
@@ -34388,6 +34450,7 @@
     }
    }
   },
+  "TTQ": 55.3,
   "BART": {
    "HomeTeamScore": 76,
    "AwayTeamScore": 74,
@@ -34940,6 +35003,7 @@
     }
    }
   },
+  "TTQ": 26.3,
   "BART": {
    "HomeTeamScore": 84,
    "AwayTeamScore": 58,
@@ -35441,6 +35505,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 52.6,
   "BART": {
    "HomeTeamScore": 76,
    "AwayTeamScore": 68,
@@ -35983,6 +36048,7 @@
     }
    }
   },
+  "TTQ": 31.6,
   "BART": {
    "HomeTeamScore": 95,
    "AwayTeamScore": 66,
@@ -36551,6 +36617,7 @@
     }
    }
   },
+  "TTQ": 50.4,
   "BART": {
    "HomeTeamScore": 75,
    "AwayTeamScore": 74,
@@ -37065,6 +37132,7 @@
     }
    }
   },
+  "TTQ": 57.1,
   "BART": {
    "HomeTeamScore": 86,
    "AwayTeamScore": 72,
@@ -37616,6 +37684,7 @@
     }
    }
   },
+  "TTQ": 37.6,
   "BART": {
    "HomeTeamScore": 94,
    "AwayTeamScore": 64,
@@ -38225,6 +38294,7 @@
     }
    }
   },
+  "TTQ": 62.2,
   "BART": {
    "HomeTeamScore": 78,
    "AwayTeamScore": 80,
@@ -38746,6 +38816,7 @@
     }
    }
   },
+  "TTQ": 45.6,
   "BART": {
    "HomeTeamScore": 69,
    "AwayTeamScore": 72,
@@ -39309,6 +39380,7 @@
     }
    }
   },
+  "TTQ": 34.3,
   "BART": {
    "HomeTeamScore": 96,
    "AwayTeamScore": 61,
@@ -39877,6 +39949,7 @@
     }
    }
   },
+  "TTQ": 35.1,
   "BART": {
    "HomeTeamScore": 89,
    "AwayTeamScore": 67,
@@ -40462,6 +40535,7 @@
     }
    }
   },
+  "TTQ": 35.4,
   "BART": {
    "HomeTeamScore": 91,
    "AwayTeamScore": 65,
@@ -41035,6 +41109,7 @@
     }
    }
   },
+  "TTQ": 46.8,
   "BART": {
    "HomeTeamScore": 78,
    "AwayTeamScore": 75,
@@ -41564,6 +41639,7 @@
     }
    }
   },
+  "TTQ": 37.3,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 68,
@@ -42122,6 +42198,7 @@
     }
    }
   },
+  "TTQ": 31.9,
   "BART": {
    "HomeTeamScore": 85,
    "AwayTeamScore": 68,
@@ -42701,6 +42778,7 @@
     }
    }
   },
+  "TTQ": 18.7,
   "BART": {
    "HomeTeamScore": 82,
    "AwayTeamScore": 67,
@@ -43266,6 +43344,7 @@
     }
    }
   },
+  "TTQ": 29.7,
   "BART": {
    "HomeTeamScore": 91,
    "AwayTeamScore": 61,
@@ -43816,6 +43895,7 @@
     }
    }
   },
+  "TTQ": 34.3,
   "BART": {
    "HomeTeamScore": 89,
    "AwayTeamScore": 62,
@@ -44372,6 +44452,7 @@
     }
    }
   },
+  "TTQ": 16.8,
   "BART": {
    "HomeTeamScore": 86,
    "AwayTeamScore": 54,
@@ -44905,6 +44986,7 @@
     }
    }
   },
+  "TTQ": 44.6,
   "BART": {
    "HomeTeamScore": 80,
    "AwayTeamScore": 72,
@@ -45457,6 +45539,7 @@
     }
    }
   },
+  "TTQ": 58.0,
   "BART": {
    "HomeTeamScore": 77,
    "AwayTeamScore": 72,
@@ -45966,6 +46049,7 @@
     }
    }
   },
+  "TTQ": 41.1,
   "BART": {
    "HomeTeamScore": 91,
    "AwayTeamScore": 64,
@@ -46545,6 +46629,7 @@
     }
    }
   },
+  "TTQ": 42.2,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 63,
@@ -47094,6 +47179,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 38.6,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 66,
@@ -47607,6 +47693,7 @@
     }
    }
   },
+  "TTQ": 25.9,
   "BART": {
    "HomeTeamScore": 84,
    "AwayTeamScore": 61,
@@ -48201,6 +48288,7 @@
     }
    }
   },
+  "TTQ": 37.8,
   "BART": {
    "HomeTeamScore": 91,
    "AwayTeamScore": 71,
@@ -48817,6 +48905,7 @@
     }
    }
   },
+  "TTQ": 42.5,
   "BART": {
    "HomeTeamScore": 88,
    "AwayTeamScore": 67,
@@ -49317,6 +49406,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 39.8,
   "BART": {
    "HomeTeamScore": 90,
    "AwayTeamScore": 67,
@@ -49881,6 +49971,7 @@
     }
    }
   },
+  "TTQ": 26.9,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 68,
@@ -50447,6 +50538,7 @@
     }
    }
   },
+  "TTQ": 34.3,
   "BART": {
    "HomeTeamScore": 94,
    "AwayTeamScore": 66,
@@ -50969,6 +51061,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 39.6,
   "BART": {
    "HomeTeamScore": 78,
    "AwayTeamScore": 65,
@@ -51460,6 +51553,7 @@
     }
    }
   },
+  "TTQ": 22.6,
   "BART": {
    "HomeTeamScore": 83,
    "AwayTeamScore": 58,
@@ -52030,6 +52124,7 @@
     }
    }
   },
+  "TTQ": 30.4,
   "BART": {
    "HomeTeamScore": 86,
    "AwayTeamScore": 61,
@@ -52584,6 +52679,7 @@
     }
    }
   },
+  "TTQ": 26.0,
   "BART": {
    "HomeTeamScore": 84,
    "AwayTeamScore": 57,
@@ -53116,6 +53212,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 25.4,
   "BART": {
    "HomeTeamScore": 80,
    "AwayTeamScore": 68,
@@ -53671,6 +53768,7 @@
     }
    }
   },
+  "TTQ": 42.7,
   "BART": {
    "HomeTeamScore": 88,
    "AwayTeamScore": 69,
@@ -54197,6 +54295,7 @@
     }
    }
   },
+  "TTQ": 46.6,
   "BART": {
    "HomeTeamScore": 77,
    "AwayTeamScore": 75,
@@ -54742,6 +54841,7 @@
     }
    }
   },
+  "TTQ": 53.5,
   "BART": {
    "HomeTeamScore": 82,
    "AwayTeamScore": 80,
@@ -55239,6 +55339,7 @@
     }
    }
   },
+  "TTQ": 29.0,
   "BART": {
    "HomeTeamScore": 87,
    "AwayTeamScore": 66,
@@ -55803,6 +55904,7 @@
     }
    }
   },
+  "TTQ": 16.9,
   "BART": {
    "HomeTeamScore": 88,
    "AwayTeamScore": 58,
@@ -56378,6 +56480,7 @@
     }
    }
   },
+  "TTQ": 53.4,
   "BART": {
    "HomeTeamScore": 72,
    "AwayTeamScore": 73,
@@ -56881,6 +56984,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 33.3,
   "BART": {
    "HomeTeamScore": 81,
    "AwayTeamScore": 72,
@@ -57392,6 +57496,7 @@
     }
    }
   },
+  "TTQ": 30.3,
   "BART": {
    "HomeTeamScore": 82,
    "AwayTeamScore": 66,
@@ -57973,6 +58078,7 @@
     }
    }
   },
+  "TTQ": 34.0,
   "BART": {
    "HomeTeamScore": 92,
    "AwayTeamScore": 65,
@@ -58529,6 +58635,7 @@
     }
    }
   },
+  "TTQ": 28.9,
   "BART": {
    "HomeTeamScore": 80,
    "AwayTeamScore": 59,
@@ -59020,6 +59127,7 @@
    ],
    "Signals": {}
   },
+  "TTQ": 39.6,
   "BART": {
    "HomeTeamScore": 79,
    "AwayTeamScore": 67,
@@ -59541,6 +59649,7 @@
     }
    }
   },
+  "TTQ": 31.0,
   "BART": {
    "HomeTeamScore": 83,
    "AwayTeamScore": 68,
@@ -60153,6 +60262,7 @@
     }
    }
   },
+  "TTQ": 22.0,
   "BART": {
    "HomeTeamScore": 80,
    "AwayTeamScore": 65,
@@ -60717,6 +60827,7 @@
     }
    }
   },
+  "TTQ": 39.3,
   "BART": {
    "HomeTeamScore": 77,
    "AwayTeamScore": 68,
@@ -61264,6 +61375,7 @@
     }
    }
   },
+  "TTQ": 16.2,
   "BART": {
    "HomeTeamScore": 81,
    "AwayTeamScore": 61,
