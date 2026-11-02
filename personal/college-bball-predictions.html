@@ -440,7 +440,10 @@
         
         // The per-game cards are heavy -- a table plus up to three SVG panels each -- so they are built
         // the first time the Games tab is opened, not on load.
-        pendingGameCards = () => imageFiles.forEach(filename => {
+        // Games tab order: Torvik's TTQ, highest first; a game without one goes last.
+        const ttqOf = f => { const t = predictionsData[f] && predictionsData[f].TTQ; return typeof t === 'number' ? t : -Infinity; };
+        const gameFiles = [...imageFiles].sort((a, b) => ttqOf(b) - ttqOf(a));
+        pendingGameCards = () => gameFiles.forEach(filename => {
           // Create container for this prediction (table + image)
           const predictionContainer = document.createElement('div');
           predictionContainer.className = 'game-card';
