@@ -109,6 +109,23 @@
     .score-hist text,.sens-chart text{font-weight:700}
     .bball-image-title{font-weight:700}
     .game-card.hidden{display:none}
+    #bball-images-container{grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem}
+    #bball-images-container>.game-card.open{grid-column:1/-1}
+    .game-tile{display:block;width:100%;padding:.8rem 1rem;background:#fff;border:1px solid #dde3ec;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.08);cursor:pointer;text-align:left;font:inherit;color:#333}
+    .game-tile:hover{border-color:#357edd}
+    .game-tile:focus-visible{outline:2px solid #357edd;outline-offset:2px}
+    .game-card.open .game-tile{border-color:#357edd;box-shadow:none}
+    .game-detail{margin-top:1rem}
+    .tile-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
+    .tile-ttq{font-size:.8rem;color:#666}
+    .tile-team{display:flex;justify-content:space-between;gap:.75rem;font-size:1rem;line-height:1.45}
+    .tile-name{font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .tile-score{font-weight:700;color:#357edd;font-variant-numeric:tabular-nums}
+    .tile-lines{margin-top:.5rem;padding-top:.5rem;border-top:1px solid #eee}
+    .tile-line{display:flex;justify-content:space-between;gap:.75rem;font-size:.85rem;line-height:1.5}
+    .tile-label{color:#666}
+    .tile-value{font-variant-numeric:tabular-nums}
+    .tile-pick{margin-top:.5rem;font-size:.85rem;font-weight:600}
     @media screen and (max-width:768px){.header-full-height{aspect-ratio:auto;height:auto;min-height:0}.header-full-height h1{font-size:1.9rem!important}.header-full-height h2{font-size:1rem!important}}
     .score-hist{width:100%;height:auto;display:block}
     .score-hist .bar{fill:#2a78d6}
@@ -443,13 +460,8 @@
         // Games tab order: Torvik's TTQ, highest first; a game without one goes last.
         const ttqOf = f => { const t = predictionsData[f] && predictionsData[f].TTQ; return typeof t === 'number' ? t : -Infinity; };
         const gameFiles = [...imageFiles].sort((a, b) => ttqOf(b) - ttqOf(a));
-        pendingGameCards = () => gameFiles.forEach(filename => {
-          // Create container for this prediction (table + image)
-          const predictionContainer = document.createElement('div');
-          predictionContainer.className = 'game-card';
-          predictionContainer.style.marginBottom = '2rem';
-          predictionContainer.dataset.tier = bestTier(predictionsData[filename]);
-          
+        // Fills a tile's detail panel, the first time that tile is opened.
+        const fillGameDetail = (filename, predictionContainer) => {
           // Always create prediction table (even if data is missing)
           const predictionInfo = predictionsData[filename];
           const tableContainer = document.createElement('div');
@@ -634,8 +646,8 @@
             }
             predictionContainer.appendChild(wrapper);
           }
-          container.appendChild(predictionContainer);
-        });
+        };
+        pendingGameCards = () => gameFiles.forEach(filename => container.appendChild(buildGameTile(filename, predictionsData[filename], fillGameDetail)));
         buildViewTabs(hasRecord);
       } catch (error) {
         console.error('Error loading images:', error);
@@ -646,6 +658,44 @@
       }
     }
     
+    // ---- the Games board: one tile per game; opening a tile builds its tables and charts underneath
+    function tipText(iso) {
+      const when = iso ? new Date(iso) : null;
+      if (!when || isNaN(when)) return '';
+      return when.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Chicago' }) + ' CT';
+    }
+    function lineText(row) { return (row && row.Spread) ? row.Spread : '—'; }
+    function buildGameTile(filename, info, fillDetail) {
+      const card = document.createElement('div'); card.className = 'game-card'; card.dataset.tier = bestTier(info);
+      const tile = document.createElement('button'); tile.type = 'button'; tile.className = 'game-tile'; tile.setAttribute('aria-expanded', 'false');
+      const add = (parent, cls, text) => { const e = document.createElement('div'); e.className = cls; if (text !== undefined) e.textContent = text; parent.appendChild(e); return e; };
+      const model = (info && info["Beyond the Arc DL"]) || {};
+      const bet = model.Bet; const tier = bet && bet.Tier ? bet.Tier : 'PASS';
+      const top = add(tile, 'tile-top');
+      const held = !!(info && info.NoStake) && tier !== 'PASS';
+      const badge = document.createElement('span'); badge.className = `tier tier-${held ? 'PASS' : tier}`; badge.textContent = held ? `${tier} · no stake` : tier; top.appendChild(badge);
+      const tip = tipText(info && info.Tip); const quality = typeof (info && info.TTQ) === 'number' ? `TTQ ${Math.round(info.TTQ)}` : '';
+      add(top, 'tile-ttq', [tip, quality].filter(Boolean).join(' · '));
+      const home = (info && info["Home Team"]) || '—'; const away = (info && info["Away Team"]) || '—';
+      [[home, model.HomeTeamScore], [away, model.AwayTeamScore]].forEach(([name, score]) => {
+        const row = add(tile, 'tile-team'); add(row, 'tile-name', name); add(row, 'tile-score', score === undefined ? '—' : score);
+      });
+      const lines = add(tile, 'tile-lines');
+      [['Vegas', lineText(info && info.Vegas)], ['Model', lineText(model)], ['BART', lineText(info && info.BART)]].forEach(([label, text]) => {
+        const row = add(lines, 'tile-line'); add(row, 'tile-label', label); add(row, 'tile-value', text);
+      });
+      add(tile, 'tile-pick', bet && bet.Side ? `${bet.Side} (${Number(bet.Lean).toFixed(1)} pts)` : 'No pick');
+      const detail = add(card, 'game-detail'); detail.hidden = true;
+      card.insertBefore(tile, detail);
+      let built = false;
+      tile.addEventListener('click', () => {
+        if (!built) { fillDetail(filename, detail); built = true; }
+        const open = detail.hidden;
+        detail.hidden = !open; card.classList.toggle('open', open); tile.setAttribute('aria-expanded', String(open));
+      });
+      return card;
+    }
+
     // ---- the best tier across a game's three markets (BET > LEAN > PASS), for ordering and filtering
     const TIER_RANK = { BET: 0, LEAN: 1, PASS: 2 };
     function bestTier(info) {
