@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261102,
-  "generated": "2026-11-02T23:59:22Z",
+  "generated": "2026-11-03T00:28:15Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_7_anneal150_ens5)",
   "members": 10000,
   "rows": [
@@ -100,6 +100,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-17.5 Colorado",
+   "Total": 151.5
+  },
   "NoStake": true,
   "TTQ": 30.3,
   "BART": {
@@ -678,6 +682,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-9.5 Wright St.",
+   "Total": 158.5
+  },
   "NoStake": true,
   "TTQ": 32.7,
   "BART": {
@@ -1258,6 +1266,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-5.5 Akron",
+   "Total": 149.5
+  },
   "NoStake": true,
   "TTQ": 47.5,
   "BART": {
@@ -1822,6 +1834,10 @@
    }
   },
   "Tip": "2026-11-03T01:30:00Z",
+  "Open": {
+   "Spread": "-30.5 Mississippi",
+   "Total": 146.5
+  },
   "NoStake": true,
   "TTQ": 25.1,
   "BART": {
@@ -2385,6 +2401,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-24.5 Cincinnati",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 40.0,
   "BART": {
@@ -2914,6 +2934,10 @@
    }
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-4.5 Arizona",
+   "Total": 149.5
+  },
   "NoStake": true,
   "TTQ": 80.5,
   "BART": {
@@ -3464,6 +3488,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-17.5 Arizona St.",
+   "Total": 145.5
+  },
   "NoStake": true,
   "TTQ": 39.2,
   "BART": {
@@ -4014,6 +4042,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-3.5 Arkansas St.",
+   "Total": 162.5
+  },
   "NoStake": true,
   "TTQ": 56.2,
   "BART": {
@@ -4532,6 +4564,10 @@
    }
   },
   "Tip": "2026-11-02T23:30:00Z",
+  "Open": {
+   "Spread": "-42.5 Duke",
+   "Total": 150.5
+  },
   "NoStake": true,
   "TTQ": 32.9,
   "BART": {
@@ -5094,6 +5130,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-3.5 BYU",
+   "Total": 160.5
+  },
   "NoStake": true,
   "TTQ": 88.0,
   "BART": {
@@ -5671,6 +5711,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-2.5 Ball St.",
+   "Total": 157.5
+  },
   "NoStake": true,
   "TTQ": 42.3,
   "BART": {
@@ -6239,6 +6283,10 @@
    }
   },
   "Tip": "2026-11-03T02:30:00Z",
+  "Open": {
+   "Spread": "-30.5 Baylor",
+   "Total": 148.5
+  },
   "NoStake": true,
   "TTQ": 31.8,
   "BART": {
@@ -6812,6 +6860,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-33.5 Vanderbilt",
+   "Total": 157.5
+  },
   "NoStake": true,
   "TTQ": 32.8,
   "BART": {
@@ -7370,6 +7422,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-17.5 Belmont",
+   "Total": 154.5
+  },
   "NoStake": true,
   "TTQ": 25.9,
   "BART": {
@@ -7909,6 +7965,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-4.5 Furman",
+   "Total": 150.5
+  },
   "NoStake": true,
   "TTQ": 55.2,
   "BART": {
@@ -8428,6 +8488,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-23.5 Northwestern",
+   "Total": 146.5
+  },
   "NoStake": true,
   "TTQ": 23.5,
   "BART": {
@@ -8949,6 +9013,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-1.5 Boston University",
+   "Total": 149.5
+  },
   "NoStake": true,
   "TTQ": 45.3,
   "BART": {
@@ -9504,6 +9572,10 @@
    }
   },
   "Tip": "2026-11-02T23:00:00Z",
+  "Open": {
+   "Spread": "-4.5 Georgia St.",
+   "Total": 158.5
+  },
   "NoStake": true,
   "TTQ": 54.0,
   "BART": {
@@ -10008,6 +10080,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-9.5 Brown",
+   "Total": 142.5
+  },
   "NoStake": true,
   "TTQ": 31.2,
   "BART": {
@@ -10533,6 +10609,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-2.5 Siena",
+   "Total": 150.5
+  },
   "NoStake": true,
   "TTQ": 37.9,
   "BART": {
@@ -11037,6 +11117,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-31.5 Maryland",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 27.6,
   "BART": {
@@ -11593,6 +11677,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-1.5 Marshall",
+   "Total": 157.5
+  },
   "NoStake": true,
   "TTQ": 51.1,
   "BART": {
@@ -12138,6 +12226,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-20.5 Butler",
+   "Total": 149.5
+  },
   "NoStake": true,
   "TTQ": 25.2,
   "BART": {
@@ -12704,6 +12796,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-23.5 N.C. State",
+   "Total": 160.5
+  },
   "NoStake": true,
   "TTQ": 40.4,
   "BART": {
@@ -13340,6 +13436,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-21.5 Penn St.",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 25.0,
   "BART": {
@@ -13894,6 +13994,10 @@
    }
   },
   "Tip": "2026-11-03T01:30:00Z",
+  "Open": {
+   "Spread": "-8.5 Central Arkansas",
+   "Total": 154.5
+  },
   "NoStake": true,
   "TTQ": 37.7,
   "BART": {
@@ -14448,6 +14552,10 @@
    }
   },
   "Tip": "2026-11-02T23:30:00Z",
+  "Open": {
+   "Spread": "-15.5 Temple",
+   "Total": 143.5
+  },
   "NoStake": true,
   "TTQ": 22.0,
   "BART": {
@@ -14998,6 +15106,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-3.5 Central Michigan",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 39.2,
   "BART": {
@@ -15574,6 +15686,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-19.5 South Florida",
+   "Total": 157.5
+  },
   "NoStake": true,
   "TTQ": 28.4,
   "BART": {
@@ -16157,6 +16273,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-4.5 Charlotte",
+   "Total": 152.5
+  },
   "NoStake": true,
   "TTQ": 47.1,
   "BART": {
@@ -16700,6 +16820,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-31.5 Louisville",
+   "Total": 157.5
+  },
   "NoStake": true,
   "TTQ": 38.5,
   "BART": {
@@ -17299,6 +17423,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-40.5 Texas",
+   "Total": 149.5
+  },
   "NoStake": true,
   "TTQ": 30.5,
   "BART": {
@@ -17877,6 +18005,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-26.5 Clemson",
+   "Total": 145.5
+  },
   "NoStake": true,
   "TTQ": 33.7,
   "BART": {
@@ -18428,6 +18560,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-1.5 Eastern Michigan",
+   "Total": 143.5
+  },
   "NoStake": true,
   "TTQ": 53.4,
   "BART": {
@@ -19412,6 +19548,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-12.5 Colorado St.",
+   "Total": 144.5
+  },
   "NoStake": true,
   "TTQ": 47.2,
   "BART": {
@@ -19954,6 +20094,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-3.5 Columbia",
+   "Total": 151.5
+  },
   "NoStake": true,
   "TTQ": 39.0,
   "BART": {
@@ -20513,6 +20657,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-38.5 Connecticut",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 29.6,
   "BART": {
@@ -21095,6 +21243,10 @@
    }
   },
   "Tip": "2026-11-02T23:00:00Z",
+  "Open": {
+   "Spread": "-2.5 Pepperdine",
+   "Total": 163.5
+  },
   "NoStake": true,
   "TTQ": 56.8,
   "BART": {
@@ -21706,6 +21858,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-26.5 Creighton",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 31.6,
   "BART": {
@@ -22242,6 +22398,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-6.5 Marist",
+   "Total": 141.5
+  },
   "NoStake": true,
   "TTQ": 27.7,
   "BART": {
@@ -22786,6 +22946,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-3.5 Washington St.",
+   "Total": 149.5
+  },
   "NoStake": true,
   "TTQ": 61.5,
   "BART": {
@@ -23322,6 +23486,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-22.5 Dayton",
+   "Total": 145.5
+  },
   "NoStake": true,
   "TTQ": 28.6,
   "BART": {
@@ -23900,6 +24068,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-22.5 DePaul",
+   "Total": 144.5
+  },
   "NoStake": true,
   "TTQ": 31.1,
   "BART": {
@@ -24454,6 +24626,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-22.5 Wisconsin",
+   "Total": 159.5
+  },
   "NoStake": true,
   "TTQ": 35.8,
   "BART": {
@@ -25017,6 +25193,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-13.5 East Carolina",
+   "Total": 151.5
+  },
   "NoStake": true,
   "TTQ": 22.7,
   "BART": {
@@ -25562,6 +25742,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-30.5 Oklahoma",
+   "Total": 150.5
+  },
   "NoStake": true,
   "TTQ": 30.2,
   "BART": {
@@ -26178,6 +26362,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-34.5 Indiana",
+   "Total": 142.5
+  },
   "NoStake": true,
   "TTQ": 29.7,
   "BART": {
@@ -26672,6 +26860,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-13.5 Stanford",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 40.5,
   "BART": {
@@ -27215,6 +27407,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-39.5 Illinois",
+   "Total": 152.5
+  },
   "NoStake": true,
   "TTQ": 34.5,
   "BART": {
@@ -27808,6 +28004,10 @@
    }
   },
   "Tip": "2026-11-02T23:00:00Z",
+  "Open": {
+   "Spread": "-4.5 Florida",
+   "Total": 161.5
+  },
   "NoStake": true,
   "TTQ": 90.3,
   "BART": {
@@ -28396,6 +28596,10 @@
    }
   },
   "Tip": "2026-11-03T01:30:00Z",
+  "Open": {
+   "Spread": "-25.5 Florida St.",
+   "Total": 154.5
+  },
   "NoStake": true,
   "TTQ": 35.5,
   "BART": {
@@ -28938,6 +29142,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-10.5 Florida Atlantic",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 35.7,
   "BART": {
@@ -29505,6 +29713,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-22.5 UCF",
+   "Total": 152.5
+  },
   "NoStake": true,
   "TTQ": 35.7,
   "BART": {
@@ -30080,6 +30292,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-22.5 Kansas",
+   "Total": 145.5
+  },
   "NoStake": true,
   "TTQ": 49.4,
   "BART": {
@@ -30666,6 +30882,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-16.5 George Washington",
+   "Total": 149.5
+  },
   "NoStake": true,
   "TTQ": 29.8,
   "BART": {
@@ -31231,6 +31451,10 @@
    }
   },
   "Tip": "2026-11-02T23:30:00Z",
+  "Open": {
+   "Spread": "-24.5 Georgetown",
+   "Total": 150.5
+  },
   "NoStake": true,
   "TTQ": 26.8,
   "BART": {
@@ -31803,6 +32027,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-35.5 Georgia",
+   "Total": 159.5
+  },
   "NoStake": true,
   "TTQ": 28.9,
   "BART": {
@@ -32397,6 +32625,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-5.5 Gonzaga",
+   "Total": 155.5
+  },
   "NoStake": true,
   "TTQ": 77.8,
   "BART": {
@@ -32941,6 +33173,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-28.5 Grand Canyon",
+   "Total": 144.5
+  },
   "NoStake": true,
   "TTQ": 30.3,
   "BART": {
@@ -33490,6 +33726,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T04:59:00Z",
+  "Open": {
+   "Spread": "-1.5 Hawaii",
+   "Total": 145.5
+  },
   "NoStake": true,
   "TTQ": 56.3,
   "BART": {
@@ -34015,6 +34255,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-29.5 Houston",
+   "Total": 139.5
+  },
   "NoStake": true,
   "TTQ": 43.6,
   "BART": {
@@ -34575,6 +34819,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-6.5 Yale",
+   "Total": 152.5
+  },
   "NoStake": true,
   "TTQ": 55.3,
   "BART": {
@@ -35130,6 +35378,10 @@
    }
   },
   "Tip": "2026-11-03T02:30:00Z",
+  "Open": {
+   "Spread": "-26.5 Utah St.",
+   "Total": 146.5
+  },
   "NoStake": true,
   "TTQ": 26.3,
   "BART": {
@@ -35634,6 +35886,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-6.5 Saint Mary's",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 52.6,
   "BART": {
@@ -36179,6 +36435,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-27.5 Oklahoma St.",
+   "Total": 160.5
+  },
   "NoStake": true,
   "TTQ": 31.6,
   "BART": {
@@ -36750,6 +37010,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-1.5 Iona",
+   "Total": 146.5
+  },
   "NoStake": true,
   "TTQ": 50.4,
   "BART": {
@@ -37267,6 +37531,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-13.5 Iowa St.",
+   "Total": 155.5
+  },
   "NoStake": true,
   "TTQ": 57.1,
   "BART": {
@@ -37821,6 +38089,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-33.5 Texas Tech",
+   "Total": 154.5
+  },
   "NoStake": true,
   "TTQ": 37.6,
   "BART": {
@@ -38433,6 +38705,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-1.5 James Madison",
+   "Total": 155.5
+  },
   "NoStake": true,
   "TTQ": 62.2,
   "BART": {
@@ -38957,6 +39233,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-5.5 Kent St.",
+   "Total": 144.5
+  },
   "NoStake": true,
   "TTQ": 45.6,
   "BART": {
@@ -39523,6 +39803,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-34.5 Nebraska",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 34.3,
   "BART": {
@@ -40094,6 +40378,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-24.5 Saint Louis",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 35.1,
   "BART": {
@@ -40682,6 +40970,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-28.5 TCU",
+   "Total": 154.5
+  },
   "NoStake": true,
   "TTQ": 35.4,
   "BART": {
@@ -41258,6 +41550,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-1.5 Lipscomb",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 46.8,
   "BART": {
@@ -41790,6 +42086,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-20.5 VCU",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 37.3,
   "BART": {
@@ -42351,6 +42651,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-19.5 Utah",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 31.9,
   "BART": {
@@ -42933,6 +43237,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-15.5 Loyola Chicago",
+   "Total": 143.5
+  },
   "NoStake": true,
   "TTQ": 18.7,
   "BART": {
@@ -43501,6 +43809,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-28.5 Providence",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 29.7,
   "BART": {
@@ -44054,6 +44366,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-30.5 Marquette",
+   "Total": 148.5
+  },
   "NoStake": true,
   "TTQ": 34.3,
   "BART": {
@@ -44613,6 +44929,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-31.5 Wake Forest",
+   "Total": 141.5
+  },
   "NoStake": true,
   "TTQ": 16.8,
   "BART": {
@@ -45149,6 +45469,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-2.5 Troy",
+   "Total": 154.5
+  },
   "NoStake": true,
   "TTQ": 44.6,
   "BART": {
@@ -45704,6 +46028,10 @@
    }
   },
   "Tip": "2026-11-02T22:36:41Z",
+  "Open": {
+   "Spread": "-3.5 McNeese St.",
+   "Total": 148.5
+  },
   "NoStake": true,
   "TTQ": 58.0,
   "BART": {
@@ -46216,6 +46544,10 @@
    }
   },
   "Tip": "2026-11-02T23:00:00Z",
+  "Open": {
+   "Spread": "-26.5 Michigan",
+   "Total": 156.5
+  },
   "NoStake": true,
   "TTQ": 41.1,
   "BART": {
@@ -46798,6 +47130,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-29.5 Michigan St.",
+   "Total": 149.5
+  },
   "NoStake": true,
   "TTQ": 42.2,
   "BART": {
@@ -47350,6 +47686,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:30:00Z",
+  "Open": {
+   "Spread": "-25.5 USC",
+   "Total": 157.5
+  },
   "NoStake": true,
   "TTQ": 38.6,
   "BART": {
@@ -47866,6 +48206,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-25.5 Minnesota",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 25.9,
   "BART": {
@@ -48463,6 +48807,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-18.5 Mississippi St.",
+   "Total": 157.5
+  },
   "NoStake": true,
   "TTQ": 37.8,
   "BART": {
@@ -49082,6 +49430,10 @@
    }
   },
   "Tip": "2026-11-02T23:30:00Z",
+  "Open": {
+   "Spread": "-28.5 St. John's",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 42.5,
   "BART": {
@@ -49585,6 +49937,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-17.5 Oregon",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 39.8,
   "BART": {
@@ -50152,6 +50508,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-16.5 Western Kentucky",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 26.9,
   "BART": {
@@ -50721,6 +51081,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-26.5 Xavier",
+   "Total": 156.5
+  },
   "NoStake": true,
   "TTQ": 34.3,
   "BART": {
@@ -51246,6 +51610,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-13.5 Nevada",
+   "Total": 143.5
+  },
   "NoStake": true,
   "TTQ": 39.6,
   "BART": {
@@ -51740,6 +52108,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-27.5 Syracuse",
+   "Total": 140.5
+  },
   "NoStake": true,
   "TTQ": 22.6,
   "BART": {
@@ -52313,6 +52685,10 @@
    }
   },
   "Tip": "2026-11-03T02:00:00Z",
+  "Open": {
+   "Spread": "-21.5 New Mexico",
+   "Total": 155.5
+  },
   "NoStake": true,
   "TTQ": 30.4,
   "BART": {
@@ -52870,6 +53246,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-28.5 West Virginia",
+   "Total": 140.5
+  },
   "NoStake": true,
   "TTQ": 26.0,
   "BART": {
@@ -53405,6 +53785,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-9.5 UC Davis",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 25.4,
   "BART": {
@@ -53963,6 +54347,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-22.5 North Carolina",
+   "Total": 155.5
+  },
   "NoStake": true,
   "TTQ": 42.7,
   "BART": {
@@ -54492,6 +54880,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-1.5 South Alabama",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 46.6,
   "BART": {
@@ -55040,6 +55432,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-1.5 Old Dominion",
+   "Total": 157.5
+  },
   "NoStake": true,
   "TTQ": 53.5,
   "BART": {
@@ -55540,6 +55936,10 @@
    }
   },
   "Tip": "2026-11-03T02:30:00Z",
+  "Open": {
+   "Spread": "-16.5 Oregon St.",
+   "Total": 155.5
+  },
   "NoStake": true,
   "TTQ": 29.0,
   "BART": {
@@ -56107,6 +56507,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-27.5 Pittsburgh",
+   "Total": 142.5
+  },
   "NoStake": true,
   "TTQ": 16.9,
   "BART": {
@@ -56685,6 +57089,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-3.5 St. Thomas",
+   "Total": 146.5
+  },
   "NoStake": true,
   "TTQ": 53.4,
   "BART": {
@@ -57705,6 +58113,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-12.5 Richmond",
+   "Total": 147.5
+  },
   "NoStake": true,
   "TTQ": 30.3,
   "BART": {
@@ -58289,6 +58701,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-25.5 SMU",
+   "Total": 155.5
+  },
   "NoStake": true,
   "TTQ": 34.0,
   "BART": {
@@ -58848,6 +59264,10 @@
    }
   },
   "Tip": "2026-11-03T00:30:00Z",
+  "Open": {
+   "Spread": "-21.5 Seton Hall",
+   "Total": 138.5
+  },
   "NoStake": true,
   "TTQ": 28.9,
   "BART": {
@@ -59342,6 +59762,10 @@
    "Signals": {}
   },
   "Tip": "2026-11-03T03:00:00Z",
+  "Open": {
+   "Spread": "-15.5 Santa Clara",
+   "Total": 148.5
+  },
   "NoStake": true,
   "TTQ": 39.6,
   "BART": {
@@ -59866,6 +60290,10 @@
    }
   },
   "Tip": "2026-11-03T00:00:00Z",
+  "Open": {
+   "Spread": "-10.5 St. Bonaventure",
+   "Total": 153.5
+  },
   "NoStake": true,
   "TTQ": 31.0,
   "BART": {
@@ -60481,6 +60909,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-7.5 Tulane",
+   "Total": 144.5
+  },
   "NoStake": true,
   "TTQ": 22.0,
   "BART": {
@@ -61048,6 +61480,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-9.5 Texas St.",
+   "Total": 143.5
+  },
   "NoStake": true,
   "TTQ": 39.3,
   "BART": {
@@ -61598,6 +62034,10 @@
    }
   },
   "Tip": "2026-11-03T01:00:00Z",
+  "Open": {
+   "Spread": "-18.5 Valparaiso",
+   "Total": 142.5
+  },
   "NoStake": true,
   "TTQ": 16.2,
   "BART": {
