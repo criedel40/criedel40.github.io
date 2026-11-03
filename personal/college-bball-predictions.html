@@ -705,7 +705,7 @@
         const row = add(tile, 'tile-team'); add(row, 'tile-name', name); add(row, 'tile-score', score === undefined ? '—' : score);
       });
       const lines = add(tile, 'tile-lines');
-      [['Open', info && info.Open], ['Vegas', info && info.Vegas], ['Model', model], ['BART', info && info.BART]].filter(([label, source]) => label !== 'Open' || source).forEach(([label, source]) => {
+      [['Vegas', info && info.Vegas], ['Model', model], ['BART', info && info.BART]].forEach(([label, source]) => {
         const row = add(lines, 'tile-line'); add(row, 'tile-label', label);
         add(row, 'tile-value', source && source.Spread ? `${lineText(source)} ${totalText(source)}` : '—');
       });
