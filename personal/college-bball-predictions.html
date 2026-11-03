@@ -1010,6 +1010,7 @@
       const tb = document.getElementById('view-toolbar'); if (tb) tb.hidden = name === 'record';
       const stamp = document.getElementById('bball-stamp'); if (stamp) stamp.hidden = name === 'record';   // the slate's date says nothing about the season record
       if (name === 'games') ensureGameCards();
+      syncFilter(name);
       try { history.replaceState(null, '', '#' + name); } catch (e) {}
     }
 
@@ -1019,6 +1020,14 @@
     let currentFilter = DEFAULT_FILTER;
     let gameTiers = [];
     const keepTier = (key, t) => key === 'BET' ? t === 'BET' : key === 'LEAN' ? (t === 'BET' || t === 'LEAN') : true;
+    // each view remembers its own filter: the Bet Sheet opens on BET, the Games board on every game
+    const viewFilter = { sheet: DEFAULT_FILTER, games: 'all' };
+    function syncFilter(view) {
+      const key = viewFilter[view];
+      if (!key) return;
+      document.querySelectorAll('.filters button[data-filter]').forEach(x => x.classList.toggle('active', x.dataset.filter === key));
+      if (view === 'games') applyFilter(key); else renderSheet(key);
+    }
     function applyFilter(key) {
       currentFilter = key;
       document.querySelectorAll('#bball-images-container .game-card').forEach(card => card.classList.toggle('hidden', !keepTier(key, card.dataset.tier)));
@@ -1036,9 +1045,8 @@
         b.textContent = `${label} (${tiers.filter(t => keepTier(key, t)).length})`;
         if (key === DEFAULT_FILTER) b.className = 'active';
         b.addEventListener('click', () => {
-          row.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === b));
-          applyFilter(key);
-          renderSheet(key);
+          viewFilter[currentView] = key;
+          syncFilter(currentView);
         });
         row.appendChild(b);
       });
