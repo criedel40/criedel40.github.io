@@ -647,7 +647,11 @@
             predictionContainer.appendChild(wrapper);
           }
         };
-        pendingGameCards = () => gameFiles.forEach(filename => container.appendChild(buildGameTile(filename, predictionsData[filename], fillGameDetail)));
+        pendingGameCards = () => {
+          const cards = {};
+          gameFiles.forEach(filename => { cards[filename] = buildGameTile(filename, predictionsData[filename], fillGameDetail); container.appendChild(cards[filename]); });
+          buildSortButtons(container, order => order.forEach(f => container.appendChild(cards[f])), gameFiles, predictionsData);
+        };
         buildViewTabs(hasRecord);
       } catch (error) {
         console.error('Error loading images:', error);
@@ -658,6 +662,25 @@
       }
     }
     
+    // ---- Games board order: TTQ is the default; a game missing the value goes last
+    function buildSortButtons(container, apply, files, data) {
+      const tipOf = f => { const t = Date.parse(data[f] && data[f].Tip); return isNaN(t) ? Infinity : t; };
+      const edgeOf = f => { const b = data[f] && data[f]["Beyond the Arc DL"] && data[f]["Beyond the Arc DL"].Bet; return b && isFinite(b.Lean) ? Math.abs(b.Lean) : -1; };
+      const ttqOf = f => { const t = data[f] && data[f].TTQ; return typeof t === 'number' ? t : -Infinity; };
+      const row = document.createElement('div'); row.className = 'filters';
+      const lead = document.createElement('span'); lead.className = 'filters-lead'; lead.textContent = 'Sort:'; row.appendChild(lead);
+      [['TTQ', (a, b) => ttqOf(b) - ttqOf(a)], ['Tip time', (a, b) => tipOf(a) - tipOf(b)], ['Biggest edge', (a, b) => edgeOf(b) - edgeOf(a)]].forEach(([label, compare], i) => {
+        const button = document.createElement('button'); button.type = 'button'; button.textContent = label; button.dataset.sort = label;
+        if (i === 0) button.className = 'active';
+        button.addEventListener('click', () => {
+          row.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === button));
+          apply([...files].sort(compare));
+        });
+        row.appendChild(button);
+      });
+      container.parentNode.insertBefore(row, container);
+    }
+
     // ---- the Games board: one tile per game; opening a tile builds its tables and charts underneath
     function tipText(iso) {
       const when = iso ? new Date(iso) : null;
@@ -682,7 +705,7 @@
         const row = add(tile, 'tile-team'); add(row, 'tile-name', name); add(row, 'tile-score', score === undefined ? '—' : score);
       });
       const lines = add(tile, 'tile-lines');
-      [['Vegas', info && info.Vegas], ['Model', model], ['BART', info && info.BART]].forEach(([label, source]) => {
+      [['Open', info && info.Open], ['Vegas', info && info.Vegas], ['Model', model], ['BART', info && info.BART]].filter(([label, source]) => label !== 'Open' || source).forEach(([label, source]) => {
         const row = add(lines, 'tile-line'); add(row, 'tile-label', label);
         add(row, 'tile-value', source && source.Spread ? `${lineText(source)} ${totalText(source)}` : '—');
       });
