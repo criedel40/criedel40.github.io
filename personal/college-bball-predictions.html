@@ -122,8 +122,7 @@
     .tile-name{font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .tile-score{font-weight:700;color:#357edd;font-variant-numeric:tabular-nums}
     .tile-lines{margin-top:.5rem;padding-top:.5rem;border-top:1px solid #eee}
-    .tile-line{display:grid;grid-template-columns:3rem minmax(0,1fr) 3rem;gap:.5rem;font-size:.85rem;line-height:1.5}
-    .tile-head{font-size:.75rem;color:#666}
+    .tile-line{display:flex;justify-content:space-between;gap:.75rem;font-size:.85rem;line-height:1.5}
     .tile-label{color:#666}
     .tile-value{font-variant-numeric:tabular-nums;text-align:right;min-width:0}
     .tile-pick{margin-top:.5rem;font-size:.85rem;font-weight:600}
@@ -683,8 +682,9 @@
         const row = add(tile, 'tile-team'); add(row, 'tile-name', name); add(row, 'tile-score', score === undefined ? '—' : score);
       });
       const lines = add(tile, 'tile-lines');
-      [['', 'Spread', 'Total'], ['Vegas', lineText(info && info.Vegas), totalText(info && info.Vegas)], ['Model', lineText(model), totalText(model)], ['BART', lineText(info && info.BART), totalText(info && info.BART)]].forEach(([label, spread, total], i) => {
-        const row = add(lines, i ? 'tile-line' : 'tile-line tile-head'); add(row, 'tile-label', label); add(row, 'tile-value', spread); add(row, 'tile-value', total);
+      [['Vegas', info && info.Vegas], ['Model', model], ['BART', info && info.BART]].forEach(([label, source]) => {
+        const row = add(lines, 'tile-line'); add(row, 'tile-label', label);
+        add(row, 'tile-value', source && source.Spread ? `${lineText(source)} ${totalText(source)}` : '—');
       });
       add(tile, 'tile-pick', bet && bet.Side ? `${bet.Side} (${Number(bet.Lean).toFixed(1)} pts)` : 'No pick');
       const detail = add(card, 'game-detail'); detail.hidden = true;
