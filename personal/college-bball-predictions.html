@@ -209,6 +209,12 @@
     @media (max-width:760px){.record .stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
     .record .stat{min-width:8rem}.record .stat .v{font-size:1.4rem;font-weight:700;color:#0b0b0b;line-height:1.1}.record .stat .k{font-size:.8rem;color:#666}
     .record .wrap{overflow-x:auto}
+    .record details.day{border-top:1px solid #eee;padding:.25rem 0}
+    .record details.day summary{cursor:pointer;font-weight:700;padding:.45rem .2rem;color:#333}
+    .record details.day summary .muted{font-weight:400;color:#666;margin-left:.5rem}
+    .record td.res{text-align:center;white-space:nowrap}
+    .record td .small{display:block;font-weight:400;font-size:.78rem;color:#666}
+    .record td.pending{color:#999;font-weight:400}
     @media screen and (max-width:768px){.prediction-table{font-size:.8rem}.prediction-table th,.prediction-table td{padding:.5rem}.prediction-table .bet .tier{margin-bottom:.2rem}}
     .image-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:10001;justify-content:center;align-items:center;padding:2rem;box-sizing:border-box}
     .image-modal.active{display:flex}
@@ -281,6 +287,7 @@
         <div id="view-games" class="view" role="tabpanel" aria-labelledby="tab-games" hidden>
           <div id="bball-images-container" class="bball-images-container"></div>
         </div>
+        <div id="view-results" class="view" role="tabpanel" aria-labelledby="tab-results" hidden></div>
         <div id="view-record" class="view" role="tabpanel" aria-labelledby="tab-record" hidden></div>
       </section>
     </article>
@@ -404,11 +411,13 @@
         // forecast/betting/publish_site.py on game day (cache-busted so a
         // same-day republish shows up without a hard refresh)
         const bust = `?v=${Date.now()}`;
-        const [imagesResponse, predictionsResponse, recordResponse] = await Promise.all([
+        const [imagesResponse, predictionsResponse, recordResponse, resultsResponse] = await Promise.all([
           fetch('bball-images.json' + bust),
           fetch('latest.json' + bust).catch(() => null),
-          fetch('record.json' + bust).catch(() => null)
+          fetch('record.json' + bust).catch(() => null),
+          fetch('results.json' + bust).catch(() => null)
         ]);
+        if (resultsResponse && resultsResponse.ok) { try { resultsData = await resultsResponse.json(); } catch (e) { resultsData = null; } }
         let recordData = null;
         if (recordResponse && recordResponse.ok) { try { recordData = await recordResponse.json(); } catch (e) { recordData = null; } }
         
@@ -447,6 +456,7 @@
         buildBetSheet(predictionsData._meta, predictionsData, imageFiles);
         const hasRecord = !!(recordData && recordData.seasons && recordData.seasons.length);
         if (hasRecord) buildRecord(recordData);
+        if (resultsData && resultsData.seasons && resultsData.seasons.length) buildResults(resultsData);
         
         // If no images found
         if (!imageFiles || imageFiles.length === 0) {
@@ -882,6 +892,98 @@
         t.appendChild(tb); body.appendChild(wrap(t));
       }
     }
+    // ---- Results: every game the model predicted, with its final score, the model's side against the
+    //      bet-of-record DraftKings line, and whether it covered.  PASS games included; nothing here is a stake.
+    function buildResults(data) {
+      const sec = document.createElement('div'); sec.className = 'record';
+      const h = document.createElement('h2'); h.textContent = 'Results'; sec.appendChild(h);
+      const sub = document.createElement('p'); sub.className = 'sub';
+      sub.textContent = 'Every game on the sheet, BET or not, scored after the final. The pick is the side the model’s margin favours against the DraftKings line on the bet-of-record sheet; the total pick is over or under that sheet’s total. These are not bets placed.';
+      sec.appendChild(sub);
+      const tabs = document.createElement('div'); tabs.className = 'tabs'; sec.appendChild(tabs);
+      const body = document.createElement('div'); sec.appendChild(body);
+      const show = i => { tabs.querySelectorAll('button').forEach((b, j) => b.classList.toggle('active', i === j)); body.replaceChildren(); renderResultsSeason(data.seasons[i], body); };
+      if (data.seasons.length > 1) data.seasons.forEach((s, i) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = `${s.season - 1}-${String(s.season).slice(2)}`; b.addEventListener('click', () => show(i)); tabs.appendChild(b); });
+      show(0);
+      document.getElementById('view-results').appendChild(sec);
+    }
+    function wlp(games, key) {
+      const c = { W: 0, L: 0, P: 0 }; games.forEach(g => { if (g[key] in c) c[g[key]]++; });
+      const n = c.W + c.L; return { ...c, n, text: n + c.P ? `${c.W}-${c.L}${c.P ? '-' + c.P : ''}` : '—', pct: n ? c.W / n : null };
+    }
+    function resultsSummary(games) {
+      const ats = wlp(games, 'ats'), tot = wlp(games, 'total_result');
+      const su = games.filter(g => g.straight_up !== null && g.straight_up !== undefined), suW = su.filter(g => g.straight_up).length;
+      const both = games.filter(g => typeof g.model_miss === 'number' && typeof g.vegas_miss === 'number');
+      const avg = k => both.length ? both.reduce((a, g) => a + g[k], 0) / both.length : null;
+      return { games: games.length, ats, tot, su: su.length ? `${suW}-${su.length - suW}` : '—', suPct: su.length ? suW / su.length : null, model: avg('model_miss'), vegas: avg('vegas_miss'), n: both.length };
+    }
+    function renderResultsSeason(season, body) {
+      const pct = v => v === null ? '' : ` (${(100 * v).toFixed(1)}%)`;
+      const fin = season.games.filter(g => g.status === 'final');
+      const all = resultsSummary(fin);
+      const row = document.createElement('div'); row.className = 'stat-row';
+      [[String(all.games), 'games final'], [all.ats.text, 'against the spread' + pct(all.ats.pct)], [all.tot.text, 'totals' + pct(all.tot.pct)], [all.su, 'picked the winner' + pct(all.suPct)],
+       [all.model === null ? '—' : all.model.toFixed(1), 'model miss, pts per game'], [all.vegas === null ? '—' : all.vegas.toFixed(1), `Vegas miss, pts per game (n ${all.n})`]].forEach(([v, k]) => {
+        const st = document.createElement('div'); st.className = 'stat';
+        const a = document.createElement('div'); a.className = 'v'; a.textContent = v; st.appendChild(a);
+        const b = document.createElement('div'); b.className = 'k'; b.textContent = k; st.appendChild(b); row.appendChild(st);
+      });
+      body.appendChild(row);
+      // first games are unstaked and run through the early-game correction, so they get their own line
+      const groups = [['Every game', fin], ['A team’s first game', fin.filter(g => g.first_game)], ['Both teams have played', fin.filter(g => !g.first_game)]];
+      const t = document.createElement('table');
+      t.innerHTML = '<thead><tr><th>Group</th><th class="num">Games</th><th class="num">ATS</th><th class="num">Totals</th><th class="num">Winner</th><th class="num">Model miss</th><th class="num">Vegas miss</th></tr></thead>';
+      const tb = document.createElement('tbody');
+      groups.forEach(([label, gs]) => {
+        if (!gs.length) return;
+        const s = resultsSummary(gs), tr = document.createElement('tr');
+        [label, gs.length, s.ats.text + pct(s.ats.pct), s.tot.text + pct(s.tot.pct), s.su + pct(s.suPct), s.model === null ? '—' : s.model.toFixed(1), s.vegas === null ? '—' : s.vegas.toFixed(1)].forEach((v, i) => {
+          const td = document.createElement('td'); td.textContent = v; if (i) td.className = 'num'; tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); body.appendChild(sectionTitle('By group')); body.appendChild(wrap(t));
+      body.appendChild(sectionTitle('By day'));
+      const days = [...new Set(season.games.map(g => g.date))].sort((a, b) => b - a);
+      const firstFinal = days.find(d => season.games.some(g => g.date === d && g.status === 'final'));   // newest day with finals opens too
+      days.forEach((d, i) => {
+        const gs = season.games.filter(g => g.date === d).sort((a, b) => String(a.tip_utc || '').localeCompare(String(b.tip_utc || '')));
+        const f = gs.filter(g => g.status === 'final'), s = resultsSummary(f);
+        const det = document.createElement('details'); det.className = 'day'; if (i === 0 || d === firstFinal) det.open = true;
+        const sm = document.createElement('summary'); sm.textContent = dateLabel(String(d));
+        const m = document.createElement('span'); m.className = 'muted';
+        m.textContent = f.length ? `ATS ${s.ats.text} · totals ${s.tot.text} · winner ${s.su}${f.length < gs.length ? ` · ${gs.length - f.length} pending` : ''}` : `${gs.length} games, finals post the next morning`;
+        sm.appendChild(m); det.appendChild(sm);
+        det.appendChild(wrap(resultsDayTable(gs))); body.appendChild(det);
+      });
+    }
+    function spreadLabel(g) {
+      const sp = g.vegas_spread_home; if (typeof sp !== 'number') return '—';
+      if (sp === 0) return 'PK';
+      return sp < 0 ? `${g.home} ${sp}` : `${g.away} -${sp}`;
+    }
+    function resultsDayTable(games) {
+      const t = document.createElement('table');
+      t.innerHTML = '<thead><tr><th>Game</th><th class="num">Model</th><th>Vegas</th><th class="num">Final</th><th>Spread pick</th><th class="res">ATS</th><th>Total pick</th><th class="res">Total</th></tr></thead>';
+      const tb = document.createElement('tbody');
+      const mark = r => r === 'W' ? ['✓', 'pos'] : r === 'L' ? ['✗', 'neg'] : r === 'P' ? ['push', ''] : ['', ''];
+      const sc = (a, b) => (typeof a === 'number' && typeof b === 'number') ? `${Math.round(a)}-${Math.round(b)}` : '—';
+      games.forEach(g => {
+        const tr = document.createElement('tr'); const done = g.status === 'final';
+        const cell = (text, cls, small) => { const td = document.createElement('td'); td.textContent = text; if (cls) td.className = cls; if (small) { const sp = document.createElement('span'); sp.className = 'small'; sp.textContent = small; td.appendChild(sp); } tr.appendChild(td); return td; };
+        cell(`${g.away} at ${g.home}`, '', g.first_game ? 'first game' : '');
+        cell(sc(g.model_away, g.model_home), 'num', typeof g.model_total === 'number' ? `total ${g.model_total.toFixed(1)}` : '');
+        cell(spreadLabel(g), '', typeof g.vegas_total === 'number' ? `total ${g.vegas_total}` : '');
+        cell(done ? sc(g.away_final, g.home_final) : 'pending', done ? 'num' : 'num pending', done ? `total ${g.away_final + g.home_final}` : '');
+        cell(g.pick ? `${g.pick} (${g.pick_lean.toFixed(1)})` : 'No pick');
+        const [a, ac] = mark(g.ats); cell(a, 'res ' + ac);
+        cell(g.total_pick ? `${g.total_pick} (${g.total_lean.toFixed(1)})` : 'No pick');
+        const [b, bc] = mark(g.total_result); cell(b, 'res ' + bc);
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); return t;
+    }
     function sectionTitle(t) { const h = document.createElement('h3'); h.textContent = t; return h; }
     function wrap(t) { const d = document.createElement('div'); d.className = 'wrap'; d.appendChild(t); return d; }
     function blockTable(rows) {
@@ -978,7 +1080,9 @@
     //      toolbar that holds it sits above both panels and is hidden on the record.
     const VIEWS = [['sheet', 'Bet Sheet', "today's plays and stakes"],
                    ['games', 'Games', 'per-game tables and distributions'],
+                   ['results', 'Results', 'every game, final scores'],
                    ['record', 'Season Record', 'graded results and CLV']];
+    let resultsData = null;
     let currentView = 'sheet';
     let pendingGameCards = null;   // the card builder, run the first time the Games tab is opened
     function ensureGameCards() {
@@ -993,6 +1097,7 @@
       nav.replaceChildren();
       VIEWS.forEach(([key, label, sub]) => {
         if (key === 'record' && !hasRecord) return;
+        if (key === 'results' && !(resultsData && resultsData.seasons && resultsData.seasons.length)) return;
         const b = document.createElement('button'); b.type = 'button'; b.id = 'tab-' + key; b.dataset.view = key; b.setAttribute('role', 'tab');
         const t = document.createElement('span'); t.textContent = label; b.appendChild(t);
         const s2 = document.createElement('span'); s2.className = 'sub'; s2.textContent = sub; b.appendChild(s2);
@@ -1007,8 +1112,8 @@
       currentView = name;
       VIEWS.forEach(([key]) => { const el = document.getElementById('view-' + key); if (el) el.hidden = key !== name; });
       document.querySelectorAll('#view-tabs button').forEach(b => { const on = b.dataset.view === name; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
-      const tb = document.getElementById('view-toolbar'); if (tb) tb.hidden = name === 'record';
-      const stamp = document.getElementById('bball-stamp'); if (stamp) stamp.hidden = name === 'record';   // the slate's date says nothing about the season record
+      const tb = document.getElementById('view-toolbar'); if (tb) tb.hidden = name === 'record' || name === 'results';
+      const stamp = document.getElementById('bball-stamp'); if (stamp) stamp.hidden = name === 'record' || name === 'results';   // the slate's date says nothing about the season record
       if (name === 'games') ensureGameCards();
       syncFilter(name);
       try { history.replaceState(null, '', '#' + name); } catch (e) {}
