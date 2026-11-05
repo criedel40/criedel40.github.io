@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T13:26:00Z",
+ "generated": "2026-11-05T13:37:14Z",
  "lines": "the DraftKings line on the bet-of-record sheet (5:10 PM Central, or the last pregame sheet)",
  "seasons": [
   {
@@ -27,6 +27,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 12.2,
      "vegas_miss": 7.5
     },
@@ -52,6 +53,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": false,
+     "vegas_straight_up": null,
      "model_miss": 6.0,
      "vegas_miss": null
     },
@@ -77,6 +79,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 20.4,
      "vegas_miss": 16.5
     },
@@ -102,6 +105,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 20.6,
      "vegas_miss": 18.5
     },
@@ -127,6 +131,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 6.4,
      "vegas_miss": 8.5
     },
@@ -152,6 +157,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 19.6,
      "vegas_miss": 10.5
     },
@@ -177,6 +183,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 13.5,
      "vegas_miss": 0.5
     },
@@ -202,6 +209,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 12.7,
      "vegas_miss": 13.5
     },
@@ -227,6 +235,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 2.4,
      "vegas_miss": null
     },
@@ -252,6 +261,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 0.2,
      "vegas_miss": 2.5
     },
@@ -277,6 +287,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.6,
      "vegas_miss": 10.5
     },
@@ -302,6 +313,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 10.1,
      "vegas_miss": 7.5
     },
@@ -327,6 +339,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": false,
      "model_miss": 10.6,
      "vegas_miss": 13.5
     },
@@ -352,6 +365,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.3,
      "vegas_miss": 10.5
     },
@@ -377,6 +391,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 29.1,
      "vegas_miss": 9.5
     },
@@ -402,6 +417,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.1,
      "vegas_miss": 0.5
     },
@@ -427,6 +443,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": false,
+     "vegas_straight_up": true,
      "model_miss": 10.0,
      "vegas_miss": 4.5
     },
@@ -452,6 +469,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 6.1,
      "vegas_miss": 5.5
     },
@@ -477,6 +495,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 5.0,
      "vegas_miss": 6.5
     },
@@ -502,6 +521,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": false,
      "model_miss": 0.4,
      "vegas_miss": 6.5
     },
@@ -527,6 +547,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 8.5,
      "vegas_miss": 12.5
     },
@@ -552,6 +573,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 8.8,
      "vegas_miss": 9.5
     },
@@ -577,6 +599,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.9,
      "vegas_miss": 2.5
     },
@@ -602,6 +625,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 22.2,
      "vegas_miss": 24.5
     },
@@ -627,6 +651,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 16.8,
      "vegas_miss": 16.5
     },
@@ -652,6 +677,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 2.1,
      "vegas_miss": 3.5
     },
@@ -677,6 +703,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 24.8,
      "vegas_miss": 16.5
     },
@@ -702,6 +729,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 24.5,
      "vegas_miss": 21.5
     },
@@ -727,6 +755,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 1.6,
      "vegas_miss": 2.5
     },
@@ -752,6 +781,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 2.5,
      "vegas_miss": 2.5
     },
@@ -777,6 +807,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 7.6,
      "vegas_miss": 5.5
     },
@@ -802,6 +833,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.6,
      "vegas_miss": 2.5
     },
@@ -827,6 +859,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 8.7,
      "vegas_miss": 16.5
     },
@@ -852,6 +885,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 28.8,
      "vegas_miss": 9.5
     },
@@ -877,6 +911,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 6.0,
      "vegas_miss": 9.5
     },
@@ -902,6 +937,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": false,
      "model_miss": 3.7,
      "vegas_miss": 2.5
     },
@@ -927,6 +963,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 4.8,
      "vegas_miss": null
     },
@@ -952,6 +989,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 2.2,
      "vegas_miss": null
     },
@@ -977,6 +1015,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 17.0,
      "vegas_miss": 17.5
     },
@@ -1002,6 +1041,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 12.2,
      "vegas_miss": 1.5
     },
@@ -1027,6 +1067,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": false,
      "model_miss": 1.2,
      "vegas_miss": 3.5
     },
@@ -1052,6 +1093,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 7.1,
      "vegas_miss": 11.5
     },
@@ -1077,6 +1119,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 13.1,
      "vegas_miss": 14.5
     },
@@ -1102,6 +1145,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 16.8,
      "vegas_miss": 17.5
     },
@@ -1127,6 +1171,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 9.7,
      "vegas_miss": 7.5
     },
@@ -1152,6 +1197,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.3,
      "vegas_miss": 7.5
     },
@@ -1177,6 +1223,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 6.6,
      "vegas_miss": 18.5
     },
@@ -1202,6 +1249,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 5.5,
      "vegas_miss": 1.5
     },
@@ -1227,6 +1275,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 26.6,
      "vegas_miss": 33.5
     },
@@ -1252,6 +1301,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 14.6,
      "vegas_miss": 0.5
     },
@@ -1277,6 +1327,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 2.2,
      "vegas_miss": null
     },
@@ -1302,6 +1353,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 46.2,
      "vegas_miss": 35.5
     },
@@ -1327,6 +1379,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 5.0,
      "vegas_miss": 3.5
     },
@@ -1352,6 +1405,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 30.5,
      "vegas_miss": 15.5
     },
@@ -1377,6 +1431,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.7,
      "vegas_miss": 2.5
     },
@@ -1402,6 +1457,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 13.9,
      "vegas_miss": 21.5
     },
@@ -1427,6 +1483,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 10.0,
      "vegas_miss": 8.5
     },
@@ -1452,6 +1509,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 35.8,
      "vegas_miss": 33.5
     },
@@ -1477,6 +1535,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 1.7,
      "vegas_miss": 5.5
     },
@@ -1502,6 +1561,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 2.5,
      "vegas_miss": 24.5
     },
@@ -1527,6 +1587,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 2.3,
      "vegas_miss": 0.5
     },
@@ -1552,6 +1613,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 6.3,
      "vegas_miss": 4.5
     },
@@ -1577,6 +1639,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 0.3,
      "vegas_miss": null
     },
@@ -1602,6 +1665,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 21.9,
      "vegas_miss": 9.5
     },
@@ -1627,6 +1691,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.3,
      "vegas_miss": 2.5
     },
@@ -1652,6 +1717,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 20.9,
      "vegas_miss": 9.5
     },
@@ -1677,6 +1743,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 5.8,
      "vegas_miss": null
     },
@@ -1702,6 +1769,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 19.7,
      "vegas_miss": 3.5
     },
@@ -1727,6 +1795,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": false,
      "model_miss": 1.3,
      "vegas_miss": 2.5
     },
@@ -1752,6 +1821,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 12.1,
      "vegas_miss": 19.5
     },
@@ -1777,6 +1847,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 9.7,
      "vegas_miss": 4.5
     },
@@ -1802,6 +1873,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 12.3,
      "vegas_miss": 10.5
     },
@@ -1827,6 +1899,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 13.5,
      "vegas_miss": 15.5
     },
@@ -1852,6 +1925,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 20.8,
      "vegas_miss": 6.5
     },
@@ -1877,6 +1951,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 11.4,
      "vegas_miss": 0.5
     },
@@ -1902,6 +1977,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 24.3,
      "vegas_miss": 9.5
     },
@@ -1927,6 +2003,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": false,
      "model_miss": 3.0,
      "vegas_miss": 8.5
     },
@@ -1952,6 +2029,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 8.4,
      "vegas_miss": 8.5
     },
@@ -1977,6 +2055,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 7.4,
      "vegas_miss": 16.5
     },
@@ -2002,6 +2081,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 11.3,
      "vegas_miss": 10.5
     },
@@ -2027,6 +2107,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 3.3,
      "vegas_miss": 5.5
     },
@@ -2052,6 +2133,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 16.8,
      "vegas_miss": 3.5
     },
@@ -2077,6 +2159,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.0,
      "vegas_miss": 11.5
     },
@@ -2102,6 +2185,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 23.2,
      "vegas_miss": 13.5
     },
@@ -2127,6 +2211,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 17.0,
      "vegas_miss": 18.5
     },
@@ -2152,6 +2237,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 1.6,
      "vegas_miss": 10.5
     },
@@ -2177,6 +2263,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 16.9,
      "vegas_miss": 6.5
     },
@@ -2202,6 +2289,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 19.1,
      "vegas_miss": null
     },
@@ -2227,6 +2315,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 18.4,
      "vegas_miss": 8.5
     },
@@ -2252,6 +2341,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 3.6,
      "vegas_miss": 0.5
     },
@@ -2277,6 +2367,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 1.3,
      "vegas_miss": 13.5
     },
@@ -2302,6 +2393,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 1.2,
      "vegas_miss": null
     },
@@ -2327,6 +2419,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 11.2,
      "vegas_miss": 7.5
     },
@@ -2352,6 +2445,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 25.2,
      "vegas_miss": 18.5
     },
@@ -2377,6 +2471,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 26.5,
      "vegas_miss": null
     },
@@ -2402,6 +2497,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 3.6,
      "vegas_miss": 10.5
     },
@@ -2427,6 +2523,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 28.2,
      "vegas_miss": 16.5
     },
@@ -2452,6 +2549,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 27.5,
      "vegas_miss": 16.5
     },
@@ -2477,6 +2575,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": false,
+     "vegas_straight_up": null,
      "model_miss": 16.1,
      "vegas_miss": null
     },
@@ -2502,6 +2601,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 5.7,
      "vegas_miss": 14.5
     },
@@ -2527,6 +2627,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": false,
      "model_miss": 5.5,
      "vegas_miss": 10.5
     },
@@ -2552,6 +2653,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": false,
      "model_miss": 6.3,
      "vegas_miss": 13.5
     },
@@ -2577,6 +2679,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 31.3,
      "vegas_miss": 23.5
     },
@@ -2602,6 +2705,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 15.2,
      "vegas_miss": 10.5
     },
@@ -2627,6 +2731,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 8.2,
      "vegas_miss": 5.5
     },
@@ -2652,6 +2757,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 3.8,
      "vegas_miss": null
     },
@@ -2677,6 +2783,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 18.2,
      "vegas_miss": 7.5
     },
@@ -2702,6 +2809,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 5.7,
      "vegas_miss": 12.5
     },
@@ -2727,6 +2835,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 8.9,
      "vegas_miss": 4.5
     },
@@ -2752,6 +2861,7 @@
      "ats": null,
      "total_result": null,
      "straight_up": true,
+     "vegas_straight_up": null,
      "model_miss": 11.1,
      "vegas_miss": null
     },
@@ -2777,6 +2887,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 19.9,
      "vegas_miss": 18.5
     },
@@ -2802,6 +2913,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 8.7,
      "vegas_miss": 4.5
     },
@@ -2827,6 +2939,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 8.6,
      "vegas_miss": 1.5
     },
@@ -2852,6 +2965,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 8.9,
      "vegas_miss": 3.5
     },
@@ -2877,6 +2991,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 0.2,
      "vegas_miss": 5.5
     },
@@ -2902,6 +3017,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 18.2,
      "vegas_miss": 1.5
     },
@@ -2927,6 +3043,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 16.3,
      "vegas_miss": 3.5
     },
@@ -2952,6 +3069,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 16.8,
      "vegas_miss": 5.5
     },
@@ -2977,6 +3095,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 19.0,
      "vegas_miss": 18.5
     },
@@ -3002,6 +3121,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 7.8,
      "vegas_miss": 10.5
     },
@@ -3027,6 +3147,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 38.5,
      "vegas_miss": 34.5
     },
@@ -3052,6 +3173,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.1,
      "vegas_miss": 2.5
     },
@@ -3077,6 +3199,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 4.2,
      "vegas_miss": 2.5
     },
@@ -3102,6 +3225,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 0.3,
      "vegas_miss": 2.5
     },
@@ -3127,6 +3251,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 14.0,
      "vegas_miss": 6.5
     },
@@ -3152,6 +3277,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 30.2,
      "vegas_miss": 23.5
     },
@@ -3177,6 +3303,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 2.1,
      "vegas_miss": 1.5
     },
@@ -3202,6 +3329,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": false,
+     "vegas_straight_up": false,
      "model_miss": 20.4,
      "vegas_miss": 12.5
     },
@@ -3227,6 +3355,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 1.2,
      "vegas_miss": 5.5
     },
@@ -3252,6 +3381,7 @@
      "ats": "L",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 34.4,
      "vegas_miss": 15.5
     },
@@ -3277,6 +3407,7 @@
      "ats": "W",
      "total_result": "W",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 5.9,
      "vegas_miss": 8.5
     },
@@ -3302,6 +3433,7 @@
      "ats": "L",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 20.8,
      "vegas_miss": 5.5
     },
@@ -3327,6 +3459,7 @@
      "ats": "W",
      "total_result": "L",
      "straight_up": true,
+     "vegas_straight_up": true,
      "model_miss": 1.6,
      "vegas_miss": 5.5
     },
@@ -3351,7 +3484,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3374,7 +3508,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3397,7 +3532,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3420,7 +3556,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3443,7 +3580,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3466,7 +3604,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3489,7 +3628,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3512,7 +3652,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3535,7 +3676,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     },
     {
      "date": 20261104,
@@ -3558,7 +3700,8 @@
      "status": "pending",
      "ats": null,
      "total_result": null,
-     "straight_up": null
+     "straight_up": null,
+     "vegas_straight_up": null
     }
    ]
   }
