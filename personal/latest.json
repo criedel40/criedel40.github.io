@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261106,
-  "generated": "2026-11-06T19:25:02Z",
+  "generated": "2026-11-06T23:25:02Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_7_anneal150_ens5)",
   "members": 10000,
   "rows": [
@@ -105,16 +105,16 @@
    "Total": 175.5
   },
   "NoStake": true,
-  "TTQ": 50.2,
+  "TTQ": 50.3,
   "BART": {
-   "HomeTeamScore": 97,
+   "HomeTeamScore": 96,
    "AwayTeamScore": 72,
    "HomeTeamWinProbability": 0.95,
    "AwayTeamWinProbability": 0.05,
    "SpreadValue": 24.1,
-   "Total": 169.0,
+   "Total": 168.0,
    "source": "torvik",
-   "text": "Alabama -24.1, 97-72 (95%)",
+   "text": "Alabama -24.1, 96-72 (95%)",
    "Spread": "-24.1 Alabama"
   },
   "Vegas": {
@@ -690,7 +690,7 @@
    "Total": 141.5
   },
   "NoStake": true,
-  "TTQ": 37.7,
+  "TTQ": 37.6,
   "BART": {
    "HomeTeamScore": 80,
    "AwayTeamScore": 61,
@@ -1299,14 +1299,14 @@
   "NoStake": true,
   "TTQ": 37.6,
   "BART": {
-   "HomeTeamScore": 80,
+   "HomeTeamScore": 81,
    "AwayTeamScore": 64,
    "HomeTeamWinProbability": 0.92,
    "AwayTeamWinProbability": 0.08,
    "SpreadValue": 16.9,
-   "Total": 144.0,
+   "Total": 145.0,
    "source": "torvik",
-   "text": "Arizona St. -16.9, 80-64 (92%)",
+   "text": "Arizona St. -16.9, 81-64 (92%)",
    "Spread": "-16.9 Arizona St."
   },
   "Vegas": {
@@ -1884,17 +1884,17 @@
    "Total": 158.5
   },
   "NoStake": true,
-  "TTQ": 26.7,
+  "TTQ": 26.6,
   "BART": {
    "HomeTeamScore": 97,
    "AwayTeamScore": 60,
    "HomeTeamWinProbability": 0.99,
    "AwayTeamWinProbability": 0.01,
-   "SpreadValue": 37.0,
+   "SpreadValue": 37.1,
    "Total": 157.0,
    "source": "torvik",
-   "text": "Baylor -37.0, 97-60 (99%)",
-   "Spread": "-37.0 Baylor"
+   "text": "Baylor -37.1, 97-60 (99%)",
+   "Spread": "-37.1 Baylor"
   },
   "Vegas": {
    "Spread": "-37.5 Baylor",
@@ -2550,13 +2550,13 @@
   "TTQ": 47.8,
   "BART": {
    "HomeTeamScore": 81,
-   "AwayTeamScore": 74,
+   "AwayTeamScore": 75,
    "HomeTeamWinProbability": 0.71,
    "AwayTeamWinProbability": 0.29,
    "SpreadValue": 6.2,
-   "Total": 155.0,
+   "Total": 156.0,
    "source": "torvik",
-   "text": "Kennesaw St. -6.2, 81-74 (71%)",
+   "text": "Kennesaw St. -6.2, 81-75 (71%)",
    "Spread": "-6.2 Kennesaw St."
   },
   "Vegas": {
@@ -3139,17 +3139,17 @@
    "Total": 160.5
   },
   "NoStake": true,
-  "TTQ": 35.0,
+  "TTQ": 35.1,
   "BART": {
-   "HomeTeamScore": 91,
+   "HomeTeamScore": 92,
    "AwayTeamScore": 61,
    "HomeTeamWinProbability": 0.98,
    "AwayTeamWinProbability": 0.02,
-   "SpreadValue": 30.9,
-   "Total": 152.0,
+   "SpreadValue": 31.1,
+   "Total": 153.0,
    "source": "torvik",
-   "text": "BYU -30.9, 91-61 (98%)",
-   "Spread": "-30.9 BYU"
+   "text": "BYU -31.1, 92-61 (98%)",
+   "Spread": "-31.1 BYU"
   },
   "Vegas": {
    "Spread": "-32.5 BYU",
@@ -3791,17 +3791,17 @@
    "Total": 147.5
   },
   "NoStake": true,
-  "TTQ": 46.7,
+  "TTQ": 47.7,
   "BART": {
    "HomeTeamScore": 73,
    "AwayTeamScore": 72,
-   "HomeTeamWinProbability": 0.53,
-   "AwayTeamWinProbability": 0.47,
-   "SpreadValue": 0.9,
+   "HomeTeamWinProbability": 0.51,
+   "AwayTeamWinProbability": 0.49,
+   "SpreadValue": 0.3,
    "Total": 145.0,
    "source": "torvik",
-   "text": "Ball St. -0.9, 73-72 (53%)",
-   "Spread": "-0.9 Ball St."
+   "text": "Ball St. -0.3, 73-72 (51%)",
+   "Spread": "-0.3 Ball St."
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.543,
@@ -4375,17 +4375,17 @@
    "Total": 145.5
   },
   "NoStake": true,
-  "TTQ": 49.2,
+  "TTQ": 50.3,
   "BART": {
-   "HomeTeamScore": 77,
+   "HomeTeamScore": 76,
    "AwayTeamScore": 71,
    "HomeTeamWinProbability": 0.71,
    "AwayTeamWinProbability": 0.29,
-   "SpreadValue": 5.9,
-   "Total": 148.0,
+   "SpreadValue": 5.6,
+   "Total": 147.0,
    "source": "torvik",
-   "text": "Boston College -5.9, 77-71 (71%)",
-   "Spread": "-5.9 Boston College"
+   "text": "Boston College -5.6, 76-71 (71%)",
+   "Spread": "-5.6 Boston College"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.681,
@@ -4919,17 +4919,17 @@
    "Total": 158.5
   },
   "NoStake": true,
-  "TTQ": 30.0,
+  "TTQ": 31.0,
   "BART": {
    "HomeTeamScore": 71,
    "AwayTeamScore": 65,
-   "HomeTeamWinProbability": 0.75,
-   "AwayTeamWinProbability": 0.25,
-   "SpreadValue": 6.4,
+   "HomeTeamWinProbability": 0.73,
+   "AwayTeamWinProbability": 0.27,
+   "SpreadValue": 5.8,
    "Total": 136.0,
    "source": "torvik",
-   "text": "Brown -6.4, 71-65 (75%)",
-   "Spread": "-6.4 Brown"
+   "text": "Brown -5.8, 71-65 (73%)",
+   "Spread": "-5.8 Brown"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.563,
@@ -5478,17 +5478,17 @@
    "Total": 155.5
   },
   "NoStake": true,
-  "TTQ": 47.4,
+  "TTQ": 46.4,
   "BART": {
    "HomeTeamScore": 91,
-   "AwayTeamScore": 77,
-   "HomeTeamWinProbability": 0.86,
-   "AwayTeamWinProbability": 0.14,
-   "SpreadValue": 14.4,
-   "Total": 168.0,
+   "AwayTeamScore": 76,
+   "HomeTeamWinProbability": 0.87,
+   "AwayTeamWinProbability": 0.13,
+   "SpreadValue": 15.1,
+   "Total": 167.0,
    "source": "torvik",
-   "text": "Oregon St. -14.4, 91-77 (86%)",
-   "Spread": "-14.4 Oregon St."
+   "text": "Oregon St. -15.1, 91-76 (87%)",
+   "Spread": "-15.1 Oregon St."
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.943,
@@ -6104,17 +6104,17 @@
    "Total": 163.5
   },
   "NoStake": true,
-  "TTQ": 43.5,
+  "TTQ": 43.7,
   "BART": {
-   "HomeTeamScore": 90,
+   "HomeTeamScore": 89,
    "AwayTeamScore": 74,
    "HomeTeamWinProbability": 0.88,
    "AwayTeamWinProbability": 0.12,
-   "SpreadValue": 15.8,
-   "Total": 164.0,
+   "SpreadValue": 15.2,
+   "Total": 163.0,
    "source": "torvik",
-   "text": "Kansas St. -15.8, 90-74 (88%)",
-   "Spread": "-15.8 Kansas St."
+   "text": "Kansas St. -15.2, 89-74 (88%)",
+   "Spread": "-15.2 Kansas St."
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.827,
@@ -6715,17 +6715,17 @@
    "Total": 152.5
   },
   "NoStake": true,
-  "TTQ": 42.6,
+  "TTQ": 43.5,
   "BART": {
    "HomeTeamScore": 82,
    "AwayTeamScore": 67,
    "HomeTeamWinProbability": 0.89,
    "AwayTeamWinProbability": 0.11,
-   "SpreadValue": 14.9,
+   "SpreadValue": 14.4,
    "Total": 149.0,
    "source": "torvik",
-   "text": "Mississippi -14.9, 82-67 (89%)",
-   "Spread": "-14.9 Mississippi"
+   "text": "Mississippi -14.4, 82-67 (89%)",
+   "Spread": "-14.4 Mississippi"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.931,
@@ -7866,17 +7866,17 @@
    "Total": 146.5
   },
   "NoStake": true,
-  "TTQ": 89.1,
+  "TTQ": 88.4,
   "BART": {
    "HomeTeamScore": 71,
    "AwayTeamScore": 72,
    "HomeTeamWinProbability": 0.48,
    "AwayTeamWinProbability": 0.52,
-   "SpreadValue": -0.4,
+   "SpreadValue": -0.6,
    "Total": 143.0,
    "source": "torvik",
-   "text": "Connecticut -0.4, 72-71 (52%)",
-   "Spread": "-0.4 Connecticut"
+   "text": "Connecticut -0.6, 72-71 (52%)",
+   "Spread": "-0.6 Connecticut"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.266,
@@ -8443,11 +8443,11 @@
    "AwayTeamScore": 59,
    "HomeTeamWinProbability": 0.98,
    "AwayTeamWinProbability": 0.02,
-   "SpreadValue": 26.9,
+   "SpreadValue": 27.0,
    "Total": 145.0,
    "source": "torvik",
-   "text": "George Mason -26.9, 86-59 (98%)",
-   "Spread": "-26.9 George Mason"
+   "text": "George Mason -27.0, 86-59 (98%)",
+   "Spread": "-27.0 George Mason"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.976,
@@ -9070,17 +9070,17 @@
    "Total": 152.5
   },
   "NoStake": true,
-  "TTQ": 34.4,
+  "TTQ": 34.3,
   "BART": {
-   "HomeTeamScore": 88,
+   "HomeTeamScore": 87,
    "AwayTeamScore": 63,
    "HomeTeamWinProbability": 0.96,
    "AwayTeamWinProbability": 0.04,
-   "SpreadValue": 24.2,
-   "Total": 151.0,
+   "SpreadValue": 24.0,
+   "Total": 150.0,
    "source": "torvik",
-   "text": "Wisconsin -24.2, 88-63 (96%)",
-   "Spread": "-24.2 Wisconsin"
+   "text": "Wisconsin -24.0, 87-63 (96%)",
+   "Spread": "-24.0 Wisconsin"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.958,
@@ -9711,17 +9711,17 @@
    "Total": 155.5
   },
   "NoStake": true,
-  "TTQ": 38.2,
+  "TTQ": 38.3,
   "BART": {
    "HomeTeamScore": 91,
    "AwayTeamScore": 65,
    "HomeTeamWinProbability": 0.97,
    "AwayTeamWinProbability": 0.03,
-   "SpreadValue": 25.9,
+   "SpreadValue": 26.1,
    "Total": 156.0,
    "source": "torvik",
-   "text": "Marquette -25.9, 91-65 (97%)",
-   "Spread": "-25.9 Marquette"
+   "text": "Marquette -26.1, 91-65 (97%)",
+   "Spread": "-26.1 Marquette"
   },
   "Vegas": {
    "Spread": "-32.5 Marquette",
@@ -10315,7 +10315,7 @@
    "Total": 152.5
   },
   "NoStake": true,
-  "TTQ": 41.7,
+  "TTQ": 41.8,
   "BART": {
    "HomeTeamScore": 86,
    "AwayTeamScore": 66,
@@ -11485,17 +11485,17 @@
    "Total": 156.5
   },
   "NoStake": true,
-  "TTQ": 43.4,
+  "TTQ": 43.3,
   "BART": {
    "HomeTeamScore": 85,
    "AwayTeamScore": 67,
-   "HomeTeamWinProbability": 0.92,
-   "AwayTeamWinProbability": 0.08,
-   "SpreadValue": 18.0,
+   "HomeTeamWinProbability": 0.93,
+   "AwayTeamWinProbability": 0.07,
+   "SpreadValue": 18.5,
    "Total": 152.0,
    "source": "torvik",
-   "text": "Xavier -18.0, 85-67 (92%)",
-   "Spread": "-18.0 Xavier"
+   "text": "Xavier -18.5, 85-67 (93%)",
+   "Spread": "-18.5 Xavier"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.958,
@@ -12066,17 +12066,17 @@
    "Total": 151.5
   },
   "NoStake": true,
-  "TTQ": 41.3,
+  "TTQ": 41.5,
   "BART": {
    "HomeTeamScore": 87,
-   "AwayTeamScore": 67,
+   "AwayTeamScore": 68,
    "HomeTeamWinProbability": 0.94,
    "AwayTeamWinProbability": 0.06,
-   "SpreadValue": 20.1,
-   "Total": 154.0,
+   "SpreadValue": 19.9,
+   "Total": 155.0,
    "source": "torvik",
-   "text": "Oregon -20.1, 87-67 (94%)",
-   "Spread": "-20.1 Oregon"
+   "text": "Oregon -19.9, 87-68 (94%)",
+   "Spread": "-19.9 Oregon"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.92,
@@ -12689,17 +12689,17 @@
    "Total": 153.5
   },
   "NoStake": true,
-  "TTQ": 24.1,
+  "TTQ": 23.9,
   "BART": {
    "HomeTeamScore": 80,
    "AwayTeamScore": 69,
-   "HomeTeamWinProbability": 0.83,
-   "AwayTeamWinProbability": 0.17,
-   "SpreadValue": 10.4,
+   "HomeTeamWinProbability": 0.84,
+   "AwayTeamWinProbability": 0.16,
+   "SpreadValue": 11.0,
    "Total": 149.0,
    "source": "torvik",
-   "text": "Elon -10.4, 80-69 (83%)",
-   "Spread": "-10.4 Elon"
+   "text": "Elon -11.0, 80-69 (84%)",
+   "Spread": "-11.0 Elon"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.777,
@@ -13253,17 +13253,17 @@
    "Total": 158.5
   },
   "NoStake": true,
-  "TTQ": 60.8,
+  "TTQ": 60.4,
   "BART": {
    "HomeTeamScore": 77,
    "AwayTeamScore": 75,
-   "HomeTeamWinProbability": 0.56,
-   "AwayTeamWinProbability": 0.44,
-   "SpreadValue": 1.7,
+   "HomeTeamWinProbability": 0.58,
+   "AwayTeamWinProbability": 0.42,
+   "SpreadValue": 2.0,
    "Total": 152.0,
    "source": "torvik",
-   "text": "Wright St. -1.7, 77-75 (56%)",
-   "Spread": "-1.7 Wright St."
+   "text": "Wright St. -2.0, 77-75 (58%)",
+   "Spread": "-2.0 Wright St."
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.609,
@@ -13805,17 +13805,17 @@
    "Total": 159.5
   },
   "NoStake": true,
-  "TTQ": 44.0,
+  "TTQ": 43.3,
   "BART": {
-   "HomeTeamScore": 81,
-   "AwayTeamScore": 67,
-   "HomeTeamWinProbability": 0.89,
-   "AwayTeamWinProbability": 0.11,
-   "SpreadValue": 14.7,
+   "HomeTeamScore": 82,
+   "AwayTeamScore": 66,
+   "HomeTeamWinProbability": 0.9,
+   "AwayTeamWinProbability": 0.1,
+   "SpreadValue": 15.4,
    "Total": 148.0,
    "source": "torvik",
-   "text": "Florida St. -14.7, 81-67 (89%)",
-   "Spread": "-14.7 Florida St."
+   "text": "Florida St. -15.4, 82-66 (90%)",
+   "Spread": "-15.4 Florida St."
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.954,
@@ -14418,16 +14418,16 @@
    "Total": 156.5
   },
   "NoStake": true,
-  "TTQ": 37.6,
+  "TTQ": 37.4,
   "BART": {
-   "HomeTeamScore": 88,
-   "AwayTeamScore": 64,
+   "HomeTeamScore": 89,
+   "AwayTeamScore": 65,
    "HomeTeamWinProbability": 0.96,
    "AwayTeamWinProbability": 0.04,
    "SpreadValue": 24.0,
-   "Total": 152.0,
+   "Total": 154.0,
    "source": "torvik",
-   "text": "Georgia -24.0, 88-64 (96%)",
+   "text": "Georgia -24.0, 89-65 (96%)",
    "Spread": "-24.0 Georgia"
   },
   "Vegas": {
@@ -14995,17 +14995,17 @@
    "Total": 157.5
   },
   "NoStake": true,
-  "TTQ": 26.1,
+  "TTQ": 28.2,
   "BART": {
-   "HomeTeamScore": 87,
-   "AwayTeamScore": 66,
+   "HomeTeamScore": 85,
+   "AwayTeamScore": 65,
    "HomeTeamWinProbability": 0.94,
    "AwayTeamWinProbability": 0.06,
-   "SpreadValue": 21.0,
-   "Total": 153.0,
+   "SpreadValue": 19.8,
+   "Total": 150.0,
    "source": "torvik",
-   "text": "Georgia Tech -21.0, 87-66 (94%)",
-   "Spread": "-21.0 Georgia Tech"
+   "text": "Georgia Tech -19.8, 85-65 (94%)",
+   "Spread": "-19.8 Georgia Tech"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.92,
@@ -15575,17 +15575,17 @@
    "Total": 151.5
   },
   "NoStake": true,
-  "TTQ": 27.9,
+  "TTQ": 27.1,
   "BART": {
-   "HomeTeamScore": 92,
+   "HomeTeamScore": 93,
    "AwayTeamScore": 59,
    "HomeTeamWinProbability": 0.99,
    "AwayTeamWinProbability": 0.01,
-   "SpreadValue": 33.6,
-   "Total": 151.0,
+   "SpreadValue": 34.2,
+   "Total": 152.0,
    "source": "torvik",
-   "text": "Villanova -33.6, 92-59 (99%)",
-   "Spread": "-33.6 Villanova"
+   "text": "Villanova -34.2, 93-59 (99%)",
+   "Spread": "-34.2 Villanova"
   },
   "Vegas": {
    "Spread": "-34.5 Villanova",
@@ -16149,11 +16149,11 @@
    "AwayTeamScore": 63,
    "HomeTeamWinProbability": 0.93,
    "AwayTeamWinProbability": 0.07,
-   "SpreadValue": 18.1,
+   "SpreadValue": 18.2,
    "Total": 144.0,
    "source": "torvik",
-   "text": "Wyoming -18.1, 81-63 (93%)",
-   "Spread": "-18.1 Wyoming"
+   "text": "Wyoming -18.2, 81-63 (93%)",
+   "Spread": "-18.2 Wyoming"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.931,
@@ -16730,17 +16730,17 @@
    "Total": 143.5
   },
   "NoStake": true,
-  "TTQ": 39.4,
+  "TTQ": 38.3,
   "BART": {
-   "HomeTeamScore": 78,
+   "HomeTeamScore": 79,
    "AwayTeamScore": 66,
-   "HomeTeamWinProbability": 0.85,
-   "AwayTeamWinProbability": 0.15,
-   "SpreadValue": 11.9,
-   "Total": 144.0,
+   "HomeTeamWinProbability": 0.86,
+   "AwayTeamWinProbability": 0.14,
+   "SpreadValue": 12.5,
+   "Total": 145.0,
    "source": "torvik",
-   "text": "Illinois Chicago -11.9, 78-66 (85%)",
-   "Spread": "-11.9 Illinois Chicago"
+   "text": "Illinois Chicago -12.5, 79-66 (86%)",
+   "Spread": "-12.5 Illinois Chicago"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.827,
@@ -17332,17 +17332,17 @@
    "Total": 150.5
   },
   "NoStake": true,
-  "TTQ": 41.8,
+  "TTQ": 41.6,
   "BART": {
    "HomeTeamScore": 89,
    "AwayTeamScore": 62,
-   "HomeTeamWinProbability": 0.98,
-   "AwayTeamWinProbability": 0.02,
-   "SpreadValue": 27.1,
+   "HomeTeamWinProbability": 0.97,
+   "AwayTeamWinProbability": 0.03,
+   "SpreadValue": 26.8,
    "Total": 151.0,
    "source": "torvik",
-   "text": "Iowa St. -27.1, 89-62 (98%)",
-   "Spread": "-27.1 Iowa St."
+   "text": "Iowa St. -26.8, 89-62 (97%)",
+   "Spread": "-26.8 Iowa St."
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.981,
@@ -17929,13 +17929,13 @@
   "TTQ": 44.4,
   "BART": {
    "HomeTeamScore": 86,
-   "AwayTeamScore": 66,
+   "AwayTeamScore": 67,
    "HomeTeamWinProbability": 0.94,
    "AwayTeamWinProbability": 0.06,
    "SpreadValue": 19.5,
-   "Total": 152.0,
+   "Total": 153.0,
    "source": "torvik",
-   "text": "Kentucky -19.5, 86-66 (94%)",
+   "text": "Kentucky -19.5, 86-67 (94%)",
    "Spread": "-19.5 Kentucky"
   },
   "Vegas": {
@@ -18503,11 +18503,11 @@
    "AwayTeamScore": 63,
    "HomeTeamWinProbability": 0.97,
    "AwayTeamWinProbability": 0.03,
-   "SpreadValue": 23.8,
+   "SpreadValue": 23.9,
    "Total": 150.0,
    "source": "torvik",
-   "text": "Kansas -23.8, 87-63 (97%)",
-   "Spread": "-23.8 Kansas"
+   "text": "Kansas -23.9, 87-63 (97%)",
+   "Spread": "-23.9 Kansas"
   },
   "Vegas": {
    "Spread": "-29.5 Kansas",
@@ -19080,17 +19080,17 @@
    "Total": 159.5
   },
   "NoStake": true,
-  "TTQ": 34.4,
+  "TTQ": 34.8,
   "BART": {
    "HomeTeamScore": 101,
    "AwayTeamScore": 69,
    "HomeTeamWinProbability": 0.98,
    "AwayTeamWinProbability": 0.02,
-   "SpreadValue": 32.1,
+   "SpreadValue": 32.4,
    "Total": 170.0,
    "source": "torvik",
-   "text": "LSU -32.1, 101-69 (98%)",
-   "Spread": "-32.1 LSU"
+   "text": "LSU -32.4, 101-69 (98%)",
+   "Spread": "-32.4 LSU"
   },
   "Vegas": {
    "Spread": "-35.5 LSU",
@@ -19729,17 +19729,17 @@
    "Total": 134.5
   },
   "NoStake": true,
-  "TTQ": 43.6,
+  "TTQ": 42.5,
   "BART": {
    "HomeTeamScore": 68,
    "AwayTeamScore": 65,
    "HomeTeamWinProbability": 0.62,
    "AwayTeamWinProbability": 0.38,
-   "SpreadValue": 2.8,
+   "SpreadValue": 2.9,
    "Total": 133.0,
    "source": "torvik",
-   "text": "Louisiana -2.8, 68-65 (62%)",
-   "Spread": "-2.8 Louisiana"
+   "text": "Louisiana -2.9, 68-65 (62%)",
+   "Spread": "-2.9 Louisiana"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.616,
@@ -20289,17 +20289,17 @@
    "Total": 150.5
   },
   "NoStake": true,
-  "TTQ": 25.7,
+  "TTQ": 26.0,
   "BART": {
    "HomeTeamScore": 77,
    "AwayTeamScore": 70,
-   "HomeTeamWinProbability": 0.74,
-   "AwayTeamWinProbability": 0.26,
-   "SpreadValue": 6.9,
+   "HomeTeamWinProbability": 0.73,
+   "AwayTeamWinProbability": 0.27,
+   "SpreadValue": 6.4,
    "Total": 147.0,
    "source": "torvik",
-   "text": "Mount St. Mary's -6.9, 77-70 (74%)",
-   "Spread": "-6.9 Mount St. Mary's"
+   "text": "Mount St. Mary's -6.4, 77-70 (73%)",
+   "Spread": "-6.4 Mount St. Mary's"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.681,
@@ -20862,16 +20862,16 @@
    "Total": 146.5
   },
   "NoStake": true,
-  "TTQ": 30.8,
+  "TTQ": 30.4,
   "BART": {
-   "HomeTeamScore": 91,
+   "HomeTeamScore": 90,
    "AwayTeamScore": 55,
    "HomeTeamWinProbability": 0.99,
    "AwayTeamWinProbability": 0.01,
    "SpreadValue": 35.4,
-   "Total": 146.0,
+   "Total": 145.0,
    "source": "torvik",
-   "text": "Miami FL -35.4, 91-55 (99%)",
+   "text": "Miami FL -35.4, 90-55 (99%)",
    "Spread": "-35.4 Miami FL"
   },
   "Vegas": {
@@ -21434,16 +21434,16 @@
    "Total": 150.5
   },
   "NoStake": true,
-  "TTQ": 44.1,
+  "TTQ": 44.3,
   "BART": {
-   "HomeTeamScore": 76,
+   "HomeTeamScore": 77,
    "AwayTeamScore": 66,
    "HomeTeamWinProbability": 0.84,
    "AwayTeamWinProbability": 0.16,
    "SpreadValue": 10.7,
-   "Total": 142.0,
+   "Total": 143.0,
    "source": "torvik",
-   "text": "Minnesota -10.7, 76-66 (84%)",
+   "text": "Minnesota -10.7, 77-66 (84%)",
    "Spread": "-10.7 Minnesota"
   },
   "Vegas": {
@@ -22075,17 +22075,17 @@
    "Total": 148.5
   },
   "NoStake": true,
-  "TTQ": 22.0,
+  "TTQ": 21.5,
   "BART": {
    "HomeTeamScore": 92,
-   "AwayTeamScore": 54,
+   "AwayTeamScore": 55,
    "HomeTeamWinProbability": 0.99,
    "AwayTeamWinProbability": 0.01,
-   "SpreadValue": 37.8,
-   "Total": 146.0,
+   "SpreadValue": 37.3,
+   "Total": 147.0,
    "source": "torvik",
-   "text": "Oklahoma -37.8, 92-54 (99%)",
-   "Spread": "-37.8 Oklahoma"
+   "text": "Oklahoma -37.3, 92-55 (99%)",
+   "Spread": "-37.3 Oklahoma"
   },
   "Vegas": {
    "Spread": "-41.5 Oklahoma",
@@ -22710,13 +22710,13 @@
   "BART": {
    "HomeTeamScore": 75,
    "AwayTeamScore": 80,
-   "HomeTeamWinProbability": 0.32,
-   "AwayTeamWinProbability": 0.68,
-   "SpreadValue": -5.2,
+   "HomeTeamWinProbability": 0.31,
+   "AwayTeamWinProbability": 0.69,
+   "SpreadValue": -5.4,
    "Total": 155.0,
    "source": "torvik",
-   "text": "Missouri -5.2, 80-75 (68%)",
-   "Spread": "-5.2 Missouri"
+   "text": "Missouri -5.4, 80-75 (69%)",
+   "Spread": "-5.4 Missouri"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.457,
@@ -23313,17 +23313,17 @@
    "Total": 142.5
   },
   "NoStake": true,
-  "TTQ": 23.0,
+  "TTQ": 22.8,
   "BART": {
    "HomeTeamScore": 84,
    "AwayTeamScore": 58,
    "HomeTeamWinProbability": 0.97,
    "AwayTeamWinProbability": 0.03,
-   "SpreadValue": 25.3,
+   "SpreadValue": 25.4,
    "Total": 142.0,
    "source": "torvik",
-   "text": "Rutgers -25.3, 84-58 (97%)",
-   "Spread": "-25.3 Rutgers"
+   "text": "Rutgers -25.4, 84-58 (97%)",
+   "Spread": "-25.4 Rutgers"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.963,
@@ -23929,17 +23929,17 @@
    "Total": 155.5
   },
   "NoStake": true,
-  "TTQ": 31.1,
+  "TTQ": 31.2,
   "BART": {
    "HomeTeamScore": 84,
-   "AwayTeamScore": 69,
-   "HomeTeamWinProbability": 0.88,
-   "AwayTeamWinProbability": 0.12,
-   "SpreadValue": 14.6,
-   "Total": 153.0,
+   "AwayTeamScore": 70,
+   "HomeTeamWinProbability": 0.87,
+   "AwayTeamWinProbability": 0.13,
+   "SpreadValue": 14.0,
+   "Total": 154.0,
    "source": "torvik",
-   "text": "UAB -14.6, 84-69 (88%)",
-   "Spread": "-14.6 UAB"
+   "text": "UAB -14.0, 84-70 (87%)",
+   "Spread": "-14.0 UAB"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.908,
@@ -24507,17 +24507,17 @@
    "Total": 156.5
   },
   "NoStake": true,
-  "TTQ": 34.8,
+  "TTQ": 34.7,
   "BART": {
    "HomeTeamScore": 89,
    "AwayTeamScore": 64,
-   "HomeTeamWinProbability": 0.97,
-   "AwayTeamWinProbability": 0.03,
-   "SpreadValue": 25.1,
+   "HomeTeamWinProbability": 0.96,
+   "AwayTeamWinProbability": 0.04,
+   "SpreadValue": 24.8,
    "Total": 153.0,
    "source": "torvik",
-   "text": "North Carolina -25.1, 89-64 (97%)",
-   "Spread": "-25.1 North Carolina"
+   "text": "North Carolina -24.8, 89-64 (96%)",
+   "Spread": "-24.8 North Carolina"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.949,
@@ -25077,17 +25077,17 @@
    "Total": 146.5
   },
   "NoStake": true,
-  "TTQ": 49.2,
+  "TTQ": 46.1,
   "BART": {
-   "HomeTeamScore": 72,
+   "HomeTeamScore": 73,
    "AwayTeamScore": 69,
-   "HomeTeamWinProbability": 0.62,
-   "AwayTeamWinProbability": 0.38,
-   "SpreadValue": 3.0,
-   "Total": 141.0,
+   "HomeTeamWinProbability": 0.66,
+   "AwayTeamWinProbability": 0.34,
+   "SpreadValue": 4.0,
+   "Total": 142.0,
    "source": "torvik",
-   "text": "San Francisco -3.0, 72-69 (62%)",
-   "Spread": "-3.0 San Francisco"
+   "text": "San Francisco -4.0, 73-69 (66%)",
+   "Spread": "-4.0 San Francisco"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.787,
@@ -25654,17 +25654,17 @@
    "Total": 155.5
   },
   "NoStake": true,
-  "TTQ": 32.9,
+  "TTQ": 33.8,
   "BART": {
    "HomeTeamScore": 93,
-   "AwayTeamScore": 61,
+   "AwayTeamScore": 60,
    "HomeTeamWinProbability": 0.99,
    "AwayTeamWinProbability": 0.01,
-   "SpreadValue": 32.9,
-   "Total": 154.0,
+   "SpreadValue": 32.5,
+   "Total": 153.0,
    "source": "torvik",
-   "text": "UCLA -32.9, 93-61 (99%)",
-   "Spread": "-32.9 UCLA"
+   "text": "UCLA -32.5, 93-60 (99%)",
+   "Spread": "-32.5 UCLA"
   },
   "Vegas": {
    "Spread": "-34.5 UCLA",
@@ -26253,17 +26253,17 @@
    "Total": 160.5
   },
   "NoStake": true,
-  "TTQ": 41.6,
+  "TTQ": 41.4,
   "BART": {
-   "HomeTeamScore": 95,
+   "HomeTeamScore": 96,
    "AwayTeamScore": 63,
    "HomeTeamWinProbability": 0.99,
    "AwayTeamWinProbability": 0.01,
-   "SpreadValue": 32.6,
-   "Total": 158.0,
+   "SpreadValue": 33.0,
+   "Total": 159.0,
    "source": "torvik",
-   "text": "Virginia -32.6, 95-63 (99%)",
-   "Spread": "-32.6 Virginia"
+   "text": "Virginia -33.0, 96-63 (99%)",
+   "Spread": "-33.0 Virginia"
   },
   "Vegas": {
    "Spread": "-34.5 Virginia",
@@ -26847,17 +26847,17 @@
    "Total": 170.5
   },
   "NoStake": true,
-  "TTQ": 42.0,
+  "TTQ": 42.5,
   "BART": {
    "HomeTeamScore": 91,
-   "AwayTeamScore": 67,
+   "AwayTeamScore": 68,
    "HomeTeamWinProbability": 0.96,
    "AwayTeamWinProbability": 0.04,
-   "SpreadValue": 24.0,
-   "Total": 158.0,
+   "SpreadValue": 23.6,
+   "Total": 159.0,
    "source": "torvik",
-   "text": "Texas A&M -24.0, 91-67 (96%)",
-   "Spread": "-24.0 Texas A&M"
+   "text": "Texas A&M -23.6, 91-68 (96%)",
+   "Spread": "-23.6 Texas A&M"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.973,
@@ -27486,13 +27486,13 @@
   "BART": {
    "HomeTeamScore": 80,
    "AwayTeamScore": 63,
-   "HomeTeamWinProbability": 0.91,
-   "AwayTeamWinProbability": 0.09,
-   "SpreadValue": 16.6,
+   "HomeTeamWinProbability": 0.92,
+   "AwayTeamWinProbability": 0.08,
+   "SpreadValue": 16.7,
    "Total": 143.0,
    "source": "torvik",
-   "text": "Northwestern -16.6, 80-63 (91%)",
-   "Spread": "-16.6 Northwestern"
+   "text": "Northwestern -16.7, 80-63 (92%)",
+   "Spread": "-16.7 Northwestern"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.88,
@@ -28057,17 +28057,17 @@
    "Total": 150.5
   },
   "NoStake": true,
-  "TTQ": 35.9,
+  "TTQ": 36.2,
   "BART": {
    "HomeTeamScore": 80,
    "AwayTeamScore": 65,
    "HomeTeamWinProbability": 0.9,
    "AwayTeamWinProbability": 0.1,
-   "SpreadValue": 15.6,
+   "SpreadValue": 15.1,
    "Total": 145.0,
    "source": "torvik",
-   "text": "Stanford -15.6, 80-65 (90%)",
-   "Spread": "-15.6 Stanford"
+   "text": "Stanford -15.1, 80-65 (90%)",
+   "Spread": "-15.1 Stanford"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.887,
@@ -28632,17 +28632,17 @@
    "Total": 154.5
   },
   "NoStake": true,
-  "TTQ": 36.6,
+  "TTQ": 36.9,
   "BART": {
    "HomeTeamScore": 90,
    "AwayTeamScore": 61,
    "HomeTeamWinProbability": 0.98,
    "AwayTeamWinProbability": 0.02,
-   "SpreadValue": 28.8,
+   "SpreadValue": 28.4,
    "Total": 151.0,
    "source": "torvik",
-   "text": "Ohio St. -28.8, 90-61 (98%)",
-   "Spread": "-28.8 Ohio St."
+   "text": "Ohio St. -28.4, 90-61 (98%)",
+   "Spread": "-28.4 Ohio St."
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.958,
@@ -29268,17 +29268,17 @@
    "Total": 175.5
   },
   "NoStake": true,
-  "TTQ": 45.3,
+  "TTQ": 46.0,
   "BART": {
-   "HomeTeamScore": 96,
+   "HomeTeamScore": 97,
    "AwayTeamScore": 76,
-   "HomeTeamWinProbability": 0.93,
-   "AwayTeamWinProbability": 0.07,
-   "SpreadValue": 20.5,
-   "Total": 172.0,
+   "HomeTeamWinProbability": 0.92,
+   "AwayTeamWinProbability": 0.08,
+   "SpreadValue": 20.3,
+   "Total": 173.0,
    "source": "torvik",
-   "text": "Oklahoma St. -20.5, 96-76 (93%)",
-   "Spread": "-20.5 Oklahoma St."
+   "text": "Oklahoma St. -20.3, 97-76 (92%)",
+   "Spread": "-20.3 Oklahoma St."
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.931,
@@ -29846,14 +29846,14 @@
   "NoStake": true,
   "TTQ": 47.4,
   "BART": {
-   "HomeTeamScore": 71,
-   "AwayTeamScore": 74,
+   "HomeTeamScore": 72,
+   "AwayTeamScore": 75,
    "HomeTeamWinProbability": 0.38,
    "AwayTeamWinProbability": 0.62,
    "SpreadValue": -3.1,
-   "Total": 145.0,
+   "Total": 147.0,
    "source": "torvik",
-   "text": "Portland -3.1, 74-71 (62%)",
+   "text": "Portland -3.1, 75-72 (62%)",
    "Spread": "-3.1 Portland"
   },
   "Vegas": {
@@ -30388,17 +30388,17 @@
    "Total": 146.5
   },
   "NoStake": true,
-  "TTQ": 43.4,
+  "TTQ": 43.5,
   "BART": {
    "HomeTeamScore": 79,
    "AwayTeamScore": 63,
    "HomeTeamWinProbability": 0.92,
    "AwayTeamWinProbability": 0.08,
-   "SpreadValue": 16.3,
+   "SpreadValue": 16.2,
    "Total": 142.0,
    "source": "torvik",
-   "text": "Purdue -16.3, 79-63 (92%)",
-   "Spread": "-16.3 Purdue"
+   "text": "Purdue -16.2, 79-63 (92%)",
+   "Spread": "-16.2 Purdue"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.936,
@@ -30914,16 +30914,16 @@
    "Total": 148.5
   },
   "NoStake": true,
-  "TTQ": 52.4,
+  "TTQ": 52.3,
   "BART": {
    "HomeTeamScore": 78,
-   "AwayTeamScore": 73,
+   "AwayTeamScore": 74,
    "HomeTeamWinProbability": 0.66,
    "AwayTeamWinProbability": 0.34,
    "SpreadValue": 4.3,
-   "Total": 151.0,
+   "Total": 152.0,
    "source": "torvik",
-   "text": "San Diego -4.3, 78-73 (66%)",
+   "text": "San Diego -4.3, 78-74 (66%)",
    "Spread": "-4.3 San Diego"
   },
   "Vegas": {
@@ -31449,17 +31449,17 @@
    "Total": 148.5
   },
   "NoStake": true,
-  "TTQ": 33.2,
+  "TTQ": 33.3,
   "BART": {
    "HomeTeamScore": 76,
    "AwayTeamScore": 73,
    "HomeTeamWinProbability": 0.61,
    "AwayTeamWinProbability": 0.39,
-   "SpreadValue": 3.0,
+   "SpreadValue": 2.9,
    "Total": 149.0,
    "source": "torvik",
-   "text": "USC Upstate -3.0, 76-73 (61%)",
-   "Spread": "-3.0 USC Upstate"
+   "text": "USC Upstate -2.9, 76-73 (61%)",
+   "Spread": "-2.9 USC Upstate"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.622,
@@ -32013,17 +32013,17 @@
    "Total": 152.5
   },
   "NoStake": true,
-  "TTQ": 33.8,
+  "TTQ": 34.5,
   "BART": {
    "HomeTeamScore": 88,
    "AwayTeamScore": 62,
    "HomeTeamWinProbability": 0.97,
    "AwayTeamWinProbability": 0.03,
-   "SpreadValue": 26.3,
+   "SpreadValue": 25.8,
    "Total": 150.0,
    "source": "torvik",
-   "text": "TCU -26.3, 88-62 (97%)",
-   "Spread": "-26.3 TCU"
+   "text": "TCU -25.8, 88-62 (97%)",
+   "Spread": "-25.8 TCU"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.963,
@@ -32597,17 +32597,17 @@
    "Total": 145.5
   },
   "NoStake": true,
-  "TTQ": 46.0,
+  "TTQ": 47.1,
   "BART": {
-   "HomeTeamScore": 69,
+   "HomeTeamScore": 70,
    "AwayTeamScore": 71,
-   "HomeTeamWinProbability": 0.43,
-   "AwayTeamWinProbability": 0.57,
-   "SpreadValue": -1.8,
-   "Total": 140.0,
+   "HomeTeamWinProbability": 0.44,
+   "AwayTeamWinProbability": 0.56,
+   "SpreadValue": -1.5,
+   "Total": 141.0,
    "source": "torvik",
-   "text": "Southern Illinois -1.8, 71-69 (57%)",
-   "Spread": "-1.8 Southern Illinois"
+   "text": "Southern Illinois -1.5, 71-70 (56%)",
+   "Spread": "-1.5 Southern Illinois"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.5,
@@ -33182,17 +33182,17 @@
    "Total": 141.5
   },
   "NoStake": true,
-  "TTQ": 31.4,
+  "TTQ": 31.2,
   "BART": {
-   "HomeTeamScore": 83,
+   "HomeTeamScore": 84,
    "AwayTeamScore": 60,
    "HomeTeamWinProbability": 0.97,
    "AwayTeamWinProbability": 0.03,
-   "SpreadValue": 23.6,
-   "Total": 143.0,
+   "SpreadValue": 24.0,
+   "Total": 144.0,
    "source": "torvik",
-   "text": "West Virginia -23.6, 83-60 (97%)",
-   "Spread": "-23.6 West Virginia"
+   "text": "West Virginia -24.0, 84-60 (97%)",
+   "Spread": "-24.0 West Virginia"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.973,
@@ -33807,17 +33807,17 @@
    "Total": 152.5
   },
   "NoStake": true,
-  "TTQ": 40.8,
+  "TTQ": 41.4,
   "BART": {
-   "HomeTeamScore": 85,
+   "HomeTeamScore": 84,
    "AwayTeamScore": 67,
    "HomeTeamWinProbability": 0.92,
    "AwayTeamWinProbability": 0.08,
-   "SpreadValue": 18.2,
-   "Total": 152.0,
+   "SpreadValue": 17.3,
+   "Total": 151.0,
    "source": "torvik",
-   "text": "UCF -18.2, 85-67 (92%)",
-   "Spread": "-18.2 UCF"
+   "text": "UCF -17.3, 84-67 (92%)",
+   "Spread": "-17.3 UCF"
   },
   "Vegas": {
    "HomeTeamWinProbability": 0.8,
