@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T23:25:18Z",
+ "generated": "2026-11-07T23:45:10Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -180,25 +180,25 @@
    "table": {
     "staked": {
      "all": {
-      "bets": 208,
-      "wins": 118,
-      "losses": 90,
+      "bets": 289,
+      "wins": 160,
+      "losses": 129,
       "pushes": 0,
-      "win_rate": 0.5673,
-      "units": 17.27,
-      "roi": 0.083,
+      "win_rate": 0.5536,
+      "units": 16.46,
+      "roi": 0.0569,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 208,
-      "wins": 118,
-      "losses": 90,
+      "bets": 289,
+      "wins": 160,
+      "losses": 129,
       "pushes": 0,
-      "win_rate": 0.5673,
-      "units": 17.27,
-      "roi": 0.083,
+      "win_rate": 0.5536,
+      "units": 16.46,
+      "roi": 0.0569,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -230,37 +230,37 @@
     },
     "BET": {
      "all": {
-      "bets": 2244,
-      "wins": 1160,
-      "losses": 1084,
+      "bets": 2169,
+      "wins": 1106,
+      "losses": 1063,
       "pushes": 0,
-      "win_rate": 0.5169,
-      "units": -29.44,
-      "roi": -0.0131,
+      "win_rate": 0.5099,
+      "units": -57.54,
+      "roi": -0.0265,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 208,
-      "wins": 118,
-      "losses": 90,
+      "bets": 289,
+      "wins": 160,
+      "losses": 129,
       "pushes": 0,
-      "win_rate": 0.5673,
-      "units": 17.27,
-      "roi": 0.083,
+      "win_rate": 0.5536,
+      "units": 16.46,
+      "roi": 0.0569,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "total": {
-      "bets": 2036,
-      "wins": 1042,
-      "losses": 994,
+      "bets": 1880,
+      "wins": 946,
+      "losses": 934,
       "pushes": 0,
-      "win_rate": 0.5118,
-      "units": -46.72,
-      "roi": -0.0229,
+      "win_rate": 0.5032,
+      "units": -73.99,
+      "roi": -0.0394,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -280,49 +280,49 @@
     },
     "LEAN": {
      "all": {
-      "bets": 4305,
-      "wins": 2121,
-      "losses": 2184,
+      "bets": 3519,
+      "wins": 1799,
+      "losses": 1720,
       "pushes": 0,
-      "win_rate": 0.4927,
-      "units": -149.14,
-      "roi": -0.0346,
+      "win_rate": 0.5112,
+      "units": -100.1,
+      "roi": -0.0284,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 518,
-      "wins": 275,
-      "losses": 243,
+      "bets": 43,
+      "wins": 24,
+      "losses": 19,
       "pushes": 0,
-      "win_rate": 0.5309,
-      "units": 7.0,
-      "roi": 0.0135,
+      "win_rate": 0.5581,
+      "units": 2.82,
+      "roi": 0.0655,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "total": {
-      "bets": 1877,
-      "wins": 949,
-      "losses": 928,
+      "bets": 1913,
+      "wins": 1002,
+      "losses": 911,
       "pushes": 0,
-      "win_rate": 0.5056,
-      "units": -65.26,
-      "roi": -0.0348,
+      "win_rate": 0.5238,
+      "units": -0.08,
+      "roi": -0.0,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "moneyline": {
-      "bets": 1910,
-      "wins": 897,
-      "losses": 1013,
+      "bets": 1563,
+      "wins": 773,
+      "losses": 790,
       "pushes": 0,
-      "win_rate": 0.4696,
-      "units": -90.88,
-      "roi": -0.0476,
+      "win_rate": 0.4946,
+      "units": -102.84,
+      "roi": -0.0658,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -330,25 +330,25 @@
     },
     "candidate: catboost-spread": {
      "all": {
-      "bets": 174,
-      "wins": 110,
-      "losses": 64,
+      "bets": 223,
+      "wins": 138,
+      "losses": 85,
       "pushes": 0,
-      "win_rate": 0.6322,
-      "units": 36.0,
-      "roi": 0.2069,
+      "win_rate": 0.6188,
+      "units": 40.46,
+      "roi": 0.1814,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 174,
-      "wins": 110,
-      "losses": 64,
+      "bets": 223,
+      "wins": 138,
+      "losses": 85,
       "pushes": 0,
-      "win_rate": 0.6322,
-      "units": 36.0,
-      "roi": 0.2069,
+      "win_rate": 0.6188,
+      "units": 40.46,
+      "roi": 0.1814,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -380,24 +380,24 @@
     },
     "candidate: agree-spread": {
      "all": {
-      "bets": 1,
-      "wins": 1,
+      "bets": 2,
+      "wins": 2,
       "losses": 0,
       "pushes": 0,
       "win_rate": 1.0,
-      "units": 0.91,
+      "units": 1.82,
       "roi": 0.9091,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 1,
-      "wins": 1,
+      "bets": 2,
+      "wins": 2,
       "losses": 0,
       "pushes": 0,
       "win_rate": 1.0,
-      "units": 0.91,
+      "units": 1.82,
       "roi": 0.9091,
       "clv": null,
       "clv_n": 0,
@@ -430,13 +430,13 @@
     },
     "candidate: catboost-moneyline": {
      "all": {
-      "bets": 1376,
-      "wins": 800,
-      "losses": 576,
+      "bets": 1483,
+      "wins": 875,
+      "losses": 608,
       "pushes": 0,
-      "win_rate": 0.5814,
-      "units": 14.17,
-      "roi": 0.0103,
+      "win_rate": 0.59,
+      "units": 37.11,
+      "roi": 0.025,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -466,13 +466,13 @@
       "pending": 0
      },
      "moneyline": {
-      "bets": 1376,
-      "wins": 800,
-      "losses": 576,
+      "bets": 1483,
+      "wins": 875,
+      "losses": 608,
       "pushes": 0,
-      "win_rate": 0.5814,
-      "units": 14.17,
-      "roi": 0.0103,
+      "win_rate": 0.59,
+      "units": 37.11,
+      "roi": 0.025,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -480,13 +480,13 @@
     },
     "candidate: neutral-under": {
      "all": {
-      "bets": 380,
-      "wins": 214,
-      "losses": 166,
+      "bets": 369,
+      "wins": 209,
+      "losses": 160,
       "pushes": 0,
-      "win_rate": 0.5632,
-      "units": 28.55,
-      "roi": 0.0751,
+      "win_rate": 0.5664,
+      "units": 30.0,
+      "roi": 0.0813,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -504,13 +504,13 @@
       "pending": 0
      },
      "total": {
-      "bets": 380,
-      "wins": 214,
-      "losses": 166,
+      "bets": 369,
+      "wins": 209,
+      "losses": 160,
       "pushes": 0,
-      "win_rate": 0.5632,
-      "units": 28.55,
-      "roi": 0.0751,
+      "win_rate": 0.5664,
+      "units": 30.0,
+      "roi": 0.0813,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -532,73 +532,73 @@
    "by_month": {
     "staked": {
      "202311": {
-      "bets": 7,
-      "wins": 3,
-      "losses": 4,
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
       "pushes": 0,
-      "win_rate": 0.4286,
-      "units": -1.27,
-      "roi": -0.1818,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202312": {
-      "bets": 63,
-      "wins": 34,
-      "losses": 29,
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
       "pushes": 0,
-      "win_rate": 0.5397,
-      "units": 1.91,
-      "roi": 0.0303,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202401": {
-      "bets": 63,
-      "wins": 42,
-      "losses": 21,
+      "bets": 64,
+      "wins": 37,
+      "losses": 27,
       "pushes": 0,
-      "win_rate": 0.6667,
-      "units": 17.18,
-      "roi": 0.2727,
+      "win_rate": 0.5781,
+      "units": 6.64,
+      "roi": 0.1037,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202402": {
-      "bets": 46,
-      "wins": 23,
-      "losses": 23,
+      "bets": 137,
+      "wins": 76,
+      "losses": 61,
       "pushes": 0,
-      "win_rate": 0.5,
-      "units": -2.09,
-      "roi": -0.0454,
+      "win_rate": 0.5547,
+      "units": 8.09,
+      "roi": 0.0591,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202403": {
-      "bets": 27,
-      "wins": 15,
-      "losses": 12,
+      "bets": 84,
+      "wins": 46,
+      "losses": 38,
       "pushes": 0,
-      "win_rate": 0.5556,
-      "units": 1.64,
-      "roi": 0.0606,
+      "win_rate": 0.5476,
+      "units": 3.82,
+      "roi": 0.0455,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202404": {
-      "bets": 2,
+      "bets": 4,
       "wins": 1,
-      "losses": 1,
+      "losses": 3,
       "pushes": 0,
-      "win_rate": 0.5,
-      "units": -0.09,
-      "roi": -0.0454,
+      "win_rate": 0.25,
+      "units": -2.09,
+      "roi": -0.5227,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -606,73 +606,73 @@
     },
     "BET": {
      "202311": {
-      "bets": 543,
-      "wins": 277,
-      "losses": 266,
+      "bets": 524,
+      "wins": 257,
+      "losses": 267,
       "pushes": 0,
-      "win_rate": 0.5101,
-      "units": -14.18,
-      "roi": -0.0261,
+      "win_rate": 0.4905,
+      "units": -33.36,
+      "roi": -0.0637,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202312": {
-      "bets": 430,
-      "wins": 228,
-      "losses": 202,
+      "bets": 344,
+      "wins": 182,
+      "losses": 162,
       "pushes": 0,
-      "win_rate": 0.5302,
-      "units": 5.27,
-      "roi": 0.0123,
+      "win_rate": 0.5291,
+      "units": 3.46,
+      "roi": 0.01,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202401": {
-      "bets": 483,
-      "wins": 249,
-      "losses": 234,
+      "bets": 433,
+      "wins": 213,
+      "losses": 220,
       "pushes": 0,
-      "win_rate": 0.5155,
-      "units": -7.63,
-      "roi": -0.0158,
+      "win_rate": 0.4919,
+      "units": -26.36,
+      "roi": -0.0609,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202402": {
-      "bets": 494,
-      "wins": 253,
-      "losses": 241,
+      "bets": 533,
+      "wins": 282,
+      "losses": 251,
       "pushes": 0,
-      "win_rate": 0.5121,
-      "units": -11.0,
-      "roi": -0.0223,
+      "win_rate": 0.5291,
+      "units": 5.37,
+      "roi": 0.0101,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202403": {
-      "bets": 289,
-      "wins": 151,
-      "losses": 138,
+      "bets": 328,
+      "wins": 170,
+      "losses": 158,
       "pushes": 0,
-      "win_rate": 0.5225,
-      "units": -0.73,
-      "roi": -0.0025,
+      "win_rate": 0.5183,
+      "units": -3.45,
+      "roi": -0.0105,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202404": {
-      "bets": 5,
+      "bets": 7,
       "wins": 2,
-      "losses": 3,
+      "losses": 5,
       "pushes": 0,
-      "win_rate": 0.4,
-      "units": -1.18,
-      "roi": -0.2364,
+      "win_rate": 0.2857,
+      "units": -3.18,
+      "roi": -0.4545,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -692,1209 +692,1201 @@
      "date": 20231107,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -6.09,
-     "bet_bets": 71,
+     "bet_units": -5.09,
+     "bet_bets": 70,
      "bankroll": 1.0
     },
     {
      "date": 20231108,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -6.27,
-     "bet_bets": 75,
+     "bet_units": -5.27,
+     "bet_bets": 74,
      "bankroll": 1.0
     },
     {
      "date": 20231109,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -7.64,
-     "bet_bets": 84,
+     "bet_units": -8.55,
+     "bet_bets": 83,
      "bankroll": 1.0
     },
     {
      "date": 20231110,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -9.64,
-     "bet_bets": 128,
+     "bet_units": -8.64,
+     "bet_bets": 127,
      "bankroll": 1.0
     },
     {
      "date": 20231111,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -9.0,
-     "bet_bets": 156,
+     "bet_units": -5.09,
+     "bet_bets": 154,
      "bankroll": 1.0
     },
     {
      "date": 20231112,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -15.54,
-     "bet_bets": 174,
+     "bet_units": -11.64,
+     "bet_bets": 172,
      "bankroll": 1.0
     },
     {
      "date": 20231113,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -14.45,
-     "bet_bets": 192,
+     "bet_units": -13.36,
+     "bet_bets": 189,
      "bankroll": 1.0
     },
     {
      "date": 20231114,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -14.09,
-     "bet_bets": 226,
+     "bet_units": -16.91,
+     "bet_bets": 225,
      "bankroll": 1.0
     },
     {
      "date": 20231115,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -17.64,
-     "bet_bets": 241,
+     "bet_units": -22.45,
+     "bet_bets": 242,
      "bankroll": 1.0
     },
     {
      "date": 20231116,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -15.36,
-     "bet_bets": 254,
+     "bet_units": -21.18,
+     "bet_bets": 256,
      "bankroll": 1.0
     },
     {
      "date": 20231117,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -13.18,
-     "bet_bets": 290,
+     "bet_units": -20.0,
+     "bet_bets": 293,
      "bankroll": 1.0
     },
     {
      "date": 20231118,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -9.27,
-     "bet_bets": 309,
+     "bet_units": -16.09,
+     "bet_bets": 312,
      "bankroll": 1.0
     },
     {
      "date": 20231119,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -18.91,
-     "bet_bets": 332,
+     "bet_units": -26.63,
+     "bet_bets": 334,
      "bankroll": 1.0
     },
     {
      "date": 20231120,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -23.73,
-     "bet_bets": 354,
+     "bet_units": -36.09,
+     "bet_bets": 353,
      "bankroll": 1.0
     },
     {
      "date": 20231121,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -23.0,
-     "bet_bets": 380,
+     "bet_units": -32.36,
+     "bet_bets": 376,
      "bankroll": 1.0
     },
     {
      "date": 20231122,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -30.82,
-     "bet_bets": 405,
+     "bet_units": -42.0,
+     "bet_bets": 399,
      "bankroll": 1.0
     },
     {
      "date": 20231123,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": -25.36,
-     "bet_bets": 411,
+     "bet_units": -38.45,
+     "bet_bets": 405,
      "bankroll": 1.0
     },
     {
      "date": 20231124,
-     "staked_units": -1.0,
-     "staked_bets": 1,
-     "bet_units": -22.73,
-     "bet_bets": 437,
-     "bankroll": 0.9931
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -33.91,
+     "bet_bets": 431,
+     "bankroll": 1.0
     },
     {
      "date": 20231125,
-     "staked_units": -2.0,
-     "staked_bets": 2,
-     "bet_units": -25.63,
-     "bet_bets": 459,
-     "bankroll": 0.9794
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -36.73,
+     "bet_bets": 451,
+     "bankroll": 1.0
     },
     {
      "date": 20231126,
-     "staked_units": -4.0,
-     "staked_bets": 4,
-     "bet_units": -23.54,
-     "bet_bets": 476,
-     "bankroll": 0.9524
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -34.63,
+     "bet_bets": 468,
+     "bankroll": 1.0
     },
     {
      "date": 20231127,
-     "staked_units": -3.09,
-     "staked_bets": 5,
-     "bet_units": -21.09,
-     "bet_bets": 485,
-     "bankroll": 0.9643
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -35.82,
+     "bet_bets": 473,
+     "bankroll": 1.0
     },
     {
      "date": 20231128,
-     "staked_units": -2.18,
-     "staked_bets": 6,
-     "bet_units": -21.63,
-     "bet_bets": 497,
-     "bankroll": 0.9764
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -39.36,
+     "bet_bets": 488,
+     "bankroll": 1.0
     },
     {
      "date": 20231129,
-     "staked_units": -2.18,
-     "staked_bets": 6,
-     "bet_units": -17.36,
-     "bet_bets": 529,
-     "bankroll": 0.9764
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -35.73,
+     "bet_bets": 513,
+     "bankroll": 1.0
     },
     {
      "date": 20231130,
-     "staked_units": -1.27,
-     "staked_bets": 7,
-     "bet_units": -14.18,
-     "bet_bets": 543,
-     "bankroll": 0.9887
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -33.36,
+     "bet_bets": 524,
+     "bankroll": 1.0
     },
     {
      "date": 20231201,
-     "staked_units": -1.36,
-     "staked_bets": 9,
-     "bet_units": -15.63,
-     "bet_bets": 554,
-     "bankroll": 0.9874
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -30.91,
+     "bet_bets": 533,
+     "bankroll": 1.0
     },
     {
      "date": 20231202,
-     "staked_units": -1.55,
-     "staked_bets": 13,
-     "bet_units": -17.36,
-     "bet_bets": 592,
-     "bankroll": 0.9849
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -29.45,
+     "bet_bets": 564,
+     "bankroll": 1.0
     },
     {
      "date": 20231203,
-     "staked_units": -2.55,
-     "staked_bets": 14,
-     "bet_units": -20.82,
-     "bet_bets": 605,
-     "bankroll": 0.9713
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -31.91,
+     "bet_bets": 576,
+     "bankroll": 1.0
     },
     {
      "date": 20231204,
-     "staked_units": -3.55,
-     "staked_bets": 15,
-     "bet_units": -21.0,
-     "bet_bets": 609,
-     "bankroll": 0.9579
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -31.09,
+     "bet_bets": 579,
+     "bankroll": 1.0
     },
     {
      "date": 20231205,
-     "staked_units": -3.64,
-     "staked_bets": 17,
-     "bet_units": -23.72,
-     "bet_bets": 627,
-     "bankroll": 0.9567
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -33.72,
+     "bet_bets": 595,
+     "bankroll": 1.0
     },
     {
      "date": 20231206,
-     "staked_units": -2.91,
-     "staked_bets": 22,
-     "bet_units": -14.27,
-     "bet_bets": 650,
-     "bankroll": 0.9669
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -24.18,
+     "bet_bets": 616,
+     "bankroll": 1.0
     },
     {
      "date": 20231207,
-     "staked_units": -2.91,
-     "staked_bets": 22,
-     "bet_units": -13.36,
-     "bet_bets": 651,
-     "bankroll": 0.9669
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -23.27,
+     "bet_bets": 617,
+     "bankroll": 1.0
     },
     {
      "date": 20231208,
-     "staked_units": -3.91,
-     "staked_bets": 23,
-     "bet_units": -14.45,
-     "bet_bets": 654,
-     "bankroll": 0.9603
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -24.27,
+     "bet_bets": 618,
+     "bankroll": 1.0
     },
     {
      "date": 20231209,
-     "staked_units": -4.18,
-     "staked_bets": 29,
-     "bet_units": -8.81,
-     "bet_bets": 698,
-     "bankroll": 0.9573
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -19.91,
+     "bet_bets": 648,
+     "bankroll": 1.0
     },
     {
      "date": 20231210,
-     "staked_units": -4.18,
-     "staked_bets": 29,
-     "bet_units": -12.18,
-     "bet_bets": 709,
-     "bankroll": 0.9573
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -24.18,
+     "bet_bets": 658,
+     "bankroll": 1.0
     },
     {
      "date": 20231211,
-     "staked_units": -3.27,
-     "staked_bets": 30,
-     "bet_units": -11.45,
-     "bet_bets": 714,
-     "bankroll": 0.9693
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -23.36,
+     "bet_bets": 661,
+     "bankroll": 1.0
     },
     {
      "date": 20231212,
-     "staked_units": -4.36,
-     "staked_bets": 33,
-     "bet_units": -15.91,
-     "bet_bets": 728,
-     "bankroll": 0.9547
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -28.54,
+     "bet_bets": 670,
+     "bankroll": 1.0
     },
     {
      "date": 20231213,
-     "staked_units": -5.36,
-     "staked_bets": 34,
-     "bet_units": -13.45,
-     "bet_bets": 737,
-     "bankroll": 0.9415
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -24.18,
+     "bet_bets": 679,
+     "bankroll": 1.0
     },
     {
      "date": 20231214,
-     "staked_units": -5.36,
-     "staked_bets": 34,
-     "bet_units": -14.54,
-     "bet_bets": 740,
-     "bankroll": 0.9415
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -23.36,
+     "bet_bets": 682,
+     "bankroll": 1.0
     },
     {
      "date": 20231215,
-     "staked_units": -5.36,
-     "staked_bets": 34,
-     "bet_units": -15.63,
-     "bet_bets": 743,
-     "bankroll": 0.9415
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -24.45,
+     "bet_bets": 685,
+     "bankroll": 1.0
     },
     {
      "date": 20231216,
-     "staked_units": -3.91,
-     "staked_bets": 44,
-     "bet_units": -9.91,
-     "bet_bets": 785,
-     "bankroll": 0.9427
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -18.45,
+     "bet_bets": 721,
+     "bankroll": 1.0
     },
     {
      "date": 20231217,
-     "staked_units": -2.09,
-     "staked_bets": 46,
-     "bet_units": -1.91,
-     "bet_bets": 798,
-     "bankroll": 0.9604
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -17.0,
+     "bet_bets": 731,
+     "bankroll": 1.0
     },
     {
      "date": 20231218,
-     "staked_units": -2.09,
-     "staked_bets": 46,
-     "bet_units": -4.27,
-     "bet_bets": 808,
-     "bankroll": 0.9604
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -18.27,
+     "bet_bets": 738,
+     "bankroll": 1.0
     },
     {
      "date": 20231219,
-     "staked_units": -4.27,
-     "staked_bets": 52,
-     "bet_units": -6.36,
-     "bet_bets": 833,
-     "bankroll": 0.9255
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -15.18,
+     "bet_bets": 754,
+     "bankroll": 1.0
     },
     {
      "date": 20231220,
-     "staked_units": -4.45,
-     "staked_bets": 56,
-     "bet_units": -4.54,
-     "bet_bets": 856,
-     "bankroll": 0.9295
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -10.18,
+     "bet_bets": 770,
+     "bankroll": 1.0
     },
     {
      "date": 20231221,
-     "staked_units": -2.73,
-     "staked_bets": 60,
-     "bet_units": -3.09,
-     "bet_bets": 887,
-     "bankroll": 0.9459
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -13.09,
+     "bet_bets": 792,
+     "bankroll": 1.0
     },
     {
      "date": 20231222,
-     "staked_units": -3.73,
-     "staked_bets": 61,
-     "bet_units": -1.72,
-     "bet_bets": 899,
-     "bankroll": 0.9328
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -9.81,
+     "bet_bets": 804,
+     "bankroll": 1.0
     },
     {
      "date": 20231223,
-     "staked_units": -3.73,
-     "staked_bets": 61,
-     "bet_units": -5.81,
-     "bet_bets": 905,
-     "bankroll": 0.9328
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -13.91,
+     "bet_bets": 810,
+     "bankroll": 1.0
     },
     {
      "date": 20231224,
-     "staked_units": -2.82,
-     "staked_bets": 62,
-     "bet_units": -5.9,
-     "bet_bets": 907,
-     "bankroll": 0.9445
-    },
-    {
-     "date": 20231227,
-     "staked_units": -2.82,
-     "staked_bets": 62,
-     "bet_units": -5.9,
-     "bet_bets": 907,
-     "bankroll": 0.9445
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -14.91,
+     "bet_bets": 811,
+     "bankroll": 1.0
     },
     {
      "date": 20231228,
-     "staked_units": -2.91,
-     "staked_bets": 64,
-     "bet_units": -5.18,
-     "bet_bets": 912,
-     "bankroll": 0.9439
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -15.09,
+     "bet_bets": 815,
+     "bankroll": 1.0
     },
     {
      "date": 20231229,
-     "staked_units": -1.09,
-     "staked_bets": 66,
-     "bet_units": -8.0,
-     "bet_bets": 932,
-     "bankroll": 0.9676
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -21.63,
+     "bet_bets": 833,
+     "bankroll": 1.0
     },
     {
      "date": 20231230,
-     "staked_units": -1.18,
-     "staked_bets": 68,
-     "bet_units": -10.45,
-     "bet_bets": 965,
-     "bankroll": 0.9664
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -26.72,
+     "bet_bets": 861,
+     "bankroll": 1.0
     },
     {
      "date": 20231231,
-     "staked_units": 0.64,
-     "staked_bets": 70,
-     "bet_units": -8.9,
-     "bet_bets": 973,
-     "bankroll": 0.9907
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -29.91,
+     "bet_bets": 868,
+     "bankroll": 1.0
     },
     {
      "date": 20240101,
-     "staked_units": 0.64,
-     "staked_bets": 70,
-     "bet_units": -9.0,
-     "bet_bets": 975,
-     "bankroll": 0.9907
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -28.09,
+     "bet_bets": 870,
+     "bankroll": 1.0
     },
     {
      "date": 20240102,
-     "staked_units": 1.55,
-     "staked_bets": 71,
-     "bet_units": -11.27,
-     "bet_bets": 983,
-     "bankroll": 1.0031
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -30.27,
+     "bet_bets": 876,
+     "bankroll": 1.0
     },
     {
      "date": 20240103,
-     "staked_units": 0.55,
-     "staked_bets": 72,
-     "bet_units": -21.63,
-     "bet_bets": 1001,
-     "bankroll": 0.9892
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -40.36,
+     "bet_bets": 888,
+     "bankroll": 1.0
     },
     {
      "date": 20240104,
-     "staked_units": -1.55,
-     "staked_bets": 76,
-     "bet_units": -15.18,
-     "bet_bets": 1027,
-     "bankroll": 0.9675
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -35.54,
+     "bet_bets": 908,
+     "bankroll": 1.0
     },
     {
      "date": 20240105,
-     "staked_units": -1.55,
-     "staked_bets": 76,
-     "bet_units": -12.54,
-     "bet_bets": 1032,
-     "bankroll": 0.9675
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -32.0,
+     "bet_bets": 914,
+     "bankroll": 1.0
     },
     {
      "date": 20240106,
-     "staked_units": 1.91,
-     "staked_bets": 84,
-     "bet_units": -17.54,
-     "bet_bets": 1079,
-     "bankroll": 1.0076
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -44.09,
+     "bet_bets": 949,
+     "bankroll": 1.0
     },
     {
      "date": 20240107,
-     "staked_units": 2.82,
-     "staked_bets": 85,
-     "bet_units": -13.09,
-     "bet_bets": 1086,
-     "bankroll": 1.0202
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -40.54,
+     "bet_bets": 955,
+     "bankroll": 1.0
     },
     {
      "date": 20240108,
-     "staked_units": 1.82,
-     "staked_bets": 86,
-     "bet_units": -14.18,
-     "bet_bets": 1089,
-     "bankroll": 1.0132
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -39.72,
+     "bet_bets": 958,
+     "bankroll": 1.0
     },
     {
      "date": 20240109,
-     "staked_units": 2.73,
-     "staked_bets": 87,
-     "bet_units": -16.63,
-     "bet_bets": 1101,
-     "bankroll": 1.0195
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -43.09,
+     "bet_bets": 969,
+     "bankroll": 1.0
     },
     {
      "date": 20240110,
-     "staked_units": 3.55,
-     "staked_bets": 90,
-     "bet_units": -10.9,
-     "bet_bets": 1122,
-     "bankroll": 1.0317
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -38.09,
+     "bet_bets": 985,
+     "bankroll": 1.0
     },
     {
      "date": 20240111,
-     "staked_units": 5.27,
-     "staked_bets": 94,
-     "bet_units": -12.81,
-     "bet_bets": 1143,
-     "bankroll": 1.0634
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -43.54,
+     "bet_bets": 1000,
+     "bankroll": 1.0
     },
     {
      "date": 20240112,
-     "staked_units": 6.18,
-     "staked_bets": 95,
-     "bet_units": -12.99,
-     "bet_bets": 1147,
-     "bankroll": 1.0701
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -44.63,
+     "bet_bets": 1003,
+     "bankroll": 1.0
     },
     {
      "date": 20240113,
-     "staked_units": 8.82,
-     "staked_bets": 100,
-     "bet_units": -15.72,
-     "bet_bets": 1186,
-     "bankroll": 1.1097
+     "staked_units": 2.64,
+     "staked_bets": 5,
+     "bet_units": -45.36,
+     "bet_bets": 1040,
+     "bankroll": 1.0301
     },
     {
      "date": 20240114,
-     "staked_units": 8.82,
-     "staked_bets": 100,
-     "bet_units": -14.09,
-     "bet_bets": 1192,
-     "bankroll": 1.1097
+     "staked_units": 2.64,
+     "staked_bets": 5,
+     "bet_units": -42.72,
+     "bet_bets": 1045,
+     "bankroll": 1.0301
     },
     {
      "date": 20240115,
-     "staked_units": 9.64,
-     "staked_bets": 103,
-     "bet_units": -13.63,
-     "bet_bets": 1203,
-     "bankroll": 1.1299
+     "staked_units": 3.55,
+     "staked_bets": 6,
+     "bet_units": -42.18,
+     "bet_bets": 1054,
+     "bankroll": 1.043
     },
     {
      "date": 20240116,
-     "staked_units": 9.55,
-     "staked_bets": 105,
-     "bet_units": -10.99,
-     "bet_bets": 1208,
-     "bankroll": 1.1284
+     "staked_units": 0.55,
+     "staked_bets": 9,
+     "bet_units": -41.63,
+     "bet_bets": 1063,
+     "bankroll": 0.9999
     },
     {
      "date": 20240117,
-     "staked_units": 10.36,
-     "staked_bets": 108,
-     "bet_units": -7.99,
-     "bet_bets": 1226,
-     "bankroll": 1.1348
+     "staked_units": 3.18,
+     "staked_bets": 14,
+     "bet_units": -34.72,
+     "bet_bets": 1079,
+     "bankroll": 1.0237
     },
     {
      "date": 20240118,
-     "staked_units": 13.0,
-     "staked_bets": 113,
-     "bet_units": -7.08,
-     "bet_bets": 1248,
-     "bankroll": 1.1768
+     "staked_units": 4.0,
+     "staked_bets": 17,
+     "bet_units": -37.45,
+     "bet_bets": 1097,
+     "bankroll": 1.0423
     },
     {
      "date": 20240119,
-     "staked_units": 13.0,
-     "staked_bets": 113,
-     "bet_units": -6.27,
-     "bet_bets": 1251,
-     "bankroll": 1.1768
+     "staked_units": 4.0,
+     "staked_bets": 17,
+     "bet_units": -37.63,
+     "bet_bets": 1101,
+     "bankroll": 1.0423
     },
     {
      "date": 20240120,
-     "staked_units": 13.64,
-     "staked_bets": 120,
-     "bet_units": -2.27,
-     "bet_bets": 1310,
-     "bankroll": 1.1886
+     "staked_units": 2.64,
+     "staked_bets": 26,
+     "bet_units": -35.99,
+     "bet_bets": 1149,
+     "bankroll": 1.0312
     },
     {
      "date": 20240121,
-     "staked_units": 13.64,
-     "staked_bets": 120,
-     "bet_units": 0.28,
-     "bet_bets": 1317,
-     "bankroll": 1.1886
+     "staked_units": 3.45,
+     "staked_bets": 29,
+     "bet_units": -34.45,
+     "bet_bets": 1157,
+     "bankroll": 1.0364
     },
     {
      "date": 20240122,
-     "staked_units": 13.64,
-     "staked_bets": 120,
-     "bet_units": -0.81,
-     "bet_bets": 1320,
-     "bankroll": 1.1886
+     "staked_units": 4.36,
+     "staked_bets": 30,
+     "bet_units": -34.63,
+     "bet_bets": 1161,
+     "bankroll": 1.0494
     },
     {
      "date": 20240123,
-     "staked_units": 13.46,
-     "staked_bets": 124,
-     "bet_units": -2.45,
-     "bet_bets": 1335,
-     "bankroll": 1.1782
+     "staked_units": 5.09,
+     "staked_bets": 35,
+     "bet_units": -37.18,
+     "bet_bets": 1175,
+     "bankroll": 1.0533
     },
     {
      "date": 20240124,
-     "staked_units": 13.46,
-     "staked_bets": 124,
-     "bet_units": -3.99,
-     "bet_bets": 1348,
-     "bankroll": 1.1782
+     "staked_units": 4.0,
+     "staked_bets": 38,
+     "bet_units": -39.81,
+     "bet_bets": 1191,
+     "bankroll": 1.052
     },
     {
      "date": 20240125,
-     "staked_units": 13.46,
-     "staked_bets": 124,
-     "bet_units": -5.63,
-     "bet_bets": 1363,
-     "bankroll": 1.1782
+     "staked_units": 5.64,
+     "staked_bets": 44,
+     "bet_units": -41.63,
+     "bet_bets": 1210,
+     "bankroll": 1.0692
     },
     {
      "date": 20240126,
-     "staked_units": 14.36,
-     "staked_bets": 125,
-     "bet_units": -5.81,
-     "bet_bets": 1367,
-     "bankroll": 1.193
+     "staked_units": 5.64,
+     "staked_bets": 44,
+     "bet_units": -43.63,
+     "bet_bets": 1212,
+     "bankroll": 1.0692
     },
     {
      "date": 20240127,
-     "staked_units": 15.18,
-     "staked_bets": 128,
-     "bet_units": -14.72,
-     "bet_bets": 1416,
-     "bankroll": 1.2147
+     "staked_units": 3.27,
+     "staked_bets": 54,
+     "bet_units": -56.45,
+     "bet_bets": 1263,
+     "bankroll": 1.0423
     },
     {
      "date": 20240128,
-     "staked_units": 16.09,
-     "staked_bets": 129,
-     "bet_units": -12.18,
-     "bet_bets": 1423,
-     "bankroll": 1.2299
+     "staked_units": 3.18,
+     "staked_bets": 56,
+     "bet_units": -54.9,
+     "bet_bets": 1271,
+     "bankroll": 1.041
     },
     {
      "date": 20240129,
-     "staked_units": 17.0,
-     "staked_bets": 130,
-     "bet_units": -14.27,
-     "bet_bets": 1427,
-     "bankroll": 1.2376
+     "staked_units": 3.18,
+     "staked_bets": 56,
+     "bet_units": -57.9,
+     "bet_bets": 1274,
+     "bankroll": 1.041
     },
     {
      "date": 20240130,
-     "staked_units": 16.0,
-     "staked_bets": 131,
-     "bet_units": -15.54,
-     "bet_bets": 1434,
-     "bankroll": 1.2205
+     "staked_units": 5.91,
+     "staked_bets": 59,
+     "bet_units": -54.45,
+     "bet_bets": 1282,
+     "bankroll": 1.0737
     },
     {
      "date": 20240131,
-     "staked_units": 17.82,
-     "staked_bets": 133,
-     "bet_units": -16.54,
-     "bet_bets": 1456,
-     "bankroll": 1.2435
+     "staked_units": 6.64,
+     "staked_bets": 64,
+     "bet_units": -56.27,
+     "bet_bets": 1301,
+     "bankroll": 1.0777
     },
     {
      "date": 20240201,
-     "staked_units": 16.73,
-     "staked_bets": 136,
-     "bet_units": -12.9,
-     "bet_bets": 1481,
-     "bankroll": 1.2256
+     "staked_units": 6.18,
+     "staked_bets": 74,
+     "bet_units": -51.99,
+     "bet_bets": 1333,
+     "bankroll": 1.0797
     },
     {
      "date": 20240202,
-     "staked_units": 16.73,
-     "staked_bets": 136,
-     "bet_units": -9.36,
-     "bet_bets": 1487,
-     "bankroll": 1.2256
+     "staked_units": 5.18,
+     "staked_bets": 75,
+     "bet_units": -50.36,
+     "bet_bets": 1339,
+     "bankroll": 1.0648
     },
     {
      "date": 20240203,
-     "staked_units": 21.27,
-     "staked_bets": 141,
-     "bet_units": -13.54,
-     "bet_bets": 1537,
-     "bankroll": 1.2948
+     "staked_units": 20.18,
+     "staked_bets": 102,
+     "bet_units": -41.08,
+     "bet_bets": 1408,
+     "bankroll": 1.1907
     },
     {
      "date": 20240204,
-     "staked_units": 19.27,
-     "staked_bets": 143,
-     "bet_units": -16.72,
-     "bet_bets": 1544,
-     "bankroll": 1.259
+     "staked_units": 19.18,
+     "staked_bets": 103,
+     "bet_units": -41.36,
+     "bet_bets": 1414,
+     "bankroll": 1.1743
     },
     {
      "date": 20240205,
-     "staked_units": 19.27,
-     "staked_bets": 143,
-     "bet_units": -15.99,
-     "bet_bets": 1549,
-     "bankroll": 1.259
+     "staked_units": 20.09,
+     "staked_bets": 104,
+     "bet_units": -41.54,
+     "bet_bets": 1418,
+     "bankroll": 1.189
     },
     {
      "date": 20240206,
-     "staked_units": 18.27,
-     "staked_bets": 144,
-     "bet_units": -20.17,
-     "bet_bets": 1557,
-     "bankroll": 1.2416
+     "staked_units": 19.0,
+     "staked_bets": 107,
+     "bet_units": -44.81,
+     "bet_bets": 1427,
+     "bankroll": 1.1636
     },
     {
      "date": 20240207,
-     "staked_units": 17.18,
-     "staked_bets": 147,
-     "bet_units": -20.08,
-     "bet_bets": 1576,
-     "bankroll": 1.2315
+     "staked_units": 18.82,
+     "staked_bets": 111,
+     "bet_units": -43.63,
+     "bet_bets": 1443,
+     "bankroll": 1.1687
     },
     {
      "date": 20240208,
-     "staked_units": 17.18,
-     "staked_bets": 147,
-     "bet_units": -34.54,
-     "bet_bets": 1600,
-     "bankroll": 1.2315
+     "staked_units": 22.36,
+     "staked_bets": 117,
+     "bet_units": -55.36,
+     "bet_bets": 1470,
+     "bankroll": 1.2186
     },
     {
      "date": 20240209,
-     "staked_units": 17.18,
-     "staked_bets": 147,
-     "bet_units": -34.54,
-     "bet_bets": 1600,
-     "bankroll": 1.2315
+     "staked_units": 22.36,
+     "staked_bets": 117,
+     "bet_units": -54.45,
+     "bet_bets": 1471,
+     "bankroll": 1.2186
     },
     {
      "date": 20240210,
-     "staked_units": 16.91,
-     "staked_bets": 153,
-     "bet_units": -39.81,
-     "bet_bets": 1653,
-     "bankroll": 1.2277
+     "staked_units": 22.73,
+     "staked_bets": 130,
+     "bet_units": -63.63,
+     "bet_bets": 1526,
+     "bankroll": 1.2339
     },
     {
      "date": 20240211,
-     "staked_units": 16.91,
-     "staked_bets": 153,
-     "bet_units": -40.99,
-     "bet_bets": 1658,
-     "bankroll": 1.2277
+     "staked_units": 22.73,
+     "staked_bets": 130,
+     "bet_units": -63.81,
+     "bet_bets": 1530,
+     "bankroll": 1.2339
     },
     {
      "date": 20240212,
-     "staked_units": 16.82,
-     "staked_bets": 155,
-     "bet_units": -38.54,
-     "bet_bets": 1667,
-     "bankroll": 1.2261
+     "staked_units": 21.64,
+     "staked_bets": 133,
+     "bet_units": -62.36,
+     "bet_bets": 1540,
+     "bankroll": 1.2238
     },
     {
      "date": 20240213,
-     "staked_units": 17.64,
-     "staked_bets": 158,
-     "bet_units": -40.17,
-     "bet_bets": 1682,
-     "bankroll": 1.2323
+     "staked_units": 21.55,
+     "staked_bets": 135,
+     "bet_units": -64.81,
+     "bet_bets": 1552,
+     "bankroll": 1.2146
     },
     {
      "date": 20240214,
-     "staked_units": 18.55,
-     "staked_bets": 159,
-     "bet_units": -35.99,
-     "bet_bets": 1695,
-     "bankroll": 1.2477
+     "staked_units": 21.46,
+     "staked_bets": 137,
+     "bet_units": -61.45,
+     "bet_bets": 1562,
+     "bankroll": 1.2131
     },
     {
      "date": 20240215,
-     "staked_units": 17.55,
-     "staked_bets": 160,
-     "bet_units": -33.26,
-     "bet_bets": 1719,
-     "bankroll": 1.2391
+     "staked_units": 23.18,
+     "staked_bets": 141,
+     "bet_units": -55.81,
+     "bet_bets": 1585,
+     "bankroll": 1.2428
     },
     {
      "date": 20240216,
-     "staked_units": 17.55,
-     "staked_bets": 160,
-     "bet_units": -31.54,
-     "bet_bets": 1723,
-     "bankroll": 1.2391
-    },
-    {
-     "date": 20240217,
-     "staked_units": 17.36,
-     "staked_bets": 164,
-     "bet_units": -26.99,
-     "bet_bets": 1770,
-     "bankroll": 1.2368
-    },
-    {
-     "date": 20240218,
-     "staked_units": 17.36,
-     "staked_bets": 164,
-     "bet_units": -28.45,
-     "bet_bets": 1781,
-     "bankroll": 1.2368
-    },
-    {
-     "date": 20240219,
-     "staked_units": 17.36,
-     "staked_bets": 164,
-     "bet_units": -27.81,
-     "bet_bets": 1788,
-     "bankroll": 1.2368
-    },
-    {
-     "date": 20240220,
-     "staked_units": 17.36,
-     "staked_bets": 164,
-     "bet_units": -25.08,
-     "bet_bets": 1791,
-     "bankroll": 1.2368
-    },
-    {
-     "date": 20240221,
-     "staked_units": 18.27,
-     "staked_bets": 165,
-     "bet_units": -20.17,
-     "bet_bets": 1809,
-     "bankroll": 1.2523
-    },
-    {
-     "date": 20240222,
-     "staked_units": 18.18,
-     "staked_bets": 167,
-     "bet_units": -17.54,
-     "bet_bets": 1835,
-     "bankroll": 1.2594
-    },
-    {
-     "date": 20240223,
-     "staked_units": 19.0,
-     "staked_bets": 170,
-     "bet_units": -14.08,
-     "bet_bets": 1843,
-     "bankroll": 1.2744
-    },
-    {
-     "date": 20240224,
-     "staked_units": 17.82,
-     "staked_bets": 175,
-     "bet_units": -31.54,
-     "bet_bets": 1891,
-     "bankroll": 1.2544
-    },
-    {
-     "date": 20240225,
-     "staked_units": 17.82,
-     "staked_bets": 175,
-     "bet_units": -29.99,
-     "bet_bets": 1899,
-     "bankroll": 1.2544
-    },
-    {
-     "date": 20240226,
-     "staked_units": 16.82,
-     "staked_bets": 176,
-     "bet_units": -31.17,
-     "bet_bets": 1904,
-     "bankroll": 1.2371
-    },
-    {
-     "date": 20240227,
-     "staked_units": 15.82,
-     "staked_bets": 177,
-     "bet_units": -31.63,
-     "bet_bets": 1914,
-     "bankroll": 1.22
-    },
-    {
-     "date": 20240228,
-     "staked_units": 14.82,
-     "staked_bets": 178,
-     "bet_units": -31.54,
-     "bet_bets": 1933,
-     "bankroll": 1.2116
-    },
-    {
-     "date": 20240229,
-     "staked_units": 15.73,
-     "staked_bets": 179,
-     "bet_units": -27.54,
-     "bet_bets": 1950,
-     "bankroll": 1.2192
-    },
-    {
-     "date": 20240301,
-     "staked_units": 15.73,
-     "staked_bets": 179,
-     "bet_units": -27.99,
-     "bet_bets": 1960,
-     "bankroll": 1.2192
-    },
-    {
-     "date": 20240302,
-     "staked_units": 15.64,
-     "staked_bets": 181,
-     "bet_units": -42.45,
-     "bet_bets": 2005,
-     "bankroll": 1.2177
-    },
-    {
-     "date": 20240303,
-     "staked_units": 17.46,
-     "staked_bets": 183,
-     "bet_units": -38.08,
-     "bet_bets": 2014,
-     "bankroll": 1.2482
-    },
-    {
-     "date": 20240304,
-     "staked_units": 17.36,
-     "staked_bets": 185,
-     "bet_units": -34.72,
-     "bet_bets": 2024,
-     "bankroll": 1.2553
-    },
-    {
-     "date": 20240305,
-     "staked_units": 17.27,
-     "staked_bets": 187,
-     "bet_units": -34.44,
-     "bet_bets": 2039,
-     "bankroll": 1.2458
-    },
-    {
-     "date": 20240306,
-     "staked_units": 16.27,
-     "staked_bets": 188,
-     "bet_units": -32.08,
-     "bet_bets": 2050,
-     "bankroll": 1.2372
-    },
-    {
-     "date": 20240307,
-     "staked_units": 16.18,
-     "staked_bets": 190,
-     "bet_units": -27.44,
-     "bet_bets": 2074,
-     "bankroll": 1.2357
-    },
-    {
-     "date": 20240308,
-     "staked_units": 16.18,
-     "staked_bets": 190,
-     "bet_units": -24.81,
-     "bet_bets": 2079,
-     "bankroll": 1.2357
-    },
-    {
-     "date": 20240309,
-     "staked_units": 14.18,
-     "staked_bets": 192,
-     "bet_units": -34.81,
-     "bet_bets": 2110,
-     "bankroll": 1.2101
-    },
-    {
-     "date": 20240310,
-     "staked_units": 15.09,
-     "staked_bets": 193,
-     "bet_units": -32.35,
-     "bet_bets": 2119,
-     "bankroll": 1.2253
-    },
-    {
-     "date": 20240311,
-     "staked_units": 16.0,
-     "staked_bets": 194,
-     "bet_units": -28.81,
-     "bet_bets": 2125,
-     "bankroll": 1.2406
-    },
-    {
-     "date": 20240312,
-     "staked_units": 16.0,
-     "staked_bets": 194,
-     "bet_units": -26.26,
-     "bet_bets": 2132,
-     "bankroll": 1.2406
-    },
-    {
-     "date": 20240313,
-     "staked_units": 16.82,
-     "staked_bets": 197,
-     "bet_units": -26.9,
-     "bet_bets": 2146,
-     "bankroll": 1.2554
-    },
-    {
-     "date": 20240314,
-     "staked_units": 17.73,
-     "staked_bets": 198,
-     "bet_units": -27.44,
-     "bet_bets": 2158,
-     "bankroll": 1.277
-    },
-    {
-     "date": 20240315,
-     "staked_units": 17.73,
-     "staked_bets": 198,
-     "bet_units": -24.99,
-     "bet_bets": 2167,
-     "bankroll": 1.277
-    },
-    {
-     "date": 20240316,
-     "staked_units": 18.64,
-     "staked_bets": 199,
-     "bet_units": -22.54,
-     "bet_bets": 2176,
-     "bankroll": 1.285
-    },
-    {
-     "date": 20240317,
-     "staked_units": 18.64,
-     "staked_bets": 199,
-     "bet_units": -20.72,
-     "bet_bets": 2178,
-     "bankroll": 1.285
-    },
-    {
-     "date": 20240319,
-     "staked_units": 16.64,
-     "staked_bets": 201,
-     "bet_units": -21.99,
-     "bet_bets": 2185,
+     "staked_units": 24.09,
+     "staked_bets": 142,
+     "bet_units": -53.17,
+     "bet_bets": 1590,
      "bankroll": 1.2584
     },
     {
+     "date": 20240217,
+     "staked_units": 25.55,
+     "staked_bets": 152,
+     "bet_units": -50.45,
+     "bet_bets": 1635,
+     "bankroll": 1.2678
+    },
+    {
+     "date": 20240218,
+     "staked_units": 25.46,
+     "staked_bets": 154,
+     "bet_units": -50.08,
+     "bet_bets": 1648,
+     "bankroll": 1.275
+    },
+    {
+     "date": 20240219,
+     "staked_units": 27.18,
+     "staked_bets": 158,
+     "bet_units": -49.63,
+     "bet_bets": 1659,
+     "bankroll": 1.3054
+    },
+    {
+     "date": 20240220,
+     "staked_units": 25.18,
+     "staked_bets": 160,
+     "bet_units": -48.99,
+     "bet_bets": 1666,
+     "bankroll": 1.2693
+    },
+    {
+     "date": 20240221,
+     "staked_units": 27.82,
+     "staked_bets": 165,
+     "bet_units": -43.26,
+     "bet_bets": 1687,
+     "bankroll": 1.3076
+    },
+    {
+     "date": 20240222,
+     "staked_units": 23.73,
+     "staked_bets": 171,
+     "bet_units": -40.81,
+     "bet_bets": 1717,
+     "bankroll": 1.2436
+    },
+    {
+     "date": 20240223,
+     "staked_units": 24.46,
+     "staked_bets": 176,
+     "bet_units": -37.36,
+     "bet_bets": 1725,
+     "bankroll": 1.2576
+    },
+    {
+     "date": 20240224,
+     "staked_units": 18.09,
+     "staked_bets": 190,
+     "bet_units": -52.99,
+     "bet_bets": 1775,
+     "bankroll": 1.174
+    },
+    {
+     "date": 20240225,
+     "staked_units": 17.09,
+     "staked_bets": 191,
+     "bet_units": -53.36,
+     "bet_bets": 1783,
+     "bankroll": 1.1659
+    },
+    {
+     "date": 20240226,
+     "staked_units": 15.09,
+     "staked_bets": 193,
+     "bet_units": -55.54,
+     "bet_bets": 1789,
+     "bankroll": 1.1337
+    },
+    {
+     "date": 20240227,
+     "staked_units": 13.09,
+     "staked_bets": 195,
+     "bet_units": -56.9,
+     "bet_bets": 1798,
+     "bankroll": 1.1024
+    },
+    {
+     "date": 20240228,
+     "staked_units": 15.73,
+     "staked_bets": 200,
+     "bet_units": -51.08,
+     "bet_bets": 1817,
+     "bankroll": 1.1294
+    },
+    {
+     "date": 20240229,
+     "staked_units": 14.73,
+     "staked_bets": 201,
+     "bet_units": -50.9,
+     "bet_bets": 1834,
+     "bankroll": 1.1138
+    },
+    {
+     "date": 20240301,
+     "staked_units": 14.64,
+     "staked_bets": 203,
+     "bet_units": -51.45,
+     "bet_bets": 1846,
+     "bankroll": 1.1054
+    },
+    {
+     "date": 20240302,
+     "staked_units": 16.36,
+     "staked_bets": 207,
+     "bet_units": -63.17,
+     "bet_bets": 1894,
+     "bankroll": 1.1179
+    },
+    {
+     "date": 20240303,
+     "staked_units": 17.18,
+     "staked_bets": 210,
+     "bet_units": -58.81,
+     "bet_bets": 1903,
+     "bankroll": 1.1383
+    },
+    {
+     "date": 20240304,
+     "staked_units": 17.91,
+     "staked_bets": 215,
+     "bet_units": -52.72,
+     "bet_bets": 1916,
+     "bankroll": 1.1575
+    },
+    {
+     "date": 20240305,
+     "staked_units": 19.73,
+     "staked_bets": 217,
+     "bet_units": -50.45,
+     "bet_bets": 1929,
+     "bankroll": 1.1721
+    },
+    {
+     "date": 20240306,
+     "staked_units": 19.64,
+     "staked_bets": 219,
+     "bet_units": -48.26,
+     "bet_bets": 1944,
+     "bankroll": 1.1787
+    },
+    {
+     "date": 20240307,
+     "staked_units": 18.36,
+     "staked_bets": 226,
+     "bet_units": -47.54,
+     "bet_bets": 1970,
+     "bankroll": 1.1432
+    },
+    {
+     "date": 20240308,
+     "staked_units": 19.27,
+     "staked_bets": 227,
+     "bet_units": -45.81,
+     "bet_bets": 1974,
+     "bankroll": 1.1504
+    },
+    {
+     "date": 20240309,
+     "staked_units": 17.0,
+     "staked_bets": 235,
+     "bet_units": -55.99,
+     "bet_bets": 2009,
+     "bankroll": 1.1222
+    },
+    {
+     "date": 20240310,
+     "staked_units": 17.82,
+     "staked_bets": 238,
+     "bet_units": -53.63,
+     "bet_bets": 2020,
+     "bankroll": 1.1426
+    },
+    {
+     "date": 20240311,
+     "staked_units": 18.64,
+     "staked_bets": 241,
+     "bet_units": -51.17,
+     "bet_bets": 2029,
+     "bankroll": 1.1555
+    },
+    {
+     "date": 20240312,
+     "staked_units": 19.55,
+     "staked_bets": 242,
+     "bet_units": -49.54,
+     "bet_bets": 2035,
+     "bankroll": 1.17
+    },
+    {
+     "date": 20240313,
+     "staked_units": 18.27,
+     "staked_bets": 249,
+     "bet_units": -52.08,
+     "bet_bets": 2049,
+     "bankroll": 1.1502
+    },
+    {
+     "date": 20240314,
+     "staked_units": 18.82,
+     "staked_bets": 258,
+     "bet_units": -50.08,
+     "bet_bets": 2068,
+     "bankroll": 1.1679
+    },
+    {
+     "date": 20240315,
+     "staked_units": 21.55,
+     "staked_bets": 261,
+     "bet_units": -44.9,
+     "bet_bets": 2080,
+     "bankroll": 1.2119
+    },
+    {
+     "date": 20240316,
+     "staked_units": 23.36,
+     "staked_bets": 263,
+     "bet_units": -42.44,
+     "bet_bets": 2089,
+     "bankroll": 1.2347
+    },
+    {
+     "date": 20240317,
+     "staked_units": 22.36,
+     "staked_bets": 264,
+     "bet_units": -41.63,
+     "bet_bets": 2092,
+     "bankroll": 1.2177
+    },
+    {
+     "date": 20240319,
+     "staked_units": 19.27,
+     "staked_bets": 269,
+     "bet_units": -44.99,
+     "bet_bets": 2103,
+     "bankroll": 1.1741
+    },
+    {
      "date": 20240320,
-     "staked_units": 15.64,
-     "staked_bets": 202,
-     "bet_units": -23.17,
-     "bet_bets": 2190,
-     "bankroll": 1.241
+     "staked_units": 18.27,
+     "staked_bets": 270,
+     "bet_units": -47.99,
+     "bet_bets": 2106,
+     "bankroll": 1.1579
     },
     {
      "date": 20240321,
-     "staked_units": 16.55,
-     "staked_bets": 203,
-     "bet_units": -24.35,
-     "bet_bets": 2195,
-     "bankroll": 1.2566
+     "staked_units": 21.0,
+     "staked_bets": 273,
+     "bet_units": -47.35,
+     "bet_bets": 2113,
+     "bankroll": 1.2015
     },
     {
      "date": 20240322,
-     "staked_units": 17.46,
-     "staked_bets": 204,
-     "bet_units": -24.63,
-     "bet_bets": 2201,
-     "bankroll": 1.2724
+     "staked_units": 19.0,
+     "staked_bets": 275,
+     "bet_units": -50.54,
+     "bet_bets": 2120,
+     "bankroll": 1.1766
     },
     {
      "date": 20240323,
-     "staked_units": 17.46,
-     "staked_bets": 204,
-     "bet_units": -29.72,
-     "bet_bets": 2208,
-     "bankroll": 1.2724
+     "staked_units": 19.91,
+     "staked_bets": 276,
+     "bet_units": -54.72,
+     "bet_bets": 2128,
+     "bankroll": 1.1914
     },
     {
      "date": 20240324,
-     "staked_units": 17.46,
-     "staked_bets": 204,
-     "bet_units": -29.26,
-     "bet_bets": 2219,
-     "bankroll": 1.2724
+     "staked_units": 20.73,
+     "staked_bets": 279,
+     "bet_units": -52.44,
+     "bet_bets": 2141,
+     "bankroll": 1.2049
     },
     {
      "date": 20240325,
-     "staked_units": 17.46,
-     "staked_bets": 204,
-     "bet_units": -29.44,
-     "bet_bets": 2223,
-     "bankroll": 1.2724
+     "staked_units": 20.73,
+     "staked_bets": 279,
+     "bet_units": -52.63,
+     "bet_bets": 2145,
+     "bankroll": 1.2049
     },
     {
      "date": 20240326,
-     "staked_units": 17.36,
-     "staked_bets": 206,
-     "bet_units": -29.72,
-     "bet_bets": 2229,
-     "bankroll": 1.2708
+     "staked_units": 20.64,
+     "staked_bets": 281,
+     "bet_units": -52.9,
+     "bet_bets": 2151,
+     "bankroll": 1.2033
     },
     {
      "date": 20240327,
-     "staked_units": 17.36,
-     "staked_bets": 206,
-     "bet_units": -29.81,
-     "bet_bets": 2231,
-     "bankroll": 1.2708
+     "staked_units": 19.64,
+     "staked_bets": 282,
+     "bet_units": -53.99,
+     "bet_bets": 2154,
+     "bankroll": 1.195
     },
     {
      "date": 20240328,
-     "staked_units": 17.36,
-     "staked_bets": 206,
-     "bet_units": -29.99,
-     "bet_bets": 2235,
-     "bankroll": 1.2708
+     "staked_units": 18.64,
+     "staked_bets": 283,
+     "bet_units": -54.17,
+     "bet_bets": 2158,
+     "bankroll": 1.1868
     },
     {
      "date": 20240329,
-     "staked_units": 17.36,
-     "staked_bets": 206,
-     "bet_units": -29.08,
-     "bet_bets": 2236,
-     "bankroll": 1.2708
+     "staked_units": 17.64,
+     "staked_bets": 284,
+     "bet_units": -55.17,
+     "bet_bets": 2159,
+     "bankroll": 1.1704
     },
     {
      "date": 20240330,
-     "staked_units": 17.36,
-     "staked_bets": 206,
-     "bet_units": -29.17,
-     "bet_bets": 2238,
-     "bankroll": 1.2708
+     "staked_units": 17.64,
+     "staked_bets": 284,
+     "bet_units": -55.26,
+     "bet_bets": 2161,
+     "bankroll": 1.1704
     },
     {
      "date": 20240331,
-     "staked_units": 17.36,
-     "staked_bets": 206,
-     "bet_units": -28.26,
-     "bet_bets": 2239,
-     "bankroll": 1.2708
+     "staked_units": 18.55,
+     "staked_bets": 285,
+     "bet_units": -54.35,
+     "bet_bets": 2162,
+     "bankroll": 1.1851
     },
     {
      "date": 20240402,
-     "staked_units": 16.36,
-     "staked_bets": 207,
-     "bet_units": -31.26,
-     "bet_bets": 2242,
-     "bankroll": 1.2533
+     "staked_units": 17.55,
+     "staked_bets": 286,
+     "bet_units": -57.35,
+     "bet_bets": 2165,
+     "bankroll": 1.1687
     },
     {
      "date": 20240404,
-     "staked_units": 17.27,
-     "staked_bets": 208,
-     "bet_units": -29.44,
-     "bet_bets": 2244,
-     "bankroll": 1.269
+     "staked_units": 18.46,
+     "staked_bets": 287,
+     "bet_units": -55.54,
+     "bet_bets": 2167,
+     "bankroll": 1.1834
     },
     {
      "date": 20240406,
-     "staked_units": 17.27,
-     "staked_bets": 208,
-     "bet_units": -29.44,
-     "bet_bets": 2244,
-     "bankroll": 1.269
+     "staked_units": 17.46,
+     "staked_bets": 288,
+     "bet_units": -56.54,
+     "bet_bets": 2168,
+     "bankroll": 1.1671
     },
     {
      "date": 20240408,
-     "staked_units": 17.27,
-     "staked_bets": 208,
-     "bet_units": -29.44,
-     "bet_bets": 2244,
-     "bankroll": 1.269
+     "staked_units": 16.46,
+     "staked_bets": 289,
+     "bet_units": -57.54,
+     "bet_bets": 2169,
+     "bankroll": 1.151
     }
    ],
    "reliability": [
     {
      "bin": "0.00-0.50",
-     "n": 1336,
-     "mean_p": 0.359,
-     "realized": 0.324
+     "n": 1048,
+     "mean_p": 0.366,
+     "realized": 0.316
     },
     {
      "bin": "0.50-0.55",
-     "n": 743,
-     "mean_p": 0.527,
-     "realized": 0.528
+     "n": 266,
+     "mean_p": 0.523,
+     "realized": 0.549
     },
     {
      "bin": "0.55-0.60",
-     "n": 4603,
-     "mean_p": 0.552,
-     "realized": 0.518
+     "n": 4624,
+     "mean_p": 0.553,
+     "realized": 0.524
     },
     {
      "bin": "0.60-0.70",
-     "n": 608,
-     "mean_p": 0.647,
-     "realized": 0.592
+     "n": 583,
+     "mean_p": 0.645,
+     "realized": 0.614
     },
     {
      "bin": "0.70-1.00",
-     "n": 810,
-     "mean_p": 0.777,
-     "realized": 0.77
+     "n": 875,
+     "mean_p": 0.775,
+     "realized": 0.755
     }
    ],
    "recent": [
@@ -1923,6 +1915,19 @@
      "units": -1.0,
      "clv": null,
      "close_line": null
+    },
+    {
+     "date": 20240408,
+     "bet": "Purdue +6.5",
+     "market": "spread",
+     "odds": -110,
+     "tier": "BET",
+     "staked": 1,
+     "fraction": 0.0138,
+     "result": "loss",
+     "units": -1.0,
+     "clv": null,
+     "close_line": 6.5
     },
     {
      "date": 20240408,
@@ -1981,6 +1986,19 @@
      "bet": "Alabama ML",
      "market": "moneyline",
      "odds": 400,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": null,
+     "result": "loss",
+     "units": -1.0,
+     "clv": null,
+     "close_line": null
+    },
+    {
+     "date": 20240406,
+     "bet": "Alabama ML",
+     "market": "moneyline",
+     "odds": 400,
      "tier": "CAND",
      "staked": 0,
      "fraction": null,
@@ -1988,6 +2006,19 @@
      "units": -1.0,
      "clv": null,
      "close_line": null
+    },
+    {
+     "date": 20240406,
+     "bet": "Alabama +10.5",
+     "market": "spread",
+     "odds": -110,
+     "tier": "BET",
+     "staked": 1,
+     "fraction": 0.0138,
+     "result": "loss",
+     "units": -1.0,
+     "clv": null,
+     "close_line": 10.5
     },
     {
      "date": 20240404,
@@ -2059,7 +2090,7 @@
      "bet": "Seton Hall ML",
      "market": "moneyline",
      "odds": -210,
-     "tier": "LEAN",
+     "tier": "CAND",
      "staked": 0,
      "fraction": null,
      "result": "win",
@@ -2134,6 +2165,19 @@
     },
     {
      "date": 20240402,
+     "bet": "Utah +4.5",
+     "market": "spread",
+     "odds": -110,
+     "tier": "CAND",
+     "staked": 0,
+     "fraction": null,
+     "result": "loss",
+     "units": -1.0,
+     "clv": null,
+     "close_line": 4.5
+    },
+    {
+     "date": 20240402,
      "bet": "Under 161.5",
      "market": "total",
      "odds": -110,
@@ -2176,9 +2220,9 @@
      "bet": "Purdue -3.5",
      "market": "spread",
      "odds": -110,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": null,
+     "tier": "BET",
+     "staked": 1,
+     "fraction": 0.0138,
      "result": "win",
      "units": 0.9091,
      "clv": null,
@@ -2189,7 +2233,7 @@
      "bet": "Under 148.5",
      "market": "total",
      "odds": -110,
-     "tier": "BET",
+     "tier": "LEAN",
      "staked": 0,
      "fraction": null,
      "result": "win",
@@ -2215,7 +2259,7 @@
      "bet": "Duke ML",
      "market": "moneyline",
      "odds": -305,
-     "tier": "CAND",
+     "tier": "LEAN",
      "staked": 0,
      "fraction": null,
      "result": "loss",
@@ -2225,68 +2269,16 @@
     },
     {
      "date": 20240331,
-     "bet": "Duke -7.5",
-     "market": "spread",
-     "odds": -110,
+     "bet": "Duke ML",
+     "market": "moneyline",
+     "odds": -305,
      "tier": "CAND",
      "staked": 0,
      "fraction": null,
      "result": "loss",
      "units": -1.0,
      "clv": null,
-     "close_line": -7.5
-    },
-    {
-     "date": 20240330,
-     "bet": "Connecticut ML",
-     "market": "moneyline",
-     "odds": -380,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.2632,
-     "clv": null,
      "close_line": null
-    },
-    {
-     "date": 20240330,
-     "bet": "Connecticut ML",
-     "market": "moneyline",
-     "odds": -380,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.2632,
-     "clv": null,
-     "close_line": null
-    },
-    {
-     "date": 20240330,
-     "bet": "Under 154.5",
-     "market": "total",
-     "odds": -110,
-     "tier": "BET",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.9091,
-     "clv": null,
-     "close_line": 154.5
-    },
-    {
-     "date": 20240330,
-     "bet": "Under 154.5",
-     "market": "total",
-     "odds": -110,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.9091,
-     "clv": null,
-     "close_line": 154.5
     }
    ]
   },
@@ -2299,25 +2291,25 @@
    "table": {
     "staked": {
      "all": {
-      "bets": 249,
-      "wins": 148,
-      "losses": 101,
+      "bets": 284,
+      "wins": 164,
+      "losses": 120,
       "pushes": 0,
-      "win_rate": 0.5944,
-      "units": 33.55,
-      "roi": 0.1347,
+      "win_rate": 0.5775,
+      "units": 29.09,
+      "roi": 0.1024,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 249,
-      "wins": 148,
-      "losses": 101,
+      "bets": 284,
+      "wins": 164,
+      "losses": 120,
       "pushes": 0,
-      "win_rate": 0.5944,
-      "units": 33.55,
-      "roi": 0.1347,
+      "win_rate": 0.5775,
+      "units": 29.09,
+      "roi": 0.1024,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2349,37 +2341,37 @@
     },
     "BET": {
      "all": {
-      "bets": 2179,
-      "wins": 1166,
-      "losses": 1013,
+      "bets": 2081,
+      "wins": 1129,
+      "losses": 952,
       "pushes": 0,
-      "win_rate": 0.5351,
-      "units": 47.01,
-      "roi": 0.0216,
+      "win_rate": 0.5425,
+      "units": 74.37,
+      "roi": 0.0357,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 249,
-      "wins": 148,
-      "losses": 101,
+      "bets": 284,
+      "wins": 164,
+      "losses": 120,
       "pushes": 0,
-      "win_rate": 0.5944,
-      "units": 33.55,
-      "roi": 0.1347,
+      "win_rate": 0.5775,
+      "units": 29.09,
+      "roi": 0.1024,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "total": {
-      "bets": 1930,
-      "wins": 1018,
-      "losses": 912,
+      "bets": 1797,
+      "wins": 965,
+      "losses": 832,
       "pushes": 0,
-      "win_rate": 0.5275,
-      "units": 13.46,
-      "roi": 0.007,
+      "win_rate": 0.537,
+      "units": 45.28,
+      "roi": 0.0252,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2399,49 +2391,49 @@
     },
     "LEAN": {
      "all": {
-      "bets": 4875,
-      "wins": 2340,
-      "losses": 2535,
+      "bets": 5066,
+      "wins": 2518,
+      "losses": 2548,
       "pushes": 0,
-      "win_rate": 0.48,
-      "units": -279.16,
-      "roi": -0.0573,
+      "win_rate": 0.497,
+      "units": -163.5,
+      "roi": -0.0323,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 923,
-      "wins": 466,
-      "losses": 457,
+      "bets": 1487,
+      "wins": 757,
+      "losses": 730,
       "pushes": 0,
-      "win_rate": 0.5049,
-      "units": -33.36,
-      "roi": -0.0361,
+      "win_rate": 0.5091,
+      "units": -41.81,
+      "roi": -0.0281,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "total": {
-      "bets": 2004,
-      "wins": 965,
-      "losses": 1039,
+      "bets": 2065,
+      "wins": 1017,
+      "losses": 1048,
       "pushes": 0,
-      "win_rate": 0.4815,
-      "units": -161.72,
-      "roi": -0.0807,
+      "win_rate": 0.4925,
+      "units": -123.45,
+      "roi": -0.0598,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "moneyline": {
-      "bets": 1948,
-      "wins": 909,
-      "losses": 1039,
+      "bets": 1514,
+      "wins": 744,
+      "losses": 770,
       "pushes": 0,
-      "win_rate": 0.4666,
-      "units": -84.08,
-      "roi": -0.0432,
+      "win_rate": 0.4914,
+      "units": 1.76,
+      "roi": 0.0012,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2449,25 +2441,25 @@
     },
     "candidate: catboost-spread": {
      "all": {
-      "bets": 418,
-      "wins": 227,
-      "losses": 191,
+      "bets": 394,
+      "wins": 221,
+      "losses": 173,
       "pushes": 0,
-      "win_rate": 0.5431,
-      "units": 15.37,
-      "roi": 0.0368,
+      "win_rate": 0.5609,
+      "units": 27.91,
+      "roi": 0.0708,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 418,
-      "wins": 227,
-      "losses": 191,
+      "bets": 394,
+      "wins": 221,
+      "losses": 173,
       "pushes": 0,
-      "win_rate": 0.5431,
-      "units": 15.37,
-      "roi": 0.0368,
+      "win_rate": 0.5609,
+      "units": 27.91,
+      "roi": 0.0708,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2499,25 +2491,25 @@
     },
     "candidate: agree-spread": {
      "all": {
-      "bets": 12,
-      "wins": 8,
-      "losses": 4,
+      "bets": 11,
+      "wins": 3,
+      "losses": 8,
       "pushes": 0,
-      "win_rate": 0.6667,
-      "units": 3.27,
-      "roi": 0.2727,
+      "win_rate": 0.2727,
+      "units": -5.27,
+      "roi": -0.4793,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 12,
-      "wins": 8,
-      "losses": 4,
+      "bets": 11,
+      "wins": 3,
+      "losses": 8,
       "pushes": 0,
-      "win_rate": 0.6667,
-      "units": 3.27,
-      "roi": 0.2727,
+      "win_rate": 0.2727,
+      "units": -5.27,
+      "roi": -0.4793,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2549,13 +2541,13 @@
     },
     "candidate: catboost-moneyline": {
      "all": {
-      "bets": 1522,
-      "wins": 912,
-      "losses": 610,
+      "bets": 1320,
+      "wins": 791,
+      "losses": 529,
       "pushes": 0,
       "win_rate": 0.5992,
-      "units": -25.31,
-      "roi": -0.0166,
+      "units": -1.84,
+      "roi": -0.0014,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2585,13 +2577,13 @@
       "pending": 0
      },
      "moneyline": {
-      "bets": 1522,
-      "wins": 912,
-      "losses": 610,
+      "bets": 1320,
+      "wins": 791,
+      "losses": 529,
       "pushes": 0,
       "win_rate": 0.5992,
-      "units": -25.31,
-      "roi": -0.0166,
+      "units": -1.84,
+      "roi": -0.0014,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2599,13 +2591,13 @@
     },
     "candidate: neutral-under": {
      "all": {
-      "bets": 426,
-      "wins": 230,
-      "losses": 196,
+      "bets": 437,
+      "wins": 234,
+      "losses": 203,
       "pushes": 0,
-      "win_rate": 0.5399,
-      "units": 13.09,
-      "roi": 0.0307,
+      "win_rate": 0.5355,
+      "units": 9.73,
+      "roi": 0.0223,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2623,13 +2615,13 @@
       "pending": 0
      },
      "total": {
-      "bets": 426,
-      "wins": 230,
-      "losses": 196,
+      "bets": 437,
+      "wins": 234,
+      "losses": 203,
       "pushes": 0,
-      "win_rate": 0.5399,
-      "units": 13.09,
-      "roi": 0.0307,
+      "win_rate": 0.5355,
+      "units": 9.73,
+      "roi": 0.0223,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2651,73 +2643,73 @@
    "by_month": {
     "staked": {
      "202411": {
-      "bets": 15,
-      "wins": 8,
-      "losses": 7,
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
       "pushes": 0,
-      "win_rate": 0.5333,
-      "units": 0.27,
-      "roi": 0.0182,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202412": {
-      "bets": 70,
-      "wins": 43,
-      "losses": 27,
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
       "pushes": 0,
-      "win_rate": 0.6143,
-      "units": 12.09,
-      "roi": 0.1727,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202501": {
-      "bets": 86,
-      "wins": 42,
-      "losses": 44,
+      "bets": 66,
+      "wins": 37,
+      "losses": 29,
       "pushes": 0,
-      "win_rate": 0.4884,
-      "units": -5.82,
-      "roi": -0.0676,
+      "win_rate": 0.5606,
+      "units": 4.64,
+      "roi": 0.0703,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202502": {
-      "bets": 37,
-      "wins": 25,
-      "losses": 12,
+      "bets": 133,
+      "wins": 75,
+      "losses": 58,
       "pushes": 0,
-      "win_rate": 0.6757,
-      "units": 10.73,
-      "roi": 0.2899,
+      "win_rate": 0.5639,
+      "units": 10.18,
+      "roi": 0.0766,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202503": {
-      "bets": 37,
-      "wins": 29,
-      "losses": 8,
+      "bets": 80,
+      "wins": 50,
+      "losses": 30,
       "pushes": 0,
-      "win_rate": 0.7838,
-      "units": 18.36,
-      "roi": 0.4963,
+      "win_rate": 0.625,
+      "units": 15.46,
+      "roi": 0.1932,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202504": {
-      "bets": 4,
-      "wins": 1,
+      "bets": 5,
+      "wins": 2,
       "losses": 3,
       "pushes": 0,
-      "win_rate": 0.25,
-      "units": -2.09,
-      "roi": -0.5227,
+      "win_rate": 0.4,
+      "units": -1.18,
+      "roi": -0.2364,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2725,73 +2717,73 @@
     },
     "BET": {
      "202411": {
-      "bets": 656,
-      "wins": 348,
-      "losses": 308,
+      "bets": 652,
+      "wins": 360,
+      "losses": 292,
       "pushes": 0,
-      "win_rate": 0.5305,
-      "units": 8.37,
-      "roi": 0.0128,
+      "win_rate": 0.5521,
+      "units": 35.28,
+      "roi": 0.0541,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202412": {
-      "bets": 435,
-      "wins": 232,
-      "losses": 203,
+      "bets": 337,
+      "wins": 168,
+      "losses": 169,
       "pushes": 0,
-      "win_rate": 0.5333,
-      "units": 7.91,
-      "roi": 0.0182,
+      "win_rate": 0.4985,
+      "units": -16.27,
+      "roi": -0.0483,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202501": {
-      "bets": 470,
-      "wins": 247,
-      "losses": 223,
+      "bets": 398,
+      "wins": 219,
+      "losses": 179,
       "pushes": 0,
-      "win_rate": 0.5255,
-      "units": 1.55,
-      "roi": 0.0033,
+      "win_rate": 0.5503,
+      "units": 20.09,
+      "roi": 0.0505,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202502": {
-      "bets": 315,
-      "wins": 183,
-      "losses": 132,
+      "bets": 383,
+      "wins": 220,
+      "losses": 163,
       "pushes": 0,
-      "win_rate": 0.581,
-      "units": 34.37,
-      "roi": 0.1091,
+      "win_rate": 0.5744,
+      "units": 37.0,
+      "roi": 0.0966,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202503": {
-      "bets": 288,
-      "wins": 148,
-      "losses": 140,
+      "bets": 295,
+      "wins": 153,
+      "losses": 142,
       "pushes": 0,
-      "win_rate": 0.5139,
-      "units": -5.45,
-      "roi": -0.0189,
+      "win_rate": 0.5186,
+      "units": -2.91,
+      "roi": -0.0099,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202504": {
-      "bets": 15,
-      "wins": 8,
+      "bets": 16,
+      "wins": 9,
       "losses": 7,
       "pushes": 0,
-      "win_rate": 0.5333,
-      "units": 0.27,
-      "roi": 0.0182,
+      "win_rate": 0.5625,
+      "units": 1.18,
+      "roi": 0.0739,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -2803,1193 +2795,1193 @@
      "date": 20241104,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 14.18,
-     "bet_bets": 87,
+     "bet_units": 13.91,
+     "bet_bets": 93,
      "bankroll": 1.0
     },
     {
      "date": 20241105,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 15.0,
-     "bet_bets": 90,
+     "bet_units": 13.73,
+     "bet_bets": 97,
      "bankroll": 1.0
     },
     {
      "date": 20241106,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 10.46,
-     "bet_bets": 106,
+     "bet_units": 9.18,
+     "bet_bets": 113,
      "bankroll": 1.0
     },
     {
      "date": 20241107,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 13.64,
-     "bet_bets": 120,
+     "bet_units": 12.27,
+     "bet_bets": 129,
      "bankroll": 1.0
     },
     {
      "date": 20241108,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 12.18,
-     "bet_bets": 152,
+     "bet_units": 14.64,
+     "bet_bets": 161,
      "bankroll": 1.0
     },
     {
      "date": 20241109,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 16.46,
-     "bet_bets": 184,
+     "bet_units": 20.64,
+     "bet_bets": 197,
      "bankroll": 1.0
     },
     {
      "date": 20241110,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 18.73,
-     "bet_bets": 197,
+     "bet_units": 23.91,
+     "bet_bets": 209,
      "bankroll": 1.0
     },
     {
      "date": 20241111,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 18.91,
-     "bet_bets": 214,
+     "bet_units": 26.18,
+     "bet_bets": 222,
      "bankroll": 1.0
     },
     {
      "date": 20241112,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 21.46,
-     "bet_bets": 242,
+     "bet_units": 29.46,
+     "bet_bets": 255,
      "bankroll": 1.0
     },
     {
      "date": 20241113,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 21.09,
-     "bet_bets": 271,
+     "bet_units": 26.27,
+     "bet_bets": 283,
      "bankroll": 1.0
     },
     {
      "date": 20241114,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 18.73,
-     "bet_bets": 281,
+     "bet_units": 24.82,
+     "bet_bets": 294,
      "bankroll": 1.0
     },
     {
      "date": 20241115,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 12.91,
-     "bet_bets": 304,
+     "bet_units": 21.0,
+     "bet_bets": 315,
      "bankroll": 1.0
     },
     {
      "date": 20241116,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 21.09,
-     "bet_bets": 334,
+     "bet_units": 31.0,
+     "bet_bets": 347,
      "bankroll": 1.0
     },
     {
      "date": 20241117,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 18.27,
-     "bet_bets": 354,
+     "bet_units": 26.27,
+     "bet_bets": 367,
      "bankroll": 1.0
     },
     {
      "date": 20241118,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 16.73,
-     "bet_bets": 367,
+     "bet_units": 22.82,
+     "bet_bets": 380,
      "bankroll": 1.0
     },
     {
      "date": 20241119,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 25.37,
-     "bet_bets": 387,
+     "bet_units": 35.09,
+     "bet_bets": 404,
      "bankroll": 1.0
     },
     {
      "date": 20241120,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 20.46,
-     "bet_bets": 411,
+     "bet_units": 29.37,
+     "bet_bets": 425,
      "bankroll": 1.0
     },
     {
      "date": 20241121,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 25.46,
-     "bet_bets": 427,
+     "bet_units": 35.28,
+     "bet_bets": 442,
      "bankroll": 1.0
     },
     {
      "date": 20241122,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 19.09,
-     "bet_bets": 462,
+     "bet_units": 30.64,
+     "bet_bets": 481,
      "bankroll": 1.0
     },
     {
      "date": 20241123,
-     "staked_units": 1.82,
-     "staked_bets": 2,
-     "bet_units": 18.0,
-     "bet_bets": 486,
-     "bankroll": 1.0188
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 28.64,
+     "bet_bets": 504,
+     "bankroll": 1.0
     },
     {
      "date": 20241124,
-     "staked_units": 0.82,
-     "staked_bets": 3,
-     "bet_units": 9.28,
-     "bet_bets": 510,
-     "bankroll": 1.0048
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 25.91,
+     "bet_bets": 522,
+     "bankroll": 1.0
     },
     {
      "date": 20241125,
-     "staked_units": -0.18,
-     "staked_bets": 4,
-     "bet_units": 4.28,
-     "bet_bets": 536,
-     "bankroll": 0.9909
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 28.73,
+     "bet_bets": 544,
+     "bankroll": 1.0
     },
     {
      "date": 20241126,
-     "staked_units": 0.73,
-     "staked_bets": 5,
-     "bet_units": 6.91,
-     "bet_bets": 562,
-     "bankroll": 1.0033
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 31.37,
+     "bet_bets": 570,
+     "bankroll": 1.0
     },
     {
      "date": 20241127,
-     "staked_units": 1.55,
-     "staked_bets": 8,
-     "bet_units": 5.55,
-     "bet_bets": 592,
-     "bankroll": 1.0147
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 31.0,
+     "bet_bets": 599,
+     "bankroll": 1.0
     },
     {
      "date": 20241128,
-     "staked_units": 2.45,
-     "staked_bets": 9,
-     "bet_units": 5.18,
-     "bet_bets": 600,
-     "bankroll": 1.0274
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 31.55,
+     "bet_bets": 608,
+     "bankroll": 1.0
     },
     {
      "date": 20241129,
-     "staked_units": 1.45,
-     "staked_bets": 10,
-     "bet_units": 10.0,
-     "bet_bets": 620,
-     "bankroll": 1.0132
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 36.55,
+     "bet_bets": 624,
+     "bankroll": 1.0
     },
     {
      "date": 20241130,
-     "staked_units": 0.27,
-     "staked_bets": 15,
-     "bet_units": 8.37,
-     "bet_bets": 656,
-     "bankroll": 0.9869
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 35.28,
+     "bet_bets": 652,
+     "bankroll": 1.0
     },
     {
      "date": 20241201,
-     "staked_units": -0.82,
-     "staked_bets": 18,
-     "bet_units": 9.37,
-     "bet_bets": 676,
-     "bankroll": 0.9788
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 35.55,
+     "bet_bets": 667,
+     "bankroll": 1.0
     },
     {
      "date": 20241202,
-     "staked_units": -0.91,
-     "staked_bets": 20,
-     "bet_units": 9.0,
-     "bet_bets": 684,
-     "bankroll": 0.9776
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 34.37,
+     "bet_bets": 672,
+     "bankroll": 1.0
     },
     {
      "date": 20241203,
-     "staked_units": -0.91,
-     "staked_bets": 20,
-     "bet_units": 7.19,
-     "bet_bets": 703,
-     "bankroll": 0.9776
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 32.55,
+     "bet_bets": 691,
+     "bankroll": 1.0
     },
     {
      "date": 20241204,
      "staked_units": 0.0,
-     "staked_bets": 21,
-     "bet_units": 6.0,
-     "bet_bets": 729,
-     "bankroll": 0.9898
+     "staked_bets": 0,
+     "bet_units": 32.19,
+     "bet_bets": 720,
+     "bankroll": 1.0
     },
     {
      "date": 20241205,
-     "staked_units": 1.82,
-     "staked_bets": 23,
-     "bet_units": 9.19,
-     "bet_bets": 743,
-     "bankroll": 1.0085
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 34.55,
+     "bet_bets": 731,
+     "bankroll": 1.0
     },
     {
      "date": 20241206,
-     "staked_units": 0.82,
-     "staked_bets": 24,
-     "bet_units": 9.73,
-     "bet_bets": 752,
-     "bankroll": 1.0015
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 36.19,
+     "bet_bets": 737,
+     "bankroll": 1.0
     },
     {
      "date": 20241207,
-     "staked_units": 2.27,
-     "staked_bets": 34,
-     "bet_units": 12.19,
-     "bet_bets": 803,
-     "bankroll": 1.0172
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 34.64,
+     "bet_bets": 771,
+     "bankroll": 1.0
     },
     {
      "date": 20241208,
-     "staked_units": 1.27,
-     "staked_bets": 35,
-     "bet_units": 6.73,
-     "bet_bets": 818,
-     "bankroll": 1.0032
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 30.0,
+     "bet_bets": 789,
+     "bankroll": 1.0
     },
     {
      "date": 20241209,
-     "staked_units": 2.18,
-     "staked_bets": 36,
-     "bet_units": 5.64,
-     "bet_bets": 821,
-     "bankroll": 1.0158
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 28.0,
+     "bet_bets": 791,
+     "bankroll": 1.0
     },
     {
      "date": 20241210,
-     "staked_units": 2.09,
-     "staked_bets": 38,
-     "bet_units": 5.91,
-     "bet_bets": 836,
-     "bankroll": 1.0151
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 26.55,
+     "bet_bets": 802,
+     "bankroll": 1.0
     },
     {
      "date": 20241211,
-     "staked_units": 1.09,
-     "staked_bets": 39,
-     "bet_units": 1.46,
-     "bet_bets": 850,
-     "bankroll": 1.0011
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 22.19,
+     "bet_bets": 814,
+     "bankroll": 1.0
     },
     {
      "date": 20241212,
-     "staked_units": 2.0,
-     "staked_bets": 40,
-     "bet_units": 1.37,
-     "bet_bets": 852,
-     "bankroll": 1.0137
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 20.19,
+     "bet_bets": 816,
+     "bankroll": 1.0
     },
     {
      "date": 20241213,
-     "staked_units": 3.82,
-     "staked_bets": 42,
-     "bet_units": 6.73,
-     "bet_bets": 860,
-     "bankroll": 1.0391
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 21.82,
+     "bet_bets": 822,
+     "bankroll": 1.0
     },
     {
      "date": 20241214,
-     "staked_units": 6.55,
-     "staked_bets": 45,
-     "bet_units": 15.73,
-     "bet_bets": 893,
-     "bankroll": 1.0652
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 27.28,
+     "bet_bets": 849,
+     "bankroll": 1.0
     },
     {
      "date": 20241215,
-     "staked_units": 3.55,
-     "staked_bets": 48,
-     "bet_units": 8.46,
-     "bet_bets": 906,
-     "bankroll": 1.0211
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 23.0,
+     "bet_bets": 859,
+     "bankroll": 1.0
     },
     {
      "date": 20241216,
-     "staked_units": 5.36,
-     "staked_bets": 50,
-     "bet_units": 10.1,
-     "bet_bets": 912,
-     "bankroll": 1.0467
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 22.82,
+     "bet_bets": 863,
+     "bankroll": 1.0
     },
     {
      "date": 20241217,
-     "staked_units": 7.18,
-     "staked_bets": 52,
-     "bet_units": 16.28,
-     "bet_bets": 923,
-     "bankroll": 1.0664
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 26.37,
+     "bet_bets": 869,
+     "bankroll": 1.0
     },
     {
      "date": 20241218,
-     "staked_units": 5.82,
-     "staked_bets": 61,
-     "bet_units": 21.55,
-     "bet_bets": 954,
-     "bankroll": 1.0684
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 34.0,
+     "bet_bets": 890,
+     "bankroll": 1.0
     },
     {
      "date": 20241219,
-     "staked_units": 4.82,
-     "staked_bets": 62,
-     "bet_units": 15.46,
-     "bet_bets": 962,
-     "bankroll": 1.061
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 28.91,
+     "bet_bets": 897,
+     "bankroll": 1.0
     },
     {
      "date": 20241220,
-     "staked_units": 4.82,
-     "staked_bets": 62,
-     "bet_units": 18.1,
-     "bet_bets": 967,
-     "bankroll": 1.061
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 29.64,
+     "bet_bets": 902,
+     "bankroll": 1.0
     },
     {
      "date": 20241221,
-     "staked_units": 9.09,
-     "staked_bets": 73,
-     "bet_units": 18.91,
-     "bet_bets": 1012,
-     "bankroll": 1.1176
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 27.28,
+     "bet_bets": 933,
+     "bankroll": 1.0
     },
     {
      "date": 20241222,
-     "staked_units": 9.91,
-     "staked_bets": 76,
-     "bet_units": 18.19,
-     "bet_bets": 1028,
-     "bankroll": 1.1302
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 27.73,
+     "bet_bets": 944,
+     "bankroll": 1.0
     },
     {
      "date": 20241223,
-     "staked_units": 9.91,
-     "staked_bets": 76,
-     "bet_units": 18.19,
-     "bet_bets": 1028,
-     "bankroll": 1.1302
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 27.73,
+     "bet_bets": 944,
+     "bankroll": 1.0
     },
     {
      "date": 20241225,
-     "staked_units": 10.82,
-     "staked_bets": 77,
-     "bet_units": 20.01,
-     "bet_bets": 1030,
-     "bankroll": 1.1444
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 28.64,
+     "bet_bets": 945,
+     "bankroll": 1.0
     },
     {
      "date": 20241228,
-     "staked_units": 9.64,
-     "staked_bets": 82,
-     "bet_units": 18.1,
-     "bet_bets": 1051,
-     "bankroll": 1.1336
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 25.19,
+     "bet_bets": 958,
+     "bankroll": 1.0
     },
     {
      "date": 20241229,
-     "staked_units": 10.55,
-     "staked_bets": 83,
-     "bet_units": 14.37,
-     "bet_bets": 1070,
-     "bankroll": 1.1479
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 20.73,
+     "bet_bets": 972,
+     "bankroll": 1.0
     },
     {
      "date": 20241230,
-     "staked_units": 10.55,
-     "staked_bets": 83,
-     "bet_units": 11.1,
-     "bet_bets": 1079,
-     "bankroll": 1.1479
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 17.46,
+     "bet_bets": 981,
+     "bankroll": 1.0
     },
     {
      "date": 20241231,
-     "staked_units": 12.36,
-     "staked_bets": 85,
-     "bet_units": 16.28,
-     "bet_bets": 1091,
-     "bankroll": 1.1695
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 19.0,
+     "bet_bets": 989,
+     "bankroll": 1.0
     },
     {
      "date": 20250101,
-     "staked_units": 12.27,
-     "staked_bets": 87,
-     "bet_units": 16.91,
-     "bet_bets": 1098,
-     "bankroll": 1.1607
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 20.64,
+     "bet_bets": 995,
+     "bankroll": 1.0
     },
     {
      "date": 20250102,
-     "staked_units": 11.09,
-     "staked_bets": 92,
-     "bet_units": 22.73,
-     "bet_bets": 1117,
-     "bankroll": 1.1345
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 26.82,
+     "bet_bets": 1006,
+     "bankroll": 1.0
     },
     {
      "date": 20250103,
-     "staked_units": 11.91,
-     "staked_bets": 95,
-     "bet_units": 25.28,
-     "bet_bets": 1124,
-     "bankroll": 1.1409
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 29.46,
+     "bet_bets": 1011,
+     "bankroll": 1.0
     },
     {
      "date": 20250104,
-     "staked_units": 10.36,
-     "staked_bets": 108,
-     "bet_units": 26.64,
-     "bet_bets": 1178,
-     "bankroll": 1.1187
+     "staked_units": 0.91,
+     "staked_bets": 1,
+     "bet_units": 27.82,
+     "bet_bets": 1047,
+     "bankroll": 1.0063
     },
     {
      "date": 20250105,
-     "staked_units": 8.36,
-     "staked_bets": 110,
-     "bet_units": 24.37,
-     "bet_bets": 1186,
-     "bankroll": 1.0955
+     "staked_units": 0.91,
+     "staked_bets": 1,
+     "bet_units": 28.64,
+     "bet_bets": 1050,
+     "bankroll": 1.0063
     },
     {
      "date": 20250106,
-     "staked_units": 11.09,
-     "staked_bets": 113,
-     "bet_units": 26.91,
-     "bet_bets": 1193,
-     "bankroll": 1.1299
+     "staked_units": 0.91,
+     "staked_bets": 1,
+     "bet_units": 28.46,
+     "bet_bets": 1054,
+     "bankroll": 1.0063
     },
     {
      "date": 20250107,
-     "staked_units": 12.0,
-     "staked_bets": 114,
-     "bet_units": 27.46,
-     "bet_bets": 1202,
-     "bankroll": 1.1441
+     "staked_units": 0.91,
+     "staked_bets": 1,
+     "bet_units": 33.82,
+     "bet_bets": 1062,
+     "bankroll": 1.0063
     },
     {
      "date": 20250108,
-     "staked_units": 12.64,
-     "staked_bets": 121,
-     "bet_units": 30.28,
-     "bet_bets": 1224,
-     "bankroll": 1.1476
+     "staked_units": 0.91,
+     "staked_bets": 1,
+     "bet_units": 35.1,
+     "bet_bets": 1076,
+     "bankroll": 1.0063
     },
     {
      "date": 20250109,
-     "staked_units": 10.46,
-     "staked_bets": 127,
-     "bet_units": 28.1,
-     "bet_bets": 1251,
-     "bankroll": 1.1227
+     "staked_units": 0.91,
+     "staked_bets": 1,
+     "bet_units": 34.37,
+     "bet_bets": 1092,
+     "bankroll": 1.0063
     },
     {
      "date": 20250110,
-     "staked_units": 9.46,
-     "staked_bets": 128,
-     "bet_units": 28.82,
-     "bet_bets": 1256,
-     "bankroll": 1.1072
+     "staked_units": 0.91,
+     "staked_bets": 1,
+     "bet_units": 34.28,
+     "bet_bets": 1094,
+     "bankroll": 1.0063
     },
     {
      "date": 20250111,
-     "staked_units": 10.82,
-     "staked_bets": 140,
-     "bet_units": 25.46,
-     "bet_bets": 1309,
-     "bankroll": 1.1287
+     "staked_units": -0.09,
+     "staked_bets": 2,
+     "bet_units": 28.64,
+     "bet_bets": 1134,
+     "bankroll": 0.9924
     },
     {
      "date": 20250112,
-     "staked_units": 8.82,
-     "staked_bets": 142,
-     "bet_units": 28.82,
-     "bet_bets": 1319,
-     "bankroll": 1.0976
+     "staked_units": 0.82,
+     "staked_bets": 3,
+     "bet_units": 32.19,
+     "bet_bets": 1140,
+     "bankroll": 0.9986
     },
     {
      "date": 20250113,
-     "staked_units": 8.73,
-     "staked_bets": 144,
-     "bet_units": 26.55,
-     "bet_bets": 1327,
-     "bankroll": 1.0893
+     "staked_units": -0.18,
+     "staked_bets": 4,
+     "bet_units": 31.01,
+     "bet_bets": 1145,
+     "bankroll": 0.9848
     },
     {
      "date": 20250114,
-     "staked_units": 7.73,
-     "staked_bets": 145,
-     "bet_units": 28.01,
-     "bet_bets": 1337,
-     "bankroll": 1.0743
+     "staked_units": -1.18,
+     "staked_bets": 5,
+     "bet_units": 33.46,
+     "bet_bets": 1154,
+     "bankroll": 0.9712
     },
     {
      "date": 20250115,
-     "staked_units": 6.64,
-     "staked_bets": 148,
-     "bet_units": 28.28,
-     "bet_bets": 1352,
-     "bankroll": 1.0655
+     "staked_units": -2.36,
+     "staked_bets": 10,
+     "bet_units": 33.73,
+     "bet_bets": 1169,
+     "bankroll": 0.9554
     },
     {
      "date": 20250116,
-     "staked_units": 8.46,
-     "staked_bets": 150,
-     "bet_units": 28.28,
-     "bet_bets": 1373,
-     "bankroll": 1.0922
+     "staked_units": -2.55,
+     "staked_bets": 14,
+     "bet_units": 30.91,
+     "bet_bets": 1189,
+     "bankroll": 0.9536
     },
     {
      "date": 20250117,
-     "staked_units": 7.46,
-     "staked_bets": 151,
-     "bet_units": 26.1,
-     "bet_bets": 1379,
-     "bankroll": 1.0772
+     "staked_units": -3.55,
+     "staked_bets": 15,
+     "bet_units": 28.73,
+     "bet_bets": 1195,
+     "bankroll": 0.9404
     },
     {
      "date": 20250118,
-     "staked_units": 9.91,
-     "staked_bets": 160,
-     "bet_units": 27.64,
-     "bet_bets": 1429,
-     "bankroll": 1.1143
+     "staked_units": -0.18,
+     "staked_bets": 25,
+     "bet_units": 30.46,
+     "bet_bets": 1241,
+     "bankroll": 0.9723
     },
     {
      "date": 20250119,
-     "staked_units": 9.91,
-     "staked_bets": 160,
-     "bet_units": 29.37,
-     "bet_bets": 1433,
-     "bankroll": 1.1143
+     "staked_units": -0.18,
+     "staked_bets": 25,
+     "bet_units": 32.1,
+     "bet_bets": 1247,
+     "bankroll": 0.9723
     },
     {
      "date": 20250120,
-     "staked_units": 8.91,
-     "staked_bets": 161,
-     "bet_units": 22.28,
-     "bet_bets": 1442,
-     "bankroll": 1.0989
+     "staked_units": 0.73,
+     "staked_bets": 26,
+     "bet_units": 27.92,
+     "bet_bets": 1255,
+     "bankroll": 0.9845
     },
     {
      "date": 20250121,
-     "staked_units": 8.91,
-     "staked_bets": 161,
-     "bet_units": 21.83,
-     "bet_bets": 1452,
-     "bankroll": 1.0989
+     "staked_units": -2.36,
+     "staked_bets": 31,
+     "bet_units": 28.19,
+     "bet_bets": 1270,
+     "bankroll": 0.9493
     },
     {
      "date": 20250122,
-     "staked_units": 8.91,
-     "staked_bets": 161,
-     "bet_units": 17.46,
-     "bet_bets": 1464,
-     "bankroll": 1.0989
+     "staked_units": -2.45,
+     "staked_bets": 33,
+     "bet_units": 25.82,
+     "bet_bets": 1280,
+     "bankroll": 0.9481
     },
     {
      "date": 20250123,
-     "staked_units": 8.82,
-     "staked_bets": 163,
-     "bet_units": 13.55,
-     "bet_bets": 1487,
-     "bankroll": 1.0907
+     "staked_units": -1.09,
+     "staked_bets": 45,
+     "bet_units": 26.28,
+     "bet_bets": 1312,
+     "bankroll": 0.9612
     },
     {
      "date": 20250124,
-     "staked_units": 9.73,
-     "staked_bets": 164,
-     "bet_units": 17.1,
-     "bet_bets": 1493,
-     "bankroll": 1.0975
+     "staked_units": -0.18,
+     "staked_bets": 46,
+     "bet_units": 29.92,
+     "bet_bets": 1316,
+     "bankroll": 0.9672
     },
     {
      "date": 20250125,
-     "staked_units": 7.64,
-     "staked_bets": 168,
-     "bet_units": 20.92,
-     "bet_bets": 1535,
-     "bankroll": 1.0665
+     "staked_units": 3.0,
+     "staked_bets": 60,
+     "bet_units": 37.37,
+     "bet_bets": 1362,
+     "bankroll": 1.0
     },
     {
      "date": 20250126,
-     "staked_units": 7.64,
-     "staked_bets": 168,
-     "bet_units": 20.83,
-     "bet_bets": 1537,
-     "bankroll": 1.0665
+     "staked_units": 3.0,
+     "staked_bets": 60,
+     "bet_units": 37.28,
+     "bet_bets": 1364,
+     "bankroll": 1.0
     },
     {
      "date": 20250127,
-     "staked_units": 7.64,
-     "staked_bets": 168,
-     "bet_units": 21.64,
-     "bet_bets": 1540,
-     "bankroll": 1.0665
+     "staked_units": 3.91,
+     "staked_bets": 61,
+     "bet_units": 40.01,
+     "bet_bets": 1367,
+     "bankroll": 1.0125
     },
     {
      "date": 20250128,
-     "staked_units": 8.55,
-     "staked_bets": 169,
-     "bet_units": 21.37,
-     "bet_bets": 1546,
-     "bankroll": 1.0799
+     "staked_units": 3.73,
+     "staked_bets": 65,
+     "bet_units": 38.64,
+     "bet_bets": 1376,
+     "bankroll": 1.0036
     },
     {
      "date": 20250129,
-     "staked_units": 6.55,
-     "staked_bets": 171,
-     "bet_units": 17.83,
-     "bet_bets": 1561,
-     "bankroll": 1.0576
+     "staked_units": 4.64,
+     "staked_bets": 66,
+     "bet_units": 39.1,
+     "bet_bets": 1387,
+     "bankroll": 1.0099
     },
     {
      "date": 20250202,
-     "staked_units": 6.55,
-     "staked_bets": 171,
-     "bet_units": 13.73,
-     "bet_bets": 1567,
-     "bankroll": 1.0576
+     "staked_units": 5.55,
+     "staked_bets": 67,
+     "bet_units": 37.92,
+     "bet_bets": 1392,
+     "bankroll": 1.0226
     },
     {
      "date": 20250203,
-     "staked_units": 6.55,
-     "staked_bets": 171,
-     "bet_units": 14.28,
-     "bet_bets": 1576,
-     "bankroll": 1.0576
+     "staked_units": 5.45,
+     "staked_bets": 69,
+     "bet_units": 39.37,
+     "bet_bets": 1402,
+     "bankroll": 1.0284
     },
     {
      "date": 20250204,
-     "staked_units": 5.55,
-     "staked_bets": 172,
-     "bet_units": 13.01,
-     "bet_bets": 1583,
-     "bankroll": 1.043
+     "staked_units": 4.36,
+     "staked_bets": 72,
+     "bet_units": 38.01,
+     "bet_bets": 1411,
+     "bankroll": 1.0129
     },
     {
      "date": 20250205,
-     "staked_units": 3.46,
-     "staked_bets": 176,
-     "bet_units": 17.74,
-     "bet_bets": 1605,
-     "bankroll": 1.0135
+     "staked_units": 1.18,
+     "staked_bets": 79,
+     "bet_units": 43.64,
+     "bet_bets": 1434,
+     "bankroll": 0.983
     },
     {
      "date": 20250206,
-     "staked_units": 4.27,
-     "staked_bets": 179,
-     "bet_units": 20.74,
-     "bet_bets": 1623,
-     "bankroll": 1.0186
+     "staked_units": 3.64,
+     "staked_bets": 88,
+     "bet_units": 48.46,
+     "bet_bets": 1454,
+     "bankroll": 1.0114
     },
     {
      "date": 20250207,
-     "staked_units": 4.27,
-     "staked_bets": 179,
-     "bet_units": 20.74,
-     "bet_bets": 1623,
-     "bankroll": 1.0186
+     "staked_units": 5.46,
+     "staked_bets": 90,
+     "bet_units": 50.28,
+     "bet_bets": 1456,
+     "bankroll": 1.0368
     },
     {
      "date": 20250208,
-     "staked_units": 5.91,
-     "staked_bets": 185,
-     "bet_units": 28.19,
-     "bet_bets": 1669,
-     "bankroll": 1.0301
+     "staked_units": 7.46,
+     "staked_bets": 109,
+     "bet_units": 50.92,
+     "bet_bets": 1505,
+     "bankroll": 1.0615
     },
     {
      "date": 20250209,
-     "staked_units": 6.82,
-     "staked_bets": 186,
-     "bet_units": 30.01,
-     "bet_bets": 1671,
-     "bankroll": 1.043
+     "staked_units": 8.36,
+     "staked_bets": 110,
+     "bet_units": 54.55,
+     "bet_bets": 1509,
+     "bankroll": 1.0748
     },
     {
      "date": 20250210,
-     "staked_units": 6.82,
-     "staked_bets": 186,
-     "bet_units": 28.92,
-     "bet_bets": 1674,
-     "bankroll": 1.043
+     "staked_units": 6.36,
+     "staked_bets": 112,
+     "bet_units": 50.46,
+     "bet_bets": 1515,
+     "bankroll": 1.06
     },
     {
      "date": 20250211,
-     "staked_units": 6.82,
-     "staked_bets": 186,
-     "bet_units": 30.55,
-     "bet_bets": 1680,
-     "bankroll": 1.043
+     "staked_units": 10.0,
+     "staked_bets": 116,
+     "bet_units": 54.73,
+     "bet_bets": 1526,
+     "bankroll": 1.0999
     },
     {
      "date": 20250214,
-     "staked_units": 6.82,
-     "staked_bets": 186,
-     "bet_units": 32.37,
-     "bet_bets": 1682,
-     "bankroll": 1.043
+     "staked_units": 10.0,
+     "staked_bets": 116,
+     "bet_units": 55.64,
+     "bet_bets": 1527,
+     "bankroll": 1.0999
     },
     {
      "date": 20250215,
-     "staked_units": 13.18,
-     "staked_bets": 193,
-     "bet_units": 40.64,
-     "bet_bets": 1731,
-     "bankroll": 1.1215
+     "staked_units": 12.09,
+     "staked_bets": 133,
+     "bet_units": 58.1,
+     "bet_bets": 1578,
+     "bankroll": 1.1268
     },
     {
      "date": 20250216,
-     "staked_units": 13.18,
-     "staked_bets": 193,
-     "bet_units": 37.55,
-     "bet_bets": 1736,
-     "bankroll": 1.1215
+     "staked_units": 9.09,
+     "staked_bets": 136,
+     "bet_units": 53.92,
+     "bet_bets": 1586,
+     "bankroll": 1.0879
     },
     {
      "date": 20250217,
-     "staked_units": 12.18,
-     "staked_bets": 194,
-     "bet_units": 32.46,
-     "bet_bets": 1743,
-     "bankroll": 1.1061
+     "staked_units": 8.91,
+     "staked_bets": 140,
+     "bet_units": 52.46,
+     "bet_bets": 1597,
+     "bankroll": 1.0783
     },
     {
      "date": 20250218,
-     "staked_units": 12.18,
-     "staked_bets": 194,
-     "bet_units": 33.1,
-     "bet_bets": 1750,
-     "bankroll": 1.1061
+     "staked_units": 9.82,
+     "staked_bets": 141,
+     "bet_units": 54.01,
+     "bet_bets": 1605,
+     "bankroll": 1.0919
     },
     {
      "date": 20250219,
-     "staked_units": 13.09,
-     "staked_bets": 195,
-     "bet_units": 33.46,
-     "bet_bets": 1763,
-     "bankroll": 1.113
+     "staked_units": 15.09,
+     "staked_bets": 151,
+     "bet_units": 58.64,
+     "bet_bets": 1629,
+     "bankroll": 1.1521
     },
     {
      "date": 20250220,
-     "staked_units": 14.82,
-     "staked_bets": 199,
-     "bet_units": 34.65,
-     "bet_bets": 1779,
-     "bankroll": 1.1256
+     "staked_units": 9.91,
+     "staked_bets": 160,
+     "bet_units": 50.1,
+     "bet_bets": 1649,
+     "bankroll": 1.0871
     },
     {
      "date": 20250221,
-     "staked_units": 14.82,
-     "staked_bets": 199,
-     "bet_units": 37.37,
-     "bet_bets": 1782,
-     "bankroll": 1.1256
+     "staked_units": 8.91,
+     "staked_bets": 161,
+     "bet_units": 52.64,
+     "bet_bets": 1656,
+     "bankroll": 1.0796
     },
     {
      "date": 20250222,
-     "staked_units": 12.82,
-     "staked_bets": 201,
-     "bet_units": 42.46,
-     "bet_bets": 1817,
-     "bankroll": 1.1023
+     "staked_units": 13.09,
+     "staked_bets": 174,
+     "bet_units": 65.01,
+     "bet_bets": 1699,
+     "bankroll": 1.1439
     },
     {
      "date": 20250223,
-     "staked_units": 12.82,
-     "staked_bets": 201,
-     "bet_units": 45.1,
-     "bet_bets": 1822,
-     "bankroll": 1.1023
+     "staked_units": 13.0,
+     "staked_bets": 176,
+     "bet_units": 66.64,
+     "bet_bets": 1705,
+     "bankroll": 1.1504
     },
     {
      "date": 20250224,
-     "staked_units": 13.73,
-     "staked_bets": 202,
-     "bet_units": 47.65,
-     "bet_bets": 1829,
-     "bankroll": 1.1161
+     "staked_units": 11.91,
+     "staked_bets": 179,
+     "bet_units": 68.19,
+     "bet_bets": 1713,
+     "bankroll": 1.1489
     },
     {
      "date": 20250225,
      "staked_units": 13.73,
-     "staked_bets": 202,
-     "bet_units": 47.28,
-     "bet_bets": 1837,
-     "bankroll": 1.1161
+     "staked_bets": 181,
+     "bet_units": 67.74,
+     "bet_bets": 1723,
+     "bankroll": 1.1778
     },
     {
      "date": 20250226,
-     "staked_units": 15.55,
-     "staked_bets": 204,
-     "bet_units": 49.74,
-     "bet_bets": 1846,
-     "bankroll": 1.1371
+     "staked_units": 14.36,
+     "staked_bets": 188,
+     "bet_units": 71.92,
+     "bet_bets": 1736,
+     "bankroll": 1.1741
     },
     {
      "date": 20250227,
-     "staked_units": 17.36,
-     "staked_bets": 206,
-     "bet_units": 51.65,
-     "bet_bets": 1867,
-     "bankroll": 1.1585
+     "staked_units": 14.91,
+     "staked_bets": 197,
+     "bet_units": 74.55,
+     "bet_bets": 1762,
+     "bankroll": 1.1763
     },
     {
      "date": 20250228,
-     "staked_units": 17.27,
-     "staked_bets": 208,
-     "bet_units": 52.19,
-     "bet_bets": 1876,
-     "bankroll": 1.1498
+     "staked_units": 14.82,
+     "staked_bets": 199,
+     "bet_units": 76.1,
+     "bet_bets": 1770,
+     "bankroll": 1.1674
     },
     {
      "date": 20250301,
-     "staked_units": 16.27,
-     "staked_bets": 209,
-     "bet_units": 41.74,
-     "bet_bets": 1917,
-     "bankroll": 1.1339
+     "staked_units": 14.55,
+     "staked_bets": 205,
+     "bet_units": 68.83,
+     "bet_bets": 1804,
+     "bankroll": 1.1411
     },
     {
      "date": 20250302,
-     "staked_units": 16.27,
-     "staked_bets": 209,
-     "bet_units": 39.65,
-     "bet_bets": 1921,
-     "bankroll": 1.1339
+     "staked_units": 14.55,
+     "staked_bets": 205,
+     "bet_units": 64.74,
+     "bet_bets": 1810,
+     "bankroll": 1.1411
     },
     {
      "date": 20250303,
-     "staked_units": 16.27,
-     "staked_bets": 209,
-     "bet_units": 44.1,
-     "bet_bets": 1928,
-     "bankroll": 1.1339
+     "staked_units": 13.46,
+     "staked_bets": 208,
+     "bet_units": 67.19,
+     "bet_bets": 1819,
+     "bankroll": 1.1318
     },
     {
      "date": 20250304,
-     "staked_units": 19.0,
-     "staked_bets": 212,
-     "bet_units": 47.28,
-     "bet_bets": 1942,
-     "bankroll": 1.1766
+     "staked_units": 18.91,
+     "staked_bets": 214,
+     "bet_units": 74.19,
+     "bet_bets": 1833,
+     "bankroll": 1.2099
     },
     {
      "date": 20250305,
-     "staked_units": 19.0,
-     "staked_bets": 212,
-     "bet_units": 45.92,
-     "bet_bets": 1951,
-     "bankroll": 1.1766
+     "staked_units": 18.82,
+     "staked_bets": 216,
+     "bet_units": 72.92,
+     "bet_bets": 1840,
+     "bankroll": 1.2008
     },
     {
      "date": 20250306,
-     "staked_units": 21.73,
-     "staked_bets": 215,
-     "bet_units": 41.37,
-     "bet_bets": 1967,
-     "bankroll": 1.2061
+     "staked_units": 23.36,
+     "staked_bets": 221,
+     "bet_units": 71.19,
+     "bet_bets": 1857,
+     "bankroll": 1.261
     },
     {
      "date": 20250307,
-     "staked_units": 22.64,
-     "staked_bets": 216,
-     "bet_units": 42.65,
-     "bet_bets": 1981,
-     "bankroll": 1.2137
+     "staked_units": 22.27,
+     "staked_bets": 224,
+     "bet_units": 70.55,
+     "bet_bets": 1871,
+     "bankroll": 1.2341
     },
     {
      "date": 20250308,
-     "staked_units": 26.18,
-     "staked_bets": 222,
-     "bet_units": 47.46,
-     "bet_bets": 2022,
-     "bankroll": 1.2662
+     "staked_units": 19.82,
+     "staked_bets": 236,
+     "bet_units": 71.74,
+     "bet_bets": 1908,
+     "bankroll": 1.2024
     },
     {
      "date": 20250309,
-     "staked_units": 26.18,
-     "staked_bets": 222,
-     "bet_units": 48.01,
-     "bet_bets": 2031,
-     "bankroll": 1.2662
+     "staked_units": 21.64,
+     "staked_bets": 238,
+     "bet_units": 75.1,
+     "bet_bets": 1918,
+     "bankroll": 1.2325
     },
     {
      "date": 20250310,
-     "staked_units": 26.18,
-     "staked_bets": 222,
-     "bet_units": 46.01,
-     "bet_bets": 2033,
-     "bankroll": 1.2662
+     "staked_units": 20.64,
+     "staked_bets": 239,
+     "bet_units": 72.1,
+     "bet_bets": 1921,
+     "bankroll": 1.224
     },
     {
      "date": 20250311,
-     "staked_units": 25.09,
-     "staked_bets": 225,
-     "bet_units": 48.37,
-     "bet_bets": 2044,
-     "bankroll": 1.2559
+     "staked_units": 19.46,
+     "staked_bets": 244,
+     "bet_units": 74.37,
+     "bet_bets": 1934,
+     "bankroll": 1.221
     },
     {
      "date": 20250312,
-     "staked_units": 26.82,
-     "staked_bets": 229,
-     "bet_units": 45.65,
-     "bet_bets": 2062,
-     "bankroll": 1.278
+     "staked_units": 21.18,
+     "staked_bets": 248,
+     "bet_units": 76.56,
+     "bet_bets": 1949,
+     "bankroll": 1.2501
     },
     {
      "date": 20250313,
-     "staked_units": 27.73,
-     "staked_bets": 230,
-     "bet_units": 45.01,
-     "bet_bets": 2076,
-     "bankroll": 1.294
+     "staked_units": 22.82,
+     "staked_bets": 254,
+     "bet_units": 74.92,
+     "bet_bets": 1964,
+     "bankroll": 1.2791
     },
     {
      "date": 20250314,
-     "staked_units": 26.73,
-     "staked_bets": 231,
-     "bet_units": 39.46,
-     "bet_bets": 2093,
-     "bankroll": 1.2851
+     "staked_units": 23.55,
+     "staked_bets": 259,
+     "bet_units": 72.01,
+     "bet_bets": 1986,
+     "bankroll": 1.3007
     },
     {
      "date": 20250315,
-     "staked_units": 28.55,
-     "staked_bets": 233,
-     "bet_units": 44.65,
-     "bet_bets": 2105,
-     "bankroll": 1.3173
+     "staked_units": 24.37,
+     "staked_bets": 262,
+     "bet_units": 76.1,
+     "bet_bets": 2001,
+     "bankroll": 1.3154
     },
     {
      "date": 20250316,
-     "staked_units": 28.55,
-     "staked_bets": 233,
-     "bet_units": 45.46,
-     "bet_bets": 2108,
-     "bankroll": 1.3173
+     "staked_units": 24.37,
+     "staked_bets": 262,
+     "bet_units": 76.92,
+     "bet_bets": 2004,
+     "bankroll": 1.3154
     },
     {
      "date": 20250318,
-     "staked_units": 30.36,
-     "staked_bets": 235,
-     "bet_units": 46.19,
-     "bet_bets": 2113,
-     "bankroll": 1.3504
+     "staked_units": 25.18,
+     "staked_bets": 265,
+     "bet_units": 76.65,
+     "bet_bets": 2010,
+     "bankroll": 1.3303
     },
     {
      "date": 20250319,
-     "staked_units": 30.36,
-     "staked_bets": 235,
-     "bet_units": 47.92,
-     "bet_bets": 2117,
-     "bankroll": 1.3504
+     "staked_units": 25.18,
+     "staked_bets": 265,
+     "bet_units": 78.37,
+     "bet_bets": 2014,
+     "bankroll": 1.3303
     },
     {
      "date": 20250320,
-     "staked_units": 34.0,
-     "staked_bets": 239,
-     "bet_units": 52.28,
-     "bet_bets": 2126,
-     "bankroll": 1.4096
+     "staked_units": 27.91,
+     "staked_bets": 268,
+     "bet_units": 80.92,
+     "bet_bets": 2021,
+     "bankroll": 1.372
     },
     {
      "date": 20250321,
-     "staked_units": 35.82,
-     "staked_bets": 241,
-     "bet_units": 58.56,
-     "bet_bets": 2135,
-     "bankroll": 1.4362
+     "staked_units": 31.55,
+     "staked_bets": 272,
+     "bet_units": 89.01,
+     "bet_bets": 2032,
+     "bankroll": 1.4236
     },
     {
      "date": 20250322,
-     "staked_units": 35.73,
-     "staked_bets": 243,
-     "bet_units": 58.37,
-     "bet_bets": 2139,
-     "bankroll": 1.4443
+     "staked_units": 31.46,
+     "staked_bets": 274,
+     "bet_units": 86.83,
+     "bet_bets": 2038,
+     "bankroll": 1.4317
     },
     {
      "date": 20250323,
-     "staked_units": 36.64,
-     "staked_bets": 244,
-     "bet_units": 55.19,
-     "bet_bets": 2146,
-     "bankroll": 1.4624
+     "staked_units": 31.37,
+     "staked_bets": 276,
+     "bet_units": 82.65,
+     "bet_bets": 2046,
+     "bankroll": 1.4299
     },
     {
      "date": 20250324,
-     "staked_units": 36.64,
-     "staked_bets": 244,
-     "bet_units": 54.1,
-     "bet_bets": 2149,
-     "bankroll": 1.4624
+     "staked_units": 31.37,
+     "staked_bets": 276,
+     "bet_units": 81.56,
+     "bet_bets": 2049,
+     "bankroll": 1.4299
     },
     {
      "date": 20250325,
-     "staked_units": 36.64,
-     "staked_bets": 244,
-     "bet_units": 54.92,
-     "bet_bets": 2152,
-     "bankroll": 1.4624
+     "staked_units": 30.37,
+     "staked_bets": 277,
+     "bet_units": 81.37,
+     "bet_bets": 2053,
+     "bankroll": 1.4102
     },
     {
      "date": 20250326,
-     "staked_units": 36.64,
-     "staked_bets": 244,
-     "bet_units": 53.92,
-     "bet_bets": 2153,
-     "bankroll": 1.4624
+     "staked_units": 30.37,
+     "staked_bets": 277,
+     "bet_units": 80.37,
+     "bet_bets": 2054,
+     "bankroll": 1.4102
     },
     {
      "date": 20250327,
-     "staked_units": 36.64,
-     "staked_bets": 244,
-     "bet_units": 51.92,
-     "bet_bets": 2155,
-     "bankroll": 1.4624
+     "staked_units": 30.27,
+     "staked_bets": 279,
+     "bet_units": 78.28,
+     "bet_bets": 2058,
+     "bankroll": 1.4084
     },
     {
      "date": 20250328,
-     "staked_units": 36.64,
-     "staked_bets": 244,
-     "bet_units": 51.83,
-     "bet_bets": 2157,
-     "bankroll": 1.4624
+     "staked_units": 30.27,
+     "staked_bets": 279,
+     "bet_units": 77.28,
+     "bet_bets": 2059,
+     "bankroll": 1.4084
     },
     {
      "date": 20250329,
-     "staked_units": 36.64,
-     "staked_bets": 244,
-     "bet_units": 51.74,
-     "bet_bets": 2159,
-     "bankroll": 1.4624
+     "staked_units": 30.27,
+     "staked_bets": 279,
+     "bet_units": 77.19,
+     "bet_bets": 2061,
+     "bankroll": 1.4084
     },
     {
      "date": 20250330,
-     "staked_units": 35.64,
-     "staked_bets": 245,
-     "bet_units": 50.74,
-     "bet_bets": 2160,
-     "bankroll": 1.4422
+     "staked_units": 30.27,
+     "staked_bets": 279,
+     "bet_units": 77.19,
+     "bet_bets": 2061,
+     "bankroll": 1.4084
     },
     {
      "date": 20250331,
-     "staked_units": 35.64,
-     "staked_bets": 245,
-     "bet_units": 46.74,
-     "bet_bets": 2164,
-     "bankroll": 1.4422
+     "staked_units": 30.27,
+     "staked_bets": 279,
+     "bet_units": 73.19,
+     "bet_bets": 2065,
+     "bankroll": 1.4084
     },
     {
      "date": 20250401,
-     "staked_units": 34.64,
-     "staked_bets": 246,
-     "bet_units": 46.47,
-     "bet_bets": 2170,
-     "bankroll": 1.4323
+     "staked_units": 29.27,
+     "staked_bets": 280,
+     "bet_units": 72.92,
+     "bet_bets": 2071,
+     "bankroll": 1.3987
     },
     {
      "date": 20250402,
-     "staked_units": 34.64,
-     "staked_bets": 246,
-     "bet_units": 46.37,
-     "bet_bets": 2172,
-     "bankroll": 1.4323
+     "staked_units": 30.18,
+     "staked_bets": 281,
+     "bet_units": 73.74,
+     "bet_bets": 2074,
+     "bankroll": 1.4162
     },
     {
      "date": 20250403,
-     "staked_units": 34.64,
-     "staked_bets": 246,
-     "bet_units": 46.28,
-     "bet_bets": 2174,
-     "bankroll": 1.4323
+     "staked_units": 30.18,
+     "staked_bets": 281,
+     "bet_units": 73.65,
+     "bet_bets": 2076,
+     "bankroll": 1.4162
     },
     {
      "date": 20250405,
-     "staked_units": 34.55,
-     "staked_bets": 248,
-     "bet_units": 47.1,
-     "bet_bets": 2177,
-     "bankroll": 1.4305
+     "staked_units": 30.09,
+     "staked_bets": 283,
+     "bet_units": 74.46,
+     "bet_bets": 2079,
+     "bankroll": 1.4144
     },
     {
      "date": 20250406,
-     "staked_units": 34.55,
-     "staked_bets": 248,
-     "bet_units": 48.01,
-     "bet_bets": 2178,
-     "bankroll": 1.4305
+     "staked_units": 30.09,
+     "staked_bets": 283,
+     "bet_units": 75.37,
+     "bet_bets": 2080,
+     "bankroll": 1.4144
     },
     {
      "date": 20250407,
-     "staked_units": 33.55,
-     "staked_bets": 249,
-     "bet_units": 47.01,
-     "bet_bets": 2179,
-     "bankroll": 1.4206
+     "staked_units": 29.09,
+     "staked_bets": 284,
+     "bet_units": 74.37,
+     "bet_bets": 2081,
+     "bankroll": 1.4047
     }
    ],
    "reliability": [
     {
      "bin": "0.00-0.50",
-     "n": 1331,
-     "mean_p": 0.355,
-     "realized": 0.308
+     "n": 1022,
+     "mean_p": 0.357,
+     "realized": 0.337
     },
     {
      "bin": "0.50-0.55",
-     "n": 1152,
-     "mean_p": 0.529,
-     "realized": 0.501
+     "n": 1703,
+     "mean_p": 0.526,
+     "realized": 0.51
     },
     {
      "bin": "0.55-0.60",
-     "n": 4884,
-     "mean_p": 0.553,
-     "realized": 0.514
+     "n": 4748,
+     "mean_p": 0.552,
+     "realized": 0.522
     },
     {
      "bin": "0.60-0.70",
-     "n": 696,
-     "mean_p": 0.644,
-     "realized": 0.622
+     "n": 621,
+     "mean_p": 0.642,
+     "realized": 0.618
     },
     {
      "bin": "0.70-1.00",
-     "n": 943,
-     "mean_p": 0.764,
-     "realized": 0.765
+     "n": 778,
+     "mean_p": 0.758,
+     "realized": 0.756
     }
    ],
    "recent": [
@@ -4008,14 +4000,14 @@
     },
     {
      "date": 20250407,
-     "bet": "Over 140.5",
+     "bet": "Under 140.5",
      "market": "total",
      "odds": -110,
-     "tier": "LEAN",
+     "tier": "CAND",
      "staked": 0,
      "fraction": null,
-     "result": "loss",
-     "units": -1.0,
+     "result": "win",
+     "units": 0.9091,
      "clv": null,
      "close_line": 140.5
     },
@@ -4125,16 +4117,16 @@
     },
     {
      "date": 20250405,
-     "bet": "Florida -2.5",
+     "bet": "Auburn +2.5",
      "market": "spread",
      "odds": -110,
-     "tier": "LEAN",
+     "tier": "CAND",
      "staked": 0,
      "fraction": null,
-     "result": "win",
-     "units": 0.9091,
+     "result": "loss",
+     "units": -1.0,
      "clv": null,
-     "close_line": -2.5
+     "close_line": 2.5
     },
     {
      "date": 20250405,
@@ -4216,19 +4208,6 @@
     },
     {
      "date": 20250403,
-     "bet": "Cincinnati -6.5",
-     "market": "spread",
-     "odds": -110,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": null,
-     "result": "loss",
-     "units": -1.0,
-     "clv": null,
-     "close_line": -6.5
-    },
-    {
-     "date": 20250403,
      "bet": "Under 156.5",
      "market": "total",
      "odds": -110,
@@ -4294,6 +4273,19 @@
     },
     {
      "date": 20250402,
+     "bet": "Butler +9.5",
+     "market": "spread",
+     "odds": -110,
+     "tier": "BET",
+     "staked": 1,
+     "fraction": 0.0138,
+     "result": "win",
+     "units": 0.9091,
+     "clv": null,
+     "close_line": 9.5
+    },
+    {
+     "date": 20250402,
      "bet": "Under 152.5",
      "market": "total",
      "odds": -110,
@@ -4317,6 +4309,19 @@
      "units": -1.0,
      "clv": null,
      "close_line": 152.5
+    },
+    {
+     "date": 20250401,
+     "bet": "USC -7.5",
+     "market": "spread",
+     "odds": -110,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": null,
+     "result": "win",
+     "units": 0.9091,
+     "clv": null,
+     "close_line": -7.5
     },
     {
      "date": 20250401,
@@ -4369,19 +4374,6 @@
      "units": -1.0,
      "clv": null,
      "close_line": -1.5
-    },
-    {
-     "date": 20250401,
-     "bet": "Under 128.5",
-     "market": "total",
-     "odds": -110,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": null,
-     "result": "loss",
-     "units": -1.0,
-     "clv": null,
-     "close_line": 128.5
     }
    ]
   },
@@ -4394,25 +4386,25 @@
    "table": {
     "staked": {
      "all": {
-      "bets": 222,
-      "wins": 121,
-      "losses": 101,
+      "bets": 296,
+      "wins": 171,
+      "losses": 125,
       "pushes": 0,
-      "win_rate": 0.545,
-      "units": 7.25,
-      "roi": 0.0327,
+      "win_rate": 0.5777,
+      "units": 27.64,
+      "roi": 0.0934,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 222,
-      "wins": 121,
-      "losses": 101,
+      "bets": 296,
+      "wins": 171,
+      "losses": 125,
       "pushes": 0,
-      "win_rate": 0.545,
-      "units": 7.25,
-      "roi": 0.0327,
+      "win_rate": 0.5777,
+      "units": 27.64,
+      "roi": 0.0934,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4444,37 +4436,37 @@
     },
     "BET": {
      "all": {
-      "bets": 1915,
-      "wins": 988,
-      "losses": 927,
+      "bets": 1785,
+      "wins": 923,
+      "losses": 862,
       "pushes": 0,
-      "win_rate": 0.5159,
-      "units": -33.58,
-      "roi": -0.0175,
+      "win_rate": 0.5171,
+      "units": -28.68,
+      "roi": -0.0161,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 228,
-      "wins": 127,
-      "losses": 101,
+      "bets": 308,
+      "wins": 178,
+      "losses": 130,
       "pushes": 0,
-      "win_rate": 0.557,
-      "units": 11.99,
-      "roi": 0.0526,
+      "win_rate": 0.5779,
+      "units": 28.21,
+      "roi": 0.0916,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "total": {
-      "bets": 1687,
-      "wins": 861,
-      "losses": 826,
+      "bets": 1477,
+      "wins": 745,
+      "losses": 732,
       "pushes": 0,
-      "win_rate": 0.5104,
-      "units": -45.57,
-      "roi": -0.027,
+      "win_rate": 0.5044,
+      "units": -56.89,
+      "roi": -0.0385,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4494,49 +4486,49 @@
     },
     "LEAN": {
      "all": {
-      "bets": 4838,
-      "wins": 2397,
-      "losses": 2441,
+      "bets": 4651,
+      "wins": 2377,
+      "losses": 2274,
       "pushes": 0,
-      "win_rate": 0.4955,
-      "units": -185.46,
-      "roi": -0.0383,
+      "win_rate": 0.5111,
+      "units": -161.67,
+      "roi": -0.0348,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 1020,
-      "wins": 497,
-      "losses": 523,
+      "bets": 1044,
+      "wins": 519,
+      "losses": 525,
       "pushes": 0,
-      "win_rate": 0.4873,
-      "units": -52.2,
-      "roi": -0.0512,
+      "win_rate": 0.4971,
+      "units": -34.33,
+      "roi": -0.0329,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "total": {
-      "bets": 1927,
-      "wins": 942,
-      "losses": 985,
+      "bets": 1998,
+      "wins": 985,
+      "losses": 1013,
       "pushes": 0,
-      "win_rate": 0.4888,
-      "units": -129.47,
-      "roi": -0.0672,
+      "win_rate": 0.493,
+      "units": -118.54,
+      "roi": -0.0593,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "moneyline": {
-      "bets": 1891,
-      "wins": 958,
-      "losses": 933,
+      "bets": 1609,
+      "wins": 873,
+      "losses": 736,
       "pushes": 0,
-      "win_rate": 0.5066,
-      "units": -3.78,
-      "roi": -0.002,
+      "win_rate": 0.5426,
+      "units": -8.8,
+      "roi": -0.0055,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4544,25 +4536,25 @@
     },
     "candidate: catboost-spread": {
      "all": {
-      "bets": 526,
-      "wins": 265,
-      "losses": 261,
+      "bets": 538,
+      "wins": 268,
+      "losses": 270,
       "pushes": 0,
-      "win_rate": 0.5038,
-      "units": -20.68,
-      "roi": -0.0393,
+      "win_rate": 0.4981,
+      "units": -28.38,
+      "roi": -0.0527,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "spread": {
-      "bets": 526,
-      "wins": 265,
-      "losses": 261,
+      "bets": 538,
+      "wins": 268,
+      "losses": 270,
       "pushes": 0,
-      "win_rate": 0.5038,
-      "units": -20.68,
-      "roi": -0.0393,
+      "win_rate": 0.4981,
+      "units": -28.38,
+      "roi": -0.0527,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4594,13 +4586,13 @@
     },
     "candidate: catboost-moneyline": {
      "all": {
-      "bets": 1860,
-      "wins": 1116,
-      "losses": 744,
+      "bets": 1748,
+      "wins": 1037,
+      "losses": 711,
       "pushes": 0,
-      "win_rate": 0.6,
-      "units": -49.95,
-      "roi": -0.0269,
+      "win_rate": 0.5932,
+      "units": -39.46,
+      "roi": -0.0226,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4630,13 +4622,13 @@
       "pending": 0
      },
      "moneyline": {
-      "bets": 1860,
-      "wins": 1116,
-      "losses": 744,
+      "bets": 1748,
+      "wins": 1037,
+      "losses": 711,
       "pushes": 0,
-      "win_rate": 0.6,
-      "units": -49.95,
-      "roi": -0.0269,
+      "win_rate": 0.5932,
+      "units": -39.46,
+      "roi": -0.0226,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4644,13 +4636,13 @@
     },
     "candidate: neutral-under": {
      "all": {
-      "bets": 265,
-      "wins": 143,
-      "losses": 122,
+      "bets": 264,
+      "wins": 144,
+      "losses": 120,
       "pushes": 0,
-      "win_rate": 0.5396,
-      "units": 7.97,
-      "roi": 0.0301,
+      "win_rate": 0.5455,
+      "units": 10.73,
+      "roi": 0.0407,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4668,13 +4660,13 @@
       "pending": 0
      },
      "total": {
-      "bets": 265,
-      "wins": 143,
-      "losses": 122,
+      "bets": 264,
+      "wins": 144,
+      "losses": 120,
       "pushes": 0,
-      "win_rate": 0.5396,
-      "units": 7.97,
-      "roi": 0.0301,
+      "win_rate": 0.5455,
+      "units": 10.73,
+      "roi": 0.0407,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4696,61 +4688,61 @@
    "by_month": {
     "staked": {
      "202511": {
-      "bets": 23,
-      "wins": 13,
-      "losses": 10,
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
       "pushes": 0,
-      "win_rate": 0.5652,
-      "units": 1.67,
-      "roi": 0.0725,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202512": {
-      "bets": 84,
-      "wins": 39,
-      "losses": 45,
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
       "pushes": 0,
-      "win_rate": 0.4643,
-      "units": -9.91,
-      "roi": -0.1179,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202601": {
-      "bets": 62,
-      "wins": 40,
-      "losses": 22,
+      "bets": 101,
+      "wins": 58,
+      "losses": 43,
       "pushes": 0,
-      "win_rate": 0.6452,
-      "units": 13.24,
-      "roi": 0.2135,
+      "win_rate": 0.5743,
+      "units": 8.92,
+      "roi": 0.0883,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202602": {
-      "bets": 36,
-      "wins": 18,
-      "losses": 18,
+      "bets": 134,
+      "wins": 79,
+      "losses": 55,
       "pushes": 0,
-      "win_rate": 0.5,
-      "units": -1.52,
-      "roi": -0.0421,
+      "win_rate": 0.5896,
+      "units": 15.48,
+      "roi": 0.1155,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202603": {
-      "bets": 17,
-      "wins": 11,
-      "losses": 6,
+      "bets": 61,
+      "wins": 34,
+      "losses": 27,
       "pushes": 0,
-      "win_rate": 0.6471,
-      "units": 3.77,
-      "roi": 0.2217,
+      "win_rate": 0.5574,
+      "units": 3.24,
+      "roi": 0.0532,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4758,61 +4750,61 @@
     },
     "BET": {
      "202511": {
-      "bets": 153,
-      "wins": 89,
-      "losses": 64,
+      "bets": 116,
+      "wins": 66,
+      "losses": 50,
       "pushes": 0,
-      "win_rate": 0.5817,
-      "units": 16.5,
-      "roi": 0.1078,
+      "win_rate": 0.569,
+      "units": 9.77,
+      "roi": 0.0843,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202512": {
-      "bets": 507,
-      "wins": 241,
-      "losses": 266,
+      "bets": 371,
+      "wins": 170,
+      "losses": 201,
       "pushes": 0,
-      "win_rate": 0.4753,
-      "units": -47.57,
-      "roi": -0.0938,
+      "win_rate": 0.4582,
+      "units": -46.46,
+      "roi": -0.1252,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202601": {
-      "bets": 615,
-      "wins": 324,
-      "losses": 291,
+      "bets": 580,
+      "wins": 305,
+      "losses": 275,
       "pushes": 0,
-      "win_rate": 0.5268,
-      "units": 1.88,
-      "roi": 0.0031,
+      "win_rate": 0.5259,
+      "units": 0.85,
+      "roi": 0.0015,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202602": {
-      "bets": 434,
-      "wins": 235,
-      "losses": 199,
+      "bets": 483,
+      "wins": 267,
+      "losses": 216,
       "pushes": 0,
-      "win_rate": 0.5415,
-      "units": 13.42,
-      "roi": 0.0309,
+      "win_rate": 0.5528,
+      "units": 24.17,
+      "roi": 0.05,
       "clv": null,
       "clv_n": 0,
       "pending": 0
      },
      "202603": {
-      "bets": 206,
-      "wins": 99,
-      "losses": 107,
+      "bets": 235,
+      "wins": 115,
+      "losses": 120,
       "pushes": 0,
-      "win_rate": 0.4806,
-      "units": -17.81,
-      "roi": -0.0865,
+      "win_rate": 0.4894,
+      "units": -17.01,
+      "roi": -0.0724,
       "clv": null,
       "clv_n": 0,
       "pending": 0
@@ -4824,1001 +4816,1001 @@
      "date": 20251124,
      "staked_units": 0.0,
      "staked_bets": 0,
-     "bet_units": 3.22,
-     "bet_bets": 14,
+     "bet_units": 4.13,
+     "bet_bets": 15,
      "bankroll": 1.0
     },
     {
      "date": 20251125,
-     "staked_units": -2.0,
-     "staked_bets": 2,
-     "bet_units": 5.1,
-     "bet_bets": 52,
-     "bankroll": 0.9612
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 1.48,
+     "bet_bets": 48,
+     "bankroll": 1.0
     },
     {
      "date": 20251126,
-     "staked_units": 1.47,
-     "staked_bets": 8,
-     "bet_units": 11.52,
-     "bet_bets": 82,
-     "bankroll": 0.9863
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 5.39,
+     "bet_bets": 71,
+     "bankroll": 1.0
     },
     {
      "date": 20251127,
-     "staked_units": 2.3,
-     "staked_bets": 9,
-     "bet_units": 14.92,
-     "bet_bets": 90,
-     "bankroll": 0.9874
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 7.03,
+     "bet_bets": 77,
+     "bankroll": 1.0
     },
     {
      "date": 20251128,
-     "staked_units": 2.1,
-     "staked_bets": 13,
-     "bet_units": 15.93,
-     "bet_bets": 108,
-     "bankroll": 0.9779
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 9.24,
+     "bet_bets": 90,
+     "bankroll": 1.0
     },
     {
      "date": 20251129,
-     "staked_units": 1.79,
-     "staked_bets": 19,
-     "bet_units": 21.97,
-     "bet_bets": 138,
-     "bankroll": 0.9817
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 11.13,
+     "bet_bets": 109,
+     "bankroll": 1.0
     },
     {
      "date": 20251130,
-     "staked_units": 1.67,
-     "staked_bets": 23,
-     "bet_units": 16.5,
-     "bet_bets": 153,
-     "bankroll": 1.0025
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 9.77,
+     "bet_bets": 116,
+     "bankroll": 1.0
     },
     {
      "date": 20251201,
-     "staked_units": 0.67,
-     "staked_bets": 24,
-     "bet_units": 15.19,
-     "bet_bets": 160,
-     "bankroll": 0.9945
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 10.5,
+     "bet_bets": 121,
+     "bankroll": 1.0
     },
     {
      "date": 20251202,
-     "staked_units": -3.42,
-     "staked_bets": 30,
-     "bet_units": 13.2,
-     "bet_bets": 183,
-     "bankroll": 0.9493
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 8.8,
+     "bet_bets": 138,
+     "bankroll": 1.0
     },
     {
      "date": 20251203,
-     "staked_units": -4.68,
-     "staked_bets": 35,
-     "bet_units": 7.46,
-     "bet_bets": 221,
-     "bankroll": 0.9323
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": 0.76,
+     "bet_bets": 167,
+     "bankroll": 1.0
     },
     {
      "date": 20251204,
-     "staked_units": -3.81,
-     "staked_bets": 36,
-     "bet_units": 5.33,
-     "bet_bets": 225,
-     "bankroll": 0.9357
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -2.24,
+     "bet_bets": 170,
+     "bankroll": 1.0
     },
     {
      "date": 20251205,
-     "staked_units": -5.81,
-     "staked_bets": 38,
-     "bet_units": 4.74,
-     "bet_bets": 235,
-     "bankroll": 0.9098
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -0.64,
+     "bet_bets": 176,
+     "bankroll": 1.0
     },
     {
      "date": 20251206,
-     "staked_units": -7.09,
-     "staked_bets": 45,
-     "bet_units": -6.42,
-     "bet_bets": 290,
-     "bankroll": 0.9262
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -7.24,
+     "bet_bets": 217,
+     "bankroll": 1.0
     },
     {
      "date": 20251207,
-     "staked_units": -10.07,
-     "staked_bets": 50,
-     "bet_units": -11.09,
-     "bet_bets": 308,
-     "bankroll": 0.9049
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -8.89,
+     "bet_bets": 230,
+     "bankroll": 1.0
     },
     {
      "date": 20251208,
-     "staked_units": -10.07,
-     "staked_bets": 50,
-     "bet_units": -7.51,
-     "bet_bets": 314,
-     "bankroll": 0.9049
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -5.31,
+     "bet_bets": 236,
+     "bankroll": 1.0
     },
     {
      "date": 20251209,
-     "staked_units": -9.25,
-     "staked_bets": 53,
-     "bet_units": -10.27,
-     "bet_bets": 332,
-     "bankroll": 0.9092
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -11.68,
+     "bet_bets": 250,
+     "bankroll": 1.0
     },
     {
      "date": 20251210,
-     "staked_units": -8.41,
-     "staked_bets": 56,
-     "bet_units": -15.79,
-     "bet_bets": 349,
-     "bankroll": 0.9265
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -13.15,
+     "bet_bets": 261,
+     "bankroll": 1.0
     },
     {
      "date": 20251211,
-     "staked_units": -7.56,
-     "staked_bets": 57,
-     "bet_units": -19.94,
-     "bet_bets": 355,
-     "bankroll": 0.9303
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -16.15,
+     "bet_bets": 264,
+     "bankroll": 1.0
     },
     {
      "date": 20251212,
-     "staked_units": -7.56,
-     "staked_bets": 57,
-     "bet_units": -22.03,
-     "bet_bets": 359,
-     "bankroll": 0.9303
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -18.24,
+     "bet_bets": 268,
+     "bankroll": 1.0
     },
     {
      "date": 20251213,
-     "staked_units": -6.23,
-     "staked_bets": 69,
-     "bet_units": -20.57,
-     "bet_bets": 411,
-     "bankroll": 0.9418
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -21.82,
+     "bet_bets": 304,
+     "bankroll": 1.0
     },
     {
      "date": 20251214,
-     "staked_units": -5.34,
-     "staked_bets": 70,
-     "bet_units": -20.88,
-     "bet_bets": 417,
-     "bankroll": 0.9514
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -24.91,
+     "bet_bets": 309,
+     "bankroll": 1.0
     },
     {
      "date": 20251215,
-     "staked_units": -5.34,
-     "staked_bets": 70,
-     "bet_units": -19.18,
-     "bet_bets": 421,
-     "bankroll": 0.9514
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -24.11,
+     "bet_bets": 312,
+     "bankroll": 1.0
     },
     {
      "date": 20251216,
-     "staked_units": -2.63,
-     "staked_bets": 73,
-     "bet_units": -20.18,
-     "bet_bets": 443,
-     "bankroll": 0.9802
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -30.52,
+     "bet_bets": 328,
+     "bankroll": 1.0
     },
     {
      "date": 20251217,
-     "staked_units": -1.91,
-     "staked_bets": 78,
-     "bet_units": -26.18,
-     "bet_bets": 468,
-     "bankroll": 1.0001
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -39.21,
+     "bet_bets": 350,
+     "bankroll": 1.0
     },
     {
      "date": 20251218,
-     "staked_units": -2.01,
-     "staked_bets": 80,
-     "bet_units": -27.49,
-     "bet_bets": 475,
-     "bankroll": 1.0068
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -40.53,
+     "bet_bets": 357,
+     "bankroll": 1.0
     },
     {
      "date": 20251219,
-     "staked_units": -2.08,
-     "staked_bets": 82,
-     "bet_units": -23.18,
-     "bet_bets": 488,
-     "bankroll": 1.0061
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -36.06,
+     "bet_bets": 366,
+     "bankroll": 1.0
     },
     {
      "date": 20251220,
-     "staked_units": -2.35,
-     "staked_bets": 88,
-     "bet_units": -27.63,
-     "bet_bets": 521,
-     "bankroll": 1.0268
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -39.95,
+     "bet_bets": 387,
+     "bankroll": 1.0
     },
     {
      "date": 20251221,
-     "staked_units": -3.55,
-     "staked_bets": 93,
-     "bet_units": -27.04,
-     "bet_bets": 549,
-     "bankroll": 1.0004
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -34.35,
+     "bet_bets": 410,
+     "bankroll": 1.0
     },
     {
      "date": 20251222,
-     "staked_units": -3.68,
-     "staked_bets": 95,
-     "bet_units": -23.04,
-     "bet_bets": 568,
-     "bankroll": 0.9914
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -29.06,
+     "bet_bets": 422,
+     "bankroll": 1.0
     },
     {
      "date": 20251223,
-     "staked_units": -2.86,
-     "staked_bets": 96,
-     "bet_units": -23.42,
-     "bet_bets": 576,
-     "bankroll": 0.9915
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -30.16,
+     "bet_bets": 427,
+     "bankroll": 1.0
     },
     {
      "date": 20251227,
-     "staked_units": -3.86,
-     "staked_bets": 97,
-     "bet_units": -24.42,
-     "bet_bets": 577,
-     "bankroll": 0.9867
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -30.16,
+     "bet_bets": 427,
+     "bankroll": 1.0
     },
     {
      "date": 20251228,
-     "staked_units": -3.97,
-     "staked_bets": 99,
-     "bet_units": -25.79,
-     "bet_bets": 586,
-     "bankroll": 0.9805
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -32.31,
+     "bet_bets": 433,
+     "bankroll": 1.0
     },
     {
      "date": 20251229,
-     "staked_units": -4.97,
-     "staked_bets": 100,
-     "bet_units": -29.95,
-     "bet_bets": 615,
-     "bankroll": 0.9765
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -39.05,
+     "bet_bets": 455,
+     "bankroll": 1.0
     },
     {
      "date": 20251230,
-     "staked_units": -7.07,
-     "staked_bets": 104,
-     "bet_units": -33.83,
-     "bet_bets": 636,
-     "bankroll": 0.9595
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -37.82,
+     "bet_bets": 469,
+     "bankroll": 1.0
     },
     {
      "date": 20251231,
-     "staked_units": -8.24,
-     "staked_bets": 107,
-     "bet_units": -31.07,
-     "bet_bets": 660,
-     "bankroll": 0.9351
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -36.69,
+     "bet_bets": 487,
+     "bankroll": 1.0
     },
     {
      "date": 20260101,
-     "staked_units": -9.24,
-     "staked_bets": 108,
-     "bet_units": -40.58,
-     "bet_bets": 679,
-     "bankroll": 0.9312
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -43.06,
+     "bet_bets": 501,
+     "bankroll": 1.0
     },
     {
      "date": 20260102,
-     "staked_units": -7.48,
-     "staked_bets": 110,
-     "bet_units": -40.27,
-     "bet_bets": 692,
-     "bankroll": 0.946
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -46.25,
+     "bet_bets": 510,
+     "bankroll": 1.0
     },
     {
      "date": 20260103,
-     "staked_units": -7.59,
-     "staked_bets": 112,
-     "bet_units": -45.37,
-     "bet_bets": 739,
-     "bankroll": 0.9427
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -47.73,
+     "bet_bets": 557,
+     "bankroll": 1.0
     },
     {
      "date": 20260104,
-     "staked_units": -4.1,
-     "staked_bets": 118,
-     "bet_units": -39.81,
-     "bet_bets": 762,
-     "bankroll": 0.9707
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -41.74,
+     "bet_bets": 572,
+     "bankroll": 1.0
     },
     {
      "date": 20260105,
-     "staked_units": -4.1,
-     "staked_bets": 118,
-     "bet_units": -36.51,
-     "bet_bets": 772,
-     "bankroll": 0.9707
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -40.16,
+     "bet_bets": 578,
+     "bankroll": 1.0
     },
     {
      "date": 20260106,
-     "staked_units": -3.45,
-     "staked_bets": 121,
-     "bet_units": -34.57,
-     "bet_bets": 787,
-     "bankroll": 0.9606
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -35.92,
+     "bet_bets": 589,
+     "bankroll": 1.0
     },
     {
      "date": 20260107,
-     "staked_units": -0.76,
-     "staked_bets": 124,
-     "bet_units": -33.95,
-     "bet_bets": 813,
-     "bankroll": 0.9797
+     "staked_units": 0.87,
+     "staked_bets": 1,
+     "bet_units": -34.1,
+     "bet_bets": 608,
+     "bankroll": 1.007
     },
     {
      "date": 20260108,
-     "staked_units": -1.76,
-     "staked_bets": 125,
-     "bet_units": -38.35,
-     "bet_bets": 827,
-     "bankroll": 0.9718
+     "staked_units": 0.87,
+     "staked_bets": 1,
+     "bet_units": -37.33,
+     "bet_bets": 617,
+     "bankroll": 1.007
     },
     {
      "date": 20260109,
-     "staked_units": -1.76,
-     "staked_bets": 125,
-     "bet_units": -37.73,
-     "bet_bets": 834,
-     "bankroll": 0.9718
+     "staked_units": -0.13,
+     "staked_bets": 2,
+     "bet_units": -35.7,
+     "bet_bets": 623,
+     "bankroll": 0.9841
     },
     {
      "date": 20260110,
-     "staked_units": 1.63,
-     "staked_bets": 131,
-     "bet_units": -38.41,
-     "bet_bets": 888,
-     "bankroll": 0.9921
+     "staked_units": -2.24,
+     "staked_bets": 8,
+     "bet_units": -41.78,
+     "bet_bets": 671,
+     "bankroll": 0.9664
     },
     {
      "date": 20260111,
-     "staked_units": 1.63,
-     "staked_bets": 131,
-     "bet_units": -37.63,
-     "bet_bets": 893,
-     "bankroll": 0.9921
+     "staked_units": -0.5,
+     "staked_bets": 10,
+     "bet_units": -40.16,
+     "bet_bets": 677,
+     "bankroll": 0.9767
     },
     {
      "date": 20260112,
-     "staked_units": 1.63,
-     "staked_bets": 131,
-     "bet_units": -37.0,
-     "bet_bets": 900,
-     "bankroll": 0.9921
+     "staked_units": -0.5,
+     "staked_bets": 10,
+     "bet_units": -38.53,
+     "bet_bets": 683,
+     "bankroll": 0.9767
     },
     {
      "date": 20260113,
-     "staked_units": 3.37,
-     "staked_bets": 133,
-     "bet_units": -31.87,
-     "bet_bets": 912,
-     "bankroll": 1.0013
+     "staked_units": 1.3,
+     "staked_bets": 12,
+     "bet_units": -36.26,
+     "bet_bets": 696,
+     "bankroll": 0.9987
     },
     {
      "date": 20260114,
-     "staked_units": 4.28,
-     "staked_bets": 134,
-     "bet_units": -35.9,
-     "bet_bets": 937,
-     "bankroll": 1.0076
+     "staked_units": -0.92,
+     "staked_bets": 18,
+     "bet_units": -38.31,
+     "bet_bets": 719,
+     "bankroll": 0.9581
     },
     {
      "date": 20260115,
-     "staked_units": 3.28,
-     "staked_bets": 135,
-     "bet_units": -35.07,
-     "bet_bets": 959,
-     "bankroll": 0.9978
+     "staked_units": -2.03,
+     "staked_bets": 21,
+     "bet_units": -36.54,
+     "bet_bets": 740,
+     "bankroll": 0.9546
     },
     {
      "date": 20260116,
-     "staked_units": 3.28,
-     "staked_bets": 135,
-     "bet_units": -36.07,
-     "bet_bets": 960,
-     "bankroll": 0.9978
-    },
-    {
-     "date": 20260117,
-     "staked_units": 5.5,
-     "staked_bets": 144,
-     "bet_units": -26.92,
-     "bet_bets": 1025,
-     "bankroll": 1.0145
-    },
-    {
-     "date": 20260118,
-     "staked_units": 5.5,
-     "staked_bets": 144,
-     "bet_units": -25.25,
-     "bet_bets": 1029,
-     "bankroll": 1.0145
-    },
-    {
-     "date": 20260119,
-     "staked_units": 5.33,
-     "staked_bets": 146,
-     "bet_units": -30.12,
-     "bet_bets": 1047,
-     "bankroll": 1.0097
-    },
-    {
-     "date": 20260120,
-     "staked_units": 5.15,
-     "staked_bets": 148,
-     "bet_units": -27.88,
-     "bet_bets": 1060,
-     "bankroll": 1.0056
-    },
-    {
-     "date": 20260121,
-     "staked_units": 5.06,
-     "staked_bets": 150,
-     "bet_units": -30.69,
-     "bet_bets": 1078,
-     "bankroll": 1.0004
-    },
-    {
-     "date": 20260122,
-     "staked_units": 4.01,
-     "staked_bets": 153,
-     "bet_units": -26.75,
-     "bet_bets": 1099,
-     "bankroll": 0.9995
-    },
-    {
-     "date": 20260123,
-     "staked_units": 4.01,
-     "staked_bets": 153,
-     "bet_units": -26.09,
-     "bet_bets": 1106,
-     "bankroll": 0.9995
-    },
-    {
-     "date": 20260124,
-     "staked_units": 5.62,
-     "staked_bets": 157,
-     "bet_units": -28.63,
-     "bet_bets": 1158,
-     "bankroll": 1.0112
-    },
-    {
-     "date": 20260125,
-     "staked_units": 5.62,
-     "staked_bets": 157,
-     "bet_units": -28.73,
-     "bet_bets": 1160,
-     "bankroll": 1.0112
-    },
-    {
-     "date": 20260126,
-     "staked_units": 5.62,
-     "staked_bets": 157,
-     "bet_units": -27.9,
-     "bet_bets": 1163,
-     "bankroll": 1.0112
-    },
-    {
-     "date": 20260127,
-     "staked_units": 6.49,
-     "staked_bets": 158,
-     "bet_units": -28.37,
-     "bet_bets": 1171,
-     "bankroll": 1.0148
-    },
-    {
-     "date": 20260128,
-     "staked_units": 6.38,
-     "staked_bets": 160,
-     "bet_units": -29.04,
-     "bet_bets": 1189,
-     "bankroll": 1.0119
-    },
-    {
-     "date": 20260129,
-     "staked_units": 6.31,
-     "staked_bets": 162,
-     "bet_units": -28.15,
-     "bet_bets": 1213,
-     "bankroll": 1.0129
-    },
-    {
-     "date": 20260130,
-     "staked_units": 5.31,
-     "staked_bets": 163,
-     "bet_units": -27.53,
-     "bet_bets": 1222,
-     "bankroll": 1.0105
-    },
-    {
-     "date": 20260131,
-     "staked_units": 5.0,
-     "staked_bets": 169,
-     "bet_units": -29.19,
-     "bet_bets": 1275,
-     "bankroll": 0.9885
-    },
-    {
-     "date": 20260201,
-     "staked_units": 5.0,
-     "staked_bets": 169,
-     "bet_units": -26.72,
-     "bet_bets": 1282,
-     "bankroll": 0.9885
-    },
-    {
-     "date": 20260202,
-     "staked_units": 5.0,
-     "staked_bets": 169,
-     "bet_units": -29.9,
-     "bet_bets": 1289,
-     "bankroll": 0.9885
-    },
-    {
-     "date": 20260203,
-     "staked_units": 3.0,
-     "staked_bets": 171,
-     "bet_units": -33.32,
-     "bet_bets": 1300,
-     "bankroll": 0.9794
-    },
-    {
-     "date": 20260204,
-     "staked_units": 4.81,
-     "staked_bets": 175,
-     "bet_units": -40.88,
-     "bet_bets": 1321,
-     "bankroll": 1.0161
-    },
-    {
-     "date": 20260205,
-     "staked_units": 4.81,
-     "staked_bets": 175,
-     "bet_units": -44.36,
-     "bet_bets": 1332,
-     "bankroll": 1.0161
-    },
-    {
-     "date": 20260206,
-     "staked_units": 4.81,
-     "staked_bets": 175,
-     "bet_units": -44.49,
-     "bet_bets": 1334,
-     "bankroll": 1.0161
-    },
-    {
-     "date": 20260207,
-     "staked_units": 3.72,
-     "staked_bets": 178,
-     "bet_units": -41.57,
-     "bet_bets": 1377,
-     "bankroll": 1.0159
-    },
-    {
-     "date": 20260208,
-     "staked_units": 3.72,
-     "staked_bets": 178,
-     "bet_units": -40.74,
-     "bet_bets": 1380,
-     "bankroll": 1.0159
-    },
-    {
-     "date": 20260209,
-     "staked_units": 3.72,
-     "staked_bets": 178,
-     "bet_units": -38.26,
-     "bet_bets": 1387,
-     "bankroll": 1.0159
-    },
-    {
-     "date": 20260210,
-     "staked_units": 2.72,
-     "staked_bets": 179,
-     "bet_units": -38.52,
-     "bet_bets": 1393,
-     "bankroll": 1.0076
-    },
-    {
-     "date": 20260211,
-     "staked_units": 1.72,
-     "staked_bets": 180,
-     "bet_units": -38.25,
-     "bet_bets": 1408,
-     "bankroll": 0.9881
-    },
-    {
-     "date": 20260212,
-     "staked_units": 0.72,
-     "staked_bets": 181,
-     "bet_units": -38.12,
-     "bet_bets": 1423,
-     "bankroll": 0.9801
-    },
-    {
-     "date": 20260213,
-     "staked_units": 0.72,
-     "staked_bets": 181,
-     "bet_units": -38.35,
-     "bet_bets": 1427,
-     "bankroll": 0.9801
-    },
-    {
-     "date": 20260214,
-     "staked_units": -0.32,
-     "staked_bets": 184,
-     "bet_units": -34.78,
-     "bet_bets": 1473,
-     "bankroll": 0.9599
-    },
-    {
-     "date": 20260215,
-     "staked_units": -1.32,
-     "staked_bets": 185,
-     "bet_units": -37.05,
-     "bet_bets": 1481,
-     "bankroll": 0.9521
-    },
-    {
-     "date": 20260216,
-     "staked_units": -1.48,
-     "staked_bets": 187,
-     "bet_units": -34.85,
-     "bet_bets": 1492,
-     "bankroll": 0.9521
-    },
-    {
-     "date": 20260217,
-     "staked_units": -2.48,
-     "staked_bets": 188,
-     "bet_units": -35.24,
-     "bet_bets": 1500,
-     "bankroll": 0.9497
-    },
-    {
-     "date": 20260218,
-     "staked_units": -0.71,
-     "staked_bets": 190,
-     "bet_units": -26.79,
-     "bet_bets": 1522,
+     "staked_units": -1.16,
+     "staked_bets": 22,
+     "bet_units": -35.67,
+     "bet_bets": 741,
      "bankroll": 0.9613
     },
     {
+     "date": 20260117,
+     "staked_units": -4.57,
+     "staked_bets": 33,
+     "bet_units": -35.67,
+     "bet_bets": 802,
+     "bankroll": 0.9377
+    },
+    {
+     "date": 20260118,
+     "staked_units": -3.74,
+     "staked_bets": 34,
+     "bet_units": -33.17,
+     "bet_bets": 807,
+     "bankroll": 0.9387
+    },
+    {
+     "date": 20260119,
+     "staked_units": -0.21,
+     "staked_bets": 38,
+     "bet_units": -34.19,
+     "bet_bets": 825,
+     "bankroll": 0.9689
+    },
+    {
+     "date": 20260120,
+     "staked_units": -1.43,
+     "staked_bets": 43,
+     "bet_units": -33.91,
+     "bet_bets": 840,
+     "bankroll": 0.9569
+    },
+    {
+     "date": 20260121,
+     "staked_units": 0.44,
+     "staked_bets": 45,
+     "bet_units": -37.65,
+     "bet_bets": 857,
+     "bankroll": 0.9806
+    },
+    {
+     "date": 20260122,
+     "staked_units": 2.86,
+     "staked_bets": 52,
+     "bet_units": -32.16,
+     "bet_bets": 882,
+     "bankroll": 1.01
+    },
+    {
+     "date": 20260123,
+     "staked_units": 4.57,
+     "staked_bets": 54,
+     "bet_units": -27.87,
+     "bet_bets": 891,
+     "bankroll": 1.0212
+    },
+    {
+     "date": 20260124,
+     "staked_units": 8.68,
+     "staked_bets": 65,
+     "bet_units": -25.61,
+     "bet_bets": 942,
+     "bankroll": 1.056
+    },
+    {
+     "date": 20260125,
+     "staked_units": 8.68,
+     "staked_bets": 65,
+     "bet_units": -25.7,
+     "bet_bets": 944,
+     "bankroll": 1.056
+    },
+    {
+     "date": 20260126,
+     "staked_units": 9.58,
+     "staked_bets": 66,
+     "bet_units": -24.84,
+     "bet_bets": 947,
+     "bankroll": 1.0627
+    },
+    {
+     "date": 20260127,
+     "staked_units": 7.45,
+     "staked_bets": 70,
+     "bet_units": -28.31,
+     "bet_bets": 958,
+     "bankroll": 1.0544
+    },
+    {
+     "date": 20260128,
+     "staked_units": 8.2,
+     "staked_bets": 75,
+     "bet_units": -29.05,
+     "bet_bets": 978,
+     "bankroll": 1.0697
+    },
+    {
+     "date": 20260129,
+     "staked_units": 7.83,
+     "staked_bets": 81,
+     "bet_units": -28.28,
+     "bet_bets": 1002,
+     "bankroll": 1.0592
+    },
+    {
+     "date": 20260130,
+     "staked_units": 7.83,
+     "staked_bets": 81,
+     "bet_units": -27.56,
+     "bet_bets": 1009,
+     "bankroll": 1.0592
+    },
+    {
+     "date": 20260131,
+     "staked_units": 8.92,
+     "staked_bets": 101,
+     "bet_units": -35.83,
+     "bet_bets": 1067,
+     "bankroll": 1.0587
+    },
+    {
+     "date": 20260201,
+     "staked_units": 7.79,
+     "staked_bets": 104,
+     "bet_units": -36.38,
+     "bet_bets": 1077,
+     "bankroll": 1.0369
+    },
+    {
+     "date": 20260202,
+     "staked_units": 7.79,
+     "staked_bets": 104,
+     "bet_units": -38.56,
+     "bet_bets": 1083,
+     "bankroll": 1.0369
+    },
+    {
+     "date": 20260203,
+     "staked_units": 6.59,
+     "staked_bets": 109,
+     "bet_units": -41.18,
+     "bet_bets": 1097,
+     "bankroll": 1.0362
+    },
+    {
+     "date": 20260204,
+     "staked_units": 9.99,
+     "staked_bets": 117,
+     "bet_units": -46.17,
+     "bet_bets": 1121,
+     "bankroll": 1.062
+    },
+    {
+     "date": 20260205,
+     "staked_units": 10.91,
+     "staked_bets": 118,
+     "bet_units": -46.1,
+     "bet_bets": 1136,
+     "bankroll": 1.0698
+    },
+    {
+     "date": 20260206,
+     "staked_units": 10.74,
+     "staked_bets": 122,
+     "bet_units": -46.4,
+     "bet_bets": 1142,
+     "bankroll": 1.0759
+    },
+    {
+     "date": 20260207,
+     "staked_units": 10.13,
+     "staked_bets": 134,
+     "bet_units": -40.07,
+     "bet_bets": 1193,
+     "bankroll": 1.0744
+    },
+    {
+     "date": 20260208,
+     "staked_units": 9.13,
+     "staked_bets": 135,
+     "bet_units": -39.24,
+     "bet_bets": 1196,
+     "bankroll": 1.0572
+    },
+    {
+     "date": 20260209,
+     "staked_units": 8.02,
+     "staked_bets": 138,
+     "bet_units": -39.56,
+     "bet_bets": 1202,
+     "bankroll": 1.0493
+    },
+    {
+     "date": 20260210,
+     "staked_units": 8.02,
+     "staked_bets": 138,
+     "bet_units": -37.77,
+     "bet_bets": 1204,
+     "bankroll": 1.0493
+    },
+    {
+     "date": 20260211,
+     "staked_units": 7.74,
+     "staked_bets": 144,
+     "bet_units": -37.56,
+     "bet_bets": 1221,
+     "bankroll": 1.0309
+    },
+    {
+     "date": 20260212,
+     "staked_units": 8.25,
+     "staked_bets": 149,
+     "bet_units": -34.76,
+     "bet_bets": 1237,
+     "bankroll": 1.0193
+    },
+    {
+     "date": 20260213,
+     "staked_units": 11.71,
+     "staked_bets": 153,
+     "bet_units": -32.43,
+     "bet_bets": 1244,
+     "bankroll": 1.0391
+    },
+    {
+     "date": 20260214,
+     "staked_units": 13.02,
+     "staked_bets": 165,
+     "bet_units": -30.15,
+     "bet_bets": 1293,
+     "bankroll": 1.0612
+    },
+    {
+     "date": 20260215,
+     "staked_units": 8.95,
+     "staked_bets": 171,
+     "bet_units": -37.39,
+     "bet_bets": 1306,
+     "bankroll": 1.0197
+    },
+    {
+     "date": 20260216,
+     "staked_units": 9.61,
+     "staked_bets": 176,
+     "bet_units": -34.37,
+     "bet_bets": 1320,
+     "bankroll": 1.0269
+    },
+    {
+     "date": 20260217,
+     "staked_units": 8.45,
+     "staked_bets": 179,
+     "bet_units": -35.83,
+     "bet_bets": 1329,
+     "bankroll": 1.009
+    },
+    {
+     "date": 20260218,
+     "staked_units": 7.1,
+     "staked_bets": 186,
+     "bet_units": -29.49,
+     "bet_bets": 1357,
+     "bankroll": 0.9796
+    },
+    {
      "date": 20260219,
-     "staked_units": 0.06,
-     "staked_bets": 193,
-     "bet_units": -22.24,
-     "bet_bets": 1546,
-     "bankroll": 0.9729
+     "staked_units": 9.7,
+     "staked_bets": 191,
+     "bet_units": -26.63,
+     "bet_bets": 1379,
+     "bankroll": 1.0073
     },
     {
      "date": 20260220,
-     "staked_units": 0.06,
+     "staked_units": 11.42,
      "staked_bets": 193,
-     "bet_units": -20.51,
-     "bet_bets": 1550,
-     "bankroll": 0.9729
+     "bet_units": -22.18,
+     "bet_bets": 1384,
+     "bankroll": 1.015
     },
     {
      "date": 20260221,
-     "staked_units": 1.93,
-     "staked_bets": 195,
-     "bet_units": -21.1,
-     "bet_bets": 1606,
-     "bankroll": 1.0031
+     "staked_units": 14.75,
+     "staked_bets": 203,
+     "bet_units": -23.82,
+     "bet_bets": 1437,
+     "bankroll": 1.0623
     },
     {
      "date": 20260222,
-     "staked_units": 1.93,
-     "staked_bets": 195,
-     "bet_units": -22.28,
-     "bet_bets": 1611,
-     "bankroll": 1.0031
+     "staked_units": 14.65,
+     "staked_bets": 205,
+     "bet_units": -25.11,
+     "bet_bets": 1444,
+     "bankroll": 1.0472
     },
     {
      "date": 20260223,
-     "staked_units": 2.83,
-     "staked_bets": 196,
-     "bet_units": -21.61,
-     "bet_bets": 1616,
-     "bankroll": 1.0157
+     "staked_units": 15.56,
+     "staked_bets": 206,
+     "bet_units": -23.43,
+     "bet_bets": 1448,
+     "bankroll": 1.0603
     },
     {
      "date": 20260224,
-     "staked_units": 1.83,
-     "staked_bets": 197,
-     "bet_units": -25.95,
-     "bet_bets": 1628,
-     "bankroll": 1.0143
+     "staked_units": 17.32,
+     "staked_bets": 208,
+     "bet_units": -24.94,
+     "bet_bets": 1459,
+     "bankroll": 1.0733
     },
     {
      "date": 20260225,
-     "staked_units": 1.83,
-     "staked_bets": 197,
-     "bet_units": -19.42,
-     "bet_bets": 1646,
-     "bankroll": 1.0143
+     "staked_units": 18.14,
+     "staked_bets": 211,
+     "bet_units": -17.49,
+     "bet_bets": 1478,
+     "bankroll": 1.0794
     },
     {
      "date": 20260226,
-     "staked_units": 3.63,
-     "staked_bets": 201,
-     "bet_units": -14.6,
-     "bet_bets": 1664,
-     "bankroll": 1.0566
+     "staked_units": 20.47,
+     "staked_bets": 218,
+     "bet_units": -12.11,
+     "bet_bets": 1499,
+     "bankroll": 1.0699
     },
     {
      "date": 20260227,
-     "staked_units": 2.63,
-     "staked_bets": 202,
-     "bet_units": -18.69,
-     "bet_bets": 1670,
-     "bankroll": 1.0565
+     "staked_units": 20.45,
+     "staked_bets": 220,
+     "bet_units": -15.22,
+     "bet_bets": 1506,
+     "bankroll": 1.0816
     },
     {
      "date": 20260228,
-     "staked_units": 3.48,
-     "staked_bets": 205,
-     "bet_units": -15.77,
-     "bet_bets": 1709,
-     "bankroll": 1.0588
+     "staked_units": 24.4,
+     "staked_bets": 235,
+     "bet_units": -11.66,
+     "bet_bets": 1550,
+     "bankroll": 1.1442
     },
     {
      "date": 20260301,
-     "staked_units": 3.48,
-     "staked_bets": 205,
-     "bet_units": -15.03,
-     "bet_bets": 1714,
-     "bankroll": 1.0588
+     "staked_units": 23.4,
+     "staked_bets": 236,
+     "bet_units": -10.97,
+     "bet_bets": 1555,
+     "bankroll": 1.1311
     },
     {
      "date": 20260302,
-     "staked_units": 4.33,
-     "staked_bets": 206,
-     "bet_units": -16.26,
-     "bet_bets": 1719,
-     "bankroll": 1.061
+     "staked_units": 26.01,
+     "staked_bets": 239,
+     "bet_units": -9.44,
+     "bet_bets": 1561,
+     "bankroll": 1.149
     },
     {
      "date": 20260303,
-     "staked_units": 3.33,
-     "staked_bets": 207,
-     "bet_units": -19.75,
-     "bet_bets": 1732,
-     "bankroll": 1.0525
+     "staked_units": 27.73,
+     "staked_bets": 243,
+     "bet_units": -14.11,
+     "bet_bets": 1579,
+     "bankroll": 1.1615
     },
     {
      "date": 20260304,
-     "staked_units": 4.22,
-     "staked_bets": 208,
-     "bet_units": -20.22,
-     "bet_bets": 1742,
-     "bankroll": 1.0579
+     "staked_units": 28.37,
+     "staked_bets": 248,
+     "bet_units": -17.57,
+     "bet_bets": 1590,
+     "bankroll": 1.1664
     },
     {
      "date": 20260305,
-     "staked_units": 4.22,
-     "staked_bets": 208,
-     "bet_units": -19.2,
-     "bet_bets": 1756,
-     "bankroll": 1.0579
+     "staked_units": 28.11,
+     "staked_bets": 252,
+     "bet_units": -15.78,
+     "bet_bets": 1609,
+     "bankroll": 1.1601
     },
     {
      "date": 20260306,
-     "staked_units": 3.22,
-     "staked_bets": 209,
-     "bet_units": -21.6,
-     "bet_bets": 1766,
-     "bankroll": 1.0458
+     "staked_units": 27.74,
+     "staked_bets": 258,
+     "bet_units": -16.54,
+     "bet_bets": 1623,
+     "bankroll": 1.1518
     },
     {
      "date": 20260307,
-     "staked_units": 5.92,
-     "staked_bets": 212,
-     "bet_units": -21.13,
-     "bet_bets": 1794,
-     "bankroll": 1.0798
+     "staked_units": 25.38,
+     "staked_bets": 268,
+     "bet_units": -23.08,
+     "bet_bets": 1658,
+     "bankroll": 1.0988
     },
     {
      "date": 20260308,
-     "staked_units": 5.92,
-     "staked_bets": 212,
-     "bet_units": -21.37,
-     "bet_bets": 1800,
+     "staked_units": 23.38,
+     "staked_bets": 270,
+     "bet_units": -23.41,
+     "bet_bets": 1666,
      "bankroll": 1.0798
     },
     {
      "date": 20260309,
-     "staked_units": 5.92,
-     "staked_bets": 212,
-     "bet_units": -19.84,
-     "bet_bets": 1806,
-     "bankroll": 1.0798
+     "staked_units": 22.38,
+     "staked_bets": 271,
+     "bet_units": -21.89,
+     "bet_bets": 1672,
+     "bankroll": 1.071
     },
     {
      "date": 20260310,
-     "staked_units": 5.81,
-     "staked_bets": 214,
-     "bet_units": -23.37,
-     "bet_bets": 1819,
-     "bankroll": 1.0846
+     "staked_units": 22.25,
+     "staked_bets": 273,
+     "bet_units": -24.44,
+     "bet_bets": 1684,
+     "bankroll": 1.0735
     },
     {
      "date": 20260311,
-     "staked_units": 4.81,
-     "staked_bets": 215,
-     "bet_units": -27.02,
-     "bet_bets": 1836,
-     "bankroll": 1.082
+     "staked_units": 24.92,
+     "staked_bets": 276,
+     "bet_units": -22.49,
+     "bet_bets": 1701,
+     "bankroll": 1.1048
     },
     {
      "date": 20260312,
-     "staked_units": 4.59,
-     "staked_bets": 219,
-     "bet_units": -24.21,
-     "bet_bets": 1858,
-     "bankroll": 1.077
+     "staked_units": 22.6,
+     "staked_bets": 284,
+     "bet_units": -21.74,
+     "bet_bets": 1723,
+     "bankroll": 1.0685
     },
     {
      "date": 20260313,
-     "staked_units": 4.59,
-     "staked_bets": 219,
-     "bet_units": -24.88,
-     "bet_bets": 1872,
-     "bankroll": 1.077
+     "staked_units": 21.6,
+     "staked_bets": 285,
+     "bet_units": -23.41,
+     "bet_bets": 1738,
+     "bankroll": 1.0581
     },
     {
      "date": 20260314,
-     "staked_units": 4.59,
-     "staked_bets": 219,
-     "bet_units": -25.16,
-     "bet_bets": 1878,
-     "bankroll": 1.077
+     "staked_units": 23.33,
+     "staked_bets": 287,
+     "bet_units": -22.79,
+     "bet_bets": 1743,
+     "bankroll": 1.0701
     },
     {
      "date": 20260315,
-     "staked_units": 4.59,
-     "staked_bets": 219,
-     "bet_units": -25.27,
-     "bet_bets": 1880,
-     "bankroll": 1.077
+     "staked_units": 23.33,
+     "staked_bets": 287,
+     "bet_units": -21.9,
+     "bet_bets": 1744,
+     "bankroll": 1.0701
     },
     {
      "date": 20260317,
-     "staked_units": 4.59,
-     "staked_bets": 219,
-     "bet_units": -27.35,
-     "bet_bets": 1884,
-     "bankroll": 1.077
+     "staked_units": 23.33,
+     "staked_bets": 287,
+     "bet_units": -23.9,
+     "bet_bets": 1746,
+     "bankroll": 1.0701
     },
     {
      "date": 20260318,
-     "staked_units": 5.43,
-     "staked_bets": 220,
-     "bet_units": -28.5,
-     "bet_bets": 1887,
-     "bankroll": 1.0813
+     "staked_units": 24.18,
+     "staked_bets": 288,
+     "bet_units": -26.05,
+     "bet_bets": 1750,
+     "bankroll": 1.0745
     },
     {
      "date": 20260319,
-     "staked_units": 6.34,
-     "staked_bets": 221,
-     "bet_units": -29.59,
-     "bet_bets": 1890,
-     "bankroll": 1.0949
+     "staked_units": 26.91,
+     "staked_bets": 291,
+     "bet_units": -25.32,
+     "bet_bets": 1755,
+     "bankroll": 1.1154
     },
     {
      "date": 20260320,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -26.03,
-     "bet_bets": 1894,
-     "bankroll": 1.1087
+     "staked_units": 28.77,
+     "staked_bets": 293,
+     "bet_units": -21.81,
+     "bet_bets": 1761,
+     "bankroll": 1.15
     },
     {
      "date": 20260321,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -27.14,
-     "bet_bets": 1897,
-     "bankroll": 1.1087
+     "staked_units": 28.77,
+     "staked_bets": 293,
+     "bet_units": -22.91,
+     "bet_bets": 1764,
+     "bankroll": 1.15
     },
     {
      "date": 20260322,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -31.21,
-     "bet_bets": 1903,
-     "bankroll": 1.1087
+     "staked_units": 28.77,
+     "staked_bets": 293,
+     "bet_units": -26.1,
+     "bet_bets": 1771,
+     "bankroll": 1.15
     },
     {
      "date": 20260324,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -32.21,
-     "bet_bets": 1904,
-     "bankroll": 1.1087
+     "staked_units": 28.77,
+     "staked_bets": 293,
+     "bet_units": -25.23,
+     "bet_bets": 1772,
+     "bankroll": 1.15
     },
     {
      "date": 20260325,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -33.21,
-     "bet_bets": 1905,
-     "bankroll": 1.1087
+     "staked_units": 28.77,
+     "staked_bets": 293,
+     "bet_units": -26.23,
+     "bet_bets": 1773,
+     "bankroll": 1.15
     },
     {
      "date": 20260326,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -34.26,
-     "bet_bets": 1908,
-     "bankroll": 1.1087
+     "staked_units": 29.64,
+     "staked_bets": 294,
+     "bet_units": -26.4,
+     "bet_bets": 1777,
+     "bankroll": 1.1541
     },
     {
      "date": 20260327,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -34.44,
-     "bet_bets": 1912,
-     "bankroll": 1.1087
+     "staked_units": 28.64,
+     "staked_bets": 295,
+     "bet_units": -27.59,
+     "bet_bets": 1782,
+     "bankroll": 1.1493
     },
     {
      "date": 20260328,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -35.44,
-     "bet_bets": 1913,
-     "bankroll": 1.1087
+     "staked_units": 28.64,
+     "staked_bets": 295,
+     "bet_units": -28.59,
+     "bet_bets": 1783,
+     "bankroll": 1.1493
     },
     {
      "date": 20260329,
-     "staked_units": 7.25,
-     "staked_bets": 222,
-     "bet_units": -33.58,
-     "bet_bets": 1915,
-     "bankroll": 1.1087
+     "staked_units": 27.64,
+     "staked_bets": 296,
+     "bet_units": -28.68,
+     "bet_bets": 1785,
+     "bankroll": 1.1361
     }
    ],
    "reliability": [
     {
      "bin": "0.00-0.50",
-     "n": 1050,
-     "mean_p": 0.357,
-     "realized": 0.339
+     "n": 848,
+     "mean_p": 0.372,
+     "realized": 0.362
     },
     {
      "bin": "0.50-0.55",
-     "n": 1284,
+     "n": 1276,
      "mean_p": 0.525,
-     "realized": 0.49
+     "realized": 0.494
     },
     {
      "bin": "0.55-0.60",
-     "n": 4804,
+     "n": 4722,
      "mean_p": 0.554,
-     "realized": 0.502
+     "realized": 0.504
     },
     {
      "bin": "0.60-0.70",
-     "n": 824,
-     "mean_p": 0.645,
-     "realized": 0.598
+     "n": 774,
+     "mean_p": 0.644,
+     "realized": 0.618
     },
     {
      "bin": "0.70-1.00",
-     "n": 1177,
-     "mean_p": 0.779,
-     "realized": 0.743
+     "n": 1102,
+     "mean_p": 0.781,
+     "realized": 0.737
     }
    ],
    "recent": [
@@ -5850,23 +5842,23 @@
     },
     {
      "date": 20260329,
-     "bet": "Michigan -8.5",
+     "bet": "Tennessee +8.5",
      "market": "spread",
-     "odds": -108,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.9259,
+     "odds": -112,
+     "tier": "BET",
+     "staked": 1,
+     "fraction": 0.0115,
+     "result": "loss",
+     "units": -1.0,
      "clv": null,
-     "close_line": -8.5
+     "close_line": 8.5
     },
     {
      "date": 20260329,
      "bet": "Over 146.5",
      "market": "total",
      "odds": -105,
-     "tier": "BET",
+     "tier": "LEAN",
      "staked": 0,
      "fraction": null,
      "result": "win",
@@ -5889,19 +5881,6 @@
     },
     {
      "date": 20260329,
-     "bet": "Duke -4.5",
-     "market": "spread",
-     "odds": -110,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": null,
-     "result": "loss",
-     "units": -1.0,
-     "clv": null,
-     "close_line": -4.5
-    },
-    {
-     "date": 20260329,
      "bet": "Over 135.5",
      "market": "total",
      "odds": -110,
@@ -5912,6 +5891,19 @@
      "units": 0.9091,
      "clv": null,
      "close_line": 135.5
+    },
+    {
+     "date": 20260328,
+     "bet": "Illinois -6.5",
+     "market": "spread",
+     "odds": -118,
+     "tier": "CAND",
+     "staked": 0,
+     "fraction": null,
+     "result": "win",
+     "units": 0.8475,
+     "clv": null,
+     "close_line": -6.5
     },
     {
      "date": 20260328,
@@ -5928,16 +5920,16 @@
     },
     {
      "date": 20260328,
-     "bet": "Arizona ML",
-     "market": "moneyline",
-     "odds": -270,
-     "tier": "CAND",
+     "bet": "Under 152.5",
+     "market": "total",
+     "odds": -110,
+     "tier": "LEAN",
      "staked": 0,
      "fraction": null,
      "result": "win",
-     "units": 0.3704,
+     "units": 0.9091,
      "clv": null,
-     "close_line": null
+     "close_line": 152.5
     },
     {
      "date": 20260328,
@@ -5996,19 +5988,6 @@
      "bet": "Tennessee ML",
      "market": "moneyline",
      "odds": 136,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 1.36,
-     "clv": null,
-     "close_line": null
-    },
-    {
-     "date": 20260327,
-     "bet": "Tennessee ML",
-     "market": "moneyline",
-     "odds": 136,
      "tier": "CAND",
      "staked": 0,
      "fraction": null,
@@ -6032,19 +6011,6 @@
     },
     {
      "date": 20260327,
-     "bet": "Duke ML",
-     "market": "moneyline",
-     "odds": -298,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.3356,
-     "clv": null,
-     "close_line": null
-    },
-    {
-     "date": 20260327,
      "bet": "Over 140.5",
      "market": "total",
      "odds": -112,
@@ -6058,6 +6024,45 @@
     },
     {
      "date": 20260327,
+     "bet": "Michigan St. ML",
+     "market": "moneyline",
+     "odds": 120,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": null,
+     "result": "loss",
+     "units": -1.0,
+     "clv": null,
+     "close_line": null
+    },
+    {
+     "date": 20260327,
+     "bet": "Michigan St. ML",
+     "market": "moneyline",
+     "odds": 120,
+     "tier": "CAND",
+     "staked": 0,
+     "fraction": null,
+     "result": "loss",
+     "units": -1.0,
+     "clv": null,
+     "close_line": null
+    },
+    {
+     "date": 20260327,
+     "bet": "Michigan St. +2.5",
+     "market": "spread",
+     "odds": -115,
+     "tier": "BET",
+     "staked": 1,
+     "fraction": 0.0041,
+     "result": "loss",
+     "units": -1.0,
+     "clv": null,
+     "close_line": 2.5
+    },
+    {
+     "date": 20260327,
      "bet": "Over 136.5",
      "market": "total",
      "odds": -115,
@@ -6068,19 +6073,6 @@
      "units": -1.0,
      "clv": null,
      "close_line": 136.5
-    },
-    {
-     "date": 20260326,
-     "bet": "Purdue ML",
-     "market": "moneyline",
-     "odds": -455,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.2198,
-     "clv": null,
-     "close_line": null
     },
     {
      "date": 20260326,
@@ -6110,14 +6102,14 @@
     },
     {
      "date": 20260326,
-     "bet": "Iowa ML",
+     "bet": "Nebraska ML",
      "market": "moneyline",
-     "odds": 105,
-     "tier": "LEAN",
+     "odds": -125,
+     "tier": "CAND",
      "staked": 0,
      "fraction": null,
-     "result": "win",
-     "units": 1.05,
+     "result": "loss",
+     "units": -1.0,
      "clv": null,
      "close_line": null
     },
@@ -6136,16 +6128,29 @@
     },
     {
      "date": 20260326,
-     "bet": "Houston ML",
+     "bet": "Illinois ML",
      "market": "moneyline",
-     "odds": -142,
-     "tier": "CAND",
+     "odds": 120,
+     "tier": "LEAN",
      "staked": 0,
      "fraction": null,
-     "result": "loss",
-     "units": -1.0,
+     "result": "win",
+     "units": 1.2,
      "clv": null,
      "close_line": null
+    },
+    {
+     "date": 20260326,
+     "bet": "Illinois +2.5",
+     "market": "spread",
+     "odds": -115,
+     "tier": "BET",
+     "staked": 1,
+     "fraction": 0.0041,
+     "result": "win",
+     "units": 0.8696,
+     "clv": null,
+     "close_line": 2.5
     },
     {
      "date": 20260326,
@@ -6175,32 +6180,6 @@
     },
     {
      "date": 20260326,
-     "bet": "Arizona ML",
-     "market": "moneyline",
-     "odds": -425,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.2353,
-     "clv": null,
-     "close_line": null
-    },
-    {
-     "date": 20260326,
-     "bet": "Arizona -8.5",
-     "market": "spread",
-     "odds": -108,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": null,
-     "result": "win",
-     "units": 0.9259,
-     "clv": null,
-     "close_line": -8.5
-    },
-    {
-     "date": 20260326,
      "bet": "Arizona -8.5",
      "market": "spread",
      "odds": -108,
@@ -6211,6 +6190,19 @@
      "units": 0.9259,
      "clv": null,
      "close_line": -8.5
+    },
+    {
+     "date": 20260326,
+     "bet": "Under 166.5",
+     "market": "total",
+     "odds": -112,
+     "tier": "BET",
+     "staked": 0,
+     "fraction": null,
+     "result": "loss",
+     "units": -1.0,
+     "clv": null,
+     "close_line": 166.5
     }
    ]
   }
