@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T14:25:13Z",
+ "generated": "2026-11-09T15:45:02Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -7,8 +7,8 @@
    "label": "2026-27 live",
    "source": "live",
    "season": 2027,
-   "first_date": null,
-   "last_date": null,
+   "first_date": 20261108,
+   "last_date": 20261108,
    "table": {
     "staked": {
      "all": {
@@ -62,15 +62,15 @@
     },
     "BET": {
      "all": {
-      "bets": 0,
+      "bets": 1,
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "pushes": 0,
-      "win_rate": null,
-      "units": 0,
-      "roi": null,
-      "clv": null,
-      "clv_n": 0,
+      "win_rate": 0.0,
+      "units": -1.0,
+      "roi": -1.0,
+      "clv": 0.0,
+      "clv_n": 1,
       "pending": 0
      },
      "spread": {
@@ -83,6 +83,56 @@
       "roi": null,
       "clv": null,
       "clv_n": 0,
+      "pending": 0
+     },
+     "total": {
+      "bets": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.0,
+      "units": -1.0,
+      "roi": -1.0,
+      "clv": 0.0,
+      "clv_n": 1,
+      "pending": 0
+     },
+     "moneyline": {
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
+      "pushes": 0,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
+      "clv": null,
+      "clv_n": 0,
+      "pending": 0
+     }
+    },
+    "LEAN": {
+     "all": {
+      "bets": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.5,
+      "units": -0.05,
+      "roi": -0.0238,
+      "clv": 0.0,
+      "clv_n": 2,
+      "pending": 0
+     },
+     "spread": {
+      "bets": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.5,
+      "units": -0.05,
+      "roi": -0.0238,
+      "clv": 0.0,
+      "clv_n": 2,
       "pending": 0
      },
      "total": {
@@ -110,17 +160,17 @@
       "pending": 0
      }
     },
-    "LEAN": {
+    "candidate: catboost-moneyline": {
      "all": {
-      "bets": 0,
+      "bets": 1,
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "pushes": 0,
-      "win_rate": null,
-      "units": 0,
-      "roi": null,
-      "clv": null,
-      "clv_n": 0,
+      "win_rate": 0.0,
+      "units": -1.0,
+      "roi": -1.0,
+      "clv": 0.0,
+      "clv_n": 1,
       "pending": 0
      },
      "spread": {
@@ -148,6 +198,56 @@
       "pending": 0
      },
      "moneyline": {
+      "bets": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.0,
+      "units": -1.0,
+      "roi": -1.0,
+      "clv": 0.0,
+      "clv_n": 1,
+      "pending": 0
+     }
+    },
+    "candidate: neutral-under": {
+     "all": {
+      "bets": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.0,
+      "units": -1.0,
+      "roi": -1.0,
+      "clv": 1.0,
+      "clv_n": 1,
+      "pending": 0
+     },
+     "spread": {
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
+      "pushes": 0,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
+      "clv": null,
+      "clv_n": 0,
+      "pending": 0
+     },
+     "total": {
+      "bets": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.0,
+      "units": -1.0,
+      "roi": -1.0,
+      "clv": 1.0,
+      "clv_n": 1,
+      "pending": 0
+     },
+     "moneyline": {
       "bets": 0,
       "wins": 0,
       "losses": 0,
@@ -162,13 +262,127 @@
     }
    },
    "by_month": {
-    "staked": {},
-    "BET": {}
+    "staked": {
+     "202611": {
+      "bets": 0,
+      "wins": 0,
+      "losses": 0,
+      "pushes": 0,
+      "win_rate": null,
+      "units": 0,
+      "roi": null,
+      "clv": null,
+      "clv_n": 0,
+      "pending": 0
+     }
+    },
+    "BET": {
+     "202611": {
+      "bets": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.0,
+      "units": -1.0,
+      "roi": -1.0,
+      "clv": 0.0,
+      "clv_n": 1,
+      "pending": 0
+     }
+    }
    },
-   "series": [],
-   "reliability": [],
-   "recent": [],
-   "unscored": 975,
+   "series": [
+    {
+     "date": 20261108,
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -1.0,
+     "bet_bets": 1,
+     "bankroll": 1.0
+    }
+   ],
+   "reliability": [
+    {
+     "bin": "0.50-0.55",
+     "n": 3,
+     "mean_p": 0.513,
+     "realized": 0.333
+    },
+    {
+     "bin": "0.60-0.70",
+     "n": 1,
+     "mean_p": 0.639,
+     "realized": 0.0
+    }
+   ],
+   "recent": [
+    {
+     "date": 20261108,
+     "bet": "Penn St. +2.5",
+     "market": "spread",
+     "odds": -115,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "loss",
+     "units": -1.0,
+     "clv": 0.0,
+     "close_line": 2.5
+    },
+    {
+     "date": 20261108,
+     "bet": "Under 154.5",
+     "market": "total",
+     "odds": -105,
+     "tier": "CAND",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "loss",
+     "units": -1.0,
+     "clv": 1.0,
+     "close_line": 153.5
+    },
+    {
+     "date": 20261108,
+     "bet": "Maine ML",
+     "market": "moneyline",
+     "odds": -148,
+     "tier": "CAND",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "loss",
+     "units": -1.0,
+     "clv": 0.0,
+     "close_line": null
+    },
+    {
+     "date": 20261108,
+     "bet": "Manhattan +2.5",
+     "market": "spread",
+     "odds": -105,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 0.9524,
+     "clv": 0.0,
+     "close_line": 2.5
+    },
+    {
+     "date": 20261108,
+     "bet": "Over 139.5",
+     "market": "total",
+     "odds": -115,
+     "tier": "BET",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "loss",
+     "units": -1.0,
+     "clv": 0.0,
+     "close_line": 139.5
+    }
+   ],
+   "unscored": 1025,
    "score_min_games": 2
   },
   {
