@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T14:25:18Z",
+ "generated": "2026-11-11T15:45:02Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -8,7 +8,7 @@
    "source": "live",
    "season": 2027,
    "first_date": 20261108,
-   "last_date": 20261109,
+   "last_date": 20261110,
    "table": {
     "staked": {
      "all": {
@@ -62,16 +62,16 @@
     },
     "BET": {
      "all": {
-      "bets": 11,
-      "wins": 4,
-      "losses": 7,
+      "bets": 26,
+      "wins": 13,
+      "losses": 13,
       "pushes": 0,
-      "win_rate": 0.3636,
-      "units": -3.42,
-      "roi": -0.3108,
-      "clv": 0.182,
-      "clv_n": 11,
-      "pending": 0
+      "win_rate": 0.5,
+      "units": -1.17,
+      "roi": -0.0451,
+      "clv": 0.231,
+      "clv_n": 26,
+      "pending": 1
      },
      "spread": {
       "bets": 0,
@@ -86,16 +86,16 @@
       "pending": 0
      },
      "total": {
-      "bets": 11,
-      "wins": 4,
-      "losses": 7,
+      "bets": 26,
+      "wins": 13,
+      "losses": 13,
       "pushes": 0,
-      "win_rate": 0.3636,
-      "units": -3.42,
-      "roi": -0.3108,
-      "clv": 0.182,
-      "clv_n": 11,
-      "pending": 0
+      "win_rate": 0.5,
+      "units": -1.17,
+      "roi": -0.0451,
+      "clv": 0.231,
+      "clv_n": 26,
+      "pending": 1
      },
      "moneyline": {
       "bets": 0,
@@ -112,28 +112,28 @@
     },
     "LEAN": {
      "all": {
-      "bets": 16,
-      "wins": 10,
-      "losses": 6,
+      "bets": 52,
+      "wins": 26,
+      "losses": 26,
       "pushes": 0,
-      "win_rate": 0.625,
-      "units": 2.79,
-      "roi": 0.1745,
-      "clv": 0.319,
-      "clv_n": 16,
-      "pending": 0
+      "win_rate": 0.5,
+      "units": -1.57,
+      "roi": -0.0302,
+      "clv": 0.291,
+      "clv_n": 52,
+      "pending": 1
      },
      "spread": {
-      "bets": 14,
-      "wins": 9,
-      "losses": 5,
+      "bets": 43,
+      "wins": 23,
+      "losses": 20,
       "pushes": 0,
-      "win_rate": 0.6429,
-      "units": 3.35,
-      "roi": 0.2391,
-      "clv": 0.357,
-      "clv_n": 14,
-      "pending": 0
+      "win_rate": 0.5349,
+      "units": 1.08,
+      "roi": 0.0252,
+      "clv": 0.349,
+      "clv_n": 43,
+      "pending": 1
      },
      "total": {
       "bets": 0,
@@ -148,29 +148,29 @@
       "pending": 0
      },
      "moneyline": {
-      "bets": 2,
-      "wins": 1,
-      "losses": 1,
+      "bets": 9,
+      "wins": 3,
+      "losses": 6,
       "pushes": 0,
-      "win_rate": 0.5,
-      "units": -0.56,
-      "roi": -0.2778,
-      "clv": 0.05,
-      "clv_n": 2,
+      "win_rate": 0.3333,
+      "units": -2.66,
+      "roi": -0.2951,
+      "clv": 0.012,
+      "clv_n": 9,
       "pending": 0
      }
     },
     "candidate: catboost-moneyline": {
      "all": {
-      "bets": 4,
-      "wins": 2,
-      "losses": 2,
+      "bets": 9,
+      "wins": 4,
+      "losses": 5,
       "pushes": 0,
-      "win_rate": 0.5,
-      "units": -1.35,
-      "roi": -0.3381,
-      "clv": 0.016,
-      "clv_n": 4,
+      "win_rate": 0.4444,
+      "units": -1.45,
+      "roi": -0.1614,
+      "clv": 0.008,
+      "clv_n": 9,
       "pending": 0
      },
      "spread": {
@@ -198,29 +198,29 @@
       "pending": 0
      },
      "moneyline": {
-      "bets": 4,
-      "wins": 2,
-      "losses": 2,
+      "bets": 9,
+      "wins": 4,
+      "losses": 5,
       "pushes": 0,
-      "win_rate": 0.5,
-      "units": -1.35,
-      "roi": -0.3381,
-      "clv": 0.016,
-      "clv_n": 4,
+      "win_rate": 0.4444,
+      "units": -1.45,
+      "roi": -0.1614,
+      "clv": 0.008,
+      "clv_n": 9,
       "pending": 0
      }
     },
     "candidate: neutral-under": {
      "all": {
-      "bets": 2,
+      "bets": 3,
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "pushes": 0,
       "win_rate": 0.0,
-      "units": -2.0,
+      "units": -3.0,
       "roi": -1.0,
-      "clv": 1.0,
-      "clv_n": 2,
+      "clv": 0.0,
+      "clv_n": 3,
       "pending": 0
      },
      "spread": {
@@ -236,15 +236,15 @@
       "pending": 0
      },
      "total": {
-      "bets": 2,
+      "bets": 3,
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "pushes": 0,
       "win_rate": 0.0,
-      "units": -2.0,
+      "units": -3.0,
       "roi": -1.0,
-      "clv": 1.0,
-      "clv_n": 2,
+      "clv": 0.0,
+      "clv_n": 3,
       "pending": 0
      },
      "moneyline": {
@@ -278,16 +278,16 @@
     },
     "BET": {
      "202611": {
-      "bets": 11,
-      "wins": 4,
-      "losses": 7,
+      "bets": 26,
+      "wins": 13,
+      "losses": 13,
       "pushes": 0,
-      "win_rate": 0.3636,
-      "units": -3.42,
-      "roi": -0.3108,
-      "clv": 0.182,
-      "clv_n": 11,
-      "pending": 0
+      "win_rate": 0.5,
+      "units": -1.17,
+      "roi": -0.0451,
+      "clv": 0.231,
+      "clv_n": 26,
+      "pending": 1
      }
     }
    },
@@ -307,20 +307,34 @@
      "bet_units": -3.42,
      "bet_bets": 11,
      "bankroll": 1.0
+    },
+    {
+     "date": 20261110,
+     "staked_units": 0.0,
+     "staked_bets": 0,
+     "bet_units": -1.17,
+     "bet_bets": 26,
+     "bankroll": 1.0
     }
    ],
    "reliability": [
     {
      "bin": "0.00-0.50",
-     "n": 1,
-     "mean_p": 0.11,
-     "realized": 0.0
+     "n": 10,
+     "mean_p": 0.293,
+     "realized": 0.4
     },
     {
      "bin": "0.50-0.55",
-     "n": 25,
-     "mean_p": 0.515,
-     "realized": 0.52
+     "n": 69,
+     "mean_p": 0.516,
+     "realized": 0.522
+    },
+    {
+     "bin": "0.55-0.60",
+     "n": 1,
+     "mean_p": 0.555,
+     "realized": 0.0
     },
     {
      "bin": "0.60-0.70",
@@ -330,119 +344,28 @@
     },
     {
      "bin": "0.70-1.00",
-     "n": 4,
-     "mean_p": 0.765,
-     "realized": 0.75
+     "n": 6,
+     "mean_p": 0.762,
+     "realized": 0.5
     }
    ],
    "recent": [
     {
-     "date": 20261109,
-     "bet": "Towson ML",
-     "market": "moneyline",
-     "odds": -225,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.4444,
-     "clv": 0.0994,
-     "close_line": null
-    },
-    {
-     "date": 20261109,
-     "bet": "Towson -5.5",
+     "date": 20261110,
+     "bet": "Fairfield +25.5",
      "market": "spread",
-     "odds": -102,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.9804,
-     "clv": 2.0,
-     "close_line": -7.5
-    },
-    {
-     "date": 20261109,
-     "bet": "Over 141.5",
-     "market": "total",
-     "odds": -115,
-     "tier": "BET",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "loss",
-     "units": -1.0,
-     "clv": -1.0,
-     "close_line": 140.5
-    },
-    {
-     "date": 20261109,
-     "bet": "Over 131.5",
-     "market": "total",
-     "odds": -110,
-     "tier": "BET",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "loss",
-     "units": -1.0,
-     "clv": -1.0,
-     "close_line": 130.5
-    },
-    {
-     "date": 20261109,
-     "bet": "Eastern Washington ML",
-     "market": "moneyline",
-     "odds": 1200,
+     "odds": -112,
      "tier": "LEAN",
      "staked": 0,
      "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
-     "clv": 0.0,
-     "close_line": null
-    },
-    {
-     "date": 20261109,
-     "bet": "Eastern Washington +16.5",
-     "market": "spread",
-     "odds": -105,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.9524,
-     "clv": -1.0,
-     "close_line": 17.5
-    },
-    {
-     "date": 20261109,
-     "bet": "Under 162.5",
-     "market": "total",
-     "odds": -115,
-     "tier": "BET",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "loss",
-     "units": -1.0,
-     "clv": 0.0,
-     "close_line": 162.5
-    },
-    {
-     "date": 20261109,
-     "bet": "Marshall +25.5",
-     "market": "spread",
-     "odds": -105,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.9524,
      "clv": 0.0,
      "close_line": 25.5
     },
     {
-     "date": 20261109,
-     "bet": "Under 162.5",
+     "date": 20261110,
+     "bet": "Under 150.5",
      "market": "total",
      "odds": -110,
      "tier": "BET",
@@ -451,11 +374,24 @@
      "result": "win",
      "units": 0.9091,
      "clv": 0.0,
-     "close_line": 162.5
+     "close_line": 150.5
     },
     {
-     "date": 20261109,
-     "bet": "Eastern Illinois +28.5",
+     "date": 20261110,
+     "bet": "Bucknell +38.5",
+     "market": "spread",
+     "odds": -108,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 0.9259,
+     "clv": 0.0,
+     "close_line": 38.5
+    },
+    {
+     "date": 20261110,
+     "bet": "La Salle +23.5",
      "market": "spread",
      "odds": -115,
      "tier": "LEAN",
@@ -463,25 +399,51 @@
      "fraction": 0.0,
      "result": "win",
      "units": 0.8696,
-     "clv": 1.0,
-     "close_line": 27.5
+     "clv": 3.0,
+     "close_line": 20.5
     },
     {
-     "date": 20261109,
-     "bet": "Over 141.5",
+     "date": 20261110,
+     "bet": "Under 159.5",
      "market": "total",
-     "odds": -115,
+     "odds": -110,
      "tier": "BET",
      "staked": 0,
      "fraction": 0.0,
      "result": "win",
-     "units": 0.8696,
-     "clv": -1.0,
-     "close_line": 140.5
+     "units": 0.9091,
+     "clv": 2.0,
+     "close_line": 157.5
     },
     {
-     "date": 20261109,
-     "bet": "Boston University +16.5",
+     "date": 20261110,
+     "bet": "Weber St. ML",
+     "market": "moneyline",
+     "odds": 1600,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "loss",
+     "units": -1.0,
+     "clv": 0.0037,
+     "close_line": null
+    },
+    {
+     "date": 20261110,
+     "bet": "Weber St. +18.5",
+     "market": "spread",
+     "odds": -112,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "loss",
+     "units": -1.0,
+     "clv": 2.0,
+     "close_line": 16.5
+    },
+    {
+     "date": 20261110,
+     "bet": "UCF -14.5",
      "market": "spread",
      "odds": -115,
      "tier": "LEAN",
@@ -489,25 +451,51 @@
      "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
-     "clv": 3.0,
-     "close_line": 13.5
+     "clv": -1.0,
+     "close_line": -13.5
     },
     {
-     "date": 20261109,
-     "bet": "Mississippi St. -23.5",
+     "date": 20261110,
+     "bet": "Toledo +1.5",
      "market": "spread",
      "odds": -110,
      "tier": "LEAN",
      "staked": 0,
      "fraction": 0.0,
-     "result": "win",
-     "units": 0.9091,
-     "clv": 1.0,
-     "close_line": -24.5
+     "result": "loss",
+     "units": -1.0,
+     "clv": 0.0,
+     "close_line": 1.5
     },
     {
-     "date": 20261109,
-     "bet": "Under 160.5",
+     "date": 20261110,
+     "bet": "Texas Tech ML",
+     "market": "moneyline",
+     "odds": 120,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 1.2,
+     "clv": 0.0,
+     "close_line": null
+    },
+    {
+     "date": 20261110,
+     "bet": "Texas Tech ML",
+     "market": "moneyline",
+     "odds": 120,
+     "tier": "CAND",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 1.2,
+     "clv": 0.0,
+     "close_line": null
+    },
+    {
+     "date": 20261110,
+     "bet": "Under 167.5",
      "market": "total",
      "odds": -112,
      "tier": "BET",
@@ -515,89 +503,76 @@
      "fraction": 0.0,
      "result": "win",
      "units": 0.8929,
-     "clv": 7.0,
-     "close_line": 153.5
+     "clv": 1.0,
+     "close_line": 166.5
     },
     {
-     "date": 20261109,
-     "bet": "North Florida +36.5",
+     "date": 20261110,
+     "bet": "Louisiana Monroe +34.5",
      "market": "spread",
      "odds": -108,
      "tier": "LEAN",
      "staked": 0,
      "fraction": 0.0,
+     "result": "win",
+     "units": 0.9259,
+     "clv": 1.0,
+     "close_line": 33.5
+    },
+    {
+     "date": 20261110,
+     "bet": "Northern Kentucky ML",
+     "market": "moneyline",
+     "odds": 2000,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
-     "clv": 1.0,
-     "close_line": 35.5
-    },
-    {
-     "date": 20261109,
-     "bet": "Under 164.5",
-     "market": "total",
-     "odds": -110,
-     "tier": "BET",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.9091,
-     "clv": -1.0,
-     "close_line": 165.5
-    },
-    {
-     "date": 20261109,
-     "bet": "Indiana ML",
-     "market": "moneyline",
-     "odds": -230,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.4348,
-     "clv": 0.0173,
+     "clv": 0.0,
      "close_line": null
     },
     {
-     "date": 20261109,
-     "bet": "Syracuse +5.5",
+     "date": 20261110,
+     "bet": "Northern Kentucky +23.5",
      "market": "spread",
-     "odds": -115,
+     "odds": -112,
      "tier": "LEAN",
      "staked": 0,
      "fraction": 0.0,
-     "result": "win",
-     "units": 0.8696,
+     "result": "loss",
+     "units": -1.0,
      "clv": 0.0,
-     "close_line": 5.5
+     "close_line": 23.5
     },
     {
-     "date": 20261109,
-     "bet": "Under 147.5",
+     "date": 20261110,
+     "bet": "Under 168.5",
      "market": "total",
-     "odds": -108,
-     "tier": "CAND",
+     "odds": -105,
+     "tier": "BET",
      "staked": 0,
      "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
-     "clv": 1.0,
-     "close_line": 146.5
+     "clv": 0.0,
+     "close_line": 168.5
     },
     {
-     "date": 20261109,
-     "bet": "Wagner +40.5",
+     "date": 20261110,
+     "bet": "Rhode Island -20.5",
      "market": "spread",
-     "odds": -108,
+     "odds": -110,
      "tier": "LEAN",
      "staked": 0,
      "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
-     "clv": 1.0,
-     "close_line": 39.5
+     "clv": 0.0,
+     "close_line": -20.5
     },
     {
-     "date": 20261109,
+     "date": 20261110,
      "bet": "Over 140.5",
      "market": "total",
      "odds": -110,
@@ -610,73 +585,34 @@
      "close_line": 139.5
     },
     {
-     "date": 20261109,
-     "bet": "Coastal Carolina ML",
-     "market": "moneyline",
-     "odds": -470,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.2128,
-     "clv": 0.0273,
-     "close_line": null
-    },
-    {
-     "date": 20261109,
-     "bet": "USC Upstate +10.5",
+     "date": 20261110,
+     "bet": "Bryant +31.5",
      "market": "spread",
-     "odds": -105,
+     "odds": -115,
      "tier": "LEAN",
      "staked": 0,
      "fraction": 0.0,
      "result": "win",
-     "units": 0.9524,
-     "clv": 0.0,
-     "close_line": 10.5
+     "units": 0.8696,
+     "clv": 1.0,
+     "close_line": 30.5
     },
     {
-     "date": 20261109,
-     "bet": "North Dakota +21.5",
-     "market": "spread",
-     "odds": -110,
-     "tier": "LEAN",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "win",
-     "units": 0.9091,
-     "clv": -3.0,
-     "close_line": 24.5
-    },
-    {
-     "date": 20261109,
-     "bet": "Under 153.5",
+     "date": 20261110,
+     "bet": "Under 149.5",
      "market": "total",
-     "odds": -110,
+     "odds": -108,
      "tier": "BET",
      "staked": 0,
      "fraction": 0.0,
-     "result": "loss",
-     "units": -1.0,
-     "clv": -1.0,
-     "close_line": 154.5
+     "result": "win",
+     "units": 0.9259,
+     "clv": 0.0,
+     "close_line": 149.5
     },
     {
-     "date": 20261109,
-     "bet": "Cincinnati ML",
-     "market": "moneyline",
-     "odds": -310,
-     "tier": "CAND",
-     "staked": 0,
-     "fraction": 0.0,
-     "result": "loss",
-     "units": -1.0,
-     "clv": 0.0192,
-     "close_line": null
-    },
-    {
-     "date": 20261109,
-     "bet": "Oakland +32.5",
+     "date": 20261110,
+     "bet": "Little Rock +22.5",
      "market": "spread",
      "odds": -112,
      "tier": "LEAN",
@@ -684,50 +620,128 @@
      "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
-     "clv": 0.0,
-     "close_line": 32.5
+     "clv": -1.0,
+     "close_line": 23.5
     },
     {
-     "date": 20261109,
-     "bet": "Under 171.5",
+     "date": 20261110,
+     "bet": "Under 158.5",
      "market": "total",
-     "odds": -110,
+     "odds": -112,
      "tier": "BET",
      "staked": 0,
      "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
      "clv": 1.0,
-     "close_line": 170.5
+     "close_line": 157.5
     },
     {
-     "date": 20261108,
-     "bet": "Penn St. +2.5",
+     "date": 20261110,
+     "bet": "Presbyterian +19.5",
      "market": "spread",
-     "odds": -115,
+     "odds": -112,
      "tier": "LEAN",
      "staked": 0,
      "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
-     "clv": 0.0,
-     "close_line": 2.5
+     "clv": 1.0,
+     "close_line": 18.5
     },
     {
-     "date": 20261108,
-     "bet": "Under 154.5",
+     "date": 20261110,
+     "bet": "Alcorn St. +29.5",
+     "market": "spread",
+     "odds": -108,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "loss",
+     "units": -1.0,
+     "clv": -2.0,
+     "close_line": 31.5
+    },
+    {
+     "date": 20261110,
+     "bet": "Under 166.5",
      "market": "total",
-     "odds": -105,
+     "odds": -115,
+     "tier": "BET",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 0.8696,
+     "clv": 0.0,
+     "close_line": 166.5
+    },
+    {
+     "date": 20261110,
+     "bet": "Mississippi -25.5",
+     "market": "spread",
+     "odds": -108,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 0.9259,
+     "clv": 1.0,
+     "close_line": -26.5
+    },
+    {
+     "date": 20261110,
+     "bet": "Under 148.5",
+     "market": "total",
+     "odds": -108,
+     "tier": "BET",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 0.9259,
+     "clv": 2.0,
+     "close_line": 146.5
+    },
+    {
+     "date": 20261110,
+     "bet": "Kansas -4.5",
+     "market": "spread",
+     "odds": -110,
+     "tier": "LEAN",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "win",
+     "units": 0.9091,
+     "clv": 0.0,
+     "close_line": -4.5
+    },
+    {
+     "date": 20261110,
+     "bet": "Under 156.5",
+     "market": "total",
+     "odds": -115,
+     "tier": "BET",
+     "staked": 0,
+     "fraction": 0.0,
+     "result": "loss",
+     "units": -1.0,
+     "clv": -2.0,
+     "close_line": 158.5
+    },
+    {
+     "date": 20261110,
+     "bet": "Under 156.5",
+     "market": "total",
+     "odds": -115,
      "tier": "CAND",
      "staked": 0,
      "fraction": 0.0,
      "result": "loss",
      "units": -1.0,
-     "clv": 1.0,
-     "close_line": 153.5
+     "clv": -2.0,
+     "close_line": 158.5
     }
    ],
-   "unscored": 1059,
+   "unscored": 1109,
    "score_min_games": 2
   },
   {
