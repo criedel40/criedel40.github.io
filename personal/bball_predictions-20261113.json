@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261113,
-  "generated": "2026-11-13T19:25:02Z",
+  "generated": "2026-11-13T23:25:03Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_8_honest_ens5)",
   "members": 10000,
   "rows": [
@@ -32,16 +32,16 @@
   },
   "tier_counts": {
    "Spread": {
-    "LEAN": 47,
-    "PASS": 7
+    "PASS": 3,
+    "LEAN": 51
    },
    "Moneyline": {
     "LEAN": 17,
     "PASS": 30
    },
    "Total": {
-    "BET": 25,
-    "PASS": 29
+    "BET": 24,
+    "PASS": 30
    }
   }
  },
@@ -67,18 +67,18 @@
    ],
    "Bet": {
     "Side": "Seton Hall",
-    "Lean": 6.76,
+    "Lean": 7.76,
     "CoverProbability": 0.517,
-    "Tier": "LEAN"
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
      "Side": "Seton Hall",
-     "Line": 17.5,
-     "Lean": 6.76,
+     "Line": 18.5,
+     "Lean": 7.76,
      "Probability": 0.517,
-     "Edge": 0.027,
-     "Tier": "LEAN"
+     "Edge": -0.001,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "Seton Hall",
@@ -120,20 +120,20 @@
    "AwayTeamWinProbability": 0.074,
    "MoneylineHome": -2400,
    "MoneylineAway": 1200,
-   "Spread": "-17.5 Alabama",
-   "SpreadValue": 17.5,
-   "HomeTeamScore": 87.0,
-   "AwayTeamScore": 69.5,
+   "Spread": "-18.5 Alabama",
+   "SpreadValue": 18.5,
+   "HomeTeamScore": 87.5,
+   "AwayTeamScore": 69.0,
    "Total": 156.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Alabama -17.5",
-    "odds": -115,
+    "bet": "Alabama -18.5",
+    "odds": -102,
     "model": 0.483,
-    "breakeven": 0.535,
-    "edge": -0.052,
+    "breakeven": 0.505,
+    "edge": -0.022,
     "rec": "PASS",
     "selected": false,
     "open_line": -15.5,
@@ -143,17 +143,17 @@
    },
    {
     "market": "Spread",
-    "bet": "Seton Hall +17.5",
-    "odds": -105,
+    "bet": "Seton Hall +18.5",
+    "odds": -118,
     "model": 0.517,
-    "breakeven": 0.512,
-    "edge": 0.005,
-    "rec": "LEAN",
+    "breakeven": 0.541,
+    "edge": -0.024,
+    "rec": "PASS",
     "selected": false,
     "open_line": 15.5,
     "open_odds": -110,
     "open": "+15.5 (-110)",
-    "confidence": 3
+    "confidence": 0
    },
    {
     "market": "Moneyline",
@@ -672,24 +672,24 @@
    ],
    "Bet": {
     "Side": "Tarleton St.",
-    "Lean": 2.68,
+    "Lean": 1.68,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Tarleton St.",
-     "Line": -15.5,
-     "Lean": 2.68,
+     "Line": -16.5,
+     "Lean": 1.68,
      "Probability": 0.517,
-     "Edge": 0.021,
+     "Edge": 0.034,
      "Tier": "LEAN"
     },
     "Moneyline": {
-     "Side": "Alcorn St.",
-     "Odds": 1300,
-     "Probability": 0.069,
-     "Edge": 0.0,
+     "Side": "Tarleton St.",
+     "Odds": -1800,
+     "Probability": 0.919,
+     "Edge": 0.007,
      "Tier": "PASS"
     },
     "Total": {
@@ -697,7 +697,7 @@
      "Line": 151.5,
      "Lean": 2.04,
      "Probability": 0.504,
-     "Edge": 0.004,
+     "Edge": -0.001,
      "Tier": "PASS"
     }
    }
@@ -721,38 +721,38 @@
    "Spread": "-20.1 Tarleton St."
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.931,
-   "AwayTeamWinProbability": 0.069,
-   "MoneylineHome": -2800,
-   "MoneylineAway": 1300,
-   "Spread": "-15.5 Tarleton St.",
-   "SpreadValue": 15.5,
-   "HomeTeamScore": 83.5,
-   "AwayTeamScore": 68.0,
+   "HomeTeamWinProbability": 0.912,
+   "AwayTeamWinProbability": 0.088,
+   "MoneylineHome": -1800,
+   "MoneylineAway": 1000,
+   "Spread": "-16.5 Tarleton St.",
+   "SpreadValue": 16.5,
+   "HomeTeamScore": 84.0,
+   "AwayTeamScore": 67.5,
    "Total": 151.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Tarleton St. -15.5",
-    "odds": -108,
+    "bet": "Tarleton St. -16.5",
+    "odds": -102,
     "model": 0.517,
-    "breakeven": 0.519,
-    "edge": -0.002,
+    "breakeven": 0.505,
+    "edge": 0.012,
     "rec": "LEAN",
     "selected": false,
     "open_line": -14.5,
     "open_odds": -108,
     "open": "-14.5 (-108)",
-    "confidence": 0
+    "confidence": 8
    },
    {
     "market": "Spread",
-    "bet": "Alcorn St. +15.5",
-    "odds": -112,
+    "bet": "Alcorn St. +16.5",
+    "odds": -118,
     "model": 0.483,
-    "breakeven": 0.528,
-    "edge": -0.045,
+    "breakeven": 0.541,
+    "edge": -0.058,
     "rec": "PASS",
     "selected": false,
     "open_line": 14.5,
@@ -763,38 +763,38 @@
    {
     "market": "Moneyline",
     "bet": "Tarleton St. ML",
-    "odds": -2800,
-    "model": 0.931,
-    "breakeven": 0.966,
-    "edge": -0.035,
+    "odds": -1800,
+    "model": 0.919,
+    "breakeven": 0.947,
+    "edge": -0.028,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
     "open_odds": -1800,
     "open": "-1800",
-    "confidence": null
+    "confidence": 0
    },
    {
     "market": "Moneyline",
     "bet": "Alcorn St. ML",
-    "odds": 1300,
-    "model": 0.069,
-    "breakeven": 0.071,
-    "edge": -0.002,
+    "odds": 1000,
+    "model": 0.081,
+    "breakeven": 0.091,
+    "edge": -0.01,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
     "open_odds": 1000,
     "open": "+1000",
-    "confidence": 0
+    "confidence": null
    },
    {
     "market": "Total",
     "bet": "Over 151.5",
-    "odds": -110,
+    "odds": -112,
     "model": 0.504,
-    "breakeven": 0.524,
-    "edge": -0.02,
+    "breakeven": 0.528,
+    "edge": -0.024,
     "rec": "PASS",
     "selected": false,
     "open_line": 151.5,
@@ -805,10 +805,10 @@
    {
     "market": "Total",
     "bet": "Under 151.5",
-    "odds": -110,
+    "odds": -108,
     "model": 0.496,
-    "breakeven": 0.524,
-    "edge": -0.028,
+    "breakeven": 0.519,
+    "edge": -0.023,
     "rec": "PASS",
     "selected": false,
     "open_line": 151.5,
@@ -1275,24 +1275,24 @@
    ],
    "Bet": {
     "Side": "Charlotte",
-    "Lean": 4.83,
+    "Lean": 3.83,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Charlotte",
-     "Line": -7.5,
-     "Lean": 4.83,
+     "Line": -8.5,
+     "Lean": 3.83,
      "Probability": 0.517,
-     "Edge": 0.021,
+     "Edge": 0.034,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Charlotte",
-     "Odds": -340,
-     "Probability": 0.795,
-     "Edge": 0.054,
+     "Odds": -360,
+     "Probability": 0.8,
+     "Edge": 0.049,
      "Tier": "LEAN"
     },
     "Total": {
@@ -1300,7 +1300,7 @@
      "Line": 131.5,
      "Lean": 4.26,
      "Probability": 0.508,
-     "Edge": 0.018,
+     "Edge": -0.003,
      "Tier": "BET"
     }
    }
@@ -1324,38 +1324,38 @@
    "Spread": "-12.3 Charlotte"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.741,
-   "AwayTeamWinProbability": 0.259,
-   "MoneylineHome": -340,
-   "MoneylineAway": 270,
-   "Spread": "-7.5 Charlotte",
-   "SpreadValue": 7.5,
-   "HomeTeamScore": 69.5,
-   "AwayTeamScore": 62.0,
+   "HomeTeamWinProbability": 0.751,
+   "AwayTeamWinProbability": 0.249,
+   "MoneylineHome": -360,
+   "MoneylineAway": 285,
+   "Spread": "-8.5 Charlotte",
+   "SpreadValue": 8.5,
+   "HomeTeamScore": 70.0,
+   "AwayTeamScore": 61.5,
    "Total": 131.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Charlotte -7.5",
-    "odds": -108,
+    "bet": "Charlotte -8.5",
+    "odds": -102,
     "model": 0.517,
-    "breakeven": 0.519,
-    "edge": -0.002,
+    "breakeven": 0.505,
+    "edge": 0.012,
     "rec": "LEAN",
     "selected": false,
     "open_line": -7.5,
     "open_odds": -112,
     "open": "-7.5 (-112)",
-    "confidence": 0
+    "confidence": 8
    },
    {
     "market": "Spread",
-    "bet": "Appalachian St. +7.5",
-    "odds": -112,
+    "bet": "Appalachian St. +8.5",
+    "odds": -118,
     "model": 0.483,
-    "breakeven": 0.528,
-    "edge": -0.045,
+    "breakeven": 0.541,
+    "edge": -0.058,
     "rec": "PASS",
     "selected": false,
     "open_line": 7.5,
@@ -1366,10 +1366,10 @@
    {
     "market": "Moneyline",
     "bet": "Charlotte ML",
-    "odds": -340,
-    "model": 0.795,
-    "breakeven": 0.773,
-    "edge": 0.022,
+    "odds": -360,
+    "model": 0.8,
+    "breakeven": 0.783,
+    "edge": 0.017,
     "rec": "LEAN",
     "selected": false,
     "open_line": null,
@@ -1380,10 +1380,10 @@
    {
     "market": "Moneyline",
     "bet": "Appalachian St. ML",
-    "odds": 270,
-    "model": 0.205,
-    "breakeven": 0.27,
-    "edge": -0.065,
+    "odds": 285,
+    "model": 0.2,
+    "breakeven": 0.26,
+    "edge": -0.06,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -1394,24 +1394,24 @@
    {
     "market": "Total",
     "bet": "Over 131.5",
-    "odds": -105,
+    "odds": -115,
     "model": 0.508,
-    "breakeven": 0.512,
-    "edge": -0.004,
+    "breakeven": 0.535,
+    "edge": -0.027,
     "rec": "BET",
     "selected": false,
     "open_line": 129.5,
     "open_odds": -112,
     "open": "129.5 (-112)",
-    "confidence": 31
+    "confidence": 17
    },
    {
     "market": "Total",
     "bet": "Under 131.5",
-    "odds": -115,
+    "odds": -105,
     "model": 0.492,
-    "breakeven": 0.535,
-    "edge": -0.043,
+    "breakeven": 0.512,
+    "edge": -0.02,
     "rec": "PASS",
     "selected": false,
     "open_line": 129.5,
@@ -1845,22 +1845,22 @@
      "Line": 2.5,
      "Lean": 1.25,
      "Probability": 0.517,
-     "Edge": 0.021,
+     "Edge": 0.006,
      "Tier": "LEAN"
     },
     "Moneyline": {
-     "Side": "Arizona",
-     "Odds": -142,
-     "Probability": 0.566,
-     "Edge": 0.002,
+     "Side": "Auburn",
+     "Odds": 124,
+     "Probability": 0.428,
+     "Edge": 0.001,
      "Tier": "PASS"
     },
     "Total": {
      "Side": "Under",
-     "Line": 159.5,
-     "Lean": 2.52,
-     "Probability": 0.505,
-     "Edge": 0.009,
+     "Line": 158.5,
+     "Lean": 1.52,
+     "Probability": 0.503,
+     "Edge": 0.014,
      "Tier": "PASS"
     }
    }
@@ -1884,24 +1884,24 @@
    "Spread": "-1.6 Arizona"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.437,
-   "AwayTeamWinProbability": 0.563,
-   "MoneylineHome": 120,
-   "MoneylineAway": -142,
+   "HomeTeamWinProbability": 0.428,
+   "AwayTeamWinProbability": 0.572,
+   "MoneylineHome": 124,
+   "MoneylineAway": -148,
    "Spread": "-2.5 Arizona",
    "SpreadValue": -2.5,
-   "HomeTeamScore": 78.5,
-   "AwayTeamScore": 81.0,
-   "Total": 159.5
+   "HomeTeamScore": 78.0,
+   "AwayTeamScore": 80.5,
+   "Total": 158.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Auburn +2.5",
-    "odds": -108,
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.519,
-    "edge": -0.002,
+    "breakeven": 0.535,
+    "edge": -0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": 2.5,
@@ -1912,10 +1912,10 @@
    {
     "market": "Spread",
     "bet": "Arizona -2.5",
-    "odds": -112,
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.528,
-    "edge": -0.045,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": -2.5,
@@ -1926,38 +1926,38 @@
    {
     "market": "Moneyline",
     "bet": "Auburn ML",
-    "odds": 120,
-    "model": 0.434,
-    "breakeven": 0.455,
-    "edge": -0.021,
+    "odds": 124,
+    "model": 0.428,
+    "breakeven": 0.446,
+    "edge": -0.018,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
     "open_odds": 102,
     "open": "+102",
-    "confidence": null
+    "confidence": 0
    },
    {
     "market": "Moneyline",
     "bet": "Arizona ML",
-    "odds": -142,
-    "model": 0.566,
-    "breakeven": 0.587,
-    "edge": -0.021,
+    "odds": -148,
+    "model": 0.572,
+    "breakeven": 0.597,
+    "edge": -0.025,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
     "open_odds": -122,
     "open": "-122",
-    "confidence": 0
+    "confidence": null
    },
    {
     "market": "Total",
-    "bet": "Over 159.5",
-    "odds": -112,
-    "model": 0.495,
-    "breakeven": 0.528,
-    "edge": -0.033,
+    "bet": "Over 158.5",
+    "odds": -115,
+    "model": 0.497,
+    "breakeven": 0.535,
+    "edge": -0.038,
     "rec": "PASS",
     "selected": false,
     "open_line": 159.5,
@@ -1967,11 +1967,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 159.5",
-    "odds": -108,
-    "model": 0.505,
-    "breakeven": 0.519,
-    "edge": -0.014,
+    "bet": "Under 158.5",
+    "odds": -105,
+    "model": 0.503,
+    "breakeven": 0.512,
+    "edge": -0.009,
     "rec": "PASS",
     "selected": false,
     "open_line": 159.5,
@@ -2428,32 +2428,32 @@
    ],
    "Bet": {
     "Side": "Louisiana Monroe",
-    "Lean": 6.12,
+    "Lean": 7.12,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Louisiana Monroe",
-     "Line": 29.5,
-     "Lean": 6.12,
+     "Line": 30.5,
+     "Lean": 7.12,
      "Probability": 0.517,
-     "Edge": 0.017,
+     "Edge": 0.006,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Louisiana Monroe",
-     "Odds": 5000,
-     "Probability": 0.03,
+     "Odds": 4000,
+     "Probability": 0.034,
      "Edge": 0.01,
      "Tier": "PASS"
     },
     "Total": {
      "Side": "Over",
-     "Line": 146.5,
-     "Lean": 5.81,
-     "Probability": 0.51,
-     "Edge": -0.001,
+     "Line": 148.5,
+     "Lean": 3.81,
+     "Probability": 0.507,
+     "Edge": 0.018,
      "Tier": "BET"
     }
    }
@@ -2477,24 +2477,24 @@
    "Spread": "-28.2 Arizona St."
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.981,
-   "AwayTeamWinProbability": 0.019,
-   "MoneylineHome": -100000,
-   "MoneylineAway": 5000,
-   "Spread": "-29.5 Arizona St.",
-   "SpreadValue": 29.5,
-   "HomeTeamScore": 88.0,
-   "AwayTeamScore": 58.5,
-   "Total": 146.5
+   "HomeTeamWinProbability": 0.976,
+   "AwayTeamWinProbability": 0.024,
+   "MoneylineHome": -50000,
+   "MoneylineAway": 4000,
+   "Spread": "-30.5 Arizona St.",
+   "SpreadValue": 30.5,
+   "HomeTeamScore": 89.5,
+   "AwayTeamScore": 59.0,
+   "Total": 148.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Arizona St. -29.5",
-    "odds": -110,
+    "bet": "Arizona St. -30.5",
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.524,
-    "edge": -0.041,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": -32.5,
@@ -2504,11 +2504,11 @@
    },
    {
     "market": "Spread",
-    "bet": "Louisiana Monroe +29.5",
-    "odds": -110,
+    "bet": "Louisiana Monroe +30.5",
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.524,
-    "edge": -0.007,
+    "breakeven": 0.535,
+    "edge": -0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": 32.5,
@@ -2519,10 +2519,10 @@
    {
     "market": "Moneyline",
     "bet": "Arizona St. ML",
-    "odds": -100000,
-    "model": 0.97,
-    "breakeven": 0.999,
-    "edge": -0.029,
+    "odds": -50000,
+    "model": 0.966,
+    "breakeven": 0.998,
+    "edge": -0.032,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -2533,9 +2533,9 @@
    {
     "market": "Moneyline",
     "bet": "Louisiana Monroe ML",
-    "odds": 5000,
-    "model": 0.03,
-    "breakeven": 0.02,
+    "odds": 4000,
+    "model": 0.034,
+    "breakeven": 0.024,
     "edge": 0.01,
     "rec": "PASS",
     "selected": false,
@@ -2546,11 +2546,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 146.5",
-    "odds": -115,
-    "model": 0.51,
-    "breakeven": 0.535,
-    "edge": -0.025,
+    "bet": "Over 148.5",
+    "odds": -105,
+    "model": 0.507,
+    "breakeven": 0.512,
+    "edge": -0.005,
     "rec": "BET",
     "selected": false,
     "open_line": 150.5,
@@ -2560,11 +2560,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 146.5",
-    "odds": -105,
-    "model": 0.49,
-    "breakeven": 0.512,
-    "edge": -0.022,
+    "bet": "Under 148.5",
+    "odds": -115,
+    "model": 0.493,
+    "breakeven": 0.535,
+    "edge": -0.042,
     "rec": "PASS",
     "selected": false,
     "open_line": 150.5,
@@ -3087,24 +3087,24 @@
    ],
    "Bet": {
     "Side": "Central Arkansas",
-    "Lean": 2.68,
+    "Lean": 1.68,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Central Arkansas",
-     "Line": 23.5,
-     "Lean": 2.68,
+     "Line": 22.5,
+     "Lean": 1.68,
      "Probability": 0.517,
      "Edge": 0.027,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Central Arkansas",
-     "Odds": 2500,
-     "Probability": 0.043,
-     "Edge": 0.005,
+     "Odds": 2200,
+     "Probability": 0.046,
+     "Edge": 0.004,
      "Tier": "PASS"
     },
     "Total": {
@@ -3136,20 +3136,20 @@
    "Spread": "-20.7 Arkansas"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.963,
-   "AwayTeamWinProbability": 0.037,
-   "MoneylineHome": -9000,
-   "MoneylineAway": 2500,
-   "Spread": "-23.5 Arkansas",
-   "SpreadValue": 23.5,
-   "HomeTeamScore": 93.0,
-   "AwayTeamScore": 69.5,
+   "HomeTeamWinProbability": 0.958,
+   "AwayTeamWinProbability": 0.042,
+   "MoneylineHome": -8000,
+   "MoneylineAway": 2200,
+   "Spread": "-22.5 Arkansas",
+   "SpreadValue": 22.5,
+   "HomeTeamScore": 92.5,
+   "AwayTeamScore": 70.0,
    "Total": 162.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Arkansas -23.5",
+    "bet": "Arkansas -22.5",
     "odds": -115,
     "model": 0.483,
     "breakeven": 0.535,
@@ -3163,7 +3163,7 @@
    },
    {
     "market": "Spread",
-    "bet": "Central Arkansas +23.5",
+    "bet": "Central Arkansas +22.5",
     "odds": -105,
     "model": 0.517,
     "breakeven": 0.512,
@@ -3178,10 +3178,10 @@
    {
     "market": "Moneyline",
     "bet": "Arkansas ML",
-    "odds": -9000,
-    "model": 0.957,
-    "breakeven": 0.989,
-    "edge": -0.032,
+    "odds": -8000,
+    "model": 0.954,
+    "breakeven": 0.988,
+    "edge": -0.034,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -3192,16 +3192,16 @@
    {
     "market": "Moneyline",
     "bet": "Central Arkansas ML",
-    "odds": 2500,
-    "model": 0.043,
-    "breakeven": 0.038,
-    "edge": 0.005,
+    "odds": 2200,
+    "model": 0.046,
+    "breakeven": 0.043,
+    "edge": 0.003,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
     "open_odds": 2500,
     "open": "+2500",
-    "confidence": 1
+    "confidence": 0
    },
    {
     "market": "Total",
@@ -3679,32 +3679,32 @@
    ],
    "Bet": {
     "Side": "Cal Baptist",
-    "Lean": 5.34,
+    "Lean": 6.34,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Cal Baptist",
-     "Line": -15.5,
-     "Lean": 5.34,
+     "Line": -14.5,
+     "Lean": 6.34,
      "Probability": 0.517,
-     "Edge": 0.027,
+     "Edge": 0.006,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Arkansas Pine Bluff",
-     "Odds": 950,
-     "Probability": 0.105,
-     "Edge": 0.014,
+     "Odds": 900,
+     "Probability": 0.109,
+     "Edge": 0.013,
      "Tier": "PASS"
     },
     "Total": {
      "Side": "Over",
-     "Line": 145.5,
-     "Lean": 0.35,
-     "Probability": 0.501,
-     "Edge": 0.005,
+     "Line": 144.5,
+     "Lean": 1.35,
+     "Probability": 0.503,
+     "Edge": -0.008,
      "Tier": "PASS"
     }
    }
@@ -3715,7 +3715,7 @@
    "Total": 148.5
   },
   "NoStake": false,
-  "TTQ": 10.9,
+  "TTQ": 10.8,
   "BART": {
    "HomeTeamScore": 77,
    "AwayTeamScore": 63,
@@ -3728,38 +3728,38 @@
    "Spread": "-14.9 Cal Baptist"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.908,
-   "AwayTeamWinProbability": 0.092,
-   "MoneylineHome": -1650,
-   "MoneylineAway": 950,
-   "Spread": "-15.5 Cal Baptist",
-   "SpreadValue": 15.5,
-   "HomeTeamScore": 80.5,
+   "HomeTeamWinProbability": 0.904,
+   "AwayTeamWinProbability": 0.096,
+   "MoneylineHome": -1600,
+   "MoneylineAway": 900,
+   "Spread": "-14.5 Cal Baptist",
+   "SpreadValue": 14.5,
+   "HomeTeamScore": 79.5,
    "AwayTeamScore": 65.0,
-   "Total": 145.5
+   "Total": 144.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Cal Baptist -15.5",
-    "odds": -105,
+    "bet": "Cal Baptist -14.5",
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.512,
-    "edge": 0.005,
+    "breakeven": 0.535,
+    "edge": -0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": -15.5,
     "open_odds": -105,
     "open": "-15.5 (-105)",
-    "confidence": 3
+    "confidence": 0
    },
    {
     "market": "Spread",
-    "bet": "Arkansas Pine Bluff +15.5",
-    "odds": -115,
+    "bet": "Arkansas Pine Bluff +14.5",
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.535,
-    "edge": -0.052,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": 15.5,
@@ -3770,10 +3770,10 @@
    {
     "market": "Moneyline",
     "bet": "Cal Baptist ML",
-    "odds": -1650,
-    "model": 0.895,
-    "breakeven": 0.943,
-    "edge": -0.048,
+    "odds": -1600,
+    "model": 0.891,
+    "breakeven": 0.941,
+    "edge": -0.05,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -3784,10 +3784,10 @@
    {
     "market": "Moneyline",
     "bet": "Arkansas Pine Bluff ML",
-    "odds": 950,
-    "model": 0.105,
-    "breakeven": 0.095,
-    "edge": 0.01,
+    "odds": 900,
+    "model": 0.109,
+    "breakeven": 0.1,
+    "edge": 0.009,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -3797,11 +3797,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 145.5",
-    "odds": -108,
-    "model": 0.501,
-    "breakeven": 0.519,
-    "edge": -0.018,
+    "bet": "Over 144.5",
+    "odds": -115,
+    "model": 0.503,
+    "breakeven": 0.535,
+    "edge": -0.032,
     "rec": "PASS",
     "selected": false,
     "open_line": 148.5,
@@ -3811,11 +3811,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 145.5",
-    "odds": -112,
-    "model": 0.499,
-    "breakeven": 0.528,
-    "edge": -0.029,
+    "bet": "Under 144.5",
+    "odds": -105,
+    "model": 0.497,
+    "breakeven": 0.512,
+    "edge": -0.015,
     "rec": "PASS",
     "selected": false,
     "open_line": 148.5,
@@ -4381,10 +4381,10 @@
     },
     "Total": {
      "Side": "Over",
-     "Line": 152.5,
-     "Lean": 0.42,
-     "Probability": 0.501,
-     "Edge": 0.012,
+     "Line": 150.5,
+     "Lean": 2.42,
+     "Probability": 0.504,
+     "Edge": 0.004,
      "Tier": "PASS"
     }
    }
@@ -4414,9 +4414,9 @@
    "MoneylineAway": 2000,
    "Spread": "-22.5 SMU",
    "SpreadValue": 22.5,
-   "HomeTeamScore": 87.5,
-   "AwayTeamScore": 65.0,
-   "Total": 152.5
+   "HomeTeamScore": 86.5,
+   "AwayTeamScore": 64.0,
+   "Total": 150.5
   },
   "Markets": [
    {
@@ -4477,11 +4477,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 152.5",
-    "odds": -105,
-    "model": 0.501,
-    "breakeven": 0.512,
-    "edge": -0.011,
+    "bet": "Over 150.5",
+    "odds": -110,
+    "model": 0.504,
+    "breakeven": 0.524,
+    "edge": -0.02,
     "rec": "PASS",
     "selected": false,
     "open_line": 153.5,
@@ -4491,11 +4491,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 152.5",
-    "odds": -115,
-    "model": 0.499,
-    "breakeven": 0.535,
-    "edge": -0.036,
+    "bet": "Under 150.5",
+    "odds": -110,
+    "model": 0.496,
+    "breakeven": 0.524,
+    "edge": -0.028,
     "rec": "PASS",
     "selected": false,
     "open_line": 153.5,
@@ -4983,7 +4983,7 @@
      "Line": -21.5,
      "Lean": 1.19,
      "Probability": 0.517,
-     "Edge": 0.021,
+     "Edge": 0.017,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -4995,11 +4995,11 @@
     },
     "Total": {
      "Side": "Over",
-     "Line": 147.5,
-     "Lean": 3.95,
-     "Probability": 0.507,
-     "Edge": 0.003,
-     "Tier": "BET"
+     "Line": 148.5,
+     "Lean": 2.95,
+     "Probability": 0.505,
+     "Edge": 0.001,
+     "Tier": "PASS"
     }
    }
   },
@@ -5028,18 +5028,18 @@
    "MoneylineAway": 2000,
    "Spread": "-21.5 Rutgers",
    "SpreadValue": 21.5,
-   "HomeTeamScore": 84.5,
-   "AwayTeamScore": 63.0,
-   "Total": 147.5
+   "HomeTeamScore": 85.0,
+   "AwayTeamScore": 63.5,
+   "Total": 148.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Rutgers -21.5",
-    "odds": -108,
+    "odds": -110,
     "model": 0.517,
-    "breakeven": 0.519,
-    "edge": -0.002,
+    "breakeven": 0.524,
+    "edge": -0.007,
     "rec": "LEAN",
     "selected": false,
     "open_line": -22.5,
@@ -5050,10 +5050,10 @@
    {
     "market": "Spread",
     "bet": "Bryant +21.5",
-    "odds": -112,
+    "odds": -110,
     "model": 0.483,
-    "breakeven": 0.528,
-    "edge": -0.045,
+    "breakeven": 0.524,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": 22.5,
@@ -5091,12 +5091,12 @@
    },
    {
     "market": "Total",
-    "bet": "Over 147.5",
+    "bet": "Over 148.5",
     "odds": -112,
-    "model": 0.507,
+    "model": 0.505,
     "breakeven": 0.528,
-    "edge": -0.021,
-    "rec": "BET",
+    "edge": -0.023,
+    "rec": "PASS",
     "selected": false,
     "open_line": 150.5,
     "open_odds": -110,
@@ -5105,11 +5105,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 147.5",
+    "bet": "Under 148.5",
     "odds": -108,
-    "model": 0.493,
+    "model": 0.495,
     "breakeven": 0.519,
-    "edge": -0.026,
+    "edge": -0.024,
     "rec": "PASS",
     "selected": false,
     "open_line": 150.5,
@@ -6150,22 +6150,22 @@
      "Line": 3.5,
      "Lean": 6.25,
      "Probability": 0.517,
-     "Edge": 0.017,
+     "Edge": 0.006,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Pittsburgh",
-     "Odds": 136,
-     "Probability": 0.466,
-     "Edge": 0.06,
+     "Odds": 130,
+     "Probability": 0.473,
+     "Edge": 0.056,
      "Tier": "LEAN"
     },
     "Total": {
      "Side": "Over",
-     "Line": 159.5,
-     "Lean": 5.86,
-     "Probability": 0.51,
-     "Edge": 0.021,
+     "Line": 157.5,
+     "Lean": 7.86,
+     "Probability": 0.514,
+     "Edge": 0.009,
      "Tier": "BET"
     }
    }
@@ -6189,24 +6189,24 @@
    "Spread": "-3.5 Butler"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.593,
-   "AwayTeamWinProbability": 0.407,
-   "MoneylineHome": -162,
-   "MoneylineAway": 136,
+   "HomeTeamWinProbability": 0.583,
+   "AwayTeamWinProbability": 0.417,
+   "MoneylineHome": -155,
+   "MoneylineAway": 130,
    "Spread": "-3.5 Butler",
    "SpreadValue": 3.5,
-   "HomeTeamScore": 81.5,
-   "AwayTeamScore": 78.0,
-   "Total": 159.5
+   "HomeTeamScore": 80.5,
+   "AwayTeamScore": 77.0,
+   "Total": 157.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Butler -3.5",
-    "odds": -110,
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.524,
-    "edge": -0.041,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": -3.5,
@@ -6217,10 +6217,10 @@
    {
     "market": "Spread",
     "bet": "Pittsburgh +3.5",
-    "odds": -110,
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.524,
-    "edge": -0.007,
+    "breakeven": 0.535,
+    "edge": -0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": 3.5,
@@ -6231,10 +6231,10 @@
    {
     "market": "Moneyline",
     "bet": "Butler ML",
-    "odds": -162,
-    "model": 0.534,
-    "breakeven": 0.618,
-    "edge": -0.084,
+    "odds": -155,
+    "model": 0.527,
+    "breakeven": 0.608,
+    "edge": -0.081,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -6245,24 +6245,24 @@
    {
     "market": "Moneyline",
     "bet": "Pittsburgh ML",
-    "odds": 136,
-    "model": 0.466,
-    "breakeven": 0.424,
-    "edge": 0.042,
+    "odds": 130,
+    "model": 0.473,
+    "breakeven": 0.435,
+    "edge": 0.038,
     "rec": "LEAN",
     "selected": false,
     "open_line": null,
     "open_odds": 130,
     "open": "+130",
-    "confidence": 19
+    "confidence": 18
    },
    {
     "market": "Total",
-    "bet": "Over 159.5",
-    "odds": -105,
-    "model": 0.51,
-    "breakeven": 0.512,
-    "edge": -0.002,
+    "bet": "Over 157.5",
+    "odds": -112,
+    "model": 0.514,
+    "breakeven": 0.528,
+    "edge": -0.014,
     "rec": "BET",
     "selected": false,
     "open_line": 158.5,
@@ -6272,11 +6272,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 159.5",
-    "odds": -115,
-    "model": 0.49,
-    "breakeven": 0.535,
-    "edge": -0.045,
+    "bet": "Under 157.5",
+    "odds": -108,
+    "model": 0.486,
+    "breakeven": 0.519,
+    "edge": -0.033,
     "rec": "PASS",
     "selected": false,
     "open_line": 158.5,
@@ -6788,10 +6788,10 @@
     },
     "Total": {
      "Side": "Under",
-     "Line": 168.5,
-     "Lean": 13.32,
-     "Probability": 0.523,
-     "Edge": 0.023,
+     "Line": 167.5,
+     "Lean": 12.32,
+     "Probability": 0.521,
+     "Edge": 0.021,
      "Tier": "BET"
     }
    }
@@ -6821,9 +6821,9 @@
    "MoneylineAway": 100,
    "Spread": "-1.5 Idaho",
    "SpreadValue": 1.5,
-   "HomeTeamScore": 85.0,
-   "AwayTeamScore": 83.5,
-   "Total": 168.5
+   "HomeTeamScore": 84.5,
+   "AwayTeamScore": 83.0,
+   "Total": 167.5
   },
   "Markets": [
    {
@@ -6884,11 +6884,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 168.5",
+    "bet": "Over 167.5",
     "odds": -110,
-    "model": 0.477,
+    "model": 0.479,
     "breakeven": 0.524,
-    "edge": -0.047,
+    "edge": -0.045,
     "rec": "PASS",
     "selected": false,
     "open_line": 167.5,
@@ -6898,11 +6898,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 168.5",
+    "bet": "Under 167.5",
     "odds": -110,
-    "model": 0.523,
+    "model": 0.521,
     "breakeven": 0.524,
-    "edge": -0.001,
+    "edge": -0.003,
     "rec": "BET",
     "selected": false,
     "open_line": 167.5,
@@ -7370,7 +7370,7 @@
    "Total": 151.5
   },
   "NoStake": false,
-  "TTQ": 34.8,
+  "TTQ": 34.7,
   "BART": {
    "HomeTeamScore": 79,
    "AwayTeamScore": 72,
@@ -7922,7 +7922,7 @@
     "Side": "Chicago St.",
     "Lean": 2.78,
     "CoverProbability": 0.517,
-    "Tier": "PASS"
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
@@ -7930,8 +7930,8 @@
      "Line": 16.5,
      "Lean": 2.78,
      "Probability": 0.517,
-     "Edge": -0.001,
-     "Tier": "PASS"
+     "Edge": 0.006,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Chicago St.",
@@ -7942,10 +7942,10 @@
     },
     "Total": {
      "Side": "Over",
-     "Line": 142.5,
-     "Lean": 8.41,
-     "Probability": 0.515,
-     "Edge": 0.01,
+     "Line": 141.5,
+     "Lean": 9.41,
+     "Probability": 0.516,
+     "Edge": 0.012,
      "Tier": "BET"
     }
    }
@@ -7975,18 +7975,18 @@
    "MoneylineAway": 1000,
    "Spread": "-16.5 San Diego",
    "SpreadValue": 16.5,
-   "HomeTeamScore": 79.5,
-   "AwayTeamScore": 63.0,
-   "Total": 142.5
+   "HomeTeamScore": 79.0,
+   "AwayTeamScore": 62.5,
+   "Total": 141.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "San Diego -16.5",
-    "odds": -102,
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.505,
-    "edge": -0.022,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": -14.5,
@@ -7997,11 +7997,11 @@
    {
     "market": "Spread",
     "bet": "Chicago St. +16.5",
-    "odds": -118,
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.541,
-    "edge": -0.024,
-    "rec": "PASS",
+    "breakeven": 0.535,
+    "edge": -0.018,
+    "rec": "LEAN",
     "selected": false,
     "open_line": 14.5,
     "open_odds": -118,
@@ -8038,11 +8038,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 142.5",
+    "bet": "Over 141.5",
     "odds": -112,
-    "model": 0.515,
+    "model": 0.516,
     "breakeven": 0.528,
-    "edge": -0.013,
+    "edge": -0.012,
     "rec": "BET",
     "selected": false,
     "open_line": 148.5,
@@ -8052,11 +8052,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 142.5",
+    "bet": "Under 141.5",
     "odds": -108,
-    "model": 0.485,
+    "model": 0.484,
     "breakeven": 0.519,
-    "edge": -0.034,
+    "edge": -0.035,
     "rec": "PASS",
     "selected": false,
     "open_line": 148.5,
@@ -8531,7 +8531,7 @@
      "Line": 4.5,
      "Lean": 1.1,
      "Probability": 0.517,
-     "Edge": 0.021,
+     "Edge": 0.012,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -8543,10 +8543,10 @@
     },
     "Total": {
      "Side": "Under",
-     "Line": 147.5,
-     "Lean": 5.64,
-     "Probability": 0.51,
-     "Edge": 0.006,
+     "Line": 146.5,
+     "Lean": 4.64,
+     "Probability": 0.508,
+     "Edge": -0.003,
      "Tier": "BET"
     }
    }
@@ -8576,18 +8576,18 @@
    "MoneylineAway": 164,
    "Spread": "-4.5 Clemson",
    "SpreadValue": 4.5,
-   "HomeTeamScore": 76.0,
-   "AwayTeamScore": 71.5,
-   "Total": 147.5
+   "HomeTeamScore": 75.5,
+   "AwayTeamScore": 71.0,
+   "Total": 146.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Clemson -4.5",
-    "odds": -112,
+    "odds": -108,
     "model": 0.483,
-    "breakeven": 0.528,
-    "edge": -0.045,
+    "breakeven": 0.519,
+    "edge": -0.036,
     "rec": "PASS",
     "selected": false,
     "open_line": -3.5,
@@ -8598,10 +8598,10 @@
    {
     "market": "Spread",
     "bet": "Georgetown +4.5",
-    "odds": -108,
+    "odds": -112,
     "model": 0.517,
-    "breakeven": 0.519,
-    "edge": -0.002,
+    "breakeven": 0.528,
+    "edge": -0.011,
     "rec": "LEAN",
     "selected": false,
     "open_line": 3.5,
@@ -8639,11 +8639,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 147.5",
-    "odds": -108,
-    "model": 0.49,
-    "breakeven": 0.519,
-    "edge": -0.029,
+    "bet": "Over 146.5",
+    "odds": -105,
+    "model": 0.492,
+    "breakeven": 0.512,
+    "edge": -0.02,
     "rec": "PASS",
     "selected": false,
     "open_line": 149.5,
@@ -8653,17 +8653,17 @@
    },
    {
     "market": "Total",
-    "bet": "Under 147.5",
-    "odds": -112,
-    "model": 0.51,
-    "breakeven": 0.528,
-    "edge": -0.018,
+    "bet": "Under 146.5",
+    "odds": -115,
+    "model": 0.508,
+    "breakeven": 0.535,
+    "edge": -0.027,
     "rec": "BET",
     "selected": false,
     "open_line": 149.5,
     "open_odds": -110,
     "open": "149.5 (-110)",
-    "confidence": 34
+    "confidence": 31
    }
   ],
   "Histogram": {
@@ -9102,7 +9102,7 @@
     "Side": "Ohio St.",
     "Lean": 3.39,
     "CoverProbability": 0.517,
-    "Tier": "PASS"
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
@@ -9110,14 +9110,14 @@
      "Line": 12.5,
      "Lean": 3.39,
      "Probability": 0.517,
-     "Edge": -0.005,
-     "Tier": "PASS"
+     "Edge": 0.021,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Ohio St.",
-     "Odds": 550,
-     "Probability": 0.185,
-     "Edge": 0.038,
+     "Odds": 575,
+     "Probability": 0.181,
+     "Edge": 0.039,
      "Tier": "LEAN"
     },
     "Total": {
@@ -9136,7 +9136,7 @@
    "Total": 147.5
   },
   "NoStake": false,
-  "TTQ": 71.0,
+  "TTQ": 70.9,
   "BART": {
    "HomeTeamScore": 76,
    "AwayTeamScore": 68,
@@ -9149,10 +9149,10 @@
    "Spread": "-7.8 Connecticut"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.852,
-   "AwayTeamWinProbability": 0.148,
-   "MoneylineHome": -800,
-   "MoneylineAway": 550,
+   "HomeTeamWinProbability": 0.858,
+   "AwayTeamWinProbability": 0.142,
+   "MoneylineHome": -850,
+   "MoneylineAway": 575,
    "Spread": "-12.5 Connecticut",
    "SpreadValue": 12.5,
    "HomeTeamScore": 80.0,
@@ -9163,10 +9163,10 @@
    {
     "market": "Spread",
     "bet": "Connecticut -12.5",
-    "odds": 100,
+    "odds": -112,
     "model": 0.483,
-    "breakeven": 0.5,
-    "edge": -0.017,
+    "breakeven": 0.528,
+    "edge": -0.045,
     "rec": "PASS",
     "selected": false,
     "open_line": -10.5,
@@ -9177,11 +9177,11 @@
    {
     "market": "Spread",
     "bet": "Ohio St. +12.5",
-    "odds": -120,
+    "odds": -108,
     "model": 0.517,
-    "breakeven": 0.545,
-    "edge": -0.028,
-    "rec": "PASS",
+    "breakeven": 0.519,
+    "edge": -0.002,
+    "rec": "LEAN",
     "selected": false,
     "open_line": 10.5,
     "open_odds": -118,
@@ -9191,10 +9191,10 @@
    {
     "market": "Moneyline",
     "bet": "Connecticut ML",
-    "odds": -800,
-    "model": 0.815,
-    "breakeven": 0.889,
-    "edge": -0.074,
+    "odds": -850,
+    "model": 0.819,
+    "breakeven": 0.895,
+    "edge": -0.076,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -9205,16 +9205,16 @@
    {
     "market": "Moneyline",
     "bet": "Ohio St. ML",
-    "odds": 550,
-    "model": 0.185,
-    "breakeven": 0.154,
-    "edge": 0.031,
+    "odds": 575,
+    "model": 0.181,
+    "breakeven": 0.148,
+    "edge": 0.033,
     "rec": "LEAN",
     "selected": false,
     "open_line": null,
     "open_odds": 350,
     "open": "+350",
-    "confidence": 6
+    "confidence": 7
    },
    {
     "market": "Total",
@@ -9704,10 +9704,10 @@
     },
     "Total": {
      "Side": "Over",
-     "Line": 137.5,
-     "Lean": 0.03,
-     "Probability": 0.5,
-     "Edge": 0.005,
+     "Line": 136.5,
+     "Lean": 1.03,
+     "Probability": 0.502,
+     "Edge": -0.009,
      "Tier": "PASS"
     }
    }
@@ -9737,9 +9737,9 @@
    "MoneylineAway": -105,
    "Spread": "-1.5 Northwestern",
    "SpreadValue": 1.5,
-   "HomeTeamScore": 69.5,
-   "AwayTeamScore": 68.0,
-   "Total": 137.5
+   "HomeTeamScore": 69.0,
+   "AwayTeamScore": 67.5,
+   "Total": 136.5
   },
   "Markets": [
    {
@@ -9800,11 +9800,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 137.5",
-    "odds": -108,
-    "model": 0.5,
-    "breakeven": 0.519,
-    "edge": -0.019,
+    "bet": "Over 136.5",
+    "odds": -115,
+    "model": 0.502,
+    "breakeven": 0.535,
+    "edge": -0.033,
     "rec": "PASS",
     "selected": false,
     "open_line": 140.5,
@@ -9814,11 +9814,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 137.5",
-    "odds": -112,
-    "model": 0.5,
-    "breakeven": 0.528,
-    "edge": -0.028,
+    "bet": "Under 136.5",
+    "odds": -105,
+    "model": 0.498,
+    "breakeven": 0.512,
+    "edge": -0.014,
     "rec": "PASS",
     "selected": false,
     "open_line": 140.5,
@@ -10809,15 +10809,15 @@
    ],
    "Bet": {
     "Side": "SIU Edwardsville",
-    "Lean": 10.53,
+    "Lean": 9.53,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "SIU Edwardsville",
-     "Line": 43.5,
-     "Lean": 10.53,
+     "Line": 42.5,
+     "Lean": 9.53,
      "Probability": 0.517,
      "Edge": 0.021,
      "Tier": "LEAN"
@@ -10851,16 +10851,16 @@
    "Spread": "-33.2 Duke"
   },
   "Vegas": {
-   "Spread": "-43.5 Duke",
-   "SpreadValue": 43.5,
-   "HomeTeamScore": 96.0,
-   "AwayTeamScore": 52.5,
+   "Spread": "-42.5 Duke",
+   "SpreadValue": 42.5,
+   "HomeTeamScore": 95.5,
+   "AwayTeamScore": 53.0,
    "Total": 148.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Duke -43.5",
+    "bet": "Duke -42.5",
     "odds": -112,
     "model": 0.483,
     "breakeven": 0.528,
@@ -10874,7 +10874,7 @@
    },
    {
     "market": "Spread",
-    "bet": "SIU Edwardsville +43.5",
+    "bet": "SIU Edwardsville +42.5",
     "odds": -108,
     "model": 0.517,
     "breakeven": 0.519,
@@ -11455,9 +11455,9 @@
     },
     "Moneyline": {
      "Side": "East Texas A&M",
-     "Odds": 260,
-     "Probability": 0.275,
-     "Edge": 0.008,
+     "Odds": 250,
+     "Probability": 0.28,
+     "Edge": 0.006,
      "Tier": "PASS"
     },
     "Total": {
@@ -11465,7 +11465,7 @@
      "Line": 151.5,
      "Lean": 6.16,
      "Probability": 0.511,
-     "Edge": 0.015,
+     "Edge": 0.006,
      "Tier": "BET"
     }
    }
@@ -11489,10 +11489,10 @@
    "Spread": "-8.9 Portland"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.734,
-   "AwayTeamWinProbability": 0.266,
-   "MoneylineHome": -325,
-   "MoneylineAway": 260,
+   "HomeTeamWinProbability": 0.726,
+   "AwayTeamWinProbability": 0.274,
+   "MoneylineHome": -310,
+   "MoneylineAway": 250,
    "Spread": "-7.5 Portland",
    "SpreadValue": 7.5,
    "HomeTeamScore": 79.5,
@@ -11531,10 +11531,10 @@
    {
     "market": "Moneyline",
     "bet": "Portland ML",
-    "odds": -325,
-    "model": 0.725,
-    "breakeven": 0.765,
-    "edge": -0.04,
+    "odds": -310,
+    "model": 0.72,
+    "breakeven": 0.756,
+    "edge": -0.036,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -11545,10 +11545,10 @@
    {
     "market": "Moneyline",
     "bet": "East Texas A&M ML",
-    "odds": 260,
-    "model": 0.275,
-    "breakeven": 0.278,
-    "edge": -0.003,
+    "odds": 250,
+    "model": 0.28,
+    "breakeven": 0.286,
+    "edge": -0.006,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -11559,10 +11559,10 @@
    {
     "market": "Total",
     "bet": "Over 151.5",
-    "odds": -112,
+    "odds": -108,
     "model": 0.489,
-    "breakeven": 0.528,
-    "edge": -0.039,
+    "breakeven": 0.519,
+    "edge": -0.03,
     "rec": "PASS",
     "selected": false,
     "open_line": 150.5,
@@ -11573,16 +11573,16 @@
    {
     "market": "Total",
     "bet": "Under 151.5",
-    "odds": -108,
+    "odds": -112,
     "model": 0.511,
-    "breakeven": 0.519,
-    "edge": -0.008,
+    "breakeven": 0.528,
+    "edge": -0.017,
     "rec": "BET",
     "selected": false,
     "open_line": 150.5,
     "open_odds": -115,
     "open": "150.5 (-115)",
-    "confidence": 39
+    "confidence": 34
    }
   ],
   "Histogram": {
@@ -12004,24 +12004,24 @@
    ],
    "Bet": {
     "Side": "Florida Gulf Coast",
-    "Lean": 1.44,
+    "Lean": 0.44,
     "CoverProbability": 0.517,
-    "Tier": "PASS"
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Florida Gulf Coast",
-     "Line": -1.5,
-     "Lean": 1.44,
+     "Line": -2.5,
+     "Lean": 0.44,
      "Probability": 0.517,
-     "Edge": -0.001,
-     "Tier": "PASS"
+     "Edge": 0.017,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Florida Gulf Coast",
-     "Odds": -130,
-     "Probability": 0.556,
-     "Edge": 0.013,
+     "Odds": -142,
+     "Probability": 0.569,
+     "Edge": 0.006,
      "Tier": "PASS"
     },
     "Total": {
@@ -12040,38 +12040,38 @@
    "Total": 158.5
   },
   "NoStake": true,
-  "TTQ": 58.8,
+  "TTQ": 59.7,
   "BART": {
-   "HomeTeamScore": 83,
-   "AwayTeamScore": 82,
+   "HomeTeamScore": 84,
+   "AwayTeamScore": 83,
    "HomeTeamWinProbability": 0.54,
    "AwayTeamWinProbability": 0.46,
-   "SpreadValue": 1.2,
-   "Total": 165.0,
+   "SpreadValue": 1.1,
+   "Total": 167.0,
    "source": "torvik",
-   "text": "Florida Gulf Coast -1.2, 83-82 (54%)",
-   "Spread": "-1.2 Florida Gulf Coast"
+   "text": "Florida Gulf Coast -1.1, 84-83 (54%)",
+   "Spread": "-1.1 Florida Gulf Coast"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.543,
-   "AwayTeamWinProbability": 0.457,
-   "MoneylineHome": -130,
-   "MoneylineAway": 110,
-   "Spread": "-1.5 Florida Gulf Coast",
-   "SpreadValue": 1.5,
-   "HomeTeamScore": 81.0,
-   "AwayTeamScore": 79.5,
+   "HomeTeamWinProbability": 0.563,
+   "AwayTeamWinProbability": 0.437,
+   "MoneylineHome": -142,
+   "MoneylineAway": 120,
+   "Spread": "-2.5 Florida Gulf Coast",
+   "SpreadValue": 2.5,
+   "HomeTeamScore": 81.5,
+   "AwayTeamScore": 79.0,
    "Total": 160.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Florida Gulf Coast -1.5",
-    "odds": -118,
+    "bet": "Florida Gulf Coast -2.5",
+    "odds": -110,
     "model": 0.517,
-    "breakeven": 0.541,
-    "edge": -0.024,
-    "rec": "PASS",
+    "breakeven": 0.524,
+    "edge": -0.007,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -3.5,
     "open_odds": -110,
@@ -12080,11 +12080,11 @@
    },
    {
     "market": "Spread",
-    "bet": "FIU +1.5",
-    "odds": -102,
+    "bet": "FIU +2.5",
+    "odds": -110,
     "model": 0.483,
-    "breakeven": 0.505,
-    "edge": -0.022,
+    "breakeven": 0.524,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": 3.5,
@@ -12095,10 +12095,10 @@
    {
     "market": "Moneyline",
     "bet": "Florida Gulf Coast ML",
-    "odds": -130,
-    "model": 0.556,
-    "breakeven": 0.565,
-    "edge": -0.009,
+    "odds": -142,
+    "model": 0.569,
+    "breakeven": 0.587,
+    "edge": -0.018,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -12109,10 +12109,10 @@
    {
     "market": "Moneyline",
     "bet": "FIU ML",
-    "odds": 110,
-    "model": 0.444,
-    "breakeven": 0.476,
-    "edge": -0.032,
+    "odds": 120,
+    "model": 0.431,
+    "breakeven": 0.455,
+    "edge": -0.024,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -12551,7 +12551,7 @@
      "Line": 31.5,
      "Lean": 3.3,
      "Probability": 0.517,
-     "Edge": 0.027,
+     "Edge": 0.017,
      "Tier": "LEAN"
     },
     "Total": {
@@ -12593,10 +12593,10 @@
    {
     "market": "Spread",
     "bet": "Oklahoma -31.5",
-    "odds": -115,
+    "odds": -110,
     "model": 0.483,
-    "breakeven": 0.535,
-    "edge": -0.052,
+    "breakeven": 0.524,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": -31.5,
@@ -12607,16 +12607,16 @@
    {
     "market": "Spread",
     "bet": "Fairleigh Dickinson +31.5",
-    "odds": -105,
+    "odds": -110,
     "model": 0.517,
-    "breakeven": 0.512,
-    "edge": 0.005,
+    "breakeven": 0.524,
+    "edge": -0.007,
     "rec": "LEAN",
     "selected": false,
     "open_line": 31.5,
     "open_odds": -105,
     "open": "+31.5 (-105)",
-    "confidence": 3
+    "confidence": 0
    },
    {
     "market": "Moneyline",
@@ -13169,26 +13169,26 @@
    ],
    "Bet": {
     "Side": "Merrimack",
-    "Lean": 12.01,
+    "Lean": 10.01,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Merrimack",
-     "Line": 36.5,
-     "Lean": 12.01,
+     "Line": 34.5,
+     "Lean": 10.01,
      "Probability": 0.517,
-     "Edge": 0.012,
+     "Edge": 0.027,
      "Tier": "LEAN"
     },
     "Total": {
      "Side": "Under",
-     "Line": 141.5,
-     "Lean": 4.55,
-     "Probability": 0.508,
-     "Edge": 0.008,
-     "Tier": "BET"
+     "Line": 139.5,
+     "Lean": 2.55,
+     "Probability": 0.505,
+     "Edge": 0.015,
+     "Tier": "PASS"
     }
    }
   },
@@ -13211,20 +13211,20 @@
    "Spread": "-28.8 Florida"
   },
   "Vegas": {
-   "Spread": "-36.5 Florida",
-   "SpreadValue": 36.5,
-   "HomeTeamScore": 89.0,
+   "Spread": "-34.5 Florida",
+   "SpreadValue": 34.5,
+   "HomeTeamScore": 87.0,
    "AwayTeamScore": 52.5,
-   "Total": 141.5
+   "Total": 139.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Florida -36.5",
-    "odds": -108,
+    "bet": "Florida -34.5",
+    "odds": -115,
     "model": 0.483,
-    "breakeven": 0.519,
-    "edge": -0.036,
+    "breakeven": 0.535,
+    "edge": -0.052,
     "rec": "PASS",
     "selected": false,
     "open_line": -37.5,
@@ -13234,17 +13234,17 @@
    },
    {
     "market": "Spread",
-    "bet": "Merrimack +36.5",
-    "odds": -112,
+    "bet": "Merrimack +34.5",
+    "odds": -105,
     "model": 0.517,
-    "breakeven": 0.528,
-    "edge": -0.011,
+    "breakeven": 0.512,
+    "edge": 0.005,
     "rec": "LEAN",
     "selected": false,
     "open_line": 37.5,
     "open_odds": -108,
     "open": "+37.5 (-108)",
-    "confidence": 0
+    "confidence": 3
    },
    {
     "market": "Moneyline",
@@ -13276,11 +13276,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 141.5",
-    "odds": -110,
-    "model": 0.492,
-    "breakeven": 0.524,
-    "edge": -0.032,
+    "bet": "Over 139.5",
+    "odds": -115,
+    "model": 0.495,
+    "breakeven": 0.535,
+    "edge": -0.04,
     "rec": "PASS",
     "selected": false,
     "open_line": 143.5,
@@ -13290,17 +13290,17 @@
    },
    {
     "market": "Total",
-    "bet": "Under 141.5",
-    "odds": -110,
-    "model": 0.508,
-    "breakeven": 0.524,
-    "edge": -0.016,
-    "rec": "BET",
+    "bet": "Under 139.5",
+    "odds": -105,
+    "model": 0.505,
+    "breakeven": 0.512,
+    "edge": -0.007,
+    "rec": "PASS",
     "selected": false,
     "open_line": 143.5,
     "open_odds": -108,
     "open": "143.5 (-108)",
-    "confidence": 37
+    "confidence": 0
    }
   ],
   "Histogram": {
@@ -13779,7 +13779,7 @@
    "Total": 148.5
   },
   "NoStake": false,
-  "TTQ": 40.3,
+  "TTQ": 40.2,
   "BART": {
    "HomeTeamScore": 83,
    "AwayTeamScore": 64,
@@ -14344,9 +14344,9 @@
      "Tier": "LEAN"
     },
     "Total": {
-     "Side": "Over",
-     "Line": 144.5,
-     "Lean": 0.61,
+     "Side": "Under",
+     "Line": 145.5,
+     "Lean": 0.39,
      "Probability": 0.501,
      "Edge": 0.001,
      "Tier": "PASS"
@@ -14378,9 +14378,9 @@
    "MoneylineAway": 650,
    "Spread": "-12.5 Fordham",
    "SpreadValue": 12.5,
-   "HomeTeamScore": 78.5,
-   "AwayTeamScore": 66.0,
-   "Total": 144.5
+   "HomeTeamScore": 79.0,
+   "AwayTeamScore": 66.5,
+   "Total": 145.5
   },
   "Markets": [
    {
@@ -14441,21 +14441,7 @@
    },
    {
     "market": "Total",
-    "bet": "Over 144.5",
-    "odds": -110,
-    "model": 0.501,
-    "breakeven": 0.524,
-    "edge": -0.023,
-    "rec": "PASS",
-    "selected": false,
-    "open_line": 143.5,
-    "open_odds": -108,
-    "open": "143.5 (-108)",
-    "confidence": 0
-   },
-   {
-    "market": "Total",
-    "bet": "Under 144.5",
+    "bet": "Over 145.5",
     "odds": -110,
     "model": 0.499,
     "breakeven": 0.524,
@@ -14463,9 +14449,23 @@
     "rec": "PASS",
     "selected": false,
     "open_line": 143.5,
+    "open_odds": -108,
+    "open": "143.5 (-108)",
+    "confidence": null
+   },
+   {
+    "market": "Total",
+    "bet": "Under 145.5",
+    "odds": -110,
+    "model": 0.501,
+    "breakeven": 0.524,
+    "edge": -0.023,
+    "rec": "PASS",
+    "selected": false,
+    "open_line": 143.5,
     "open_odds": -112,
     "open": "143.5 (-112)",
-    "confidence": null
+    "confidence": 0
    }
   ],
   "Histogram": {
@@ -14904,7 +14904,7 @@
     "Side": "George Washington",
     "Lean": 9.16,
     "CoverProbability": 0.517,
-    "Tier": "PASS"
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
@@ -14912,14 +14912,14 @@
      "Line": -10.5,
      "Lean": 9.16,
      "Probability": 0.517,
-     "Edge": -0.001,
-     "Tier": "PASS"
+     "Edge": 0.017,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "George Washington",
-     "Odds": -750,
-     "Probability": 0.865,
-     "Edge": 0.019,
+     "Odds": -700,
+     "Probability": 0.861,
+     "Edge": 0.021,
      "Tier": "PASS"
     },
     "Total": {
@@ -14951,10 +14951,10 @@
    "Spread": "-10.8 George Washington"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.847,
-   "AwayTeamWinProbability": 0.153,
-   "MoneylineHome": -750,
-   "MoneylineAway": 525,
+   "HomeTeamWinProbability": 0.84,
+   "AwayTeamWinProbability": 0.16,
+   "MoneylineHome": -700,
+   "MoneylineAway": 500,
    "Spread": "-10.5 George Washington",
    "SpreadValue": 10.5,
    "HomeTeamScore": 72.0,
@@ -14965,11 +14965,11 @@
    {
     "market": "Spread",
     "bet": "George Washington -10.5",
-    "odds": -118,
+    "odds": -110,
     "model": 0.517,
-    "breakeven": 0.541,
-    "edge": -0.024,
-    "rec": "PASS",
+    "breakeven": 0.524,
+    "edge": -0.007,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -12.5,
     "open_odds": -112,
@@ -14979,10 +14979,10 @@
    {
     "market": "Spread",
     "bet": "Harvard +10.5",
-    "odds": -102,
+    "odds": -110,
     "model": 0.483,
-    "breakeven": 0.505,
-    "edge": -0.022,
+    "breakeven": 0.524,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": 12.5,
@@ -14993,10 +14993,10 @@
    {
     "market": "Moneyline",
     "bet": "George Washington ML",
-    "odds": -750,
-    "model": 0.865,
-    "breakeven": 0.882,
-    "edge": -0.017,
+    "odds": -700,
+    "model": 0.861,
+    "breakeven": 0.875,
+    "edge": -0.014,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -15007,10 +15007,10 @@
    {
     "market": "Moneyline",
     "bet": "Harvard ML",
-    "odds": 525,
-    "model": 0.135,
-    "breakeven": 0.16,
-    "edge": -0.025,
+    "odds": 500,
+    "model": 0.139,
+    "breakeven": 0.167,
+    "edge": -0.028,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -15494,24 +15494,24 @@
    ],
    "Bet": {
     "Side": "Georgia",
-    "Lean": 3.99,
+    "Lean": 2.99,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Georgia",
-     "Line": 4.5,
-     "Lean": 3.99,
+     "Line": 3.5,
+     "Lean": 2.99,
      "Probability": 0.517,
-     "Edge": 0.012,
+     "Edge": 0.027,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Georgia",
-     "Odds": 150,
-     "Probability": 0.423,
-     "Edge": 0.039,
+     "Odds": 160,
+     "Probability": 0.413,
+     "Edge": 0.044,
      "Tier": "LEAN"
     },
     "Total": {
@@ -15543,24 +15543,24 @@
    "Spread": "-4.4 North Carolina"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.616,
-   "AwayTeamWinProbability": 0.384,
-   "MoneylineHome": -180,
-   "MoneylineAway": 150,
-   "Spread": "-4.5 North Carolina",
-   "SpreadValue": 4.5,
-   "HomeTeamScore": 84.5,
-   "AwayTeamScore": 80.0,
+   "HomeTeamWinProbability": 0.631,
+   "AwayTeamWinProbability": 0.369,
+   "MoneylineHome": -192,
+   "MoneylineAway": 160,
+   "Spread": "-3.5 North Carolina",
+   "SpreadValue": 3.5,
+   "HomeTeamScore": 84.0,
+   "AwayTeamScore": 80.5,
    "Total": 164.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "North Carolina -4.5",
-    "odds": -108,
+    "bet": "North Carolina -3.5",
+    "odds": -115,
     "model": 0.483,
-    "breakeven": 0.519,
-    "edge": -0.036,
+    "breakeven": 0.535,
+    "edge": -0.052,
     "rec": "PASS",
     "selected": false,
     "open_line": -4.5,
@@ -15570,25 +15570,25 @@
    },
    {
     "market": "Spread",
-    "bet": "Georgia +4.5",
-    "odds": -112,
+    "bet": "Georgia +3.5",
+    "odds": -105,
     "model": 0.517,
-    "breakeven": 0.528,
-    "edge": -0.011,
+    "breakeven": 0.512,
+    "edge": 0.005,
     "rec": "LEAN",
     "selected": false,
     "open_line": 4.5,
     "open_odds": -108,
     "open": "+4.5 (-108)",
-    "confidence": 0
+    "confidence": 3
    },
    {
     "market": "Moneyline",
     "bet": "North Carolina ML",
-    "odds": -180,
-    "model": 0.577,
-    "breakeven": 0.643,
-    "edge": -0.066,
+    "odds": -192,
+    "model": 0.587,
+    "breakeven": 0.658,
+    "edge": -0.071,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -15599,16 +15599,16 @@
    {
     "market": "Moneyline",
     "bet": "Georgia ML",
-    "odds": 150,
-    "model": 0.423,
-    "breakeven": 0.4,
-    "edge": 0.023,
+    "odds": 160,
+    "model": 0.413,
+    "breakeven": 0.385,
+    "edge": 0.028,
     "rec": "LEAN",
     "selected": false,
     "open_line": null,
     "open_odds": 154,
     "open": "+154",
-    "confidence": 9
+    "confidence": 11
    },
    {
     "market": "Total",
@@ -16073,10 +16073,10 @@
     },
     "Total": {
      "Side": "Under",
-     "Line": 165.5,
-     "Lean": 9.46,
-     "Probability": 0.517,
-     "Edge": 0.006,
+     "Line": 164.5,
+     "Lean": 8.46,
+     "Probability": 0.515,
+     "Edge": 0.026,
      "Tier": "BET"
     }
    }
@@ -16106,9 +16106,9 @@
    "MoneylineAway": 1800,
    "Spread": "-22.5 UCF",
    "SpreadValue": 22.5,
-   "HomeTeamScore": 94.0,
-   "AwayTeamScore": 71.5,
-   "Total": 165.5
+   "HomeTeamScore": 93.5,
+   "AwayTeamScore": 71.0,
+   "Total": 164.5
   },
   "Markets": [
    {
@@ -16169,11 +16169,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 165.5",
-    "odds": -105,
-    "model": 0.483,
-    "breakeven": 0.512,
-    "edge": -0.029,
+    "bet": "Over 164.5",
+    "odds": -115,
+    "model": 0.485,
+    "breakeven": 0.535,
+    "edge": -0.05,
     "rec": "PASS",
     "selected": false,
     "open_line": 163.5,
@@ -16183,17 +16183,17 @@
    },
    {
     "market": "Total",
-    "bet": "Under 165.5",
-    "odds": -115,
-    "model": 0.517,
-    "breakeven": 0.535,
-    "edge": -0.018,
+    "bet": "Under 164.5",
+    "odds": -105,
+    "model": 0.515,
+    "breakeven": 0.512,
+    "edge": 0.003,
     "rec": "BET",
     "selected": false,
     "open_line": 163.5,
     "open_odds": -112,
     "open": "163.5 (-112)",
-    "confidence": 0
+    "confidence": 13
    }
   ],
   "Histogram": {
@@ -16670,7 +16670,7 @@
     "Side": "Iona",
     "Lean": 2.69,
     "CoverProbability": 0.517,
-    "Tier": "LEAN"
+    "Tier": "PASS"
    },
    "Signals": {
     "Spread": {
@@ -16678,8 +16678,8 @@
      "Line": 7.5,
      "Lean": 2.69,
      "Probability": 0.517,
-     "Edge": 0.012,
-     "Tier": "LEAN"
+     "Edge": -0.001,
+     "Tier": "PASS"
     },
     "Moneyline": {
      "Side": "Iona",
@@ -16690,10 +16690,10 @@
     },
     "Total": {
      "Side": "Over",
-     "Line": 133.5,
-     "Lean": 5.66,
-     "Probability": 0.51,
-     "Edge": -0.001,
+     "Line": 134.5,
+     "Lean": 4.66,
+     "Probability": 0.508,
+     "Edge": 0.019,
      "Tier": "BET"
     }
    }
@@ -16723,18 +16723,18 @@
    "MoneylineAway": 245,
    "Spread": "-7.5 Hofstra",
    "SpreadValue": 7.5,
-   "HomeTeamScore": 70.5,
-   "AwayTeamScore": 63.0,
-   "Total": 133.5
+   "HomeTeamScore": 71.0,
+   "AwayTeamScore": 63.5,
+   "Total": 134.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Hofstra -7.5",
-    "odds": -108,
+    "odds": -102,
     "model": 0.483,
-    "breakeven": 0.519,
-    "edge": -0.036,
+    "breakeven": 0.505,
+    "edge": -0.022,
     "rec": "PASS",
     "selected": false,
     "open_line": -7.5,
@@ -16745,11 +16745,11 @@
    {
     "market": "Spread",
     "bet": "Iona +7.5",
-    "odds": -112,
+    "odds": -118,
     "model": 0.517,
-    "breakeven": 0.528,
-    "edge": -0.011,
-    "rec": "LEAN",
+    "breakeven": 0.541,
+    "edge": -0.024,
+    "rec": "PASS",
     "selected": false,
     "open_line": 7.5,
     "open_odds": -112,
@@ -16786,25 +16786,25 @@
    },
    {
     "market": "Total",
-    "bet": "Over 133.5",
-    "odds": -115,
-    "model": 0.51,
-    "breakeven": 0.535,
-    "edge": -0.025,
+    "bet": "Over 134.5",
+    "odds": -105,
+    "model": 0.508,
+    "breakeven": 0.512,
+    "edge": -0.004,
     "rec": "BET",
     "selected": false,
     "open_line": 134.5,
     "open_odds": -105,
     "open": "134.5 (-105)",
-    "confidence": 17
+    "confidence": 31
    },
    {
     "market": "Total",
-    "bet": "Under 133.5",
-    "odds": -105,
-    "model": 0.49,
-    "breakeven": 0.512,
-    "edge": -0.022,
+    "bet": "Under 134.5",
+    "odds": -115,
+    "model": 0.492,
+    "breakeven": 0.535,
+    "edge": -0.043,
     "rec": "PASS",
     "selected": false,
     "open_line": 134.5,
@@ -17207,25 +17207,25 @@
    ],
    "Bet": {
     "Side": "Sam Houston St.",
-    "Lean": 9.92,
+    "Lean": 8.92,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Sam Houston St.",
-     "Line": 36.5,
-     "Lean": 9.92,
+     "Line": 35.5,
+     "Lean": 8.92,
      "Probability": 0.517,
      "Edge": 0.012,
      "Tier": "LEAN"
     },
     "Total": {
      "Side": "Under",
-     "Line": 171.5,
-     "Lean": 5.19,
-     "Probability": 0.509,
-     "Edge": 0.013,
+     "Line": 170.5,
+     "Lean": 4.19,
+     "Probability": 0.507,
+     "Edge": 0.003,
      "Tier": "BET"
     }
    }
@@ -17236,7 +17236,7 @@
    "Total": 173.5
   },
   "NoStake": false,
-  "TTQ": 50.4,
+  "TTQ": 50.3,
   "BART": {
    "HomeTeamScore": 95,
    "AwayTeamScore": 69,
@@ -17249,16 +17249,16 @@
    "Spread": "-26.1 Illinois"
   },
   "Vegas": {
-   "Spread": "-36.5 Illinois",
-   "SpreadValue": 36.5,
-   "HomeTeamScore": 104.0,
+   "Spread": "-35.5 Illinois",
+   "SpreadValue": 35.5,
+   "HomeTeamScore": 103.0,
    "AwayTeamScore": 67.5,
-   "Total": 171.5
+   "Total": 170.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Illinois -36.5",
+    "bet": "Illinois -35.5",
     "odds": -108,
     "model": 0.483,
     "breakeven": 0.519,
@@ -17272,7 +17272,7 @@
    },
    {
     "market": "Spread",
-    "bet": "Sam Houston St. +36.5",
+    "bet": "Sam Houston St. +35.5",
     "odds": -112,
     "model": 0.517,
     "breakeven": 0.528,
@@ -17314,11 +17314,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 171.5",
-    "odds": -112,
-    "model": 0.491,
-    "breakeven": 0.528,
-    "edge": -0.037,
+    "bet": "Over 170.5",
+    "odds": -108,
+    "model": 0.493,
+    "breakeven": 0.519,
+    "edge": -0.026,
     "rec": "PASS",
     "selected": false,
     "open_line": 173.5,
@@ -17328,17 +17328,17 @@
    },
    {
     "market": "Total",
-    "bet": "Under 171.5",
-    "odds": -108,
-    "model": 0.509,
-    "breakeven": 0.519,
-    "edge": -0.01,
+    "bet": "Under 170.5",
+    "odds": -112,
+    "model": 0.507,
+    "breakeven": 0.528,
+    "edge": -0.021,
     "rec": "BET",
     "selected": false,
     "open_line": 173.5,
     "open_odds": -115,
     "open": "173.5 (-115)",
-    "confidence": 8
+    "confidence": 1
    }
   ],
   "Histogram": {
@@ -17880,7 +17880,7 @@
     "Side": "Saint Mary's",
     "Lean": 3.39,
     "CoverProbability": 0.517,
-    "Tier": "PASS"
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
@@ -17888,14 +17888,14 @@
      "Line": -5.5,
      "Lean": 3.39,
      "Probability": 0.517,
-     "Edge": -0.001,
-     "Tier": "PASS"
+     "Edge": 0.006,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Illinois Chicago",
-     "Odds": 220,
-     "Probability": 0.302,
-     "Edge": 0.002,
+     "Odds": 225,
+     "Probability": 0.299,
+     "Edge": 0.004,
      "Tier": "PASS"
     },
     "Total": {
@@ -17927,10 +17927,10 @@
    "Spread": "-8.6 Saint Mary's"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.7,
-   "AwayTeamWinProbability": 0.3,
-   "MoneylineHome": -270,
-   "MoneylineAway": 220,
+   "HomeTeamWinProbability": 0.705,
+   "AwayTeamWinProbability": 0.295,
+   "MoneylineHome": -278,
+   "MoneylineAway": 225,
    "Spread": "-5.5 Saint Mary's",
    "SpreadValue": 5.5,
    "HomeTeamScore": 78.0,
@@ -17941,11 +17941,11 @@
    {
     "market": "Spread",
     "bet": "Saint Mary's -5.5",
-    "odds": -118,
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.541,
-    "edge": -0.024,
-    "rec": "PASS",
+    "breakeven": 0.535,
+    "edge": -0.018,
+    "rec": "LEAN",
     "selected": false,
     "open_line": -5.5,
     "open_odds": -118,
@@ -17955,10 +17955,10 @@
    {
     "market": "Spread",
     "bet": "Illinois Chicago +5.5",
-    "odds": -102,
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.505,
-    "edge": -0.022,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": 5.5,
@@ -17969,10 +17969,10 @@
    {
     "market": "Moneyline",
     "bet": "Saint Mary's ML",
-    "odds": -270,
-    "model": 0.698,
-    "breakeven": 0.73,
-    "edge": -0.032,
+    "odds": -278,
+    "model": 0.701,
+    "breakeven": 0.735,
+    "edge": -0.034,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -17983,10 +17983,10 @@
    {
     "market": "Moneyline",
     "bet": "Illinois Chicago ML",
-    "odds": 220,
-    "model": 0.302,
-    "breakeven": 0.312,
-    "edge": -0.011,
+    "odds": 225,
+    "model": 0.299,
+    "breakeven": 0.308,
+    "edge": -0.009,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -18515,7 +18515,7 @@
      "Line": 144.5,
      "Lean": 1.09,
      "Probability": 0.502,
-     "Edge": 0.006,
+     "Edge": -0.009,
      "Tier": "PASS"
     }
    }
@@ -18609,10 +18609,10 @@
    {
     "market": "Total",
     "bet": "Over 144.5",
-    "odds": -108,
+    "odds": -115,
     "model": 0.502,
-    "breakeven": 0.519,
-    "edge": -0.017,
+    "breakeven": 0.535,
+    "edge": -0.033,
     "rec": "PASS",
     "selected": false,
     "open_line": 147.5,
@@ -18623,10 +18623,10 @@
    {
     "market": "Total",
     "bet": "Under 144.5",
-    "odds": -112,
+    "odds": -105,
     "model": 0.498,
-    "breakeven": 0.528,
-    "edge": -0.03,
+    "breakeven": 0.512,
+    "edge": -0.014,
     "rec": "PASS",
     "selected": false,
     "open_line": 147.5,
@@ -19601,32 +19601,32 @@
    ],
    "Bet": {
     "Side": "Marist",
-    "Lean": 0.86,
+    "Lean": 1.86,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Marist",
-     "Line": 1.5,
-     "Lean": 0.86,
+     "Line": 2.5,
+     "Lean": 1.86,
      "Probability": 0.517,
-     "Edge": 0.027,
+     "Edge": 0.021,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Marist",
-     "Odds": 114,
-     "Probability": 0.462,
-     "Edge": 0.013,
+     "Odds": 120,
+     "Probability": 0.454,
+     "Edge": 0.017,
      "Tier": "PASS"
     },
     "Total": {
      "Side": "Over",
-     "Line": 132.5,
-     "Lean": 6.34,
-     "Probability": 0.511,
-     "Edge": 0.0,
+     "Line": 133.5,
+     "Lean": 5.34,
+     "Probability": 0.509,
+     "Edge": 0.02,
      "Tier": "BET"
     }
    }
@@ -19650,24 +19650,24 @@
    "Spread": "-2.0 Lehigh"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.551,
-   "AwayTeamWinProbability": 0.449,
-   "MoneylineHome": -135,
-   "MoneylineAway": 114,
-   "Spread": "-1.5 Lehigh",
-   "SpreadValue": 1.5,
-   "HomeTeamScore": 67.0,
+   "HomeTeamWinProbability": 0.563,
+   "AwayTeamWinProbability": 0.437,
+   "MoneylineHome": -142,
+   "MoneylineAway": 120,
+   "Spread": "-2.5 Lehigh",
+   "SpreadValue": 2.5,
+   "HomeTeamScore": 68.0,
    "AwayTeamScore": 65.5,
-   "Total": 132.5
+   "Total": 133.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Lehigh -1.5",
-    "odds": -115,
+    "bet": "Lehigh -2.5",
+    "odds": -112,
     "model": 0.483,
-    "breakeven": 0.535,
-    "edge": -0.052,
+    "breakeven": 0.528,
+    "edge": -0.045,
     "rec": "PASS",
     "selected": false,
     "open_line": -1.5,
@@ -19677,25 +19677,25 @@
    },
    {
     "market": "Spread",
-    "bet": "Marist +1.5",
-    "odds": -105,
+    "bet": "Marist +2.5",
+    "odds": -108,
     "model": 0.517,
-    "breakeven": 0.512,
-    "edge": 0.005,
+    "breakeven": 0.519,
+    "edge": -0.002,
     "rec": "LEAN",
     "selected": false,
     "open_line": 1.5,
     "open_odds": -102,
     "open": "+1.5 (-102)",
-    "confidence": 3
+    "confidence": 0
    },
    {
     "market": "Moneyline",
     "bet": "Lehigh ML",
-    "odds": -135,
-    "model": 0.538,
-    "breakeven": 0.574,
-    "edge": -0.036,
+    "odds": -142,
+    "model": 0.546,
+    "breakeven": 0.587,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -19706,10 +19706,10 @@
    {
     "market": "Moneyline",
     "bet": "Marist ML",
-    "odds": 114,
-    "model": 0.462,
-    "breakeven": 0.467,
-    "edge": -0.005,
+    "odds": 120,
+    "model": 0.454,
+    "breakeven": 0.455,
+    "edge": -0.001,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -19719,25 +19719,25 @@
    },
    {
     "market": "Total",
-    "bet": "Over 132.5",
-    "odds": -115,
-    "model": 0.511,
-    "breakeven": 0.535,
-    "edge": -0.024,
+    "bet": "Over 133.5",
+    "odds": -105,
+    "model": 0.509,
+    "breakeven": 0.512,
+    "edge": -0.003,
     "rec": "BET",
     "selected": false,
     "open_line": 132.5,
     "open_odds": -118,
     "open": "132.5 (-118)",
-    "confidence": 17
+    "confidence": 31
    },
    {
     "market": "Total",
-    "bet": "Under 132.5",
-    "odds": -105,
-    "model": 0.489,
-    "breakeven": 0.512,
-    "edge": -0.023,
+    "bet": "Under 133.5",
+    "odds": -115,
+    "model": 0.491,
+    "breakeven": 0.535,
+    "edge": -0.044,
     "rec": "PASS",
     "selected": false,
     "open_line": 132.5,
@@ -20138,7 +20138,7 @@
      "Line": 16.5,
      "Lean": 3.09,
      "Probability": 0.517,
-     "Edge": 0.017,
+     "Edge": 0.012,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -20149,11 +20149,11 @@
      "Tier": "PASS"
     },
     "Total": {
-     "Side": "Under",
-     "Line": 137.5,
-     "Lean": 0.53,
+     "Side": "Over",
+     "Line": 136.5,
+     "Lean": 0.47,
      "Probability": 0.501,
-     "Edge": -0.003,
+     "Edge": -0.01,
      "Tier": "PASS"
     }
    }
@@ -20183,18 +20183,18 @@
    "MoneylineAway": 1100,
    "Spread": "-16.5 Liberty",
    "SpreadValue": 16.5,
-   "HomeTeamScore": 77.0,
-   "AwayTeamScore": 60.5,
-   "Total": 137.5
+   "HomeTeamScore": 76.5,
+   "AwayTeamScore": 60.0,
+   "Total": 136.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Liberty -16.5",
-    "odds": -110,
+    "odds": -108,
     "model": 0.483,
-    "breakeven": 0.524,
-    "edge": -0.041,
+    "breakeven": 0.519,
+    "edge": -0.036,
     "rec": "PASS",
     "selected": false,
     "open_line": -16.5,
@@ -20205,10 +20205,10 @@
    {
     "market": "Spread",
     "bet": "North Carolina Central +16.5",
-    "odds": -110,
+    "odds": -112,
     "model": 0.517,
-    "breakeven": 0.524,
-    "edge": -0.007,
+    "breakeven": 0.528,
+    "edge": -0.011,
     "rec": "LEAN",
     "selected": false,
     "open_line": 16.5,
@@ -20246,31 +20246,31 @@
    },
    {
     "market": "Total",
-    "bet": "Over 137.5",
-    "odds": -108,
-    "model": 0.499,
-    "breakeven": 0.519,
-    "edge": -0.02,
+    "bet": "Over 136.5",
+    "odds": -115,
+    "model": 0.501,
+    "breakeven": 0.535,
+    "edge": -0.034,
     "rec": "PASS",
     "selected": false,
     "open_line": 136.5,
     "open_odds": -115,
     "open": "136.5 (-115)",
-    "confidence": null
+    "confidence": 0
    },
    {
     "market": "Total",
-    "bet": "Under 137.5",
-    "odds": -112,
-    "model": 0.501,
-    "breakeven": 0.528,
-    "edge": -0.027,
+    "bet": "Under 136.5",
+    "odds": -105,
+    "model": 0.499,
+    "breakeven": 0.512,
+    "edge": -0.013,
     "rec": "PASS",
     "selected": false,
     "open_line": 136.5,
     "open_odds": -105,
     "open": "136.5 (-105)",
-    "confidence": 0
+    "confidence": null
    }
   ],
   "Histogram": {
@@ -21269,11 +21269,11 @@
      "Tier": "LEAN"
     },
     "Total": {
-     "Side": "Over",
-     "Line": 152.5,
-     "Lean": 0.23,
-     "Probability": 0.501,
-     "Edge": -0.01,
+     "Side": "Under",
+     "Line": 153.5,
+     "Lean": 0.77,
+     "Probability": 0.502,
+     "Edge": 0.006,
      "Tier": "PASS"
     }
    }
@@ -21303,9 +21303,9 @@
    "MoneylineAway": -250,
    "Spread": "-6.5 Virginia",
    "SpreadValue": -6.5,
-   "HomeTeamScore": 73.0,
-   "AwayTeamScore": 79.5,
-   "Total": 152.5
+   "HomeTeamScore": 73.5,
+   "AwayTeamScore": 80.0,
+   "Total": 153.5
   },
   "Markets": [
    {
@@ -21366,31 +21366,31 @@
    },
    {
     "market": "Total",
-    "bet": "Over 152.5",
-    "odds": -115,
-    "model": 0.501,
-    "breakeven": 0.535,
-    "edge": -0.034,
+    "bet": "Over 153.5",
+    "odds": -112,
+    "model": 0.498,
+    "breakeven": 0.528,
+    "edge": -0.03,
     "rec": "PASS",
     "selected": false,
     "open_line": 154.5,
     "open_odds": -115,
     "open": "154.5 (-115)",
-    "confidence": 0
+    "confidence": null
    },
    {
     "market": "Total",
-    "bet": "Under 152.5",
-    "odds": -105,
-    "model": 0.499,
-    "breakeven": 0.512,
-    "edge": -0.013,
+    "bet": "Under 153.5",
+    "odds": -108,
+    "model": 0.502,
+    "breakeven": 0.519,
+    "edge": -0.017,
     "rec": "PASS",
     "selected": false,
     "open_line": 154.5,
     "open_odds": -105,
     "open": "154.5 (-105)",
-    "confidence": null
+    "confidence": 0
    }
   ],
   "Histogram": {
@@ -22379,7 +22379,7 @@
      "Line": 27.5,
      "Lean": 5.45,
      "Probability": 0.517,
-     "Edge": 0.027,
+     "Edge": 0.017,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -22432,10 +22432,10 @@
    {
     "market": "Spread",
     "bet": "Michigan St. -27.5",
-    "odds": -115,
+    "odds": -110,
     "model": 0.483,
-    "breakeven": 0.535,
-    "edge": -0.052,
+    "breakeven": 0.524,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": -29.5,
@@ -22446,16 +22446,16 @@
    {
     "market": "Spread",
     "bet": "Northern Iowa +27.5",
-    "odds": -105,
+    "odds": -110,
     "model": 0.517,
-    "breakeven": 0.512,
-    "edge": 0.005,
+    "breakeven": 0.524,
+    "edge": -0.007,
     "rec": "LEAN",
     "selected": false,
     "open_line": 29.5,
     "open_odds": -115,
     "open": "+29.5 (-115)",
-    "confidence": 3
+    "confidence": 0
    },
    {
     "market": "Moneyline",
@@ -23020,14 +23020,14 @@
      "Line": 5.5,
      "Lean": 0.45,
      "Probability": 0.517,
-     "Edge": 0.034,
+     "Edge": 0.021,
      "Tier": "LEAN"
     },
     "Moneyline": {
-     "Side": "Southeast Missouri St.",
-     "Odds": 205,
-     "Probability": 0.316,
-     "Edge": 0.001,
+     "Side": "Middle Tennessee",
+     "Odds": -238,
+     "Probability": 0.677,
+     "Edge": 0.002,
      "Tier": "PASS"
     },
     "Total": {
@@ -23059,10 +23059,10 @@
    "Spread": "-7.6 Middle Tennessee"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.685,
-   "AwayTeamWinProbability": 0.315,
-   "MoneylineHome": -250,
-   "MoneylineAway": 205,
+   "HomeTeamWinProbability": 0.675,
+   "AwayTeamWinProbability": 0.325,
+   "MoneylineHome": -238,
+   "MoneylineAway": 195,
    "Spread": "-5.5 Middle Tennessee",
    "SpreadValue": 5.5,
    "HomeTeamScore": 77.0,
@@ -23073,10 +23073,10 @@
    {
     "market": "Spread",
     "bet": "Middle Tennessee -5.5",
-    "odds": -118,
+    "odds": -112,
     "model": 0.483,
-    "breakeven": 0.541,
-    "edge": -0.058,
+    "breakeven": 0.528,
+    "edge": -0.045,
     "rec": "PASS",
     "selected": false,
     "open_line": -5.5,
@@ -23087,44 +23087,44 @@
    {
     "market": "Spread",
     "bet": "Southeast Missouri St. +5.5",
-    "odds": -102,
+    "odds": -108,
     "model": 0.517,
-    "breakeven": 0.505,
-    "edge": 0.012,
+    "breakeven": 0.519,
+    "edge": -0.002,
     "rec": "LEAN",
     "selected": false,
     "open_line": 5.5,
     "open_odds": -108,
     "open": "+5.5 (-108)",
-    "confidence": 8
+    "confidence": 0
    },
    {
     "market": "Moneyline",
     "bet": "Middle Tennessee ML",
-    "odds": -250,
-    "model": 0.684,
-    "breakeven": 0.714,
-    "edge": -0.03,
+    "odds": -238,
+    "model": 0.677,
+    "breakeven": 0.704,
+    "edge": -0.027,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
     "open_odds": -218,
     "open": "-218",
-    "confidence": null
+    "confidence": 0
    },
    {
     "market": "Moneyline",
     "bet": "Southeast Missouri St. ML",
-    "odds": 205,
-    "model": 0.316,
-    "breakeven": 0.328,
-    "edge": -0.012,
+    "odds": 195,
+    "model": 0.323,
+    "breakeven": 0.339,
+    "edge": -0.016,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
     "open_odds": 180,
     "open": "+180",
-    "confidence": 0
+    "confidence": null
    },
    {
     "market": "Total",
@@ -23554,14 +23554,14 @@
      "Line": 22.5,
      "Lean": 1.33,
      "Probability": 0.517,
-     "Edge": 0.012,
+     "Edge": 0.006,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Milwaukee",
-     "Odds": 2000,
-     "Probability": 0.048,
-     "Edge": 0.002,
+     "Odds": 1800,
+     "Probability": 0.052,
+     "Edge": 0.001,
      "Tier": "PASS"
     },
     "Total": {
@@ -23569,7 +23569,7 @@
      "Line": 155.5,
      "Lean": 0.16,
      "Probability": 0.5,
-     "Edge": 0.011,
+     "Edge": -0.004,
      "Tier": "PASS"
     }
    }
@@ -23580,7 +23580,7 @@
    "Total": 158.5
   },
   "NoStake": false,
-  "TTQ": 36.5,
+  "TTQ": 36.4,
   "BART": {
    "HomeTeamScore": 88,
    "AwayTeamScore": 66,
@@ -23593,10 +23593,10 @@
    "Spread": "-22.3 TCU"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.954,
-   "AwayTeamWinProbability": 0.046,
-   "MoneylineHome": -6500,
-   "MoneylineAway": 2000,
+   "HomeTeamWinProbability": 0.949,
+   "AwayTeamWinProbability": 0.051,
+   "MoneylineHome": -5000,
+   "MoneylineAway": 1800,
    "Spread": "-22.5 TCU",
    "SpreadValue": 22.5,
    "HomeTeamScore": 89.0,
@@ -23607,10 +23607,10 @@
    {
     "market": "Spread",
     "bet": "TCU -22.5",
-    "odds": -108,
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.519,
-    "edge": -0.036,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": -23.5,
@@ -23621,10 +23621,10 @@
    {
     "market": "Spread",
     "bet": "Milwaukee +22.5",
-    "odds": -112,
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.528,
-    "edge": -0.011,
+    "breakeven": 0.535,
+    "edge": -0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": 23.5,
@@ -23635,10 +23635,10 @@
    {
     "market": "Moneyline",
     "bet": "TCU ML",
-    "odds": -6500,
-    "model": 0.952,
-    "breakeven": 0.985,
-    "edge": -0.033,
+    "odds": -5000,
+    "model": 0.948,
+    "breakeven": 0.98,
+    "edge": -0.032,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -23649,10 +23649,10 @@
    {
     "market": "Moneyline",
     "bet": "Milwaukee ML",
-    "odds": 2000,
-    "model": 0.048,
-    "breakeven": 0.048,
-    "edge": 0.0,
+    "odds": 1800,
+    "model": 0.052,
+    "breakeven": 0.053,
+    "edge": -0.001,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -23663,10 +23663,10 @@
    {
     "market": "Total",
     "bet": "Over 155.5",
-    "odds": -115,
+    "odds": -108,
     "model": 0.5,
-    "breakeven": 0.535,
-    "edge": -0.035,
+    "breakeven": 0.519,
+    "edge": -0.019,
     "rec": "PASS",
     "selected": false,
     "open_line": 158.5,
@@ -23677,10 +23677,10 @@
    {
     "market": "Total",
     "bet": "Under 155.5",
-    "odds": -105,
+    "odds": -112,
     "model": 0.5,
-    "breakeven": 0.512,
-    "edge": -0.012,
+    "breakeven": 0.528,
+    "edge": -0.028,
     "rec": "PASS",
     "selected": false,
     "open_line": 158.5,
@@ -24167,10 +24167,10 @@
     },
     "Total": {
      "Side": "Under",
-     "Line": 162.5,
-     "Lean": 1.92,
-     "Probability": 0.504,
-     "Edge": 0.014,
+     "Line": 161.5,
+     "Lean": 0.92,
+     "Probability": 0.502,
+     "Edge": 0.006,
      "Tier": "PASS"
     }
    }
@@ -24200,9 +24200,9 @@
    "MoneylineAway": -175,
    "Spread": "-3.5 Xavier",
    "SpreadValue": -3.5,
-   "HomeTeamScore": 79.5,
-   "AwayTeamScore": 83.0,
-   "Total": 162.5
+   "HomeTeamScore": 79.0,
+   "AwayTeamScore": 82.5,
+   "Total": 161.5
   },
   "Markets": [
    {
@@ -24263,11 +24263,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 162.5",
-    "odds": -115,
-    "model": 0.496,
-    "breakeven": 0.535,
-    "edge": -0.039,
+    "bet": "Over 161.5",
+    "odds": -112,
+    "model": 0.498,
+    "breakeven": 0.528,
+    "edge": -0.03,
     "rec": "PASS",
     "selected": false,
     "open_line": 165.5,
@@ -24277,17 +24277,17 @@
    },
    {
     "market": "Total",
-    "bet": "Under 162.5",
-    "odds": -105,
-    "model": 0.504,
-    "breakeven": 0.512,
-    "edge": -0.008,
+    "bet": "Under 161.5",
+    "odds": -108,
+    "model": 0.502,
+    "breakeven": 0.519,
+    "edge": -0.017,
     "rec": "PASS",
     "selected": false,
     "open_line": 165.5,
     "open_odds": -115,
     "open": "165.5 (-115)",
-    "confidence": 24
+    "confidence": 20
    }
   ],
   "Histogram": {
@@ -26030,7 +26030,7 @@
      "Line": 29.5,
      "Lean": 1.91,
      "Probability": 0.517,
-     "Edge": 0.006,
+     "Edge": 0.012,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -26042,10 +26042,10 @@
     },
     "Total": {
      "Side": "Over",
-     "Line": 163.5,
-     "Lean": 0.34,
-     "Probability": 0.501,
-     "Edge": 0.005,
+     "Line": 162.5,
+     "Lean": 1.34,
+     "Probability": 0.503,
+     "Edge": -0.002,
      "Tier": "PASS"
     }
    }
@@ -26075,18 +26075,18 @@
    "MoneylineAway": 4000,
    "Spread": "-29.5 Murray St.",
    "SpreadValue": 29.5,
-   "HomeTeamScore": 96.5,
-   "AwayTeamScore": 67.0,
-   "Total": 163.5
+   "HomeTeamScore": 96.0,
+   "AwayTeamScore": 66.5,
+   "Total": 162.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Murray St. -29.5",
-    "odds": -105,
+    "odds": -108,
     "model": 0.483,
-    "breakeven": 0.512,
-    "edge": -0.029,
+    "breakeven": 0.519,
+    "edge": -0.036,
     "rec": "PASS",
     "selected": false,
     "open_line": -27.5,
@@ -26097,10 +26097,10 @@
    {
     "market": "Spread",
     "bet": "Texas Southern +29.5",
-    "odds": -115,
+    "odds": -112,
     "model": 0.517,
-    "breakeven": 0.535,
-    "edge": -0.018,
+    "breakeven": 0.528,
+    "edge": -0.011,
     "rec": "LEAN",
     "selected": false,
     "open_line": 27.5,
@@ -26138,11 +26138,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 163.5",
-    "odds": -108,
-    "model": 0.501,
-    "breakeven": 0.519,
-    "edge": -0.018,
+    "bet": "Over 162.5",
+    "odds": -112,
+    "model": 0.503,
+    "breakeven": 0.528,
+    "edge": -0.025,
     "rec": "PASS",
     "selected": false,
     "open_line": 161.5,
@@ -26152,11 +26152,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 163.5",
-    "odds": -112,
-    "model": 0.499,
-    "breakeven": 0.528,
-    "edge": -0.029,
+    "bet": "Under 162.5",
+    "odds": -108,
+    "model": 0.497,
+    "breakeven": 0.519,
+    "edge": -0.022,
     "rec": "PASS",
     "selected": false,
     "open_line": 161.5,
@@ -27294,14 +27294,14 @@
      "Line": 1.5,
      "Lean": 4.06,
      "Probability": 0.517,
-     "Edge": 0.034,
+     "Edge": 0.012,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Northeastern",
-     "Odds": 110,
-     "Probability": 0.493,
-     "Edge": 0.036,
+     "Odds": 102,
+     "Probability": 0.504,
+     "Edge": 0.03,
      "Tier": "LEAN"
     },
     "Total": {
@@ -27333,10 +27333,10 @@
    "Spread": "-0.8 Northeastern"
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.457,
-   "AwayTeamWinProbability": 0.543,
-   "MoneylineHome": 110,
-   "MoneylineAway": -130,
+   "HomeTeamWinProbability": 0.474,
+   "AwayTeamWinProbability": 0.526,
+   "MoneylineHome": 102,
+   "MoneylineAway": -122,
    "Spread": "-1.5 Yale",
    "SpreadValue": -1.5,
    "HomeTeamScore": 76.5,
@@ -27347,24 +27347,24 @@
    {
     "market": "Spread",
     "bet": "Northeastern +1.5",
-    "odds": -102,
+    "odds": -112,
     "model": 0.517,
-    "breakeven": 0.505,
-    "edge": 0.012,
+    "breakeven": 0.528,
+    "edge": -0.011,
     "rec": "LEAN",
     "selected": false,
     "open_line": 2.5,
     "open_odds": -115,
     "open": "+2.5 (-115)",
-    "confidence": 8
+    "confidence": 0
    },
    {
     "market": "Spread",
     "bet": "Yale -1.5",
-    "odds": -118,
+    "odds": -108,
     "model": 0.483,
-    "breakeven": 0.541,
-    "edge": -0.058,
+    "breakeven": 0.519,
+    "edge": -0.036,
     "rec": "PASS",
     "selected": false,
     "open_line": -2.5,
@@ -27375,24 +27375,24 @@
    {
     "market": "Moneyline",
     "bet": "Northeastern ML",
-    "odds": 110,
-    "model": 0.493,
-    "breakeven": 0.476,
-    "edge": 0.017,
+    "odds": 102,
+    "model": 0.504,
+    "breakeven": 0.495,
+    "edge": 0.009,
     "rec": "LEAN",
     "selected": false,
     "open_line": null,
     "open_odds": 114,
     "open": "+114",
-    "confidence": 10
+    "confidence": 6
    },
    {
     "market": "Moneyline",
     "bet": "Yale ML",
-    "odds": -130,
-    "model": 0.507,
-    "breakeven": 0.565,
-    "edge": -0.058,
+    "odds": -122,
+    "model": 0.496,
+    "breakeven": 0.55,
+    "edge": -0.054,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -27832,17 +27832,17 @@
    ],
    "Bet": {
     "Side": "Ohio",
-    "Lean": 4.3,
+    "Lean": 5.3,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Ohio",
-     "Line": 18.5,
-     "Lean": 4.3,
+     "Line": 19.5,
+     "Lean": 5.3,
      "Probability": 0.517,
-     "Edge": 0.017,
+     "Edge": 0.006,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -27854,10 +27854,10 @@
     },
     "Total": {
      "Side": "Under",
-     "Line": 150.5,
-     "Lean": 6.17,
-     "Probability": 0.511,
-     "Edge": 0.011,
+     "Line": 149.5,
+     "Lean": 5.17,
+     "Probability": 0.509,
+     "Edge": 0.02,
      "Tier": "BET"
     }
    }
@@ -27885,20 +27885,20 @@
    "AwayTeamWinProbability": 0.06,
    "MoneylineHome": -3600,
    "MoneylineAway": 1500,
-   "Spread": "-18.5 Purdue",
-   "SpreadValue": 18.5,
+   "Spread": "-19.5 Purdue",
+   "SpreadValue": 19.5,
    "HomeTeamScore": 84.5,
-   "AwayTeamScore": 66.0,
-   "Total": 150.5
+   "AwayTeamScore": 65.0,
+   "Total": 149.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Purdue -18.5",
-    "odds": -110,
+    "bet": "Purdue -19.5",
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.524,
-    "edge": -0.041,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": -19.5,
@@ -27908,11 +27908,11 @@
    },
    {
     "market": "Spread",
-    "bet": "Ohio +18.5",
-    "odds": -110,
+    "bet": "Ohio +19.5",
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.524,
-    "edge": -0.007,
+    "breakeven": 0.535,
+    "edge": -0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": 19.5,
@@ -27950,11 +27950,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 150.5",
-    "odds": -110,
-    "model": 0.489,
-    "breakeven": 0.524,
-    "edge": -0.035,
+    "bet": "Over 149.5",
+    "odds": -115,
+    "model": 0.491,
+    "breakeven": 0.535,
+    "edge": -0.044,
     "rec": "PASS",
     "selected": false,
     "open_line": 153.5,
@@ -27964,17 +27964,17 @@
    },
    {
     "market": "Total",
-    "bet": "Under 150.5",
-    "odds": -110,
-    "model": 0.511,
-    "breakeven": 0.524,
-    "edge": -0.013,
+    "bet": "Under 149.5",
+    "odds": -105,
+    "model": 0.509,
+    "breakeven": 0.512,
+    "edge": -0.003,
     "rec": "BET",
     "selected": false,
     "open_line": 153.5,
     "open_odds": -115,
     "open": "153.5 (-115)",
-    "confidence": 37
+    "confidence": 42
    }
   ],
   "Histogram": {
@@ -28369,17 +28369,17 @@
    ],
    "Bet": {
     "Side": "Prairie View A&M",
-    "Lean": 10.27,
+    "Lean": 11.27,
     "CoverProbability": 0.517,
     "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
      "Side": "Prairie View A&M",
-     "Line": 40.5,
-     "Lean": 10.27,
+     "Line": 41.5,
+     "Lean": 11.27,
      "Probability": 0.517,
-     "Edge": 0.027,
+     "Edge": 0.006,
      "Tier": "LEAN"
     },
     "Total": {
@@ -28411,20 +28411,20 @@
    "Spread": "-30.9 Vanderbilt"
   },
   "Vegas": {
-   "Spread": "-40.5 Vanderbilt",
-   "SpreadValue": 40.5,
-   "HomeTeamScore": 97.5,
-   "AwayTeamScore": 57.0,
+   "Spread": "-41.5 Vanderbilt",
+   "SpreadValue": 41.5,
+   "HomeTeamScore": 98.0,
+   "AwayTeamScore": 56.5,
    "Total": 154.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Vanderbilt -40.5",
-    "odds": -115,
+    "bet": "Vanderbilt -41.5",
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.535,
-    "edge": -0.052,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": -39.5,
@@ -28434,17 +28434,17 @@
    },
    {
     "market": "Spread",
-    "bet": "Prairie View A&M +40.5",
-    "odds": -105,
+    "bet": "Prairie View A&M +41.5",
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.512,
-    "edge": 0.005,
+    "breakeven": 0.535,
+    "edge": -0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": 39.5,
     "open_odds": -110,
     "open": "+39.5 (-110)",
-    "confidence": 3
+    "confidence": 0
    },
    {
     "market": "Moneyline",
@@ -29006,14 +29006,14 @@
      "Line": -1.5,
      "Lean": 2.31,
      "Probability": 0.517,
-     "Edge": 0.021,
+     "Edge": 0.034,
      "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Wright St.",
-     "Odds": -125,
-     "Probability": 0.569,
-     "Edge": 0.036,
+     "Odds": -118,
+     "Probability": 0.559,
+     "Edge": 0.042,
      "Tier": "LEAN"
     },
     "Total": {
@@ -29045,10 +29045,10 @@
    "Spread": "-3.6 Wright St."
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.468,
-   "AwayTeamWinProbability": 0.532,
-   "MoneylineHome": 105,
-   "MoneylineAway": -125,
+   "HomeTeamWinProbability": 0.483,
+   "AwayTeamWinProbability": 0.517,
+   "MoneylineHome": -102,
+   "MoneylineAway": -118,
    "Spread": "-1.5 Wright St.",
    "SpreadValue": -1.5,
    "HomeTeamScore": 78.0,
@@ -29059,10 +29059,10 @@
    {
     "market": "Spread",
     "bet": "Samford +1.5",
-    "odds": -112,
+    "odds": -118,
     "model": 0.483,
-    "breakeven": 0.528,
-    "edge": -0.045,
+    "breakeven": 0.541,
+    "edge": -0.058,
     "rec": "PASS",
     "selected": false,
     "open_line": 1.5,
@@ -29073,24 +29073,24 @@
    {
     "market": "Spread",
     "bet": "Wright St. -1.5",
-    "odds": -108,
+    "odds": -102,
     "model": 0.517,
-    "breakeven": 0.519,
-    "edge": -0.002,
+    "breakeven": 0.505,
+    "edge": 0.012,
     "rec": "LEAN",
     "selected": false,
     "open_line": -1.5,
     "open_odds": -105,
     "open": "-1.5 (-105)",
-    "confidence": 0
+    "confidence": 8
    },
    {
     "market": "Moneyline",
     "bet": "Samford ML",
-    "odds": 105,
-    "model": 0.431,
-    "breakeven": 0.488,
-    "edge": -0.057,
+    "odds": -102,
+    "model": 0.441,
+    "breakeven": 0.505,
+    "edge": -0.064,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -29101,16 +29101,16 @@
    {
     "market": "Moneyline",
     "bet": "Wright St. ML",
-    "odds": -125,
-    "model": 0.569,
-    "breakeven": 0.556,
-    "edge": 0.013,
+    "odds": -118,
+    "model": 0.559,
+    "breakeven": 0.541,
+    "edge": 0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": null,
     "open_odds": -122,
     "open": "-122",
-    "confidence": 14
+    "confidence": 16
    },
    {
     "market": "Total",
@@ -29534,33 +29534,33 @@
     166.0
    ],
    "Bet": {
-    "Side": "Texas St.",
-    "Lean": 0.53,
+    "Side": "Southern Miss",
+    "Lean": 0.47,
     "CoverProbability": 0.517,
-    "Tier": "PASS"
+    "Tier": "LEAN"
    },
    "Signals": {
     "Spread": {
-     "Side": "Texas St.",
-     "Line": -9.5,
-     "Lean": 0.53,
+     "Side": "Southern Miss",
+     "Line": 10.5,
+     "Lean": 0.47,
      "Probability": 0.517,
-     "Edge": -0.005,
-     "Tier": "PASS"
+     "Edge": 0.017,
+     "Tier": "LEAN"
     },
     "Moneyline": {
      "Side": "Southern Miss",
-     "Odds": 425,
-     "Probability": 0.194,
-     "Edge": 0.011,
+     "Odds": 455,
+     "Probability": 0.187,
+     "Edge": 0.014,
      "Tier": "PASS"
     },
     "Total": {
      "Side": "Over",
-     "Line": 140.5,
-     "Lean": 5.83,
-     "Probability": 0.51,
-     "Edge": 0.006,
+     "Line": 138.5,
+     "Lean": 7.83,
+     "Probability": 0.514,
+     "Edge": 0.009,
      "Tier": "BET"
     }
    }
@@ -29584,52 +29584,52 @@
    "Spread": "-12.2 Texas St."
   },
   "Vegas": {
-   "HomeTeamWinProbability": 0.817,
-   "AwayTeamWinProbability": 0.183,
-   "MoneylineHome": -575,
-   "MoneylineAway": 425,
-   "Spread": "-9.5 Texas St.",
-   "SpreadValue": 9.5,
-   "HomeTeamScore": 75.0,
-   "AwayTeamScore": 65.5,
-   "Total": 140.5
+   "HomeTeamWinProbability": 0.827,
+   "AwayTeamWinProbability": 0.173,
+   "MoneylineHome": -625,
+   "MoneylineAway": 455,
+   "Spread": "-10.5 Texas St.",
+   "SpreadValue": 10.5,
+   "HomeTeamScore": 74.5,
+   "AwayTeamScore": 64.0,
+   "Total": 138.5
   },
   "Markets": [
    {
     "market": "Spread",
-    "bet": "Texas St. -9.5",
-    "odds": -120,
-    "model": 0.517,
-    "breakeven": 0.545,
-    "edge": -0.028,
+    "bet": "Texas St. -10.5",
+    "odds": -110,
+    "model": 0.483,
+    "breakeven": 0.524,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": -11.5,
     "open_odds": 100,
     "open": "-11.5 (+100)",
-    "confidence": 0
+    "confidence": null
    },
    {
     "market": "Spread",
-    "bet": "Southern Miss +9.5",
-    "odds": 100,
-    "model": 0.483,
-    "breakeven": 0.5,
-    "edge": -0.017,
-    "rec": "PASS",
+    "bet": "Southern Miss +10.5",
+    "odds": -110,
+    "model": 0.517,
+    "breakeven": 0.524,
+    "edge": -0.007,
+    "rec": "LEAN",
     "selected": false,
     "open_line": 11.5,
     "open_odds": -120,
     "open": "+11.5 (-120)",
-    "confidence": null
+    "confidence": 0
    },
    {
     "market": "Moneyline",
     "bet": "Texas St. ML",
-    "odds": -575,
-    "model": 0.806,
-    "breakeven": 0.852,
-    "edge": -0.046,
+    "odds": -625,
+    "model": 0.813,
+    "breakeven": 0.862,
+    "edge": -0.049,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -29640,10 +29640,10 @@
    {
     "market": "Moneyline",
     "bet": "Southern Miss ML",
-    "odds": 425,
-    "model": 0.194,
-    "breakeven": 0.19,
-    "edge": 0.004,
+    "odds": 455,
+    "model": 0.187,
+    "breakeven": 0.18,
+    "edge": 0.007,
     "rec": "PASS",
     "selected": false,
     "open_line": null,
@@ -29653,11 +29653,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 140.5",
+    "bet": "Over 138.5",
     "odds": -112,
-    "model": 0.51,
+    "model": 0.514,
     "breakeven": 0.528,
-    "edge": -0.018,
+    "edge": -0.014,
     "rec": "BET",
     "selected": false,
     "open_line": 142.5,
@@ -29667,11 +29667,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 140.5",
+    "bet": "Under 138.5",
     "odds": -108,
-    "model": 0.49,
+    "model": 0.486,
     "breakeven": 0.519,
-    "edge": -0.029,
+    "edge": -0.033,
     "rec": "PASS",
     "selected": false,
     "open_line": 142.5,
@@ -30106,10 +30106,10 @@
     },
     "Total": {
      "Side": "Under",
-     "Line": 153.5,
-     "Lean": 4.04,
-     "Probability": 0.507,
-     "Edge": -0.004,
+     "Line": 152.5,
+     "Lean": 3.04,
+     "Probability": 0.505,
+     "Edge": -0.005,
      "Tier": "BET"
     }
    }
@@ -30120,7 +30120,7 @@
    "Total": 150.5
   },
   "NoStake": false,
-  "TTQ": 66.9,
+  "TTQ": 66.8,
   "BART": {
    "HomeTeamScore": 78,
    "AwayTeamScore": 75,
@@ -30139,9 +30139,9 @@
    "MoneylineAway": -120,
    "Spread": "-1.5 Stanford",
    "SpreadValue": -1.5,
-   "HomeTeamScore": 76.0,
-   "AwayTeamScore": 77.5,
-   "Total": 153.5
+   "HomeTeamScore": 75.5,
+   "AwayTeamScore": 77.0,
+   "Total": 152.5
   },
   "Markets": [
    {
@@ -30202,11 +30202,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 153.5",
+    "bet": "Over 152.5",
     "odds": -105,
-    "model": 0.493,
+    "model": 0.495,
     "breakeven": 0.512,
-    "edge": -0.019,
+    "edge": -0.017,
     "rec": "PASS",
     "selected": false,
     "open_line": 150.5,
@@ -30216,11 +30216,11 @@
    },
    {
     "market": "Total",
-    "bet": "Under 153.5",
+    "bet": "Under 152.5",
     "odds": -115,
-    "model": 0.507,
+    "model": 0.505,
     "breakeven": 0.535,
-    "edge": -0.028,
+    "edge": -0.03,
     "rec": "BET",
     "selected": false,
     "open_line": 150.5,
@@ -30637,7 +30637,7 @@
      "Line": 27.5,
      "Lean": 4.87,
      "Probability": 0.517,
-     "Edge": 0.027,
+     "Edge": 0.012,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -30649,10 +30649,10 @@
     },
     "Total": {
      "Side": "Under",
-     "Line": 158.5,
-     "Lean": 15.41,
-     "Probability": 0.527,
-     "Edge": 0.031,
+     "Line": 156.5,
+     "Lean": 13.41,
+     "Probability": 0.523,
+     "Edge": 0.034,
      "Tier": "BET"
     }
    }
@@ -30682,18 +30682,18 @@
    "MoneylineAway": 3500,
    "Spread": "-27.5 Tennessee",
    "SpreadValue": 27.5,
-   "HomeTeamScore": 93.0,
-   "AwayTeamScore": 65.5,
-   "Total": 158.5
+   "HomeTeamScore": 92.0,
+   "AwayTeamScore": 64.5,
+   "Total": 156.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Tennessee -27.5",
-    "odds": -115,
+    "odds": -108,
     "model": 0.483,
-    "breakeven": 0.535,
-    "edge": -0.052,
+    "breakeven": 0.519,
+    "edge": -0.036,
     "rec": "PASS",
     "selected": false,
     "open_line": -29.5,
@@ -30704,16 +30704,16 @@
    {
     "market": "Spread",
     "bet": "Tennessee St. +27.5",
-    "odds": -105,
+    "odds": -112,
     "model": 0.517,
-    "breakeven": 0.512,
-    "edge": 0.005,
+    "breakeven": 0.528,
+    "edge": -0.011,
     "rec": "LEAN",
     "selected": false,
     "open_line": 29.5,
     "open_odds": -110,
     "open": "+29.5 (-110)",
-    "confidence": 3
+    "confidence": 0
    },
    {
     "market": "Moneyline",
@@ -30745,11 +30745,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 158.5",
-    "odds": -112,
-    "model": 0.473,
-    "breakeven": 0.528,
-    "edge": -0.055,
+    "bet": "Over 156.5",
+    "odds": -115,
+    "model": 0.477,
+    "breakeven": 0.535,
+    "edge": -0.058,
     "rec": "PASS",
     "selected": false,
     "open_line": 156.5,
@@ -30759,17 +30759,17 @@
    },
    {
     "market": "Total",
-    "bet": "Under 158.5",
-    "odds": -108,
-    "model": 0.527,
-    "breakeven": 0.519,
-    "edge": 0.008,
+    "bet": "Under 156.5",
+    "odds": -105,
+    "model": 0.523,
+    "breakeven": 0.512,
+    "edge": 0.011,
     "rec": "BET",
     "selected": false,
     "open_line": 156.5,
     "open_odds": -112,
     "open": "156.5 (-112)",
-    "confidence": 8
+    "confidence": 13
    }
   ],
   "Histogram": {
@@ -31265,7 +31265,7 @@
      "Line": -12.5,
      "Lean": 2.27,
      "Probability": 0.517,
-     "Edge": 0.021,
+     "Edge": 0.006,
      "Tier": "LEAN"
     },
     "Moneyline": {
@@ -31277,11 +31277,11 @@
     },
     "Total": {
      "Side": "Under",
-     "Line": 157.5,
-     "Lean": 2.14,
-     "Probability": 0.504,
-     "Edge": 0.015,
-     "Tier": "PASS"
+     "Line": 158.5,
+     "Lean": 3.14,
+     "Probability": 0.506,
+     "Edge": 0.016,
+     "Tier": "BET"
     }
    }
   },
@@ -31310,18 +31310,18 @@
    "MoneylineAway": 650,
    "Spread": "-12.5 Utah St.",
    "SpreadValue": 12.5,
-   "HomeTeamScore": 85.0,
-   "AwayTeamScore": 72.5,
-   "Total": 157.5
+   "HomeTeamScore": 85.5,
+   "AwayTeamScore": 73.0,
+   "Total": 158.5
   },
   "Markets": [
    {
     "market": "Spread",
     "bet": "Utah St. -12.5",
-    "odds": -108,
+    "odds": -115,
     "model": 0.517,
-    "breakeven": 0.519,
-    "edge": -0.002,
+    "breakeven": 0.535,
+    "edge": -0.018,
     "rec": "LEAN",
     "selected": false,
     "open_line": -13.5,
@@ -31332,10 +31332,10 @@
    {
     "market": "Spread",
     "bet": "UC San Diego +12.5",
-    "odds": -112,
+    "odds": -105,
     "model": 0.483,
-    "breakeven": 0.528,
-    "edge": -0.045,
+    "breakeven": 0.512,
+    "edge": -0.029,
     "rec": "PASS",
     "selected": false,
     "open_line": 13.5,
@@ -31373,11 +31373,11 @@
    },
    {
     "market": "Total",
-    "bet": "Over 157.5",
+    "bet": "Over 158.5",
     "odds": -115,
-    "model": 0.496,
+    "model": 0.494,
     "breakeven": 0.535,
-    "edge": -0.039,
+    "edge": -0.041,
     "rec": "PASS",
     "selected": false,
     "open_line": 156.5,
@@ -31387,17 +31387,17 @@
    },
    {
     "market": "Total",
-    "bet": "Under 157.5",
+    "bet": "Under 158.5",
     "odds": -105,
-    "model": 0.504,
+    "model": 0.506,
     "breakeven": 0.512,
-    "edge": -0.008,
-    "rec": "PASS",
+    "edge": -0.006,
+    "rec": "BET",
     "selected": false,
     "open_line": 156.5,
     "open_odds": -110,
     "open": "156.5 (-110)",
-    "confidence": 0
+    "confidence": 13
    }
   ],
   "Histogram": {
