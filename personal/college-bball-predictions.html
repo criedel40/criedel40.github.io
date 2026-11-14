@@ -755,7 +755,8 @@
       if (!box) return;
       const staked = {};
       ((meta && meta.sheet) || []).forEach(b => { staked[`${b.game}|${b.market}|${b.bet}`] = b; });
-      const keepRec = r => key === 'BET' ? r.rec === 'BET' : (r.rec === 'BET' || r.rec === 'LEAN');
+      const isSignal = r => key === 'BET' ? r.rec === 'BET' : (r.rec === 'BET' || r.rec === 'LEAN');
+      const keepRec = r => isSignal(r) || !!r.track;        // tracked, unstaked signals are listed too (after the BET and LEAN rows)
       const rows = [];
       files.forEach(f => {
         const info = data[f]; if (!info || !info.Markets) return;
@@ -772,7 +773,8 @@
       const head = document.createElement('div'); head.className = 'plays-head';
       const title = document.createElement('span'); title.className = 'plays-title';
       const scope = key === 'BET' ? 'BET signals' : key === 'LEAN' ? 'BET + LEAN signals' : 'All games';
-      title.textContent = `${scope}: ${rows.length} rows · ${stakedRows.length} staked, ${(100 * exposure).toFixed(1)}% of bankroll (${money(sheetBankroll * exposure)})`;
+      const trackedOnly = rows.filter(x => x.r.track && !isSignal(x.r)).length;
+      title.textContent = `${scope}: ${rows.length - trackedOnly} rows · ${stakedRows.length} staked, ${(100 * exposure).toFixed(1)}% of bankroll (${money(sheetBankroll * exposure)})` + (trackedOnly ? ` · ${trackedOnly} tracked only` : '');
       head.appendChild(title);
       const label = document.createElement('label'); label.textContent = 'Bankroll $ '; head.appendChild(label);
       const input = document.createElement('input'); input.type = 'number'; input.min = '0'; input.step = '50'; input.inputMode = 'decimal'; input.id = 'bankroll-input'; input.value = String(sheetBankroll); label.appendChild(input);
@@ -790,7 +792,7 @@
         const open = (b && b.open) || r.open || '—';
         const hasBooks = r.books !== null && r.books !== undefined;
         const booksTxt = (hasBooks ? `${r.books > 0 ? '+' : ''}${Number(r.books).toFixed(1)}` : '—') + (r.warn ? ' \u26A0' : '');
-        const betTxt = r.market === '—' ? r.bet : `${r.market}: ${r.bet}${r.note ? ' (' + r.note + ')' : ''}`;
+        const betTxt = r.market === '—' ? r.bet : `${r.market}: ${r.bet}${r.note ? ' (' + r.note + ')' : ''}${r.track ? ' [tracked: ' + r.track + ']' : ''}`;
         [[betTxt, false], [game, false], [odds, true], [open, true], [booksTxt, true, true], [model, true], [edge, true]]
           .forEach(([txt, num, books]) => {
             const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt;
@@ -799,13 +801,14 @@
             tr.appendChild(td);
           });
         tr.appendChild(confCell(confOf({ r, b }) < 0 ? null : confOf({ r, b })));
-        const rec = document.createElement('td'); rec.className = 'mid'; const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = r.rec; rec.appendChild(sp); tr.appendChild(rec);
+        const rec = document.createElement('td'); rec.className = 'mid'; const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = (r.track && !isSignal(r)) ? 'TRACK' : r.rec; rec.appendChild(sp); tr.appendChild(rec);
         const st = document.createElement('td'); st.className = 'num' + (b ? ' stake' : ''); st.textContent = b ? `${money(sheetBankroll * b.bankroll_fraction)} (${(100 * b.bankroll_fraction).toFixed(1)}%)` : '—'; tr.appendChild(st);
         tb.appendChild(tr);
       });
       t.appendChild(tb); box.appendChild(t);
       const note = document.createElement('div'); note.className = 'note'; note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above, remembered in this browser only. Open is the first DraftKings line the hourly pull saw. Rows run BET, then LEAN, each by confidence. Confidence rates the evidence behind a signal at its price, not whether we staked it \u2014 a blank stake means the sizing rules held it back. Totals top out lower than spreads and moneylines on purpose: their strongest case is a weaker one.'; box.appendChild(note);
       const note2 = document.createElement('div'); note2.className = 'note'; note2.textContent = 'vs books: how many points better (+) or worse (\u2212) the DraftKings number is for that side than the middle of the other books at the same pull. When they differ, DraftKings usually moves to the others, so a green + is a number worth taking now and a red \u2212 is one that tends to improve. \u26A0 marks a spread pick the line has moved a point or more against since it opened \u2014 the market disagreeing twice. A total marked (neutral floor) is staked on the site of the game, not on our total.'; box.appendChild(note2);
+      const note3 = document.createElement('div'); note3.className = 'note'; note3.textContent = 'TRACK rows are watched, not bet: "under tilt" is the under in a game where the book\u2019s total tends to run high (two efficient offences, two weak defences, an even game, often a neutral floor); "underdog to win by 2+" is a short-priced underdog our forecast has winning outright. Both are graded on the Season Record tab.'; box.appendChild(note3);
     }
 
     // ---- the season record: every graded signal from the ledger, staked bets first
@@ -896,6 +899,14 @@
       body.appendChild(sigNote);
       body.appendChild(table([['All BET signals', 'BET', 'all', true], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
                               ['All LEAN signals', 'LEAN', 'all', true], ['LEAN: spread', 'LEAN', 'spread'], ['LEAN: total', 'LEAN', 'total'], ['LEAN: moneyline', 'LEAN', 'moneyline']]));
+      if (s.source === 'live') {
+        const trackedSpec = [['Totals: under tilt', 'candidate: under-tilt', 'all'], ['Moneyline: underdog to win by 2+', 'candidate: dog-win', 'all']].filter(([, g]) => s.table[g]);
+        body.appendChild(sectionTitle('Tracked, not staked'));
+        const trNote = document.createElement('p'); trNote.className = 'sub';
+        trNote.textContent = 'Two signals being watched before any money goes on them, graded at the 8:10 AM price. Under tilt: the under where the book\u2019s total tends to run high. Underdog to win by 2+: a short-priced underdog our forecast has winning outright.' + (trackedSpec.length ? '' : ' Nothing graded yet.');
+        body.appendChild(trNote);
+        if (trackedSpec.length) body.appendChild(table(trackedSpec));
+      }
       const months = Object.keys(s.by_month.staked || {});
       if (months.length > 1) { body.appendChild(sectionTitle('Staked bets by month')); body.appendChild(wrap(blockTable(months.map(m => [`${m.slice(0, 4)}-${m.slice(4, 6)}`, s.by_month.staked[m], false])))); }
       if (s.reliability && s.reliability.length) {
