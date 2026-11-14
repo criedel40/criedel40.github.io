@@ -780,7 +780,7 @@
       box.appendChild(head);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
       const t = document.createElement('table');
-      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num">Model</th><th class="num">Edge</th><th class="mid">Confidence</th><th class="mid">Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
+      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num" title="Points the DraftKings number is better (+) or worse (-) for this side than the median of the other books">vs books</th><th class="num">Model</th><th class="num">Edge</th><th class="mid">Confidence</th><th class="mid">Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
       const tb = document.createElement('tbody');
       rows.forEach(({ game, r, b }) => {
         const tr = document.createElement('tr'); if (b) tr.className = 'selected';
@@ -788,8 +788,16 @@
         const edge = (r.edge === null || r.edge === undefined) ? '—' : `${r.edge >= 0 ? '+' : ''}${(100 * r.edge).toFixed(1)}%`;
         const model = b ? `${(100 * b.probability).toFixed(1)}%` : (r.model === null || r.model === undefined) ? '—' : `${(100 * r.model).toFixed(1)}%`;
         const open = (b && b.open) || r.open || '—';
-        [[r.market === '—' ? r.bet : `${r.market}: ${r.bet}`, false], [game, false], [odds, true], [open, true], [model, true], [edge, true]]
-          .forEach(([txt, num]) => { const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td); });
+        const hasBooks = r.books !== null && r.books !== undefined;
+        const booksTxt = (hasBooks ? `${r.books > 0 ? '+' : ''}${Number(r.books).toFixed(1)}` : '—') + (r.warn ? ' \u26A0' : '');
+        const betTxt = r.market === '—' ? r.bet : `${r.market}: ${r.bet}${r.note ? ' (' + r.note + ')' : ''}`;
+        [[betTxt, false], [game, false], [odds, true], [open, true], [booksTxt, true, true], [model, true], [edge, true]]
+          .forEach(([txt, num, books]) => {
+            const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt;
+            if (books && hasBooks) { if (r.books >= 0.5) td.style.color = '#1a7f37'; else if (r.books <= -0.5) td.style.color = '#b42318'; }
+            if (books && r.warn) td.title = 'The line has moved a point or more against this pick since it opened';
+            tr.appendChild(td);
+          });
         tr.appendChild(confCell(confOf({ r, b }) < 0 ? null : confOf({ r, b })));
         const rec = document.createElement('td'); rec.className = 'mid'; const sp = document.createElement('span'); sp.className = `tier tier-${['BET', 'LEAN', 'PASS'].includes(r.rec) ? r.rec : 'PASS'}`; sp.textContent = r.rec; rec.appendChild(sp); tr.appendChild(rec);
         const st = document.createElement('td'); st.className = 'num' + (b ? ' stake' : ''); st.textContent = b ? `${money(sheetBankroll * b.bankroll_fraction)} (${(100 * b.bankroll_fraction).toFixed(1)}%)` : '—'; tr.appendChild(st);
@@ -797,6 +805,7 @@
       });
       t.appendChild(tb); box.appendChild(t);
       const note = document.createElement('div'); note.className = 'note'; note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above, remembered in this browser only. Open is the first DraftKings line the hourly pull saw. Rows run BET, then LEAN, each by confidence. Confidence rates the evidence behind a signal at its price, not whether we staked it \u2014 a blank stake means the sizing rules held it back. Totals top out lower than spreads and moneylines on purpose: their strongest case is a weaker one.'; box.appendChild(note);
+      const note2 = document.createElement('div'); note2.className = 'note'; note2.textContent = 'vs books: how many points better (+) or worse (\u2212) the DraftKings number is for that side than the middle of the other books at the same pull. When they differ, DraftKings usually moves to the others, so a green + is a number worth taking now and a red \u2212 is one that tends to improve. \u26A0 marks a spread pick the line has moved a point or more against since it opened \u2014 the market disagreeing twice. A total marked (neutral floor) is staked on the site of the game, not on our total.'; box.appendChild(note2);
     }
 
     // ---- the season record: every graded signal from the ledger, staked bets first
@@ -886,7 +895,7 @@
       sigNote.textContent = 'How the sheet\u2019s own BET and LEAN calls did, whether or not the sizing rules staked them. These overlap the table above.';
       body.appendChild(sigNote);
       body.appendChild(table([['All BET signals', 'BET', 'all', true], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
-                              ['LEAN signals', 'LEAN', 'all']]));
+                              ['All LEAN signals', 'LEAN', 'all', true], ['LEAN: spread', 'LEAN', 'spread'], ['LEAN: total', 'LEAN', 'total'], ['LEAN: moneyline', 'LEAN', 'moneyline']]));
       const months = Object.keys(s.by_month.staked || {});
       if (months.length > 1) { body.appendChild(sectionTitle('Staked bets by month')); body.appendChild(wrap(blockTable(months.map(m => [`${m.slice(0, 4)}-${m.slice(4, 6)}`, s.by_month.staked[m], false])))); }
       if (s.reliability && s.reliability.length) {
