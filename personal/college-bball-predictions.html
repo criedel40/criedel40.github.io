@@ -961,6 +961,36 @@
         const b = document.createElement('div'); b.className = 'k'; b.textContent = k; st.appendChild(b); row.appendChild(st);
       });
       body.appendChild(row);
+      const acc = accuracyTable(fin);
+      if (acc) acc.forEach(el => body.appendChild(el));
+    }
+    // RMSE and bias of the three forecasts on the SAME finished games (those where all three have a number)
+    function accuracyTable(games) {
+      const isNum = v => typeof v === 'number';
+      const mg = games.filter(g => [g.model_margin, g.bart_margin, g.vegas_spread_home, g.home_final, g.away_final].every(isNum));
+      const tg = games.filter(g => [g.model_total, g.bart_total, g.vegas_total, g.home_final, g.away_final].every(isNum));
+      if (!mg.length && !tg.length) return null;
+      const stat = (gs, pred, act) => {
+        if (!gs.length) return null;
+        const e = gs.map(g => pred(g) - act(g));
+        return { rmse: Math.sqrt(e.reduce((a, x) => a + x * x, 0) / e.length), bias: e.reduce((a, x) => a + x, 0) / e.length };
+      };
+      const am = g => g.home_final - g.away_final, at = g => g.home_final + g.away_final;
+      const fmt = (v, signed) => (v === null || v === undefined) ? '\u2014' : ((signed && v > 0 ? '+' : '') + v.toFixed(2)).replace('-', '\u2212');
+      const t = document.createElement('table');
+      t.innerHTML = '<thead><tr><th>Forecast</th><th class="num">Margin RMSE</th><th class="num">Margin bias</th><th class="num">Total RMSE</th><th class="num">Total bias</th></tr></thead>';
+      const tb = document.createElement('tbody');
+      [['Vegas', g => -g.vegas_spread_home, g => g.vegas_total], ['BART', g => g.bart_margin, g => g.bart_total], ['Model', g => g.model_margin, g => g.model_total]].forEach(([name, pm, pt]) => {
+        const m = stat(mg, pm, am), x = stat(tg, pt, at); const tr = document.createElement('tr');
+        [[name, false], [fmt(m && m.rmse), true], [fmt(m && m.bias, true), true], [fmt(x && x.rmse), true], [fmt(x && x.bias, true), true]].forEach(([txt, num]) => {
+          const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt; tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb);
+      const note = document.createElement('p'); note.className = 'sub';
+      note.textContent = `Forecast error on the same finished games for all three (${mg.length} with a spread, ${tg.length} with a total). RMSE is the typical miss in points, lower is better. Bias is forecast minus result: for totals + means too high; for margins + means too many points for the home team. Vegas is the bet-of-record DraftKings line, BART is Torvik\u2019s own projection as shown that day.`;
+      return [wrap(t), note];
     }
     function renderResultsDays(season, body) {
       const scored = scoredGames(season);
