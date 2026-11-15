@@ -50,7 +50,7 @@
 
     <h2>The workflow</h2>
     <figure style="margin:0">
-      <div class="diagram"><svg viewBox="0 0 1180 980" role="img" aria-label="Flow from pregame inputs through the IC hedge model, pace form, ensemble generation and the Oracle to the score ensemble; calibration and pregame shifts; the book's line; the three staked rules, each requiring two independent readings to agree; fractional Kelly sizing with caps; sheet, ledger and refit." xmlns="http://www.w3.org/2000/svg">
+      <div class="diagram"><svg viewBox="0 0 1180 980" role="img" aria-label="Flow from pregame inputs through the IC hedge model, pace form, ensemble generation and the Oracle to the score ensemble; calibration and pregame shifts; the book's line; the spread rule, the moneyline that follows it and the one staked totals pattern; fractional Kelly sizing with caps; sheet, ledger and review." xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
           <marker id="arr-stake" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--stake)"/></marker>
@@ -67,7 +67,7 @@
 <rect x="0" y="680" width="1180" height="104" rx="5" fill="var(--band)"/>
 <text x="14" y="700" font-size="13" font-weight="700" fill="var(--ink-2)" letter-spacing="0.06">5 · SIZE AND CAP</text>
 <rect x="0" y="800" width="1180" height="126" rx="5" fill="var(--band)"/>
-<text x="14" y="820" font-size="13" font-weight="700" fill="var(--ink-2)" letter-spacing="0.06">6 · PUBLISH, GRADE, REFIT</text>
+<text x="14" y="820" font-size="13" font-weight="700" fill="var(--ink-2)" letter-spacing="0.06">6 · PUBLISH, GRADE, REVIEW</text>
 <rect x="8" y="64" width="214" height="76" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
 <text x="115.0" y="89" text-anchor="middle" font-size="16" font-weight="600">Pregame inputs</text>
 <text x="115.0" y="109" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">season stats, roster,</text>
@@ -77,9 +77,9 @@
 <text x="353.0" y="109" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">matchup-adjusted profiles</text>
 <text x="353.0" y="126" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">both teams + pace, bounded</text>
 <rect x="484" y="64" width="214" height="76" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
-<text x="591.0" y="89" text-anchor="middle" font-size="16" font-weight="600">Pace form</text>
-<text x="591.0" y="109" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">pace column moved to</text>
-<text x="591.0" y="126" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">each team's recent tempo</text>
+<text x="591.0" y="89" text-anchor="middle" font-size="16" font-weight="600">Pace</text>
+<text x="591.0" y="109" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">recent tempo for the margin,</text>
+<text x="591.0" y="126" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">a pace forecast for the total</text>
 <rect x="722" y="64" width="214" height="76" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
 <text x="829.0" y="89" text-anchor="middle" font-size="16" font-weight="600">Ensemble generation</text>
 <text x="829.0" y="109" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">10,000 stat sets jittered</text>
@@ -98,18 +98,18 @@
 <path d="M1067.0,140 L1067.0,168" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
 <rect x="290" y="290" width="250" height="66" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
 <text x="415.0" y="315" text-anchor="middle" font-size="16" font-weight="600">Score calibration</text>
-<text x="415.0" y="335" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">running correction</text>
+<text x="415.0" y="335" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">running level, calibrated spread</text>
 <rect x="588" y="290" width="250" height="66" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
 <text x="713.0" y="315" text-anchor="middle" font-size="16" font-weight="600">Availability shift</text>
 <text x="713.0" y="335" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">who sat the last game</text>
 <rect x="886" y="290" width="250" height="66" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
-<text x="1011.0" y="315" text-anchor="middle" font-size="16" font-weight="600">Fatigue shift</text>
-<text x="1011.0" y="335" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">postseason back-to-backs</text>
+<text x="1011.0" y="315" text-anchor="middle" font-size="16" font-weight="600">Situational shifts</text>
+<text x="1011.0" y="335" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">early season, altitude, fatigue</text>
 <path d="M700,234 L700,262 L415.0,262 L415.0,290" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
 <path d="M540,323 L588,323" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
 <text x="564" y="315" text-anchor="middle" font-size="13.5" fill="currentColor" >both</text>
 <path d="M838,323 L886,323" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
-<text x="862" y="315" text-anchor="middle" font-size="13.5" fill="currentColor" >total</text>
+<text x="862" y="315" text-anchor="middle" font-size="13.5" fill="currentColor" >both</text>
 <rect x="290" y="412" width="270" height="62" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
 <text x="425.0" y="437" text-anchor="middle" font-size="16" font-weight="600">Odds pulls through the day</text>
 <text x="425.0" y="457" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">today's slate only, pregame only</text>
@@ -129,22 +129,22 @@
 <path d="M205.0,540 L205.0,568" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
 <text x="213.0" y="558" text-anchor="start" font-size="13.5" fill="currentColor" >lean = mean margin − spread</text>
 <path d="M590.0,540 L590.0,568" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
-<text x="598.0" y="558" text-anchor="start" font-size="13.5" fill="currentColor" >lean = mean total − line, pace profile</text>
+<text x="598.0" y="558" text-anchor="start" font-size="13.5" fill="currentColor" >lean = mean total − line</text>
 <path d="M975.0,540 L975.0,568" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
 <text x="983.0" y="558" text-anchor="start" font-size="13.5" fill="currentColor" >P(win) vs the price</text>
 <rect x="30" y="568" width="350" height="72" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
-<text x="205.0" y="593" text-anchor="middle" font-size="16" font-weight="600">SPREAD · two layers agree</text>
-<text x="205.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">cover model and market-error model</text>
-<text x="205.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">same side, sized on the stronger</text>
+<text x="205.0" y="593" text-anchor="middle" font-size="16" font-weight="600">SPREAD · the forecast's own gap</text>
+<text x="205.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">our margin disagrees with the spread</text>
+<text x="205.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">by enough; phased in as teams play</text>
 <rect x="415" y="568" width="350" height="72" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
-<text x="590.0" y="593" text-anchor="middle" font-size="16" font-weight="600">TOTAL · profile, size, agreement</text>
-<text x="590.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">a profile where the edge has held,</text>
-<text x="590.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">a big enough gap, a second opinion</text>
+<text x="590.0" y="593" text-anchor="middle" font-size="16" font-weight="600">TOTAL · a market pattern only</text>
+<text x="590.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">our own total is shown, not staked;</text>
+<text x="590.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">unders at neutral sites, small, capped</text>
 <rect x="800" y="568" width="350" height="72" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
-<text x="975.0" y="593" text-anchor="middle" font-size="16" font-weight="600">MONEYLINE · market-shrink rule</text>
-<text x="975.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">P(win) pulled toward the market</text>
-<text x="975.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">BET on edge, never heavy favorites</text>
-<text x="590.0" y="657" text-anchor="middle" font-size="13.5" fill="currentColor" >one narrow over profile is staked; no middle tier</text>
+<text x="975.0" y="593" text-anchor="middle" font-size="16" font-weight="600">MONEYLINE · follows the spread bet</text>
+<text x="975.0" y="613" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">only the underdog the spread rule</text>
+<text x="975.0" y="630" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">already backs, at a reduced size</text>
+<text x="590.0" y="657" text-anchor="middle" font-size="13.5" fill="currentColor" >two more signals are tracked and graded with no money on them</text>
 <rect x="330" y="712" width="520" height="66" rx="5" stroke="var(--stake)" stroke-width="2.2" fill="var(--stake-soft)"/>
 <text x="590.0" y="737" text-anchor="middle" font-size="16" font-weight="600">Stake</text>
 <text x="590.0" y="757" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">fractional Kelly on the probability</text>
@@ -159,8 +159,8 @@
 <text x="590.0" y="863" text-anchor="middle" font-size="16" font-weight="600">Ledger, next morning</text>
 <text x="590.0" y="883" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">grades every bet vs finals, closing-line value</text>
 <rect x="800" y="838" width="350" height="66" rx="5" stroke="currentColor" stroke-width="1.3" fill="var(--panel)"/>
-<text x="975.0" y="863" text-anchor="middle" font-size="16" font-weight="600">Refit on live results</text>
-<text x="975.0" y="883" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">the season's own lines → new coefficients</text>
+<text x="975.0" y="863" text-anchor="middle" font-size="16" font-weight="600">Review before any change</text>
+<text x="975.0" y="883" text-anchor="middle" font-size="13.5" fill="var(--ink-2)">rules move only on clean, graded results</text>
 <path d="M370,778 L370,812 L205.0,812 L205.0,838" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
 <text x="300" y="806" text-anchor="middle" font-size="13.5" fill="currentColor" >stakes</text>
 <path d="M380,871 L415,871" fill="none" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr)"/>
@@ -168,7 +168,7 @@
         </g>
       </svg></div>
       <div class="legend"><span class="stake">staked path</span><span>forecast and plumbing</span></div>
-      <figcaption class="muted" style="margin:.6rem .25rem 0">Each market has one staked rule, and each needs two independent readings to agree. Every bet is graded against the final score and the book&rsquo;s own number, and those results are what any later change to a rule has to beat.</figcaption>
+      <figcaption class="muted" style="margin:.6rem .25rem 0">Spreads carry the bets. A moneyline only follows a spread bet, and the model&rsquo;s own total is shown without a stake. Every signal is graded against the final score and the book&rsquo;s own number, and those results are what any later change to a rule has to beat.</figcaption>
     </figure>
 
     <h2>The forecast</h2>
@@ -176,34 +176,41 @@
       <ul>
         <li><strong>Inputs are strictly pregame.</strong> Season-to-date team statistics, roster context, rest, site and the point in the season, built so that nothing from the game itself or from later games can leak in. Before a team has played, its statistical profile starts from a preseason prior built from its previous season, the prior-season lines of its returning roster and the preseason ratings; its own results take over from its first game. A team in its first Division I season has none of that history, so its games are forecast only once it has played, and are shown without a stake until it has a run of its own results.</li>
         <li><strong>An IC hedge model</strong> adjusts each team's season-to-date profile toward what the matchup implies, with bounded moves. It predicts the inputs the game will be played with, not the score.</li>
-        <li><strong>An ensemble of ten thousand members</strong> is generated around those hedged profiles, after a recent-tempo adjustment, within each team's recent variability. The scoring model scores every member. The ensemble's mean is the forecast on the sheet and its shares are the probabilities; there is no separate point forecast.</li>
-        <li><strong>Calibration and pregame adjustments</strong> correct the score level through the season and account for who sat a team's last game and for postseason back-to-backs.</li>
+        <li><strong>An ensemble of ten thousand members</strong> is generated around those hedged profiles, after a recent-tempo adjustment, within each team's recent variability. The scoring model scores every member. The ensemble's mean is the forecast on the sheet and its shares are the probabilities; there is no separate point forecast. The width of the ensemble is then matched, game by game, to how far forecasts like it have really missed, so a probability on the sheet is neither bolder nor more timid than the record supports.</li>
+        <li><strong>Early in the season</strong> a team's own box scores are too thin to carry a forecast. In a team's first few games the margin leans mostly on a simple ratings formula built from the same pregame inputs, and the full model takes over as the games accumulate.</li>
+        <li><strong>The total gets its own pace forecast.</strong> How many possessions a game will have is forecast separately, from team ratings, box scores and play-by-play, and blended with the main model's pace before the total is scored. The margin does not use it.</li>
+        <li><strong>Calibration and pregame adjustments</strong> correct the score level through the season and account for who sat a team's last game, for altitude and for postseason back-to-backs.</li>
       </ul>
     </div>
 
     <h2>The decision</h2>
     <div class="card">
+      <p>The rules follow one measurement: how the forecast's error compares with the market's on the same games. On margins the forecast starts the season well behind the market and has nearly caught it by midseason. On totals it never catches it. So spreads carry the bets, they are phased in as teams play games, and the model's own totals are shown without a stake.</p>
       <ul>
-        <li><strong>Spreads.</strong> Two independent readings have to agree: a fitted cover model turns the gap between our margin and the spread into a probability of covering, and a separate model trained to find where the market's own number is wrong picks a side. A bet is placed only when both point the same way and clear a cutoff, and it is sized on the more confident of the two. Where the two disagree, nothing is staked.</li>
-        <li><strong>Totals.</strong> Three things have to line up. The forecast has to disagree with the line by enough points to matter &mdash; a small disagreement is not evidence of anything. The game has to sit in a profile where that disagreement has actually paid across multiple seasons: mostly unders in slower games, plus one narrow profile on the over. And the same market-error model that votes on spreads has to take the same side of the total. Miss any one of the three and the total is shown and left alone; there is no middle tier on totals, so a total is either bet or passed.</li>
-        <li><strong>Moneylines.</strong> The model's win probability is pulled part of the way toward the market's own probability before any edge is counted, so only disagreements the model is entitled to keep become bets. Heavy favorites are never staked whatever the edge looks like: the price leaves too little to win for the model's error bars.</li>
-        <li><strong>Sizing.</strong> Fractional Kelly on whichever probability the staking rule settles on, with per-bet, per-game and daily caps. Games the market prices as near coin flips are staked at half size. A confidence score from 0 to 100 accompanies every bet: 0 is break-even at the price, 100 is the best hit rate the evidence supports.</li>
+        <li><strong>Spreads.</strong> One rule. Our margin has to disagree with the spread by enough points to matter, and games with very large spreads are left alone. Nothing is staked until both teams have played enough games for the forecast to have caught up with the market; the stake is reduced through the next stretch of games and reaches full size after that.</li>
+        <li><strong>Moneylines.</strong> No moneyline rule of its own survived testing. The forecast picks the same winner as the market in the great majority of games, and its disagreements on price alone did not pay. A moneyline is staked only on an underdog the spread rule already backs, at a short enough price and a reduced size. No moneyline signal is shown at all until both teams have played enough games.</li>
+        <li><strong>Totals.</strong> The model's total is on the sheet for every game and is not staked. Across the seasons tested, its disagreements with the market's total did not win often enough to cover the price, and no second opinion changed that. One totals bet is staked, and it does not come from the model: the under at neutral sites, a market pattern that has held over many seasons, at a small fixed size under its own daily cap. A total is either bet or passed; there is no middle tier.</li>
+        <li><strong>Tracked, not staked.</strong> Two more signals are recorded on every sheet and graded with no money on them: the under in games where the market's total tends to run high, and a short-priced underdog the forecast has winning outright. Either one gets a stake only if its live record earns it.</li>
+        <li><strong>Sizing.</strong> Fractional Kelly on the probability the staking rule settles on, with per-bet, per-game and daily caps. Games the market prices as near coin flips are staked at a reduced size. A confidence score from 0 to 100 accompanies every bet: 0 is break-even at the price, and a higher score means the probability the bet is sized on sits further above it.</li>
       </ul>
     </div>
 
     <h2>How it is kept honest</h2>
     <div class="card">
-      <p>Two things are structural and hold everywhere. <strong>The forecast never sees the betting line</strong> &mdash; it cannot quietly copy the market and then present the agreement as skill. And <strong>every signal on the sheet, staked or not, is graded against the final score and the book&rsquo;s own number</strong>; the season record page is generated from that ledger, not written by hand. One sheet a day, the one published at a fixed time in the late afternoon, is the bet of record: the ledger grades that sheet, not whichever came last.</p>
-      <p>Where hindsight could be removed from the published record, it was. The spread layer&rsquo;s coefficients are refitted forward through each season and graded only on games that came later, so no bet on the record page is priced by a version of that layer that had already seen its own result.</p>
+      <p>Two things are structural and hold everywhere. <strong>The forecast never sees the betting line</strong> &mdash; it cannot quietly copy the market and then present the agreement as skill. And <strong>every signal on the sheet, staked or not, is graded against the final score and the book&rsquo;s own number</strong>; the season record page is generated from that ledger, not written by hand. One sheet a day, the one published at a fixed time in the morning, is the bet of record: the ledger grades that sheet, not whichever came last.</p>
+      <p>The record page also puts the forecast's error beside the market's, and beside a widely used public ratings projection, on the same finished games. That table is the plainest check on the forecast itself, separate from any bet.</p>
+      <h3 style="font-size:1.15rem;margin:1.4rem 0 .5rem;color:#0b0b0b">What an audit changed</h3>
+      <p>In November 2026 an audit found that the earlier backtests were flattered by hindsight. Some team inputs in the historical files were end-of-season values, so a forecast for a November game had been made with information that did not exist until March. The backtests were rebuilt from forecasts that use only what was known on the day, and every betting rule was tested again on those.</p>
+      <p>Most of the earlier rules did not survive. The agreement-of-two-models rule on spreads, the totals profiles and the stand-alone moneyline rule all lost their edge once the hindsight was removed, and they were retired. What is described above is what was left.</p>
       <h3 style="font-size:1.15rem;margin:1.4rem 0 .5rem;color:#0b0b0b">What the record page is not</h3>
-      <p>The three seasons shown there are a backtest, not a track record, and three things keep them from being a clean out-of-sample test:</p>
+      <p>The three past seasons shown there are a backtest, not a track record: each season replayed through today's rules. Four things keep them from being a clean out-of-sample test:</p>
       <ul>
-        <li><strong>The scoring network drew its validation sample at random from every season</strong>, so the forecasts behind those seasons are partly in sample. Fixing that means retraining the network with a whole season held out, not refitting a betting rule.</li>
-        <li><strong>The betting rules were chosen by looking at these seasons.</strong> Which game profiles to bet, how large a disagreement has to be, which side to take &mdash; all of it was selected on the same data it is scored on.</li>
-        <li><strong>Two of the three seasons are priced off a soft book</strong> and only the most recent off a sharp closing line. The soft seasons look better for that reason alone; the sharp one is the fairer guide to what live play will face.</li>
+        <li><strong>The scoring network drew its validation sample at random from every season</strong>, so the forecasts behind those seasons are partly in sample. The matchup model is cleaner: the version behind each backtest season was not trained on that season's games.</li>
+        <li><strong>The betting rules were chosen by looking at these seasons.</strong> Which markets to bet, how large a disagreement has to be, when in the season to start &mdash; all of it was selected on the same data it is scored on.</li>
+        <li><strong>Two of the three seasons are priced off a soft book</strong> and only the most recent off the sharper one. The soft seasons look better for that reason alone; the sharp one is the fairer guide to what live play will face.</li>
+        <li><strong>A backtest assumes every bet was available at the price shown.</strong> Real books and real limits do not guarantee that.</li>
       </ul>
-      <p>One panel is different. The <strong>leave-one-season-out</strong> season was produced by versions of both models trained with that season held out entirely, and its betting layers were fitted only on months that had already finished, so nothing that produced those bets had seen the games it was scored on. One caveat still applies to it: the <em>design</em> of the rules &mdash; which markets, which game profiles, how large a disagreement &mdash; was settled with this season in view, even though their numbers were not. Read that panel as the fair guide and the others as what the framework does on a season it has already studied.</p>
-      <p>So the honest reading is that the edge is plausible across three seasons and established on none of them yet. The next genuinely clean sample is live play, and it starts from zero.</p>
+      <p>So the honest reading is that the edge is plausible across three seasons and established on none of them yet. The next genuinely clean sample is live play, and it starts from zero. Because nothing is staked until teams have played enough games, the live staked record does not begin until well into December.</p>
       <h3 style="font-size:1.15rem;margin:1.4rem 0 .5rem;color:#0b0b0b">Changing a rule</h3>
       <p>A change has to beat the current rule on every season available, and hold up on the sharp-book season rather than being carried by the soft ones &mdash; a rule that wins only in aggregate is not kept. Once live results exist they outrank any backtest, and a rule the live season contradicts goes, whatever the backtest said.</p>
       <p class="muted">Specific thresholds, coefficients, feature definitions and model files are not published.</p>
