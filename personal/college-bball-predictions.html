@@ -827,16 +827,17 @@
       show(0);
       document.getElementById('view-record').appendChild(sec);
     }
-    // ---- confidence 0-100: the sizing probability over the price's break-even, 100 at a 65% expected hit rate (see the legend)
+    // ---- confidence 0-100 (handoff 221): a RANK.  Filled only on a bet the rules can stake (both teams at the staking games): where that bet
+    // stands among three past seasons of the same kind of bet; 67+ is the top third.  Every other row reads 0.
     function confCell(v) {
       const td = document.createElement('td');
       td.className = 'confcell';
       // the dash goes in a span of the same width as a bar, so it centres on the bars above and below it
       if (v === null || v === undefined) { const e = document.createElement('span'); e.className = 'conf none'; e.textContent = '—'; td.appendChild(e); return td; }
-      const wrap = document.createElement('span'); wrap.className = 'conf ' + (v >= 60 ? 'high' : v >= 30 ? 'medium' : 'low');
+      const wrap = document.createElement('span'); wrap.className = 'conf ' + (v >= 67 ? 'high' : v >= 34 ? 'medium' : 'low');
       const bar = document.createElement('span'); bar.className = 'bar'; const fill = document.createElement('i'); fill.style.width = `${Math.max(0, Math.min(100, v))}%`; bar.appendChild(fill);
       const n = document.createElement('span'); n.className = 'n'; n.textContent = String(v);
-      wrap.appendChild(bar); wrap.appendChild(n); td.appendChild(wrap); td.title = `confidence ${v} of 100: 0 = break-even at this price, 100 = a 65% expected hit rate`;
+      wrap.appendChild(bar); wrap.appendChild(n); td.appendChild(wrap); td.title = v > 0 ? `confidence ${v} of 100: where this bet ranks among past bets of its kind (67 and up is the top third)` : 'confidence 0: not a bet the rules stake yet (both teams need 10 games), or not one they stake at all';
       return td;
     }
     function fmtUnits(u) { return (u >= 0 ? '+' : '') + u.toFixed(1); }
