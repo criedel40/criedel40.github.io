@@ -901,10 +901,10 @@
       body.appendChild(table([['All BET signals', 'BET', 'all', true], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
                               ['All LEAN signals', 'LEAN', 'all', true], ['LEAN: spread', 'LEAN', 'spread'], ['LEAN: total', 'LEAN', 'total'], ['LEAN: moneyline', 'LEAN', 'moneyline']]));
       if (s.source === 'live') {
-        const trackedSpec = [['Totals: under tilt', 'candidate: under-tilt', 'all'], ['Moneyline: underdog to win by 2+', 'candidate: dog-win', 'all']].filter(([, g]) => s.table[g]);
+        const trackedSpec = [['Totals: under tilt', 'candidate: under-tilt', 'all'], ['Moneyline: underdog to win by 2+', 'candidate: dog-win', 'all'], ['Totals: BART 5+ from the line', 'candidate: bart-total-5', 'all'], ['Totals: BART under by 3+', 'candidate: bart-under-3', 'all'], ['Totals: BART and model agree', 'candidate: bart-model-total', 'all']].filter(([, g]) => s.table[g]);
         body.appendChild(sectionTitle('Tracked, not staked'));
         const trNote = document.createElement('p'); trNote.className = 'sub';
-        trNote.textContent = 'Two signals being watched before any money goes on them, graded at the 8:10 AM price. Under tilt: the under where the book\u2019s total tends to run high. Underdog to win by 2+: a short-priced underdog our forecast has winning outright.' + (trackedSpec.length ? '' : ' Nothing graded yet.');
+        trNote.textContent = 'Signals being watched before any money goes on them, graded at the 8:10 AM price. Under tilt: the under where the book\u2019s total tends to run high. Underdog to win by 2+: a short-priced underdog our forecast has winning outright. BART 5+ from the line: the side of BART\u2019s morning total when it is 5 or more points from the book\u2019s. BART under by 3+: the under when his total is 3 or more below. BART and model agree: both totals 3 or more from the line on the same side (from 21 Nov).' + (trackedSpec.length ? '' : ' Nothing graded yet.');
         body.appendChild(trNote);
         if (trackedSpec.length) body.appendChild(table(trackedSpec));
       }
