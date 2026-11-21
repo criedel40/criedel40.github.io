@@ -554,6 +554,23 @@
               `;
               tbody.appendChild(otherSourceRow);
             }
+
+            // The same model fed KenPom's ratings in place of BART's: a second opinion, shown and tracked, never staked
+            const kpSource = predictionInfo.ModelKP;
+            if (kpSource) {
+              const kpRow = document.createElement('tr');
+              kpRow.title = 'Our model run a second time with KenPom\u2019s team ratings in place of BART\u2019s' + (kpSource.Agreement ? ` \u00b7 spread pick: the two runs ${kpSource.Agreement}` : '');
+              kpRow.innerHTML = `
+                <td class="source-name">Model \u00b7 KenPom ratings</td>
+                <td class="team-name">${team1}</td>
+                <td class="score">${kpSource.HomeTeamScore}</td>
+                <td class="team-name">${team2}</td>
+                <td class="score">${kpSource.AwayTeamScore}</td>
+                <td class="spread">${kpSource.Spread}</td>
+                <td class="total">${kpSource.Total}</td>
+              `;
+              tbody.appendChild(kpRow);
+            }
             
             // Vegas source (uses provided Spread and Total, don't calculate)
             const vegasSource = predictionInfo.Vegas;
@@ -713,7 +730,7 @@
         const row = add(tile, 'tile-team'); add(row, 'tile-name', name); add(row, 'tile-score', score === undefined ? '—' : score);
       });
       const lines = add(tile, 'tile-lines');
-      [['Vegas', info && info.Vegas], ['Model', model], ['BART', info && info.BART]].forEach(([label, source]) => {
+      [['Vegas', info && info.Vegas], ['Model', model], ['Model\u00b7KP', info && info.ModelKP], ['BART', info && info.BART]].filter(([label, source]) => label !== 'Model\u00b7KP' || source).forEach(([label, source]) => {
         const row = add(lines, 'tile-line'); add(row, 'tile-label', label);
         add(row, 'tile-value', source && source.Spread ? `${lineText(source)} ${totalText(source)}` : '—');
       });
@@ -901,10 +918,10 @@
       body.appendChild(table([['All BET signals', 'BET', 'all', true], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
                               ['All LEAN signals', 'LEAN', 'all', true], ['LEAN: spread', 'LEAN', 'spread'], ['LEAN: total', 'LEAN', 'total'], ['LEAN: moneyline', 'LEAN', 'moneyline']]));
       if (s.source === 'live') {
-        const trackedSpec = [['Totals: under tilt', 'candidate: under-tilt', 'all'], ['Moneyline: underdog to win by 2+', 'candidate: dog-win', 'all'], ['Totals: BART 5+ from the line', 'candidate: bart-total-5', 'all'], ['Totals: BART 7+ from the line', 'candidate: bart-total-7', 'all'], ['Totals: BART under by 3+', 'candidate: bart-under-3', 'all'], ['Totals: BART and model agree', 'candidate: bart-model-total', 'all']].filter(([, g]) => s.table[g]);
+        const trackedSpec = [['Totals: under tilt', 'candidate: under-tilt', 'all'], ['Moneyline: underdog to win by 2+', 'candidate: dog-win', 'all'], ['Totals: BART 5+ from the line', 'candidate: bart-total-5', 'all'], ['Totals: BART 7+ from the line', 'candidate: bart-total-7', 'all'], ['Totals: BART under by 3+', 'candidate: bart-under-3', 'all'], ['Totals: BART and model agree', 'candidate: bart-model-total', 'all'], ['Spread: both ratings agree', 'candidate: kp-agree-spread', 'all'], ['Spread: ratings split', 'candidate: kp-split-spread', 'all']].filter(([, g]) => s.table[g]);
         body.appendChild(sectionTitle('Tracked, not staked'));
         const trNote = document.createElement('p'); trNote.className = 'sub';
-        trNote.textContent = 'Signals being watched before any money goes on them, graded at the 8:10 AM price. Under tilt: the under where the book\u2019s total tends to run high. Underdog to win by 2+: a short-priced underdog our forecast has winning outright. BART 5+ from the line: the side of BART\u2019s morning total when it is 5 or more points from the book\u2019s (the 7+ row is the part of those at 7 or more). BART under by 3+: the under when his total is 3 or more below. BART and model agree: both totals 3 or more from the line on the same side (from 21 Nov).' + (trackedSpec.length ? '' : ' Nothing graded yet.');
+        trNote.textContent = 'Signals being watched before any money goes on them, graded at the 8:10 AM price. Under tilt: the under where the book\u2019s total tends to run high. Underdog to win by 2+: a short-priced underdog our forecast has winning outright. BART 5+ from the line: the side of BART\u2019s morning total when it is 5 or more points from the book\u2019s (the 7+ row is the part of those at 7 or more). BART under by 3+: the under when his total is 3 or more below. BART and model agree: both totals 3 or more from the line on the same side (from 21 Nov). Both ratings agree / ratings split: our spread pick with a lean of 3 or more, sorted by a second run of the model on KenPom\u2019s ratings \u2014 agree when that run also leans 3 or more the same way, split when it lands on the other side of the line (from 21 Nov, afternoon).' + (trackedSpec.length ? '' : ' Nothing graded yet.');
         body.appendChild(trNote);
         if (trackedSpec.length) body.appendChild(table(trackedSpec));
       }
