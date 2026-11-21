@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261121,
-  "generated": "2026-11-21T17:17:38Z",
+  "generated": "2026-11-21T17:40:54Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_8_honest_ens5)",
   "members": 10000,
   "rows": [
@@ -15,6 +15,98 @@
    "Sensitivity": "correlation of each perturbed input with the team's score across the members"
   },
   "sheet": [],
+  "parlay": {
+   "stake": 5.0,
+   "legs": [
+    {
+     "home": "New Haven",
+     "away": "New Hampshire",
+     "side": "away",
+     "team": "New Hampshire",
+     "line": -2.5,
+     "odds": -105,
+     "bet": "New Hampshire -2.5",
+     "lean": 4.25,
+     "games_min": 4,
+     "tier": "BET",
+     "measure": 0.2461,
+     "second_run": "agree",
+     "commence": "2026-11-21T18:00:00Z",
+     "p_leg": 0.51
+    },
+    {
+     "home": "La Salle",
+     "away": "Penn",
+     "side": "away",
+     "team": "Penn",
+     "line": 1.5,
+     "odds": -105,
+     "bet": "Penn +1.5",
+     "lean": 4.99,
+     "games_min": 4,
+     "tier": "BET",
+     "measure": 0.2137,
+     "second_run": "agree",
+     "commence": "2026-11-21T21:00:00Z",
+     "p_leg": 0.51
+    },
+    {
+     "home": "Morgan St.",
+     "away": "Cornell",
+     "side": "home",
+     "team": "Morgan St.",
+     "line": 6.5,
+     "odds": -108,
+     "bet": "Morgan St. +6.5",
+     "lean": 6.51,
+     "games_min": 4,
+     "tier": "BET",
+     "measure": 0.1191,
+     "second_run": "agree",
+     "commence": "2026-11-21T19:00:00Z",
+     "p_leg": 0.51
+    },
+    {
+     "home": "Eastern Michigan",
+     "away": "Denver",
+     "side": "home",
+     "team": "Eastern Michigan",
+     "line": -7.5,
+     "odds": -110,
+     "bet": "Eastern Michigan -7.5",
+     "lean": 4.31,
+     "games_min": 3,
+     "tier": "BET",
+     "measure": 0.0313,
+     "second_run": null,
+     "commence": "2026-11-21T18:00:00Z",
+     "p_leg": 0.51
+    },
+    {
+     "home": "Texas Southern",
+     "away": "New Orleans",
+     "side": "away",
+     "team": "New Orleans",
+     "line": 1.5,
+     "odds": -110,
+     "bet": "New Orleans +1.5",
+     "lean": 3.35,
+     "games_min": 2,
+     "tier": "BET",
+     "measure": 0.0099,
+     "second_run": "split",
+     "commence": "2026-11-22T01:30:00Z",
+     "p_leg": 0.51
+    }
+   ],
+   "decimal": 26.756,
+   "american": 2576,
+   "payout": 133.78,
+   "profit": 128.78,
+   "p_all": 0.0345,
+   "expected_profit": -0.38,
+   "basis": "five spread signals, BET before LEAN, ranked by our cover probability minus the ratings formula's; hit chance from backtest rates per leg (0.56 rule-grade, 0.51 otherwise)"
+  },
   "tier_rules": {
    "spread": {
     "BET": "model beats the line by >= 3 points, both teams >= 10 games, |spread| < 20; sized at P = 0.55, x0.25 until both have 15 games",
