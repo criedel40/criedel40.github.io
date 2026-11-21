@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261121,
-  "generated": "2026-11-21T17:12:27Z",
+  "generated": "2026-11-21T17:17:38Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_8_honest_ens5)",
   "members": 10000,
   "rows": [
@@ -132,9 +132,9 @@
    "AwayTeamScore": 83,
    "Spread": "-6.4 UTSA",
    "SpreadValue": 6.4,
-   "Total": 171.6,
+   "Total": 172.2,
    "GapMargin": -0.73,
-   "GapTotal": -5.8,
+   "GapTotal": -5.2,
    "Agreement": null,
    "HomeTeamWinProbability": 0.667,
    "AwayTeamWinProbability": 0.333
@@ -720,9 +720,9 @@
    "AwayTeamScore": 69,
    "Spread": "-1.4 Canisius",
    "SpreadValue": 1.4,
-   "Total": 139.5,
+   "Total": 139.4,
    "GapMargin": 1.44,
-   "GapTotal": -1.0,
+   "GapTotal": -1.1,
    "Agreement": null,
    "HomeTeamWinProbability": 0.542,
    "AwayTeamWinProbability": 0.458
@@ -1286,13 +1286,13 @@
    "Total": 135.5
   },
   "ModelKP": {
-   "HomeTeamScore": 68,
-   "AwayTeamScore": 66,
+   "HomeTeamScore": 69,
+   "AwayTeamScore": 67,
    "Spread": "-1.8 Binghamton",
    "SpreadValue": 1.8,
-   "Total": 134.5,
+   "Total": 135.5,
    "GapMargin": -1.62,
-   "GapTotal": -1.7,
+   "GapTotal": -0.7,
    "Agreement": "agree",
    "HomeTeamWinProbability": 0.548,
    "AwayTeamWinProbability": 0.452
@@ -1844,13 +1844,13 @@
    "Total": 146.5
   },
   "ModelKP": {
-   "HomeTeamScore": 74,
-   "AwayTeamScore": 68,
+   "HomeTeamScore": 75,
+   "AwayTeamScore": 69,
    "Spread": "-5.8 Austin Peay",
    "SpreadValue": 5.8,
-   "Total": 141.8,
+   "Total": 143.4,
    "GapMargin": -1.16,
-   "GapTotal": 0.2,
+   "GapTotal": 1.8,
    "Agreement": null,
    "HomeTeamWinProbability": 0.697,
    "AwayTeamWinProbability": 0.303
@@ -2992,12 +2992,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 77,
-   "AwayTeamScore": 70,
+   "AwayTeamScore": 71,
    "Spread": "-6.3 Bowling Green",
    "SpreadValue": 6.3,
-   "Total": 147.0,
+   "Total": 148.1,
    "GapMargin": -0.95,
-   "GapTotal": -1.1,
+   "GapTotal": 0.0,
    "Agreement": null,
    "HomeTeamWinProbability": 0.696,
    "AwayTeamWinProbability": 0.304
@@ -4155,12 +4155,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 69,
-   "AwayTeamScore": 62,
+   "AwayTeamScore": 63,
    "Spread": "-6.1 Vermont",
    "SpreadValue": 6.1,
-   "Total": 130.9,
+   "Total": 131.6,
    "GapMargin": -0.13,
-   "GapTotal": 0.6,
+   "GapTotal": 1.3,
    "Agreement": null,
    "HomeTeamWinProbability": 0.698,
    "AwayTeamWinProbability": 0.302
@@ -4731,9 +4731,9 @@
    "AwayTeamScore": 82,
    "Spread": "-5.8 Siena",
    "SpreadValue": -5.8,
-   "Total": 158.4,
+   "Total": 157.9,
    "GapMargin": 0.42,
-   "GapTotal": -2.7,
+   "GapTotal": -3.2,
    "Agreement": null,
    "HomeTeamWinProbability": 0.293,
    "AwayTeamWinProbability": 0.707
@@ -5307,12 +5307,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 78,
-   "AwayTeamScore": 63,
+   "AwayTeamScore": 64,
    "Spread": "-14.6 Loyola Marymount",
    "SpreadValue": 14.6,
-   "Total": 140.5,
+   "Total": 141.7,
    "GapMargin": 1.63,
-   "GapTotal": 1.4,
+   "GapTotal": 2.6,
    "Agreement": null,
    "HomeTeamWinProbability": 0.882,
    "AwayTeamWinProbability": 0.118
@@ -5897,13 +5897,13 @@
    "Total": 156.5
   },
   "ModelKP": {
-   "HomeTeamScore": 76,
-   "AwayTeamScore": 69,
+   "HomeTeamScore": 77,
+   "AwayTeamScore": 70,
    "Spread": "-7.2 Cal Poly",
    "SpreadValue": 7.2,
-   "Total": 145.3,
+   "Total": 146.6,
    "GapMargin": -1.1,
-   "GapTotal": -2.3,
+   "GapTotal": -1.0,
    "Agreement": null,
    "HomeTeamWinProbability": 0.746,
    "AwayTeamWinProbability": 0.254
@@ -6476,13 +6476,13 @@
    "Total": 144.5
   },
   "ModelKP": {
-   "HomeTeamScore": 70,
-   "AwayTeamScore": 75,
+   "HomeTeamScore": 71,
+   "AwayTeamScore": 76,
    "Spread": "-4.8 Central Arkansas",
    "SpreadValue": -4.8,
-   "Total": 145.7,
+   "Total": 146.2,
    "GapMargin": -0.65,
-   "GapTotal": -0.7,
+   "GapTotal": -0.2,
    "Agreement": null,
    "HomeTeamWinProbability": 0.314,
    "AwayTeamWinProbability": 0.686
@@ -7049,13 +7049,13 @@
    "Total": 162.5
   },
   "ModelKP": {
-   "HomeTeamScore": 86,
-   "AwayTeamScore": 75,
+   "HomeTeamScore": 87,
+   "AwayTeamScore": 76,
    "Spread": "-11.2 Mercer",
    "SpreadValue": 11.2,
-   "Total": 161.5,
+   "Total": 163.5,
    "GapMargin": 0.24,
-   "GapTotal": -0.9,
+   "GapTotal": 1.1,
    "Agreement": null,
    "HomeTeamWinProbability": 0.85,
    "AwayTeamWinProbability": 0.15
@@ -7639,13 +7639,13 @@
    "Total": 155.5
   },
   "ModelKP": {
-   "HomeTeamScore": 79,
-   "AwayTeamScore": 70,
+   "HomeTeamScore": 80,
+   "AwayTeamScore": 71,
    "Spread": "-8.8 Chattanooga",
    "SpreadValue": 8.8,
-   "Total": 149.7,
+   "Total": 151.0,
    "GapMargin": -0.51,
-   "GapTotal": -1.4,
+   "GapTotal": -0.1,
    "Agreement": null,
    "HomeTeamWinProbability": 0.741,
    "AwayTeamWinProbability": 0.259
@@ -8221,13 +8221,13 @@
    "Total": 147.5
   },
   "ModelKP": {
-   "HomeTeamScore": 72,
-   "AwayTeamScore": 72,
+   "HomeTeamScore": 73,
+   "AwayTeamScore": 73,
    "Spread": "-0.3 Cleveland St.",
    "SpreadValue": 0.3,
-   "Total": 144.3,
+   "Total": 146.6,
    "GapMargin": 1.17,
-   "GapTotal": -4.3,
+   "GapTotal": -2.0,
    "Agreement": null,
    "HomeTeamWinProbability": 0.468,
    "AwayTeamWinProbability": 0.532
@@ -8785,13 +8785,13 @@
    "Total": 142.5
   },
   "ModelKP": {
-   "HomeTeamScore": 83,
+   "HomeTeamScore": 84,
    "AwayTeamScore": 54,
    "Spread": "-29.6 Georgetown",
    "SpreadValue": 29.6,
-   "Total": 137.0,
+   "Total": 138.2,
    "GapMargin": -0.51,
-   "GapTotal": -2.8,
+   "GapTotal": -1.6,
    "Agreement": null,
    "HomeTeamWinProbability": 0.997,
    "AwayTeamWinProbability": 0.003
@@ -9404,13 +9404,13 @@
    "Total": 161.5
   },
   "ModelKP": {
-   "HomeTeamScore": 78,
-   "AwayTeamScore": 80,
+   "HomeTeamScore": 79,
+   "AwayTeamScore": 81,
    "Spread": "-2.0 Cornell",
    "SpreadValue": -2.0,
-   "Total": 157.8,
+   "Total": 159.4,
    "GapMargin": -2.03,
-   "GapTotal": -1.3,
+   "GapTotal": 0.3,
    "Agreement": "agree",
    "HomeTeamWinProbability": 0.406,
    "AwayTeamWinProbability": 0.594
@@ -9981,12 +9981,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 77,
-   "AwayTeamScore": 66,
+   "AwayTeamScore": 67,
    "Spread": "-10.4 Eastern Michigan",
    "SpreadValue": 10.4,
-   "Total": 143.0,
+   "Total": 143.7,
    "GapMargin": -1.39,
-   "GapTotal": -2.5,
+   "GapTotal": -1.8,
    "Agreement": null,
    "HomeTeamWinProbability": 0.801,
    "AwayTeamWinProbability": 0.199
@@ -10563,9 +10563,9 @@
    "AwayTeamScore": 57,
    "Spread": "-38.1 Michigan St.",
    "SpreadValue": 38.1,
-   "Total": 152.2,
+   "Total": 152.3,
    "GapMargin": 2.39,
-   "GapTotal": 0.4,
+   "GapTotal": 0.5,
    "Agreement": null,
    "HomeTeamWinProbability": 0.998,
    "AwayTeamWinProbability": 0.002
@@ -11198,12 +11198,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 73,
-   "AwayTeamScore": 74,
+   "AwayTeamScore": 75,
    "Spread": "-1.6 Drake",
    "SpreadValue": -1.6,
-   "Total": 147.1,
+   "Total": 148.0,
    "GapMargin": 1.01,
-   "GapTotal": -1.0,
+   "GapTotal": -0.1,
    "Agreement": null,
    "HomeTeamWinProbability": 0.353,
    "AwayTeamWinProbability": 0.647
@@ -12379,9 +12379,9 @@
    "AwayTeamScore": 79,
    "Spread": "-1.1 Southern Illinois",
    "SpreadValue": -1.1,
-   "Total": 156.5,
+   "Total": 157.1,
    "GapMargin": -4.09,
-   "GapTotal": 2.4,
+   "GapTotal": 3.0,
    "Agreement": null,
    "HomeTeamWinProbability": 0.445,
    "AwayTeamWinProbability": 0.555
@@ -12946,13 +12946,13 @@
    "Total": 139.5
   },
   "ModelKP": {
-   "HomeTeamScore": 73,
-   "AwayTeamScore": 68,
+   "HomeTeamScore": 74,
+   "AwayTeamScore": 69,
    "Spread": "-4.7 East Tennessee St.",
    "SpreadValue": 4.7,
-   "Total": 141.6,
+   "Total": 142.8,
    "GapMargin": -0.13,
-   "GapTotal": -2.1,
+   "GapTotal": -0.9,
    "Agreement": null,
    "HomeTeamWinProbability": 0.647,
    "AwayTeamWinProbability": 0.353
@@ -13519,9 +13519,9 @@
    "AwayTeamScore": 63,
    "Spread": "-15.0 Elon",
    "SpreadValue": 15.0,
-   "Total": 140.9,
+   "Total": 141.9,
    "GapMargin": 1.18,
-   "GapTotal": -1.6,
+   "GapTotal": -0.6,
    "Agreement": null,
    "HomeTeamWinProbability": 0.897,
    "AwayTeamWinProbability": 0.103
@@ -14109,9 +14109,9 @@
    "AwayTeamScore": 73,
    "Spread": "-3.7 Fordham",
    "SpreadValue": -3.7,
-   "Total": 142.8,
+   "Total": 143.0,
    "GapMargin": -1.38,
-   "GapTotal": 0.2,
+   "GapTotal": 0.4,
    "Agreement": null,
    "HomeTeamWinProbability": 0.339,
    "AwayTeamWinProbability": 0.661
@@ -14670,13 +14670,13 @@
    "Total": 144.5
   },
   "ModelKP": {
-   "HomeTeamScore": 77,
-   "AwayTeamScore": 67,
+   "HomeTeamScore": 78,
+   "AwayTeamScore": 68,
    "Spread": "-9.7 VMI",
    "SpreadValue": 9.7,
-   "Total": 144.7,
+   "Total": 145.8,
    "GapMargin": 0.3,
-   "GapTotal": -2.0,
+   "GapTotal": -0.9,
    "Agreement": null,
    "HomeTeamWinProbability": 0.787,
    "AwayTeamWinProbability": 0.213
@@ -15254,13 +15254,13 @@
    "Total": 146.5
   },
   "ModelKP": {
-   "HomeTeamScore": 76,
-   "AwayTeamScore": 72,
+   "HomeTeamScore": 77,
+   "AwayTeamScore": 73,
    "Spread": "-3.4 George Mason",
    "SpreadValue": 3.4,
-   "Total": 147.9,
+   "Total": 149.6,
    "GapMargin": -2.16,
-   "GapTotal": -1.6,
+   "GapTotal": 0.1,
    "Agreement": null,
    "HomeTeamWinProbability": 0.579,
    "AwayTeamWinProbability": 0.421
@@ -15826,12 +15826,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 72,
-   "AwayTeamScore": 76,
+   "AwayTeamScore": 77,
    "Spread": "-4.3 Middle Tennessee",
    "SpreadValue": -4.3,
-   "Total": 148.2,
+   "Total": 149.1,
    "GapMargin": 0.78,
-   "GapTotal": 1.0,
+   "GapTotal": 1.9,
    "Agreement": null,
    "HomeTeamWinProbability": 0.335,
    "AwayTeamWinProbability": 0.665
@@ -16394,9 +16394,9 @@
    "AwayTeamScore": 74,
    "Spread": "-20.8 LSU",
    "SpreadValue": 20.8,
-   "Total": 169.1,
+   "Total": 169.4,
    "GapMargin": 1.13,
-   "GapTotal": 1.3,
+   "GapTotal": 1.6,
    "Agreement": null,
    "HomeTeamWinProbability": 0.953,
    "AwayTeamWinProbability": 0.047
@@ -16997,12 +16997,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 78,
-   "AwayTeamScore": 82,
+   "AwayTeamScore": 83,
    "Spread": "-4.3 Penn",
    "SpreadValue": -4.3,
-   "Total": 160.5,
+   "Total": 160.8,
    "GapMargin": -0.77,
-   "GapTotal": 2.0,
+   "GapTotal": 2.3,
    "Agreement": "agree",
    "HomeTeamWinProbability": 0.324,
    "AwayTeamWinProbability": 0.676
@@ -17571,12 +17571,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 83,
-   "AwayTeamScore": 59,
+   "AwayTeamScore": 60,
    "Spread": "-23.1 Syracuse",
    "SpreadValue": 23.1,
-   "Total": 142.0,
+   "Total": 142.7,
    "GapMargin": -0.02,
-   "GapTotal": -0.5,
+   "GapTotal": 0.2,
    "Agreement": null,
    "HomeTeamWinProbability": 0.979,
    "AwayTeamWinProbability": 0.021
@@ -18185,9 +18185,9 @@
    "AwayTeamScore": 81,
    "Spread": "-3.8 Little Rock",
    "SpreadValue": -3.8,
-   "Total": 157.9,
+   "Total": 158.1,
    "GapMargin": -0.13,
-   "GapTotal": -0.2,
+   "GapTotal": 0.0,
    "Agreement": null,
    "HomeTeamWinProbability": 0.332,
    "AwayTeamWinProbability": 0.668
@@ -18755,9 +18755,9 @@
    "AwayTeamScore": 63,
    "Spread": "-12.8 Massachusetts",
    "SpreadValue": 12.8,
-   "Total": 138.9,
+   "Total": 139.4,
    "GapMargin": 0.55,
-   "GapTotal": -1.7,
+   "GapTotal": -1.2,
    "Agreement": null,
    "HomeTeamWinProbability": 0.876,
    "AwayTeamWinProbability": 0.124
@@ -19334,9 +19334,9 @@
    "AwayTeamScore": 69,
    "Spread": "-3.7 Mercyhurst",
    "SpreadValue": -3.7,
-   "Total": 133.7,
+   "Total": 134.5,
    "GapMargin": -0.29,
-   "GapTotal": 0.7,
+   "GapTotal": 1.5,
    "Agreement": null,
    "HomeTeamWinProbability": 0.313,
    "AwayTeamWinProbability": 0.687
@@ -19898,13 +19898,13 @@
    "Total": 160.5
   },
   "ModelKP": {
-   "HomeTeamScore": 78,
+   "HomeTeamScore": 79,
    "AwayTeamScore": 83,
    "Spread": "-4.6 Michigan",
    "SpreadValue": -4.6,
-   "Total": 161.0,
+   "Total": 161.8,
    "GapMargin": -0.3,
-   "GapTotal": -0.9,
+   "GapTotal": -0.1,
    "Agreement": null,
    "HomeTeamWinProbability": 0.331,
    "AwayTeamWinProbability": 0.669
@@ -20482,12 +20482,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 76,
-   "AwayTeamScore": 75,
+   "AwayTeamScore": 76,
    "Spread": "-0.3 Milwaukee",
    "SpreadValue": 0.3,
-   "Total": 150.7,
+   "Total": 152.0,
    "GapMargin": 1.01,
-   "GapTotal": -1.1,
+   "GapTotal": 0.2,
    "Agreement": null,
    "HomeTeamWinProbability": 0.485,
    "AwayTeamWinProbability": 0.515
@@ -21052,9 +21052,9 @@
    "AwayTeamScore": 71,
    "Spread": "-5.5 Navy",
    "SpreadValue": -5.5,
-   "Total": 136.1,
+   "Total": 136.3,
    "GapMargin": 0.39,
-   "GapTotal": 0.0,
+   "GapTotal": 0.2,
    "Agreement": null,
    "HomeTeamWinProbability": 0.291,
    "AwayTeamWinProbability": 0.709
@@ -21633,9 +21633,9 @@
    "AwayTeamScore": 68,
    "Spread": "-6.6 New Hampshire",
    "SpreadValue": -6.6,
-   "Total": 128.8,
+   "Total": 128.7,
    "GapMargin": 0.14,
-   "GapTotal": -1.9,
+   "GapTotal": -2.0,
    "Agreement": "agree",
    "HomeTeamWinProbability": 0.256,
    "AwayTeamWinProbability": 0.744
@@ -22203,13 +22203,13 @@
    "Total": 159.5
   },
   "ModelKP": {
-   "HomeTeamScore": 78,
+   "HomeTeamScore": 79,
    "AwayTeamScore": 81,
    "Spread": "-2.2 New Mexico",
    "SpreadValue": -2.2,
-   "Total": 159.1,
+   "Total": 160.4,
    "GapMargin": -1.31,
-   "GapTotal": 0.0,
+   "GapTotal": 1.3,
    "Agreement": null,
    "HomeTeamWinProbability": 0.408,
    "AwayTeamWinProbability": 0.592
@@ -22774,13 +22774,13 @@
    "Total": 159.5
   },
   "ModelKP": {
-   "HomeTeamScore": 82,
-   "AwayTeamScore": 80,
+   "HomeTeamScore": 83,
+   "AwayTeamScore": 81,
    "Spread": "-1.6 Texas Southern",
    "SpreadValue": 1.6,
-   "Total": 162.2,
+   "Total": 163.4,
    "GapMargin": 3.47,
-   "GapTotal": -0.8,
+   "GapTotal": 0.4,
    "Agreement": "split",
    "HomeTeamWinProbability": 0.503,
    "AwayTeamWinProbability": 0.497
@@ -23937,9 +23937,9 @@
    "AwayTeamScore": 80,
    "Spread": "-11.1 UNC Wilmington",
    "SpreadValue": -11.1,
-   "Total": 148.1,
+   "Total": 148.8,
    "GapMargin": 1.36,
-   "GapTotal": 0.1,
+   "GapTotal": 0.8,
    "Agreement": null,
    "HomeTeamWinProbability": 0.142,
    "AwayTeamWinProbability": 0.858
@@ -24524,9 +24524,9 @@
    "AwayTeamScore": 79,
    "Spread": "-6.9 Northeastern",
    "SpreadValue": -6.9,
-   "Total": 150.5,
+   "Total": 151.4,
    "GapMargin": -1.04,
-   "GapTotal": -0.1,
+   "GapTotal": 0.8,
    "Agreement": null,
    "HomeTeamWinProbability": 0.251,
    "AwayTeamWinProbability": 0.749
@@ -25106,9 +25106,9 @@
    "AwayTeamScore": 69,
    "Spread": "-2.8 Oral Roberts",
    "SpreadValue": 2.8,
-   "Total": 141.1,
+   "Total": 141.6,
    "GapMargin": -1.52,
-   "GapTotal": -0.9,
+   "GapTotal": -0.4,
    "Agreement": null,
    "HomeTeamWinProbability": 0.589,
    "AwayTeamWinProbability": 0.411
@@ -25674,13 +25674,13 @@
    "Total": 164.5
   },
   "ModelKP": {
-   "HomeTeamScore": 86,
+   "HomeTeamScore": 85,
    "AwayTeamScore": 78,
    "Spread": "-7.7 Tennessee Tech",
    "SpreadValue": 7.7,
-   "Total": 163.8,
+   "Total": 163.2,
    "GapMargin": 0.75,
-   "GapTotal": 3.7,
+   "GapTotal": 3.1,
    "Agreement": null,
    "HomeTeamWinProbability": 0.711,
    "AwayTeamWinProbability": 0.289
@@ -26262,9 +26262,9 @@
    "AwayTeamScore": 66,
    "Spread": "-4.8 Stony Brook",
    "SpreadValue": -4.8,
-   "Total": 126.9,
+   "Total": 127.7,
    "GapMargin": -1.58,
-   "GapTotal": -1.3,
+   "GapTotal": -0.5,
    "Agreement": null,
    "HomeTeamWinProbability": 0.315,
    "AwayTeamWinProbability": 0.685
@@ -26828,9 +26828,9 @@
    "AwayTeamScore": 73,
    "Spread": "-4.7 UC Irvine",
    "SpreadValue": -4.7,
-   "Total": 140.5,
+   "Total": 141.6,
    "GapMargin": -1.04,
-   "GapTotal": 0.7,
+   "GapTotal": 1.8,
    "Agreement": null,
    "HomeTeamWinProbability": 0.303,
    "AwayTeamWinProbability": 0.697
@@ -27394,12 +27394,12 @@
   },
   "ModelKP": {
    "HomeTeamScore": 68,
-   "AwayTeamScore": 73,
+   "AwayTeamScore": 72,
    "Spread": "-4.4 Valparaiso",
    "SpreadValue": -4.4,
-   "Total": 140.7,
+   "Total": 140.4,
    "GapMargin": -2.45,
-   "GapTotal": 1.8,
+   "GapTotal": 1.5,
    "Agreement": null,
    "HomeTeamWinProbability": 0.319,
    "AwayTeamWinProbability": 0.681
@@ -27959,13 +27959,13 @@
    "Total": 146.5
   },
   "ModelKP": {
-   "HomeTeamScore": 78,
-   "AwayTeamScore": 68,
+   "HomeTeamScore": 79,
+   "AwayTeamScore": 69,
    "Spread": "-9.9 UNC Greensboro",
    "SpreadValue": 9.9,
-   "Total": 146.4,
+   "Total": 147.3,
    "GapMargin": 3.23,
-   "GapTotal": -1.5,
+   "GapTotal": -0.6,
    "Agreement": null,
    "HomeTeamWinProbability": 0.829,
    "AwayTeamWinProbability": 0.171
@@ -28529,13 +28529,13 @@
    "Total": 147.5
   },
   "ModelKP": {
-   "HomeTeamScore": 81,
+   "HomeTeamScore": 82,
    "AwayTeamScore": 65,
    "Spread": "-16.4 Wake Forest",
    "SpreadValue": 16.4,
-   "Total": 146.2,
+   "Total": 147.2,
    "GapMargin": 1.01,
-   "GapTotal": -1.5,
+   "GapTotal": -0.5,
    "Agreement": null,
    "HomeTeamWinProbability": 0.934,
    "AwayTeamWinProbability": 0.066
@@ -29117,13 +29117,13 @@
    "Total": 165.5
   },
   "ModelKP": {
-   "HomeTeamScore": 85,
+   "HomeTeamScore": 86,
    "AwayTeamScore": 82,
    "Spread": "-3.5 Wofford",
    "SpreadValue": 3.5,
-   "Total": 167.3,
+   "Total": 168.2,
    "GapMargin": -0.43,
-   "GapTotal": 0.5,
+   "GapTotal": 1.4,
    "Agreement": null,
    "HomeTeamWinProbability": 0.612,
    "AwayTeamWinProbability": 0.388
