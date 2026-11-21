@@ -171,6 +171,11 @@
     .tier-PASS{background:#e5e5e5;color:#666}
     .plays{max-width:1000px;margin:0 auto 1rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow-x:auto;border-top:4px solid #1b7f3b}
     .plays-head{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;padding:.75rem .75rem .25rem}
+    .parlay-card{margin:.5rem .75rem .75rem;padding:.6rem .8rem;border:1px solid rgba(128,128,128,.35);border-left:4px solid #b8860b;border-radius:6px}
+    .parlay-title{font-weight:700;margin-bottom:.25rem}
+    .parlay-legs{margin:.25rem 0 .35rem 1.25rem;padding:0}
+    .parlay-legs li{margin:.1rem 0}
+    .parlay-note{font-size:.85em;opacity:.8}
     .plays-title{font-weight:700;color:#0b0b0b;font-size:1.05rem;margin-right:auto}
     .plays-head label{color:#555;font-weight:700;font-size:.9rem}
     .plays-head input{width:7rem;padding:.3rem .5rem;border:1px solid #cfd6e0;border-radius:6px;font-size:.95rem;font-variant-numeric:tabular-nums;text-align:right}
@@ -767,6 +772,43 @@
     let sheetBankroll = 500;   // the bankroll the sheet's stakes and the record's dollars are computed against
     try { const v = parseFloat(localStorage.getItem('bball_bankroll')); if (isFinite(v) && v > 0) sheetBankroll = v; } catch (e) {}
     const money = v => '$' + v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    // The parlay of the day: five of the sheet's spread picks at the 8:10 AM prices, a fixed $5 outside the bankroll rules
+    function renderParlay(p, box) {
+      if (!p) return;
+      const card = document.createElement('div'); card.className = 'parlay-card';
+      const h = document.createElement('div'); h.className = 'parlay-title'; card.appendChild(h);
+      if (!p.legs || !p.legs.length) { h.textContent = `Parlay of the day: ${p.note || 'none today'}`; box.appendChild(card); return; }
+      const price = o => (o > 0 ? '+' : '') + o;
+      h.textContent = `Parlay of the day · $${p.stake.toFixed(0)} to win $${p.profit.toFixed(2)} (${price(p.american)})`;
+      const ol = document.createElement('ol'); ol.className = 'parlay-legs';
+      p.legs.forEach(l => { const li = document.createElement('li'); li.textContent = `${l.bet} (${price(l.odds)}) · ${l.away} at ${l.home}`; ol.appendChild(li); });
+      card.appendChild(ol);
+      const note = document.createElement('div'); note.className = 'parlay-note';
+      const ev = p.expected_profit;
+      note.textContent = `All five must cover. Estimated chance ${(100 * p.p_all).toFixed(1)}% (about 1 in ${Math.round(1 / p.p_all)}); expected result ${ev >= 0 ? '+' : '−'}$${Math.abs(ev).toFixed(2)} per $${p.stake.toFixed(0)}. ` +
+        'The legs are our spread picks that the public ratings back least, at the 8:10 AM DraftKings prices. A fixed side bet, outside the bankroll rules; until both teams have 10 games it is expected to lose.';
+      card.appendChild(note); box.appendChild(card);
+    }
+    function renderParlayRecord(p, sec) {
+      if (!p || !(p.days || p.pending)) return;
+      const h = document.createElement('h3'); h.textContent = 'Parlay of the day'; sec.appendChild(h);
+      const sign = v => (v >= 0 ? '+$' : '−$') + Math.abs(v).toFixed(2);
+      const sub = document.createElement('p'); sub.className = 'sub';
+      sub.textContent = `$${p.stake.toFixed(0)} a day on five spread picks from the 8:10 AM sheet. ${p.won} of ${p.days} day${p.days === 1 ? '' : 's'} hit; staked $${p.staked.toFixed(2)}, result ${sign(p.profit)}` +
+        (p.roi === null ? '' : ` (${(100 * p.roi).toFixed(0)}%)`) + `; legs ${p.legs_won} of ${p.legs}` + (p.pending ? `; ${p.pending} pending` : '') + '.';
+      sec.appendChild(sub);
+      const t = document.createElement('table'); t.className = 'prediction-table';
+      t.innerHTML = '<thead><tr><th>Date</th><th>Legs</th><th>Legs won</th><th>Result</th><th>$</th></tr></thead>';
+      const tb = document.createElement('tbody');
+      (p.history || []).slice().reverse().forEach(d => {
+        const tr = document.createElement('tr'); const ds = String(d.date);
+        const mark = r => r === 'win' ? ' ✓' : r === 'loss' ? ' ✗' : r === 'push' ? ' (push)' : '';
+        [`${ds.slice(4, 6)}/${ds.slice(6, 8)}`, d.legs.map(l => l.bet + mark(l.result)).join(' · '), `${d.legs_won}/${d.legs.length}`, d.result, d.profit === null ? '—' : sign(d.profit)]
+          .forEach(c => { const td = document.createElement('td'); td.textContent = c; tr.appendChild(td); });
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); sec.appendChild(t);
+    }
     function renderSheet(key) {
       const { meta, data, files, box } = sheetState;
       if (!box) return;
@@ -797,6 +839,7 @@
       const input = document.createElement('input'); input.type = 'number'; input.min = '0'; input.step = '50'; input.inputMode = 'decimal'; input.id = 'bankroll-input'; input.value = String(sheetBankroll); label.appendChild(input);
       input.addEventListener('change', () => { const v = parseFloat(input.value); if (isFinite(v) && v >= 0) { sheetBankroll = v; try { localStorage.setItem('bball_bankroll', String(v)); } catch (e) {} renderSheet(key); } });
       box.appendChild(head);
+      renderParlay(meta && meta.parlay, box);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
       const t = document.createElement('table');
       const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num" title="Points the DraftKings number is better (+) or worse (-) for this side than the median of the other books">vs books</th><th class="num">Model</th><th class="num">Edge</th><th class="mid">Confidence</th><th class="mid">Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
@@ -835,6 +878,7 @@
       const sub = document.createElement('p'); sub.className = 'sub'; sub.textContent = 'Every BET and LEAN signal is graded the next morning at the odds on the sheet. Units are flat 1 per bet. CLV is the closing-line value: points our number beat the DraftKings close by (spread, total) or probability points (moneyline).'; sec.appendChild(sub);
       const tabs = document.createElement('div'); tabs.className = 'tabs'; sec.appendChild(tabs);
       const body = document.createElement('div'); sec.appendChild(body);
+      renderParlayRecord(rec.parlay, sec);
       const seasons = rec.seasons;
       const show = (i) => {
         tabs.querySelectorAll('button').forEach((b, j) => b.classList.toggle('active', i === j));
@@ -959,10 +1003,15 @@
     function renderResultsSummary(season, body, minGames) {
       const scored = scoredGames(season), fin = scored.filter(g => g.status === 'final');
       const waiting = season.games.length - scored.length;
+      // break-even at what the picks really cost (the bet-of-record DraftKings price of each), not a flat -110
+      const priced = fin.filter(g => (g.ats === 'W' || g.ats === 'L') && typeof g.pick_odds === 'number' && g.pick_odds !== 0);
+      const beOf = o => o < 0 ? -o / (-o + 100) : 100 / (o + 100);
+      const be = priced.length ? priced.reduce((a, g) => a + beOf(g.pick_odds), 0) / priced.length : null;
+      const beText = be === null ? '52.4%' : (100 * be).toFixed(1) + '%';
       const n = document.createElement('p'); n.className = 'sub';
       n.textContent = `Every game on the sheet, BET or not, graded at the bet-of-record DraftKings line once both teams have played ${minGames} games` +
         (waiting ? ` (${waiting} earlier game${waiting === 1 ? ' is' : 's are'} recorded but not scored)` : '') +
-        '. Break-even against the spread at -110 is 52.4%. Vegas favourite is how often the betting favourite won the same games: the bar the model’s winner rate has to clear.';
+        (be === null ? '. Break-even against the spread at -110 is 52.4%' : `. Break-even against the spread is ${beText} at the DraftKings prices these picks were offered at (52.4% at a flat -110)`) + '. Vegas favourite is how often the betting favourite won the same games: the bar the model’s winner rate has to clear.';
       body.appendChild(n);
       if (!fin.length) {
         const e = document.createElement('p'); e.className = 'sub';
@@ -971,7 +1020,7 @@
       }
       const all = resultsSummary(fin);
       const row = document.createElement('div'); row.className = 'stat-row';
-      [[String(all.games), 'games scored'], [all.ats.text, 'against the spread' + pctText(all.ats.pct) + ', break-even 52.4%'], [all.tot.text, 'totals' + pctText(all.tot.pct)],
+      [[String(all.games), 'games scored'], [all.ats.text, 'against the spread' + pctText(all.ats.pct) + ', break-even ' + beText], [all.tot.text, 'totals' + pctText(all.tot.pct)],
        [all.su, 'model picked the winner' + pctText(all.suPct)], [all.fav, 'Vegas favourite won' + pctText(all.favPct)],
        [all.model === null ? '—' : all.model.toFixed(1), 'model miss, pts per game'], [all.vegas === null ? '—' : all.vegas.toFixed(1), `Vegas miss, pts per game (n ${all.n})`]].forEach(([v, k]) => {
         const st = document.createElement('div'); st.className = 'stat';
