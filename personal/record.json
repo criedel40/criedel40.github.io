@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T07:25:15Z",
+ "generated": "2026-11-22T14:25:15Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -6923,12 +6923,52 @@
   "stake": 5.0,
   "days": 0,
   "won": 0,
-  "pending": 0,
+  "pending": 1,
   "staked": 0,
   "profit": 0,
   "roi": null,
   "legs_won": 0,
   "legs": 0,
-  "history": []
+  "history": [
+   {
+    "date": 20261122,
+    "result": "pending",
+    "profit": null,
+    "payout": 127.87,
+    "legs_won": 0,
+    "legs": [
+     {
+      "bet": "South Dakota +1.5",
+      "odds": -125,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "San Diego +2.5",
+      "odds": -105,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Duquesne +3.5",
+      "odds": -105,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Utah +10.5",
+      "odds": -105,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Cal Baptist +9.5",
+      "odds": -110,
+      "result": "pending",
+      "final": null
+     }
+    ]
+   }
+  ]
  }
 }
