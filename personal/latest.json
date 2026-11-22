@@ -1,7 +1,7 @@
 {
  "_meta": {
   "date": 20261122,
-  "generated": "2026-11-22T16:04:39Z",
+  "generated": "2026-11-22T16:12:54Z",
   "model": "Beyond the Arc DL (ic_wide_matchup_context_v2_8_honest_ens5)",
   "members": 10000,
   "rows": [
@@ -106,6 +106,31 @@
    "p_all": 0.0345,
    "expected_profit": -0.59,
    "basis": "five spread signals, BET before LEAN, ranked by our cover probability minus the ratings formula's; hit chance from backtest rates per leg (0.56 rule-grade, 0.51 otherwise)"
+  },
+  "ml_picks": {
+   "picks": [
+    {
+     "home": "South Dakota",
+     "away": "Utah Tech",
+     "side": "home",
+     "team": "South Dakota",
+     "kind": "underdog",
+     "price": -110,
+     "line": 1.5,
+     "our_margin": 3.1,
+     "clears_spread_by": 4.6,
+     "games_min": 4,
+     "qualified": false,
+     "commence": "2026-11-22T19:00:00Z"
+    }
+   ],
+   "qualified": 0,
+   "evidence": {
+    "underdog": "10+ games: 282 bets, 52.8%, +9.2%",
+    "favourite": "10+ games: 265 bets, 87.9%, +6.1%"
+   },
+   "note": null,
+   "basis": "underdogs (to +250) we have winning by 2+, and favourites at -6 to -15 we have beating the spread by 3+; the ones clearing the spread by most first; a pick with a team under 10 games is a preview only"
   },
   "tier_rules": {
    "spread": {
