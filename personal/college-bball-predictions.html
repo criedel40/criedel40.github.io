@@ -789,6 +789,24 @@
         'The legs are our spread picks that the public ratings back least, at the 8:10 AM DraftKings prices. A fixed side bet, outside the bankroll rules; until both teams have 10 games it is expected to lose.';
       card.appendChild(note); box.appendChild(card);
     }
+    // Moneyline picks of the day: up to three, of the two kinds that have paid (an underdog we have winning by 2+, a mid-size favourite we have beating the spread by 3+); a list, no stake
+    function renderMlPicks(m, box) {
+      if (!m) return;
+      const card = document.createElement('div'); card.className = 'parlay-card';
+      const h = document.createElement('div'); h.className = 'parlay-title'; card.appendChild(h);
+      if (!m.picks || !m.picks.length) { h.textContent = 'Moneyline picks: none today'; const n = document.createElement('div'); n.className = 'parlay-note'; n.textContent = 'No underdog we have winning by 2+ and no -6 to -15 favourite we have beating the spread by 3+ on this sheet.'; card.appendChild(n); box.appendChild(card); return; }
+      h.textContent = `Moneyline picks · ${m.picks.length} today`;
+      const ol = document.createElement('ol'); ol.className = 'parlay-legs';
+      m.picks.forEach(p => {
+        const li = document.createElement('li'); const price = (p.price > 0 ? '+' : '') + p.price;
+        li.textContent = `${p.team} ML (${price}) · ${p.kind === 'underdog' ? 'underdog we have winning by ' + p.our_margin.toFixed(1) : 'favourite we have by ' + p.our_margin.toFixed(1) + ' against a spread of ' + Math.abs(p.line).toFixed(1)}` + (p.qualified ? '' : ' · PREVIEW: a team has under 10 games');
+        ol.appendChild(li);
+      });
+      card.appendChild(ol);
+      const note = document.createElement('div'); note.className = 'parlay-note';
+      note.textContent = 'Past seasons, both teams at 10+ games: underdogs of this kind won 52.8% (+9% return), favourites of this kind 87.9% (+6%). Before 10 games neither has paid, and the underdogs lost. A list only: nothing here is staked.';
+      card.appendChild(note); box.appendChild(card);
+    }
     function renderParlayRecord(p, sec) {
       if (!p || !(p.days || p.pending)) return;
       const h = document.createElement('h3'); h.textContent = 'Parlay of the day'; sec.appendChild(h);
@@ -840,6 +858,7 @@
       input.addEventListener('change', () => { const v = parseFloat(input.value); if (isFinite(v) && v >= 0) { sheetBankroll = v; try { localStorage.setItem('bball_bankroll', String(v)); } catch (e) {} renderSheet(key); } });
       box.appendChild(head);
       renderParlay(meta && meta.parlay, box);
+      renderMlPicks(meta && meta.ml_picks, box);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
       const t = document.createElement('table');
       const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num" title="Points the DraftKings number is better (+) or worse (-) for this side than the median of the other books">vs books</th><th class="num">Model</th><th class="num">Edge</th><th class="mid">Confidence</th><th class="mid">Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
@@ -962,10 +981,10 @@
       body.appendChild(table([['All BET signals', 'BET', 'all', true], ['BET: spread', 'BET', 'spread'], ['BET: total', 'BET', 'total'], ['BET: moneyline', 'BET', 'moneyline'],
                               ['All LEAN signals', 'LEAN', 'all', true], ['LEAN: spread', 'LEAN', 'spread'], ['LEAN: total', 'LEAN', 'total'], ['LEAN: moneyline', 'LEAN', 'moneyline']]));
       if (s.source === 'live') {
-        const trackedSpec = [['Totals: under tilt', 'candidate: under-tilt', 'all'], ['Moneyline: underdog to win by 2+', 'candidate: dog-win', 'all'], ['Totals: BART 5+ from the line', 'candidate: bart-total-5', 'all'], ['Totals: BART 7+ from the line', 'candidate: bart-total-7', 'all'], ['Totals: BART under by 3+', 'candidate: bart-under-3', 'all'], ['Totals: BART and model agree', 'candidate: bart-model-total', 'all'], ['Spread: both ratings agree', 'candidate: kp-agree-spread', 'all'], ['Spread: ratings split', 'candidate: kp-split-spread', 'all'], ['Totals: totals model (55%+)', 'candidate: totals-model', 'all']].filter(([, g]) => s.table[g]);
+        const trackedSpec = [['Totals: under tilt', 'candidate: under-tilt', 'all'], ['Moneyline: underdog to win by 2+', 'candidate: dog-win', 'all'], ['Totals: BART 5+ from the line', 'candidate: bart-total-5', 'all'], ['Totals: BART 7+ from the line', 'candidate: bart-total-7', 'all'], ['Totals: BART under by 3+', 'candidate: bart-under-3', 'all'], ['Totals: BART and model agree', 'candidate: bart-model-total', 'all'], ['Spread: both ratings agree', 'candidate: kp-agree-spread', 'all'], ['Spread: ratings split', 'candidate: kp-split-spread', 'all'], ['Totals: totals model (55%+)', 'candidate: totals-model', 'all'], ['Moneyline: favourite by 3+ more than the spread', 'candidate: fav-win', 'all']].filter(([, g]) => s.table[g]);
         body.appendChild(sectionTitle('Tracked, not staked'));
         const trNote = document.createElement('p'); trNote.className = 'sub';
-        trNote.textContent = 'Signals being watched before any money goes on them, graded at the 8:10 AM price. Under tilt: the under where the book\u2019s total tends to run high. Underdog to win by 2+: a short-priced underdog our forecast has winning outright. BART 5+ from the line: the side of BART\u2019s morning total when it is 5 or more points from the book\u2019s (the 7+ row is the part of those at 7 or more). BART under by 3+: the under when his total is 3 or more below. BART and model agree: both totals 3 or more from the line on the same side (from 21 Nov). Both ratings agree / ratings split: our spread pick with a lean of 3 or more, sorted by a second run of the model on KenPom\u2019s ratings \u2014 agree when that run also leans 3 or more the same way, split when it lands on the other side of the line (from 21 Nov, afternoon). Totals model: a small model that reads our total, the ratings formula\u2019s total, the second run, the line and the game\u2019s setting, and gives the chance of the over; listed when it is 55% or more either way (from 22 Nov, afternoon).' + (trackedSpec.length ? '' : ' Nothing graded yet.');
+        trNote.textContent = 'Signals being watched before any money goes on them, graded at the 8:10 AM price. Under tilt: the under where the book\u2019s total tends to run high. Underdog to win by 2+: a short-priced underdog our forecast has winning outright. BART 5+ from the line: the side of BART\u2019s morning total when it is 5 or more points from the book\u2019s (the 7+ row is the part of those at 7 or more). BART under by 3+: the under when his total is 3 or more below. BART and model agree: both totals 3 or more from the line on the same side (from 21 Nov). Both ratings agree / ratings split: our spread pick with a lean of 3 or more, sorted by a second run of the model on KenPom\u2019s ratings \u2014 agree when that run also leans 3 or more the same way, split when it lands on the other side of the line (from 21 Nov, afternoon). Totals model: a small model that reads our total, the ratings formula\u2019s total, the second run, the line and the game\u2019s setting, and gives the chance of the over; listed when it is 55% or more either way (from 22 Nov, afternoon). Favourite by 3+ more than the spread: the moneyline on a favourite at -6 to -15 that our forecast has winning by at least 3 points more than the spread, both teams at 10+ games.' + (trackedSpec.length ? '' : ' Nothing graded yet.');
         body.appendChild(trNote);
         if (trackedSpec.length) body.appendChild(table(trackedSpec));
       }
