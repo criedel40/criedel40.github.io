@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T07:25:13Z",
+ "generated": "2026-11-23T14:25:13Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -7131,7 +7131,7 @@
   "stake": 5.0,
   "days": 1,
   "won": 0,
-  "pending": 0,
+  "pending": 1,
   "staked": 5.0,
   "profit": -5.0,
   "roi": -1.0,
@@ -7174,6 +7174,45 @@
       "odds": -110,
       "result": "win",
       "final": "71-79"
+     }
+    ]
+   },
+   {
+    "date": 20261123,
+    "result": "pending",
+    "profit": null,
+    "payout": 127.02,
+    "legs_won": 0,
+    "legs": [
+     {
+      "bet": "St. Bonaventure -4.5",
+      "odds": -112,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Tulane +1.5",
+      "odds": -105,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "William & Mary -4.5",
+      "odds": -110,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Colorado St. +16.5",
+      "odds": -108,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Washington +12.5",
+      "odds": -115,
+      "result": "pending",
+      "final": null
      }
     ]
    }
