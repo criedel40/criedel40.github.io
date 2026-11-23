@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T23:25:15Z",
+ "generated": "2026-11-23T07:25:13Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -7129,51 +7129,51 @@
  "parlay": {
   "season": 2027,
   "stake": 5.0,
-  "days": 0,
+  "days": 1,
   "won": 0,
-  "pending": 1,
-  "staked": 0,
-  "profit": 0,
-  "roi": null,
-  "legs_won": 0,
-  "legs": 0,
+  "pending": 0,
+  "staked": 5.0,
+  "profit": -5.0,
+  "roi": -1.0,
+  "legs_won": 3,
+  "legs": 5,
   "history": [
    {
     "date": 20261122,
-    "result": "pending",
-    "profit": null,
+    "result": "loss",
+    "profit": -5.0,
     "payout": 127.87,
-    "legs_won": 0,
+    "legs_won": 3,
     "legs": [
      {
       "bet": "South Dakota +1.5",
       "odds": -125,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "74-73"
      },
      {
       "bet": "San Diego +2.5",
       "odds": -105,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "58-80"
      },
      {
       "bet": "Duquesne +3.5",
       "odds": -105,
-      "result": "pending",
-      "final": null
+      "result": "loss",
+      "final": "79-61"
      },
      {
       "bet": "Utah +10.5",
       "odds": -105,
-      "result": "pending",
-      "final": null
+      "result": "loss",
+      "final": "77-62"
      },
      {
       "bet": "Cal Baptist +9.5",
       "odds": -110,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "71-79"
      }
     ]
    }
