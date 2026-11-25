@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T23:25:27Z",
+ "generated": "2026-11-25T07:25:21Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -7045,14 +7045,14 @@
  "parlay": {
   "season": 2027,
   "stake": 5.0,
-  "days": 2,
+  "days": 3,
   "won": 0,
-  "pending": 1,
-  "staked": 10.0,
-  "profit": -10.0,
+  "pending": 0,
+  "staked": 15.0,
+  "profit": -15.0,
   "roi": -1.0,
-  "legs_won": 6,
-  "legs": 10,
+  "legs_won": 11,
+  "legs": 15,
   "history": [
    {
     "date": 20261122,
@@ -7098,7 +7098,7 @@
     "result": "loss",
     "profit": -5.0,
     "payout": 127.02,
-    "legs_won": 3,
+    "legs_won": 4,
     "legs": [
      {
       "bet": "St. Bonaventure -4.5",
@@ -7121,8 +7121,8 @@
      {
       "bet": "Colorado St. +16.5",
       "odds": -108,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "96-83"
      },
      {
       "bet": "Washington +12.5",
@@ -7134,40 +7134,40 @@
    },
    {
     "date": 20261124,
-    "result": "pending",
-    "profit": null,
+    "result": "loss",
+    "profit": -5.0,
     "payout": 122.91,
-    "legs_won": 0,
+    "legs_won": 4,
     "legs": [
      {
       "bet": "Nevada -1.5",
       "odds": 110,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "66-85"
      },
      {
       "bet": "Queens +1.5",
       "odds": -115,
-      "result": "pending",
-      "final": null
+      "result": "loss",
+      "final": "86-77"
      },
      {
       "bet": "St. Bonaventure +1.5",
       "odds": -130,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "72-70"
      },
      {
       "bet": "Campbell +1.5",
       "odds": -115,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "66-70"
      },
      {
       "bet": "Green Bay +1.5",
       "odds": -112,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "72-77"
      }
     ]
    }
