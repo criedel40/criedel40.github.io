@@ -868,13 +868,18 @@
         const odds = (r.odds === null || r.odds === undefined) ? '—' : (r.odds > 0 ? '+' : '') + r.odds;
         const edge = (r.edge === null || r.edge === undefined) ? '—' : `${r.edge >= 0 ? '+' : ''}${(100 * r.edge).toFixed(1)}%`;
         const model = b ? `${(100 * b.probability).toFixed(1)}%` : (r.model === null || r.model === undefined) ? '—' : `${(100 * r.model).toFixed(1)}%`;
-        const open = (b && b.open) || r.open || '—';
+        const open0 = (b && b.open) || r.open || '—';
+        // what DraftKings' spread has done since it opened, from our side (handoff 247): tracked as a check, not a rule
+        const lm = (r.market === 'Spread' && r.line_move !== null && r.line_move !== undefined) ? Number(r.line_move) : null;
+        const mvTxt = lm === null ? '' : (lm === 0 ? 'unmoved' : lm > 0 ? `toward us ${lm}` : `away ${Math.abs(lm)}`);
+        const open = open0 + (mvTxt ? ' \u00B7 ' + mvTxt : '');
         const hasBooks = r.books !== null && r.books !== undefined;
         const booksTxt = (hasBooks ? `${r.books > 0 ? '+' : ''}${Number(r.books).toFixed(1)}` : '—') + (r.warn ? ' \u26A0' : '');
         const betTxt = r.market === '—' ? r.bet : `${r.market}: ${r.bet}${r.note ? ' (' + r.note + ')' : ''}${r.track ? ' [tracked: ' + r.track + ']' : ''}`;
-        [[betTxt, false], [game, false], [odds, true], [open, true], [booksTxt, true, true], [model, true], [edge, true]]
-          .forEach(([txt, num, books]) => {
+        [[betTxt, false], [game, false], [odds, true], [open, true, false, true], [booksTxt, true, true], [model, true], [edge, true]]
+          .forEach(([txt, num, books, isOpen]) => {
             const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt;
+            if (isOpen && lm !== null) { td.style.color = lm === 0 ? '#1a7f37' : '#9a6700'; td.title = lm === 0 ? 'DraftKings has not moved this spread since it opened' : lm > 0 ? 'The market has already moved toward this pick since it opened: we are getting a worse number than the opener' : 'The market has moved away from this pick since it opened'; }
             if (books && hasBooks) { if (r.books >= 0.5) td.style.color = '#1a7f37'; else if (r.books <= -0.5) td.style.color = '#b42318'; }
             if (books && r.warn) td.title = 'The line has moved a point or more against this pick since it opened';
             tr.appendChild(td);
@@ -886,7 +891,7 @@
       });
       t.appendChild(tb); box.appendChild(t);
       const note = document.createElement('div'); note.className = 'note'; note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above, remembered in this browser only. Open is the first DraftKings line the hourly pull saw. Rows run BET, then LEAN, each by confidence. Confidence rates the evidence behind a signal at its price, not whether we staked it \u2014 a blank stake means the sizing rules held it back. Totals top out lower than spreads and moneylines on purpose: their strongest case is a weaker one.'; box.appendChild(note);
-      const note2 = document.createElement('div'); note2.className = 'note'; note2.textContent = 'vs books: how many points better (+) or worse (\u2212) the DraftKings number is for that side than the middle of the other books at the same pull. When they differ, DraftKings usually moves to the others, so a green + is a number worth taking now and a red \u2212 is one that tends to improve. \u26A0 marks a spread pick the line has moved a point or more against since it opened \u2014 the market disagreeing twice. The under at a neutral site is paused since 24 Nov 2026 (it has lost this season while scoring runs high): it is tracked, not staked, until it is switched back on.'; box.appendChild(note2);
+      const note2 = document.createElement('div'); note2.className = 'note'; note2.textContent = 'vs books: how many points better (+) or worse (\u2212) the DraftKings number is for that side than the middle of the other books at the same pull. When they differ, DraftKings usually moves to the others, so a green + is a number worth taking now and a red \u2212 is one that tends to improve. \u26A0 marks a spread pick the line has moved a point or more against since it opened \u2014 the market disagreeing twice. The under at a neutral site is paused since 24 Nov 2026 (it has lost this season while scoring runs high): it is tracked, not staked, until it is switched back on. Open column, spread picks: "unmoved" means DraftKings has the same spread it opened with; "toward us" means the market has already moved to our side, so the number is worse than the opener; "away" means it has moved against the pick. Through 24 Nov our spread signals went 77-56 unmoved, 19-25 after a move toward us and 45-47 after a move away \u2014 a check to weigh, not a rule yet.'; box.appendChild(note2);
       const note3 = document.createElement('div'); note3.className = 'note'; note3.textContent = 'TRACK rows are watched, not bet: for example "totals mix" (three total forecasts weighed against the line), "totals model", "BART 5+ from the line", and "underdog to win by 2+" (a short-priced underdog our forecast has winning outright). All are graded on the Season Record tab.'; box.appendChild(note3);
     }
 
