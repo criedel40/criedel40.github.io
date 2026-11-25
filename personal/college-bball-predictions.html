@@ -450,7 +450,7 @@
         }
         const legend = document.createElement('p');
         legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
-        legend.innerHTML = '<span class="tier tier-BET">BET</span> staked when it gets a slot &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet.<br>A staked spread bet is cut to half size when the model\u2019s two runs (BART ratings and KenPom ratings) are 1 or more points apart on the margin. The parlay of the day is a fixed $5 outside these rules.';
+        legend.innerHTML = '<span class="tier tier-BET">BET</span> staked when it gets a slot &nbsp; <span class="tier tier-LEAN">LEAN</span> positive expectation, logged only &nbsp; <span class="tier tier-PASS">PASS</span> no bet.<br>From 24 Nov 2026 every staked spread bet is quarter size, at any stage of the season, and the half-stake rule for the two runs is off: on three more past seasons the spread rule won about 51.5%, not the 56% it was chosen on. The parlay of the day is a fixed $5 outside these rules.';
         toolbar.appendChild(legend);
         // Show the actionable games first: BET, then LEAN, then PASS, then games without a market
         const tierRank = { BET: 0, LEAN: 1, PASS: 2 };
