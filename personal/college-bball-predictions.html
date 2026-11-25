@@ -781,30 +781,34 @@
       const price = o => (o > 0 ? '+' : '') + o;
       h.textContent = `Parlay of the day · $${p.stake.toFixed(0)} to win $${p.profit.toFixed(2)} (${price(p.american)})`;
       const ol = document.createElement('ol'); ol.className = 'parlay-legs';
-      p.legs.forEach(l => { const li = document.createElement('li'); li.textContent = `${l.bet} (${price(l.odds)}) · ${l.away} at ${l.home}`; ol.appendChild(li); });
+      p.legs.forEach(l => { const li = document.createElement('li'); li.textContent = `${l.bet} (${price(l.odds)}) · ${l.away} at ${l.home}` + (l.staked ? ' · STAKED on the sheet' : ''); ol.appendChild(li); });
       card.appendChild(ol);
       const note = document.createElement('div'); note.className = 'parlay-note';
       const ev = p.expected_profit;
       note.textContent = `All five must cover. Estimated chance ${(100 * p.p_all).toFixed(1)}% (about 1 in ${Math.round(1 / p.p_all)}); expected result ${ev >= 0 ? '+' : '−'}$${Math.abs(ev).toFixed(2)} per $${p.stake.toFixed(0)}. ` +
-        'The legs are our spread picks that the public ratings back least, at the 8:10 AM DraftKings prices. A fixed side bet, outside the bankroll rules; until both teams have 10 games it is expected to lose.';
+        'Spread bets the sheet stakes go in first; the other legs are our spread picks that the public ratings back least. All at the 8:10 AM DraftKings prices. A fixed side bet, outside the bankroll rules; until both teams have 10 games it is expected to lose.';
       card.appendChild(note); box.appendChild(card);
     }
-    // Moneyline picks of the day: up to three, of the two kinds that have paid (an underdog we have winning by 2+, a mid-size favourite we have beating the spread by 3+); a list, no stake
+    // Moneyline picks of the day: every moneyline the sheet staked first (25 Nov 2026), then filled to three with the two listed kinds (an underdog we have winning by 2+, a mid-size favourite we have beating the spread by 3+)
     function renderMlPicks(m, box) {
       if (!m) return;
       const card = document.createElement('div'); card.className = 'parlay-card';
       const h = document.createElement('div'); h.className = 'parlay-title'; card.appendChild(h);
       if (!m.picks || !m.picks.length) { h.textContent = 'Moneyline picks: none today'; const n = document.createElement('div'); n.className = 'parlay-note'; n.textContent = 'No underdog we have winning by 2+ and no -6 to -15 favourite we have beating the spread by 3+ on this sheet.'; card.appendChild(n); box.appendChild(card); return; }
-      h.textContent = `Moneyline picks · ${m.picks.length} today`;
+      h.textContent = `Moneyline picks · ${m.picks.length} today` + (m.staked ? ` (${m.staked} staked)` : '');
       const ol = document.createElement('ol'); ol.className = 'parlay-legs';
       m.picks.forEach(p => {
         const li = document.createElement('li'); const price = (p.price > 0 ? '+' : '') + p.price;
-        li.textContent = `${p.team} ML (${price}) · ${p.kind === 'underdog' ? 'underdog we have winning by ' + p.our_margin.toFixed(1) : 'favourite we have by ' + p.our_margin.toFixed(1) + ' against a spread of ' + Math.abs(p.line).toFixed(1)}` + (p.qualified ? '' : ' · PREVIEW: a team has under 10 games');
+        const why = p.kind === 'staked' ? 'STAKED: the underdog of our staked spread bet (+' + Math.abs(p.line).toFixed(1) + '); we have it ' + (p.our_margin >= 0 ? 'winning by ' : 'losing by ') + Math.abs(p.our_margin).toFixed(1)
+          : p.kind === 'underdog' ? 'underdog we have winning by ' + p.our_margin.toFixed(1) : 'favourite we have by ' + p.our_margin.toFixed(1) + ' against a spread of ' + Math.abs(p.line).toFixed(1);
+        li.textContent = `${p.team} ML (${price}) · ${why}` + (p.staked || p.qualified ? '' : ' · PREVIEW: a team has under 10 games');
         ol.appendChild(li);
       });
       card.appendChild(ol);
       const note = document.createElement('div'); note.className = 'parlay-note';
-      note.textContent = 'Past seasons, both teams at 10+ games: underdogs of this kind won 52.8% (+9% return), favourites of this kind 87.9% (+6%). Before 10 games neither has paid, and the underdogs lost. A list only: nothing here is staked.';
+      note.textContent = (m.staked ? 'Staked moneylines are listed first: the underdog of a staked spread bet, at +250 or shorter (eleven past seasons: 44% won, +4% return). ' : '') +
+        'The other picks are a list only, not staked. Past seasons, both teams at 10+ games: underdogs we have winning by 2+ won 52.8% (+9% return), favourites of the listed kind 87.9% (+6%). Before 10 games neither has paid, and the underdogs lost.' +
+        (m.staked ? '' : ' Once the sheet stakes a moneyline (both teams at 10 games), it is listed here first.');
       card.appendChild(note); box.appendChild(card);
     }
     function renderParlayRecord(p, sec) {
