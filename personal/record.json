@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T07:25:17Z",
+ "generated": "2026-11-27T14:25:17Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -7163,7 +7163,7 @@
   "stake": 5.0,
   "days": 5,
   "won": 0,
-  "pending": 0,
+  "pending": 1,
   "staked": 25.0,
   "profit": -25.0,
   "roi": -1.0,
@@ -7362,6 +7362,45 @@
       "odds": -108,
       "result": "win",
       "final": "68-63"
+     }
+    ]
+   },
+   {
+    "date": 20261127,
+    "result": "pending",
+    "profit": null,
+    "payout": 121.04,
+    "legs_won": 0,
+    "legs": [
+     {
+      "bet": "Wake Forest +1.5",
+      "odds": -105,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Liberty +1.5",
+      "odds": -130,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Michigan -7.5",
+      "odds": -115,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Marquette +1.5",
+      "odds": -102,
+      "result": "pending",
+      "final": null
+     },
+     {
+      "bet": "Vermont -2.5",
+      "odds": -112,
+      "result": "pending",
+      "final": null
      }
     ]
    }
