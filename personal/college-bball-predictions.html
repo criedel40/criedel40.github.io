@@ -447,6 +447,24 @@
           stamp.style.cssText = 'text-align:center;color:#666;margin:0 0 1rem 0';
           stamp.textContent = `Forecasts for ${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`;
           document.getElementById('bball-stamp').appendChild(stamp);
+          // which of the day's four sheets this is (user, 27 Nov 2026): the sheet's own time when the data carries it, else the publish time
+          const made = new Date(predictionsData._meta.sheet_generated || predictionsData._meta.generated || '');
+          if (!isNaN(made)) {
+            const central = opts => new Intl.DateTimeFormat('en-US', Object.assign({ timeZone: 'America/Chicago' }, opts)).format(made);
+            const hour = parseInt(central({ hour: 'numeric', hourCycle: 'h23' }), 10);
+            const madeDay = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit' }).format(made).replace(/-/g, '');
+            const which = hour < 5 ? ['1 AM run', 'overnight sheet on early lines, not the bet of record; the 8 AM sheet is on this page by 8:30', false]
+                        : hour < 11 ? ['8 AM run', 'the bet of record', true]
+                        : hour < 15 ? ['1 PM run', 'afternoon update; the bet of record was the 8 AM sheet', false]
+                        : ['5 PM run', 'evening update; the bet of record was the 8 AM sheet', false];
+            const run = document.createElement('p');
+            run.style.cssText = 'text-align:center;color:#444;font-size:.95rem;margin:-.6rem 0 1rem 0';
+            const tag = document.createElement('span'); tag.textContent = which[0];
+            tag.style.cssText = 'display:inline-block;padding:.1rem .6rem;border-radius:.7rem;font-weight:600;color:#fff;background:' + (which[2] ? '#1e7b3c' : '#8a6d1b');
+            run.appendChild(tag);
+            run.appendChild(document.createTextNode(` ${which[1]} \u00b7 updated ${central({ hour: 'numeric', minute: '2-digit' })} Central` + (madeDay !== d ? ` on ${madeDay.slice(4, 6)}/${madeDay.slice(6, 8)}` : '')));
+            document.getElementById('bball-stamp').appendChild(run);
+          }
         }
         const legend = document.createElement('p');
         legend.style.cssText = 'text-align:center;color:#666;font-size:.9rem;margin:0 0 1rem 0';
