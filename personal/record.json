@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T23:25:09Z",
+ "generated": "2026-11-27T07:25:17Z",
  "units": "flat 1 unit per bet at the sheet's odds; bankroll = the sheet's fractions compounded from 1.0",
  "clv": "spread and total: points our number beat the day's book line by (2025-26 a DraftKings close, earlier seasons ESPN BET); moneyline: probability points",
  "seasons": [
@@ -7161,14 +7161,14 @@
  "parlay": {
   "season": 2027,
   "stake": 5.0,
-  "days": 4,
+  "days": 5,
   "won": 0,
-  "pending": 1,
-  "staked": 20.0,
-  "profit": -20.0,
+  "pending": 0,
+  "staked": 25.0,
+  "profit": -25.0,
   "roi": -1.0,
-  "legs_won": 13,
-  "legs": 20,
+  "legs_won": 16,
+  "legs": 25,
   "history": [
    {
     "date": 20261122,
@@ -7328,40 +7328,40 @@
    },
    {
     "date": 20261126,
-    "result": "pending",
-    "profit": null,
+    "result": "loss",
+    "profit": -5.0,
     "payout": 121.26,
-    "legs_won": 0,
+    "legs_won": 3,
     "legs": [
      {
       "bet": "Pittsburgh +1.5",
       "odds": -130,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "71-64"
      },
      {
       "bet": "SMU +6.5",
       "odds": -108,
-      "result": "pending",
-      "final": null
+      "result": "loss",
+      "final": "95-86"
      },
      {
       "bet": "UTSA -12.5",
       "odds": -112,
-      "result": "pending",
-      "final": null
+      "result": "loss",
+      "final": "61-79"
      },
      {
       "bet": "Kansas St. +14.5",
       "odds": -105,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "104-91"
      },
      {
       "bet": "UC Davis +2.5",
       "odds": -108,
-      "result": "pending",
-      "final": null
+      "result": "win",
+      "final": "68-63"
      }
     ]
    }
