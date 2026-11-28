@@ -861,12 +861,18 @@
         const info = data[f]; if (!info || !info.Markets) return;
         const game = `${info["Home Team"]} vs ${info["Away Team"]}`;
         const hits = info.Markets.filter(keepRec);
-        if (hits.length) hits.forEach(r => rows.push({ game, r, b: staked[`${game}|${r.market}|${r.bet}`] }));
+        if (hits.length) hits.forEach(r => rows.push({ game, r, info, b: staked[`${game}|${r.market}|${r.bet}`] }));
         else if (key === 'all') rows.push({ game, r: { market: '—', bet: 'no bet signal', odds: null, edge: null, rec: 'PASS' }, b: null });
       });
-      // order: BET first, then LEAN, then the rest; within a tier by confidence, highest first
+      // order: BET first, then LEAN, then the rest; within a tier by confidence, highest first; equal confidence (all 0 until both
+      // teams have 10 games) by how many points our number is from the line on that bet's side, biggest first; then by game
+      const gapOf = x => {
+        const dl = x.info && x.info['Beyond the Arc DL']; const s = dl && dl.Signals && dl.Signals[x.r.market];
+        if (!s || s.Lean === null || s.Lean === undefined || !isFinite(Number(s.Lean))) return -Infinity;   // moneylines carry no points gap
+        const bet = String(x.r.bet || ''); return bet.slice(0, bet.lastIndexOf(' ')) === String(s.Side) ? Number(s.Lean) : -Number(s.Lean);
+      };
       const rank = { BET: 0, LEAN: 1 }; const confOf = x => (x.b && x.b.confidence !== null && x.b.confidence !== undefined) ? x.b.confidence : (x.r.confidence === null || x.r.confidence === undefined ? -1 : x.r.confidence);
-      rows.sort((a, c) => ((rank[a.r.rec] ?? 2) - (rank[c.r.rec] ?? 2)) || (confOf(c) - confOf(a)) || a.game.localeCompare(c.game));
+      rows.sort((a, c) => ((rank[a.r.rec] ?? 2) - (rank[c.r.rec] ?? 2)) || (confOf(c) - confOf(a)) || ((gapOf(c) - gapOf(a)) || 0) || a.game.localeCompare(c.game));
       const stakedRows = rows.filter(x => x.b); const exposure = stakedRows.reduce((sum, x) => sum + x.b.bankroll_fraction, 0);
       box.replaceChildren();
       const head = document.createElement('div'); head.className = 'plays-head';
@@ -912,7 +918,7 @@
         tb.appendChild(tr);
       });
       t.appendChild(tb); box.appendChild(t);
-      const note = document.createElement('div'); note.className = 'note'; note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above, remembered in this browser only. Open is the first DraftKings line the hourly pull saw. Rows run BET, then LEAN, each by confidence. Confidence rates the evidence behind a signal at its price, not whether we staked it \u2014 a blank stake means the sizing rules held it back. Totals top out lower than spreads and moneylines on purpose: their strongest case is a weaker one.'; box.appendChild(note);
+      const note = document.createElement('div'); note.className = 'note'; note.textContent = 'Stakes are the sheet\'s bankroll fractions (quarter-Kelly, capped) times the bankroll above, remembered in this browser only. Open is the first DraftKings line the hourly pull saw. Rows run BET, then LEAN, each by confidence; rows with the same confidence (every row until both teams have played 10 games) run by how far our number is from the line, biggest gap first. Confidence rates the evidence behind a signal at its price, not whether we staked it \u2014 a blank stake means the sizing rules held it back. Totals top out lower than spreads and moneylines on purpose: their strongest case is a weaker one.'; box.appendChild(note);
       const note2 = document.createElement('div'); note2.className = 'note'; note2.textContent = 'vs books: how many points better (+) or worse (\u2212) the DraftKings number is for that side than the middle of the other books at the same pull. When they differ, DraftKings usually moves to the others, so a green + is a number worth taking now and a red \u2212 is one that tends to improve. \u26A0 marks a spread pick the line has moved a point or more against since it opened \u2014 the market disagreeing twice. The under at a neutral site is paused since 24 Nov 2026 (it has lost this season while scoring runs high): it is tracked, not staked, until it is switched back on. Open column, spread picks: "unmoved" means DraftKings has the same spread it opened with; "toward us" means the market has already moved to our side, so the number is worse than the opener; "away" means it has moved against the pick. Through 24 Nov our spread signals went 77-56 unmoved, 19-25 after a move toward us and 45-47 after a move away \u2014 a check to weigh, not a rule yet.'; box.appendChild(note2);
       const note3 = document.createElement('div'); note3.className = 'note'; note3.textContent = 'TRACK rows are watched, not bet: for example "totals mix" (three total forecasts weighed against the line), "totals model", "BART 5+ from the line", and "underdog to win by 2+" (a short-priced underdog our forecast has winning outright). All are graded on the Season Record tab.'; box.appendChild(note3);
     }
