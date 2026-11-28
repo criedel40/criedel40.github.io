@@ -930,8 +930,10 @@
         const hasBooks = r.books !== null && r.books !== undefined;
         const booksTxt = (hasBooks ? `${r.books > 0 ? '+' : ''}${Number(r.books).toFixed(1)}` : '—') + (r.warn ? ' \u26A0' : '');
         const act = actionOf(r, b);   // the first column is the instruction: "Bet ..." for a bet our rules make, "No bet" otherwise
-        const betTxt = r.market === '—' ? r.bet : act.rank <= 1 ? `Bet ${betWords(r)}` : `No bet \u2014 signal only: ${betWords(r)}`;
-        const subTxt = r.market === '—' ? '' : [r.note || '', r.track ? 'tracked: ' + r.track : ''].filter(Boolean).join(' \u00B7 ');
+        // a row that is not a bet says only "No bet" (user, 28 Nov 2026: "signal only: the OVER" still read as a pick); what it leans to is the small line
+        const betTxt = r.market === '—' ? r.bet : act.rank <= 1 ? `Bet ${betWords(r)}` : 'No bet';
+        const leanTxt = act.rank <= 1 ? '' : (act.rank === 2 && r.market === 'Total' ? 'our own total leans ' : act.rank === 3 ? 'small lean to ' : act.rank === 4 ? 'tracked signal on ' : 'signal on ') + betWords(r) + ', not enough to bet';
+        const subTxt = r.market === '—' ? '' : [leanTxt, r.note || '', r.track ? 'tracked: ' + r.track : ''].filter(Boolean).join(' \u00B7 ');
         [[betTxt, false], [game, false], [odds, true], [open, true, false, true], [booksTxt, true, true], [model, true], [edge, true]]
           .forEach(([txt, num, books, isOpen]) => {
             const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt;
