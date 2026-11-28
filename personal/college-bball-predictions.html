@@ -170,11 +170,6 @@
     .tier-LEAN{background:#e0a800;color:#222}
     .tier-PASS{background:#e5e5e5;color:#666}
     .rec-why{display:block;font-size:.72rem;color:#777;margin-top:.2rem;line-height:1.15;white-space:normal}
-    .bet-banner{margin:.6rem .75rem;padding:.6rem .8rem;border-radius:8px;font-size:1rem;font-weight:600;line-height:1.35}
-    .bet-banner ul{margin:.35rem 0 0 1.2rem;padding:0;font-weight:500}
-    .bet-banner li{margin:.15rem 0}
-    .bet-banner.none{background:#f3f4f6;color:#333;border:1px solid #d5d9e0}
-    .bet-banner.some{background:#e6f4ea;color:#14532d;border:1px solid #1b7f3b}
     .plays{max-width:1000px;margin:0 auto 1rem;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow-x:auto;border-top:4px solid #1b7f3b}
     .plays-head{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;padding:.75rem .75rem .25rem}
     .parlay-card{margin:.5rem .75rem .75rem;padding:.6rem .8rem;border:1px solid rgba(128,128,128,.35);border-left:4px solid #b8860b;border-radius:6px}
@@ -916,19 +911,6 @@
       const input = document.createElement('input'); input.type = 'number'; input.min = '0'; input.step = '50'; input.inputMode = 'decimal'; input.id = 'bankroll-input'; input.value = String(sheetBankroll); label.appendChild(input);
       input.addEventListener('change', () => { const v = parseFloat(input.value); if (isFinite(v) && v >= 0) { sheetBankroll = v; try { localStorage.setItem('bball_bankroll', String(v)); } catch (e) {} renderSheet(key); } });
       box.appendChild(head);
-      const banner = document.createElement('div'); banner.className = 'bet-banner ' + (stakedRows.length ? 'some' : 'none');
-      const ruleRows = rows.filter(x => !x.b && actionOf(x.r, null).rank === 1);   // bets by our rules with no money on them yet
-      banner.className = 'bet-banner ' + (stakedRows.length ? 'some' : 'none');
-      const listBets = (title, list, withStake) => {
-        const lead = document.createElement('div'); lead.textContent = title; banner.appendChild(lead);
-        const ul = document.createElement('ul');
-        list.forEach(x => { const li = document.createElement('li'); const o = x.r.odds; const w0 = betWords(x.r); li.textContent = `${w0.charAt(0).toUpperCase() + w0.slice(1)}${(o === null || o === undefined) ? '' : ' at ' + (o > 0 ? '+' : '') + o}${withStake ? ' \u2014 ' + money(sheetBankroll * x.b.bankroll_fraction) : ''} (${x.game})`; ul.appendChild(li); });
-        banner.appendChild(ul);
-      };
-      if (stakedRows.length) listBets(`Bet these today (${stakedRows.length}, ${money(sheetBankroll * exposure)} in all):`, stakedRows, true);
-      if (ruleRows.length) listBets(stakedRows.length ? `Also bets by our rules, no stake yet because a team has under 10 games (${ruleRows.length}):` : `No money down today: stakes start when both teams have played 10 games. What our rules would bet (${ruleRows.length}):`, ruleRows, false);
-      if (!stakedRows.length && !ruleRows.length) banner.textContent = 'No bets today: nothing on the sheet is a bet by our rules.';
-      box.appendChild(banner);
       renderParlay(meta && meta.parlay, box);
       renderMlPicks(meta && meta.ml_picks, box);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
