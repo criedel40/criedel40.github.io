@@ -787,6 +787,13 @@
     }
     // the bet in plain words (user, 28 Nov 2026): "Total: Over 151.5", "Spread: Kansas -3.5", "Moneyline: Kansas to win"
     const plainBet = r => r.market === 'Moneyline' ? `Moneyline: ${String(r.bet).replace(/ ML$/, '')} to win` : `${r.market}: ${r.bet}`;
+    // what to bet, as an instruction (user, 28 Nov 2026: "that first column needs to say what the person should bet")
+    const betWords = r => {
+      const b = String(r.bet || '');
+      if (r.market === 'Total') { const m = b.match(/^(Over|Under)\s+(.+)$/); return m ? `the ${m[1].toUpperCase()} ${m[2]} (total points)` : b; }
+      if (r.market === 'Moneyline') return `${b.replace(/ ML$/, '')} to win (moneyline)`;
+      return r.market === 'Spread' ? `${b} (spread)` : b;
+    };
     function actionCell(r, stakedRow) {
       const a = actionOf(r, stakedRow); const td = document.createElement('td'); td.className = 'mid';
       const sp = document.createElement('span'); sp.className = `tier tier-${a.cls}`; sp.textContent = a.label; td.appendChild(sp);
@@ -915,7 +922,7 @@
       const listBets = (title, list, withStake) => {
         const lead = document.createElement('div'); lead.textContent = title; banner.appendChild(lead);
         const ul = document.createElement('ul');
-        list.forEach(x => { const li = document.createElement('li'); const o = x.r.odds; li.textContent = `${plainBet(x.r)}${(o === null || o === undefined) ? '' : ' at ' + (o > 0 ? '+' : '') + o}${withStake ? ' \u2014 ' + money(sheetBankroll * x.b.bankroll_fraction) : ''} (${x.game})`; ul.appendChild(li); });
+        list.forEach(x => { const li = document.createElement('li'); const o = x.r.odds; const w0 = betWords(x.r); li.textContent = `${w0.charAt(0).toUpperCase() + w0.slice(1)}${(o === null || o === undefined) ? '' : ' at ' + (o > 0 ? '+' : '') + o}${withStake ? ' \u2014 ' + money(sheetBankroll * x.b.bankroll_fraction) : ''} (${x.game})`; ul.appendChild(li); });
         banner.appendChild(ul);
       };
       if (stakedRows.length) listBets(`Bet these today (${stakedRows.length}, ${money(sheetBankroll * exposure)} in all):`, stakedRows, true);
@@ -926,7 +933,7 @@
       renderMlPicks(meta && meta.ml_picks, box);
       if (!rows.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Nothing in this tier today.'; box.appendChild(e); return; }
       const t = document.createElement('table');
-      const th = document.createElement('thead'); th.innerHTML = '<tr><th>Bet</th><th>Game</th><th class="num">Odds</th><th class="num">Open</th><th class="num" title="Points the DraftKings number is better (+) or worse (-) for this side than the median of the other books">vs books</th><th class="num">Model</th><th class="num">Edge</th><th class="mid">Confidence</th><th class="mid">Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
+      const th = document.createElement('thead'); th.innerHTML = '<tr><th>What to bet</th><th>Game</th><th class="num">Odds now</th><th class="num" title="The first DraftKings line our pulls saw, and how it has moved since. The line to bet is the one in the first column.">Opened at</th><th class="num" title="Points the DraftKings number is better (+) or worse (-) for this side than the median of the other books">vs books</th><th class="num">Model</th><th class="num">Edge</th><th class="mid">Confidence</th><th class="mid">Rec</th><th class="num">Stake</th></tr>'; t.appendChild(th);
       const tb = document.createElement('tbody');
       rows.forEach(({ game, r, b }) => {
         const tr = document.createElement('tr'); if (b) tr.className = 'selected';
@@ -940,7 +947,9 @@
         const open = open0 + (mvTxt ? ' \u00B7 ' + mvTxt : '');
         const hasBooks = r.books !== null && r.books !== undefined;
         const booksTxt = (hasBooks ? `${r.books > 0 ? '+' : ''}${Number(r.books).toFixed(1)}` : '—') + (r.warn ? ' \u26A0' : '');
-        const betTxt = r.market === '—' ? r.bet : `${plainBet(r)}${r.note ? ' (' + r.note + ')' : ''}${r.track ? ' [tracked: ' + r.track + ']' : ''}`;
+        const act = actionOf(r, b);   // the first column is the instruction: "Bet ..." for a bet our rules make, "No bet" otherwise
+        const betTxt = r.market === '—' ? r.bet : act.rank <= 1 ? `Bet ${betWords(r)}` : `No bet \u2014 signal only: ${betWords(r)}`;
+        const subTxt = r.market === '—' ? '' : [r.note || '', r.track ? 'tracked: ' + r.track : ''].filter(Boolean).join(' \u00B7 ');
         [[betTxt, false], [game, false], [odds, true], [open, true, false, true], [booksTxt, true, true], [model, true], [edge, true]]
           .forEach(([txt, num, books, isOpen]) => {
             const td = document.createElement('td'); if (num) td.className = 'num'; td.textContent = txt;
@@ -949,6 +958,8 @@
             if (books && r.warn) td.title = 'The line has moved a point or more against this pick since it opened';
             tr.appendChild(td);
           });
+        if (act.rank <= 1) tr.firstChild.style.fontWeight = '700';
+        if (subTxt) { const w = document.createElement('span'); w.className = 'rec-why'; w.style.fontWeight = '400'; w.textContent = subTxt; tr.firstChild.appendChild(w); }
         tr.appendChild(confCell(confOf({ r, b }) < 0 ? null : confOf({ r, b })));
         tr.appendChild(actionCell(r, b));
         const st = document.createElement('td'); st.className = 'num' + (b ? ' stake' : ''); st.textContent = b ? `${money(sheetBankroll * b.bankroll_fraction)} (${(100 * b.bankroll_fraction).toFixed(1)}%)` : '—'; tr.appendChild(st);
